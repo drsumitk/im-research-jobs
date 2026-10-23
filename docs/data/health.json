@@ -1,14 +1,13 @@
 {
  "meta": {
-  "generated_utc": "2026-10-23 19:13 UTC",
+  "generated_utc": "2026-10-23 19:42 UTC",
   "today": "2026-10-23",
   "ai_enabled": true,
-  "ai_calls": 150,
+  "ai_calls": 156,
   "log": [
-   "AI budget of 150 calls reached; remaining jobs are classified on the next run.",
-   "AI classifier failed on 110 posting(s); details are in the GitHub Actions log. Each posting is retried at most 3 times."
+   "AI classifier failed on 1 posting(s) (unusable reply (stop_reason=refusal) x1); details are in the GitHub Actions log. Each posting is retried at most 3 times."
   ],
-  "total": 647
+  "total": 184
  },
  "sources": [
   {
@@ -18,10 +17,11 @@
    "label": "Vanderbilt University",
    "type": "oracle",
    "checked": "2026-10-23",
-   "found": 78,
-   "candidates": 2,
+   "found": 44,
+   "candidates": 1,
+   "too_old": 0,
    "status": "ok",
-   "new_details": 2,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -31,10 +31,11 @@
    "label": "Vanderbilt University Medical Center",
    "type": "workday",
    "checked": "2026-10-23",
-   "found": 158,
-   "candidates": 5,
+   "found": 125,
+   "candidates": 1,
+   "too_old": 0,
    "status": "ok",
-   "new_details": 5,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -44,10 +45,11 @@
    "label": "UCSF (staff)",
    "type": "oracle",
    "checked": "2026-10-23",
-   "found": 239,
-   "candidates": 26,
+   "found": 157,
+   "candidates": 3,
+   "too_old": 2,
    "status": "ok",
-   "new_details": 26,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -58,7 +60,8 @@
    "type": "ucrecruit",
    "checked": "2026-10-23",
    "found": 428,
-   "candidates": 1,
+   "candidates": 0,
+   "too_old": 1,
    "status": "ok",
    "new_details": 0,
    "detail_errors": 0
@@ -70,10 +73,11 @@
    "label": "Johns Hopkins University",
    "type": "eightfold",
    "checked": "2026-10-23",
-   "found": 173,
-   "candidates": 44,
+   "found": 139,
+   "candidates": 14,
+   "too_old": 3,
    "status": "ok",
-   "new_details": 44,
+   "new_details": 11,
    "detail_errors": 0
   },
   {
@@ -94,10 +98,11 @@
    "label": "University of Pennsylvania",
    "type": "workday",
    "checked": "2026-10-23",
-   "found": 231,
-   "candidates": 52,
+   "found": 144,
+   "candidates": 0,
+   "too_old": 3,
    "status": "ok",
-   "new_details": 52,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -118,10 +123,11 @@
    "label": "Washington University in St. Louis",
    "type": "workday",
    "checked": "2026-10-23",
-   "found": 240,
-   "candidates": 89,
+   "found": 179,
+   "candidates": 11,
+   "too_old": 37,
    "status": "ok",
-   "new_details": 80,
+   "new_details": 9,
    "detail_errors": 0
   },
   {
@@ -131,10 +137,11 @@
    "label": "Duke University and Duke Health",
    "type": "rmk",
    "checked": "2026-10-23",
-   "found": 218,
-   "candidates": 37,
+   "found": 190,
+   "candidates": 30,
+   "too_old": 6,
    "status": "ok",
-   "new_details": 37,
+   "new_details": 30,
    "detail_errors": 0
   },
   {
@@ -144,8 +151,9 @@
    "label": "UCLA (staff)",
    "type": "jibe",
    "checked": "2026-10-23",
-   "found": 28,
-   "candidates": 2,
+   "found": 24,
+   "candidates": 1,
+   "too_old": 1,
    "status": "ok",
    "new_details": 0,
    "detail_errors": 0
@@ -158,7 +166,8 @@
    "type": "ucrecruit",
    "checked": "2026-10-23",
    "found": 302,
-   "candidates": 20,
+   "candidates": 5,
+   "too_old": 15,
    "status": "ok",
    "new_details": 0,
    "detail_errors": 0
@@ -170,8 +179,9 @@
    "label": "Icahn School of Medicine at Mount Sinai",
    "type": "jibe",
    "checked": "2026-10-23",
-   "found": 666,
-   "candidates": 229,
+   "found": 595,
+   "candidates": 7,
+   "too_old": 193,
    "status": "ok",
    "new_details": 0,
    "detail_errors": 0
@@ -183,8 +193,9 @@
    "label": "NYU Langone Health",
    "type": "mcloud",
    "checked": "2026-10-23",
-   "found": 275,
-   "candidates": 10,
+   "found": 272,
+   "candidates": 4,
+   "too_old": 4,
    "status": "ok",
    "new_details": 0,
    "detail_errors": 0
@@ -196,10 +207,11 @@
    "label": "Yale University",
    "type": "workday",
    "checked": "2026-10-23",
-   "found": 113,
-   "candidates": 19,
+   "found": 107,
+   "candidates": 8,
+   "too_old": 2,
    "status": "ok",
-   "new_details": 19,
+   "new_details": 8,
    "detail_errors": 0
   },
   {
@@ -210,9 +222,10 @@
    "type": "html_list",
    "checked": "2026-10-23",
    "found": 10,
-   "candidates": 1,
+   "candidates": 0,
+   "too_old": 0,
    "status": "ok",
-   "new_details": 1,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -222,10 +235,11 @@
    "label": "University of Colorado Anschutz",
    "type": "taleo",
    "checked": "2026-10-23",
-   "found": 203,
-   "candidates": 20,
+   "found": 131,
+   "candidates": 18,
+   "too_old": 12,
    "status": "ok",
-   "new_details": 20,
+   "new_details": 18,
    "detail_errors": 0
   },
   {
@@ -235,10 +249,11 @@
    "label": "Stanford University",
    "type": "oracle",
    "checked": "2026-10-23",
-   "found": 193,
-   "candidates": 32,
+   "found": 156,
+   "candidates": 0,
+   "too_old": 5,
    "status": "ok",
-   "new_details": 32,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -259,10 +274,11 @@
    "label": "University of Michigan",
    "type": "html_list",
    "checked": "2026-10-23",
-   "found": 60,
-   "candidates": 35,
+   "found": 40,
+   "candidates": 29,
+   "too_old": 0,
    "status": "ok",
-   "new_details": 35,
+   "new_details": 29,
    "detail_errors": 0
   },
   {
@@ -272,8 +288,9 @@
    "label": "Weill Cornell Medicine",
    "type": "rmk",
    "checked": "2026-10-23",
-   "found": 31,
+   "found": 30,
    "candidates": 1,
+   "too_old": 0,
    "status": "ok",
    "new_details": 1,
    "detail_errors": 0
@@ -285,10 +302,11 @@
    "label": "University of Washington",
    "type": "workday",
    "checked": "2026-10-23",
-   "found": 156,
-   "candidates": 12,
+   "found": 124,
+   "candidates": 0,
+   "too_old": 0,
    "status": "ok",
-   "new_details": 12,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -298,10 +316,63 @@
    "label": "University of Chicago",
    "type": "workday",
    "checked": "2026-10-23",
-   "found": 232,
-   "candidates": 19,
+   "found": 176,
+   "candidates": 1,
+   "too_old": 3,
    "status": "ok",
-   "new_details": 19,
+   "new_details": 1,
+   "detail_errors": 0
+  },
+  {
+   "school": "Harvard",
+   "rank": 21,
+   "source": "harvard",
+   "label": "Harvard University (incl. Harvard Medical School)",
+   "type": "smartrecruiters",
+   "checked": "2026-10-23",
+   "status": "blocked",
+   "error": "robots.txt disallows api.smartrecruiters.com/v1/companies/HarvardUniversity/postings"
+  },
+  {
+   "school": "Harvard",
+   "rank": 21,
+   "source": "massgeneralbrigham",
+   "label": "Mass General Brigham (MGH, Brigham and Women's)",
+   "type": "workday",
+   "checked": "2026-10-23",
+   "found": 990,
+   "candidates": 25,
+   "too_old": 27,
+   "status": "ok",
+   "new_details": 25,
+   "detail_errors": 0
+  },
+  {
+   "school": "Mayo Clinic",
+   "rank": 22,
+   "source": "mayo",
+   "label": "Mayo Clinic (US)",
+   "type": "oracle",
+   "checked": "2026-10-23",
+   "found": 195,
+   "candidates": 13,
+   "too_old": 32,
+   "status": "ok",
+   "new_details": 13,
+   "detail_errors": 0
+  },
+  {
+   "school": "Cleveland Clinic",
+   "rank": 23,
+   "source": "clevelandclinic",
+   "label": "Cleveland Clinic",
+   "type": "workday",
+   "checked": "2026-10-23",
+   "found": 204,
+   "candidates": 6,
+   "too_old": 6,
+   "status": "ok",
+   "new_details": 6,
    "detail_errors": 0
   }
  ]
