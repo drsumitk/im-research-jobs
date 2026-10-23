@@ -52,3 +52,12 @@ def test_failed_ai_attempts_are_capped(monkeypatch):
     log = []
     run.apply_ai({"a": rec("b")}, PROFILE, log)
     assert "401" not in " ".join(log)  # error detail stays out of the public page
+
+
+def test_recency_window():
+    t = "2026-10-24"
+    assert run.is_recent("2026-10-10", t, 21)
+    assert not run.is_recent("2026-02-18", t, 21)          # the Mount Sinai example
+    assert not run.is_recent("30+ days ago", t, 21)        # Workday list text
+    assert run.is_recent("", t, 21)                        # unknown date: keep, judge later
+    assert run.is_recent("2026-02-18", t, None)            # window switched off

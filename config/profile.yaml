@@ -6,9 +6,13 @@ candidate_summary: >
   synthesis (systematic review, meta-analysis), cross-sectional clinical studies, data
   management and statistics in R. Interests: diabetes
   and cardiometabolic disease, kidney disease, cognition, outcomes research. Wants a
-  research-only role (research fellow, postdoctoral associate, research associate, clinical
-  research coordinator) in an Internal Medicine department or division. No wet-lab or bench
+  research-only role (research fellow, postdoctoral associate or fellow, research associate)
+  in an Internal Medicine department or division. Not looking for clinical research
+  coordinator roles. No wet-lab or bench
   experience. Would need US visa sponsorship (typically J-1 research scholar or H-1B).
+
+# Only keep postings first posted within this many days (older ones are dropped).
+max_posting_age_days: 21
 
 # Search words sent to each careers site. Short phrases work best on most sites.
 search_terms:
@@ -16,8 +20,6 @@ search_terms:
   - postdoc
   - research fellow
   - research associate
-  - clinical research coordinator
-  - research coordinator
   - postgraduate associate
   - associate in research
 
@@ -29,9 +31,7 @@ title_include:
   - '\bfellow\b.*research|research.*\bfellow\b'
   - 'research associate'
   - 'research scholar'
-  - 'clinical research (coordinator|associate|assistant|specialist|data)'
-  - 'research (project )?coordinator'
-  - 'study coordinator'
+  - 'clinical research (associate|assistant|specialist|data)'
   - 'postgraduate (associate|research)'
   - 'associate in research'
   - 'research (analyst|assistant)'
@@ -47,6 +47,7 @@ title_exclude:
   - 'engineer|software|developer|\bit\b|programmer'
   - 'clinical fellowship|residen(t|cy)\b'
   - 'student|intern\b|internship|volunteer'
+  - 'coordinator'   # clinical research coordinator and other coordinator roles are not wanted
 
 # Internal Medicine divisions, checked in this order (specific divisions before the general ones).
 im_divisions:

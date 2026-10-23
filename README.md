@@ -1,6 +1,6 @@
 # IM Research Jobs Tracker
 
-Checks the careers websites of the 20 US medical schools with the most NIH funding for Internal Medicine (BRIMR 2025 ranking) once a day. It keeps research-only roles (postdoctoral, research fellow, research associate, clinical research coordinator), separates clinical or data research from wet-lab work, flags eligibility problems (citizenship, no visa sponsorship, PhD-only), and shows the results on a web dashboard hosted free on GitHub Pages (anyone with the link can open it; search engines are asked not to index it).
+Checks the careers websites of the 20 US medical schools with the most NIH funding for Internal Medicine (BRIMR 2025 ranking) once a day. It keeps research-only roles (postdoctoral, research fellow, research associate; clinical research coordinator roles are excluded) first posted within the last 21 days, separates clinical or data research from wet-lab work, flags eligibility problems (citizenship, no visa sponsorship, PhD-only), and shows the results on a web dashboard hosted free on GitHub Pages (anyone with the link can open it; search engines are asked not to index it).
 
 ## What it covers
 
@@ -26,8 +26,13 @@ Checks the careers websites of the 20 US medical schools with the most NIH fundi
 | 18 | Weill Cornell | SuccessFactors | Yes |
 | 19 | University of Washington | Workday | Yes |
 | 20 | UChicago | Workday | Yes |
+| added | Harvard (University and Mass General Brigham) | SmartRecruiters, Workday | Yes |
+| added | Mayo Clinic | Oracle | Yes |
+| added | Cleveland Clinic | Workday | Yes |
 
-Known gaps: postdoc posts that departments advertise only on Interfolio, lab websites or by email are not on these boards. Harvard is not in the list because BRIMR ranks its hospitals separately from the medical school.
+Harvard, Mayo Clinic and Cleveland Clinic are added by choice: they are not in BRIMR's Internal Medicine top 20 (Harvard's hospitals are ranked separately, Mayo's NIH funding is not coded by department, Cleveland Clinic is ranked jointly with Case Western). Beth Israel Deaconess (Harvard) is not yet included.
+
+Known gaps: postdoc posts that departments advertise only on Interfolio, lab websites or by email are not on these boards.
 
 ## How it decides
 

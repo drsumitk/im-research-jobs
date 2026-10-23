@@ -7,6 +7,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import sys
 import time
 import traceback
@@ -49,6 +50,21 @@ def fingerprint(text):
     return hashlib.sha256((text or "").encode("utf-8")).hexdigest()[:16]
 
 
+def is_recent(posted, today, max_days):
+    """True when the posting date is within max_days of today, or when the date is unknown."""
+    if not max_days:
+        return True
+    p = (posted or "").strip()
+    m = re.fullmatch(r"(\d{4})-(\d{2})-(\d{2})", p)
+    if m:
+        cutoff = datetime.strptime(today, "%Y-%m-%d") - timedelta(days=int(max_days))
+        return datetime(int(m.group(1)), int(m.group(2)), int(m.group(3))) >= cutoff
+    m = re.search(r"(\d+)\+?\s*days? ago", p, re.I)
+    if m:
+        return int(m.group(1)) < int(max_days)
+    return True
+
+
 def run_source(school, src, profile, rules, state, today):
     """Returns (records_by_key, health_entry). Never raises."""
     health = {"school": school["name"], "rank": school["rank"], "source": src["id"],
@@ -62,11 +78,15 @@ def run_source(school, src, profile, rules, state, today):
     out = {}
     try:
         found = mod.search(http, src, profile["search_terms"], rules.title_ok)
-        cands = [j for j in found if rules.title_ok(j.title)]
-        health.update(found=len(found), candidates=len(cands))
+        max_age = profile.get("max_posting_age_days")
+        titled = [j for j in found if rules.title_ok(j.title)]
+        cands = [j for j in titled if is_recent(j.posted, today, max_age)]
+        health.update(found=len(found), candidates=len(cands), too_old=len(titled) - len(cands))
         new_details, detail_errors = 0, 0
         for job in cands:
             old = state.get(job.key)
+            if old and not is_recent(old.get("posted"), today, max_age):
+                continue  # an exact date read earlier shows it is too old
             ai_pending = bool(old) and classify.available() and not old.get("ai") \
                 and int(old.get("ai_attempts", 0)) < MAX_AI_ATTEMPTS
             if old and old.get("evaluated") and not ai_pending:
@@ -86,6 +106,9 @@ def run_source(school, src, profile, rules, state, today):
                 except Exception as e:  # keep going; one bad page must not stop the source
                     detail_errors += 1
                     health["last_detail_error"] = str(e)[:200]
+            if not is_recent(job.posted, today, max_age):
+                health["too_old"] = health.get("too_old", 0) + 1
+                continue  # the detail page gave an exact date outside the window
             ev = rules.evaluate(job)
             out[job.key] = {
                 "key": job.key, "school": school["name"], "rank": school["rank"],
@@ -180,9 +203,12 @@ def main(argv=None):
     failed = {h["source"] for h in health if h.get("status") not in ("ok",)}
     cutoff = (now - timedelta(days=DROP_AFTER_DAYS)).strftime("%Y-%m-%d")
     cutoff_failed = (now - timedelta(days=DROP_AFTER_DAYS_FAILED_SOURCE)).strftime("%Y-%m-%d")
+    max_age = profile.get("max_posting_age_days")
     for key, old in state.items():
         if key in records:
             continue
+        if not rules.title_ok(old.get("title", "")) or not is_recent(old.get("posted"), today, max_age):
+            continue  # no longer wanted (title rules changed) or posted too long ago
         limit = cutoff_failed if old.get("source") in failed else cutoff
         if old.get("last_seen", "") >= limit:
             records[key] = old

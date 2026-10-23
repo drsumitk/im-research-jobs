@@ -17,12 +17,14 @@ def fx(name):
 
 
 def test_title_gate():
-    ok = ["Postdoctoral Research Associate - Hematology", "RESEARCH FELLOW", "Clinical Research Coordinator 2",
+    ok = ["Postdoctoral Research Associate - Hematology", "RESEARCH FELLOW", "Research Fellow - Gastroenterology",
           "(Clinical) Research Associate ", "Post Doctoral Fellow-MSH-32015-001", "Postgraduate Associate",
-          "Associate in Research", "Research Project Coordinator (Pediatrics)"]
+          "Associate in Research", "RTP RESEARCH FELLOW LS with Dr Sakemura"]
     bad = ["Clinical Nurse (Pulmonary)", "Research Technologist (Department of Medicine- Infectious Diseases)",
            "Director of Development, Johns Hopkins Medicine", "Clinical Research Manager", "Assistant Professor",
-           "Pharmacist I/II - Inpatient - Hillcrest - 141924", "Hospitalist Physician - Pediatric Cardiac Critical Care"]
+           "Pharmacist I/II - Inpatient - Hillcrest - 141924", "Hospitalist Physician - Pediatric Cardiac Critical Care",
+           "Clinical Research Coordinator 2", "Research Project Coordinator (Pediatrics)",
+           "Clinical Research Coordinator II - Gastroenterology"]
     for t in ok:
         assert RULES.title_ok(t), t
     for t in bad:
@@ -76,13 +78,14 @@ def test_washu_cryoem_postdoc_is_wet_lab():
     assert ev["verdict"] == "Excluded" and ev["research_type"] == "Wet lab", ev
 
 
-def test_stanford_crc_without_department_needs_a_look():
+def test_stanford_crc_text_reads_as_clinical():
     src = {"id": "stanford", "host": "careersearch.stanford.edu", "site": "stanford"}
     job = oracle.parse_list(fx("oracle_list.json"), src)[0][0]
     oracle.parse_detail(fx("oracle_detail.json"), job)
     ev = RULES.evaluate(job)
     assert ev["research_type"] == "Clinical or dry research", ev
     assert ev["verdict"] == "Check", ev  # department not stated in the posting
+    assert not RULES.title_ok(job.title)  # and coordinator titles are now filtered out before this step
 
 
 def test_eligibility_flags():

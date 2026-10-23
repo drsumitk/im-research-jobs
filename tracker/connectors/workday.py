@@ -68,7 +68,7 @@ def search(http, src, terms, title_ok):
     seen = {}
     for term in terms:
         total = None
-        for page in range(MAX_PAGES):
+        for page in range(int(src.get("max_pages", MAX_PAGES))):
             body = {"appliedFacets": {}, "limit": PAGE, "offset": page * PAGE, "searchText": term}
             r = http.post(_base(src) + "/jobs", json=body, headers={"Accept": "application/json"})
             jobs, page_total = parse_list(r.json(), src)

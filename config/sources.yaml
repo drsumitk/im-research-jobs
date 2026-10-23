@@ -207,3 +207,41 @@ schools:
         host: uchicago.wd5.myworkdayjobs.com
         tenant: uchicago
         site: External
+
+  # Added at the user's request; not in the BRIMR Internal Medicine top 20.
+  # (Mayo's NIH funding is not coded by department; Cleveland Clinic is ranked jointly with
+  # Case Western; Harvard's teaching hospitals are ranked separately from the medical school.)
+  # Ranks above 20 only set the display order; the dashboard shows these as "added".
+  - rank: 21
+    name: Harvard
+    sources:
+      - id: harvard
+        label: Harvard University (incl. Harvard Medical School)
+        type: smartrecruiters
+        company: HarvardUniversity
+      - id: massgeneralbrigham
+        label: Mass General Brigham (MGH, Brigham and Women's)
+        type: workday
+        host: massgeneralbrigham.wd1.myworkdayjobs.com
+        tenant: massgeneralbrigham
+        site: MGBExternal
+        max_pages: 25   # very large board; results are not sorted by date
+
+  - rank: 22
+    name: Mayo Clinic
+    sources:
+      - id: mayo
+        label: Mayo Clinic (US)
+        type: oracle
+        host: fa-euwp-saasfaprod1.fa.ocs.oraclecloud.com
+        site: CX_1
+
+  - rank: 23
+    name: Cleveland Clinic
+    sources:
+      - id: clevelandclinic
+        label: Cleveland Clinic
+        type: workday
+        host: ccf.wd1.myworkdayjobs.com
+        tenant: ccf
+        site: ClevelandClinicCareers

@@ -7,7 +7,7 @@ from urllib.parse import unquote
 from bs4 import BeautifulSoup
 
 from ..models import Job
-from ..textutil import html_to_text
+from ..textutil import html_to_text, iso_date
 
 MAX_PAGES = 4
 
@@ -54,9 +54,14 @@ def parse_detail(page_html, job):
     inp = soup.find("input", id="initialHistory")
     raw = inp.get("value", "") if inp else ""
     desc_html = ""
-    for seg in raw.split("!|!"):
+    segs = raw.split("!|!")
+    for seg in segs:
         if "!*!" in seg:
             desc_html = seg.split("!*!", 1)[1]
+            break
+    for seg in segs:  # the first "Mon D, YYYY" field is the posting date
+        if re.fullmatch(r"[A-Z][a-z]{2} \d{1,2}, \d{4}", seg.strip()):
+            job.posted = iso_date(seg.strip())
             break
     desc_html = unquote(desc_html).replace("\\:", ":")
     job.description = html_to_text(htmlmod.unescape(desc_html))

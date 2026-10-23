@@ -118,3 +118,20 @@ def test_ucrecruit():
     jobs = ucrecruit.parse_feed(load("ucrecruit.atom"), src)
     assert jobs[0].job_id == "JPF11346" and jobs[0].posted == "2026-09-16"
     assert "Anesthesiology" in jobs[0].description
+
+
+def test_taleo_posting_date():
+    src = {"id": "cu-anschutz", "host": "cu.taleo.net", "section": "2"}
+    jobs, _, _ = taleo.parse_list(load("taleo_search.json"), src)
+    taleo.parse_detail(load("taleo_detail.html"), jobs[0])
+    assert jobs[0].posted == "2026-07-20"
+
+
+def test_smartrecruiters():
+    from tracker.connectors import smartrecruiters
+    src = {"id": "harvard", "company": "HarvardUniversity"}
+    jobs, total = smartrecruiters.parse_list(load("smartrecruiters_list.json"), src)
+    assert total == 12 and jobs[0].posted == "2026-10-22" and jobs[0].department == "HBS AI Institute"
+    smartrecruiters.parse_detail(load("smartrecruiters_detail.json"), jobs[0])
+    assert "research compliance" in jobs[0].description
+    assert jobs[0].url.startswith("https://jobs.smartrecruiters.com/HarvardUniversity/3743990016333246")

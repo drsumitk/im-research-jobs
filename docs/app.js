@@ -30,6 +30,10 @@ function daysBetween(a, b) {
   return Math.round((new Date(b + "T00:00:00Z") - new Date(a + "T00:00:00Z")) / 86400000);
 }
 
+function schoolLabel(rank, name) {
+  return Number(rank) <= 20 ? `#${rank} ${name}` : `${name} (added)`;
+}
+
 function divisionOf(j) {
   return (j.ai && j.ai.im_division) ? prettyDiv(j.ai.im_division) : (j.rules ? j.rules.division : "");
 }
@@ -137,7 +141,7 @@ function card(j) {
 
   const facts = el("p", "facts");
   facts.textContent = [
-    `#${j.rank} ${j.school}`, j.source_label !== j.school ? j.source_label : null,
+    schoolLabel(j.rank, j.school), j.source_label !== j.school ? j.source_label : null,
     j.department || null, divisionOf(j), j.location || null,
     j.posted ? `posted ${j.posted}` : null, `first seen ${j.first_seen}`,
   ].filter(Boolean).join(" · ");
@@ -183,10 +187,10 @@ function renderSources(root) {
   for (const h of state.health) {
     const li = el("li", "card src " + (h.status || ""));
     const head = el("div", "head");
-    head.append(el("strong", null, `#${h.rank} ${h.school}`), el("span", "badge " + (h.status === "ok" ? "ok" : "warnb"), h.status));
+    head.append(el("strong", null, schoolLabel(h.rank, h.school)), el("span", "badge " + (h.status === "ok" ? "ok" : "warnb"), h.status));
     li.append(head);
     li.append(el("p", "facts", `${h.label} · ${h.type}`));
-    if (h.status === "ok") li.append(el("p", null, `Postings returned: ${h.found} · matching titles: ${h.candidates} · newly read today: ${h.new_details}` + (h.detail_errors ? ` · pages that failed to load: ${h.detail_errors}` : "")));
+    if (h.status === "ok") li.append(el("p", null, `Postings returned: ${h.found} · matching titles in the last 21 days: ${h.candidates} · older, skipped: ${h.too_old || 0} · newly read today: ${h.new_details}` + (h.detail_errors ? ` · pages that failed to load: ${h.detail_errors}` : "")));
     if (h.error) li.append(el("p", "warn", h.error));
     if (h.note) li.append(el("p", null, h.note));
     if (h.url) { const a = el("a", null, "Open the job board"); a.href = safeUrl(h.url); a.target = "_blank"; a.rel = "noopener noreferrer"; li.append(a); }
