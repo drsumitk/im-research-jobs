@@ -3,6 +3,7 @@
 import json
 import os
 import re
+import time
 
 import requests
 
@@ -32,6 +33,21 @@ JSON fields:
 - "verdict": "match" (clinical_or_dry, Internal Medicine or clearly IM-relevant, candidate eligible), "check" (worth a human look: unclear department, unclear eligibility, or mixed work), "other_dept" (clinical or dry research but clearly outside Internal Medicine), or "excluded" (wet_lab, citizenship required, no sponsorship, or candidate clearly ineligible)
 - "reason": at most 25 words explaining the verdict, citing what the posting says
 """
+
+
+RETRY_STATUSES = {429, 500, 502, 503, 504, 529}
+
+
+def sleep(seconds):  # wrapped so tests can skip real waiting
+    time.sleep(seconds)
+
+
+class ClassifyError(RuntimeError):
+    """`category` is safe to publish (status code or short label); `detail` stays in the private log."""
+
+    def __init__(self, category, detail=""):
+        super().__init__(f"Claude API {category}: {detail}")
+        self.category = category
 
 
 def available():
@@ -86,17 +102,38 @@ def classify(job, profile, session=None):
             "Classify the job posting above and reply with the JSON object only.")
     body = {
         "model": ai.get("model", "claude-haiku-5-5"),
-        "max_tokens": 400,
+        "max_tokens": int(ai.get("max_output_tokens", 1500)),
         "system": SYSTEM.format(summary=" ".join(profile["candidate_summary"].split()),
                                 divisions=json.dumps(DIVISIONS)),
         "messages": [{"role": "user", "content": user}],
     }
     s = session or requests
-    r = s.post(API_URL, json=body, timeout=60, headers={
-        "x-api-key": key, "anthropic-version": API_VERSION, "content-type": "application/json"})
+    headers = {"x-api-key": key, "anthropic-version": API_VERSION, "content-type": "application/json"}
+    r = None
+    for attempt in range(4):
+        try:
+            r = s.post(API_URL, json=body, timeout=90, headers=headers)
+        except requests.RequestException as e:
+            if attempt == 3:
+                raise ClassifyError("network error", type(e).__name__)
+            sleep(5 * (attempt + 1))
+            continue
+        if r.status_code in RETRY_STATUSES and attempt < 3:
+            wait = r.headers.get("retry-after") if hasattr(r, "headers") else None
+            try:
+                wait = min(float(wait), 60.0)
+            except (TypeError, ValueError):
+                wait = (10, 30, 60)[attempt]
+            sleep(wait)
+            continue
+        break
     if r.status_code != 200:
         # Never include request headers (they contain the key) in errors.
-        raise RuntimeError(f"Claude API HTTP {r.status_code}: {r.text[:200]}")
-    blocks = r.json().get("content") or []
+        raise ClassifyError(f"HTTP {r.status_code}", r.text[:200])
+    data = r.json()
+    blocks = data.get("content") or []
     text = "".join(b.get("text", "") for b in blocks if b.get("type") == "text")
-    return _extract_json(text)
+    try:
+        return _extract_json(text)
+    except ValueError as e:
+        raise ClassifyError(f"unusable reply (stop_reason={data.get('stop_reason')})", str(e)[:100])

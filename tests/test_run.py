@@ -3,6 +3,8 @@ from pathlib import Path
 
 from tracker import run, classify
 
+run.AI_GAP_SECONDS = 0
+
 PROFILE = yaml.safe_load((Path(__file__).resolve().parent.parent / "config" / "profile.yaml").read_text())
 
 

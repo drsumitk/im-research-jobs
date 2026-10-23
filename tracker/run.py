@@ -8,7 +8,9 @@ import hashlib
 import json
 import os
 import sys
+import time
 import traceback
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -26,6 +28,7 @@ MAX_NEW_DETAILS_PER_SOURCE = 80
 DROP_AFTER_DAYS = 60
 DROP_AFTER_DAYS_FAILED_SOURCE = 120  # longer grace when the site itself could not be read
 MAX_AI_ATTEMPTS = 3
+AI_GAP_SECONDS = 1.0  # pause between Claude calls to stay under per-minute rate limits
 SNIPPET_CHARS = 900
 
 
@@ -115,6 +118,7 @@ def apply_ai(records, profile, log):
         return 0
     budget = int(profile.get("ai", {}).get("max_calls_per_run", 150))
     used = errors = 0
+    causes = Counter()
     from .models import Job
     for rec in records.values():
         if used >= budget:
@@ -129,16 +133,20 @@ def apply_ai(records, profile, log):
         try:
             res = classify.classify(job, profile)
         except Exception as e:
-            # Full detail goes to the private Actions log; the public page gets only a short note.
+            # Full detail goes to the private Actions log; the public page gets only the cause category.
             print(f"AI error on {rec['key']}: {e}", file=sys.stderr)
             errors += 1
+            causes[getattr(e, "category", type(e).__name__)] += 1
             continue
+        finally:
+            time.sleep(AI_GAP_SECONDS)
         rec["ai"] = res
         rec["verdict"] = AI_TO_VERDICT[res["verdict"]]
         rec["reason"] = res.get("reason", "")
     if errors:
-        log.append(f"AI classifier failed on {errors} posting(s); details are in the GitHub Actions log. "
-                   f"Each posting is retried at most {MAX_AI_ATTEMPTS} times.")
+        by_cause = ", ".join(f"{c} x{n}" for c, n in causes.most_common())
+        log.append(f"AI classifier failed on {errors} posting(s) ({by_cause}); details are in the GitHub "
+                   f"Actions log. Each posting is retried at most {MAX_AI_ATTEMPTS} times.")
     return used
 
 
