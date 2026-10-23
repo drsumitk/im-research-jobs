@@ -1,0 +1,204 @@
+"use strict";
+// All page text is built with textContent / createElement. Job data comes from other websites,
+// so it is never inserted as HTML.
+
+const state = { jobs: [], health: [], meta: {}, tab: "Match", marks: {} };
+const $ = (id) => document.getElementById(id);
+
+function loadMarks() {
+  try { state.marks = JSON.parse(localStorage.getItem("imjobs.marks") || "{}"); } catch (e) { state.marks = {}; }
+}
+function saveMarks() {
+  try { localStorage.setItem("imjobs.marks", JSON.stringify(state.marks)); } catch (e) { /* storage unavailable */ }
+}
+
+function el(tag, cls, text) {
+  const n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (text !== undefined && text !== null) n.textContent = text;
+  return n;
+}
+
+function safeUrl(u) {
+  try {
+    const x = new URL(u);
+    return x.protocol === "https:" || x.protocol === "http:" ? x.href : "#";
+  } catch (e) { return "#"; }
+}
+
+function daysBetween(a, b) {
+  return Math.round((new Date(b + "T00:00:00Z") - new Date(a + "T00:00:00Z")) / 86400000);
+}
+
+function divisionOf(j) {
+  return (j.ai && j.ai.im_division) ? prettyDiv(j.ai.im_division) : (j.rules ? j.rules.division : "");
+}
+function prettyDiv(d) {
+  if (d === "not_internal_medicine") return "Not Internal Medicine";
+  if (d === "unclear") return "Unclear";
+  return d;
+}
+
+async function getJson(path) {
+  const r = await fetch(path + "?v=" + Date.now(), { cache: "no-store" });
+  if (!r.ok) throw new Error(path + " HTTP " + r.status);
+  return r.json();
+}
+
+async function init() {
+  loadMarks();
+  try {
+    const [jobs, health] = await Promise.all([getJson("data/jobs.json"), getJson("data/health.json")]);
+    state.meta = jobs.meta || {};
+    state.jobs = Object.values(jobs.jobs || {});
+    state.health = health.sources || [];
+  } catch (e) {
+    $("meta").textContent = "No data yet. The first daily run has not finished, or the data files are missing.";
+    return;
+  }
+  const m = state.meta;
+  $("meta").textContent = `Updated ${m.generated_utc || "?"} · ${state.jobs.length} postings tracked · AI classifier ${m.ai_enabled ? "on" : "off (keyword rules only)"}`;
+
+  const schools = [...new Set(state.jobs.map((j) => `${String(j.rank).padStart(2, "0")}|${j.school}`))].sort();
+  for (const s of schools) {
+    const [, name] = s.split("|");
+    const o = el("option", null, name); o.value = name; $("school").append(o);
+  }
+  const divs = [...new Set(state.jobs.map(divisionOf).filter(Boolean))].sort();
+  for (const d of divs) { const o = el("option", null, d); o.value = d; $("division").append(o); }
+
+  document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("click", () => {
+    state.tab = b.dataset.tab;
+    document.querySelectorAll(".tabs button").forEach((x) => x.setAttribute("aria-selected", String(x === b)));
+    render();
+  }));
+  ["q", "school", "division", "since", "showHidden", "activeOnly"].forEach((id) =>
+    $(id).addEventListener("input", render));
+  render();
+}
+
+function filtered() {
+  const q = $("q").value.trim().toLowerCase();
+  const school = $("school").value, div = $("division").value, since = $("since").value;
+  const showHidden = $("showHidden").checked, activeOnly = $("activeOnly").checked;
+  const today = state.meta.today;
+  return state.jobs.filter((j) => {
+    if (!showHidden && state.marks[j.key] === "hidden") return false;
+    if (activeOnly && !j.active) return false;
+    if (school && j.school !== school) return false;
+    if (div && divisionOf(j) !== div) return false;
+    if (since && today && daysBetween(j.first_seen, today) >= Number(since)) return false;
+    if (q) {
+      const hay = [j.title, j.department, j.school, j.snippet, j.reason].join(" ").toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+}
+
+function render() {
+  const all = filtered();
+  document.querySelectorAll("[data-count]").forEach((c) => {
+    c.textContent = all.filter((j) => j.verdict === c.dataset.count).length;
+  });
+  const list = $("list"), sources = $("sources");
+  list.replaceChildren(); sources.replaceChildren();
+  if (state.tab === "Sources") {
+    $("filters").hidden = true; list.hidden = true; sources.hidden = false; $("hint").textContent = "";
+    renderSources(sources);
+    return;
+  }
+  $("filters").hidden = false; list.hidden = false; sources.hidden = true;
+  const rows = all.filter((j) => j.verdict === state.tab)
+    .sort((a, b) => (b.first_seen || "").localeCompare(a.first_seen || "") || (a.rank - b.rank));
+  const hints = {
+    "Match": "Clinical or dry research in Internal Medicine that the profile appears eligible for.",
+    "Check": "Unclear department, eligibility, or type of work. Open the posting to decide.",
+    "Other dept": "Clinical or dry research outside Internal Medicine (for example epidemiology or pediatrics).",
+    "Excluded": "Wet-lab work, citizenship requirement, no visa sponsorship, or a PhD-only requirement.",
+  };
+  $("hint").textContent = `${rows.length} shown. ${hints[state.tab] || ""}`;
+  for (const j of rows) {
+    try { list.append(card(j)); } catch (e) {
+      const li = el("li", "card"); li.append(el("p", "warn", "This posting could not be displayed: " + String(j.title || j.key)));
+      list.append(li);
+    }
+  }
+}
+
+function card(j) {
+  const li = el("li", "card" + (state.marks[j.key] === "applied" ? " applied" : ""));
+  const head = el("div", "head");
+  const a = el("a", "title", j.title); a.href = safeUrl(j.url); a.target = "_blank"; a.rel = "noopener noreferrer";
+  head.append(a);
+  if (j.first_seen === state.meta.today) head.append(el("span", "badge new", "New today"));
+  if (state.marks[j.key] === "applied") head.append(el("span", "badge done", "Applied"));
+  li.append(head);
+
+  const facts = el("p", "facts");
+  facts.textContent = [
+    `#${j.rank} ${j.school}`, j.source_label !== j.school ? j.source_label : null,
+    j.department || null, divisionOf(j), j.location || null,
+    j.posted ? `posted ${j.posted}` : null, `first seen ${j.first_seen}`,
+  ].filter(Boolean).join(" · ");
+  li.append(facts);
+
+  li.append(el("p", "reason", j.reason || ""));
+
+  const tags = el("p", "tags");
+  const ai = j.ai || {};
+  const add = (t, cls) => tags.append(el("span", "tag " + (cls || ""), t));
+  const s = (x) => String(x == null ? "" : x);
+  if (ai.role_type) add(s(ai.role_type).replace(/_/g, " "));
+  if (ai.mbbs_without_phd_eligible) add("MBBS eligible: " + s(ai.mbbs_without_phd_eligible), ai.mbbs_without_phd_eligible === "no" ? "warn" : "");
+  if (ai.visa) add("visa: " + s(ai.visa).replace(/_/g, " "), /no_|citizen/.test(s(ai.visa)) ? "warn" : "");
+  for (const n of (j.rules && j.rules.notes) || []) add(n, /sponsorship mentioned/i.test(n) ? "" : "warn");
+  if (tags.childNodes.length) li.append(tags);
+
+  const det = el("details");
+  det.append(el("summary", null, "Excerpt and rule signals"));
+  det.append(el("p", "snippet", j.snippet || "(no text captured)"));
+  const r = j.rules || {};
+  det.append(el("p", "signals", `Rules: ${r.research_type || "?"}; wet-lab terms: ${(r.wet_terms || []).join(", ") || "none"}; clinical terms: ${(r.dry_terms || []).join(", ") || "none"}`));
+  li.append(det);
+
+  const actions = el("div", "actions");
+  const mk = (label, val) => {
+    const b = el("button", null, state.marks[j.key] === val ? `Undo ${label.toLowerCase()}` : label);
+    b.type = "button";
+    b.addEventListener("click", () => {
+      if (state.marks[j.key] === val) delete state.marks[j.key]; else state.marks[j.key] = val;
+      saveMarks(); render();
+    });
+    return b;
+  };
+  actions.append(mk("Applied", "applied"), mk("Hide", "hidden"));
+  li.append(actions);
+  return li;
+}
+
+function renderSources(root) {
+  root.append(el("p", "hint", "Status of each careers site in the latest run. Manual sources cannot be read automatically: check them by hand."));
+  const ol = el("ol", "list");
+  for (const h of state.health) {
+    const li = el("li", "card src " + (h.status || ""));
+    const head = el("div", "head");
+    head.append(el("strong", null, `#${h.rank} ${h.school}`), el("span", "badge " + (h.status === "ok" ? "ok" : "warnb"), h.status));
+    li.append(head);
+    li.append(el("p", "facts", `${h.label} · ${h.type}`));
+    if (h.status === "ok") li.append(el("p", null, `Postings returned: ${h.found} · matching titles: ${h.candidates} · newly read today: ${h.new_details}` + (h.detail_errors ? ` · pages that failed to load: ${h.detail_errors}` : "")));
+    if (h.error) li.append(el("p", "warn", h.error));
+    if (h.note) li.append(el("p", null, h.note));
+    if (h.url) { const a = el("a", null, "Open the job board"); a.href = safeUrl(h.url); a.target = "_blank"; a.rel = "noopener noreferrer"; li.append(a); }
+    ol.append(li);
+  }
+  root.append(ol);
+  if ((state.meta.log || []).length) {
+    root.append(el("h2", null, "Run notes"));
+    const ul = el("ul");
+    for (const l of state.meta.log) ul.append(el("li", null, l));
+    root.append(ul);
+  }
+}
+
+init();

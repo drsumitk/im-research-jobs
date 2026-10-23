@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
+  <id>tag:recruit.apo.ucla.edu,2005:/apply</id>
+  <title>UCLA Academic RECRUIT open recruitments</title>
+  <entry>
+    <id>https://recruit.apo.ucla.edu/JPF11346</id>
+    <published>2026-09-16T15:59:07-07:00</published>
+    <updated>2026-09-21T00:02:56-07:00</updated>
+    <link rel="alternate" type="text/html" href="https://recruit.apo.ucla.edu/JPF11346"/>
+    <title>Adjunct Faculty Position</title>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<section class="markdown"><p><strong>Position description</strong><br/>
+The Department of Anesthesiology and Perioperative Medicine at UCLA is seeking a qualified candidate for an Adjunct Assistant Professor position.</p></section>
+      </div>
+    </summary>
+  </entry>
+</feed>

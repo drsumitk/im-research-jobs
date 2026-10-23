@@ -1,0 +1,75 @@
+name: Daily job scan
+
+# Runs once a day and on demand. There is deliberately no pull_request trigger:
+# code from other people's pull requests can never run with your secrets.
+on:
+  schedule:
+    - cron: "30 0 * * *"   # 00:30 UTC = 06:00 IST every day
+  workflow_dispatch: {}
+
+# Default: no permissions. Each job asks only for what it needs.
+permissions: {}
+
+concurrency:
+  group: daily-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: write      # to save the updated data files back to the repository
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: true
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install pinned dependencies
+        run: pip install -r requirements.txt pytest==9.1.1
+
+      - name: Run tests
+        run: python -m pytest -q
+
+      - name: Scan careers sites
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # empty if you have not added it; the AI step is then skipped
+        run: python -m tracker.run
+
+      - name: Save data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data
+          if git diff --cached --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "Daily scan $(date -u +%Y-%m-%d)"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push
+          fi
+
+  deploy:
+    needs: scan
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+      contents: read
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.ref }}
+          persist-credentials: false
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: deployment
+        uses: actions/deploy-pages@v4

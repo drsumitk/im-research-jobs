@@ -1,0 +1,53 @@
+:root {
+  --bg: #f6f7f9; --panel: #ffffff; --text: #1d2330; --muted: #5d6676; --line: #dfe3ea;
+  --accent: #1f5fae; --accent-soft: #e7eff9; --new: #0f7b4b; --new-soft: #e3f4ec;
+  --warn: #9a4a00; --warn-soft: #fdf0e1; --done: #6b4fa8; --done-soft: #efe9f8;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12151b; --panel: #1b1f27; --text: #e6e9ef; --muted: #9aa3b2; --line: #2c323d;
+    --accent: #7fb0ff; --accent-soft: #1f2d44; --new: #6fd3a6; --new-soft: #17322a;
+    --warn: #f0b36a; --warn-soft: #3a2a17; --done: #b9a3f0; --done-soft: #2a2340;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+a { color: var(--accent); }
+body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+.top { background: var(--panel); border-bottom: 1px solid var(--line); padding: 18px 0 12px; }
+h1 { margin: 0; font-size: 22px; letter-spacing: 0.2px; }
+.sub { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+.tabs { display: flex; gap: 6px; flex-wrap: wrap; margin: 16px 0 10px; }
+.tabs button { border: 1px solid var(--line); background: var(--panel); color: var(--text); padding: 7px 12px; border-radius: 8px; cursor: pointer; font: inherit; }
+.tabs button[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.count { opacity: 0.8; font-size: 12px; margin-left: 4px; }
+.filters { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: end; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+.filters label { display: flex; flex-direction: column; font-size: 12px; color: var(--muted); gap: 3px; }
+.filters label.check { flex-direction: row; align-items: center; gap: 6px; font-size: 13px; color: var(--text); }
+.filters input[type="search"], .filters select { font: inherit; padding: 5px 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--text); min-width: 150px; }
+.hint { color: var(--muted); font-size: 13px; margin: 10px 2px; }
+.list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+.card.applied { border-left: 4px solid var(--done); }
+.head { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.title { font-weight: 600; color: var(--accent); text-decoration: none; font-size: 16px; }
+.title:hover { text-decoration: underline; }
+.badge { font-size: 11px; padding: 2px 7px; border-radius: 99px; background: var(--accent-soft); color: var(--accent); }
+.badge.new { background: var(--new-soft); color: var(--new); }
+.badge.done { background: var(--done-soft); color: var(--done); }
+.badge.ok { background: var(--new-soft); color: var(--new); }
+.badge.warnb { background: var(--warn-soft); color: var(--warn); }
+.facts { margin: 4px 0; color: var(--muted); font-size: 13px; }
+.reason { margin: 6px 0; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+.tag { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--accent-soft); color: var(--text); }
+.tag.warn, .warn { background: var(--warn-soft); color: var(--warn); }
+p.warn { padding: 4px 8px; border-radius: 6px; }
+details summary { cursor: pointer; color: var(--muted); font-size: 13px; }
+.snippet { white-space: pre-wrap; font-size: 13px; background: var(--bg); padding: 8px; border-radius: 6px; max-height: 260px; overflow: auto; }
+.signals { font-size: 12px; color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 8px; }
+.actions button { font: inherit; font-size: 13px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--text); cursor: pointer; }
+.foot { color: var(--muted); font-size: 12px; padding: 24px 16px 40px; }
+@media (max-width: 600px) { .filters label { width: 100%; } .filters input[type="search"], .filters select { width: 100%; } }

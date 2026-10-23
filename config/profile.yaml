@@ -1,0 +1,124 @@
+# Who the tracker is looking for, and how it decides.
+# This file is public if the repository is public, so it holds no names or contact details.
+
+candidate_summary: >
+  Foreign medical graduate (MBBS) with no PhD. Experience in clinical research and evidence
+  synthesis (systematic review, meta-analysis), cross-sectional clinical studies, data
+  management and statistics in R. Interests: diabetes
+  and cardiometabolic disease, kidney disease, cognition, outcomes research. Wants a
+  research-only role (research fellow, postdoctoral associate, research associate, clinical
+  research coordinator) in an Internal Medicine department or division. No wet-lab or bench
+  experience. Would need US visa sponsorship (typically J-1 research scholar or H-1B).
+
+# Search words sent to each careers site. Short phrases work best on most sites.
+search_terms:
+  - postdoctoral
+  - postdoc
+  - research fellow
+  - research associate
+  - clinical research coordinator
+  - research coordinator
+  - postgraduate associate
+  - associate in research
+
+# Stage 1: a job title must match one of these (case-insensitive regular expressions) ...
+title_include:
+  - 'post[- ]?doc'
+  - 'post[- ]?doctoral'
+  - 'research fellow'
+  - '\bfellow\b.*research|research.*\bfellow\b'
+  - 'research associate'
+  - 'research scholar'
+  - 'clinical research (coordinator|associate|assistant|specialist|data)'
+  - 'research (project )?coordinator'
+  - 'study coordinator'
+  - 'postgraduate (associate|research)'
+  - 'associate in research'
+  - 'research (analyst|assistant)'
+
+# ... and must not match any of these.
+title_exclude:
+  - '\bnurse\b|\brn\b|\(rn\)|nurse practitioner|physician assistant|\bpa\b|\(pa\)'
+  - 'pharmacist|pharmacy'
+  - 'professor|instructor|faculty|lecturer|chair\b'
+  - 'hospitalist|physician\b(?!.*scientist)'
+  - 'technician|technologist|histotech|lab(oratory)? manager|animal|veterinar'
+  - 'manager|director|administrator|grants?\b|finance|accountant'
+  - 'engineer|software|developer|\bit\b|programmer'
+  - 'clinical fellowship|residen(t|cy)\b'
+  - 'student|intern\b|internship|volunteer'
+
+# Internal Medicine divisions, checked in this order (specific divisions before the general ones).
+im_divisions:
+  Cardiology: ['cardiolog', 'cardiovascular', '\bheart\b']
+  Endocrinology: ['endocrin', 'diabet', 'metabolism', 'obesity']
+  Gastroenterology & Hepatology: ['gastroenterolog', 'hepatolog', '\bliver\b', 'digestive']
+  Nephrology: ['nephrolog', 'kidney', 'renal', 'dialysis']
+  Pulmonary & Critical Care: ['pulmonar', 'critical care', '\blung\b', 'respiratory']
+  Infectious Diseases: ['infectious disease', '\bhiv\b', 'infectious diseases']
+  Hematology & Oncology: ['hematolog', 'oncolog', 'cancer', 'myeloma', 'leukemia', 'lymphoma']
+  Rheumatology & Immunology: ['rheumatolog', 'allergy', 'clinical immunology']
+  Geriatrics & Palliative: ['geriatric', '\baging\b', 'palliative']
+  General Internal Medicine: ['general internal medicine', '\bgim\b', 'general medicine', 'hospital medicine', 'internal medicine']
+  Department of Medicine (division not stated): ['department of medicine', 'dept of medicine', '\bdom\b', 'medicine/']
+
+# Departments that are clearly not Internal Medicine.
+non_im_departments:
+  - pediatric|child health|children's
+  - surgery|surgical
+  - psychiatr
+  - neurolog|neurosurg
+  - obstetric|gynecolog|ob/?gyn
+  - radiology|radiation oncology
+  - anesthesi
+  - dermatolog
+  - ophthalmolog
+  - orthop
+  - urolog
+  - otolaryngolog
+  - emergency medicine
+  - family medicine
+  - pathology
+  - dentist|dental
+  - biochemistry|cell biology|physics|chemistry|engineering
+  - epidemiology department|department of epidemiology|public health|pub health|biostatistics|environmental (health|science)|environ and sustain
+
+# Signals of bench or wet-lab work.
+wet_lab_terms:
+  - '\bmice\b|\bmouse\b|murine|rodent|\brats?\b|zebrafish|animal model|in vivo'
+  - 'cell culture|tissue culture|organoid|ipsc|stem cell'
+  - 'crispr|cloning|transfection|transgenic|knock-?out'
+  - 'western blot|\bwb\b|qpcr|rt-pcr|\bpcr\b|elisa|elispot|flow cytometry|facs|cytof'
+  - 'immunohistochemistry|\bihc\b|confocal|microscopy|cryo-?em|cryo-?et'
+  - 'mass spectrometry|proteomic|protein purification|biochemical assay'
+  - 'wet[- ]lab|bench (work|research|science)|benchwork|laboratory techniques'
+  - 'molecular biology|single[- ]cell|rna-?seq|library prep'
+
+# Phrases that cancel a wet-lab signal ("this role does not include bench science research").
+wet_lab_negations:
+  - '(no|not|non|without)[- ](include )?(any )?(bench|wet[- ]lab)'
+  - 'does not include bench'
+  - 'non-bench'
+
+# Signals of clinical or dry (data, human-subject) research.
+dry_terms:
+  - 'clinical trial|clinical research|human subjects|patients?\b|participants?\b|\birb\b|institutional review board|informed consent'
+  - 'subject recruitment|study enrollment|data management|good clinical practice|\bgcp\b'
+  - 'cohort|registry|electronic health record|\behr\b|claims data|administrative claims|chart (review|abstraction)'
+  - 'epidemiolog|outcomes research|health services research|population health|implementation science'
+  - 'biostatistic|statistical analys|data analys|\br\b|\bsas\b|\bstata\b|redcap|python'
+  - 'meta-?analys|systematic review|observational'
+
+# Eligibility flags (matched on the full description).
+flags:
+  citizenship_required: ['u\.?s\.? citizen(ship)? (is )?required', 'must be a (u\.?s\.? )?citizen', 'permanent resident', 'green card', 'u\.?s\.? persons? only']
+  no_sponsorship: ['(no|not|unable to|will not|cannot|does not) (provide |offer )?(visa )?sponsor', 'sponsorship (is )?not (available|provided)', 'without (the need for )?(visa )?sponsorship']
+  sponsorship_mentioned: ['j-?1', 'h-?1b', 'visa sponsorship (is )?available', 'will sponsor', 'international (applicants|candidates) (are )?(welcome|encouraged)']
+  phd_only: ['ph\.?d\.? (is )?required', 'doctoral degree in (biology|biochemistry|chemistry|neuroscience|immunology|molecular)']
+  md_or_foreign_md_ok: ['\bmd (degree|or\b|/)', '\bmd,? (do|phd)\b', '(phd|ph\.d\.),? (or|and/or) md\b', 'm\.d\.', 'mbbs', 'foreign medical', 'international medical graduate', '\bimg\b', 'medical degree', 'md or phd', 'phd or md', 'md/phd', 'equivalent doctoral']
+
+# Claude classifier settings (used only if the ANTHROPIC_API_KEY secret is set).
+ai:
+  model: claude-haiku-5-5
+  max_calls_per_run: 150
+  max_description_chars: 8000

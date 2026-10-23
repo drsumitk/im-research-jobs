@@ -1,0 +1,209 @@
+# Target schools: top 20 Departments of Internal Medicine by FY2025 NIH funding
+# (BRIMR 2025 ranking, https://brimr.org/brimr-rankings-of-nih-funding-in-2025/).
+#
+# Each source tells the tracker which careers system a school uses.
+# type: workday | oracle | eightfold | rmk | jibe | mcloud | taleo | html_list | ucrecruit | manual
+# "manual" sources are not fetched; the dashboard shows a direct link to check by hand.
+# Set enabled: false to pause a source without deleting it.
+
+schools:
+  - rank: 1
+    name: Vanderbilt
+    sources:
+      - id: vumc
+        label: Vanderbilt University Medical Center
+        type: workday
+        host: vumc.wd1.myworkdayjobs.com
+        tenant: vumc
+        site: vumccareers
+      - id: vanderbilt-univ
+        label: Vanderbilt University
+        type: oracle
+        host: ecsr.fa.us2.oraclecloud.com
+        site: CX_1
+
+  - rank: 2
+    name: UCSF
+    sources:
+      - id: ucsf
+        label: UCSF (staff)
+        type: oracle
+        host: iazuqy.fa.ocs.oraclecloud.com
+        site: CX_1
+      - id: ucsf-aprecruit
+        label: UCSF (academic recruitments)
+        type: ucrecruit
+        host: aprecruit.ucsf.edu
+
+  - rank: 3
+    name: Johns Hopkins
+    sources:
+      - id: jhu
+        label: Johns Hopkins University
+        type: eightfold
+        host: hiring.jhu.edu
+        domain: jhu.edu
+
+  - rank: 4
+    name: Columbia
+    sources:
+      - id: columbia
+        label: Columbia University (staff)
+        type: manual
+        url: https://opportunities.columbia.edu/jobs/search?query=clinical+research
+        reason: Site uses bot protection (AWS WAF) that blocks automated reading of job pages.
+
+  - rank: 5
+    name: Penn
+    sources:
+      - id: penn
+        label: University of Pennsylvania
+        type: workday
+        host: wd1.myworkdaysite.com
+        tenant: upenn
+        site: careers-at-penn
+
+  - rank: 6
+    name: Pittsburgh
+    sources:
+      - id: pitt
+        label: University of Pittsburgh
+        type: manual
+        url: https://www.join.pitt.edu/
+        reason: Staff job board (Taleo) requires a Pitt login; no public feed found.
+
+  - rank: 7
+    name: WashU
+    sources:
+      - id: wustl
+        label: Washington University in St. Louis
+        type: workday
+        host: wustl.wd1.myworkdayjobs.com
+        tenant: wustl
+        site: External
+
+  - rank: 8
+    name: Duke
+    sources:
+      - id: duke
+        label: Duke University and Duke Health
+        type: rmk
+        host: careers.duke.edu
+
+  - rank: 9
+    name: UCLA
+    sources:
+      - id: ucla
+        label: UCLA (staff)
+        type: jibe
+        host: jobs.ucla.edu
+      - id: ucla-recruit
+        label: UCLA (academic recruitments)
+        type: ucrecruit
+        host: recruit.apo.ucla.edu
+
+  - rank: 10
+    name: Mount Sinai
+    sources:
+      - id: mountsinai
+        label: Icahn School of Medicine at Mount Sinai
+        type: jibe
+        host: careers.mountsinai.org
+
+  - rank: 11
+    name: NYU
+    sources:
+      - id: nyulangone
+        label: NYU Langone Health
+        type: mcloud
+        organization: 1637
+
+  - rank: 12
+    name: Yale
+    sources:
+      - id: yale
+        label: Yale University
+        type: workday
+        host: yale.wd1.myworkdayjobs.com
+        tenant: yale
+        site: external_career_site
+
+  - rank: 13
+    name: UC San Diego
+    sources:
+      - id: ucsd
+        label: UC San Diego and UC San Diego Health
+        type: html_list
+        host: employment.ucsd.edu
+        search_path: /jobs?keywords={q}
+        link_pattern: '/job/[0-9A-F]{32}$'
+        detail: ldjson
+
+  - rank: 14
+    name: CU Anschutz
+    sources:
+      - id: cu-anschutz
+        label: University of Colorado Anschutz
+        type: taleo
+        host: cu.taleo.net
+        section: "2"
+        portal: "101430233"
+        location_must_include: [Aurora, Denver]
+
+  - rank: 15
+    name: Stanford
+    sources:
+      - id: stanford
+        label: Stanford University
+        type: oracle
+        host: careersearch.stanford.edu
+        site: stanford
+
+  - rank: 16
+    name: Northwestern
+    sources:
+      - id: northwestern
+        label: Northwestern University
+        type: manual
+        url: https://careers.northwestern.edu/
+        reason: PeopleSoft job board needs an interactive browser session; no public feed found.
+
+  - rank: 17
+    name: Michigan
+    sources:
+      - id: umich
+        label: University of Michigan
+        type: html_list
+        host: careers.umich.edu
+        search_path: /search-jobs?keyword={q}
+        link_pattern: '^/job_detail/\d+/'
+        detail: css
+        detail_selector: .layout-content
+
+  - rank: 18
+    name: Weill Cornell
+    sources:
+      - id: weillcornell
+        label: Weill Cornell Medicine
+        type: rmk
+        host: jobs.weill.cornell.edu
+
+  - rank: 19
+    name: University of Washington
+    sources:
+      - id: uw
+        label: University of Washington
+        type: workday
+        host: wd5.myworkdaysite.com
+        tenant: uw
+        site: UWHires
+
+  - rank: 20
+    name: UChicago
+    sources:
+      - id: uchicago
+        label: University of Chicago
+        type: workday
+        host: uchicago.wd5.myworkdayjobs.com
+        tenant: uchicago
+        site: External
