@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_utc": "2026-10-24 05:15 UTC",
+  "generated_utc": "2026-10-24 05:20 UTC",
   "today": "2026-10-24",
   "ai_enabled": true,
   "ai_calls": 0,
@@ -14041,8 +14041,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 19020000 - EG-MECHANICAL - AEROSPACE ENG\nPostdoctoral Associate",
+   "fingerprint": "963302dc19da861f",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -14058,13 +14058,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-524153-post-doctoral-associate-in-the-center-for-molecular-magnetic-quantum-materials-m2qm": {
@@ -14080,8 +14080,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 16360100 - LS-PHYSICS-GENERAL\nPost Doctoral Associate in the Center for Molecular Magnetic Quantum Materials (M2QM)",
+   "fingerprint": "3304d3cb5b070db2",
    "rules": {
     "division": "Not Internal Medicine",
     "division_source": "department",
@@ -14096,14 +14096,14 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "verdict": "Other dept",
+   "reason": "Department does not look like Internal Medicine",
    "active": true
   },
   "ufl:en-us-job-524454-postdoctoral-associate-implementation-science-and-practice": {
@@ -14119,14 +14119,16 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 18380000 - ED-CTR EXCEL EARLY CHILD STUD\nPost-Doctoral Associate: Implementation Science and Practice",
+   "fingerprint": "ce11e4fe125729a2",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
-    "research_type": "Unclear",
+    "research_type": "Clinical or dry research",
     "wet_terms": [],
-    "dry_terms": [],
+    "dry_terms": [
+     "implementation science"
+    ],
     "flags": {
      "citizenship_required": false,
      "no_sponsorship": false,
@@ -14136,13 +14138,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Clinical or dry research; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Clinical or dry research; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-528994-postdoctoral-associate-hacisuleyman": {
@@ -14158,8 +14160,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 37044160 - SR-MM-HACISULEYMAN LAB\nPostdoctoral Associate- Hacisuleyman",
+   "fingerprint": "22d12e5713fe5e0c",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -14175,13 +14177,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-533741-research-and-evaluation-methodology-postdoctoral-scholar": {
@@ -14197,8 +14199,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 18070000 - ED-SHDOSE-SCHL OF HUM DEV&ORG\nResearch and Evaluation Methodology Post-Doctoral Scholar",
+   "fingerprint": "b2b4e2bde2a1a5c2",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -14214,13 +14216,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-533815-postdoctoral-position-artificial-intelligence-developmental-network-neurobiology-laboratory": {
@@ -14236,8 +14238,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 29091800 - MD-PEDS-NEUROLOGY\nPostdoctoral Position- Artificial Intelligence- Developmental Network Neurobiology Laboratory",
+   "fingerprint": "eb992498084cee1a",
    "rules": {
     "division": "Not Internal Medicine",
     "division_source": "department",
@@ -14252,14 +14254,14 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "verdict": "Other dept",
+   "reason": "Department does not look like Internal Medicine",
    "active": true
   },
   "ufl:en-us-job-535998-postdoctoral-researcher": {
@@ -14275,8 +14277,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 29240101 - MD-HOBI-GENERAL\nPostdoctoral Researcher",
+   "fingerprint": "04cc35e4517a4f75",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -14292,13 +14294,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-536853-postdoctoral-associate-in-high-energy-physics": {
@@ -14314,8 +14316,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 16360100 - LS-PHYSICS-GENERAL\nPost-Doctoral Associate in High Energy Physics",
+   "fingerprint": "0180ef5874100f90",
    "rules": {
     "division": "Not Internal Medicine",
     "division_source": "department",
@@ -14330,14 +14332,14 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "verdict": "Other dept",
+   "reason": "Department does not look like Internal Medicine",
    "active": true
   },
   "ufl:en-us-job-537020-postdoctoral-associate-bhadurimcintosh-lab": {
@@ -14353,8 +14355,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 29093000 - MD-PEDS-INFECTIOUS DISEASES\nPostdoctoral Associate – Bhaduri-McIntosh Lab",
+   "fingerprint": "77d7fd30c8dabc89",
    "rules": {
     "division": "Infectious Diseases",
     "division_source": "department",
@@ -14370,13 +14372,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Infectious Diseases"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Infectious Diseases",
    "active": true
   },
   "ufl:en-us-job-537843-postdoctoral-associate-martins-lab": {
@@ -14392,8 +14394,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 37042060 - SR-IM-MARTINS LAB\nPostdoctoral Associate - Martins Lab",
+   "fingerprint": "15c176599a1af4f3",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -14409,13 +14411,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-539018-postdoctoral-scholar-research-and-evaluation-methodology-program": {
@@ -14431,8 +14433,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 18070000 - ED-SHDOSE-SCHL OF HUM DEV&ORG\nPostdoctoral Scholar - Research and Evaluation Methodology Program",
+   "fingerprint": "1a5c913201d01ebb",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -14448,13 +14450,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-539075-postdoctoral-associate-dr-yanjun-li-lab": {
@@ -14470,8 +14472,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 32030000 - PH-MEDICINAL CHEMISTRY\nPostdoctoral Associate- Dr. Yanjun Li Lab",
+   "fingerprint": "a7e4c5e9ab9fbebd",
    "rules": {
     "division": "Not Internal Medicine",
     "division_source": "department",
@@ -14486,14 +14488,14 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "verdict": "Other dept",
+   "reason": "Department does not look like Internal Medicine",
    "active": true
   },
   "ufl:en-us-job-539186-postdoctoral-associate-in-cryogenic-electron-microscopy-cryoem": {
@@ -14509,13 +14511,16 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 37043010 - SR-CHEM-IZARD LAB\nPostdoctoral Associate in cryogenic electron microscopy (CryoEM)",
+   "fingerprint": "d96f24d652ce201f",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
-    "research_type": "Unclear",
-    "wet_terms": [],
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "cryoem",
+     "microscopy"
+    ],
     "dry_terms": [],
     "flags": {
      "citizenship_required": false,
@@ -14525,14 +14530,14 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: cryoem, microscopy"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "verdict": "Excluded",
+   "reason": "Wet-lab signals: cryoem, microscopy",
    "active": true
   },
   "ufl:en-us-job-539443-postdoctoral-associate-xu-lab": {
@@ -14548,8 +14553,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 37041120 - SR-CHEM-LING XU LAB\nPostdoctoral Associate - Xu Lab",
+   "fingerprint": "d16fc61bef33b036",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -14565,13 +14570,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-539783-chemistry-postdoctoral-associate-unsupervised-and-generative-machine-learning": {
@@ -14587,8 +14592,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 16120100 - LS-CHEMISTRY-GENERAL\nChemistry Post-Doctoral Associate - Unsupervised and Generative Machine Learning",
+   "fingerprint": "52f9ab14c475a745",
    "rules": {
     "division": "Not Internal Medicine",
     "division_source": "department",
@@ -14603,14 +14608,14 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "verdict": "Other dept",
+   "reason": "Department does not look like Internal Medicine",
    "active": true
   },
   "ufl:en-us-job-539925-postdoctoral-associate-lizi-wu-lab": {
@@ -14626,8 +14631,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 29060000 - MD-MOLECULAR GENTCS - MICROBIO\nPostdoctoral Associate - Lizi Wu lab",
+   "fingerprint": "1aa6b5e635875f5c",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -14643,13 +14648,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-539984-postdoctoral-associate-disney-lab": {
@@ -14665,8 +14670,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 37041030 - SR-CHEM-DISNEY LAB\nPostdoctoral Associate - Disney Lab",
+   "fingerprint": "4b4e27395a15d4b4",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -14682,13 +14687,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-540164-adjunct-clinical-postdoctoral-associate-department-of-psychiatry": {
@@ -14704,8 +14709,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 29120000 - MD-PSYCHIATRY\nAdjunct Clinical Postdoctoral Associate – Department of Psychiatry",
+   "fingerprint": "9e2b136cb49b0de8",
    "rules": {
     "division": "Not Internal Medicine",
     "division_source": "department",
@@ -14720,14 +14725,14 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "verdict": "Other dept",
+   "reason": "Department does not look like Internal Medicine",
    "active": true
   },
   "ufl:en-us-job-540714-research-assistant-i-griffin-lab": {
@@ -14743,8 +14748,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 37044060 - SR-MM-GRIFFIN, P LAB\nResearch Assistant I - Griffin Lab",
+   "fingerprint": "11ebf47610da4fa9",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -14760,13 +14765,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-540794-postdoctoral-associate": {
@@ -14782,8 +14787,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 29240101 - MD-HOBI-GENERAL\nPostdoctoral Associate",
+   "fingerprint": "6b26cbaba4587446",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -14799,13 +14804,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-540874-postdoctoral-associate-bannister-lab": {
@@ -14821,8 +14826,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 37044010 - SR-MM-BANNISTER LAB\nPostdoctoral Associate - Bannister Lab",
+   "fingerprint": "b93068bc3117cd47",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -14838,13 +14843,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-540891-postdoctoral-associate-in-chemistry": {
@@ -14860,8 +14865,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 16120100 - LS-CHEMISTRY-GENERAL\nPost-Doctoral Associate in Chemistry",
+   "fingerprint": "31cca4a58ae5cc65",
    "rules": {
     "division": "Not Internal Medicine",
     "division_source": "department",
@@ -14876,14 +14881,14 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "verdict": "Other dept",
+   "reason": "Department does not look like Internal Medicine",
    "active": true
   },
   "ufl:en-us-job-541193-postdoctoral-research-associate-plant-immunity-and-extracellular-immune-signaling": {
@@ -14899,8 +14904,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 60100000 - AG-MICROBIOLOGY - CELL SCI\nPostdoctoral Research Associate - Plant Immunity and Extracellular Immune Signaling",
+   "fingerprint": "4e4a5377e3e5e0d3",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -14916,13 +14921,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-541204-post-doc-researcher": {
@@ -14938,8 +14943,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 13050000 - DW-DIGITAL WORLD\nPost Doc Researcher",
+   "fingerprint": "895e2651daab2abb",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -14955,13 +14960,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-541290-postdoctoral-research-associate": {
@@ -14977,8 +14982,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 29020100 - MD-NEUROSCIENCE-GENERAL\nPostdoctoral Research Associate",
+   "fingerprint": "4e5d7ad50b9625ee",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -14994,13 +14999,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-541319-research-assistant-scientist": {
@@ -15016,8 +15021,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 19050000 - EG-ELECTRICAL - COMPUTER ENG\nResearch Assistant Scientist",
+   "fingerprint": "2f017b4de145ee0b",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -15033,13 +15038,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-541320-postdoctoral-fellow-hamilton-school": {
@@ -15055,8 +15060,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 57301000 - HS-HAMILTON SCHOOL ADMIN\nPostdoctoral Fellow - Hamilton School",
+   "fingerprint": "f664ed463f9e15c6",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -15072,13 +15077,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-541331-postdoctoral-associate-in-artificial-intelligence-and-quantum-chemistry": {
@@ -15094,8 +15099,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 16120100 - LS-CHEMISTRY-GENERAL\nPost-Doctoral Associate in Artificial Intelligence and Quantum Chemistry",
+   "fingerprint": "b8e04b8ec9ccb325",
    "rules": {
     "division": "Not Internal Medicine",
     "division_source": "department",
@@ -15110,14 +15115,14 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "verdict": "Other dept",
+   "reason": "Department does not look like Internal Medicine",
    "active": true
   },
   "ufl:en-us-job-541449-postdoctoral-associate": {
@@ -15133,8 +15138,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 16360100 - LS-PHYSICS-GENERAL\nPostdoctoral Associate",
+   "fingerprint": "af412ab2849c7642",
    "rules": {
     "division": "Not Internal Medicine",
     "division_source": "department",
@@ -15149,14 +15154,14 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "verdict": "Other dept",
+   "reason": "Department does not look like Internal Medicine",
    "active": true
   },
   "ufl:en-us-job-541469-postdoctoral-associate-crop-transformation-center-ctc": {
@@ -15172,8 +15177,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 60230000 - AG-HORTICULTURAL SCIENCES\nPostdoctoral Associate - Crop Transformation Center (CTC)",
+   "fingerprint": "8eebc791a88bc527",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -15189,13 +15194,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-541470-postdoctoral-associate-nursery-science-production-and-agrophysics": {
@@ -15211,8 +15216,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 60230000 - AG-HORTICULTURAL SCIENCES\nPostdoctoral Associate, Nursery Science - Production and Agrophysics",
+   "fingerprint": "8a7bf23249dccb9a",
    "rules": {
     "division": "Not Internal Medicine",
     "division_source": "department",
@@ -15227,14 +15232,14 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "verdict": "Other dept",
+   "reason": "Department does not look like Internal Medicine",
    "active": true
   },
   "ufl:en-us-job-541476-postdoctoral-associate-astrophysics": {
@@ -15250,8 +15255,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 16360100 - LS-PHYSICS-GENERAL\nPostdoctoral Associate Astrophysics",
+   "fingerprint": "d50d5a70d579b2a5",
    "rules": {
     "division": "Not Internal Medicine",
     "division_source": "department",
@@ -15266,14 +15271,14 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "verdict": "Other dept",
+   "reason": "Department does not look like Internal Medicine",
    "active": true
   },
   "ufl:en-us-job-541480-postdoctoral-scholar-in-natural-language-processing-and-mammalian-evolution": {
@@ -15289,8 +15294,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 56021500 - NH-MAMMALS\nPostdoctoral Scholar in Natural Language Processing and Mammalian Evolution",
+   "fingerprint": "bb94dc7728da9f57",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -15306,13 +15311,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-541500-postdoctoral-associate-developmental-programming-of-metabolic-disease": {
@@ -15328,8 +15333,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 29060000 - MD-MOLECULAR GENTCS - MICROBIO\nPostdoctoral Associate - Developmental Programming of Metabolic Disease",
+   "fingerprint": "f4da50437cb9fd29",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -15345,13 +15350,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-541548-postdoctoral-associate": {
@@ -15367,8 +15372,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 19340000 - EG-BIOMEDICAL ENGINEERING\nPostdoctoral Associate",
+   "fingerprint": "4673ba82b0f706c3",
    "rules": {
     "division": "Not Internal Medicine",
     "division_source": "department",
@@ -15383,14 +15388,14 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "verdict": "Other dept",
+   "reason": "Department does not look like Internal Medicine",
    "active": true
   },
   "ufl:en-us-job-541550-postdoctoral-associate": {
@@ -15406,8 +15411,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 19340000 - EG-BIOMEDICAL ENGINEERING\nPostdoctoral Associate",
+   "fingerprint": "4673ba82b0f706c3",
    "rules": {
     "division": "Not Internal Medicine",
     "division_source": "department",
@@ -15422,14 +15427,14 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "verdict": "Other dept",
+   "reason": "Department does not look like Internal Medicine",
    "active": true
   },
   "ufl:en-us-job-541691-postdoctoral-associate": {
@@ -15445,8 +15450,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 29150000 - MD-OPHTHALMOLOGY\nPostdoctoral Associate",
+   "fingerprint": "5a5bd69fd3cc6671",
    "rules": {
     "division": "Not Internal Medicine",
     "division_source": "department",
@@ -15461,14 +15466,14 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "verdict": "Other dept",
+   "reason": "Department does not look like Internal Medicine",
    "active": true
   },
   "ufl:en-us-job-541692-postdoctoral-associate": {
@@ -15484,8 +15489,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 29150000 - MD-OPHTHALMOLOGY\nPostdoctoral Associate",
+   "fingerprint": "5a5bd69fd3cc6671",
    "rules": {
     "division": "Not Internal Medicine",
     "division_source": "department",
@@ -15500,14 +15505,14 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "verdict": "Other dept",
+   "reason": "Department does not look like Internal Medicine",
    "active": true
   },
   "ufl:en-us-job-541701-postdoctoral-associate-in-transportation-systems-safety-and-human-factors": {
@@ -15523,8 +15528,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 19220300 - EG-TECHNOLOGY TRAINING CENTER\nPostdoctoral Associate in Transportation Systems, Safety, and Human Factors",
+   "fingerprint": "3a91ebeaba263aa2",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -15540,13 +15545,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-541769-postdoctoral-associate-pasture-mealybug-management-in-sugarcane": {
@@ -15562,8 +15567,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 60740000 - AG-EREC-BELLE GLADE\nPostdoctoral Associate - Pasture Mealybug Management in Sugarcane",
+   "fingerprint": "0f42ecae5eb7266c",
    "rules": {
     "division": "Unclear",
     "division_source": "none",
@@ -15579,13 +15584,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Unclear"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Unclear",
    "active": true
   },
   "ufl:en-us-job-541782-postdoctoral-researchersmeg-and-multimodal-neuroimaging-in-dementia-and-epilepsy": {
@@ -15601,8 +15606,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 29180200 - MD-NEUROLOGY-EPILEPSY\nPostdoctoral Researchers–MEG and Multimodal Neuroimaging in Dementia and Epilepsy",
+   "fingerprint": "ed70e05b376228a4",
    "rules": {
     "division": "Not Internal Medicine",
     "division_source": "department",
@@ -15617,14 +15622,14 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "verdict": "Other dept",
+   "reason": "Department does not look like Internal Medicine",
    "active": true
   },
   "ufl:en-us-job-541788-postdoctoral-associate-pulmonary": {
@@ -15640,8 +15645,8 @@
    "posted": "",
    "first_seen": "2026-10-24",
    "last_seen": "2026-10-24",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Department: 29050900 - MD-PULMONARY MEDICINE\nPostdoctoral Associate - Pulmonary",
+   "fingerprint": "0b81a4c5c9ec2d68",
    "rules": {
     "division": "Pulmonary & Critical Care",
     "division_source": "department",
@@ -15657,13 +15662,13 @@
     },
     "notes": [],
     "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "reason": "Unclear; division: Pulmonary & Critical Care"
    },
    "ai": null,
-   "evaluated": false,
+   "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "reason": "Unclear; division: Pulmonary & Critical Care",
    "active": true
   },
   "uhhospitals:23474395": {

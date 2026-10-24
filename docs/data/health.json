@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_utc": "2026-10-24 05:15 UTC",
+  "generated_utc": "2026-10-24 05:20 UTC",
   "today": "2026-10-24",
   "ai_enabled": true,
   "ai_calls": 0,
@@ -764,10 +764,9 @@
    "found": 61,
    "candidates": 42,
    "too_old": 0,
-   "last_detail_error": "empty job page (HTTP 202, text/html; charset=UTF-8, 0 bytes, encoding None)",
    "status": "ok",
    "new_details": 0,
-   "detail_errors": 42
+   "detail_errors": 0
   },
   {
    "school": "Medical College of Wisconsin",
