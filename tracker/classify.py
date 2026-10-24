@@ -90,10 +90,17 @@ ALLOWED = {
 
 def _extract_json(text):
     """Parse the reply and keep only expected fields with allowed values (the reply is untrusted)."""
-    m = re.search(r"\{.*\}", text, re.S)
-    if not m:
+    data, dec = None, json.JSONDecoder()
+    # The reply may hold prose or several brace pairs; take the last parseable object that has a verdict.
+    for i in [k for k, ch in enumerate(text) if ch == "{"]:
+        try:
+            obj, _ = dec.raw_decode(text[i:])
+        except ValueError:
+            continue
+        if isinstance(obj, dict) and "verdict" in obj:
+            data = obj
+    if data is None:
         raise ValueError("no JSON object in reply")
-    data = json.loads(m.group(0))
     if not isinstance(data, dict) or data.get("verdict") not in ALLOWED["verdict"]:
         raise ValueError("reply has no valid verdict")
     clean = {}

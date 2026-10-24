@@ -98,3 +98,10 @@ def test_error_category_is_public_safe(monkeypatch):
     with pytest.raises(classify.ClassifyError) as e:
         classify.classify(Job("a", "1", "t", "u", description="d"), PROFILE, session=SeqSession([Resp(200, trunc)]))
     assert e.value.category == "unusable reply (stop_reason=max_tokens)"
+
+
+def test_reply_with_prose_and_braces_still_parses():
+    from tracker.classify import _extract_json
+    text = 'Thinking about {the department} first.\n```json\n{"verdict": "match", "reason": "ok", "confidence": "high"}\n```'
+    out = _extract_json(text)
+    assert out["verdict"] == "match" and out["confidence"] == "high"
