@@ -18,6 +18,7 @@ Configured entirely in sources.yaml with CSS selectors, for example:
   date: td:nth-of-type(1)  # optional CSS for the posting date; default: a <time> or the first date in the row
   detail: main             # CSS for the description on the opening's page, or "none" to use the row text
   detail_date_label: "Advertising Started on:"   # optional: posting date printed after this label
+  detail_ldjson_date: true # optional: posting date from the page's schema.org JobPosting
 
 Boards list only postdoc openings, so a title_template that starts with "Postdoctoral" keeps the
 title rules from dropping openings whose own titles are just a mentor's name.
@@ -93,6 +94,12 @@ def parse_detail(page_html, job, src):
     soup = BeautifulSoup(page_html, "html.parser")
     el = soup.select_one(src.get("detail") or "main") or soup.find("main") or soup.body
     job.description = html_to_text(str(el)) if el is not None else ""
+    if src.get("detail_ldjson_date"):  # schema.org JobPosting datePosted on the opening's page
+        for sc in soup.find_all("script", type="application/ld+json"):
+            m = re.search(r'"datePosted"\s*:\s*"([^"]+)"', sc.string or "")
+            if m:
+                job.posted = iso_date(m.group(1)) or job.posted
+                break
     label = src.get("detail_date_label")
     if label:
         text = re.sub(r"\s+", " ", soup.get_text(" "))

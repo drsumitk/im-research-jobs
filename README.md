@@ -61,8 +61,14 @@ The 50 US medical schools with the most NIH funding for Internal Medicine (BRIMR
 | added | Harvard | Harvard careers sitemap, Mass General Brigham (Workday) | |
 | added | Mayo Clinic | Oracle | |
 | added | Beth Israel Deaconess / Beth Israel Lahey Health | BILH careers site (covers BIDMC) | Joslin Diabetes Center (iCIMS) |
+| added | Houston Methodist | Postdoctoral fellow job category (careers site) | |
+| added | Baylor Scott & White | Phenom careers site | |
+| added | Brown University | Workday (staff site) | |
+| added | KU Medical Center | Workday | |
+| added | Minneapolis Heart Institute Foundation | Careers page (titles only; job pages are on ADP) | |
+| added | MUSC | Workday | |
 
-Harvard, Mayo Clinic and Beth Israel Deaconess / Beth Israel Lahey Health are added by choice: BRIMR ranks Harvard's teaching hospitals separately from the medical school, and Mayo's NIH funding is not coded by department.
+Harvard, Mayo Clinic and Beth Israel Deaconess / Beth Israel Lahey Health are added by choice: BRIMR ranks Harvard's teaching hospitals separately from the medical school, and Mayo's NIH funding is not coded by department. Six more (Houston Methodist, Baylor Scott & White, Brown, KU Medical Center, Minneapolis Heart Institute Foundation, MUSC) were added because a LinkedIn sample showed foreign medical graduates currently holding research fellow or postdoc posts there.
 
 Known gaps: postdoc posts that departments advertise only on Interfolio, lab websites or by email are not on these boards. Some iCIMS portals and postdoc boards show no posting date; such postings are shown for up to 21 days after the tracker first sees them (so on the first day after a new source is added, older undated postings can appear once and then drop off).
 

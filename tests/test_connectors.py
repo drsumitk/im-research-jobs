@@ -247,3 +247,34 @@ def test_board_search_terms_and_bilh_cards():
     assert j.title == "Postdoctoral research fellow" and j.posted == "2026-10-22"
     assert j.url == "https://jobs.bilh.org/jobs/postdoctoral-research-fellow-boston-ma-jr105863/"
     assert j.location.startswith("Boston, MA • Beth Israel Deaconess Medical Center")
+
+
+def test_phenom_list_and_detail():
+    from tracker.connectors import phenom
+    src = {"id": "bswhealth", "host": "jobs.bswhealth.com", "path": "/us/en"}
+    jobs, total = phenom.parse_list(load("phenom_list.json"), src)
+    assert total == 3 and jobs[1].title == "Research Analyst 2" and jobs[1].posted == "2026-10-22"
+    assert jobs[1].url == "https://jobs.bswhealth.com/us/en/job/26005020" and jobs[1].location == "Dallas, Texas"
+    phenom.parse_detail(load("phenom_detail.html"), jobs[1])
+    assert "outcomes research" in jobs[1].description
+
+
+def test_board_houston_methodist_ldjson_date():
+    from tracker.connectors import board
+    src = {"id": "houstonmethodist", "row": 'div:has(> a[href^="/job/"] > h2)', "link": 'a[href^="/job/"]',
+           "title": "h2", "date": "none", "detail": ".job-description", "detail_ldjson_date": True}
+    base = "https://www.houstonmethodistcareers.org/jobs/postdoctoral-fellows/?radius=25"
+    [j] = board.parse_list(load("board_houstonmethodist.html"), src, base)
+    assert j.title == "Clinical Research Fellow 0" and j.posted == ""
+    assert j.url.startswith("https://www.houstonmethodistcareers.org/job/116108/")
+    board.parse_detail(load("board_houstonmethodist_detail.html"), j, src)
+    assert j.posted == "2026-04-20" and "clinical research projects" in j.description
+
+
+def test_board_mhif_distinct_ids_from_query_strings():
+    from tracker.connectors import board
+    src = {"id": "mhif", "row": 'div.field__item:has(a[href*="workforcenow.adp.com"])',
+           "link": 'a[href*="workforcenow.adp.com"]', "title": "h3", "date": "none", "detail": "none"}
+    jobs = board.parse_list(load("board_mhif.html"), src, "https://mplsheart.org/careers")
+    assert [j.title for j in jobs] == ["Advanced Cardiology Research Scholar, CCAD", "Research Scholar, CCAD"]
+    assert jobs[0].key != jobs[1].key and "jobId=588688" in jobs[0].url

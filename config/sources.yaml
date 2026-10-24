@@ -2,7 +2,7 @@
 # (BRIMR 2025 ranking, https://brimr.org/brimr-rankings-of-nih-funding-in-2025/), plus Harvard and Mayo.
 #
 # Each source tells the tracker which careers system a school uses.
-# type: workday | oracle | eightfold | rmk | jibe | mcloud | taleo | html_list | ucrecruit | sitemap | board | icims | manual
+# type: workday | oracle | eightfold | rmk | jibe | mcloud | taleo | html_list | ucrecruit | sitemap | board | icims | phenom | manual
 # "manual" sources are not fetched; the dashboard shows a direct link to check by hand.
 # Set enabled: false to pause a source without deleting it.
 
@@ -647,3 +647,71 @@ schools:
         type: manual
         url: https://jobs-joslin.icims.com/jobs/intro
         reason: Separate iCIMS job site; the other iCIMS portals tried (OHSU, UMass Chan) refused automated requests.
+
+  # ---- Added 2026-10-24: institutions where foreign medical graduates currently hold research
+  # fellow or postdoc posts (from a LinkedIn sample), not in the BRIMR top 50 ----
+  - rank: 54
+    name: Houston Methodist
+    sources:
+      - id: houstonmethodist
+        label: Houston Methodist (postdoctoral and clinical research fellows)
+        type: board
+        url: https://www.houstonmethodistcareers.org/jobs/postdoctoral-fellows/?radius=25
+        row: 'div:has(> a[href^="/job/"] > h2)'
+        link: 'a[href^="/job/"]'
+        title: h2
+        date: none
+        detail: .job-description
+        detail_ldjson_date: true
+
+  - rank: 55
+    name: Baylor Scott & White
+    sources:
+      - id: bswhealth
+        label: Baylor Scott & White Health (incl. Research Institute)
+        type: phenom
+        host: jobs.bswhealth.com
+        path: /us/en
+
+  - rank: 56
+    name: Brown
+    sources:
+      - id: brown
+        label: Brown University (staff and research positions)
+        type: workday
+        host: brown.wd5.myworkdayjobs.com
+        tenant: brown
+        site: staff-careers-brown
+
+  - rank: 57
+    name: KU Medical Center
+    sources:
+      - id: kumc
+        label: University of Kansas Medical Center
+        type: workday
+        host: kumc.wd5.myworkdayjobs.com
+        tenant: kumc
+        site: kumc-jobs
+
+  - rank: 58
+    name: Minneapolis Heart Institute Foundation
+    sources:
+      - id: mhif
+        label: Minneapolis Heart Institute Foundation (research scholars)
+        type: board
+        url: https://mplsheart.org/careers
+        row: 'div.field__item:has(a[href*="workforcenow.adp.com"])'
+        link: 'a[href*="workforcenow.adp.com"]'
+        title: h3
+        date: none
+        detail: none   # job pages are on ADP and load by script; titles only
+
+  - rank: 59
+    name: MUSC
+    sources:
+      - id: musc
+        label: Medical University of South Carolina
+        type: workday
+        host: musc.wd1.myworkdayjobs.com
+        tenant: musc
+        site: MUSC
