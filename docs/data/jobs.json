@@ -1,9 +1,9 @@
 {
  "meta": {
-  "generated_utc": "2026-10-24 06:02 UTC",
+  "generated_utc": "2026-10-24 06:21 UTC",
   "today": "2026-10-24",
   "ai_enabled": true,
-  "ai_calls": 11,
+  "ai_calls": 18,
   "log": [],
   "total": 412
  },
@@ -51,17 +51,15 @@
     "visa": "not_stated",
     "verdict": "check",
     "confidence": "low",
-    "skills_fit": "partial",
+    "skills_fit": "strong",
     "department": "",
-    "reason": "Generic BIDMC postdoctoral fellow template; M.D. accepted, but no department, PI or lab named, and 'conduct of experiments' leaves the research type unclear.",
-    "verify": "Which department, division and PI hire for this role, and whether the work is clinical or lab-based.",
-    "missing": "Specific lab, informatics or physics skills unspecified; no research focus stated"
+    "reason": "Generic BIDMC postdoctoral fellow template; MD accepted, but no department, lab or research area stated, and it mentions 'conduct of experiments' and lab skills.",
+    "verify": "Which BIDMC lab or division hosts this role, and whether the work is clinical or wet lab.",
+    "missing": "",
+    "deadline": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Generic BIDMC postdoctoral fellow template; M.D. accepted, but no department, PI or lab named, and 'conduct of experiments' leaves the research type unclear.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "postdoc",
     "research_type": "unclear",
@@ -76,9 +74,12 @@
     "verify": "Confirm it sits in an Internal Medicine division and whether bench or lab work is core",
     "missing": "Lab skills, informatics, or physics expertise; experiments duties unclear"
    },
-   "review_version": 3,
+   "review_attempts": 2,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Check",
+   "reason": "Generic BIDMC postdoctoral fellow template; MD accepted, but no department, lab or research area stated, and it mentions 'conduct of experiments' and lab skills.",
    "active": true
   },
   "bilh:jobs-postdoctoral-research-fellow-boston-ma-jr105136": {
@@ -126,15 +127,13 @@
     "confidence": "low",
     "skills_fit": "partial",
     "department": "",
-    "reason": "Generic BIDMC postdoctoral fellow posting accepting 'Doctoral Degree or M.D.'; no department, lab or research type stated, though 'conduct of experiments' and 'lab skills' hint at possible bench work.",
-    "verify": "Which department/PI hires, whether work is clinical or wet lab, and visa sponsorship",
-    "missing": "Specific research area and techniques not stated"
+    "reason": "Postdoc fellow at BIDMC accepting 'Doctoral Degree or M.D.', so MBBS may qualify, but no department, lab or research focus is stated; work could be wet lab.",
+    "verify": "Which department/PI hires, whether work is clinical or bench, and whether MBBS counts as M.D. equivalent",
+    "missing": "",
+    "deadline": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Generic BIDMC postdoctoral fellow posting accepting 'Doctoral Degree or M.D.'; no department, lab or research type stated, though 'conduct of experiments' and 'lab skills' hint at possible bench work.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "postdoc",
     "research_type": "unclear",
@@ -149,9 +148,12 @@
     "verify": "Confirm the department is Internal Medicine, the work is clinical/dry, and visa sponsorship is offered.",
     "missing": "Wet-lab experiments and lab techniques named in duties"
    },
-   "review_version": 3,
+   "review_attempts": 2,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Check",
+   "reason": "Postdoc fellow at BIDMC accepting 'Doctoral Degree or M.D.', so MBBS may qualify, but no department, lab or research focus is stated; work could be wet lab.",
    "active": true
   },
   "bilh:jobs-postdoctoral-research-fellow-boston-ma-jr105378": {
@@ -197,17 +199,15 @@
     "visa": "not_stated",
     "verdict": "check",
     "confidence": "low",
-    "skills_fit": "partial",
+    "skills_fit": "strong",
     "department": "",
-    "reason": "Generic BIDMC postdoctoral fellow posting; M.D. or doctoral degree accepted, but no department, PI, or research area stated, and it mentions 'lab skills' and 'conduct of experiments'.",
-    "verify": "Which department, PI and research area (clinical vs wet lab), and whether a foreign MBBS counts as an M.D.",
-    "missing": "Research area unstated; possible lab or experimental skills"
+    "reason": "Generic BIDMC postdoctoral fellow template accepting Doctoral Degree or M.D.; no department, PI or lab named, and duties mention experiments and lab skills, so work type and IM fit are unknown.",
+    "verify": "Which department/PI hosts this posting, and whether the work is clinical/dry rather than bench",
+    "missing": "",
+    "deadline": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Generic BIDMC postdoctoral fellow posting; M.D. or doctoral degree accepted, but no department, PI, or research area stated, and it mentions 'lab skills' and 'conduct of experiments'.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "postdoc",
     "research_type": "unclear",
@@ -222,9 +222,12 @@
     "verify": "Confirm department is Internal Medicine, the lab is not wet-lab, and J-1 or H-1B sponsorship is offered.",
     "missing": "Lab skills and informatics development named; candidate lacks bench and omics/informatics experience"
    },
-   "review_version": 3,
+   "review_attempts": 2,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Check",
+   "reason": "Generic BIDMC postdoctoral fellow template accepting Doctoral Degree or M.D.; no department, PI or lab named, and duties mention experiments and lab skills, so work type and IM fit are unknown.",
    "active": true
   },
   "bilh:jobs-postdoctoral-research-fellow-boston-ma-jr105863": {
@@ -272,15 +275,13 @@
     "confidence": "low",
     "skills_fit": "partial",
     "department": "",
-    "reason": "Generic BIDMC postdoctoral fellow template; accepts 'Doctoral Degree or M.D.', but no department, PI, or research area is stated, and wet-lab work is possible ('conduct of experiments').",
-    "verify": "Which department/PI and research area (clinical vs bench) this posting belongs to, and whether a foreign MBBS qualifies.",
-    "missing": ""
+    "reason": "Postdoctoral fellow at BIDMC accepting 'Doctoral Degree or M.D.'; no department, lab, or research area stated, and duties mention experiments and lab skills generically.",
+    "verify": "Which PI/department and whether the work is clinical/dry or bench-based; visa sponsorship for foreign MBBS.",
+    "missing": "",
+    "deadline": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Generic BIDMC postdoctoral fellow template; accepts 'Doctoral Degree or M.D.', but no department, PI, or research area is stated, and wet-lab work is possible ('conduct of experiments').",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "postdoc",
     "research_type": "unclear",
@@ -295,9 +296,12 @@
     "verify": "Whether this fellowship sits in Internal Medicine and whether its work is wet-lab or clinical/data-based",
     "missing": "Lab techniques and informatics skills the duties mention"
    },
-   "review_version": 3,
+   "review_attempts": 2,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Check",
+   "reason": "Postdoctoral fellow at BIDMC accepting 'Doctoral Degree or M.D.'; no department, lab, or research area stated, and duties mention experiments and lab skills generically.",
    "active": true
   },
   "bilh:jobs-postdoctoral-research-fellow-in-computational-oncology-boston-ma-jr101228": {
@@ -3410,9 +3414,10 @@
     "confidence": "low",
     "skills_fit": "partial",
     "department": "Faculty and Faculty Equivalent",
-    "reason": "Generic Emory postdoc posting; department and lab undisclosed, research area unstated. M.D. or equivalent doctoral degree accepted, but no signal on IM or clinical versus wet work.",
-    "verify": "Which department/lab and PI posted this, and whether the work is clinical or wet lab.",
-    "missing": ""
+    "reason": "Generic Emory postdoc template; minimum is a doctoral degree including M.D., but no department, lab, or research area is stated, so IM relevance and wet/dry work are unknown.",
+    "verify": "Which department, lab and research area; whether MBBS counts as doctoral equivalent and visa sponsorship offered",
+    "missing": "",
+    "deadline": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
@@ -3426,12 +3431,12 @@
     "department": "",
     "reason": "Generic Emory postdoc with no department stated. Minimum lists M.D., which covers MBBS. Lab and experiment language suggests possible wet-lab work, so a human should confirm."
    },
-   "review_attempts": 2,
+   "review_attempts": 3,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
    "verdict": "Check",
-   "reason": "Generic Emory postdoc posting; department and lab undisclosed, research area unstated. M.D. or equivalent doctoral degree accepted, but no signal on IM or clinical versus wet work.",
-   "review_version": 3,
+   "reason": "Generic Emory postdoc template; minimum is a doctoral degree including M.D., but no department, lab, or research area is stated, so IM relevance and wet/dry work are unknown.",
    "active": true
   },
   "emory:174965": {
@@ -3695,17 +3700,15 @@
     "visa": "not_stated",
     "verdict": "match",
     "confidence": "medium",
-    "skills_fit": "partial",
+    "skills_fit": "strong",
     "department": "Infectious Diseases Division, Department of Medicine",
-    "reason": "Dry implementation science/epidemiology postdoc in Emory Dept of Medicine ID Division; minimum is a doctoral degree including M.D., so MBBS plausibly qualifies. Visa not stated.",
-    "verify": "Whether a foreign MBBS counts as an M.D. equivalent and whether Emory sponsors J-1/H-1B; GA residency required.",
-    "missing": "Implementation science, cancer prevention, HIV/global health focus; patient navigation experience"
+    "reason": "Postdoc in Emory Dept of Medicine ID Division; clinical/implementation research on cancer screening; minimum is a doctoral degree incl. M.D., so an MBBS likely qualifies.",
+    "verify": "Whether a foreign MBBS counts as an equivalent doctoral degree and whether visa sponsorship is available",
+    "missing": "",
+    "deadline": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "review_attempts": 2,
-   "verdict": "Match",
-   "reason": "Dry implementation science/epidemiology postdoc in Emory Dept of Medicine ID Division; minimum is a doctoral degree including M.D., so MBBS plausibly qualifies. Visa not stated.",
    "ai_first": {
     "role_type": "postdoc",
     "research_type": "clinical_or_dry",
@@ -3716,9 +3719,12 @@
     "department": "Department of Medicine",
     "reason": "Postdoc in Infectious Diseases Division, Department of Medicine; implementation science, epidemiology, longitudinal clinical data; minimum lists M.D., so MBBS qualifies. No sponsorship statement."
    },
-   "review_version": 3,
+   "review_attempts": 3,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Match",
+   "reason": "Postdoc in Emory Dept of Medicine ID Division; clinical/implementation research on cancer screening; minimum is a doctoral degree incl. M.D., so an MBBS likely qualifies.",
    "active": true
   },
   "emory:175225": {
@@ -5096,13 +5102,14 @@
     "im_division": "Infectious Diseases",
     "mbbs_without_phd_eligible": "yes",
     "visa": "not_stated",
-    "verdict": "match",
-    "confidence": "low",
-    "skills_fit": "partial",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "strong",
     "department": "SOM DOM Infectious Disease",
-    "reason": "Clinical/community implementation research in DOM Infectious Disease; minimum is high school plus one year experience. However, it is a peer recovery and outreach assistant role, not a research fellow role.",
-    "verify": "Whether visa sponsorship is offered and whether peer recovery lived experience or certification is required",
-    "missing": "Peer recovery lived experience/certification, rapid HIV and HCV testing, community outreach and client-facing delivery"
+    "reason": "Entry-level Research Project Assistant II (high school diploma minimum) with peer recovery, outreach and HIV/HCV testing duties; not a fellow, postdoc or research associate role.",
+    "verify": "",
+    "missing": "",
+    "deadline": ""
    },
    "evaluated": true,
    "ai_attempts": 2,
@@ -5116,12 +5123,12 @@
     "department": "SOM DOM Infectious Disease",
     "reason": "Mixed role: research assistant with peer recovery, rapid HIV/HCV testing and client services; ID division; minimum is a high school diploma; visa not stated."
    },
-   "review_attempts": 2,
+   "review_attempts": 3,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
-   "verdict": "Match",
-   "reason": "Clinical/community implementation research in DOM Infectious Disease; minimum is high school plus one year experience. However, it is a peer recovery and outreach assistant role, not a research fellow role.",
-   "review_version": 3,
+   "verdict": "Excluded",
+   "reason": "Entry-level Research Project Assistant II (high school diploma minimum) with peer recovery, outreach and HIV/HCV testing duties; not a fellow, postdoc or research associate role.",
    "active": true
   },
   "louisville:R109394": {
@@ -7175,21 +7182,19 @@
     "role_type": "research_associate",
     "research_type": "unclear",
     "im_division": "Endocrinology",
-    "mbbs_without_phd_eligible": "unclear",
+    "mbbs_without_phd_eligible": "no",
     "visa": "not_stated",
-    "verdict": "match",
-    "confidence": "low",
-    "skills_fit": "partial",
+    "verdict": "excluded",
+    "confidence": "medium",
+    "skills_fit": "weak",
     "department": "Endocrinology - Kudva lab",
-    "reason": "Endocrinology lab (Kudva, diabetes research); accepts Ph.D., M.D. or equivalent doctoral degree, but requires three years of postdoctoral research experience; clinical or lab work not specified.",
-    "verify": "Whether MBBS counts as equivalent doctoral degree and whether the work is clinical rather than lab-based.",
-    "missing": "three years postdoctoral research experience; publication record of about one per year"
+    "reason": "Requires Ph.D., M.D. or equivalent plus at least three years of postdoctoral research experience; candidate's listed experience does not show this, so ineligible despite Endocrinology fit.",
+    "verify": "Whether Mayo counts research done after MBBS as postdoctoral experience toward the three-year requirement",
+    "missing": "Three years of postdoctoral research experience; publication record averaging one per year post-doctorate",
+    "deadline": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "verdict": "Match",
-   "reason": "Endocrinology lab (Kudva, diabetes research); accepts Ph.D., M.D. or equivalent doctoral degree, but requires three years of postdoctoral research experience; clinical or lab work not specified.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "research_associate",
     "research_type": "unclear",
@@ -7200,9 +7205,12 @@
     "department": "",
     "reason": "Endocrinology (Kudva lab) is IM-relevant, but the posting says clinical or lab research without specifying which. It requires a PhD/MD-equivalent plus 3 years of postdoc experience, and visa sponsorship is not stated."
    },
-   "review_version": 3,
+   "review_attempts": 2,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Excluded",
+   "reason": "Requires Ph.D., M.D. or equivalent plus at least three years of postdoctoral research experience; candidate's listed experience does not show this, so ineligible despite Endocrinology fit.",
    "active": true
   },
   "mayo:393653": {
@@ -7303,15 +7311,13 @@
     "confidence": "low",
     "skills_fit": "partial",
     "department": "",
-    "reason": "Mayo Research Fellow accepts an MD without a PhD and mentions J-1 sponsorship, but the posting names no department and doesn't say whether the work is clinical or laboratory.",
-    "verify": "Whether Dr Sakemura's group does laboratory work and which department or division it sits in.",
-    "missing": "Specific duties and required skills not stated; laboratory techniques possible"
+    "reason": "Mayo Research Fellow accepts an M.D. or equivalent, and J-1 sponsorship is mentioned. But the posting names no department or duties, and says clinical or laboratory work.",
+    "verify": "Whether Dr Sakemura's lab work is clinical/dry or bench, and which department it sits in",
+    "missing": "Posting does not specify duties; may require laboratory-based research",
+    "deadline": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Mayo Research Fellow accepts an MD without a PhD and mentions J-1 sponsorship, but the posting names no department and doesn't say whether the work is clinical or laboratory.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "research_fellow",
     "research_type": "unclear",
@@ -7322,9 +7328,12 @@
     "department": "",
     "reason": "Research Fellow at Mayo Clinic, no department stated; work may be clinical or laboratory. Accepts M.D. or equivalent, so MBBS likely qualifies. J-1 sponsorship referenced."
    },
-   "review_version": 3,
+   "review_attempts": 2,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Check",
+   "reason": "Mayo Research Fellow accepts an M.D. or equivalent, and J-1 sponsorship is mentioned. But the posting names no department or duties, and says clinical or laboratory work.",
    "active": true
   },
   "mayo:393729": {
@@ -7439,15 +7448,13 @@
     "confidence": "low",
     "skills_fit": "partial",
     "department": "",
-    "reason": "Mayo Research Fellow titled Molecular Medicine; M.D. accepted and J-1 sponsorship mentioned, but department and whether work is clinical or laboratory-based are not stated.",
-    "verify": "Whether the PI's program is clinical/dry research in an Internal Medicine division rather than a wet lab.",
-    "missing": ""
+    "reason": "Mayo Research Fellow in 'Molecular Medicine' accepts an M.D. and mentions J-1 sponsorship, but the posting gives no department or division and no duties, so clinical vs. lab work is unknown.",
+    "verify": "Which Mayo lab or department hosts this role, and whether the work is bench-based",
+    "missing": "",
+    "deadline": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Mayo Research Fellow titled Molecular Medicine; M.D. accepted and J-1 sponsorship mentioned, but department and whether work is clinical or laboratory-based are not stated.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "research_fellow",
     "research_type": "unclear",
@@ -7458,9 +7465,12 @@
     "department": "",
     "reason": "Department field is blank and the title says 'Molecular Medicine'; the posting allows clinical or laboratory research without stating which. It lists M.D. as an acceptable degree, and visa sponsorship is not stated."
    },
-   "review_version": 3,
+   "review_attempts": 2,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Check",
+   "reason": "Mayo Research Fellow in 'Molecular Medicine' accepts an M.D. and mentions J-1 sponsorship, but the posting gives no department or division and no duties, so clinical vs. lab work is unknown.",
    "active": true
   },
   "mayo:394119": {
@@ -14048,17 +14058,15 @@
     "visa": "not_stated",
     "verdict": "match",
     "confidence": "medium",
-    "skills_fit": "strong",
-    "department": "David Geffen School Of Medicine / Medicine-Pulmonary Disease",
-    "reason": "Postdoc in Medicine-Pulmonary Disease doing policy and outcomes research with claims and FDA data; M.D. or equivalent accepted, so no PhD is needed.",
-    "verify": "Whether UCLA will sponsor a J-1 or H-1B for a foreign MBBS graduate; the posting is silent on visas.",
-    "missing": ""
+    "skills_fit": "partial",
+    "department": "Medicine-Pulmonary Disease (David Geffen School of Medicine)",
+    "reason": "Postdoctoral research fellow in UCLA Medicine-Pulmonary Disease; policy/outcomes data research; eligibility lists Ph.D., M.D., J.D. or equivalent, so MBBS without PhD plausibly qualifies.",
+    "verify": "Whether a foreign MBBS counts as an M.D. equivalent and whether visa sponsorship is offered",
+    "missing": "track record of high-impact health policy publications; claims data experience not shown",
+    "deadline": "2026-11-13"
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "review_attempts": 2,
-   "verdict": "Match",
-   "reason": "Postdoc in Medicine-Pulmonary Disease doing policy and outcomes research with claims and FDA data; M.D. or equivalent accepted, so no PhD is needed.",
    "ai_first": {
     "role_type": "postdoc",
     "research_type": "clinical_or_dry",
@@ -14069,9 +14077,12 @@
     "department": "David Geffen School Of Medicine / Medicine-Pulmonary Disease",
     "reason": "Postdoc in Medicine-Pulmonary Disease using FDA data and claims datasets for policy and outcomes research; MD or equivalent qualifies. Visa sponsorship not stated."
    },
-   "review_version": 3,
+   "review_attempts": 3,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Match",
+   "reason": "Postdoctoral research fellow in UCLA Medicine-Pulmonary Disease; policy/outcomes data research; eligibility lists Ph.D., M.D., J.D. or equivalent, so MBBS without PhD plausibly qualifies.",
    "active": true
   },
   "ucla-recruit:JPF11396": {
@@ -14797,22 +14808,20 @@
    "ai": {
     "role_type": "postdoc",
     "research_type": "unclear",
-    "im_division": "Hematology & Oncology",
+    "im_division": "unclear",
     "mbbs_without_phd_eligible": "unclear",
     "visa": "not_stated",
     "verdict": "check",
     "confidence": "low",
-    "skills_fit": "partial",
+    "skills_fit": "weak",
     "department": "29240101 - MD-HOBI-GENERAL",
-    "reason": "Only title and a department code are given. 'MD-HOBI' may mean Medicine Hematology/Oncology, but the work type, lab or clinical focus, and degree rules are not stated.",
-    "verify": "Whether the role is clinical/data research (not wet lab), the department is Medicine Hem/Onc, and an MBBS without a PhD qualifies.",
-    "missing": ""
+    "reason": "Only a title and a cryptic department code are available. 'MD-' may mean Medicine and 'HOBI' may be hematology/oncology, but the work type and degree requirement are unknown.",
+    "verify": "Whether a PhD is required, whether the work is wet-lab, and whether the department is Internal Medicine",
+    "missing": "Unknown; postdocs often require a PhD and may involve wet-lab work",
+    "deadline": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Only title and a department code are given. 'MD-HOBI' may mean Medicine Hematology/Oncology, but the work type, lab or clinical focus, and degree rules are not stated.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "postdoc",
     "research_type": "unclear",
@@ -14827,9 +14836,12 @@
     "verify": "Full posting must show Internal Medicine division, research content, PhD requirement, and visa sponsorship",
     "missing": "Required skills not visible from title and code alone"
    },
-   "review_version": 3,
+   "review_attempts": 2,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Check",
+   "reason": "Only a title and a cryptic department code are available. 'MD-' may mean Medicine and 'HOBI' may be hematology/oncology, but the work type and degree requirement are unknown.",
    "active": true
   },
   "ufl:en-us-job-536853-postdoctoral-associate-in-high-energy-physics": {
@@ -15386,22 +15398,20 @@
    "ai": {
     "role_type": "postdoc",
     "research_type": "unclear",
-    "im_division": "Hematology & Oncology",
+    "im_division": "unclear",
     "mbbs_without_phd_eligible": "unclear",
     "visa": "not_stated",
     "verdict": "check",
     "confidence": "low",
     "skills_fit": "partial",
     "department": "29240101 - MD-HOBI-GENERAL",
-    "reason": "Only a title and a department code are given. 'MD-HOBI' may mean Medicine Hematology/Oncology, but the work type, degree rules and visa terms are not stated.",
-    "verify": "Whether the work is clinical/dry or wet lab, whether an MBBS without a PhD is accepted, and visa sponsorship.",
-    "missing": ""
+    "reason": "Only a title and a cost-center code are given. 'MD-...' may mean Medicine and 'HOBI' may mean Hematology/Oncology, but the work type and degree rules are not stated.",
+    "verify": "Whether the postdoc requires a PhD, is dry or wet lab, and sits in an IM division.",
+    "missing": "",
+    "deadline": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Only a title and a department code are given. 'MD-HOBI' may mean Medicine Hematology/Oncology, but the work type, degree rules and visa terms are not stated.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "postdoc",
     "research_type": "unclear",
@@ -15416,9 +15426,12 @@
     "verify": "Full posting must show Internal Medicine division, whether a PhD is required, and visa sponsorship.",
     "missing": "Full duties and required qualifications not visible"
    },
-   "review_version": 3,
+   "review_attempts": 2,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Check",
+   "reason": "Only a title and a cost-center code are given. 'MD-...' may mean Medicine and 'HOBI' may mean Hematology/Oncology, but the work type and degree rules are not stated.",
    "active": true
   },
   "ufl:en-us-job-540874-postdoctoral-associate-bannister-lab": {
@@ -16361,17 +16374,15 @@
     "visa": "not_stated",
     "verdict": "check",
     "confidence": "low",
-    "skills_fit": "partial",
+    "skills_fit": "weak",
     "department": "29050900 - MD-PULMONARY MEDICINE",
-    "reason": "Postdoctoral Associate in a Pulmonary Medicine department (IM division), but title and department line give no information on wet vs dry work or degree requirements.",
-    "verify": "Whether the work is clinical/dry or wet lab, and whether MBBS without PhD is accepted.",
-    "missing": ""
+    "reason": "Postdoctoral Associate in Pulmonary Medicine (IM division), but no duties, degree requirements or lab/clinical nature stated; pulmonary postdocs are often wet-lab and PhD-required.",
+    "verify": "Whether work is clinical/dry versus wet lab, and whether MBBS without PhD qualifies",
+    "missing": "Pulmonary focus differs from candidate's interests; required skills and degree not stated",
+    "deadline": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Postdoctoral Associate in a Pulmonary Medicine department (IM division), but title and department line give no information on wet vs dry work or degree requirements.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "postdoc",
     "research_type": "unclear",
@@ -16386,9 +16397,12 @@
     "verify": "Full posting must confirm PhD requirement, research type (clinical vs wet lab), and visa sponsorship.",
     "missing": "Required research skills not visible from title and department line"
    },
-   "review_version": 3,
+   "review_attempts": 2,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Check",
+   "reason": "Postdoctoral Associate in Pulmonary Medicine (IM division), but no duties, degree requirements or lab/clinical nature stated; pulmonary postdocs are often wet-lab and PhD-required.",
    "active": true
   },
   "uhhospitals:23474395": {
@@ -17060,15 +17074,13 @@
     "confidence": "medium",
     "skills_fit": "weak",
     "department": "MM Int Med-Cardiology",
-    "reason": "Dry-lab postdoc in Internal Medicine Cardiology; MD accepted as doctoral degree, but required omics analysis experience is not shown by the candidate.",
-    "verify": "Whether an MD without omics experience would be considered, and whether J-1/H-1B sponsorship is offered.",
-    "missing": "proteomic/metabolomic/omic data analysis; Mendelian randomization and causal inference; Python pipeline development"
+    "reason": "Postdoctoral fellow in Internal Medicine Cardiology; dry omics and causal inference work. MD is accepted as a doctoral degree, but required omics analysis skills are not shown.",
+    "verify": "Whether an MBBS counts as the doctoral degree and whether omics experience is strictly required",
+    "missing": "Proteomic/metabolomic omic data analysis; Mendelian randomization and mediation analysis; pipeline development in R/Pyth",
+    "deadline": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "verdict": "Stretch",
-   "reason": "Dry-lab postdoc in Internal Medicine Cardiology; MD accepted as doctoral degree, but required omics analysis experience is not shown by the candidate.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "postdoc",
     "research_type": "clinical_or_dry",
@@ -17079,9 +17091,12 @@
     "department": "MM Int Med-Cardiology",
     "reason": "Postdoc in MM Int Med-Cardiology doing omics and Mendelian randomization on biobank data; required degrees include MD with no PhD mandate. Visa not stated."
    },
-   "review_version": 3,
+   "review_attempts": 2,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Stretch",
+   "reason": "Postdoctoral fellow in Internal Medicine Cardiology; dry omics and causal inference work. MD is accepted as a doctoral degree, but required omics analysis skills are not shown.",
    "active": true
   },
   "umich:job-detail-281612-research-fellow": {
@@ -17235,15 +17250,13 @@
     "confidence": "medium",
     "skills_fit": "strong",
     "department": "MM Int Med-Cardiology",
-    "reason": "Postdoctoral research fellow in the Division of Cardiovascular Medicine (Internal Medicine) doing clinical and outcomes research; the required degree is 'PhD, MD, or equivalent doctoral degree', which an MBBS plausibly meets.",
-    "verify": "Whether MBBS counts as an equivalent doctoral degree and whether the university sponsors J-1 or H-1B visas for this role.",
-    "missing": ""
+    "reason": "Postdoctoral Research Fellow in Cardiometabolic Center, Division of Cardiovascular Medicine; clinical/outcomes research; required degree is PhD, MD, or equivalent doctoral degree, so MBBS qualifies.",
+    "verify": "Whether an MBBS counts as an equivalent doctoral degree and whether visa sponsorship is offered",
+    "missing": "",
+    "deadline": "2026-10-28"
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "verdict": "Match",
-   "reason": "Postdoctoral research fellow in the Division of Cardiovascular Medicine (Internal Medicine) doing clinical and outcomes research; the required degree is 'PhD, MD, or equivalent doctoral degree', which an MBBS plausibly meets.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "research_fellow",
     "research_type": "clinical_or_dry",
@@ -17254,9 +17267,12 @@
     "department": "MM Int Med-Cardiology",
     "reason": "Clinical, translational, and outcomes research in cardiology within Int Med-Cardiology. Required degree is 'PhD, MD, or equivalent doctoral degree', which an MBBS meets. No wet-lab duties or visa restrictions stated."
    },
-   "review_version": 3,
+   "review_attempts": 2,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Match",
+   "reason": "Postdoctoral Research Fellow in Cardiometabolic Center, Division of Cardiovascular Medicine; clinical/outcomes research; required degree is PhD, MD, or equivalent doctoral degree, so MBBS qualifies.",
    "active": true
   },
   "umich:job-detail-284021-research-fellow": {
@@ -21443,9 +21459,10 @@
     "confidence": "medium",
     "skills_fit": "strong",
     "department": "Department of Internal Medicine, Yale School of Medicine",
-    "reason": "Postdoctoral Associate in Yale Department of Internal Medicine doing systematic review and evidence synthesis; MD or equivalent doctoral degree accepted, so a PhD is not required.",
-    "verify": "Whether Yale will sponsor a J-1 or H-1B visa and accept a foreign MBBS as an MD equivalent.",
-    "missing": ""
+    "reason": "Postdoctoral Associate in Yale Internal Medicine doing systematic review and evidence synthesis; MD or equivalent doctoral degree accepted, so an MBBS without a PhD plausibly qualifies.",
+    "verify": "Whether Yale will sponsor a visa and accept an MBBS as an equivalent doctoral degree",
+    "missing": "",
+    "deadline": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
@@ -21459,12 +21476,12 @@
     "department": "Department of Internal Medicine",
     "reason": "Clinical/dry evidence synthesis in Yale Internal Medicine, but the degree requires MD or equivalent in a listed field (MBBS fit unclear); no visa or division stated."
    },
-   "review_attempts": 2,
+   "review_attempts": 3,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
    "verdict": "Match",
-   "reason": "Postdoctoral Associate in Yale Department of Internal Medicine doing systematic review and evidence synthesis; MD or equivalent doctoral degree accepted, so a PhD is not required.",
-   "review_version": 3,
+   "reason": "Postdoctoral Associate in Yale Internal Medicine doing systematic review and evidence synthesis; MD or equivalent doctoral degree accepted, so an MBBS without a PhD plausibly qualifies.",
    "active": true
   },
   "yale-postdoc:posts-2026-10-20-postdoctoral-associate-position-in-the-yale-collaboration-for-regulatory-rigor": {
@@ -21509,21 +21526,19 @@
     "role_type": "postdoc",
     "research_type": "clinical_or_dry",
     "im_division": "General Internal Medicine",
-    "mbbs_without_phd_eligible": "yes",
+    "mbbs_without_phd_eligible": "unclear",
     "visa": "not_stated",
     "verdict": "match",
     "confidence": "medium",
-    "skills_fit": "partial",
-    "department": "Department of Internal Medicine, Section of General Internal Medicine, Yale School of Medicine (Yale CRRIT)",
-    "reason": "Dry regulatory science/epidemiology postdoc in Yale General Internal Medicine; minimum degree accepts MD or equivalent, and duties include systematic reviews, data analysis and R programming.",
-    "verify": "Whether Yale will sponsor a J-1 or H-1B and whether an MBBS counts as equivalent degree.",
-    "missing": "cost-effectiveness/econometrics, causal inference coursework, pharmaceutical or device policy experience"
+    "skills_fit": "weak",
+    "department": "Department of Internal Medicine, Section of General Internal Medicine (Yale CRRIT)",
+    "reason": "Postdoctoral Associate in Yale General Internal Medicine; dry regulatory science and evidence synthesis work; MD accepted as minimum degree, though experience requirements are broad.",
+    "verify": "Whether years of experience in econometrics/cost-effectiveness and policy are strictly required, and whether J-1/H-1B sponsorship is offered.",
+    "missing": "econometrics and cost-effectiveness analysis, causal inference, pharmaceutical/device policy experience, SAS/STATA",
+    "deadline": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "verdict": "Match",
-   "reason": "Dry regulatory science/epidemiology postdoc in Yale General Internal Medicine; minimum degree accepts MD or equivalent, and duties include systematic reviews, data analysis and R programming.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "postdoc",
     "research_type": "clinical_or_dry",
@@ -21534,9 +21549,12 @@
     "department": "Department of Internal Medicine, Section of General Internal Medicine",
     "reason": "Postdoctoral associate in Yale General Internal Medicine on regulatory science, epidemiology, and systematic reviews. Minimum lists MD or equivalent, so MBBS qualifies. Visa not addressed."
    },
-   "review_version": 3,
+   "review_attempts": 2,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Stretch",
+   "reason": "Postdoctoral Associate in Yale General Internal Medicine; dry regulatory science and evidence synthesis work; MD accepted as minimum degree, though experience requirements are broad.",
    "active": true
   },
   "yale-postdoc:posts-2026-10-20-postdoctoral-fellowpostdoctoral-associate-position-department-of-pediatrics-yale": {

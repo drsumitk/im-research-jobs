@@ -1,9 +1,9 @@
 {
  "meta": {
-  "generated_utc": "2026-10-24 06:02 UTC",
+  "generated_utc": "2026-10-24 06:21 UTC",
   "today": "2026-10-24",
   "ai_enabled": true,
-  "ai_calls": 11,
+  "ai_calls": 18,
   "log": [],
   "total": 412
  },
@@ -43,12 +43,8 @@
    "label": "Vanderbilt University Medical Center",
    "type": "workday",
    "checked": "2026-10-24",
-   "found": 162,
-   "candidates": 1,
-   "too_old": 0,
-   "status": "ok",
-   "new_details": 0,
-   "detail_errors": 0
+   "status": "blocked",
+   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
   },
   {
    "school": "UCSF",
@@ -89,7 +85,7 @@
    "candidates": 13,
    "too_old": 3,
    "status": "ok",
-   "new_details": 0,
+   "new_details": 1,
    "detail_errors": 0
   },
   {
@@ -121,12 +117,8 @@
    "label": "University of Pennsylvania",
    "type": "workday",
    "checked": "2026-10-24",
-   "found": 222,
-   "candidates": 0,
-   "too_old": 3,
-   "status": "ok",
-   "new_details": 0,
-   "detail_errors": 0
+   "status": "error",
+   "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   {
    "school": "Penn",
@@ -168,12 +160,8 @@
    "label": "Washington University in St. Louis",
    "type": "workday",
    "checked": "2026-10-24",
-   "found": 249,
-   "candidates": 12,
-   "too_old": 38,
-   "status": "ok",
-   "new_details": 0,
-   "detail_errors": 0
+   "status": "blocked",
+   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
   },
   {
    "school": "Duke",
@@ -182,7 +170,7 @@
    "label": "Duke University and Duke Health",
    "type": "rmk",
    "checked": "2026-10-24",
-   "found": 270,
+   "found": 271,
    "candidates": 29,
    "too_old": 8,
    "status": "ok",
@@ -252,12 +240,8 @@
    "label": "Yale University",
    "type": "workday",
    "checked": "2026-10-24",
-   "found": 141,
-   "candidates": 8,
-   "too_old": 2,
-   "status": "ok",
-   "new_details": 0,
-   "detail_errors": 0
+   "status": "blocked",
+   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
   },
   {
    "school": "Yale",
@@ -270,7 +254,7 @@
    "candidates": 9,
    "too_old": 0,
    "status": "ok",
-   "new_details": 0,
+   "new_details": 2,
    "detail_errors": 0
   },
   {
@@ -372,11 +356,11 @@
    "label": "University of Michigan",
    "type": "html_list",
    "checked": "2026-10-24",
-   "found": 0,
-   "candidates": 0,
+   "found": 40,
+   "candidates": 28,
    "too_old": 0,
    "status": "ok",
-   "new_details": 0,
+   "new_details": 2,
    "detail_errors": 0
   },
   {
@@ -421,12 +405,8 @@
    "label": "University of Chicago",
    "type": "workday",
    "checked": "2026-10-24",
-   "found": 237,
-   "candidates": 2,
-   "too_old": 3,
-   "status": "ok",
-   "new_details": 0,
-   "detail_errors": 0
+   "status": "blocked",
+   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
   },
   {
    "school": "UT Southwestern",
@@ -615,8 +595,8 @@
    "label": "Cleveland Clinic",
    "type": "workday",
    "checked": "2026-10-24",
-   "status": "error",
-   "error": "FetchError: HTTP 502 from ccf.wd1.myworkdayjobs.com"
+   "status": "blocked",
+   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
   },
   {
    "school": "Case Western / Cleveland Clinic",
@@ -675,12 +655,8 @@
    "label": "Ohio State University and Wexner Medical Center",
    "type": "workday",
    "checked": "2026-10-24",
-   "found": 348,
-   "candidates": 27,
-   "too_old": 29,
-   "status": "ok",
-   "new_details": 0,
-   "detail_errors": 0
+   "status": "blocked",
+   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
   },
   {
    "school": "Minnesota",
@@ -700,12 +676,8 @@
    "label": "University of Miami",
    "type": "workday",
    "checked": "2026-10-24",
-   "found": 274,
-   "candidates": 58,
-   "too_old": 67,
-   "status": "ok",
-   "new_details": 0,
-   "detail_errors": 0
+   "status": "blocked",
+   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
   },
   {
    "school": "UT Austin (Dell)",
@@ -714,12 +686,8 @@
    "label": "UT Austin (incl. Dell Medical School)",
    "type": "workday",
    "checked": "2026-10-24",
-   "found": 250,
-   "candidates": 9,
-   "too_old": 37,
-   "status": "ok",
-   "new_details": 0,
-   "detail_errors": 0
+   "status": "blocked",
+   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
   },
   {
    "school": "USC",
@@ -729,7 +697,7 @@
    "type": "workday",
    "checked": "2026-10-24",
    "status": "blocked",
-   "error": "robots.txt could not be read (HTTP 502, site may be down for maintenance), so the site is skipped today"
+   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
   },
   {
    "school": "Virginia",
@@ -844,8 +812,8 @@
    "label": "University of Rochester",
    "type": "workday",
    "checked": "2026-10-24",
-   "status": "error",
-   "error": "FetchError: HTTP 500 from rochester.wd5.myworkdayjobs.com"
+   "status": "blocked",
+   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
   },
   {
    "school": "Rochester",
@@ -896,12 +864,8 @@
    "label": "University of Louisville",
    "type": "workday",
    "checked": "2026-10-24",
-   "found": 41,
-   "candidates": 2,
-   "too_old": 0,
-   "status": "ok",
-   "new_details": 0,
-   "detail_errors": 0
+   "status": "blocked",
+   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
   },
   {
    "school": "Harvard",
@@ -924,8 +888,8 @@
    "label": "Mass General Brigham (MGH, Brigham and Women's)",
    "type": "workday",
    "checked": "2026-10-24",
-   "status": "error",
-   "error": "FetchError: HTTP 500 from massgeneralbrigham.wd1.myworkdayjobs.com"
+   "status": "blocked",
+   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
   },
   {
    "school": "Mayo Clinic",
@@ -938,7 +902,7 @@
    "candidates": 13,
    "too_old": 31,
    "status": "ok",
-   "new_details": 0,
+   "new_details": 3,
    "detail_errors": 0
   },
   {
@@ -952,7 +916,7 @@
    "candidates": 5,
    "too_old": 10,
    "status": "ok",
-   "new_details": 5,
+   "new_details": 4,
    "detail_errors": 0
   },
   {
