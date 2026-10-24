@@ -9,7 +9,9 @@ candidate_summary: >
   research-only role (research fellow, postdoctoral associate or fellow, research associate)
   in an Internal Medicine department or division. Not looking for clinical research
   coordinator roles. No wet-lab or bench
-  experience. Would need US visa sponsorship (typically J-1 research scholar or H-1B).
+  experience. Treat any skill not listed here (for example omics or bioinformatics pipelines, machine
+  learning development, imaging analysis) as not held.
+  Would need US visa sponsorship (typically J-1 research scholar or H-1B).
 
 # Only keep postings first posted within this many days (older ones are dropped).
 max_posting_age_days: 21
@@ -129,5 +131,5 @@ ai:
   # stronger model, whose verdict replaces the first. Remove review_model to switch this off.
   review_model: claude-sonnet-5-5
   review_label: Claude Sonnet
-  review_verdicts: [check]
+  review_verdicts: [check, match]   # every borderline posting and every match gets a second opinion
   max_review_calls_per_run: 80

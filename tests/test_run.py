@@ -18,12 +18,12 @@ def test_ai_overrides_rules_and_respects_budget(monkeypatch):
     monkeypatch.setattr(classify, "available", lambda: True)
     calls = []
 
-    def fake(job, profile, session=None):
+    def fake(job, profile, session=None, **kw):
         calls.append(job.title)
         return {"verdict": "match", "reason": "clinical outcomes, Cardiology", "im_division": "Cardiology"}
 
     monkeypatch.setattr(classify, "classify", fake)
-    prof = dict(PROFILE, ai=dict(PROFILE["ai"], max_calls_per_run=2))
+    prof = dict(PROFILE, ai=dict({k: v for k, v in PROFILE["ai"].items() if k != "review_model"}, max_calls_per_run=2))
     records = {k: rec(k) for k in ("a", "b", "c")}
     log = []
     used = run.apply_ai(records, prof, log)
@@ -42,7 +42,7 @@ def test_ai_off_without_key(monkeypatch):
 def test_failed_ai_attempts_are_capped(monkeypatch):
     monkeypatch.setattr(classify, "available", lambda: True)
 
-    def boom(job, profile, session=None):
+    def boom(job, profile, session=None, **kw):
         raise RuntimeError("Claude API HTTP 401: invalid")
 
     monkeypatch.setattr(classify, "classify", boom)
@@ -103,7 +103,7 @@ def test_borderline_verdicts_get_one_review_by_the_stronger_model(monkeypatch):
     monkeypatch.setattr(classify, "available", lambda: True)
     calls = []
 
-    def fake(job, profile, session=None, model=None):
+    def fake(job, profile, session=None, model=None, **kw):
         calls.append(model or "first")
         if model:
             return {"verdict": "match", "reason": "review: clinical outcomes in Cardiology"}
@@ -123,15 +123,33 @@ def test_borderline_verdicts_get_one_review_by_the_stronger_model(monkeypatch):
 
 def test_review_switched_off_without_review_model(monkeypatch):
     monkeypatch.setattr(classify, "available", lambda: True)
-    monkeypatch.setattr(classify, "classify", lambda job, profile, session=None, model=None:
+    monkeypatch.setattr(classify, "classify", lambda job, profile, session=None, model=None, **kw:
                         {"verdict": "check", "reason": "x"})
     prof = dict(PROFILE, ai={k: v for k, v in PROFILE["ai"].items() if k != "review_model"})
     records = {"a": rec("a")}
     assert run.apply_ai(records, prof, []) == 1 and "ai_first" not in records["a"]
 
 
-def test_title_only_postings_are_not_sent_to_the_ai(monkeypatch):
+def test_title_only_postings_are_flagged_and_department_rule_skips_ai(monkeypatch):
     monkeypatch.setattr(classify, "available", lambda: True)
-    monkeypatch.setattr(classify, "classify", lambda *a, **k: (_ for _ in ()).throw(AssertionError("called")))
-    r = dict(rec("a"), _description="Department: MD-PULMONARY MEDICINE\nPostdoctoral Associate - Pulmonary")
-    assert run.apply_ai({"a": r}, PROFILE, []) == 0 and r["verdict"] == "Check"
+    seen = []
+    monkeypatch.setattr(classify, "classify", lambda job, profile, session=None, model=None, **kw:
+                        seen.append(kw.get("title_only")) or {"verdict": "match", "reason": "x", "confidence": "low"})
+    short = dict(rec("a"), _description="Department: MD-PULMONARY MEDICINE\nPostdoctoral Associate - Pulmonary")
+    outside = dict(rec("b"), skip_ai=True, verdict="Other dept")
+    run.apply_ai({"a": short, "b": outside}, PROFILE, [])
+    assert seen[0] is True and outside["verdict"] == "Other dept" and not outside.get("ai")
+
+
+def test_match_with_weak_skills_fit_is_a_stretch():
+    assert run.verdict_of({"verdict": "match", "skills_fit": "weak"}) == "Stretch"
+    assert run.verdict_of({"verdict": "match", "skills_fit": "partial"}) == "Match"
+    assert run.verdict_of({"verdict": "excluded", "skills_fit": "weak"}) == "Excluded"
+
+
+def test_old_reviews_are_redone_after_instructions_change():
+    prof = dict(PROFILE, ai=dict(PROFILE["ai"], review_model="m", review_verdicts=["check", "match"]))
+    done_old = {"ai": {"verdict": "match"}, "ai_review_done": True, "review_version": 1}
+    done_new = dict(done_old, review_version=run.REVIEW_VERSION)
+    assert run.needs_review(done_old, prof) and not run.needs_review(done_new, prof)
+    assert not run.needs_review({"ai": {"verdict": "excluded"}}, prof)

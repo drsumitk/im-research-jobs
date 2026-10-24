@@ -113,11 +113,14 @@ function render() {
     return;
   }
   $("filters").hidden = false; list.hidden = false; sources.hidden = true;
+  const conf = (j) => ({ high: 0, medium: 1, low: 2 }[(j.ai || {}).confidence] ?? 3);
   const rows = all.filter((j) => j.verdict === state.tab)
-    .sort((a, b) => (b.first_seen || "").localeCompare(a.first_seen || "") || (a.rank - b.rank));
+    .sort((a, b) => conf(a) - conf(b) || (b.posted || b.first_seen || "").localeCompare(a.posted || a.first_seen || "")
+      || (a.rank - b.rank));
   const hints = {
-    "Match": "Clinical or dry research in Internal Medicine that the profile appears eligible for.",
-    "Check": "Unclear department, eligibility, or type of work. Open the posting to decide.",
+    "Match": "Clinical or dry research in Internal Medicine that the profile appears eligible for. Most certain first.",
+    "Stretch": "Dry research in Internal Medicine, but a required skill is not in the profile (for example omics or machine learning).",
+    "Check": "The AI could not decide even on a second look (usually because the posting says almost nothing). Open the posting to decide.",
     "Other dept": "Clinical or dry research outside Internal Medicine (for example epidemiology or pediatrics).",
     "Excluded": "Wet-lab work, citizenship requirement, no visa sponsorship, or a PhD-only requirement.",
   };
@@ -148,11 +151,16 @@ function card(j) {
   li.append(facts);
 
   li.append(el("p", "reason", j.reason || ""));
+  const aiv = j.ai || {};
+  if (aiv.verify) li.append(el("p", "verify", "Verify: " + String(aiv.verify)));
+  if (aiv.missing) li.append(el("p", "verify", "Not in profile: " + String(aiv.missing)));
 
   const tags = el("p", "tags");
   const ai = j.ai || {};
   const add = (t, cls) => tags.append(el("span", "tag " + (cls || ""), t));
   const s = (x) => String(x == null ? "" : x);
+  if (ai.confidence) add(s(ai.confidence) + " confidence", ai.confidence === "low" ? "warn" : "");
+  if (ai.skills_fit) add("skills fit: " + s(ai.skills_fit), ai.skills_fit === "weak" ? "warn" : "");
   if (j.reviewed_by) add("re-checked by " + s(j.reviewed_by));
   if (ai.role_type) add(s(ai.role_type).replace(/_/g, " "));
   if (ai.mbbs_without_phd_eligible) add("MBBS eligible: " + s(ai.mbbs_without_phd_eligible), ai.mbbs_without_phd_eligible === "no" ? "warn" : "");

@@ -70,9 +70,9 @@ Known gaps: postdoc posts that departments advertise only on Interfolio, lab web
 1. **Title filter**: keeps research-role titles, drops nursing, faculty, technician, manager and similar titles (`config/profile.yaml`).
 2. **Keyword rules**: reads the department and description for Internal Medicine division, wet-lab terms (mice, cell culture, qPCR, flow cytometry, cryo-EM and similar), clinical terms (patients, IRB, cohort, registry, R) and eligibility flags.
 3. **Claude classifier** (only if you add an API key): Claude Haiku reads each new posting once and gives a verdict with a short reason. It replaces the keyword verdict; the keyword signals stay visible on each card.
-4. **Second opinion on borderline postings**: postings Haiku marks "Needs a look" are re-checked once by Claude Sonnet, whose verdict replaces Haiku's (cards show "re-checked by Claude Sonnet", with Haiku's first verdict under "Excerpt and rule signals"). Limit: 80 re-checks per run. Remove `review_model` in `config/profile.yaml` to switch it off.
+4. **Second opinion, decisive**: every posting Haiku marks "Match" or "Needs a look" is re-checked once by Claude Sonnet, which is told to make the call rather than leave it open. Each verdict carries a confidence (high, medium, low), a "Verify" line naming the one fact to confirm before applying, and a skills-fit check against the profile. Cards show "re-checked by Claude Sonnet", with Haiku's first verdict under "Excerpt and rule signals". Limit: 80 re-checks per run. Remove `review_model` in `config/profile.yaml` to switch it off.
 
-Dashboard tabs: **Matches**, **Needs a look**, **Other departments** (clinical research outside IM, such as epidemiology), **Excluded** (kept visible so you can audit mistakes), and **Sources** (which sites worked today).
+Dashboard tabs: **Matches** (most certain first), **Stretch** (dry IM research, but a required skill such as omics or machine learning is not in the profile), **Needs a look** (only postings the AI could not decide even on a second look), **Other departments** (clinical research outside IM, such as epidemiology), **Excluded** (kept visible so you can audit mistakes), and **Sources** (which sites worked today).
 
 Neither the rules nor the AI are perfect. Treat "Matches" as a shortlist and read each posting before applying.
 

@@ -32,7 +32,8 @@ FORGET_SKIPPED_AFTER_DAYS = 30  # stop remembering a too-old posting once it is 
 MAX_AI_ATTEMPTS = 3
 AI_GAP_SECONDS = 1.0  # pause between Claude calls to stay under per-minute rate limits
 SNIPPET_CHARS = 900
-MIN_AI_TEXT = 200  # postings with less text than this (title and department only) are not sent to the AI
+TITLE_ONLY_CHARS = 200  # postings with less text than this carry only a title and department line
+REVIEW_VERSION = 3     # bump when the review instructions change, so undecided postings are reviewed again
 
 
 def load_yaml(name):
@@ -136,7 +137,8 @@ def run_source(school, src, profile, rules, state, today, skipped=None):
                 continue  # the detail page gave an exact date outside the window
             ev = rules.evaluate(job)
             dept_rule = src.get("department_must_match")
-            if dept_rule and not re.search(dept_rule, job.department or "", re.I):
+            outside = bool(dept_rule) and not re.search(dept_rule, job.department or "", re.I)
+            if outside:
                 ev = dict(ev, verdict="Other dept",
                           reason=f"Department {job.department or '(not stated)'} is outside the medical school.")
             out[job.key] = {
@@ -149,13 +151,16 @@ def run_source(school, src, profile, rules, state, today, skipped=None):
                 "fingerprint": fingerprint(job.description),
                 "rules": ev, "ai": None, "evaluated": bool(job.description),
                 "ai_attempts": int((old or {}).get("ai_attempts", 0)),
-                **{k: (old or {})[k] for k in ("ai", "review_attempts") if (old or {}).get(k)},
+                **{k: (old or {})[k] for k in ("ai", "ai_first", "review_attempts", "ai_review_done",
+                                                "review_version", "reviewed_by") if (old or {}).get(k)},
                 "verdict": ev["verdict"], "reason": ev["reason"],
                 "_description": job.description,  # removed before saving
+                **({"skip_ai": True} if outside else {}),
             }
             rec = out[job.key]
             if rec.get("ai"):  # re-opened only for the review pass: keep the first AI verdict meanwhile
-                rec["verdict"] = AI_TO_VERDICT.get(rec["ai"].get("verdict"), rec["verdict"])
+                rec["verdict"] = verdict_of(rec["ai"]) if rec["ai"].get("verdict") in AI_TO_VERDICT \
+                    else rec["verdict"]
                 rec["reason"] = rec["ai"].get("reason", rec["reason"])
         health.update(status="ok", new_details=new_details, detail_errors=detail_errors,
                       candidates=len(cands) - late_old, too_old=len(titled) - len(cands) + late_old)
@@ -170,13 +175,27 @@ def run_source(school, src, profile, rules, state, today, skipped=None):
 AI_TO_VERDICT = {"match": "Match", "check": "Check", "other_dept": "Other dept", "excluded": "Excluded"}
 
 
+def verdict_of(res):
+    """Dashboard group for an AI result: a match whose required skills the candidate lacks is a stretch."""
+    v = AI_TO_VERDICT[res["verdict"]]
+    return "Stretch" if v == "Match" and res.get("skills_fit") == "weak" else v
+
+
 def needs_review(rec, profile):
     """A first-pass AI verdict in the review list that the review model has not yet re-checked."""
     ai = profile.get("ai", {})
     first = rec.get("ai") or {}
-    return bool(ai.get("review_model")) and not rec.get("ai_review_done") \
-        and first.get("verdict") in set(ai.get("review_verdicts", ["check"])) \
-        and int(rec.get("review_attempts", 0)) < MAX_AI_ATTEMPTS
+    if not ai.get("review_model") or int(rec.get("review_attempts", 0)) >= MAX_AI_ATTEMPTS + 1:
+        return False
+    wanted = set(ai.get("review_verdicts", ["check"]))
+    if rec.get("ai_review_done"):
+        # Reviewed under older instructions: review again if the posting is still in the review list.
+        return int(rec.get("review_version", 1)) < REVIEW_VERSION and first.get("verdict") in wanted
+    return first.get("verdict") in wanted
+
+
+def _title_only(rec):
+    return len(rec.get("_description") or "") < TITLE_ONLY_CHARS
 
 
 def _job_of(rec):
@@ -200,13 +219,13 @@ def apply_ai(records, profile, log):
         if used >= budget:
             log.append(f"AI budget of {budget} calls reached; remaining jobs are classified on the next run.")
             break
-        if rec.get("ai") or len(rec.get("_description") or "") < MIN_AI_TEXT \
+        if rec.get("ai") or rec.get("skip_ai") or not rec.get("_description") \
                 or int(rec.get("ai_attempts", 0)) >= MAX_AI_ATTEMPTS:
-            continue  # too little text for the AI to judge: the keyword verdict stands
+            continue
         rec["ai_attempts"] = int(rec.get("ai_attempts", 0)) + 1
         used += 1
         try:
-            res = classify.classify(_job_of(rec), profile)
+            res = classify.classify(_job_of(rec), profile, title_only=_title_only(rec))
         except Exception as e:
             # Full detail goes to the private Actions log; the public page gets only the cause category.
             print(f"AI error on {rec['key']}: {e}", file=sys.stderr)
@@ -216,7 +235,7 @@ def apply_ai(records, profile, log):
         finally:
             time.sleep(AI_GAP_SECONDS)
         rec["ai"] = res
-        rec["verdict"] = AI_TO_VERDICT[res["verdict"]]
+        rec["verdict"] = verdict_of(res)
         rec["reason"] = res.get("reason", "")
 
     review_model = ai.get("review_model")
@@ -233,7 +252,8 @@ def apply_ai(records, profile, log):
             rec["review_attempts"] = int(rec.get("review_attempts", 0)) + 1
             reviewed += 1
             try:
-                res = classify.classify(_job_of(rec), profile, model=review_model)
+                res = classify.classify(_job_of(rec), profile, model=review_model, final_review=True,
+                                        title_only=_title_only(rec))
             except Exception as e:
                 print(f"AI review error on {rec['key']}: {e}", file=sys.stderr)
                 errors += 1
@@ -241,11 +261,12 @@ def apply_ai(records, profile, log):
                 continue
             finally:
                 time.sleep(AI_GAP_SECONDS)
-            rec["ai_first"] = rec["ai"]
+            rec.setdefault("ai_first", rec["ai"])  # keep the first-pass verdict, not an older review
+            rec["review_version"] = REVIEW_VERSION
             rec["ai"] = res
             rec["ai_review_done"] = True
             rec["reviewed_by"] = ai.get("review_label", review_model)
-            rec["verdict"] = AI_TO_VERDICT[res["verdict"]]
+            rec["verdict"] = verdict_of(res)
             rec["reason"] = res.get("reason", "")
     if errors:
         by_cause = ", ".join(f"{c} x{n}" for c, n in causes.most_common())

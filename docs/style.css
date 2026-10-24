@@ -51,3 +51,5 @@ details summary { cursor: pointer; color: var(--muted); font-size: 13px; }
 .actions button { font: inherit; font-size: 13px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--text); cursor: pointer; }
 .foot { color: var(--muted); font-size: 12px; padding: 24px 16px 40px; }
 @media (max-width: 600px) { .filters label { width: 100%; } .filters input[type="search"], .filters select { width: 100%; } }
+
+.verify { margin: .2rem 0; font-size: .9rem; color: var(--muted, #555); }
