@@ -10,7 +10,8 @@ PROFILE = yaml.safe_load((Path(__file__).resolve().parent.parent / "config" / "p
 
 def rec(key):
     return {"key": key, "source": "s", "title": "Research Fellow", "url": "u", "location": "", "department": "",
-            "posted": "", "ai": None, "_description": "text", "verdict": "Check", "reason": "r"}
+            "posted": "", "ai": None, "_description": "clinical outcomes research text " * 10,
+            "verdict": "Check", "reason": "r"}
 
 
 def test_ai_overrides_rules_and_respects_budget(monkeypatch):
@@ -127,3 +128,10 @@ def test_review_switched_off_without_review_model(monkeypatch):
     prof = dict(PROFILE, ai={k: v for k, v in PROFILE["ai"].items() if k != "review_model"})
     records = {"a": rec("a")}
     assert run.apply_ai(records, prof, []) == 1 and "ai_first" not in records["a"]
+
+
+def test_title_only_postings_are_not_sent_to_the_ai(monkeypatch):
+    monkeypatch.setattr(classify, "available", lambda: True)
+    monkeypatch.setattr(classify, "classify", lambda *a, **k: (_ for _ in ()).throw(AssertionError("called")))
+    r = dict(rec("a"), _description="Department: MD-PULMONARY MEDICINE\nPostdoctoral Associate - Pulmonary")
+    assert run.apply_ai({"a": r}, PROFILE, []) == 0 and r["verdict"] == "Check"

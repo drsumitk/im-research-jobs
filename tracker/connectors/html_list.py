@@ -36,8 +36,12 @@ def parse_list(page_html, src):
             if d:
                 dept = d.get_text(" ", strip=True)
         jid = re.sub(r"[^A-Za-z0-9]+", "-", path).strip("-")
-        jobs.append(Job(source_id=src["id"], job_id=jid, title=title,
-                        url=urljoin(f"https://{src['host']}/", path), posted=posted, department=dept))
+        job = Job(source_id=src["id"], job_id=jid, title=title,
+                  url=urljoin(f"https://{src['host']}/", path), posted=posted, department=dept)
+        if src.get("detail") == "none":
+            # Job pages cannot be read (e.g. bot protection): keep the list facts only.
+            job.description = "\n".join(v for v in (f"Department: {dept}" if dept else "", title) if v)
+        jobs.append(job)
     return jobs
 
 
@@ -95,6 +99,8 @@ def search(http, src, terms, title_ok):
 
 
 def details(http, src, job):
+    if src.get("detail") == "none":
+        return job
     r = http.get(job.url)
     parse_detail(r.text, job, src)
     if not job.description:  # reported in the source's health entry so the cause can be seen

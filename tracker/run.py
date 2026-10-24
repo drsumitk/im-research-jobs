@@ -32,6 +32,7 @@ FORGET_SKIPPED_AFTER_DAYS = 30  # stop remembering a too-old posting once it is 
 MAX_AI_ATTEMPTS = 3
 AI_GAP_SECONDS = 1.0  # pause between Claude calls to stay under per-minute rate limits
 SNIPPET_CHARS = 900
+MIN_AI_TEXT = 200  # postings with less text than this (title and department only) are not sent to the AI
 
 
 def load_yaml(name):
@@ -195,8 +196,9 @@ def apply_ai(records, profile, log):
         if used >= budget:
             log.append(f"AI budget of {budget} calls reached; remaining jobs are classified on the next run.")
             break
-        if rec.get("ai") or not rec.get("_description") or int(rec.get("ai_attempts", 0)) >= MAX_AI_ATTEMPTS:
-            continue
+        if rec.get("ai") or len(rec.get("_description") or "") < MIN_AI_TEXT \
+                or int(rec.get("ai_attempts", 0)) >= MAX_AI_ATTEMPTS:
+            continue  # too little text for the AI to judge: the keyword verdict stands
         rec["ai_attempts"] = int(rec.get("ai_attempts", 0)) + 1
         used += 1
         try:

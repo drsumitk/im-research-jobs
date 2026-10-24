@@ -49,7 +49,7 @@ The 50 US medical schools with the most NIH funding for Internal Medicine (BRIMR
 | 39 | UT Austin (Dell) | Workday | |
 | 40 | USC | Workday | |
 | 41 | Virginia | | Careers site |
-| 42 | Florida | PageUp job list | |
+| 42 | Florida | PageUp job list (titles and departments only; job pages refuse automated requests) | |
 | 43 | Medical College of Wisconsin | Workday | |
 | 44 | UMass Chan | | iCIMS (refuses automated requests) |
 | 45 | Maryland, Baltimore | Oracle (faculty and postdoc site, staff site) | |

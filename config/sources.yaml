@@ -498,9 +498,9 @@ schools:
         search_path: /en-us/search/?search-keyword={q}
         link_pattern: '^/en-us/job/\d+/'
         row_time: false          # the date in the list is the closing date
-        detail: css
-        detail_selector: '#job-content'
-        detail_date_label: 'Advertised:'
+        # Job pages answer automated requests with an empty bot-check page (HTTP 202), so only the
+        # list facts (title, department) are kept; open the posting to judge it.
+        detail: none
 
   - rank: 43
     name: Medical College of Wisconsin
