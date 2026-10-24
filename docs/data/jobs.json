@@ -1,10 +1,12 @@
 {
  "meta": {
-  "generated_utc": "2026-10-24 05:20 UTC",
+  "generated_utc": "2026-10-24 05:54 UTC",
   "today": "2026-10-24",
   "ai_enabled": true,
-  "ai_calls": 0,
-  "log": [],
+  "ai_calls": 30,
+  "log": [
+   "AI classifier failed on 2 posting(s) (review unusable reply (stop_reason=end_turn) x2); details are in the GitHub Actions log. Each posting is retried at most 3 times."
+  ],
   "total": 407
  },
  "jobs": {
@@ -3057,17 +3059,18 @@
     "role_type": "postdoc",
     "research_type": "unclear",
     "im_division": "unclear",
-    "mbbs_without_phd_eligible": "unclear",
+    "mbbs_without_phd_eligible": "yes",
     "visa": "not_stated",
     "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "partial",
     "department": "Faculty and Faculty Equivalent",
-    "reason": "Generic postdoc posting; department and research area unspecified. Minimum is 'doctoral degree or equivalent (Ph.D., M.D., etc.)', so MBBS eligibility is unclear. Visa not stated."
+    "reason": "Generic Emory postdoc posting; department and lab undisclosed, research area unstated. M.D. or equivalent doctoral degree accepted, but no signal on IM or clinical versus wet work.",
+    "verify": "Which department/lab and PI posted this, and whether the work is clinical or wet lab.",
+    "missing": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Generic postdoc posting; department and research area unspecified. Minimum is 'doctoral degree or equivalent (Ph.D., M.D., etc.)', so MBBS eligibility is unclear. Visa not stated.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "postdoc",
     "research_type": "unclear",
@@ -3078,8 +3081,12 @@
     "department": "",
     "reason": "Generic Emory postdoc with no department stated. Minimum lists M.D., which covers MBBS. Lab and experiment language suggests possible wet-lab work, so a human should confirm."
    },
+   "review_attempts": 2,
    "ai_review_done": true,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Check",
+   "reason": "Generic Emory postdoc posting; department and lab undisclosed, research area unstated. M.D. or equivalent doctoral degree accepted, but no signal on IM or clinical versus wet work.",
+   "review_version": 3,
    "active": true
   },
   "emory:174965": {
@@ -3349,6 +3356,7 @@
    "ai_attempts": 1,
    "verdict": "Match",
    "reason": "Postdoc in Infectious Diseases Division, Department of Medicine; implementation science, epidemiology, longitudinal clinical data; minimum lists M.D., so MBBS qualifies. No sponsorship statement.",
+   "review_attempts": 1,
    "active": true
   },
   "emory:175225": {
@@ -4726,15 +4734,16 @@
     "im_division": "Infectious Diseases",
     "mbbs_without_phd_eligible": "yes",
     "visa": "not_stated",
-    "verdict": "check",
+    "verdict": "match",
+    "confidence": "low",
+    "skills_fit": "partial",
     "department": "SOM DOM Infectious Disease",
-    "reason": "Research Project Assistant II in DOM Infectious Diseases; high school diploma minimum so eligible, but it is a peer recovery/outreach role with HIV testing, below candidate's target level; visa not stated."
+    "reason": "Clinical/community implementation research in DOM Infectious Disease; minimum is high school plus one year experience. However, it is a peer recovery and outreach assistant role, not a research fellow role.",
+    "verify": "Whether visa sponsorship is offered and whether peer recovery lived experience or certification is required",
+    "missing": "Peer recovery lived experience/certification, rapid HIV and HCV testing, community outreach and client-facing delivery"
    },
    "evaluated": true,
    "ai_attempts": 2,
-   "verdict": "Check",
-   "reason": "Research Project Assistant II in DOM Infectious Diseases; high school diploma minimum so eligible, but it is a peer recovery/outreach role with HIV testing, below candidate's target level; visa not stated.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "research_assistant",
     "research_type": "mixed",
@@ -4745,8 +4754,12 @@
     "department": "SOM DOM Infectious Disease",
     "reason": "Mixed role: research assistant with peer recovery, rapid HIV/HCV testing and client services; ID division; minimum is a high school diploma; visa not stated."
    },
+   "review_attempts": 2,
    "ai_review_done": true,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Match",
+   "reason": "Clinical/community implementation research in DOM Infectious Disease; minimum is high school plus one year experience. However, it is a peer recovery and outreach assistant role, not a research fellow role.",
+   "review_version": 3,
    "active": true
   },
   "louisville:R109394": {
@@ -6116,14 +6129,15 @@
     "mbbs_without_phd_eligible": "yes",
     "visa": "not_stated",
     "verdict": "match",
+    "confidence": "medium",
+    "skills_fit": "strong",
     "department": "Department of Medicine, Infectious Disease Division",
-    "reason": "Epidemiological, population-based data research in Medicine's Infectious Disease Division; requires only a Bachelor's in science (experience accepted in lieu), so eligible. Role is research assistant level; visa not stated."
+    "reason": "Dry epidemiological/population research in the Department of Medicine's Infectious Disease Division; requires a bachelor's in science plus 1-2 years of data experience, which the candidate meets. Role is research assistant level.",
+    "verify": "Whether the hospital sponsors J-1/H-1B visas for this hourly Research Assistant II role.",
+    "missing": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "verdict": "Match",
-   "reason": "Epidemiological, population-based data research in Medicine's Infectious Disease Division; requires only a Bachelor's in science (experience accepted in lieu), so eligible. Role is research assistant level; visa not stated.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "research_assistant",
     "research_type": "clinical_or_dry",
@@ -6134,8 +6148,12 @@
     "department": "The Department of Medicine's Infectious Disease Division",
     "reason": "Epidemiology and population-based dry research in Infectious Disease, with no lab work. Title is Research Assistant II, not a fellow or associate role. Bachelor's required, but experience in lieu of degree accepted; visa not stated."
    },
+   "review_attempts": 2,
    "ai_review_done": true,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Match",
+   "reason": "Dry epidemiological/population research in the Department of Medicine's Infectious Disease Division; requires a bachelor's in science plus 1-2 years of data experience, which the candidate meets. Role is research assistant level.",
+   "review_version": 3,
    "active": true
   },
   "massgeneralbrigham:RQ4083533": {
@@ -6235,18 +6253,19 @@
    "ai": {
     "role_type": "research_assistant",
     "research_type": "clinical_or_dry",
-    "im_division": "unclear",
+    "im_division": "Pulmonary & Critical Care",
     "mbbs_without_phd_eligible": "unclear",
     "visa": "not_stated",
     "verdict": "check",
-    "department": "Division of Sleep and Circadian Disorders",
-    "reason": "Research assistant role (bachelor's required) with coordinator-type duties in sleep epidemiology/cardiovascular; division not clearly Internal Medicine, no visa info, and MBBS equivalence to bachelor's unstated."
+    "confidence": "medium",
+    "skills_fit": "partial",
+    "department": "Division of Sleep and Circadian Disorders (Program in Sleep Medicine Epidemiology and Sleep and Cardiovascular Medicine)",
+    "reason": "Entry-level Research Assistant I (bachelor's required) doing recruitment, consent, data entry, study visits; coordinator-like, below candidate's target level; sleep division is IM-adjacent; visa and foreign degree equivalence unstated.",
+    "verify": "Whether the position sponsors visas and accepts a foreign MBBS as bachelor's equivalent",
+    "missing": "Clinical research tests, participant recruitment and consent coordination experience"
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Research assistant role (bachelor's required) with coordinator-type duties in sleep epidemiology/cardiovascular; division not clearly Internal Medicine, no visa info, and MBBS equivalence to bachelor's unstated.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "research_assistant",
     "research_type": "clinical_or_dry",
@@ -6257,8 +6276,12 @@
     "department": "",
     "reason": "Epidemiology and clinical sleep research role; Division of Sleep and Circadian Disorders, not stated as Internal Medicine. Bachelor's required, so an MBBS meets the minimum. No visa information."
    },
+   "review_attempts": 2,
    "ai_review_done": true,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Check",
+   "reason": "Entry-level Research Assistant I (bachelor's required) doing recruitment, consent, data entry, study visits; coordinator-like, below candidate's target level; sleep division is IM-adjacent; visa and foreign degree equivalence unstated.",
+   "review_version": 3,
    "active": true
   },
   "massgeneralbrigham:RQ4083804": {
@@ -6792,14 +6815,32 @@
     "im_division": "Endocrinology",
     "mbbs_without_phd_eligible": "unclear",
     "visa": "not_stated",
+    "verdict": "match",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "Endocrinology - Kudva lab",
+    "reason": "Endocrinology lab (Kudva, diabetes research); accepts Ph.D., M.D. or equivalent doctoral degree, but requires three years of postdoctoral research experience; clinical or lab work not specified.",
+    "verify": "Whether MBBS counts as equivalent doctoral degree and whether the work is clinical rather than lab-based.",
+    "missing": "three years postdoctoral research experience; publication record of about one per year"
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Match",
+   "reason": "Endocrinology lab (Kudva, diabetes research); accepts Ph.D., M.D. or equivalent doctoral degree, but requires three years of postdoctoral research experience; clinical or lab work not specified.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "research_associate",
+    "research_type": "unclear",
+    "im_division": "Endocrinology",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
     "verdict": "check",
     "department": "",
     "reason": "Endocrinology (Kudva lab) is IM-relevant, but the posting says clinical or lab research without specifying which. It requires a PhD/MD-equivalent plus 3 years of postdoc experience, and visa sponsorship is not stated."
    },
-   "evaluated": true,
-   "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Endocrinology (Kudva lab) is IM-relevant, but the posting says clinical or lab research without specifying which. It requires a PhD/MD-equivalent plus 3 years of postdoc experience, and visa sponsorship is not stated.",
+   "review_version": 3,
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
    "active": true
   },
   "mayo:393653": {
@@ -6897,13 +6938,31 @@
     "mbbs_without_phd_eligible": "yes",
     "visa": "sponsorship_stated",
     "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "partial",
     "department": "",
-    "reason": "Research Fellow at Mayo Clinic, no department stated; work may be clinical or laboratory. Accepts M.D. or equivalent, so MBBS likely qualifies. J-1 sponsorship referenced."
+    "reason": "Mayo Research Fellow accepts an MD without a PhD and mentions J-1 sponsorship, but the posting names no department and doesn't say whether the work is clinical or laboratory.",
+    "verify": "Whether Dr Sakemura's group does laboratory work and which department or division it sits in.",
+    "missing": "Specific duties and required skills not stated; laboratory techniques possible"
    },
    "evaluated": true,
    "ai_attempts": 1,
    "verdict": "Check",
-   "reason": "Research Fellow at Mayo Clinic, no department stated; work may be clinical or laboratory. Accepts M.D. or equivalent, so MBBS likely qualifies. J-1 sponsorship referenced.",
+   "reason": "Mayo Research Fellow accepts an MD without a PhD and mentions J-1 sponsorship, but the posting names no department and doesn't say whether the work is clinical or laboratory.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "research_fellow",
+    "research_type": "unclear",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "yes",
+    "visa": "sponsorship_stated",
+    "verdict": "check",
+    "department": "",
+    "reason": "Research Fellow at Mayo Clinic, no department stated; work may be clinical or laboratory. Accepts M.D. or equivalent, so MBBS likely qualifies. J-1 sponsorship referenced."
+   },
+   "review_version": 3,
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
    "active": true
   },
   "mayo:393729": {
@@ -6943,6 +7002,25 @@
    "ai": {
     "role_type": "research_fellow",
     "research_type": "unclear",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "yes",
+    "visa": "sponsorship_stated",
+    "verdict": "other_dept",
+    "confidence": "medium",
+    "skills_fit": "weak",
+    "department": "DLMP - Han lab",
+    "reason": "DLMP is Mayo's Department of Laboratory Medicine and Pathology, not Internal Medicine. Accepts Ph.D., M.D. or equivalent doctoral degree and mentions J-1 sponsorship; work type is not described.",
+    "verify": "Whether the Han lab does computational or clinical research rather than wet-lab pathology work.",
+    "missing": "Han lab research focus and required techniques not stated; likely lab-based pathology work"
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Other dept",
+   "reason": "DLMP is Mayo's Department of Laboratory Medicine and Pathology, not Internal Medicine. Accepts Ph.D., M.D. or equivalent doctoral degree and mentions J-1 sponsorship; work type is not described.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "research_fellow",
+    "research_type": "unclear",
     "im_division": "unclear",
     "mbbs_without_phd_eligible": "yes",
     "visa": "sponsorship_stated",
@@ -6950,10 +7028,9 @@
     "department": "",
     "reason": "Department and division are not stated and the Han lab's work is not described. MD or equivalent doctoral degree is accepted, and Mayo sponsors J-1 Research Scholars."
    },
-   "evaluated": true,
-   "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Department and division are not stated and the Han lab's work is not described. MD or equivalent doctoral degree is accepted, and Mayo sponsors J-1 Research Scholars.",
+   "review_version": 3,
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
    "active": true
   },
   "mayo:393734": {
@@ -6995,15 +7072,33 @@
     "research_type": "unclear",
     "im_division": "unclear",
     "mbbs_without_phd_eligible": "yes",
+    "visa": "sponsorship_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "",
+    "reason": "Mayo Research Fellow titled Molecular Medicine; M.D. accepted and J-1 sponsorship mentioned, but department and whether work is clinical or laboratory-based are not stated.",
+    "verify": "Whether the PI's program is clinical/dry research in an Internal Medicine division rather than a wet lab.",
+    "missing": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Check",
+   "reason": "Mayo Research Fellow titled Molecular Medicine; M.D. accepted and J-1 sponsorship mentioned, but department and whether work is clinical or laboratory-based are not stated.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "research_fellow",
+    "research_type": "unclear",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "yes",
     "visa": "not_stated",
     "verdict": "check",
     "department": "",
     "reason": "Department field is blank and the title says 'Molecular Medicine'; the posting allows clinical or laboratory research without stating which. It lists M.D. as an acceptable degree, and visa sponsorship is not stated."
    },
-   "evaluated": true,
-   "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Department field is blank and the title says 'Molecular Medicine'; the posting allows clinical or laboratory research without stating which. It lists M.D. as an acceptable degree, and visa sponsorship is not stated.",
+   "review_version": 3,
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
    "active": true
   },
   "mayo:394119": {
@@ -7805,15 +7900,16 @@
     "im_division": "unclear",
     "mbbs_without_phd_eligible": "yes",
     "visa": "not_stated",
-    "verdict": "check",
+    "verdict": "match",
+    "confidence": "low",
+    "skills_fit": "partial",
     "department": "Diabetes Research Institute",
-    "reason": "Postdoctoral Associate at Diabetes Research Institute requiring an MD (no PhD). Research type and IM affiliation are not stated, and the institute may be bench-focused. No visa information."
+    "reason": "Postdoctoral Associate at the Diabetes Research Institute requires only an MD, with no experience required. Diabetes fits the candidate's interests, but the duties are generic and the lab type is not stated.",
+    "verify": "Whether the role is clinical/data-focused or bench work, and whether a foreign MBBS counts as an MD.",
+    "missing": "Specific duties and any lab techniques not stated; DRI is largely bench-based"
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Postdoctoral Associate at Diabetes Research Institute requiring an MD (no PhD). Research type and IM affiliation are not stated, and the institute may be bench-focused. No visa information.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "postdoc",
     "research_type": "unclear",
@@ -7824,8 +7920,12 @@
     "department": "Diabetes Research Institute",
     "reason": "Postdoc at Diabetes Research Institute requires an MD; an MBBS meets that. Duties are generic with no wet-lab or clinical detail, and no Internal Medicine division or visa policy is stated."
    },
+   "review_attempts": 2,
    "ai_review_done": true,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Match",
+   "reason": "Postdoctoral Associate at the Diabetes Research Institute requires only an MD, with no experience required. Diabetes fits the candidate's interests, but the duties are generic and the lab type is not stated.",
+   "review_version": 3,
    "active": true
   },
   "miami:R100095489": {
@@ -13592,6 +13692,7 @@
    "ai_attempts": 1,
    "verdict": "Match",
    "reason": "Postdoc in Medicine-Pulmonary Disease using FDA data and claims datasets for policy and outcomes research; MD or equivalent qualifies. Visa sponsorship not stated.",
+   "review_attempts": 1,
    "active": true
   },
   "ucla-recruit:JPF11396": {
@@ -14057,14 +14158,15 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Unclear; division: Unclear"
+    "verdict": "Other dept",
+    "reason": "Department 19020000 - EG-MECHANICAL - AEROSPACE ENG is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "verdict": "Other dept",
+   "reason": "Department 19020000 - EG-MECHANICAL - AEROSPACE ENG is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-524153-post-doctoral-associate-in-the-center-for-molecular-magnetic-quantum-materials-m2qm": {
@@ -14097,13 +14199,14 @@
     },
     "notes": [],
     "verdict": "Other dept",
-    "reason": "Department does not look like Internal Medicine"
+    "reason": "Department 16360100 - LS-PHYSICS-GENERAL is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
-   "reason": "Department does not look like Internal Medicine",
+   "reason": "Department 16360100 - LS-PHYSICS-GENERAL is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-524454-postdoctoral-associate-implementation-science-and-practice": {
@@ -14137,14 +14240,15 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Clinical or dry research; division: Unclear"
+    "verdict": "Other dept",
+    "reason": "Department 18380000 - ED-CTR EXCEL EARLY CHILD STUD is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Clinical or dry research; division: Unclear",
+   "verdict": "Other dept",
+   "reason": "Department 18380000 - ED-CTR EXCEL EARLY CHILD STUD is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-528994-postdoctoral-associate-hacisuleyman": {
@@ -14176,14 +14280,15 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Unclear; division: Unclear"
+    "verdict": "Other dept",
+    "reason": "Department 37044160 - SR-MM-HACISULEYMAN LAB is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "verdict": "Other dept",
+   "reason": "Department 37044160 - SR-MM-HACISULEYMAN LAB is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-533741-research-and-evaluation-methodology-postdoctoral-scholar": {
@@ -14215,14 +14320,15 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Unclear; division: Unclear"
+    "verdict": "Other dept",
+    "reason": "Department 18070000 - ED-SHDOSE-SCHL OF HUM DEV&ORG is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "verdict": "Other dept",
+   "reason": "Department 18070000 - ED-SHDOSE-SCHL OF HUM DEV&ORG is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-533815-postdoctoral-position-artificial-intelligence-developmental-network-neurobiology-laboratory": {
@@ -14257,11 +14363,24 @@
     "verdict": "Other dept",
     "reason": "Department does not look like Internal Medicine"
    },
-   "ai": null,
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "confidence": "low",
+    "skills_fit": "weak",
+    "department": "MD-PEDS-NEUROLOGY",
+    "reason": "Posting is a postdoc in a Pediatric Neurology department and a Developmental Network Neurobiology lab, not Internal Medicine; AI focus suggests computational work outside the candidate's listed skills.",
+    "verify": "Full posting must show Internal Medicine division, dry/clinical research duties, and whether a PhD is required",
+    "missing": "AI/machine learning development, neurobiology lab experience"
+   },
    "evaluated": true,
-   "ai_attempts": 0,
+   "ai_attempts": 1,
    "verdict": "Other dept",
-   "reason": "Department does not look like Internal Medicine",
+   "reason": "Posting is a postdoc in a Pediatric Neurology department and a Developmental Network Neurobiology lab, not Internal Medicine; AI focus suggests computational work outside the candidate's listed skills.",
    "active": true
   },
   "ufl:en-us-job-535998-postdoctoral-researcher": {
@@ -14296,11 +14415,42 @@
     "verdict": "Check",
     "reason": "Unclear; division: Unclear"
    },
-   "ai": null,
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "Hematology & Oncology",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "29240101 - MD-HOBI-GENERAL",
+    "reason": "Only title and a department code are given. 'MD-HOBI' may mean Medicine Hematology/Oncology, but the work type, lab or clinical focus, and degree rules are not stated.",
+    "verify": "Whether the role is clinical/data research (not wet lab), the department is Medicine Hem/Onc, and an MBBS without a PhD qualifies.",
+    "missing": ""
+   },
    "evaluated": true,
-   "ai_attempts": 0,
+   "ai_attempts": 1,
    "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "reason": "Only title and a department code are given. 'MD-HOBI' may mean Medicine Hematology/Oncology, but the work type, lab or clinical focus, and degree rules are not stated.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "MD-HOBI-GENERAL",
+    "reason": "Title and code only; code MD-HOBI-GENERAL does not name Internal Medicine. Postdoc usually implies PhD; eligibility and work type unstated.",
+    "verify": "Full posting must show Internal Medicine division, research content, PhD requirement, and visa sponsorship",
+    "missing": "Required skills not visible from title and code alone"
+   },
+   "review_version": 3,
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
    "active": true
   },
   "ufl:en-us-job-536853-postdoctoral-associate-in-high-energy-physics": {
@@ -14333,13 +14483,14 @@
     },
     "notes": [],
     "verdict": "Other dept",
-    "reason": "Department does not look like Internal Medicine"
+    "reason": "Department 16360100 - LS-PHYSICS-GENERAL is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
-   "reason": "Department does not look like Internal Medicine",
+   "reason": "Department 16360100 - LS-PHYSICS-GENERAL is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-537020-postdoctoral-associate-bhadurimcintosh-lab": {
@@ -14374,11 +14525,24 @@
     "verdict": "Check",
     "reason": "Unclear; division: Infectious Diseases"
    },
-   "ai": null,
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "29093000 - MD-PEDS-INFECTIOUS DISEASES",
+    "reason": "Department line is MD-Pediatric Infectious Diseases, not Internal Medicine. Duties and degree requirements are not shown in the title alone.",
+    "verify": "Confirm the department is Internal Medicine and the work is clinical or dry, not wet lab",
+    "missing": "Required duties and qualifications not shown; full posting unread"
+   },
    "evaluated": true,
-   "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Infectious Diseases",
+   "ai_attempts": 1,
+   "verdict": "Other dept",
+   "reason": "Department line is MD-Pediatric Infectious Diseases, not Internal Medicine. Duties and degree requirements are not shown in the title alone.",
    "active": true
   },
   "ufl:en-us-job-537843-postdoctoral-associate-martins-lab": {
@@ -14410,14 +14574,15 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Unclear; division: Unclear"
+    "verdict": "Other dept",
+    "reason": "Department 37042060 - SR-IM-MARTINS LAB is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "verdict": "Other dept",
+   "reason": "Department 37042060 - SR-IM-MARTINS LAB is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-539018-postdoctoral-scholar-research-and-evaluation-methodology-program": {
@@ -14449,14 +14614,15 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Unclear; division: Unclear"
+    "verdict": "Other dept",
+    "reason": "Department 18070000 - ED-SHDOSE-SCHL OF HUM DEV&ORG is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "verdict": "Other dept",
+   "reason": "Department 18070000 - ED-SHDOSE-SCHL OF HUM DEV&ORG is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-539075-postdoctoral-associate-dr-yanjun-li-lab": {
@@ -14489,13 +14655,14 @@
     },
     "notes": [],
     "verdict": "Other dept",
-    "reason": "Department does not look like Internal Medicine"
+    "reason": "Department 32030000 - PH-MEDICINAL CHEMISTRY is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
-   "reason": "Department does not look like Internal Medicine",
+   "reason": "Department 32030000 - PH-MEDICINAL CHEMISTRY is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-539186-postdoctoral-associate-in-cryogenic-electron-microscopy-cryoem": {
@@ -14530,14 +14697,15 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Excluded",
-    "reason": "Wet-lab signals: cryoem, microscopy"
+    "verdict": "Other dept",
+    "reason": "Department 37043010 - SR-CHEM-IZARD LAB is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Excluded",
-   "reason": "Wet-lab signals: cryoem, microscopy",
+   "verdict": "Other dept",
+   "reason": "Department 37043010 - SR-CHEM-IZARD LAB is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-539443-postdoctoral-associate-xu-lab": {
@@ -14569,14 +14737,15 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Unclear; division: Unclear"
+    "verdict": "Other dept",
+    "reason": "Department 37041120 - SR-CHEM-LING XU LAB is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "verdict": "Other dept",
+   "reason": "Department 37041120 - SR-CHEM-LING XU LAB is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-539783-chemistry-postdoctoral-associate-unsupervised-and-generative-machine-learning": {
@@ -14609,13 +14778,14 @@
     },
     "notes": [],
     "verdict": "Other dept",
-    "reason": "Department does not look like Internal Medicine"
+    "reason": "Department 16120100 - LS-CHEMISTRY-GENERAL is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
-   "reason": "Department does not look like Internal Medicine",
+   "reason": "Department 16120100 - LS-CHEMISTRY-GENERAL is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-539925-postdoctoral-associate-lizi-wu-lab": {
@@ -14650,11 +14820,24 @@
     "verdict": "Check",
     "reason": "Unclear; division: Unclear"
    },
-   "ai": null,
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "29060000 - MD-MOLECULAR GENTCS - MICROBIO",
+    "reason": "Department is Molecular Genetics and Microbiology, not Internal Medicine; only title and department available, so research type unknown.",
+    "verify": "Confirm role is non-bench and sits in Internal Medicine, not Molecular Genetics.",
+    "missing": "Full posting needed to confirm required skills"
+   },
    "evaluated": true,
-   "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "ai_attempts": 1,
+   "verdict": "Other dept",
+   "reason": "Department is Molecular Genetics and Microbiology, not Internal Medicine; only title and department available, so research type unknown.",
    "active": true
   },
   "ufl:en-us-job-539984-postdoctoral-associate-disney-lab": {
@@ -14686,14 +14869,15 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Unclear; division: Unclear"
+    "verdict": "Other dept",
+    "reason": "Department 37041030 - SR-CHEM-DISNEY LAB is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "verdict": "Other dept",
+   "reason": "Department 37041030 - SR-CHEM-DISNEY LAB is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-540164-adjunct-clinical-postdoctoral-associate-department-of-psychiatry": {
@@ -14728,11 +14912,24 @@
     "verdict": "Other dept",
     "reason": "Department does not look like Internal Medicine"
    },
-   "ai": null,
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "29120000 - MD-PSYCHIATRY",
+    "reason": "Department of Psychiatry, not Internal Medicine; full posting unavailable, so role duties and PhD requirement unknown.",
+    "verify": "Confirm the posting is a research role (not clinical) and whether a PhD is required.",
+    "missing": "Full posting not available; requirements unknown"
+   },
    "evaluated": true,
-   "ai_attempts": 0,
+   "ai_attempts": 1,
    "verdict": "Other dept",
-   "reason": "Department does not look like Internal Medicine",
+   "reason": "Department of Psychiatry, not Internal Medicine; full posting unavailable, so role duties and PhD requirement unknown.",
    "active": true
   },
   "ufl:en-us-job-540714-research-assistant-i-griffin-lab": {
@@ -14764,14 +14961,15 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Unclear; division: Unclear"
+    "verdict": "Other dept",
+    "reason": "Department 37044060 - SR-MM-GRIFFIN, P LAB is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "verdict": "Other dept",
+   "reason": "Department 37044060 - SR-MM-GRIFFIN, P LAB is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-540794-postdoctoral-associate": {
@@ -14806,11 +15004,42 @@
     "verdict": "Check",
     "reason": "Unclear; division: Unclear"
    },
-   "ai": null,
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "Hematology & Oncology",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "29240101 - MD-HOBI-GENERAL",
+    "reason": "Only a title and a department code are given. 'MD-HOBI' may mean Medicine Hematology/Oncology, but the work type, degree rules and visa terms are not stated.",
+    "verify": "Whether the work is clinical/dry or wet lab, whether an MBBS without a PhD is accepted, and visa sponsorship.",
+    "missing": ""
+   },
    "evaluated": true,
-   "ai_attempts": 0,
+   "ai_attempts": 1,
    "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "reason": "Only a title and a department code are given. 'MD-HOBI' may mean Medicine Hematology/Oncology, but the work type, degree rules and visa terms are not stated.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "29240101 - MD-HOBI-GENERAL",
+    "reason": "Title is Postdoctoral Associate under an MD-HOBI-GENERAL code; the department is not clearly Internal Medicine, and PhD requirement and visa terms are not shown.",
+    "verify": "Full posting must show Internal Medicine division, whether a PhD is required, and visa sponsorship.",
+    "missing": "Full duties and required qualifications not visible"
+   },
+   "review_version": 3,
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
    "active": true
   },
   "ufl:en-us-job-540874-postdoctoral-associate-bannister-lab": {
@@ -14842,14 +15071,15 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Unclear; division: Unclear"
+    "verdict": "Other dept",
+    "reason": "Department 37044010 - SR-MM-BANNISTER LAB is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "verdict": "Other dept",
+   "reason": "Department 37044010 - SR-MM-BANNISTER LAB is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-540891-postdoctoral-associate-in-chemistry": {
@@ -14882,13 +15112,14 @@
     },
     "notes": [],
     "verdict": "Other dept",
-    "reason": "Department does not look like Internal Medicine"
+    "reason": "Department 16120100 - LS-CHEMISTRY-GENERAL is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
-   "reason": "Department does not look like Internal Medicine",
+   "reason": "Department 16120100 - LS-CHEMISTRY-GENERAL is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-541193-postdoctoral-research-associate-plant-immunity-and-extracellular-immune-signaling": {
@@ -14920,14 +15151,15 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Unclear; division: Unclear"
+    "verdict": "Other dept",
+    "reason": "Department 60100000 - AG-MICROBIOLOGY - CELL SCI is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "verdict": "Other dept",
+   "reason": "Department 60100000 - AG-MICROBIOLOGY - CELL SCI is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-541204-post-doc-researcher": {
@@ -14959,14 +15191,15 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Unclear; division: Unclear"
+    "verdict": "Other dept",
+    "reason": "Department 13050000 - DW-DIGITAL WORLD is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "verdict": "Other dept",
+   "reason": "Department 13050000 - DW-DIGITAL WORLD is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-541290-postdoctoral-research-associate": {
@@ -15001,11 +15234,24 @@
     "verdict": "Check",
     "reason": "Unclear; division: Unclear"
    },
-   "ai": null,
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "29020100 - MD-NEUROSCIENCE-GENERAL",
+    "reason": "Department is MD-Neuroscience, not Internal Medicine; the title alone gives no research type or eligibility details.",
+    "verify": "Confirms Internal Medicine division, clinical or dry research duties, and whether a PhD is required.",
+    "missing": ""
+   },
    "evaluated": true,
-   "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "ai_attempts": 1,
+   "verdict": "Other dept",
+   "reason": "Department is MD-Neuroscience, not Internal Medicine; the title alone gives no research type or eligibility details.",
    "active": true
   },
   "ufl:en-us-job-541319-research-assistant-scientist": {
@@ -15037,14 +15283,15 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Unclear; division: Unclear"
+    "verdict": "Other dept",
+    "reason": "Department 19050000 - EG-ELECTRICAL - COMPUTER ENG is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "verdict": "Other dept",
+   "reason": "Department 19050000 - EG-ELECTRICAL - COMPUTER ENG is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-541320-postdoctoral-fellow-hamilton-school": {
@@ -15076,14 +15323,15 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Unclear; division: Unclear"
+    "verdict": "Other dept",
+    "reason": "Department 57301000 - HS-HAMILTON SCHOOL ADMIN is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "verdict": "Other dept",
+   "reason": "Department 57301000 - HS-HAMILTON SCHOOL ADMIN is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-541331-postdoctoral-associate-in-artificial-intelligence-and-quantum-chemistry": {
@@ -15116,13 +15364,14 @@
     },
     "notes": [],
     "verdict": "Other dept",
-    "reason": "Department does not look like Internal Medicine"
+    "reason": "Department 16120100 - LS-CHEMISTRY-GENERAL is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
-   "reason": "Department does not look like Internal Medicine",
+   "reason": "Department 16120100 - LS-CHEMISTRY-GENERAL is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-541449-postdoctoral-associate": {
@@ -15155,13 +15404,14 @@
     },
     "notes": [],
     "verdict": "Other dept",
-    "reason": "Department does not look like Internal Medicine"
+    "reason": "Department 16360100 - LS-PHYSICS-GENERAL is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
-   "reason": "Department does not look like Internal Medicine",
+   "reason": "Department 16360100 - LS-PHYSICS-GENERAL is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-541469-postdoctoral-associate-crop-transformation-center-ctc": {
@@ -15193,14 +15443,15 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Unclear; division: Unclear"
+    "verdict": "Other dept",
+    "reason": "Department 60230000 - AG-HORTICULTURAL SCIENCES is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "verdict": "Other dept",
+   "reason": "Department 60230000 - AG-HORTICULTURAL SCIENCES is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-541470-postdoctoral-associate-nursery-science-production-and-agrophysics": {
@@ -15233,13 +15484,14 @@
     },
     "notes": [],
     "verdict": "Other dept",
-    "reason": "Department does not look like Internal Medicine"
+    "reason": "Department 60230000 - AG-HORTICULTURAL SCIENCES is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
-   "reason": "Department does not look like Internal Medicine",
+   "reason": "Department 60230000 - AG-HORTICULTURAL SCIENCES is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-541476-postdoctoral-associate-astrophysics": {
@@ -15272,13 +15524,14 @@
     },
     "notes": [],
     "verdict": "Other dept",
-    "reason": "Department does not look like Internal Medicine"
+    "reason": "Department 16360100 - LS-PHYSICS-GENERAL is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
-   "reason": "Department does not look like Internal Medicine",
+   "reason": "Department 16360100 - LS-PHYSICS-GENERAL is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-541480-postdoctoral-scholar-in-natural-language-processing-and-mammalian-evolution": {
@@ -15310,14 +15563,15 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Unclear; division: Unclear"
+    "verdict": "Other dept",
+    "reason": "Department 56021500 - NH-MAMMALS is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "verdict": "Other dept",
+   "reason": "Department 56021500 - NH-MAMMALS is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-541500-postdoctoral-associate-developmental-programming-of-metabolic-disease": {
@@ -15352,11 +15606,24 @@
     "verdict": "Check",
     "reason": "Unclear; division: Unclear"
    },
-   "ai": null,
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "29060000 - MD-MOLECULAR GENTCS - MICROBIO",
+    "reason": "Department is Molecular Genetics and Microbiology, not Internal Medicine; research type and eligibility not stated in the title or department line.",
+    "verify": "Confirm the post sits in Internal Medicine and whether bench or animal work is required",
+    "missing": "Requirements not visible; molecular genetics roles often need lab techniques"
+   },
    "evaluated": true,
-   "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "ai_attempts": 1,
+   "verdict": "Other dept",
+   "reason": "Department is Molecular Genetics and Microbiology, not Internal Medicine; research type and eligibility not stated in the title or department line.",
    "active": true
   },
   "ufl:en-us-job-541548-postdoctoral-associate": {
@@ -15389,13 +15656,14 @@
     },
     "notes": [],
     "verdict": "Other dept",
-    "reason": "Department does not look like Internal Medicine"
+    "reason": "Department 19340000 - EG-BIOMEDICAL ENGINEERING is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
-   "reason": "Department does not look like Internal Medicine",
+   "reason": "Department 19340000 - EG-BIOMEDICAL ENGINEERING is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-541550-postdoctoral-associate": {
@@ -15428,13 +15696,14 @@
     },
     "notes": [],
     "verdict": "Other dept",
-    "reason": "Department does not look like Internal Medicine"
+    "reason": "Department 19340000 - EG-BIOMEDICAL ENGINEERING is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
-   "reason": "Department does not look like Internal Medicine",
+   "reason": "Department 19340000 - EG-BIOMEDICAL ENGINEERING is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-541691-postdoctoral-associate": {
@@ -15469,11 +15738,24 @@
     "verdict": "Other dept",
     "reason": "Department does not look like Internal Medicine"
    },
-   "ai": null,
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "29150000 - MD-OPHTHALMOLOGY",
+    "reason": "Department is MD-Ophthalmology, clearly outside Internal Medicine; full posting not available to confirm research type.",
+    "verify": "Confirm it is clinical or data research, not wet-lab, and that Internal Medicine is not involved",
+    "missing": "Full posting not available to confirm required qualifications"
+   },
    "evaluated": true,
-   "ai_attempts": 0,
+   "ai_attempts": 1,
    "verdict": "Other dept",
-   "reason": "Department does not look like Internal Medicine",
+   "reason": "Department is MD-Ophthalmology, clearly outside Internal Medicine; full posting not available to confirm research type.",
    "active": true
   },
   "ufl:en-us-job-541692-postdoctoral-associate": {
@@ -15508,11 +15790,24 @@
     "verdict": "Other dept",
     "reason": "Department does not look like Internal Medicine"
    },
-   "ai": null,
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "29150000 - MD-OPHTHALMOLOGY",
+    "reason": "Department is MD-Ophthalmology, clearly outside Internal Medicine. Posting body not available to confirm research type or eligibility.",
+    "verify": "Confirm it is Internal Medicine-relevant, dry or clinical research, and accepts MBBS without PhD",
+    "missing": "Required qualifications not visible; full posting needed"
+   },
    "evaluated": true,
-   "ai_attempts": 0,
+   "ai_attempts": 1,
    "verdict": "Other dept",
-   "reason": "Department does not look like Internal Medicine",
+   "reason": "Department is MD-Ophthalmology, clearly outside Internal Medicine. Posting body not available to confirm research type or eligibility.",
    "active": true
   },
   "ufl:en-us-job-541701-postdoctoral-associate-in-transportation-systems-safety-and-human-factors": {
@@ -15544,14 +15839,15 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Unclear; division: Unclear"
+    "verdict": "Other dept",
+    "reason": "Department 19220300 - EG-TECHNOLOGY TRAINING CENTER is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "verdict": "Other dept",
+   "reason": "Department 19220300 - EG-TECHNOLOGY TRAINING CENTER is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-541769-postdoctoral-associate-pasture-mealybug-management-in-sugarcane": {
@@ -15583,14 +15879,15 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Unclear; division: Unclear"
+    "verdict": "Other dept",
+    "reason": "Department 60740000 - AG-EREC-BELLE GLADE is outside the medical school."
    },
    "ai": null,
    "evaluated": true,
    "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Unclear; division: Unclear",
+   "verdict": "Other dept",
+   "reason": "Department 60740000 - AG-EREC-BELLE GLADE is outside the medical school.",
+   "skip_ai": true,
    "active": true
   },
   "ufl:en-us-job-541782-postdoctoral-researchersmeg-and-multimodal-neuroimaging-in-dementia-and-epilepsy": {
@@ -15625,11 +15922,24 @@
     "verdict": "Other dept",
     "reason": "Department does not look like Internal Medicine"
    },
-   "ai": null,
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "mixed",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "confidence": "low",
+    "skills_fit": "weak",
+    "department": "29180200 - MD-NEUROLOGY-EPILEPSY",
+    "reason": "Department is Neurology-Epilepsy, not Internal Medicine; the title centres on MEG and multimodal neuroimaging, which is imaging work outside the candidate's listed experience.",
+    "verify": "Full posting confirms Neurology department and whether a PhD is required.",
+    "missing": "MEG and multimodal neuroimaging analysis; imaging methods"
+   },
    "evaluated": true,
-   "ai_attempts": 0,
+   "ai_attempts": 1,
    "verdict": "Other dept",
-   "reason": "Department does not look like Internal Medicine",
+   "reason": "Department is Neurology-Epilepsy, not Internal Medicine; the title centres on MEG and multimodal neuroimaging, which is imaging work outside the candidate's listed experience.",
    "active": true
   },
   "ufl:en-us-job-541788-postdoctoral-associate-pulmonary": {
@@ -15664,11 +15974,42 @@
     "verdict": "Check",
     "reason": "Unclear; division: Pulmonary & Critical Care"
    },
-   "ai": null,
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "Pulmonary & Critical Care",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "29050900 - MD-PULMONARY MEDICINE",
+    "reason": "Postdoctoral Associate in a Pulmonary Medicine department (IM division), but title and department line give no information on wet vs dry work or degree requirements.",
+    "verify": "Whether the work is clinical/dry or wet lab, and whether MBBS without PhD is accepted.",
+    "missing": ""
+   },
    "evaluated": true,
-   "ai_attempts": 0,
+   "ai_attempts": 1,
    "verdict": "Check",
-   "reason": "Unclear; division: Pulmonary & Critical Care",
+   "reason": "Postdoctoral Associate in a Pulmonary Medicine department (IM division), but title and department line give no information on wet vs dry work or degree requirements.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "Pulmonary & Critical Care",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "MD-PULMONARY MEDICINE",
+    "reason": "Postdoctoral title in Pulmonary Medicine; full posting not read, so research type, PhD requirement and visa policy are unknown.",
+    "verify": "Full posting must confirm PhD requirement, research type (clinical vs wet lab), and visa sponsorship.",
+    "missing": "Required research skills not visible from title and department line"
+   },
+   "review_version": 3,
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
    "active": true
   },
   "uhhospitals:23474395": {
@@ -16337,13 +16678,31 @@
     "mbbs_without_phd_eligible": "yes",
     "visa": "not_stated",
     "verdict": "match",
+    "confidence": "medium",
+    "skills_fit": "weak",
     "department": "MM Int Med-Cardiology",
-    "reason": "Postdoc in MM Int Med-Cardiology doing omics and Mendelian randomization on biobank data; required degrees include MD with no PhD mandate. Visa not stated."
+    "reason": "Dry-lab postdoc in Internal Medicine Cardiology; MD accepted as doctoral degree, but required omics analysis experience is not shown by the candidate.",
+    "verify": "Whether an MD without omics experience would be considered, and whether J-1/H-1B sponsorship is offered.",
+    "missing": "proteomic/metabolomic/omic data analysis; Mendelian randomization and causal inference; Python pipeline development"
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "verdict": "Match",
-   "reason": "Postdoc in MM Int Med-Cardiology doing omics and Mendelian randomization on biobank data; required degrees include MD with no PhD mandate. Visa not stated.",
+   "verdict": "Stretch",
+   "reason": "Dry-lab postdoc in Internal Medicine Cardiology; MD accepted as doctoral degree, but required omics analysis experience is not shown by the candidate.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "postdoc",
+    "research_type": "clinical_or_dry",
+    "im_division": "Cardiology",
+    "mbbs_without_phd_eligible": "yes",
+    "visa": "not_stated",
+    "verdict": "match",
+    "department": "MM Int Med-Cardiology",
+    "reason": "Postdoc in MM Int Med-Cardiology doing omics and Mendelian randomization on biobank data; required degrees include MD with no PhD mandate. Visa not stated."
+   },
+   "review_version": 3,
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
    "active": true
   },
   "umich:job-detail-281612-research-fellow": {
@@ -16494,13 +16853,31 @@
     "mbbs_without_phd_eligible": "yes",
     "visa": "not_stated",
     "verdict": "match",
+    "confidence": "medium",
+    "skills_fit": "strong",
     "department": "MM Int Med-Cardiology",
-    "reason": "Clinical, translational, and outcomes research in cardiology within Int Med-Cardiology. Required degree is 'PhD, MD, or equivalent doctoral degree', which an MBBS meets. No wet-lab duties or visa restrictions stated."
+    "reason": "Postdoctoral research fellow in the Division of Cardiovascular Medicine (Internal Medicine) doing clinical and outcomes research; the required degree is 'PhD, MD, or equivalent doctoral degree', which an MBBS plausibly meets.",
+    "verify": "Whether MBBS counts as an equivalent doctoral degree and whether the university sponsors J-1 or H-1B visas for this role.",
+    "missing": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
    "verdict": "Match",
-   "reason": "Clinical, translational, and outcomes research in cardiology within Int Med-Cardiology. Required degree is 'PhD, MD, or equivalent doctoral degree', which an MBBS meets. No wet-lab duties or visa restrictions stated.",
+   "reason": "Postdoctoral research fellow in the Division of Cardiovascular Medicine (Internal Medicine) doing clinical and outcomes research; the required degree is 'PhD, MD, or equivalent doctoral degree', which an MBBS plausibly meets.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "research_fellow",
+    "research_type": "clinical_or_dry",
+    "im_division": "Cardiology",
+    "mbbs_without_phd_eligible": "yes",
+    "visa": "not_stated",
+    "verdict": "match",
+    "department": "MM Int Med-Cardiology",
+    "reason": "Clinical, translational, and outcomes research in cardiology within Int Med-Cardiology. Required degree is 'PhD, MD, or equivalent doctoral degree', which an MBBS meets. No wet-lab duties or visa restrictions stated."
+   },
+   "review_version": 3,
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
    "active": true
   },
   "umich:job-detail-284021-research-fellow": {
@@ -20684,14 +21061,15 @@
     "mbbs_without_phd_eligible": "yes",
     "visa": "not_stated",
     "verdict": "match",
+    "confidence": "medium",
+    "skills_fit": "strong",
     "department": "Department of Internal Medicine, Yale School of Medicine",
-    "reason": "Dry evidence-synthesis postdoc in Yale Internal Medicine; required degree lists MD or equivalent doctoral degree, so MBBS without PhD plausibly qualifies; visa not stated."
+    "reason": "Postdoctoral Associate in Yale Department of Internal Medicine doing systematic review and evidence synthesis; MD or equivalent doctoral degree accepted, so a PhD is not required.",
+    "verify": "Whether Yale will sponsor a J-1 or H-1B visa and accept a foreign MBBS as an MD equivalent.",
+    "missing": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
-   "verdict": "Match",
-   "reason": "Dry evidence-synthesis postdoc in Yale Internal Medicine; required degree lists MD or equivalent doctoral degree, so MBBS without PhD plausibly qualifies; visa not stated.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "postdoc",
     "research_type": "clinical_or_dry",
@@ -20702,8 +21080,12 @@
     "department": "Department of Internal Medicine",
     "reason": "Clinical/dry evidence synthesis in Yale Internal Medicine, but the degree requires MD or equivalent in a listed field (MBBS fit unclear); no visa or division stated."
    },
+   "review_attempts": 2,
    "ai_review_done": true,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Match",
+   "reason": "Postdoctoral Associate in Yale Department of Internal Medicine doing systematic review and evidence synthesis; MD or equivalent doctoral degree accepted, so a PhD is not required.",
+   "review_version": 3,
    "active": true
   },
   "yale-postdoc:posts-2026-10-20-postdoctoral-associate-position-in-the-yale-collaboration-for-regulatory-rigor": {
@@ -20751,13 +21133,31 @@
     "mbbs_without_phd_eligible": "yes",
     "visa": "not_stated",
     "verdict": "match",
-    "department": "Department of Internal Medicine, Section of General Internal Medicine",
-    "reason": "Postdoctoral associate in Yale General Internal Medicine on regulatory science, epidemiology, and systematic reviews. Minimum lists MD or equivalent, so MBBS qualifies. Visa not addressed."
+    "confidence": "medium",
+    "skills_fit": "partial",
+    "department": "Department of Internal Medicine, Section of General Internal Medicine, Yale School of Medicine (Yale CRRIT)",
+    "reason": "Dry regulatory science/epidemiology postdoc in Yale General Internal Medicine; minimum degree accepts MD or equivalent, and duties include systematic reviews, data analysis and R programming.",
+    "verify": "Whether Yale will sponsor a J-1 or H-1B and whether an MBBS counts as equivalent degree.",
+    "missing": "cost-effectiveness/econometrics, causal inference coursework, pharmaceutical or device policy experience"
    },
    "evaluated": true,
    "ai_attempts": 1,
    "verdict": "Match",
-   "reason": "Postdoctoral associate in Yale General Internal Medicine on regulatory science, epidemiology, and systematic reviews. Minimum lists MD or equivalent, so MBBS qualifies. Visa not addressed.",
+   "reason": "Dry regulatory science/epidemiology postdoc in Yale General Internal Medicine; minimum degree accepts MD or equivalent, and duties include systematic reviews, data analysis and R programming.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "postdoc",
+    "research_type": "clinical_or_dry",
+    "im_division": "General Internal Medicine",
+    "mbbs_without_phd_eligible": "yes",
+    "visa": "not_stated",
+    "verdict": "match",
+    "department": "Department of Internal Medicine, Section of General Internal Medicine",
+    "reason": "Postdoctoral associate in Yale General Internal Medicine on regulatory science, epidemiology, and systematic reviews. Minimum lists MD or equivalent, so MBBS qualifies. Visa not addressed."
+   },
+   "review_version": 3,
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
    "active": true
   },
   "yale-postdoc:posts-2026-10-20-postdoctoral-fellowpostdoctoral-associate-position-department-of-pediatrics-yale": {
