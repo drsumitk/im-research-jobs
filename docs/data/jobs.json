@@ -1,13 +1,13 @@
 {
  "meta": {
-  "generated_utc": "2026-10-24 01:15 UTC",
+  "generated_utc": "2026-10-24 03:56 UTC",
   "today": "2026-10-24",
   "ai_enabled": true,
-  "ai_calls": 2,
+  "ai_calls": 9,
   "log": [
    "AI classifier failed on 1 posting(s) (unusable reply (stop_reason=refusal) x1); details are in the GitHub Actions log. Each posting is retried at most 3 times."
   ],
-  "total": 178
+  "total": 175
  },
  "jobs": {
   "clevelandclinic:357907": {
@@ -174,52 +174,6 @@
    "reason": "Core duties are in vivo and in vitro experiments on antibodies, immunology and virology, which is wet-lab work. Not Internal Medicine; PhD required, MD only with lab experience.",
    "active": true
   },
-  "cu-anschutz:38914": {
-   "key": "cu-anschutz:38914",
-   "school": "CU Anschutz",
-   "rank": 14,
-   "source": "cu-anschutz",
-   "source_label": "University of Colorado Anschutz",
-   "title": "Post-Doctoral Fellow",
-   "url": "https://cu.taleo.net/careersection/2/jobdetail.ftl?job=38914&lang=en",
-   "location": "Aurora",
-   "department": "SOM, Biochemistry & Molecular Genetics",
-   "posted": "",
-   "first_seen": "2026-10-23",
-   "last_seen": "2026-10-23",
-   "snippet": "University of Colorado Anschutz \n Department: SOM, Biochemistry & Molecular Genetics \n Job Title: Post-Doctoral Fellow \n Position #:00844925 – Requisition #:38914 \n Job Summary: \n The Zyla Lab in the Department of Biochemistry and Molecular Genetics is seeking a highly motivated Post-Doctoral Fellow to join a newly established research program focused on the structural dynamics of molecular machines. This is an exciting opportunity to help shape the scientific direction of a growing lab at the interface of structural biology, biophysics, and virology, while contributing to cutting-edge research with broad implications for human health and therapeutic design. \n The Post-Doctoral Fellow will lead independent projects exploring transient and dynamic protein states using techniques such as cryo-electron microscopy, tomography, kinetic assays, and computational analysis. Day-to-day work will ",
-   "fingerprint": "98b1feaa60d75fe8",
-   "rules": {
-    "division": "Not Internal Medicine",
-    "division_source": "department",
-    "research_type": "Wet lab",
-    "wet_terms": [
-     "cryo-em",
-     "cryo-et",
-     "microscopy",
-     "molecular biology"
-    ],
-    "dry_terms": [
-     "data analys"
-    ],
-    "flags": {
-     "citizenship_required": false,
-     "no_sponsorship": false,
-     "sponsorship_mentioned": false,
-     "phd_only": false,
-     "md_or_foreign_md_ok": true
-    },
-    "notes": [],
-    "verdict": "Excluded",
-    "reason": "Wet-lab signals: cryo-em, cryo-et, microscopy, molecular biology"
-   },
-   "ai": null,
-   "evaluated": true,
-   "ai_attempts": 0,
-   "verdict": "Excluded",
-   "reason": "Wet-lab signals: cryo-em, cryo-et, microscopy, molecular biology",
-   "active": false
-  },
   "cu-anschutz:39083": {
    "key": "cu-anschutz:39083",
    "school": "CU Anschutz",
@@ -279,143 +233,6 @@
    "reason": "Core duties are transgenic, cell culture, molecular and biochemical bench work; requires PhD in biochemistry/cell or molecular biology; Obstetrics and Gynecology department, not IM.",
    "active": true
   },
-  "cu-anschutz:39113": {
-   "key": "cu-anschutz:39113",
-   "school": "CU Anschutz",
-   "rank": 14,
-   "source": "cu-anschutz",
-   "source_label": "University of Colorado Anschutz",
-   "title": "Post-Doctoral Fellow",
-   "url": "https://cu.taleo.net/careersection/2/jobdetail.ftl?job=39113&lang=en",
-   "location": "Aurora",
-   "department": "SOM, Biochemistry & Molecular Genetics",
-   "posted": "",
-   "first_seen": "2026-10-23",
-   "last_seen": "2026-10-23",
-   "snippet": "University of Colorado Anschutz \n Department: SOM, Biochemistry & Molecular Genetics \n Job Title: Post-Doctoral Fellow \n Position #00834006: – Requisition #:39113 \n Job Summary: \n A Postdoctoral Associate position is available immediately in the laboratory of Elan Eisenmesser at the University of Colorado School of Medicine (Anschutz Medical Campus). \n The Eisenmesser laboratory is located in a highly collaborative structural biology environment with access to: \n Bruker 600 MHz and 900 MHz NMR spectrometers with cryoprobes \n An on-site 200 kV Talos Arctica cryo-EM facility \n Proteomics and metabolomics mass spectrometry cores \n A comprehensive biophysics core facility \n All major instrumentation is located in the same building. \n Key Responsibilities: \n Our group uses an integrative structural biology approach to understand how macromolecular structure and dynamics control function in sy",
-   "fingerprint": "31fe6345fb9541f3",
-   "rules": {
-    "division": "Not Internal Medicine",
-    "division_source": "department",
-    "research_type": "Wet lab",
-    "wet_terms": [
-     "cryo-em",
-     "mass spectrometry",
-     "molecular biology",
-     "proteomic"
-    ],
-    "dry_terms": [],
-    "flags": {
-     "citizenship_required": false,
-     "no_sponsorship": false,
-     "sponsorship_mentioned": false,
-     "phd_only": false,
-     "md_or_foreign_md_ok": false
-    },
-    "notes": [],
-    "verdict": "Excluded",
-    "reason": "Wet-lab signals: cryo-em, mass spectrometry, molecular biology, proteomic"
-   },
-   "ai": null,
-   "evaluated": true,
-   "ai_attempts": 0,
-   "verdict": "Excluded",
-   "reason": "Wet-lab signals: cryo-em, mass spectrometry, molecular biology, proteomic",
-   "active": false
-  },
-  "cu-anschutz:39257": {
-   "key": "cu-anschutz:39257",
-   "school": "CU Anschutz",
-   "rank": 14,
-   "source": "cu-anschutz",
-   "source_label": "University of Colorado Anschutz",
-   "title": "Post-Doctoral Fellow",
-   "url": "https://cu.taleo.net/careersection/2/jobdetail.ftl?job=39257&lang=en",
-   "location": "Aurora",
-   "department": "SOM, Biochemistry & Molecular Genetics",
-   "posted": "",
-   "first_seen": "2026-10-23",
-   "last_seen": "2026-10-23",
-   "snippet": "University of Colorado Anschutz \n Department: SOM, Biochemistry & Molecular Genetics \n Job Title: Post-Doctoral Fellow (Term-limited, 1 year) \n Position #:00845906 – Requisition #:39257 \n Job Summary: \n The laboratory of Dr. Olivia Rissland seeks to hire a Post-Doctoral Fellow for a one-year appointment to work on leading edge questions in RNA biology pursued as part of our research program outlined below. Our lab is in the Department of Biochemistry and Molecular Genetics and part of the RNA Bioscience Initiative at the University of Colorado School of Medicine . Our lab studies how co-translational processes regulate gene expression and is newly focused on leveraging these insights to create novel molecular tools. \n One long-term goal of our research program is to understand the molecular mechanism of 2A peptides. These short 20-22 amino acid sequences enable a unique co-translational ",
-   "fingerprint": "0de78f2bdfe3a32e",
-   "rules": {
-    "division": "Not Internal Medicine",
-    "division_source": "department",
-    "research_type": "Wet lab",
-    "wet_terms": [
-     "cell culture",
-     "cryo-em",
-     "microscopy",
-     "molecular biology"
-    ],
-    "dry_terms": [
-     "data analys"
-    ],
-    "flags": {
-     "citizenship_required": false,
-     "no_sponsorship": false,
-     "sponsorship_mentioned": false,
-     "phd_only": false,
-     "md_or_foreign_md_ok": false
-    },
-    "notes": [],
-    "verdict": "Excluded",
-    "reason": "Wet-lab signals: cell culture, cryo-em, microscopy, molecular biology"
-   },
-   "ai": null,
-   "evaluated": true,
-   "ai_attempts": 0,
-   "verdict": "Excluded",
-   "reason": "Wet-lab signals: cell culture, cryo-em, microscopy, molecular biology",
-   "active": false
-  },
-  "cu-anschutz:40422": {
-   "key": "cu-anschutz:40422",
-   "school": "CU Anschutz",
-   "rank": 14,
-   "source": "cu-anschutz",
-   "source_label": "University of Colorado Anschutz",
-   "title": "Post-Doctoral Fellow",
-   "url": "https://cu.taleo.net/careersection/2/jobdetail.ftl?job=40422&lang=en",
-   "location": "Aurora",
-   "department": "Medicine/Division of Pulmonary, Allergy, and Critical Care Medicine",
-   "posted": "",
-   "first_seen": "2026-10-23",
-   "last_seen": "2026-10-23",
-   "snippet": "University of Colorado Anschutz \n Department: Medicine/Division of Pulmonary, Allergy, and Critical Care Medicine \n Job Title: Postdoctoral Fellow \n Position #00850070 – Requisition #40422 \n Job Summary: \n The Department of Medicine, Division of Pulmonary and Critical Care Medicine has a full time opening for a Postdoctoral Fellow in the laboratory Dr. Yen-Rei Yu. The postdoctoral fellow will be working in the area of immunology and pulmonary vascular diseases, studying the mechanisms involved in immune regulation of pulmonary vascular remodeling and the response of the lung vasculature to hypoxia and other injuries . Specifically, the post-doctoral fellow will perform mechanistic studies in hypoxia-induced pulmonary hypertension animal models as well as in tissues/cells from PH patients. \n The Yu lab employs physiological, molecular and translational approaches. The labs utilize a wide ",
-   "fingerprint": "6d56e7da5a6c7d5d",
-   "rules": {
-    "division": "Pulmonary & Critical Care",
-    "division_source": "department",
-    "research_type": "Wet lab",
-    "wet_terms": [
-     "animal model",
-     "mice",
-     "molecular biology",
-     "rats"
-    ],
-    "dry_terms": [
-     "patient",
-     "patients"
-    ],
-    "flags": {
-     "citizenship_required": false,
-     "no_sponsorship": false,
-     "sponsorship_mentioned": false,
-     "phd_only": false,
-     "md_or_foreign_md_ok": false
-    },
-    "notes": [],
-    "verdict": "Excluded",
-    "reason": "Wet-lab signals: animal model, mice, molecular biology, rats"
-   },
-   "ai": null,
-   "evaluated": true,
-   "ai_attempts": 0,
-   "verdict": "Excluded",
-   "reason": "Wet-lab signals: animal model, mice, molecular biology, rats",
-   "active": false
-  },
   "cu-anschutz:40576": {
    "key": "cu-anschutz:40576",
    "school": "CU Anschutz",
@@ -456,304 +273,6 @@
    "ai_attempts": 0,
    "verdict": "Excluded",
    "reason": "Wet-lab signals: cell culture, molecular biology",
-   "active": false
-  },
-  "cu-anschutz:40861": {
-   "key": "cu-anschutz:40861",
-   "school": "CU Anschutz",
-   "rank": 14,
-   "source": "cu-anschutz",
-   "source_label": "University of Colorado Anschutz",
-   "title": "Post-Doctoral Fellow",
-   "url": "https://cu.taleo.net/careersection/2/jobdetail.ftl?job=40861&lang=en",
-   "location": "Aurora",
-   "department": "of Pathology",
-   "posted": "",
-   "first_seen": "2026-10-23",
-   "last_seen": "2026-10-23",
-   "snippet": "University of Colorado Anschutz \n Department of Pathology \n Post-Doctoral Fellow \n Position #00803830 – Requisition #: 40861 \n Job Summary: \n The Bonetto Laboratory at the University of Colorado Anschutz Medical Campus is seeking a highly motivated and collaborative Postdoctoral Fellow to join our research program focused on understanding the molecular and cellular mechanisms underlying cancer cachexia, skeletal muscle wasting, and cancer-associated metabolic dysfunction. \n The successful candidate will participate in innovative basic and translational research aimed at identifying mechanisms that drive cachexia and developing novel strategies to preserve muscle mass, function, metabolism, and quality of life in patients with cancer. The position offers opportunities to develop scientific independence, establish new research directions, collaborate across disciplines, mentor junior scien",
-   "fingerprint": "76f7368a4c53224b",
-   "rules": {
-    "division": "Not Internal Medicine",
-    "division_source": "department",
-    "research_type": "Wet lab",
-    "wet_terms": [
-     "animal model",
-     "biochemical assay",
-     "cell culture",
-     "immunohistochemistry",
-     "in vivo",
-     "laboratory techniques",
-     "microscopy",
-     "molecular biology"
-    ],
-    "dry_terms": [
-     "data analys",
-     "patients",
-     "r"
-    ],
-    "flags": {
-     "citizenship_required": false,
-     "no_sponsorship": false,
-     "sponsorship_mentioned": false,
-     "phd_only": false,
-     "md_or_foreign_md_ok": true
-    },
-    "notes": [],
-    "verdict": "Excluded",
-    "reason": "Wet-lab signals: animal model, biochemical assay, cell culture, immunohistochemistry"
-   },
-   "ai": null,
-   "evaluated": true,
-   "ai_attempts": 0,
-   "verdict": "Excluded",
-   "reason": "Wet-lab signals: animal model, biochemical assay, cell culture, immunohistochemistry",
-   "active": false
-  },
-  "cu-anschutz:40884": {
-   "key": "cu-anschutz:40884",
-   "school": "CU Anschutz",
-   "rank": 14,
-   "source": "cu-anschutz",
-   "source_label": "University of Colorado Anschutz",
-   "title": "Post-Doctoral Fellow",
-   "url": "https://cu.taleo.net/careersection/2/jobdetail.ftl?job=40884&lang=en",
-   "location": "Aurora",
-   "department": "Craniofacial, Oral and Materials Sciences",
-   "posted": "",
-   "first_seen": "2026-10-23",
-   "last_seen": "2026-10-23",
-   "snippet": "University of Colorado Anschutz \n Department: Craniofacial, Oral and Materials Sciences \n Job Title: Postdoctoral Fellow \n Position #: 00623578 – Requisition #: 40884 \n Job Summary: \n A postdoctoral fellow position is immediately available in the laboratory of Dr. Katherine Fantauzzo in the Department of Craniofacial, Oral and Materials Sciences at the University of Colorado Anschutz to study PDGFR dimer-specific dynamics in the mouse craniofacial mesenchyme. The Fantauzzo laboratory developed a novel bimolecular fluorescence complementation (BiFC) approach that enabled the visualization and purification of individual PDGFR dimers, revealing differences in the timing and extent of dimer activation, signal molecule binding, internalization, trafficking and downstream signaling. These findings have shifted the paradigm on how biological specificity is achieved to generate unique responses ",
-   "fingerprint": "13bc9ba639ee54d8",
-   "rules": {
-    "division": "Unclear",
-    "division_source": "none",
-    "research_type": "Wet lab",
-    "wet_terms": [
-     "flow cytometry",
-     "in vivo",
-     "mice",
-     "molecular biology",
-     "mouse"
-    ],
-    "dry_terms": [
-     "patient",
-     "patients"
-    ],
-    "flags": {
-     "citizenship_required": false,
-     "no_sponsorship": false,
-     "sponsorship_mentioned": false,
-     "phd_only": false,
-     "md_or_foreign_md_ok": true
-    },
-    "notes": [],
-    "verdict": "Excluded",
-    "reason": "Wet-lab signals: flow cytometry, in vivo, mice, molecular biology"
-   },
-   "ai": null,
-   "evaluated": true,
-   "ai_attempts": 0,
-   "verdict": "Excluded",
-   "reason": "Wet-lab signals: flow cytometry, in vivo, mice, molecular biology",
-   "active": false
-  },
-  "cu-anschutz:41105": {
-   "key": "cu-anschutz:41105",
-   "school": "CU Anschutz",
-   "rank": 14,
-   "source": "cu-anschutz",
-   "source_label": "University of Colorado Anschutz",
-   "title": "Postdoctoral Fellow",
-   "url": "https://cu.taleo.net/careersection/2/jobdetail.ftl?job=41105&lang=en",
-   "location": "Aurora",
-   "department": "Otolaryngology-Head and Neck Surgery",
-   "posted": "",
-   "first_seen": "2026-10-23",
-   "last_seen": "2026-10-23",
-   "snippet": "University of Colorado Anschutz \n Department: Otolaryngology-Head and Neck Surgery \n Job Title: Postdoctoral Fellow \n Position #00853119 – Requisition #41105 \n Job Summary: \n The Thomas Lab is recruiting a postdoctoral associate for a funded position to study how intratumoral bacteria modulate the tumor microenvironment in oral squamous cell carcinoma. This 4-5-year project is supported by an NIH R56, the HNC SPORE, and other research funding. The postdoc will investigate the spatial and functional relationships between intratumoral bacteria and immune cell populations using spatial transcriptomics. Mechanisms by which bacteria modulate the tumor microenvironment will be studied using orthotopic mouse models, with a focus on myeloid cell populations. Translational work will involve peripheral blood profiling of patients with oral squamous cell carcinoma. \n Training in the Thomas Lab is d",
-   "fingerprint": "6cd4d3270a0f74a5",
-   "rules": {
-    "division": "Not Internal Medicine",
-    "division_source": "department",
-    "research_type": "Wet lab",
-    "wet_terms": [
-     "elisa",
-     "flow cytometry",
-     "mouse",
-     "murine"
-    ],
-    "dry_terms": [
-     "data analys",
-     "patient",
-     "patients",
-     "r",
-     "sas"
-    ],
-    "flags": {
-     "citizenship_required": false,
-     "no_sponsorship": false,
-     "sponsorship_mentioned": false,
-     "phd_only": false,
-     "md_or_foreign_md_ok": false
-    },
-    "notes": [],
-    "verdict": "Excluded",
-    "reason": "Wet-lab signals: elisa, flow cytometry, mouse, murine"
-   },
-   "ai": null,
-   "evaluated": true,
-   "ai_attempts": 0,
-   "verdict": "Excluded",
-   "reason": "Wet-lab signals: elisa, flow cytometry, mouse, murine",
-   "active": false
-  },
-  "cu-anschutz:41112": {
-   "key": "cu-anschutz:41112",
-   "school": "CU Anschutz",
-   "rank": 14,
-   "source": "cu-anschutz",
-   "source_label": "University of Colorado Anschutz",
-   "title": "Postdoctoral Fellow – In Vivo Pharmacology and Translational Oncology",
-   "url": "https://cu.taleo.net/careersection/2/jobdetail.ftl?job=41112&lang=en",
-   "location": "Aurora",
-   "department": "Department of Pharmaceutical Sciences",
-   "posted": "",
-   "first_seen": "2026-10-23",
-   "last_seen": "2026-10-23",
-   "snippet": "University of Colorado Anschutz \n Department: Department of Pharmaceutical Sciences \n Job Title: Postdoctoral Fellow – In Vivo Pharmacology and Translational Oncology \n Position #00804247 – Requisition #41112 \n Job Summary: \n A full-time Postdoctoral Fellow position is available in the laboratory of Professor Dan LaBarbera, PhD, within the Department of Pharmaceutical Sciences at the University of Colorado Anschutz Medical Campus. We are seeking a highly motivated scientist with strong expertise in in vivo pharmacology, preclinical oncology, and mouse therapeutic efficacy studies to contribute to a federally funded translational research program focused on the preclinical development of novel small-molecule therapeutics for colorectal cancer. \n The research is conducted in collaboration with Onconaut Therapeutics Inc. and provides an opportunity to work at the interface of academic drug ",
-   "fingerprint": "981ab506d116b7ba",
-   "rules": {
-    "division": "Hematology & Oncology",
-    "division_source": "department",
-    "research_type": "Wet lab",
-    "wet_terms": [
-     "animal model",
-     "immunohistochemistry",
-     "in vivo",
-     "mice",
-     "mouse",
-     "western blot"
-    ],
-    "dry_terms": [
-     "patient",
-     "r"
-    ],
-    "flags": {
-     "citizenship_required": false,
-     "no_sponsorship": false,
-     "sponsorship_mentioned": false,
-     "phd_only": false,
-     "md_or_foreign_md_ok": true
-    },
-    "notes": [],
-    "verdict": "Excluded",
-    "reason": "Wet-lab signals: animal model, immunohistochemistry, in vivo, mice"
-   },
-   "ai": null,
-   "evaluated": true,
-   "ai_attempts": 0,
-   "verdict": "Excluded",
-   "reason": "Wet-lab signals: animal model, immunohistochemistry, in vivo, mice",
-   "active": false
-  },
-  "cu-anschutz:41207": {
-   "key": "cu-anschutz:41207",
-   "school": "CU Anschutz",
-   "rank": 14,
-   "source": "cu-anschutz",
-   "source_label": "University of Colorado Anschutz",
-   "title": "Post-Doctoral Fellow",
-   "url": "https://cu.taleo.net/careersection/2/jobdetail.ftl?job=41207&lang=en",
-   "location": "Aurora",
-   "department": "SOM-MED-Bone Marrow Transplant – Meyer Lab",
-   "posted": "",
-   "first_seen": "2026-10-23",
-   "last_seen": "2026-10-23",
-   "snippet": "University of Colorado Anschutz \n Department: SOM-MED-Bone Marrow Transplant – Meyer Lab \n Job Title: Post Doc – Meyer Lab \n Position #00853439 – Requisition #41207 \n Job Summary: \n The University of Colorado Anschutz Medical Campus is a world-class medical destination at the forefront of transformative science, medicine, education and patient care. The campus encompasses the University of Colorado health professional schools, more than 60 centers and institutes, and two nationally ranked independent hospitals - UCHealth University of Colorado Hospital and Children's Hospital Colorado - that treat more than two million adult and pediatric patients each year. Innovative, interconnected and highly collaborative, the University of Colorado Anschutz Medical Campus delivers life-changing treatments, patient care and professional training and conducts world-renowned research fueled by over $75",
-   "fingerprint": "3142aba0aa1877bd",
-   "rules": {
-    "division": "Hematology & Oncology",
-    "division_source": "description",
-    "research_type": "Wet lab",
-    "wet_terms": [
-     "animal model",
-     "cell culture",
-     "elisa",
-     "facs",
-     "flow cytometry",
-     "laboratory techniques",
-     "molecular biology",
-     "mouse"
-    ],
-    "dry_terms": [
-     "patient",
-     "patients"
-    ],
-    "flags": {
-     "citizenship_required": false,
-     "no_sponsorship": false,
-     "sponsorship_mentioned": false,
-     "phd_only": false,
-     "md_or_foreign_md_ok": true
-    },
-    "notes": [],
-    "verdict": "Excluded",
-    "reason": "Wet-lab signals: animal model, cell culture, elisa, facs"
-   },
-   "ai": null,
-   "evaluated": true,
-   "ai_attempts": 0,
-   "verdict": "Excluded",
-   "reason": "Wet-lab signals: animal model, cell culture, elisa, facs",
-   "active": false
-  },
-  "cu-anschutz:41236": {
-   "key": "cu-anschutz:41236",
-   "school": "CU Anschutz",
-   "rank": 14,
-   "source": "cu-anschutz",
-   "source_label": "University of Colorado Anschutz",
-   "title": "Post-Doctoral Fellow",
-   "url": "https://cu.taleo.net/careersection/2/jobdetail.ftl?job=41236&lang=en",
-   "location": "Aurora",
-   "department": "Obstetrics and Gynecology",
-   "posted": "",
-   "first_seen": "2026-10-23",
-   "last_seen": "2026-10-23",
-   "snippet": "Department: Obstetrics and Gynecology \n Job Title: Post-Doctoral Fellow \n Position #00729150 – Requisition # 41236 \n Job Summary: \n The Division of Urogynecology and Reconstructive Pelvic Surgery in the Department of Obstetrics and Gynecology seeks a full-time qualified postdoctoral fellow to assist with basic and translational projects with a specific emphasis on urinary tract infections. The position will require collaboration with several labs focused on microbiology, endocrinology, cancer biology, materials science, and pharmacology, with a focus on understanding how the immune system, hormones, and bacterial physiology affect lower urinary tract pathophysiology. \n Key Responsibilities: \n 85% - Research Operations \n · Serial dilutions, Gram staining, agar plating assays, and microscopy \n · Developing and executing standard operating procedures, including performing general lab chores",
-   "fingerprint": "ea831acd20592f40",
-   "rules": {
-    "division": "Not Internal Medicine",
-    "division_source": "department",
-    "research_type": "Wet lab",
-    "wet_terms": [
-     "biochemical assay",
-     "cell culture",
-     "immunohistochemistry",
-     "microscopy",
-     "molecular biology",
-     "mouse",
-     "pcr",
-     "western blot"
-    ],
-    "dry_terms": [],
-    "flags": {
-     "citizenship_required": false,
-     "no_sponsorship": false,
-     "sponsorship_mentioned": false,
-     "phd_only": false,
-     "md_or_foreign_md_ok": false
-    },
-    "notes": [],
-    "verdict": "Excluded",
-    "reason": "Wet-lab signals: biochemical assay, cell culture, immunohistochemistry, microscopy"
-   },
-   "ai": null,
-   "evaluated": true,
-   "ai_attempts": 0,
-   "verdict": "Excluded",
-   "reason": "Wet-lab signals: biochemical assay, cell culture, immunohistochemistry, microscopy",
    "active": false
   },
   "cu-anschutz:41280": {
@@ -802,59 +321,6 @@
    "ai_attempts": 0,
    "verdict": "Check",
    "reason": "Clinical or dry research; division: Unclear",
-   "active": false
-  },
-  "cu-anschutz:41286": {
-   "key": "cu-anschutz:41286",
-   "school": "CU Anschutz",
-   "rank": 14,
-   "source": "cu-anschutz",
-   "source_label": "University of Colorado Anschutz",
-   "title": "Postdoctoral Fellow",
-   "url": "https://cu.taleo.net/careersection/2/jobdetail.ftl?job=41286&lang=en",
-   "location": "Aurora",
-   "department": "Medical Oncology",
-   "posted": "",
-   "first_seen": "2026-10-23",
-   "last_seen": "2026-10-23",
-   "snippet": "University of Colorado Anschutz \n Department: Medical Oncology \n Job Title: Postdoctoral Fellow \n Position #00853634 – Requisition #41286 \n Job Summary: \n The Division of Medical Oncology at the University of Colorado School of Medicine invites applications for a Postdoctoral Fellowship in Oncology Research in the Davila Laboratory. \n The overarching goal of this fellowship is to prepare outstanding trainees for independent research careers, with a focus on developing next-generation cellular therapies for cancer. \n The fellowship consists of two integrated components: scholarly research (85%) and education/training (15%). \n The postdoctoral fellow will play a central role in experimental design, execution, data analysis, and interpretation, and will present findings regularly in one-on-one meetings, laboratory meetings, and multidisciplinary research forums. \n This position reports to E",
-   "fingerprint": "b7db6471bed959bf",
-   "rules": {
-    "division": "Hematology & Oncology",
-    "division_source": "department",
-    "research_type": "Wet lab",
-    "wet_terms": [
-     "cell culture",
-     "cloning",
-     "flow cytometry",
-     "in vivo",
-     "molecular biology",
-     "mouse",
-     "pcr",
-     "rna-seq"
-    ],
-    "dry_terms": [
-     "data analys",
-     "patient",
-     "python",
-     "r"
-    ],
-    "flags": {
-     "citizenship_required": false,
-     "no_sponsorship": false,
-     "sponsorship_mentioned": false,
-     "phd_only": false,
-     "md_or_foreign_md_ok": false
-    },
-    "notes": [],
-    "verdict": "Excluded",
-    "reason": "Wet-lab signals: cell culture, cloning, flow cytometry, in vivo"
-   },
-   "ai": null,
-   "evaluated": true,
-   "ai_attempts": 0,
-   "verdict": "Excluded",
-   "reason": "Wet-lab signals: cell culture, cloning, flow cytometry, in vivo",
    "active": false
   },
   "cu-anschutz:41347": {
@@ -2627,6 +2093,450 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab influenza pathogenesis work with primary cell culture and animal models; department is Molecular Genetics and Microbiology, not Internal Medicine; requires PhD or equivalent doctorate.",
+   "active": true
+  },
+  "harvard:1401": {
+   "key": "harvard:1401",
+   "school": "Harvard",
+   "rank": 21,
+   "source": "harvard",
+   "source_label": "Harvard University (incl. Harvard Medical School)",
+   "title": "Research Assistant I Lab",
+   "url": "https://careers.harvard.edu/job/research-assistant-i-lab-in--jid-1401",
+   "location": ", ",
+   "department": "Harvard Faculty of Arts and Sciences",
+   "posted": "2026-10-23",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Company Description \n By working at Harvard University, you join a vibrant community that advances Harvard's world-changing mission in meaningful ways, inspires innovation and collaboration, and builds skills and expertise. We are dedicated to creating a diverse and welcoming environment where everyone can thrive. \n Why join the Harvard Faculty of Arts and Sciences? \n The Faculty of Arts and Sciences (FAS) is the historic heart of Harvard University. It is the home of Harvardâs undergraduate program (Harvard College, founded in 1636) as well as all of Harvardâs Ph.D. programs (the Harvard Kenneth C. Griffin Graduate School of Arts and Sciences, founded in 1872), Harvard Athletics and the Division of Continuing Education. The 40 academic departments and 30+ centers of the FAS support a community unparalleled in its academic excellence across the broadest range of liberal arts and scie",
+   "fingerprint": "b9afe3de091d326b",
+   "rules": {
+    "division": "Cardiology",
+    "division_source": "description",
+    "research_type": "Clinical or dry research",
+    "wet_terms": [],
+    "dry_terms": [
+     "participant",
+     "subject recruitment"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": true,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [
+     "States no visa sponsorship"
+    ],
+    "verdict": "Excluded",
+    "reason": "States no visa sponsorship"
+   },
+   "ai": {
+    "role_type": "research_assistant",
+    "research_type": "mixed",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "no_sponsorship",
+    "verdict": "excluded",
+    "department": "Harvard Faculty of Arts and Sciences",
+    "reason": "Harvard states it cannot provide visa sponsorship. The lab is cognitive neuroscience in FAS, not Internal Medicine, and requires psychology or neuroscience background."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Harvard states it cannot provide visa sponsorship. The lab is cognitive neuroscience in FAS, not Internal Medicine, and requires psychology or neuroscience background.",
+   "active": true
+  },
+  "harvard:1973": {
+   "key": "harvard:1973",
+   "school": "Harvard",
+   "rank": 21,
+   "source": "harvard",
+   "source_label": "Harvard University (incl. Harvard Medical School)",
+   "title": "Research Assistant II Lab",
+   "url": "https://careers.harvard.edu/job/research-assistant-ii-lab-in-boston-ma-united-states-jid-1973",
+   "location": "Boston, MA, United States",
+   "department": "Harvard T.H. Chan School of Public Health / Immunology and Infectious Diseases",
+   "posted": "2026-10-13",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Department: Immunology and Infectious Diseases\nCompany Description \n By working at Harvard University, you join a vibrant community that advances Harvard's world-changing mission in meaningful ways, inspires innovation and collaboration, and builds skills and expertise. We are dedicated to creating a diverse and welcoming environment where everyone can thrive. \n Why join the Harvard T.H. Chan School of Public Health? \n The Harvard T.H. Chan School of Public Health is a world-renowned institution dedicated to advancing public health through cutting-edge research, education, and global collaboration. Our school is a special place to work because of its vibrant, mission-driven community, interdisciplinary approach, and commitment to addressing some of the most pressing health challenges worldwide. We foster a collaborative and inclusive work environment where innovation, continuous learning",
+   "fingerprint": "0f9270aa030b13a6",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "department",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "cell culture",
+     "flow cytometry",
+     "laboratory techniques"
+    ],
+    "dry_terms": [
+     "epidemiolog",
+     "r"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": true,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [
+     "States no visa sponsorship"
+    ],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: cell culture, flow cytometry, laboratory techniques"
+   },
+   "ai": {
+    "role_type": "research_assistant",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "no_sponsorship",
+    "verdict": "excluded",
+    "department": "Immunology and Infectious Diseases",
+    "reason": "Core duties are erythroid cell culture, cell line generation and lab experiments (wet lab); department is Immunology and Infectious Diseases; visa sponsorship explicitly not provided."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Core duties are erythroid cell culture, cell line generation and lab experiments (wet lab); department is Immunology and Infectious Diseases; visa sponsorship explicitly not provided.",
+   "active": true
+  },
+  "harvard:1974": {
+   "key": "harvard:1974",
+   "school": "Harvard",
+   "rank": 21,
+   "source": "harvard",
+   "source_label": "Harvard University (incl. Harvard Medical School)",
+   "title": "Research Assistant I Lab",
+   "url": "https://careers.harvard.edu/job/research-assistant-i-lab-in-boston-ma-united-states-jid-1974",
+   "location": "Boston, MA, United States",
+   "department": "Harvard T.H. Chan School of Public Health / Immunology and Infectious Diseases",
+   "posted": "2026-10-14",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Department: Immunology and Infectious Diseases\nCompany Description \n By working at Harvard University, you join a vibrant community that advances Harvard's world-changing mission in meaningful ways, inspires innovation and collaboration, and builds skills and expertise. We are dedicated to creating a diverse and welcoming environment where everyone can thrive. \n Why join the Harvard T.H. Chan School of Public Health? \n The Harvard T.H. Chan School of Public Health is a world-renowned institution dedicated to advancing public health through cutting-edge research, education, and global collaboration. Our school is a special place to work because of its vibrant, mission-driven community, interdisciplinary approach, and commitment to addressing some of the most pressing health challenges worldwide. We foster a collaborative and inclusive work environment where innovation, continuous learning",
+   "fingerprint": "eedbc26f19df19b8",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "department",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "cell culture",
+     "flow cytometry",
+     "laboratory techniques"
+    ],
+    "dry_terms": [
+     "epidemiolog",
+     "r"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": true,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [
+     "States no visa sponsorship"
+    ],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: cell culture, flow cytometry, laboratory techniques"
+   },
+   "ai": {
+    "role_type": "research_assistant",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "no_sponsorship",
+    "verdict": "excluded",
+    "department": "Immunology and Infectious Diseases",
+    "reason": "Bench wet-lab role (erythroid cell culture, omics material generation) in Immunology and Infectious Diseases, not Internal Medicine; Harvard states no visa sponsorship."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Bench wet-lab role (erythroid cell culture, omics material generation) in Immunology and Infectious Diseases, not Internal Medicine; Harvard states no visa sponsorship.",
+   "active": true
+  },
+  "harvard:2287": {
+   "key": "harvard:2287",
+   "school": "Harvard",
+   "rank": 21,
+   "source": "harvard",
+   "source_label": "Harvard University (incl. Harvard Medical School)",
+   "title": "Research Assistant I Lab",
+   "url": "https://careers.harvard.edu/job/research-assistant-i-lab-in-boston-ma-united-states-jid-2287",
+   "location": "Boston, MA, United States",
+   "department": "Harvard Medical School / Cell Biology",
+   "posted": "2026-10-05",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Department: Cell Biology\nCompany Description \n By working at Harvard University, you join a vibrant community that advances Harvard's world-changing mission in meaningful ways, inspires innovation and collaboration, and builds skills and expertise. We are dedicated to creating a diverse and welcoming environment where everyone can thrive. \n Why join Harvard Medical School? \n Harvard Medical School's mission is to nurture a diverse, inclusive community dedicated to alleviating suffering and improving health and well-being for all through excellence in teaching and learning, discovery and scholarship, and service and leadership. \n Youâll be at the heart of biomedical discovery, education, and innovation, working alongside world-renowned faculty and a community dedicated to improving human health. This is more than a job - itâs an opportunity to shape the future of medicine. \n Job Descr",
+   "fingerprint": "bd38546aa3d2a574",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "department",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "cloning",
+     "microscopy",
+     "molecular biology",
+     "mouse",
+     "western blot"
+    ],
+    "dry_terms": [
+     "patient"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": true,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [
+     "States no visa sponsorship"
+    ],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: cloning, microscopy, molecular biology, mouse"
+   },
+   "ai": {
+    "role_type": "research_assistant",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "no_sponsorship",
+    "verdict": "excluded",
+    "department": "Cell Biology",
+    "reason": "Wet-lab cancer research (mouse husbandry, molecular biology, immunofluorescence) in Cell Biology, not Internal Medicine; Harvard states no visa sponsorship."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Wet-lab cancer research (mouse husbandry, molecular biology, immunofluorescence) in Cell Biology, not Internal Medicine; Harvard states no visa sponsorship.",
+   "active": true
+  },
+  "harvard:2295": {
+   "key": "harvard:2295",
+   "school": "Harvard",
+   "rank": 21,
+   "source": "harvard",
+   "source_label": "Harvard University (incl. Harvard Medical School)",
+   "title": "Research Assistant III",
+   "url": "https://careers.harvard.edu/job/research-assistant-iii-in-cambridge-ma-united-states-jid-2295",
+   "location": "Cambridge, MA, United States",
+   "department": "Harvard Faculty of Arts and Sciences",
+   "posted": "2026-10-06",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Company Description \n By working at Harvard University, you join a vibrant community that advances Harvard's world-changing mission in meaningful ways, inspires innovation and collaboration, and builds skills and expertise. We are dedicated to creating a diverse and welcoming environment where everyone can thrive. \n Why join the Harvard Faculty of Arts and Sciences? \n The Faculty of Arts and Sciences (FAS) is the historic heart of Harvard University. It is the home of Harvardâs undergraduate program (Harvard College, founded in 1636) as well as all of Harvardâs Ph.D. programs (the Harvard Kenneth C. Griffin Graduate School of Arts and Sciences, founded in 1872), Harvard Athletics and the Division of Continuing Education. The 40 academic departments and 30+ centers of the FAS support a community unparalleled in its academic excellence across the broadest range of liberal arts and scie",
+   "fingerprint": "edb4dd0263ff79e8",
+   "rules": {
+    "division": "Cardiology",
+    "division_source": "description",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "cell culture",
+     "cloning",
+     "crispr",
+     "flow cytometry",
+     "laboratory techniques",
+     "molecular biology",
+     "mouse",
+     "pcr"
+    ],
+    "dry_terms": [],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": true,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [
+     "States no visa sponsorship"
+    ],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: cell culture, cloning, crispr, flow cytometry"
+   },
+   "ai": {
+    "role_type": "research_assistant",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "no_sponsorship",
+    "verdict": "excluded",
+    "department": "Harvard Faculty of Arts and Sciences",
+    "reason": "Core duties are bench stem cell culture, genetic modification, and mouse work in the Ramanathan lab; Harvard states it cannot sponsor visas; not Internal Medicine."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Core duties are bench stem cell culture, genetic modification, and mouse work in the Ramanathan lab; Harvard states it cannot sponsor visas; not Internal Medicine.",
+   "active": true
+  },
+  "harvard:2299": {
+   "key": "harvard:2299",
+   "school": "Harvard",
+   "rank": 21,
+   "source": "harvard",
+   "source_label": "Harvard University (incl. Harvard Medical School)",
+   "title": "Research Assistant, Global Initiative",
+   "url": "https://careers.harvard.edu/job/research-assistant-global-initiative-in-san-mateo-ca-united-states-jid-2299",
+   "location": "San Mateo, CA, United States",
+   "department": "Harvard Business School / Global Initiative",
+   "posted": "2026-10-06",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Department: Global Initiative\nCompany Description \n By working at Harvard University, you join a vibrant community that advances Harvard's world-changing mission in meaningful ways, inspires innovation and collaboration, and builds skills and expertise. We are dedicated to creating a diverse and welcoming environment where everyone can thrive. \n Why join Harvard Business School? \n Harvard Business School, located on a 40-acre campus in Boston, was founded in 1908 as part of Harvard University. It is among the world's most trusted sources of management education and thought leadership. For more than a century, the School's faculty has combined a passion for teaching with rigorous research conducted alongside practitioners at world-leading organizations to educate leaders who make a difference in the world. Through a dynamic ecosystem of research, learning, and entrepreneurship that includ",
+   "fingerprint": "31060c6157c16515",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Unclear",
+    "wet_terms": [],
+    "dry_terms": [],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": true,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [
+     "States no visa sponsorship"
+    ],
+    "verdict": "Excluded",
+    "reason": "States no visa sponsorship"
+   },
+   "ai": {
+    "role_type": "research_assistant",
+    "research_type": "unclear",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "no_sponsorship",
+    "verdict": "excluded",
+    "department": "Harvard Business School / Global Initiative",
+    "reason": "Business school case-study research assistant role, not Internal Medicine; posting states Harvard is unable to provide visa sponsorship."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Business school case-study research assistant role, not Internal Medicine; posting states Harvard is unable to provide visa sponsorship.",
+   "active": true
+  },
+  "harvard:2312": {
+   "key": "harvard:2312",
+   "school": "Harvard",
+   "rank": 21,
+   "source": "harvard",
+   "source_label": "Harvard University (incl. Harvard Medical School)",
+   "title": "Research Assistant II Non-Lab",
+   "url": "https://careers.harvard.edu/job/research-assistant-ii-non-lab-in-boston-ma-united-states-jid-2312",
+   "location": "Boston, MA, United States",
+   "department": "Harvard T.H. Chan School of Public Health / Social and Behavioral Sciences",
+   "posted": "2026-10-09",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Department: Social and Behavioral Sciences\nCompany Description \n By working at Harvard University, you join a vibrant community that advances Harvard's world-changing mission in meaningful ways, inspires innovation and collaboration, and builds skills and expertise. We are dedicated to creating a diverse and welcoming environment where everyone can thrive. \n Why join the Harvard T.H. Chan School of Public Health? \n The Harvard T.H. Chan School of Public Health is a world-renowned institution dedicated to advancing public health through cutting-edge research, education, and global collaboration. Our school is a special place to work because of its vibrant, mission-driven community, interdisciplinary approach, and commitment to addressing some of the most pressing health challenges worldwide. We foster a collaborative and inclusive work environment where innovation, continuous learning, an",
+   "fingerprint": "9bdef68561dbf2e2",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "department",
+    "research_type": "Clinical or dry research",
+    "wet_terms": [],
+    "dry_terms": [
+     "data management",
+     "patient",
+     "patients",
+     "r",
+     "redcap"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": true,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [
+     "States no visa sponsorship"
+    ],
+    "verdict": "Excluded",
+    "reason": "States no visa sponsorship"
+   },
+   "ai": {
+    "role_type": "research_assistant",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "department": "Social and Behavioral Sciences",
+    "reason": "Research assistant in Harvard Chan School Social and Behavioral Sciences, a workplace-health intervention study; not Internal Medicine and not a postdoc or fellow role."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Other dept",
+   "reason": "Research assistant in Harvard Chan School Social and Behavioral Sciences, a workplace-health intervention study; not Internal Medicine and not a postdoc or fellow role.",
+   "active": true
+  },
+  "harvard:2359": {
+   "key": "harvard:2359",
+   "school": "Harvard",
+   "rank": 21,
+   "source": "harvard",
+   "source_label": "Harvard University (incl. Harvard Medical School)",
+   "title": "Research Assistant II Non-Lab",
+   "url": "https://careers.harvard.edu/job/research-assistant-ii-non-lab-in--jid-2359",
+   "location": ", ",
+   "department": "Harvard T.H. Chan School of Public Health / Global Health and Population",
+   "posted": "2026-10-20",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Department: Global Health and Population\nCompany Description \n By working at Harvard University, you join a vibrant community that advances Harvard's world-changing mission in meaningful ways, inspires innovation and collaboration, and builds skills and expertise. We are dedicated to creating a diverse and welcoming environment where everyone can thrive. \n Why join the Harvard T.H. Chan School of Public Health? \n The Harvard T.H. Chan School of Public Health is a world-renowned institution dedicated to advancing public health through cutting-edge research, education, and global collaboration. Our school is a special place to work because of its vibrant, mission-driven community, interdisciplinary approach, and commitment to addressing some of the most pressing health challenges worldwide. We foster a collaborative and inclusive work environment where innovation, continuous learning, and ",
+   "fingerprint": "81c87ba78d1e8dfa",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "department",
+    "research_type": "Clinical or dry research",
+    "wet_terms": [],
+    "dry_terms": [
+     "data analys",
+     "r",
+     "stata"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": true,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [
+     "States no visa sponsorship"
+    ],
+    "verdict": "Excluded",
+    "reason": "States no visa sponsorship"
+   },
+   "ai": {
+    "role_type": "research_assistant",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "no_sponsorship",
+    "verdict": "excluded",
+    "department": "Global Health and Population",
+    "reason": "Harvard states it cannot provide visa sponsorship for this position, and the role is in Global Health and Population, not Internal Medicine."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Harvard states it cannot provide visa sponsorship for this position, and the role is in Global Health and Population, not Internal Medicine.",
    "active": true
   },
   "jhu:122357": {
@@ -7511,7 +7421,7 @@
    },
    "ai": null,
    "evaluated": true,
-   "ai_attempts": 2,
+   "ai_attempts": 3,
    "verdict": "Other dept",
    "reason": "Department does not look like Internal Medicine",
    "active": true
@@ -9527,6 +9437,64 @@
    "verdict": "Excluded",
    "reason": "Core duties are laboratory work: PCR, sequencing, cell culture, daily operation of a specialized lab, and laboratory animals. Department not stated; requires a Master's in a scientific discipline.",
    "active": true
+  }
+ },
+ "skipped": {
+  "clevelandclinic:341174": {
+   "posted": "2026-10-02",
+   "seen": "2026-10-24"
+  },
+  "clevelandclinic:349352": {
+   "posted": "2026-10-02",
+   "seen": "2026-10-24"
+  },
+  "clevelandclinic:357110": {
+   "posted": "2026-10-02",
+   "seen": "2026-10-24"
+  },
+  "cu-anschutz:38914": {
+   "posted": "2026-02-05",
+   "seen": "2026-10-24"
+  },
+  "cu-anschutz:39113": {
+   "posted": "2026-02-24",
+   "seen": "2026-10-24"
+  },
+  "cu-anschutz:39257": {
+   "posted": "2026-03-11",
+   "seen": "2026-10-24"
+  },
+  "cu-anschutz:40422": {
+   "posted": "2026-07-21",
+   "seen": "2026-10-24"
+  },
+  "cu-anschutz:40861": {
+   "posted": "2026-08-18",
+   "seen": "2026-10-24"
+  },
+  "cu-anschutz:40884": {
+   "posted": "2026-08-20",
+   "seen": "2026-10-24"
+  },
+  "cu-anschutz:41105": {
+   "posted": "2026-09-16",
+   "seen": "2026-10-24"
+  },
+  "cu-anschutz:41112": {
+   "posted": "2026-09-16",
+   "seen": "2026-10-24"
+  },
+  "cu-anschutz:41207": {
+   "posted": "2026-09-24",
+   "seen": "2026-10-24"
+  },
+  "cu-anschutz:41236": {
+   "posted": "2026-09-28",
+   "seen": "2026-10-24"
+  },
+  "cu-anschutz:41286": {
+   "posted": "2026-10-01",
+   "seen": "2026-10-24"
   }
  }
 }

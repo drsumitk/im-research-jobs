@@ -1,13 +1,13 @@
 {
  "meta": {
-  "generated_utc": "2026-10-24 01:15 UTC",
+  "generated_utc": "2026-10-24 03:56 UTC",
   "today": "2026-10-24",
   "ai_enabled": true,
-  "ai_calls": 2,
+  "ai_calls": 9,
   "log": [
    "AI classifier failed on 1 posting(s) (unusable reply (stop_reason=refusal) x1); details are in the GitHub Actions log. Each posting is retried at most 3 times."
   ],
-  "total": 178
+  "total": 175
  },
  "sources": [
   {
@@ -49,7 +49,7 @@
    "candidates": 3,
    "too_old": 3,
    "status": "ok",
-   "new_details": 1,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -236,7 +236,7 @@
    "type": "taleo",
    "checked": "2026-10-24",
    "found": 131,
-   "candidates": 17,
+   "candidates": 6,
    "too_old": 11,
    "status": "ok",
    "new_details": 11,
@@ -328,10 +328,14 @@
    "rank": 21,
    "source": "harvard",
    "label": "Harvard University (incl. Harvard Medical School)",
-   "type": "smartrecruiters",
+   "type": "sitemap",
    "checked": "2026-10-24",
-   "status": "blocked",
-   "error": "robots.txt disallows api.smartrecruiters.com/v1/companies/HarvardUniversity/postings"
+   "found": 323,
+   "candidates": 8,
+   "too_old": 13,
+   "status": "ok",
+   "new_details": 8,
+   "detail_errors": 0
   },
   {
    "school": "Harvard",
@@ -369,10 +373,10 @@
    "type": "workday",
    "checked": "2026-10-24",
    "found": 204,
-   "candidates": 6,
-   "too_old": 6,
+   "candidates": 3,
+   "too_old": 9,
    "status": "ok",
-   "new_details": 0,
+   "new_details": 3,
    "detail_errors": 0
   }
  ]
