@@ -4,6 +4,7 @@ Configured entirely in sources.yaml with CSS selectors, for example:
 
   type: board
   url: https://postdocs.yale.edu/applicants/open-positions?page={page}
+                           # {q} in the url is replaced by each search term (search-result pages)
   pages: 4                 # read pages page_start .. page_start+pages-1 (only when url has {page})
   page_start: 0
   row: li.reference-card   # one opening
@@ -13,6 +14,7 @@ Configured entirely in sources.yaml with CSS selectors, for example:
   dept: td:nth-of-type(2)  # optional CSS for the department
   dept_caption: true       # optional: department from the row's table <caption>
   mentor: td:nth-of-type(4)
+  location: p.muted        # optional CSS for the location / hospital
   date: td:nth-of-type(1)  # optional CSS for the posting date; default: a <time> or the first date in the row
   detail: main             # CSS for the description on the opening's page, or "none" to use the row text
   detail_date_label: "Advertising Started on:"   # optional: posting date printed after this label
@@ -22,7 +24,7 @@ title rules from dropping openings whose own titles are just a mentor's name.
 """
 import hashlib
 import re
-from urllib.parse import urljoin
+from urllib.parse import quote_plus, urljoin
 
 from bs4 import BeautifulSoup
 
@@ -34,12 +36,13 @@ def _text(el):
     return re.sub(r"\s+", " ", el.get_text(" ", strip=True)).strip() if el is not None else ""
 
 
-def _page_urls(src):
-    url = src["url"]
-    if "{page}" not in url:
-        return [url]
+def _page_urls(src, terms=()):
+    """List pages to read: one per search term when the url has {q}, one per page when it has {page}."""
+    urls = [src["url"].replace("{q}", quote_plus(t)) for t in terms] if "{q}" in src["url"] else [src["url"]]
+    if "{page}" not in src["url"]:
+        return urls
     start = int(src.get("page_start", 0))
-    return [url.format(page=p) for p in range(start, start + int(src.get("pages", 1)))]
+    return [u.replace("{page}", str(p)) for u in urls for p in range(start, start + int(src.get("pages", 1)))]
 
 
 def parse_list(page_html, src, page_url):
@@ -75,8 +78,9 @@ def parse_list(page_html, src, page_url):
         row_text = _text(row)
         jid = re.sub(r"[^A-Za-z0-9]+", "-", re.sub(r"^https?://[^/]+", "", url)).strip("-") if href \
             else hashlib.sha256(row_text.encode("utf-8")).hexdigest()[:12]
+        loc = _text(row.select_one(src["location"])) if src.get("location") else ""
         job = Job(source_id=src["id"], job_id=jid, title=title, url=url,
-                  department=fields["dept"], posted=posted)
+                  department=fields["dept"], posted=posted, location=loc)
         if src.get("detail") == "none":
             job.description = html_to_text(str(row))
             if job.department:
@@ -102,12 +106,12 @@ def parse_detail(page_html, job, src):
 
 def search(http, src, terms, title_ok):
     seen = {}
-    for url in _page_urls(src):
+    for url in _page_urls(src, terms):
         page_jobs = parse_list(http.get(url).text, src, url)
         for j in page_jobs:
             seen.setdefault(j.key, j)
-        if not page_jobs:
-            break
+        if not page_jobs and "{q}" not in src["url"]:
+            break  # paged list ran out
     return list(seen.values())
 
 

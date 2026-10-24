@@ -1,10 +1,10 @@
 # IM Research Jobs Tracker
 
-Checks the careers websites and postdoc job boards of the 50 US medical schools with the most NIH funding for Internal Medicine (BRIMR 2025 ranking), plus Harvard and Mayo Clinic, once a day. It keeps research-only roles (postdoctoral, research fellow, research associate; clinical research coordinator roles are excluded) first posted within the last 21 days, separates clinical or data research from wet-lab work, flags eligibility problems (citizenship, no visa sponsorship, PhD-only), and shows the results on a web dashboard hosted free on GitHub Pages (anyone with the link can open it; search engines are asked not to index it).
+Checks the careers websites and postdoc job boards of the 50 US medical schools with the most NIH funding for Internal Medicine (BRIMR 2025 ranking), plus Harvard, Mayo Clinic and Beth Israel Deaconess, once a day. It keeps research-only roles (postdoctoral, research fellow, research associate; clinical research coordinator roles are excluded) first posted within the last 21 days, separates clinical or data research from wet-lab work, flags eligibility problems (citizenship, no visa sponsorship, PhD-only), and shows the results on a web dashboard hosted free on GitHub Pages (anyone with the link can open it; search engines are asked not to index it).
 
 ## What it covers
 
-The 50 US medical schools with the most NIH funding for Internal Medicine (BRIMR 2025, `config/brimr_2025_im_top50.txt`), plus Harvard and Mayo Clinic. For each school the tracker reads the main HR careers site and, where one exists, the postdoc office's own list of openings. "Link only" sources cannot be read automatically (login, bot protection, or a robots.txt rule against automated reading); the dashboard's Sources tab links to them for a manual check.
+The 50 US medical schools with the most NIH funding for Internal Medicine (BRIMR 2025, `config/brimr_2025_im_top50.txt`), plus Harvard, Mayo Clinic and Beth Israel Deaconess / Beth Israel Lahey Health. For each school the tracker reads the main HR careers site and, where one exists, the postdoc office's own list of openings. "Link only" sources cannot be read automatically (login, bot protection, or a robots.txt rule against automated reading); the dashboard's Sources tab links to them for a manual check.
 
 | Rank | School | Read automatically | Link only |
 |---|---|---|---|
@@ -60,8 +60,9 @@ The 50 US medical schools with the most NIH funding for Internal Medicine (BRIMR
 | 50 | Louisville | Workday | |
 | added | Harvard | Harvard careers sitemap, Mass General Brigham (Workday) | |
 | added | Mayo Clinic | Oracle | |
+| added | Beth Israel Deaconess / Beth Israel Lahey Health | BILH careers site (covers BIDMC) | Joslin Diabetes Center (iCIMS) |
 
-Harvard and Mayo Clinic are added by choice: BRIMR ranks Harvard's teaching hospitals separately from the medical school, and Mayo's NIH funding is not coded by department. Beth Israel Deaconess (Harvard) is not included.
+Harvard, Mayo Clinic and Beth Israel Deaconess / Beth Israel Lahey Health are added by choice: BRIMR ranks Harvard's teaching hospitals separately from the medical school, and Mayo's NIH funding is not coded by department.
 
 Known gaps: postdoc posts that departments advertise only on Interfolio, lab websites or by email are not on these boards. Some iCIMS portals and postdoc boards show no posting date; such postings are shown for up to 21 days after the tracker first sees them (so on the first day after a new source is added, older undated postings can appear once and then drop off).
 

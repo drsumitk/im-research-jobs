@@ -630,3 +630,20 @@ schools:
         type: oracle
         host: fa-euwp-saasfaprod1.fa.ocs.oraclecloud.com
         site: CX_1
+
+  - rank: 53
+    name: Beth Israel Deaconess (BILH)
+    sources:
+      - id: bilh
+        label: Beth Israel Lahey Health (incl. Beth Israel Deaconess Medical Center)
+        type: board
+        url: https://jobs.bilh.org/jobs/?q={q}&city=&sort=date_desc
+        row: article.job-card
+        link: 'h2 a'
+        location: p.muted
+        detail: .entry-content
+      - id: joslin
+        label: Joslin Diabetes Center (part of BIDMC; separate iCIMS job site)
+        type: manual
+        url: https://jobs-joslin.icims.com/jobs/intro
+        reason: Separate iCIMS job site; the other iCIMS portals tried (OHSU, UMass Chan) refused automated requests.

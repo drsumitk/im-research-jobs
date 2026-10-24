@@ -234,3 +234,16 @@ def test_sitemap_title_strip():
     from tracker.connectors.sitemap import title_from_slug
     s = "postdoctoral-research-associate-medicine-madison-wisconsin-united-states-270034a7-6177"
     assert title_from_slug(s, "-madison-wisconsin-united-states.*$") == "postdoctoral research associate medicine"
+
+
+def test_board_search_terms_and_bilh_cards():
+    from tracker.connectors import board
+    src = {"id": "bilh", "url": "https://jobs.bilh.org/jobs/?q={q}&city=&sort=date_desc", "row": "article.job-card",
+           "link": "h2 a", "location": "p.muted"}
+    assert board._page_urls(src, ["post doc", "research fellow"]) == [
+        "https://jobs.bilh.org/jobs/?q=post+doc&city=&sort=date_desc",
+        "https://jobs.bilh.org/jobs/?q=research+fellow&city=&sort=date_desc"]
+    [j] = board.parse_list(load("board_bilh.html"), src, "https://jobs.bilh.org/jobs/?q=postdoctoral")
+    assert j.title == "Postdoctoral research fellow" and j.posted == "2026-10-22"
+    assert j.url == "https://jobs.bilh.org/jobs/postdoctoral-research-fellow-boston-ma-jr105863/"
+    assert j.location.startswith("Boston, MA • Beth Israel Deaconess Medical Center")
