@@ -19,13 +19,13 @@ The 50 US medical schools with the most NIH funding for Internal Medicine (BRIMR
 | 9 | UCLA | Jibe, UC Recruit | |
 | 10 | Mount Sinai | Jibe | |
 | 11 | NYU Langone | m-cloud | |
-| 12 | Yale | Workday, postdoc office board | |
+| 12 | Yale | Workday, postdoc office board (newest 10 posts) | |
 | 13 | UC San Diego | Job list pages, UC Recruit | |
 | 14 | CU Anschutz | Taleo | |
 | 15 | Stanford | Oracle, postdoc office board | |
 | 16 | Northwestern | | PeopleSoft, postdoc office list |
 | 17 | Michigan | Job list pages | |
-| 18 | Weill Cornell | SuccessFactors, postdoc office board | |
+| 18 | Weill Cornell | SuccessFactors | Postdoc office board (refuses automated requests) |
 | 19 | University of Washington | Workday | |
 | 20 | UChicago | Workday | |
 | 21 | UT Southwestern | m-cloud | |
@@ -34,7 +34,7 @@ The 50 US medical schools with the most NIH funding for Internal Medicine (BRIMR
 | 24 | UAB | | Careers site, postdoc office list |
 | 25 | UW-Madison | Job sitemap | Postdoc vacancy list |
 | 26 | Baylor College of Medicine | | SuccessFactors |
-| 27 | OHSU | iCIMS (postdoc portal and main portal) | |
+| 27 | OHSU | | iCIMS postdoc portal and main portal (refuse automated requests) |
 | 28 | Indiana University | | PeopleAdmin |
 | 29 | Boston University | SilkRoad | |
 | 30 | Wake Forest | m-cloud (Winston-Salem only) | |
@@ -51,7 +51,7 @@ The 50 US medical schools with the most NIH funding for Internal Medicine (BRIMR
 | 41 | Virginia | | Careers site |
 | 42 | Florida | PageUp job list | |
 | 43 | Medical College of Wisconsin | Workday | |
-| 44 | UMass Chan | iCIMS | |
+| 44 | UMass Chan | | iCIMS (refuses automated requests) |
 | 45 | Maryland, Baltimore | Oracle (faculty and postdoc site, staff site) | |
 | 46 | Tulane | Oracle (academic site, staff site) | |
 | 47 | Rochester | Workday, postdoc office list | |

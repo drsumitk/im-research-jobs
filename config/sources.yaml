@@ -156,9 +156,8 @@ schools:
       - id: yale-postdoc
         label: Yale Office for Postdoctoral Affairs board
         type: board
-        url: https://postdocs.yale.edu/applicants/open-positions?page={page}
-        pages: 4      # newest first, 10 per page
-        page_start: 0
+        url: https://postdocs.yale.edu/applicants/open-positions
+        # Newest 10 only: robots.txt disallows the ?page= links. Read daily, so new posts are still caught.
         row: li.reference-card
         link: a.reference-card__heading-link
         detail: .text-field
@@ -243,14 +242,9 @@ schools:
         host: jobs.weill.cornell.edu
       - id: weillcornell-postdoc
         label: Weill Cornell Office of Postdoctoral Affairs board
-        type: board
+        type: manual
         url: https://postdocs.weill.cornell.edu/opportunities/postdoctoral-positions
-        row: 'tr:has(a[href*="/opportunities/postdoctoral-positions/"])'
-        link: 'a[href*="/opportunities/postdoctoral-positions/"]'
-        date: td.views-field-created
-        dept: td.views-field-field-department
-        mentor: td.views-field-field-faculty-name
-        detail: '#main-content'
+        reason: The site refuses automated requests (HTTP 403).
 
   - rank: 19
     name: University of Washington
@@ -341,12 +335,14 @@ schools:
     sources:
       - id: ohsu-postdoc
         label: OHSU postdoctoral portal
-        type: icims
-        host: postdoctoral-ohsu.icims.com
+        type: manual
+        url: https://postdoctoral-ohsu.icims.com/jobs/search?ss=1
+        reason: The iCIMS portal refuses automated requests (HTTP 405).
       - id: ohsu
         label: OHSU
-        type: icims
-        host: externalcareers-ohsu.icims.com
+        type: manual
+        url: https://externalcareers-ohsu.icims.com/jobs/search?ss=1
+        reason: The iCIMS portal refuses automated requests (HTTP 405).
 
   - rank: 28
     name: Indiana University
@@ -521,8 +517,9 @@ schools:
     sources:
       - id: umasschan
         label: UMass Chan Medical School
-        type: icims
-        host: careers-umms.icims.com
+        type: manual
+        url: https://careers-umms.icims.com/jobs/search?ss=1&searchKeyword=postdoc
+        reason: The iCIMS portal refuses automated requests (HTTP 405).
 
   - rank: 45
     name: Maryland

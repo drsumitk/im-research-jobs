@@ -74,6 +74,8 @@ def parse_detail(page_html, job, src):
     else:
         el = soup.select_one(src.get("detail_selector", "main")) or soup.find("main") or soup.body
         job.description = html_to_text(str(el)) if el else ""
+        if len(job.description) < 200 and soup.body is not None:  # selector missed: use the whole page
+            job.description = html_to_text(str(soup.body))
     label = src.get("detail_date_label")
     if label:
         text = re.sub(r"\s+", " ", soup.get_text(" "))
@@ -93,4 +95,9 @@ def search(http, src, terms, title_ok):
 
 
 def details(http, src, job):
-    return parse_detail(http.get(job.url).text, job, src)
+    r = http.get(job.url)
+    parse_detail(r.text, job, src)
+    if not job.description:  # diagnostic for the private Actions log only
+        print(f"html_list: empty description for {job.url} (HTTP {r.status_code}, "
+              f"{r.headers.get('content-type')}, {len(r.content)} bytes)")
+    return job
