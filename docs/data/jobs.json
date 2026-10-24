@@ -1,11 +1,11 @@
 {
  "meta": {
-  "generated_utc": "2026-10-24 04:51 UTC",
+  "generated_utc": "2026-10-24 05:08 UTC",
   "today": "2026-10-24",
   "ai_enabled": true,
-  "ai_calls": 182,
+  "ai_calls": 17,
   "log": [],
-  "total": 398
+  "total": 407
  },
  "jobs": {
   "clevelandclinic:357907": {
@@ -3057,16 +3057,29 @@
     "role_type": "postdoc",
     "research_type": "unclear",
     "im_division": "unclear",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "department": "Faculty and Faculty Equivalent",
+    "reason": "Generic postdoc posting; department and research area unspecified. Minimum is 'doctoral degree or equivalent (Ph.D., M.D., etc.)', so MBBS eligibility is unclear. Visa not stated."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Check",
+   "reason": "Generic postdoc posting; department and research area unspecified. Minimum is 'doctoral degree or equivalent (Ph.D., M.D., etc.)', so MBBS eligibility is unclear. Visa not stated.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "unclear",
     "mbbs_without_phd_eligible": "yes",
     "visa": "not_stated",
     "verdict": "check",
     "department": "",
     "reason": "Generic Emory postdoc with no department stated. Minimum lists M.D., which covers MBBS. Lab and experiment language suggests possible wet-lab work, so a human should confirm."
    },
-   "evaluated": true,
-   "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Generic Emory postdoc with no department stated. Minimum lists M.D., which covers MBBS. Lab and experiment language suggests possible wet-lab work, so a human should confirm.",
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
    "active": true
   },
   "emory:174965": {
@@ -4709,6 +4722,21 @@
    },
    "ai": {
     "role_type": "research_assistant",
+    "research_type": "clinical_or_dry",
+    "im_division": "Infectious Diseases",
+    "mbbs_without_phd_eligible": "yes",
+    "visa": "not_stated",
+    "verdict": "check",
+    "department": "SOM DOM Infectious Disease",
+    "reason": "Research Project Assistant II in DOM Infectious Diseases; high school diploma minimum so eligible, but it is a peer recovery/outreach role with HIV testing, below candidate's target level; visa not stated."
+   },
+   "evaluated": true,
+   "ai_attempts": 2,
+   "verdict": "Check",
+   "reason": "Research Project Assistant II in DOM Infectious Diseases; high school diploma minimum so eligible, but it is a peer recovery/outreach role with HIV testing, below candidate's target level; visa not stated.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "research_assistant",
     "research_type": "mixed",
     "im_division": "Infectious Diseases",
     "mbbs_without_phd_eligible": "yes",
@@ -4717,10 +4745,8 @@
     "department": "SOM DOM Infectious Disease",
     "reason": "Mixed role: research assistant with peer recovery, rapid HIV/HCV testing and client services; ID division; minimum is a high school diploma; visa not stated."
    },
-   "evaluated": true,
-   "ai_attempts": 2,
-   "verdict": "Check",
-   "reason": "Mixed role: research assistant with peer recovery, rapid HIV/HCV testing and client services; ID division; minimum is a high school diploma; visa not stated.",
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
    "active": true
   },
   "louisville:R109394": {
@@ -6089,14 +6115,27 @@
     "im_division": "Infectious Diseases",
     "mbbs_without_phd_eligible": "yes",
     "visa": "not_stated",
+    "verdict": "match",
+    "department": "Department of Medicine, Infectious Disease Division",
+    "reason": "Epidemiological, population-based data research in Medicine's Infectious Disease Division; requires only a Bachelor's in science (experience accepted in lieu), so eligible. Role is research assistant level; visa not stated."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Match",
+   "reason": "Epidemiological, population-based data research in Medicine's Infectious Disease Division; requires only a Bachelor's in science (experience accepted in lieu), so eligible. Role is research assistant level; visa not stated.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "research_assistant",
+    "research_type": "clinical_or_dry",
+    "im_division": "Infectious Diseases",
+    "mbbs_without_phd_eligible": "yes",
+    "visa": "not_stated",
     "verdict": "check",
     "department": "The Department of Medicine's Infectious Disease Division",
     "reason": "Epidemiology and population-based dry research in Infectious Disease, with no lab work. Title is Research Assistant II, not a fellow or associate role. Bachelor's required, but experience in lieu of degree accepted; visa not stated."
    },
-   "evaluated": true,
-   "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Epidemiology and population-based dry research in Infectious Disease, with no lab work. Title is Research Assistant II, not a fellow or associate role. Bachelor's required, but experience in lieu of degree accepted; visa not stated.",
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
    "active": true
   },
   "massgeneralbrigham:RQ4083533": {
@@ -6197,16 +6236,29 @@
     "role_type": "research_assistant",
     "research_type": "clinical_or_dry",
     "im_division": "unclear",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "department": "Division of Sleep and Circadian Disorders",
+    "reason": "Research assistant role (bachelor's required) with coordinator-type duties in sleep epidemiology/cardiovascular; division not clearly Internal Medicine, no visa info, and MBBS equivalence to bachelor's unstated."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Check",
+   "reason": "Research assistant role (bachelor's required) with coordinator-type duties in sleep epidemiology/cardiovascular; division not clearly Internal Medicine, no visa info, and MBBS equivalence to bachelor's unstated.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "research_assistant",
+    "research_type": "clinical_or_dry",
+    "im_division": "unclear",
     "mbbs_without_phd_eligible": "yes",
     "visa": "not_stated",
     "verdict": "check",
     "department": "",
     "reason": "Epidemiology and clinical sleep research role; Division of Sleep and Circadian Disorders, not stated as Internal Medicine. Bachelor's required, so an MBBS meets the minimum. No visa information."
    },
-   "evaluated": true,
-   "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Epidemiology and clinical sleep research role; Division of Sleep and Circadian Disorders, not stated as Internal Medicine. Bachelor's required, so an MBBS meets the minimum. No visa information.",
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
    "active": true
   },
   "massgeneralbrigham:RQ4083804": {
@@ -7755,12 +7807,25 @@
     "visa": "not_stated",
     "verdict": "check",
     "department": "Diabetes Research Institute",
-    "reason": "Postdoc at Diabetes Research Institute requires an MD; an MBBS meets that. Duties are generic with no wet-lab or clinical detail, and no Internal Medicine division or visa policy is stated."
+    "reason": "Postdoctoral Associate at Diabetes Research Institute requiring an MD (no PhD). Research type and IM affiliation are not stated, and the institute may be bench-focused. No visa information."
    },
    "evaluated": true,
    "ai_attempts": 1,
    "verdict": "Check",
-   "reason": "Postdoc at Diabetes Research Institute requires an MD; an MBBS meets that. Duties are generic with no wet-lab or clinical detail, and no Internal Medicine division or visa policy is stated.",
+   "reason": "Postdoctoral Associate at Diabetes Research Institute requiring an MD (no PhD). Research type and IM affiliation are not stated, and the institute may be bench-focused. No visa information.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "yes",
+    "visa": "not_stated",
+    "verdict": "check",
+    "department": "Diabetes Research Institute",
+    "reason": "Postdoc at Diabetes Research Institute requires an MD; an MBBS meets that. Duties are generic with no wet-lab or clinical detail, and no Internal Medicine division or visa policy is stated."
+   },
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
    "active": true
   },
   "miami:R100095489": {
@@ -7964,6 +8029,21 @@
    },
    "ai": {
     "role_type": "postdoc",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "department": "Hussman Institute",
+    "reason": "Posting strictly requires a doctorate degree in a relevant field; candidate has no PhD. Work is dry-lab genomics/ML in a human genetics institute, not Internal Medicine."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Posting strictly requires a doctorate degree in a relevant field; candidate has no PhD. Work is dry-lab genomics/ML in a human genetics institute, not Internal Medicine.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "postdoc",
     "research_type": "mixed",
     "im_division": "unclear",
     "mbbs_without_phd_eligible": "unclear",
@@ -7972,10 +8052,8 @@
     "department": "",
     "reason": "Postdoc on computational genomics/ML, but requires a 'Doctorate degree in relevant field' (MBBS eligibility unclear), mentions lab procedure modifications, names no Internal Medicine division, and states no visa terms."
    },
-   "evaluated": true,
-   "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Postdoc on computational genomics/ML, but requires a 'Doctorate degree in relevant field' (MBBS eligibility unclear), mentions lab procedure modifications, names no Internal Medicine division, and states no visa terms.",
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
    "active": true
   },
   "miami:R100097866": {
@@ -20245,6 +20323,493 @@
    "reason": "Wet-lab bone-immune research with lab environment, animal care and lab techniques as core duties; not Internal Medicine and no visa sponsorship stated.",
    "active": true
   },
+  "yale-postdoc:posts-2026-10-07-postdoctoral-associate-in-viral-immunology-and-b-cell-biology-lucas-lab-department": {
+   "key": "yale-postdoc:posts-2026-10-07-postdoctoral-associate-in-viral-immunology-and-b-cell-biology-lucas-lab-department",
+   "school": "Yale",
+   "rank": 12,
+   "source": "yale-postdoc",
+   "source_label": "Yale Office for Postdoctoral Affairs board",
+   "title": "Postdoctoral Associate in Viral Immunology and B Cell Biology — Lucas Lab, Department of Immunobiology",
+   "url": "https://postdocs.yale.edu/posts/2026-10-07-postdoctoral-associate-in-viral-immunology-and-b-cell-biology-lucas-lab-department",
+   "location": "",
+   "department": "",
+   "posted": "2026-10-07",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Lucas Lab | Department of Immunobiology | Yale School of Medicine \n Location \n New Haven, Connecticut \n Anticipated start date \n Flexible \n Application review \n Applications will be reviewed on a rolling basis until the position is filled \n About the Lucas Lab \n The Lucas Lab at Yale University studies B cell biology and immune responses to viral infections and vaccination, with a particular interest in how these processes change with age. Our goal is to define the cellular and molecular mechanisms that shape protective immunity across the lifespan. \n Position Overview \n We are seeking a curious and collaborative postdoctoral associate to join our team. The successful candidate will contribute to research at the intersection of B cell biology, viral immunology, vaccine responses, and aging. The position provides room to develop new ideas, build an independent scientific profile, and cont",
+   "fingerprint": "1d76caa9f5a984c1",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "department",
+    "research_type": "Mixed or unclear",
+    "wet_terms": [
+     "molecular biology"
+    ],
+    "dry_terms": [],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "department": "Department of Immunobiology",
+    "reason": "Bench immunology lab (B cell biology, experiments, molecular biology) outside Internal Medicine; wet-lab core duties rule out the candidate."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Bench immunology lab (B cell biology, experiments, molecular biology) outside Internal Medicine; wet-lab core duties rule out the candidate.",
+   "active": true
+  },
+  "yale-postdoc:posts-2026-10-14-postdoctoral-associate-position-in-gerontologic-biostatistics-department-of": {
+   "key": "yale-postdoc:posts-2026-10-14-postdoctoral-associate-position-in-gerontologic-biostatistics-department-of",
+   "school": "Yale",
+   "rank": 12,
+   "source": "yale-postdoc",
+   "source_label": "Yale Office for Postdoctoral Affairs board",
+   "title": "Postdoctoral Associate Position in Gerontologic Biostatistics — Department of Internal Medicine, Section of Geriatrics and Department of Biostatistics at the Yale School of Public Health",
+   "url": "https://postdocs.yale.edu/posts/2026-10-14-postdoctoral-associate-position-in-gerontologic-biostatistics-department-of",
+   "location": "",
+   "department": "",
+   "posted": "2026-10-14",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Please use the links below to learn more about the Department of Internal Medicine, Section of Geriatrics, and the Department of Biostatistics at the Yale School of Public Health. \n https://medicine.yale.edu/intmed/geriatrics/ \n https:// www.publichealth.yale.edu/biostat \n Description \n A full-time opportunity as a Postdoctoral Associate in Gerontologic Biostatistics is available at Yale University. The Postdoctoral Associate will be mentored by Drs. Heather Allore and Fan Li at the Yale School of Medicine and Yale School of Public Health. The position is a full-time appointment for one year, with full benefits, and with the possibility of renewal for a second year, dependent upon performance and availability of funding. Opportunities to work with collaborating institutions are available. Start date is September 1, 2027. \n We are seeking a highly motivated researcher interested in develo",
+   "fingerprint": "e0038e8cf0c58b20",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "department",
+    "research_type": "Clinical or dry research",
+    "wet_terms": [],
+    "dry_terms": [
+     "biostatistic",
+     "clinical trial"
+    ],
+    "flags": {
+     "citizenship_required": true,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [
+     "US citizenship or permanent residency mentioned"
+    ],
+    "verdict": "Excluded",
+    "reason": "US citizenship or permanent residency mentioned"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "clinical_or_dry",
+    "im_division": "Geriatrics & Palliative",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "citizenship_required",
+    "verdict": "excluded",
+    "department": "Department of Internal Medicine, Section of Geriatrics and Department of Biostatistics at the Yale School of Public Heal",
+    "reason": "Requires a PhD in statistics or biostatistics and states applicants must be a US citizen or permanent resident. The candidate has no PhD and needs sponsorship."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Requires a PhD in statistics or biostatistics and states applicants must be a US citizen or permanent resident. The candidate has no PhD and needs sponsorship.",
+   "active": true
+  },
+  "yale-postdoc:posts-2026-10-14-postdoctoral-associate-position-whitney-humanities-center-at-yale": {
+   "key": "yale-postdoc:posts-2026-10-14-postdoctoral-associate-position-whitney-humanities-center-at-yale",
+   "school": "Yale",
+   "rank": 12,
+   "source": "yale-postdoc",
+   "source_label": "Yale Office for Postdoctoral Affairs board",
+   "title": "Postdoctoral Associate Position — Whitney Humanities Center at Yale",
+   "url": "https://postdocs.yale.edu/posts/2026-10-14-postdoctoral-associate-position-whitney-humanities-center-at-yale",
+   "location": "",
+   "department": "",
+   "posted": "2026-10-14",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Position Title: Postdoctoral Associate, Whitney Humanities Center \n Location: New Haven, CT \n Position Type: Fellowship \n Position URL: https://apply.interfolio.com/190266 \n Position Description \n The Whitney Humanities Center at Yale is accepting applications for a one-year postdoctoral fellowship for the academic year 2027–28. The fellowship is offered to complement and contribute to the Spring 2028 Franke Seminar in the Humanities: “Not Made to Scale: Space, Form, Power and the Geohumanities.” This is an upper-level undergraduate seminar in the Humanities Program at Yale. Engaging with interdisciplinary scholarship at the intersection of geography, architecture, and the humanities, “Not Made to Scale” will consider how the humanities and the arts have helped us understand our relationship to our surroundings—from improvised cities, redlined suburbs and contested waterways to landscape",
+   "fingerprint": "dfc42e28c7ebcca5",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Unclear",
+    "wet_terms": [],
+    "dry_terms": [],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Check",
+    "reason": "Unclear; division: Unclear"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "department": "Whitney Humanities Center",
+    "reason": "Humanities fellowship at Whitney Humanities Center; requires a Ph.D. in humanities-related research, which the MBBS candidate lacks, and is not Internal Medicine."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Humanities fellowship at Whitney Humanities Center; requires a Ph.D. in humanities-related research, which the MBBS candidate lacks, and is not Internal Medicine.",
+   "active": true
+  },
+  "yale-postdoc:posts-2026-10-16-postdoctoral-associate-ribosome-biology-rna-biology-and-functional-genomics": {
+   "key": "yale-postdoc:posts-2026-10-16-postdoctoral-associate-ribosome-biology-rna-biology-and-functional-genomics",
+   "school": "Yale",
+   "rank": 12,
+   "source": "yale-postdoc",
+   "source_label": "Yale Office for Postdoctoral Affairs board",
+   "title": "Postdoctoral Associate | Ribosome Biology, RNA Biology, and Functional Genomics | Murakami Lab | Department of Genetics, Yale School of Medicine",
+   "url": "https://postdocs.yale.edu/posts/2026-10-16-postdoctoral-associate-ribosome-biology-rna-biology-and-functional-genomics",
+   "location": "",
+   "department": "",
+   "posted": "2026-10-16",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Position Summary \n The Murakami Lab at Yale School of Medicine invites applications for Postdoctoral Associate positions to investigate how ribosomes regulate gene expression and cellular physiology. Our lab studies the emerging field of ribosome biology, with a focus on understanding how ribosomes function beyond their canonical role in protein synthesis. \n We aim to discover how ribosomes respond to molecular and cellular signals, how these responses influence gene expression, and how the ribosome contributes to cellular regulation. To address these questions, we combine innovative experimental approaches with molecular, biochemical, cell biological, and functional genomic approaches. \n Projects in the lab span two complementary directions: discovering molecular mechanisms through which ribosomes regulate gene expression and cell physiology, and developing and applying new approaches t",
+   "fingerprint": "9c01ff036a9e7b48",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Mixed or unclear",
+    "wet_terms": [
+     "molecular biology"
+    ],
+    "dry_terms": [],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": true
+    },
+    "notes": [],
+    "verdict": "Check",
+    "reason": "Mixed or unclear; division: Unclear"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "department": "Department of Genetics",
+    "reason": "Core duties are molecular, biochemical, and cell biological ribosome work with no clinical or dry-research focus; Department of Genetics is not Internal Medicine."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Core duties are molecular, biochemical, and cell biological ribosome work with no clinical or dry-research focus; Department of Genetics is not Internal Medicine.",
+   "active": true
+  },
+  "yale-postdoc:posts-2026-10-16-postgraduate-associate-yale-school-of-medicine-dept-of-neurology": {
+   "key": "yale-postdoc:posts-2026-10-16-postgraduate-associate-yale-school-of-medicine-dept-of-neurology",
+   "school": "Yale",
+   "rank": 12,
+   "source": "yale-postdoc",
+   "source_label": "Yale Office for Postdoctoral Affairs board",
+   "title": "Postgraduate Associate — Yale School of Medicine, Dept of Neurology",
+   "url": "https://postdocs.yale.edu/posts/2026-10-16-postgraduate-associate-yale-school-of-medicine-dept-of-neurology",
+   "location": "",
+   "department": "",
+   "posted": "2026-10-16",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Title of the Position: Postgraduate Associate \n Department and School: Yale School of Medicine, Dept of Neurology \n Anticipated Appointment Dates: start January 2027 \n Email/Website: https://medicine.yale.edu/lab/hafler/ \n Introduction of School/Department \n The Yal e Center for Neuroinflammation represents a large, multi-disciplinary group of scientists with backgrounds in clinical medicine, molecular biology, statistical genetics, engineering, applied mathematics, physics and computational biology. The Hafler lab is currently looking to hire a dedicated wet-lab researcher with a bachelor’s degree and basic laboratory skills to start around January 2027. Within the department of neurology, the Hafler lab research is mainly focused the role of the immune system in neurological disorders including Parkinson’s disease, multiple sclerosis, and glioblastoma. \n Overview of the Position \n Educ",
+   "fingerprint": "72c8e0040ec6715a",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "department",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "cell culture",
+     "flow cytometry",
+     "molecular biology",
+     "pcr",
+     "qpcr",
+     "single-cell",
+     "wet-lab"
+    ],
+    "dry_terms": [
+     "data analys",
+     "patient"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: cell culture, flow cytometry, molecular biology, pcr"
+   },
+   "ai": {
+    "role_type": "unclear",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "department": "Dept of Neurology",
+    "reason": "Dedicated wet-lab role (PBMC isolation, flow cytometry, cytokine assays) in Neurology, not Internal Medicine; wet-lab experience required."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Dedicated wet-lab role (PBMC isolation, flow cytometry, cytokine assays) in Neurology, not Internal Medicine; wet-lab experience required.",
+   "active": true
+  },
+  "yale-postdoc:posts-2026-10-19-postdoctoral-associate-position-archaia-the-yale-program-for-the-study-of-global": {
+   "key": "yale-postdoc:posts-2026-10-19-postdoctoral-associate-position-archaia-the-yale-program-for-the-study-of-global",
+   "school": "Yale",
+   "rank": 12,
+   "source": "yale-postdoc",
+   "source_label": "Yale Office for Postdoctoral Affairs board",
+   "title": "Postdoctoral Associate Position — Archaia: the Yale Program for the Study of Global Antiquity",
+   "url": "https://postdocs.yale.edu/posts/2026-10-19-postdoctoral-associate-position-archaia-the-yale-program-for-the-study-of-global",
+   "location": "",
+   "department": "",
+   "posted": "2026-10-19",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Yale University seeks to appoint a Postdoctoral Associate for a one-year position with a secondary appointment as a Lecturer in an appropriate department, renewable for a second year contingent upon a successful review, beginning in the academic year 2027–2028 within Archaia: the Yale Program for the Study of Global Antiquity . Archaia is a collaborative forum that brings together scholars and graduate students working on early and pre-modern cultures and civilizations at Yale in the Humanities and Social Sciences in addition to the Divinity and Law Schools and various University collections and libraries, including the Yale University Art Gallery, the Beinecke Rare Book and Manuscript Library, the Peabody Museum of Natural History, and the Institute for the Preservation of Cultural Heritage. Participating departments and disciplines include Classics, East Asian Languages and Literatures",
+   "fingerprint": "d1763cca1a1078ff",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Unclear",
+    "wet_terms": [],
+    "dry_terms": [],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Check",
+    "reason": "Unclear; division: Unclear"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "department": "",
+    "reason": "Archaia antiquity program requires a Ph.D. in humanities/social science fields; no internal medicine link and candidate lacks a PhD."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Archaia antiquity program requires a Ph.D. in humanities/social science fields; no internal medicine link and candidate lacks a PhD.",
+   "active": true
+  },
+  "yale-postdoc:posts-2026-10-20-postdoctoral-associate-position-in-pharmaceutical-regulation-and-evidence": {
+   "key": "yale-postdoc:posts-2026-10-20-postdoctoral-associate-position-in-pharmaceutical-regulation-and-evidence",
+   "school": "Yale",
+   "rank": 12,
+   "source": "yale-postdoc",
+   "source_label": "Yale Office for Postdoctoral Affairs board",
+   "title": "Postdoctoral Associate Position in Pharmaceutical Regulation and Evidence Synthesis Department of Internal Medicine, Yale School of Medicine",
+   "url": "https://postdocs.yale.edu/posts/2026-10-20-postdoctoral-associate-position-in-pharmaceutical-regulation-and-evidence",
+   "location": "",
+   "department": "",
+   "posted": "2026-10-20",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Location: New Haven, CT \n Description: \n A full-time Postdoctoral Associate position is available within the Department of Internal Medicine at the Yale School of Medicine. The candidate will be mentored by Dr. Reshma Ramachandran at Yale University and Dr. Joshua D. Wallach at Emory University. \n The Associate will contribute to a federally funded research project conducted in collaboration with the U.S. Food and Drug Administration (FDA) focused on evaluating the evidence supporting patient-reported outcome (PRO) measures used in clinical research and pharmaceutical regulation. The primary research will use systematic review and psychometric methodologies to evaluate the validity, measurement properties, and applicability of PRO measures and the evidence supporting their use as clinical trial endpoints. \n Position Details: \n Successful candidates will be expected to lead 1–2 independen",
+   "fingerprint": "99b2b3e6b6abfefc",
+   "rules": {
+    "division": "General Internal Medicine",
+    "division_source": "department",
+    "research_type": "Clinical or dry research",
+    "wet_terms": [],
+    "dry_terms": [
+     "clinical research",
+     "clinical trial",
+     "epidemiolog",
+     "patient",
+     "r",
+     "sas",
+     "stata",
+     "systematic review"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": true
+    },
+    "notes": [],
+    "verdict": "Match",
+    "reason": "Clinical or dry research; General Internal Medicine"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "clinical_or_dry",
+    "im_division": "Department of Medicine (division not stated)",
+    "mbbs_without_phd_eligible": "yes",
+    "visa": "not_stated",
+    "verdict": "match",
+    "department": "Department of Internal Medicine, Yale School of Medicine",
+    "reason": "Dry evidence-synthesis postdoc in Yale Internal Medicine; required degree lists MD or equivalent doctoral degree, so MBBS without PhD plausibly qualifies; visa not stated."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Match",
+   "reason": "Dry evidence-synthesis postdoc in Yale Internal Medicine; required degree lists MD or equivalent doctoral degree, so MBBS without PhD plausibly qualifies; visa not stated.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "postdoc",
+    "research_type": "clinical_or_dry",
+    "im_division": "Department of Medicine (division not stated)",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "department": "Department of Internal Medicine",
+    "reason": "Clinical/dry evidence synthesis in Yale Internal Medicine, but the degree requires MD or equivalent in a listed field (MBBS fit unclear); no visa or division stated."
+   },
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
+   "active": true
+  },
+  "yale-postdoc:posts-2026-10-20-postdoctoral-associate-position-in-the-yale-collaboration-for-regulatory-rigor": {
+   "key": "yale-postdoc:posts-2026-10-20-postdoctoral-associate-position-in-the-yale-collaboration-for-regulatory-rigor",
+   "school": "Yale",
+   "rank": 12,
+   "source": "yale-postdoc",
+   "source_label": "Yale Office for Postdoctoral Affairs board",
+   "title": "Postdoctoral Associate Position in the Yale Collaboration for Regulatory Rigor, Integrity, and Transparency (CRRIT): Section of General Internal Medicine, Yale School of Medicine",
+   "url": "https://postdocs.yale.edu/posts/2026-10-20-postdoctoral-associate-position-in-the-yale-collaboration-for-regulatory-rigor",
+   "location": "",
+   "department": "",
+   "posted": "2026-10-20",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Location: New Haven, CT \n Description: \n A full-time Postdoctoral Associate position is available as part of the Yale Collaboration for Regulatory Rigor, Integrity, and Transparency (CRRIT) within the Department of Internal Medicine, Section of General Internal Medicine at Yale School of Medicine. The candidate will be mentored by Dr. Reshma Ramachandran. \n Position Details: \n Successful candidates will have the opportunity to gain experience from Dr. Ramachandran who directs Yale CRRIT as well as collaborators across campus at the Yale School of Medicine, School of Public Health, and School of Law as well as academics at other institutions on projects at the intersection of regulatory science, epidemiology, health economics, and health policy. This position will focus on medical product evaluation, regulation, and coverage. The candidate will lead and participate in the development and ",
+   "fingerprint": "0f049d62f58ccf3e",
+   "rules": {
+    "division": "General Internal Medicine",
+    "division_source": "department",
+    "research_type": "Clinical or dry research",
+    "wet_terms": [],
+    "dry_terms": [
+     "epidemiolog",
+     "r",
+     "sas",
+     "stata",
+     "systematic review"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Match",
+    "reason": "Clinical or dry research; General Internal Medicine"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "clinical_or_dry",
+    "im_division": "General Internal Medicine",
+    "mbbs_without_phd_eligible": "yes",
+    "visa": "not_stated",
+    "verdict": "match",
+    "department": "Department of Internal Medicine, Section of General Internal Medicine",
+    "reason": "Postdoctoral associate in Yale General Internal Medicine on regulatory science, epidemiology, and systematic reviews. Minimum lists MD or equivalent, so MBBS qualifies. Visa not addressed."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Match",
+   "reason": "Postdoctoral associate in Yale General Internal Medicine on regulatory science, epidemiology, and systematic reviews. Minimum lists MD or equivalent, so MBBS qualifies. Visa not addressed.",
+   "active": true
+  },
+  "yale-postdoc:posts-2026-10-20-postdoctoral-fellowpostdoctoral-associate-position-department-of-pediatrics-yale": {
+   "key": "yale-postdoc:posts-2026-10-20-postdoctoral-fellowpostdoctoral-associate-position-department-of-pediatrics-yale",
+   "school": "Yale",
+   "rank": 12,
+   "source": "yale-postdoc",
+   "source_label": "Yale Office for Postdoctoral Affairs board",
+   "title": "Postdoctoral Fellow/Postdoctoral Associate Position Department of Pediatrics, Yale University School of Medicine",
+   "url": "https://postdocs.yale.edu/posts/2026-10-20-postdoctoral-fellowpostdoctoral-associate-position-department-of-pediatrics-yale",
+   "location": "",
+   "department": "",
+   "posted": "2026-10-20",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Position Summary: \n The Department of Pediatrics at Yale University School of Medicine seeks a Postdoctoral Fellow/Postdoctoral Associate in the Laboratory of Dr. Engin Deniz to analyze novel developmental mechanisms underlying neurodevelopment. Projects in the lab stem from genes identified in patients with congenital malformations including congenital hydrocephalus, neurodevelopmental defects, and epilepsy. We use modern gene-editing tools in Xenopus to phenocopy patient gene-associated birth defects, then expand our analyses to evaluate the cell and molecular mechanisms linked to these novel developmental disease genes. \n Our lab has identified hundreds of candidate genes in patients with congenital malformations and has had significant success revealing the functional mechanisms for these genes throughout embryonic development and in human disease. The postdoc will have access to an ",
+   "fingerprint": "8004e452907e6796",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "department",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "cell culture",
+     "molecular biology",
+     "zebrafish"
+    ],
+    "dry_terms": [
+     "patient",
+     "patients"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": true
+    },
+    "notes": [],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: cell culture, molecular biology, zebrafish"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "department": "Department of Pediatrics",
+    "reason": "Xenopus gene-editing, molecular and biochemical bench work is core; Pediatrics department, not Internal Medicine; requires PhD, MD, or MD/PhD in a basic science field."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Xenopus gene-editing, molecular and biochemical bench work is core; Pediatrics department, not Internal Medicine; requires PhD, MD, or MD/PhD in a basic science field.",
+   "active": true
+  },
   "yale:138189WD": {
    "key": "yale:138189WD",
    "school": "Yale",
@@ -20573,14 +21138,27 @@
     "im_division": "unclear",
     "mbbs_without_phd_eligible": "unclear",
     "visa": "not_stated",
+    "verdict": "excluded",
+    "department": "",
+    "reason": "Coordinator-type duties (recruitment, informed consent, regulatory records, phlebotomy, biospecimen processing) in a heart failure lab. Candidate wants no CRC roles and has no bench experience. Master's required; visa not stated."
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Coordinator-type duties (recruitment, informed consent, regulatory records, phlebotomy, biospecimen processing) in a heart failure lab. Candidate wants no CRC roles and has no bench experience. Master's required; visa not stated.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "clinical_research_coordinator",
+    "research_type": "mixed",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
     "verdict": "check",
     "department": "",
     "reason": "Heart failure clinical research with recruitment, consent and regulatory duties, but also biospecimen and lab sample processing. No department stated, and it requires a Master's degree, so MBBS eligibility is unclear."
    },
-   "evaluated": true,
-   "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Heart failure clinical research with recruitment, consent and regulatory duties, but also biospecimen and lab sample processing. No department stated, and it requires a Master's degree, so MBBS eligibility is unclear.",
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
    "active": true
   },
   "yale:138942WD": {
