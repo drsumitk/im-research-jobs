@@ -33,7 +33,7 @@ MAX_AI_ATTEMPTS = 3
 AI_GAP_SECONDS = 1.0  # pause between Claude calls to stay under per-minute rate limits
 SNIPPET_CHARS = 900
 TITLE_ONLY_CHARS = 200  # postings with less text than this carry only a title and department line
-REVIEW_VERSION = 4     # bump when the review instructions change, so undecided postings are reviewed again
+REVIEW_VERSION = 5     # bump when the review instructions change, so undecided postings are reviewed again
 
 
 def load_yaml(name):
