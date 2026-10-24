@@ -49,8 +49,13 @@ jobs:
             echo "No data changes"
           else
             git commit -m "Daily scan $(date -u +%Y-%m-%d)"
-            git pull --rebase origin "${GITHUB_REF_NAME}"
-            git push
+            # Retry if someone pushed code while the scan ran (the push then races with ours).
+            for attempt in 1 2 3; do
+              git pull --rebase origin "${GITHUB_REF_NAME}" && git push && exit 0
+              echo "Push attempt ${attempt} failed; retrying"
+              sleep 10
+            done
+            exit 1
           fi
 
   deploy:
