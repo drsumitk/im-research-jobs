@@ -1,9 +1,9 @@
 {
  "meta": {
-  "generated_utc": "2026-10-24 05:08 UTC",
+  "generated_utc": "2026-10-24 05:15 UTC",
   "today": "2026-10-24",
   "ai_enabled": true,
-  "ai_calls": 17,
+  "ai_calls": 0,
   "log": [],
   "total": 407
  },
@@ -89,7 +89,7 @@
    "candidates": 13,
    "too_old": 3,
    "status": "ok",
-   "new_details": 1,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -256,7 +256,7 @@
    "candidates": 8,
    "too_old": 2,
    "status": "ok",
-   "new_details": 1,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -270,7 +270,7 @@
    "candidates": 9,
    "too_old": 0,
    "status": "ok",
-   "new_details": 9,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -712,7 +712,7 @@
    "candidates": 58,
    "too_old": 67,
    "status": "ok",
-   "new_details": 2,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -764,9 +764,10 @@
    "found": 61,
    "candidates": 42,
    "too_old": 0,
+   "last_detail_error": "empty job page (HTTP 202, text/html; charset=UTF-8, 0 bytes, encoding None)",
    "status": "ok",
-   "new_details": 42,
-   "detail_errors": 0
+   "new_details": 0,
+   "detail_errors": 42
   },
   {
    "school": "Medical College of Wisconsin",
@@ -944,7 +945,7 @@
    "candidates": 26,
    "too_old": 27,
    "status": "ok",
-   "new_details": 2,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -955,7 +956,7 @@
    "type": "oracle",
    "checked": "2026-10-24",
    "status": "blocked",
-   "error": "robots.txt disallows fa-euwp-saasfaprod1.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions"
+   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
   }
  ]
 }
