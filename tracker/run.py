@@ -314,9 +314,6 @@ def main(argv=None):
 
     log = []
     ai_calls = apply_ai(records, profile, log)
-    for rec in records.values():  # apply the current grouping rules to every saved AI result
-        if rec.get("ai") and rec["ai"].get("verdict") in AI_TO_VERDICT and not rec.get("skip_ai"):
-            rec["verdict"] = verdict_of(rec["ai"])
 
     # Keep jobs not seen today for a while (a search can miss a posting on one day),
     # but drop anything unseen for DROP_AFTER_DAYS. Sources that failed today get a longer grace period.
@@ -335,6 +332,10 @@ def main(argv=None):
             records[key] = old
     by_source = {src["id"]: school for school in sources["schools"] for src in school["sources"]}
     for rec in records.values():
+        # Apply the current grouping rules to every saved AI result, including postings carried
+        # over from sites that could not be read today.
+        if rec.get("ai") and rec["ai"].get("verdict") in AI_TO_VERDICT and not rec.get("skip_ai"):
+            rec["verdict"] = verdict_of(rec["ai"])
         rec.pop("_description", None)
         school = by_source.get(rec.get("source"))
         if school:  # keep rank and school name in step with sources.yaml (e.g. after re-ranking)
