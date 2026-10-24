@@ -314,6 +314,9 @@ def main(argv=None):
 
     log = []
     ai_calls = apply_ai(records, profile, log)
+    for rec in records.values():  # apply the current grouping rules to every saved AI result
+        if rec.get("ai") and rec["ai"].get("verdict") in AI_TO_VERDICT and not rec.get("skip_ai"):
+            rec["verdict"] = verdict_of(rec["ai"])
 
     # Keep jobs not seen today for a while (a search can miss a posting on one day),
     # but drop anything unseen for DROP_AFTER_DAYS. Sources that failed today get a longer grace period.
