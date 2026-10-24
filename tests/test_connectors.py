@@ -127,11 +127,16 @@ def test_taleo_posting_date():
     assert jobs[0].posted == "2026-07-20"
 
 
-def test_smartrecruiters():
-    from tracker.connectors import smartrecruiters
-    src = {"id": "harvard", "company": "HarvardUniversity"}
-    jobs, total = smartrecruiters.parse_list(load("smartrecruiters_list.json"), src)
-    assert total == 12 and jobs[0].posted == "2026-10-22" and jobs[0].department == "HBS AI Institute"
-    smartrecruiters.parse_detail(load("smartrecruiters_detail.json"), jobs[0])
-    assert "research compliance" in jobs[0].description
-    assert jobs[0].url.startswith("https://jobs.smartrecruiters.com/HarvardUniversity/3743990016333246")
+def test_sitemap_harvard():
+    from tracker.connectors import sitemap
+    src = {"id": "harvard", "sitemap_url": "https://careers.harvard.edu/vacanciessitemap.xml"}
+    jobs = sitemap.parse_sitemap(load("sitemap_list.xml"), src)
+    assert [j.job_id for j in jobs] == ["292", "1888", "2240", "2317"]
+    assert jobs[2].title == "research assistant iii non lab" and jobs[2].posted == "2026-09-28"
+    assert jobs[1].title == "research associate writing focused division of research and faculty development"
+    sitemap.parse_detail(load("sitemap_detail.html"), jobs[2])
+    j = jobs[2]
+    assert j.title == "Research Assistant III Non-Lab" and j.posted == "2026-09-28"
+    assert j.department == "Harvard Medical School / Global Health and Social Medicine"
+    assert j.description.startswith("Department: Global Health and Social Medicine")
+    assert "Mental Health for All Lab" in j.description and j.location == "Boston, MA, United States"

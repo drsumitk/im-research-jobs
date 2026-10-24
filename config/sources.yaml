@@ -217,8 +217,9 @@ schools:
     sources:
       - id: harvard
         label: Harvard University (incl. Harvard Medical School)
-        type: smartrecruiters
-        company: HarvardUniversity
+        type: sitemap
+        # The SmartRecruiters API disallows crawlers in robots.txt; the careers site's own job sitemap is allowed.
+        sitemap_url: https://careers.harvard.edu/vacanciessitemap.xml
       - id: massgeneralbrigham
         label: Mass General Brigham (MGH, Brigham and Women's)
         type: workday

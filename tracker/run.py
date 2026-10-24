@@ -28,6 +28,7 @@ DATA = ROOT / "docs" / "data"
 MAX_NEW_DETAILS_PER_SOURCE = 80
 DROP_AFTER_DAYS = 60
 DROP_AFTER_DAYS_FAILED_SOURCE = 120  # longer grace when the site itself could not be read
+FORGET_SKIPPED_AFTER_DAYS = 30  # stop remembering a too-old posting once it is no longer listed
 MAX_AI_ATTEMPTS = 3
 AI_GAP_SECONDS = 1.0  # pause between Claude calls to stay under per-minute rate limits
 SNIPPET_CHARS = 900
@@ -65,14 +66,19 @@ def is_recent(posted, today, max_days):
     return True
 
 
-def run_source(school, src, profile, rules, state, today):
-    """Returns (records_by_key, health_entry). Never raises."""
+def run_source(school, src, profile, rules, state, today, skipped=None):
+    """Returns (records_by_key, health_entry, too_old_by_key). Never raises.
+
+    too_old_by_key lists postings whose exact date (read from a detail page) is outside the window,
+    so later runs neither open them again nor carry an older copy of them forward."""
+    skipped = skipped or {}
+    too_old = {}
     health = {"school": school["name"], "rank": school["rank"], "source": src["id"],
               "label": src.get("label", src["id"]), "type": src["type"], "checked": today}
     if src["type"] == "manual" or src.get("enabled") is False:
         health.update(status="manual" if src["type"] == "manual" else "paused",
                       url=src.get("url", ""), note=src.get("reason", ""))
-        return {}, health
+        return {}, health, too_old
     mod = REGISTRY[src["type"]]
     http = Http()
     out = {}
@@ -82,10 +88,13 @@ def run_source(school, src, profile, rules, state, today):
         titled = [j for j in found if rules.title_ok(j.title)]
         cands = [j for j in titled if is_recent(j.posted, today, max_age)]
         health.update(found=len(found), candidates=len(cands), too_old=len(titled) - len(cands))
-        new_details, detail_errors = 0, 0
+        new_details, detail_errors, late_old = 0, 0, 0
         for job in cands:
             old = state.get(job.key)
-            if old and not is_recent(old.get("posted"), today, max_age):
+            known = (skipped.get(job.key) or {}).get("posted") or (old or {}).get("posted")
+            if known and not is_recent(known, today, max_age):
+                too_old[job.key] = {"posted": known, "seen": today}
+                late_old += 1
                 continue  # an exact date read earlier shows it is too old
             ai_pending = bool(old) and classify.available() and not old.get("ai") \
                 and int(old.get("ai_attempts", 0)) < MAX_AI_ATTEMPTS
@@ -107,7 +116,8 @@ def run_source(school, src, profile, rules, state, today):
                     detail_errors += 1
                     health["last_detail_error"] = str(e)[:200]
             if not is_recent(job.posted, today, max_age):
-                health["too_old"] = health.get("too_old", 0) + 1
+                too_old[job.key] = {"posted": job.posted, "seen": today}
+                late_old += 1
                 continue  # the detail page gave an exact date outside the window
             ev = rules.evaluate(job)
             out[job.key] = {
@@ -123,13 +133,14 @@ def run_source(school, src, profile, rules, state, today):
                 "verdict": ev["verdict"], "reason": ev["reason"],
                 "_description": job.description,  # removed before saving
             }
-        health.update(status="ok", new_details=new_details, detail_errors=detail_errors)
+        health.update(status="ok", new_details=new_details, detail_errors=detail_errors,
+                      candidates=len(cands) - late_old, too_old=len(titled) - len(cands) + late_old)
     except RobotsBlocked as e:
         health.update(status="blocked", error=str(e)[:300])
     except Exception as e:
         health.update(status="error", error=f"{type(e).__name__}: {str(e)[:300]}")
         traceback.print_exc()
-    return out, health
+    return out, health, too_old
 
 
 AI_TO_VERDICT = {"match": "Match", "check": "Check", "other_dept": "Other dept", "excluded": "Excluded"}
@@ -183,17 +194,20 @@ def main(argv=None):
     profile = load_yaml("profile.yaml")
     rules = Rules(profile)
     DATA.mkdir(parents=True, exist_ok=True)
-    state = load_json(DATA / "jobs.json", {"jobs": {}})["jobs"]
+    saved = load_json(DATA / "jobs.json", {"jobs": {}})
+    state = saved.get("jobs", {})
+    skipped = saved.get("skipped", {})
     now = datetime.now(timezone.utc)
     today = now.strftime("%Y-%m-%d")
 
     tasks = [(school, src) for school in sources["schools"] for src in school["sources"]
              if not only or src["id"] in only]
-    records, health = {}, []
+    records, health, too_old = {}, [], {}
     with ThreadPoolExecutor(max_workers=6) as pool:
-        for out, h in pool.map(lambda t: run_source(t[0], t[1], profile, rules, state, today), tasks):
+        for out, h, old in pool.map(lambda t: run_source(t[0], t[1], profile, rules, state, today, skipped), tasks):
             records.update(out)
             health.append(h)
+            too_old.update(old)
 
     log = []
     ai_calls = apply_ai(records, profile, log)
@@ -205,7 +219,7 @@ def main(argv=None):
     cutoff_failed = (now - timedelta(days=DROP_AFTER_DAYS_FAILED_SOURCE)).strftime("%Y-%m-%d")
     max_age = profile.get("max_posting_age_days")
     for key, old in state.items():
-        if key in records:
+        if key in records or key in too_old:
             continue
         if not rules.title_ok(old.get("title", "")) or not is_recent(old.get("posted"), today, max_age):
             continue  # no longer wanted (title rules changed) or posted too long ago
@@ -219,8 +233,12 @@ def main(argv=None):
     meta = {"generated_utc": now.strftime("%Y-%m-%d %H:%M UTC"), "today": today,
             "ai_enabled": classify.available(), "ai_calls": ai_calls, "log": log,
             "total": len(records)}
+    forget = (now - timedelta(days=FORGET_SKIPPED_AFTER_DAYS)).strftime("%Y-%m-%d")
+    skipped_out = {k: v for k, v in skipped.items() if k not in records and v.get("seen", "") >= forget}
+    skipped_out.update(too_old)
     with open(DATA / "jobs.json", "w", encoding="utf-8") as f:
-        json.dump({"meta": meta, "jobs": dict(sorted(records.items()))}, f, ensure_ascii=False, indent=1)
+        json.dump({"meta": meta, "jobs": dict(sorted(records.items())),
+                   "skipped": dict(sorted(skipped_out.items()))}, f, ensure_ascii=False, indent=1)
     with open(DATA / "health.json", "w", encoding="utf-8") as f:
         json.dump({"meta": meta, "sources": sorted(health, key=lambda h: (h["rank"], h["source"]))},
                   f, ensure_ascii=False, indent=1)

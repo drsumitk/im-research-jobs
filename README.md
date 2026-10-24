@@ -26,7 +26,7 @@ Checks the careers websites of the 20 US medical schools with the most NIH fundi
 | 18 | Weill Cornell | SuccessFactors | Yes |
 | 19 | University of Washington | Workday | Yes |
 | 20 | UChicago | Workday | Yes |
-| added | Harvard (University and Mass General Brigham) | SmartRecruiters, Workday | Yes |
+| added | Harvard (University and Mass General Brigham) | Harvard careers site job sitemap, Workday | Yes |
 | added | Mayo Clinic | Oracle | Yes |
 | added | Cleveland Clinic | Workday | Yes |
 

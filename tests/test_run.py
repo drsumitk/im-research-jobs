@@ -61,3 +61,31 @@ def test_recency_window():
     assert not run.is_recent("30+ days ago", t, 21)        # Workday list text
     assert run.is_recent("", t, 21)                        # unknown date: keep, judge later
     assert run.is_recent("2026-02-18", t, None)            # window switched off
+
+
+def test_old_posting_found_on_detail_page_is_remembered_and_not_reopened(monkeypatch):
+    from tracker.models import Job
+    from tracker.rules import Rules
+
+    opened = []
+
+    class FakeConnector:
+        @staticmethod
+        def search(http, src, terms, title_ok):
+            return [Job("s", "1", "Postdoctoral Fellow", "https://x/1")]  # list page has no date
+
+        @staticmethod
+        def details(http, src, job):
+            opened.append(job.key)
+            job.description, job.posted = "Department: Medicine", "2026-07-20"
+            return job
+
+    monkeypatch.setitem(run.REGISTRY, "fake", FakeConnector)
+    school, src = {"name": "X", "rank": 1}, {"id": "s", "type": "fake"}
+    rules, today = Rules(PROFILE), "2026-10-24"
+    out, health, old = run.run_source(school, src, PROFILE, rules, {}, today)
+    assert out == {} and "s:1" in old and health["too_old"] == 1 and health["candidates"] == 0
+    # Next day: a stale copy without a date exists in the saved state; it must not be reopened or kept.
+    state = {"s:1": {"key": "s:1", "posted": "", "evaluated": True, "ai": {"verdict": "check"}}}
+    out, health, old2 = run.run_source(school, src, PROFILE, rules, state, today, skipped=old)
+    assert out == {} and opened == ["s:1"] and "s:1" in old2
