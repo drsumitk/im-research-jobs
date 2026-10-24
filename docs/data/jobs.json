@@ -1,9 +1,9 @@
 {
  "meta": {
-  "generated_utc": "2026-10-24 06:21 UTC",
+  "generated_utc": "2026-10-24 06:25 UTC",
   "today": "2026-10-24",
   "ai_enabled": true,
-  "ai_calls": 18,
+  "ai_calls": 0,
   "log": [],
   "total": 412
  },
@@ -6520,7 +6520,7 @@
    "review_attempts": 2,
    "ai_review_done": true,
    "reviewed_by": "Claude Sonnet",
-   "verdict": "Match",
+   "verdict": "Below level",
    "reason": "Dry epidemiological/population research in the Department of Medicine's Infectious Disease Division; requires a bachelor's in science plus 1-2 years of data experience, which the candidate meets. Role is research assistant level.",
    "review_version": 3,
    "active": true
@@ -8295,7 +8295,7 @@
    "review_attempts": 2,
    "ai_review_done": true,
    "reviewed_by": "Claude Sonnet",
-   "verdict": "Match",
+   "verdict": "Check",
    "reason": "Postdoctoral Associate at the Diabetes Research Institute requires only an MD, with no experience required. Diabetes fits the candidate's interests, but the duties are generic and the lab type is not stated.",
    "review_version": 3,
    "active": true

@@ -1,9 +1,9 @@
 {
  "meta": {
-  "generated_utc": "2026-10-24 06:21 UTC",
+  "generated_utc": "2026-10-24 06:25 UTC",
   "today": "2026-10-24",
   "ai_enabled": true,
-  "ai_calls": 18,
+  "ai_calls": 0,
   "log": [],
   "total": 412
  },
@@ -85,7 +85,7 @@
    "candidates": 13,
    "too_old": 3,
    "status": "ok",
-   "new_details": 1,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -254,7 +254,7 @@
    "candidates": 9,
    "too_old": 0,
    "status": "ok",
-   "new_details": 2,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -360,7 +360,7 @@
    "candidates": 28,
    "too_old": 0,
    "status": "ok",
-   "new_details": 2,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -902,7 +902,7 @@
    "candidates": 13,
    "too_old": 31,
    "status": "ok",
-   "new_details": 3,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -916,7 +916,7 @@
    "candidates": 5,
    "too_old": 10,
    "status": "ok",
-   "new_details": 4,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
