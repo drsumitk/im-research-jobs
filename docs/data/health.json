@@ -1,11 +1,11 @@
 {
  "meta": {
-  "generated_utc": "2026-10-24 06:25 UTC",
+  "generated_utc": "2026-10-24 12:26 UTC",
   "today": "2026-10-24",
   "ai_enabled": true,
-  "ai_calls": 0,
+  "ai_calls": 33,
   "log": [],
-  "total": 412
+  "total": 435
  },
  "sources": [
   {
@@ -43,8 +43,12 @@
    "label": "Vanderbilt University Medical Center",
    "type": "workday",
    "checked": "2026-10-24",
-   "status": "blocked",
-   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
+   "found": 163,
+   "candidates": 1,
+   "too_old": 0,
+   "status": "ok",
+   "new_details": 0,
+   "detail_errors": 0
   },
   {
    "school": "UCSF",
@@ -53,7 +57,7 @@
    "label": "UCSF (staff)",
    "type": "oracle",
    "checked": "2026-10-24",
-   "found": 169,
+   "found": 168,
    "candidates": 3,
    "too_old": 3,
    "status": "ok",
@@ -67,7 +71,7 @@
    "label": "UCSF (academic recruitments)",
    "type": "ucrecruit",
    "checked": "2026-10-24",
-   "found": 430,
+   "found": 429,
    "candidates": 0,
    "too_old": 1,
    "status": "ok",
@@ -117,8 +121,12 @@
    "label": "University of Pennsylvania",
    "type": "workday",
    "checked": "2026-10-24",
-   "status": "error",
-   "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+   "found": 222,
+   "candidates": 0,
+   "too_old": 3,
+   "status": "ok",
+   "new_details": 0,
+   "detail_errors": 0
   },
   {
    "school": "Penn",
@@ -160,8 +168,12 @@
    "label": "Washington University in St. Louis",
    "type": "workday",
    "checked": "2026-10-24",
-   "status": "blocked",
-   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
+   "found": 245,
+   "candidates": 12,
+   "too_old": 38,
+   "status": "ok",
+   "new_details": 0,
+   "detail_errors": 0
   },
   {
    "school": "Duke",
@@ -171,10 +183,10 @@
    "type": "rmk",
    "checked": "2026-10-24",
    "found": 271,
-   "candidates": 29,
+   "candidates": 30,
    "too_old": 8,
    "status": "ok",
-   "new_details": 0,
+   "new_details": 1,
    "detail_errors": 0
   },
   {
@@ -198,7 +210,7 @@
    "label": "UCLA (academic recruitments)",
    "type": "ucrecruit",
    "checked": "2026-10-24",
-   "found": 303,
+   "found": 305,
    "candidates": 5,
    "too_old": 15,
    "status": "ok",
@@ -240,8 +252,12 @@
    "label": "Yale University",
    "type": "workday",
    "checked": "2026-10-24",
-   "status": "blocked",
-   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
+   "found": 141,
+   "candidates": 8,
+   "too_old": 2,
+   "status": "ok",
+   "new_details": 0,
+   "detail_errors": 0
   },
   {
    "school": "Yale",
@@ -395,8 +411,12 @@
    "label": "University of Washington",
    "type": "workday",
    "checked": "2026-10-24",
-   "status": "error",
-   "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+   "found": 161,
+   "candidates": 0,
+   "too_old": 0,
+   "status": "ok",
+   "new_details": 0,
+   "detail_errors": 0
   },
   {
    "school": "UChicago",
@@ -405,8 +425,12 @@
    "label": "University of Chicago",
    "type": "workday",
    "checked": "2026-10-24",
-   "status": "blocked",
-   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
+   "found": 237,
+   "candidates": 2,
+   "too_old": 3,
+   "status": "ok",
+   "new_details": 0,
+   "detail_errors": 0
   },
   {
    "school": "UT Southwestern",
@@ -559,7 +583,7 @@
    "label": "Atrium Health Wake Forest Baptist and Wake Forest School of Medicine",
    "type": "mcloud",
    "checked": "2026-10-24",
-   "found": 15,
+   "found": 16,
    "candidates": 0,
    "too_old": 5,
    "status": "ok",
@@ -595,8 +619,12 @@
    "label": "Cleveland Clinic",
    "type": "workday",
    "checked": "2026-10-24",
-   "status": "blocked",
-   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
+   "found": 290,
+   "candidates": 3,
+   "too_old": 9,
+   "status": "ok",
+   "new_details": 0,
+   "detail_errors": 0
   },
   {
    "school": "Case Western / Cleveland Clinic",
@@ -655,8 +683,12 @@
    "label": "Ohio State University and Wexner Medical Center",
    "type": "workday",
    "checked": "2026-10-24",
-   "status": "blocked",
-   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
+   "found": 348,
+   "candidates": 27,
+   "too_old": 29,
+   "status": "ok",
+   "new_details": 0,
+   "detail_errors": 0
   },
   {
    "school": "Minnesota",
@@ -676,8 +708,12 @@
    "label": "University of Miami",
    "type": "workday",
    "checked": "2026-10-24",
-   "status": "blocked",
-   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
+   "found": 274,
+   "candidates": 58,
+   "too_old": 67,
+   "status": "ok",
+   "new_details": 1,
+   "detail_errors": 0
   },
   {
    "school": "UT Austin (Dell)",
@@ -686,8 +722,12 @@
    "label": "UT Austin (incl. Dell Medical School)",
    "type": "workday",
    "checked": "2026-10-24",
-   "status": "blocked",
-   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
+   "found": 250,
+   "candidates": 9,
+   "too_old": 37,
+   "status": "ok",
+   "new_details": 0,
+   "detail_errors": 0
   },
   {
    "school": "USC",
@@ -696,8 +736,12 @@
    "label": "University of Southern California (incl. Keck)",
    "type": "workday",
    "checked": "2026-10-24",
-   "status": "blocked",
-   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
+   "found": 189,
+   "candidates": 5,
+   "too_old": 25,
+   "status": "ok",
+   "new_details": 0,
+   "detail_errors": 0
   },
   {
    "school": "Virginia",
@@ -812,8 +856,12 @@
    "label": "University of Rochester",
    "type": "workday",
    "checked": "2026-10-24",
-   "status": "blocked",
-   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
+   "found": 270,
+   "candidates": 3,
+   "too_old": 6,
+   "status": "ok",
+   "new_details": 0,
+   "detail_errors": 0
   },
   {
    "school": "Rochester",
@@ -864,8 +912,12 @@
    "label": "University of Louisville",
    "type": "workday",
    "checked": "2026-10-24",
-   "status": "blocked",
-   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
+   "found": 41,
+   "candidates": 2,
+   "too_old": 0,
+   "status": "ok",
+   "new_details": 0,
+   "detail_errors": 0
   },
   {
    "school": "Harvard",
@@ -874,7 +926,7 @@
    "label": "Harvard University (incl. Harvard Medical School)",
    "type": "sitemap",
    "checked": "2026-10-24",
-   "found": 323,
+   "found": 324,
    "candidates": 8,
    "too_old": 13,
    "status": "ok",
@@ -888,8 +940,12 @@
    "label": "Mass General Brigham (MGH, Brigham and Women's)",
    "type": "workday",
    "checked": "2026-10-24",
-   "status": "blocked",
-   "error": "robots.txt could not be read (HTTP 503, site may be down for maintenance), so the site is skipped today"
+   "found": 1232,
+   "candidates": 26,
+   "too_old": 27,
+   "status": "ok",
+   "new_details": 2,
+   "detail_errors": 0
   },
   {
    "school": "Mayo Clinic",
@@ -929,6 +985,90 @@
    "status": "manual",
    "url": "https://jobs-joslin.icims.com/jobs/intro",
    "note": "Separate iCIMS job site; the other iCIMS portals tried (OHSU, UMass Chan) refused automated requests."
+  },
+  {
+   "school": "Houston Methodist",
+   "rank": 54,
+   "source": "houstonmethodist",
+   "label": "Houston Methodist (postdoctoral and clinical research fellows)",
+   "type": "board",
+   "checked": "2026-10-24",
+   "found": 14,
+   "candidates": 7,
+   "too_old": 6,
+   "status": "ok",
+   "new_details": 13,
+   "detail_errors": 0
+  },
+  {
+   "school": "Baylor Scott & White",
+   "rank": 55,
+   "source": "bswhealth",
+   "label": "Baylor Scott & White Health (incl. Research Institute)",
+   "type": "phenom",
+   "checked": "2026-10-24",
+   "found": 203,
+   "candidates": 1,
+   "too_old": 0,
+   "status": "ok",
+   "new_details": 1,
+   "detail_errors": 0
+  },
+  {
+   "school": "Brown",
+   "rank": 56,
+   "source": "brown",
+   "label": "Brown University (staff and research positions)",
+   "type": "workday",
+   "checked": "2026-10-24",
+   "found": 44,
+   "candidates": 4,
+   "too_old": 3,
+   "status": "ok",
+   "new_details": 4,
+   "detail_errors": 0
+  },
+  {
+   "school": "KU Medical Center",
+   "rank": 57,
+   "source": "kumc",
+   "label": "University of Kansas Medical Center",
+   "type": "workday",
+   "checked": "2026-10-24",
+   "found": 153,
+   "candidates": 5,
+   "too_old": 8,
+   "status": "ok",
+   "new_details": 5,
+   "detail_errors": 0
+  },
+  {
+   "school": "Minneapolis Heart Institute Foundation",
+   "rank": 58,
+   "source": "mhif",
+   "label": "Minneapolis Heart Institute Foundation (research scholars)",
+   "type": "board",
+   "checked": "2026-10-24",
+   "found": 5,
+   "candidates": 3,
+   "too_old": 0,
+   "status": "ok",
+   "new_details": 0,
+   "detail_errors": 0
+  },
+  {
+   "school": "MUSC",
+   "rank": 59,
+   "source": "musc",
+   "label": "Medical University of South Carolina",
+   "type": "workday",
+   "checked": "2026-10-24",
+   "found": 298,
+   "candidates": 2,
+   "too_old": 25,
+   "status": "ok",
+   "new_details": 27,
+   "detail_errors": 0
   }
  ]
 }

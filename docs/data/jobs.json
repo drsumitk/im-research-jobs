@@ -1,11 +1,11 @@
 {
  "meta": {
-  "generated_utc": "2026-10-24 06:25 UTC",
+  "generated_utc": "2026-10-24 12:26 UTC",
   "today": "2026-10-24",
   "ai_enabled": true,
-  "ai_calls": 0,
+  "ai_calls": 33,
   "log": [],
-  "total": 412
+  "total": 435
  },
  "jobs": {
   "bilh:jobs-postdoctoral-fellow-boston-ma-jr101784": {
@@ -357,6 +357,288 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Skills section requires a PhD in a quantitative field; the posting is in Pathology and focuses on computational cancer genomics.",
+   "active": true
+  },
+  "brown:REQ207288": {
+   "key": "brown:REQ207288",
+   "school": "Brown",
+   "rank": 56,
+   "source": "brown",
+   "source_label": "Brown University (staff and research positions)",
+   "title": "Mental Health Counselor/ Social Worker Research Associate",
+   "url": "https://brown.wd5.myworkdayjobs.com/staff-careers-brown/job/155-South-Main-Street/Mental-Health-Counselor--Social-Worker-Research-Associate_REQ207288",
+   "location": "155 South Main Street",
+   "department": "",
+   "posted": "2026-10-15",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Job Description: \n The Mental Health Counselor/ Social Worker Research Associate within the School of Public Health will report directly to the Principal Investigator within the Hassenfeld Institute. This position will work on the school screening project, Mood Check, traveling to schools in Rhode Island and Massachusetts to conduct educational sessions with students, conduct follow-up assessments with adolescents who report symptoms of depression, and connect with caregivers and school personnel to provide feedback regarding adolescents’ depression risk. The Mood Check clinicians do not offer counseling services beyond the interaction during the screening. \n This position is a part-time job working up to 15 hours per week. The incumbent will conduct research screening and clinical assessments, follow-up interviews, and motivational interviews in English and Spanish with study participan",
+   "fingerprint": "5cadd25be34a024d",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "department",
+    "research_type": "Clinical or dry research",
+    "wet_terms": [],
+    "dry_terms": [
+     "participant",
+     "participants",
+     "redcap"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
+   },
+   "ai": {
+    "role_type": "research_assistant",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "no_sponsorship",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "Hassenfeld Child Health Innovation Institute",
+    "reason": "Requires LMHC/LCSW licensure and a master's in counseling or social work; posting states no visa sponsorship; not an Internal Medicine role.",
+    "verify": "",
+    "missing": "Master's in counseling/social work, RI LMHC/LCSW licensure, 2-5 years clinical experience",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Requires LMHC/LCSW licensure and a master's in counseling or social work; posting states no visa sponsorship; not an Internal Medicine role.",
+   "active": true
+  },
+  "brown:REQ211624": {
+   "key": "brown:REQ211624",
+   "school": "Brown",
+   "rank": 56,
+   "source": "brown",
+   "source_label": "Brown University (staff and research positions)",
+   "title": "Bilingual Research Assistant",
+   "url": "https://brown.wd5.myworkdayjobs.com/staff-careers-brown/job/121-South-Main-Street/Bilingual-Research-Assistant_REQ211624",
+   "location": "121 South Main Street",
+   "department": "",
+   "posted": "2026-10-14",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Job Description: \n Position Purpose: \n This position provides bilingual research support for a physical activity research study. The Bilingual Research Assistant is responsible for recruiting and communicating with participants; scheduling, preparing for, conducting, and documenting study visits; collecting and entering study data; monitoring participant completion of study activities; processing participant payments; and translating study materials between English and Spanish. The position requires careful adherence to research protocols, consistent follow-through, timely communication, and accurate documentation. \n This position requires regular onsite work at Brown University. The work schedule varies according to participant availability and includes substantial evening hours and regularly scheduled Saturday hours. Candidates must be able to maintain this schedule consistently. This ",
+   "fingerprint": "6f731b69147313a0",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "description",
+    "research_type": "Clinical or dry research",
+    "wet_terms": [],
+    "dry_terms": [
+     "participant",
+     "participants"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
+   },
+   "ai": {
+    "role_type": "research_assistant",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "no_sponsorship",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "Center for Health Promotion and Health Equity Research",
+    "reason": "Bachelor's-level bilingual research assistant in a health promotion center; posting states no visa sponsorship and is outside Internal Medicine.",
+    "verify": "",
+    "missing": "Bachelor's in psychology/public health; bilingual English-Spanish; community setting experience",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Bachelor's-level bilingual research assistant in a health promotion center; posting states no visa sponsorship and is outside Internal Medicine.",
+   "active": true
+  },
+  "brown:REQ211883": {
+   "key": "brown:REQ211883",
+   "school": "Brown",
+   "rank": 56,
+   "source": "brown",
+   "source_label": "Brown University (staff and research positions)",
+   "title": "Senior Research Assistant",
+   "url": "https://brown.wd5.myworkdayjobs.com/staff-careers-brown/job/121-South-Main-Street/Senior-Research-Assistant_REQ211883",
+   "location": "121 South Main Street",
+   "department": "",
+   "posted": "2026-10-22",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Job Description: \n Position Purpose: \n The Senior Research Assistant (RA) will support the investigative team in grant-funded research testing behavioral and pharmacological interventions to improve health among adults with obesity who smoke cigarettes. Activities involve participant recruitment, consenting, tracking, and retention; implementing study protocols; managing databases; and facilitating project-related communications. The Senior RA is expected to help with organization and maintenance of project documents and files, conducting library research as needed, and assembling materials for IRB modifications and progress reports. \n This position is hybrid eligible with the expectation of three days onsite. Must be able to work late afternoons, evenings, and some weekends when necessary \n All offers of employment are contingent upon a criminal background check and education verificati",
+   "fingerprint": "7e8441d050314479",
+   "rules": {
+    "division": "Endocrinology",
+    "division_source": "description",
+    "research_type": "Clinical or dry research",
+    "wet_terms": [],
+    "dry_terms": [
+     "data analys",
+     "human subjects",
+     "irb",
+     "participant"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Check",
+    "reason": "Clinical or dry research; division guessed from the description: Endocrinology"
+   },
+   "ai": {
+    "role_type": "research_assistant",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "no_sponsorship",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "Center for Alcohol & Addiction Studies",
+    "reason": "Senior Research Assistant requiring bachelor's degree; posting states not eligible for visa sponsorship; addiction research center, not Internal Medicine.",
+    "verify": "",
+    "missing": "Bachelor's-level research assistant role; sponsorship unavailable; addiction studies outside IM",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Senior Research Assistant requiring bachelor's degree; posting states not eligible for visa sponsorship; addiction research center, not Internal Medicine.",
+   "active": true
+  },
+  "brown:REQ211912": {
+   "key": "brown:REQ211912",
+   "school": "Brown",
+   "rank": 56,
+   "source": "brown",
+   "source_label": "Brown University (staff and research positions)",
+   "title": "Research Assistant",
+   "url": "https://brown.wd5.myworkdayjobs.com/staff-careers-brown/job/121-South-Main-Street/Research-Assistant_REQ211912",
+   "location": "121 South Main Street",
+   "department": "",
+   "posted": "2026-10-22",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Job Description: \n Position Purpose: \n The Research Assistant (RA) will primarily support a research study that will examine impaired control over alcohol by young adults. The study is primarily laboratory-based. Work activities involve managing recruitment of study participants; conducting in-person research sessions, including alcohol administration, biosample collection, and training study participants; participant tracking and retention; reviewing data quality and managing datafiles, documenting project procedures, and managing participant payments. The RA is expected to collaborate with project staff to maintain variable directories and other project documentation, conduct reviews of the empirical literature as needed, assemble materials for IRB modifications and progress reports. and supporting all other investigator research needs. The RA may manage undergraduates to assist with s",
+   "fingerprint": "59ba1a0202677297",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Clinical or dry research",
+    "wet_terms": [],
+    "dry_terms": [
+     "human subjects",
+     "irb",
+     "participant",
+     "participants"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Check",
+    "reason": "Clinical or dry research; division: Unclear"
+   },
+   "ai": {
+    "role_type": "research_assistant",
+    "research_type": "mixed",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "no_sponsorship",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "Center for Alcohol & Addiction Studies",
+    "reason": "Research assistant role requiring a bachelor's degree; primarily laboratory-based alcohol administration sessions with biosample collection; posting states no visa sponsorship and is not Internal Medicine.",
+    "verify": "",
+    "missing": "Bachelor's-level research years; laboratory and biosample work; SPSS not listed",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Research assistant role requiring a bachelor's degree; primarily laboratory-based alcohol administration sessions with biosample collection; posting states no visa sponsorship and is not Internal Medicine.",
+   "active": true
+  },
+  "bswhealth:26005020": {
+   "key": "bswhealth:26005020",
+   "school": "Baylor Scott & White",
+   "rank": 55,
+   "source": "bswhealth",
+   "source_label": "Baylor Scott & White Health (incl. Research Institute)",
+   "title": "Research Analyst 2",
+   "url": "https://jobs.bswhealth.com/us/en/job/26005020",
+   "location": "Dallas, Texas",
+   "department": "Allied Health",
+   "posted": "2026-10-22",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "About Us Here at Baylor Scott & White Health we promote the well-being of all individuals, families, and communities. Baylor Scott & White is the largest not-for-profit healthcare system in Texas that empowers you to live well. \n Our Core Values are: \n We serve faithfully by doing what's right with a joyful heart. \n We never settle by constantly striving for better. \n We are in it together by supporting one another and those we serve. \n We make an impact by taking initiative and delivering exceptional experience. \n Benefits Our benefits are designed to help you live well no matter where you are on your journey. For full details on coverage and eligibility, visit the Baylor Scott & White Benefits Hub to explore our offerings, which may include: \n Immediate eligibility for health and welfare benefits \n 401(k) savings plan with dollar-for-dollar match up to 5% \n Tuition Reimbursement \n PTO ",
+   "fingerprint": "2d6a29ebb1a4da4b",
+   "rules": {
+    "division": "Cardiology",
+    "division_source": "description",
+    "research_type": "Unclear",
+    "wet_terms": [],
+    "dry_terms": [],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Check",
+    "reason": "Unclear; division: Cardiology"
+   },
+   "ai": {
+    "role_type": "research_assistant",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "yes",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "confidence": "high",
+    "skills_fit": "strong",
+    "department": "Allied Health",
+    "reason": "Research Analyst 2 in Allied Health, minimum bachelor's degree; clinical data work, but outside Internal Medicine.",
+    "verify": "Whether any IM division sponsors this role and whether visa sponsorship is offered.",
+    "missing": "",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Other dept",
+   "reason": "Research Analyst 2 in Allied Health, minimum bachelor's degree; clinical data work, but outside Internal Medicine.",
    "active": true
   },
   "clevelandclinic:357907": {
@@ -1224,6 +1506,68 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires molecular and biochemical approaches with bench-style work; requires PhD or equivalent; sits in Neurology, not Internal Medicine.",
+   "active": true
+  },
+  "duke:1411414700": {
+   "key": "duke:1411414700",
+   "school": "Duke",
+   "rank": 8,
+   "source": "duke",
+   "source_label": "Duke University and Duke Health",
+   "title": "Clinical Research Specialist, Sr.",
+   "url": "https://careers.duke.edu/job/Durham-Clinical-Research-Specialist%2C-Sr_-NC-27710/1411414700/",
+   "location": "Durham, NC, US, 27710",
+   "department": "Medicine - Gastroenterology",
+   "posted": "2026-10-24",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "School of Medicine Established in 1930, Duke University School of Medicine is the youngest of the nation's top medical schools. Ranked sixth among medical schools in the nation, the School takes pride in being an inclusive community of outstanding learners, investigators, clinicians, and staff where interdisciplinary collaboration is embraced and great ideas accelerate translation of fundamental scientific discoveries to improve human health locally and around the globe. Composed of more than 2,600 faculty physicians and researchers, nearly 2,000 students, and more than 6,200 staff, the Duke University School of Medicine along with the Duke University School of Nursing, and Duke University Health System comprise Duke Health, a world-class academic medical center. The Health System encompasses Duke University Hospital, Duke Regional Hospital, Duke Raleigh Hospital, Duke Health Integrated ",
+   "fingerprint": "a8699e40152ec7e0",
+   "rules": {
+    "division": "Gastroenterology & Hepatology",
+    "division_source": "department",
+    "research_type": "Clinical or dry research",
+    "wet_terms": [],
+    "dry_terms": [
+     "clinical research",
+     "ehr",
+     "institutional review board",
+     "irb",
+     "observational",
+     "participant",
+     "participants",
+     "registry"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Match",
+    "reason": "Clinical or dry research; Gastroenterology & Hepatology"
+   },
+   "ai": {
+    "role_type": "research_assistant",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "Medicine - Gastroenterology",
+    "reason": "Clinical Research Specialist requiring only an Associate's degree and one year of experience; a coordinator-type assistant role, not a research fellow or postdoc.",
+    "verify": "",
+    "missing": "Associate's-level clinical research operations experience; the minimum is below the candidate's qualifications",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Clinical Research Specialist requiring only an Associate's degree and one year of experience; a coordinator-type assistant role, not a research fellow or postdoc.",
    "active": true
   },
   "duke:1411458500": {
@@ -4225,6 +4569,502 @@
    "reason": "Harvard states it cannot provide visa sponsorship for this position, and the role is in Global Health and Population, not Internal Medicine.",
    "active": true
   },
+  "houstonmethodist:job-120371-postdoctoral-fellow-0-dr-wenliang-li-lab-postdoctoral-fellows-houston-methodist-academic-institute": {
+   "key": "houstonmethodist:job-120371-postdoctoral-fellow-0-dr-wenliang-li-lab-postdoctoral-fellows-houston-methodist-academic-institute",
+   "school": "Houston Methodist",
+   "rank": 54,
+   "source": "houstonmethodist",
+   "source_label": "Houston Methodist (postdoctoral and clinical research fellows)",
+   "title": "Postdoctoral Fellow 0 (Dr. Wenliang Li Lab)",
+   "url": "https://www.houstonmethodistcareers.org/job/120371/postdoctoral-fellow-0-dr-wenliang-li-lab-postdoctoral-fellows-houston-methodist-academic-institute/",
+   "location": "",
+   "department": "",
+   "posted": "2026-10-12",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "At Houston Methodist, the Postdoctoral Fellow position is responsible for performing basic research duties under the supervision/direction of a Physician and/or Principal Investigator. This position may work in a laboratory setting or may consist of computer work that supports the department's research mission.\n FLSA STATUS \n Exempt \n QUALIFICATIONS \n EDUCATION Postdoctoral Fellow 0, 1, 2, 3, 4 – Doctor of Medicine (MD) from an accredited medical school or Terminal Degree in a related field (A letter from the academic institution certifying that all student work is complete will be considered for Postdoctoral Fellow 0 only.) \n EXPERIENCE Postdoctoral Fellow 0 – None\nPostdoctoral Fellow 1 – One year of Postdoc experience\nPostdoctoral Fellow 2 – Two years’ Postdoc experience\nPostdoctoral Fellow 3 – Three years’ Postdoc experience\nPostdoctoral Fellow 4 – Four years’ Postdoc experience \n SKI",
+   "fingerprint": "ec5dfc0dd021b55c",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Mixed or unclear",
+    "wet_terms": [
+     "bench research"
+    ],
+    "dry_terms": [
+     "clinical research",
+     "clinical trial",
+     "patient",
+     "patients"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Check",
+    "reason": "Mixed or unclear; division: Unclear"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "",
+    "reason": "Postdoc 0 accepts an MD with no experience, but the posting names no department or research focus, only a PI (Dr. Wenliang Li). Work may be lab or computer-based.",
+    "verify": "Dr. Wenliang Li's lab focus (wet lab vs clinical/dry) and whether it sits in Internal Medicine",
+    "missing": "Possible lab or biomedical research skills; research focus not stated",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Check",
+   "reason": "Postdoc 0 accepts an MD with no experience, but the posting names no department or research focus, only a PI (Dr. Wenliang Li). Work may be lab or computer-based.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "",
+    "reason": "Postdoctoral Fellow 0 requires an MD or terminal degree, with no department stated. Duties may be lab-based, and the posting does not say whether the lab is wet or dry.",
+    "verify": "Confirm the department, whether the Li lab work is wet-lab or computational, and that MBBS is accepted for the MD requirement",
+    "missing": "Biomedical research knowledge is required; lab or dry-computing specifics are not described",
+    "deadline": ""
+   },
+   "review_version": 5,
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
+   "active": true
+  },
+  "houstonmethodist:job-120372-postdoctoral-fellow-2-dr-wenliang-li-lab-postdoctoral-fellows-houston-methodist-academic-institute": {
+   "key": "houstonmethodist:job-120372-postdoctoral-fellow-2-dr-wenliang-li-lab-postdoctoral-fellows-houston-methodist-academic-institute",
+   "school": "Houston Methodist",
+   "rank": 54,
+   "source": "houstonmethodist",
+   "source_label": "Houston Methodist (postdoctoral and clinical research fellows)",
+   "title": "Postdoctoral Fellow 2 (Dr. Wenliang Li Lab)",
+   "url": "https://www.houstonmethodistcareers.org/job/120372/postdoctoral-fellow-2-dr-wenliang-li-lab-postdoctoral-fellows-houston-methodist-academic-institute/",
+   "location": "",
+   "department": "",
+   "posted": "2026-10-12",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "At Houston Methodist, the Postdoctoral Fellow position is responsible for performing basic research duties under the supervision/direction of a Physician and/or Principal Investigator (PI). This position may work in a laboratory setting or may consist of computer work that supports the department's research mission.\n FLSA STATUS \n Exempt \n QUALIFICATIONS \n EDUCATION Postdoctoral Fellow 0, 1, 2, 3, 4 – Doctor of Medicine (MD) from an accredited medical school or Terminal Degree in a related field (A letter from the academic institution certifying that all student work is complete will be considered for Postdoctoral Fellow 0 only.) \n EXPERIENCE Postdoctoral Fellow 0 – None\nPostdoctoral Fellow 1 – One year of Postdoc experience\nPostdoctoral Fellow 2 – Two years’ Postdoc experience\nPostdoctoral Fellow 3 – Three years’ Postdoc experience\nPostdoctoral Fellow 4 – Four years’ Postdoc experience ",
+   "fingerprint": "b0eab913eddb6a62",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Mixed or unclear",
+    "wet_terms": [
+     "bench research"
+    ],
+    "dry_terms": [
+     "clinical research",
+     "clinical trial",
+     "patient",
+     "patients"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Check",
+    "reason": "Mixed or unclear; division: Unclear"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "medium",
+    "skills_fit": "weak",
+    "department": "",
+    "reason": "Postdoctoral Fellow 2 requires an MD or terminal degree plus two years' postdoc experience; the candidate has neither the postdoc years nor a PhD.",
+    "verify": "Whether the two-year postdoc experience requirement can be waived for a foreign MBBS holder",
+    "missing": "Two years postdoctoral experience; terminal research degree (PhD)",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Postdoctoral Fellow 2 requires an MD or terminal degree plus two years' postdoc experience; the candidate has neither the postdoc years nor a PhD.",
+   "active": true
+  },
+  "houstonmethodist:job-120526-postdoctoral-fellow-0-ob-gyn-research-postdoctoral-fellows-houston-methodist-academic-institute": {
+   "key": "houstonmethodist:job-120526-postdoctoral-fellow-0-ob-gyn-research-postdoctoral-fellows-houston-methodist-academic-institute",
+   "school": "Houston Methodist",
+   "rank": 54,
+   "source": "houstonmethodist",
+   "source_label": "Houston Methodist (postdoctoral and clinical research fellows)",
+   "title": "Postdoctoral Fellow 0 - Ob/Gyn Research",
+   "url": "https://www.houstonmethodistcareers.org/job/120526/postdoctoral-fellow-0-ob-gyn-research-postdoctoral-fellows-houston-methodist-academic-institute/",
+   "location": "",
+   "department": "",
+   "posted": "2026-10-19",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "At Houston Methodist, the Postdoctoral Fellow position is responsible for performing basic research duties under the supervision/direction of a Physician and/or Principal Investigator. This position may work in a laboratory setting or may consist of computer work that supports the department's research mission.\n FLSA STATUS \n Exempt \n QUALIFICATIONS \n EDUCATION Postdoctoral Fellow 0, 1, 2, 3, 4 – Doctor of Medicine (MD) from an accredited medical school or Terminal Degree in a related field (A letter from the academic institution certifying that all student work is complete will be considered for Postdoctoral Fellow 0 only.) \n EXPERIENCE Postdoctoral Fellow 0 – NonePostdoctoral Fellow 1 – One year of Postdoc experiencePostdoctoral Fellow 2 – Two years’ Postdoc experiencePostdoctoral Fellow 3 – Three years’ Postdoc experiencePostdoctoral Fellow 4 – Four years’ Postdoc experience \n LICENSE",
+   "fingerprint": "fcd496ee82b4dcf7",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "department",
+    "research_type": "Mixed or unclear",
+    "wet_terms": [
+     "bench research"
+    ],
+    "dry_terms": [
+     "clinical research",
+     "clinical trial",
+     "patient",
+     "patients"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "mixed",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "confidence": "high",
+    "skills_fit": "strong",
+    "department": "Ob/Gyn Research",
+    "reason": "Postdoctoral role in Ob/Gyn Research, outside Internal Medicine. Posting allows lab or computer work and requires an MD or terminal degree.",
+    "verify": "Whether the role is actually in Internal Medicine rather than Ob/Gyn",
+    "missing": "",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Other dept",
+   "reason": "Postdoctoral role in Ob/Gyn Research, outside Internal Medicine. Posting allows lab or computer work and requires an MD or terminal degree.",
+   "active": true
+  },
+  "houstonmethodist:job-120642-postdoc-0-postdoctoral-fellows-houston-methodist-academic-institute": {
+   "key": "houstonmethodist:job-120642-postdoc-0-postdoctoral-fellows-houston-methodist-academic-institute",
+   "school": "Houston Methodist",
+   "rank": 54,
+   "source": "houstonmethodist",
+   "source_label": "Houston Methodist (postdoctoral and clinical research fellows)",
+   "title": "Postdoctoral Fellow 0",
+   "url": "https://www.houstonmethodistcareers.org/job/120642/postdoc-0-postdoctoral-fellows-houston-methodist-academic-institute/",
+   "location": "",
+   "department": "",
+   "posted": "2026-10-22",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "At Houston Methodist, the Postdoctoral Fellow position is responsible for performing basic research duties under the supervision/direction of a Physician and/or Principal Investigator. This position may work in a laboratory setting or may consist of computer work that supports the department's research mission.\n FLSA STATUS \n Exempt \n QUALIFICATIONS \n EDUCATION Postdoctoral Fellow 0, 1, 2, 3, 4 – Doctor of Medicine (MD) from an accredited medical school or Terminal Degree in a related field (A letter from the academic institution certifying that all student work is complete will be considered for Postdoctoral Fellow 0 only.) \n EXPERIENCE Postdoctoral Fellow 0 – None\nPostdoctoral Fellow 1 – One year of Postdoc experience\nPostdoctoral Fellow 2 – Two years’ Postdoc experience\nPostdoctoral Fellow 3 – Three years’ Postdoc experience\nPostdoctoral Fellow 4 – Four years’ Postdoc experience \n SKI",
+   "fingerprint": "ec5dfc0dd021b55c",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Mixed or unclear",
+    "wet_terms": [
+     "bench research"
+    ],
+    "dry_terms": [
+     "clinical research",
+     "clinical trial",
+     "patient",
+     "patients"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Check",
+    "reason": "Mixed or unclear; division: Unclear"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "strong",
+    "department": "",
+    "reason": "Generic Houston Methodist Postdoctoral Fellow 0 posting; MD accepted with no experience, but no department, lab or research focus stated, and work may be lab or computer-based.",
+    "verify": "Which department/PI hosts the position, whether work is wet-lab, and visa sponsorship availability.",
+    "missing": "",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Check",
+   "reason": "Generic Houston Methodist Postdoctoral Fellow 0 posting; MD accepted with no experience, but no department, lab or research focus stated, and work may be lab or computer-based.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "postdoc",
+    "research_type": "mixed",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "yes",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "medium",
+    "skills_fit": "strong",
+    "department": "",
+    "reason": "Postdoc 0 requires MD or terminal degree; department not stated; may be lab-based or computer work, so wet-lab and IM fit are unclear.",
+    "verify": "Confirm the department is Internal Medicine and the role is computational, not laboratory-based.",
+    "missing": "",
+    "deadline": ""
+   },
+   "review_version": 5,
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
+   "active": true
+  },
+  "houstonmethodist:job-120645-postdoc-2-postdoctoral-fellows-houston-methodist-academic-institute": {
+   "key": "houstonmethodist:job-120645-postdoc-2-postdoctoral-fellows-houston-methodist-academic-institute",
+   "school": "Houston Methodist",
+   "rank": 54,
+   "source": "houstonmethodist",
+   "source_label": "Houston Methodist (postdoctoral and clinical research fellows)",
+   "title": "Postdoctoral Fellow 2",
+   "url": "https://www.houstonmethodistcareers.org/job/120645/postdoc-2-postdoctoral-fellows-houston-methodist-academic-institute/",
+   "location": "",
+   "department": "",
+   "posted": "2026-10-22",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "At Houston Methodist, the Postdoctoral Fellow position is responsible for performing basic research duties under the supervision/direction of a Physician and/or Principal Investigator (PI). This position may work in a laboratory setting or may consist of computer work that supports the department's research mission.\n FLSA STATUS \n Exempt \n QUALIFICATIONS \n EDUCATION Postdoctoral Fellow 0, 1, 2, 3, 4 – Doctor of Medicine (MD) from an accredited medical school or Terminal Degree in a related field (A letter from the academic institution certifying that all student work is complete will be considered for Postdoctoral Fellow 0 only.) \n EXPERIENCE Postdoctoral Fellow 0 – None\nPostdoctoral Fellow 1 – One year of Postdoc experience\nPostdoctoral Fellow 2 – Two years’ Postdoc experience\nPostdoctoral Fellow 3 – Three years’ Postdoc experience\nPostdoctoral Fellow 4 – Four years’ Postdoc experience ",
+   "fingerprint": "b0eab913eddb6a62",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Mixed or unclear",
+    "wet_terms": [
+     "bench research"
+    ],
+    "dry_terms": [
+     "clinical research",
+     "clinical trial",
+     "patient",
+     "patients"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Check",
+    "reason": "Mixed or unclear; division: Unclear"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "mixed",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "medium",
+    "skills_fit": "weak",
+    "department": "",
+    "reason": "Postdoctoral Fellow 2 requires two years' postdoc experience and an MD or terminal degree; the candidate shows no postdoc experience. Lab or computer work.",
+    "verify": "Whether Houston Methodist would consider a Postdoctoral Fellow 0 or 1 level without prior postdoc experience",
+    "missing": "Two years' postdoctoral experience; lab setting possible",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Postdoctoral Fellow 2 requires two years' postdoc experience and an MD or terminal degree; the candidate shows no postdoc experience. Lab or computer work.",
+   "active": true
+  },
+  "houstonmethodist:job-120651-postdoctoral-fellow-0-postdoctoral-fellows-houston-methodist-academic-institute": {
+   "key": "houstonmethodist:job-120651-postdoctoral-fellow-0-postdoctoral-fellows-houston-methodist-academic-institute",
+   "school": "Houston Methodist",
+   "rank": 54,
+   "source": "houstonmethodist",
+   "source_label": "Houston Methodist (postdoctoral and clinical research fellows)",
+   "title": "Postdoctoral Fellow 0",
+   "url": "https://www.houstonmethodistcareers.org/job/120651/postdoctoral-fellow-0-postdoctoral-fellows-houston-methodist-academic-institute/",
+   "location": "",
+   "department": "",
+   "posted": "2026-10-22",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "At Houston Methodist, the Postdoctoral Fellow position is responsible for performing basic research duties under the supervision/direction of a Physician and/or Principal Investigator. This position may work in a laboratory setting or may consist of computer work that supports the department's research mission.\n FLSA STATUS \n Exempt \n QUALIFICATIONS \n EDUCATION Postdoctoral Fellow 0, 1, 2, 3, 4 – Doctor of Medicine (MD) from an accredited medical school or Terminal Degree in a related field (A letter from the academic institution certifying that all student work is complete will be considered for Postdoctoral Fellow 0 only.) \n EXPERIENCE Postdoctoral Fellow 0 – None\nPostdoctoral Fellow 1 – One year of Postdoc experience\nPostdoctoral Fellow 2 – Two years’ Postdoc experience\nPostdoctoral Fellow 3 – Three years’ Postdoc experience\nPostdoctoral Fellow 4 – Four years’ Postdoc experience \n SKI",
+   "fingerprint": "ec5dfc0dd021b55c",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Mixed or unclear",
+    "wet_terms": [
+     "bench research"
+    ],
+    "dry_terms": [
+     "clinical research",
+     "clinical trial",
+     "patient",
+     "patients"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Check",
+    "reason": "Mixed or unclear; division: Unclear"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "strong",
+    "department": "",
+    "reason": "Generic Houston Methodist Postdoctoral Fellow 0 posting; MD accepted with no experience, but no department, lab, or research focus stated, and work may be lab or computer-based.",
+    "verify": "Which department or PI hosts this role, whether work is wet-lab, and visa sponsorship availability.",
+    "missing": "",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Check",
+   "reason": "Generic Houston Methodist Postdoctoral Fellow 0 posting; MD accepted with no experience, but no department, lab, or research focus stated, and work may be lab or computer-based.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "postdoc",
+    "research_type": "mixed",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "strong",
+    "department": "",
+    "reason": "Postdoc 0 needs an MD or terminal degree with no postdoc experience. Posting says work may be laboratory or computer-based. No department or IM link stated.",
+    "verify": "Confirm department is Internal Medicine, the work is clinical or computational rather than PI lab bench work, and MBBS is accepted.",
+    "missing": "",
+    "deadline": ""
+   },
+   "review_version": 5,
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
+   "active": true
+  },
+  "houstonmethodist:job-120652-postdoctoral-fellow-0-postdoctoral-fellows-houston-methodist-academic-institute": {
+   "key": "houstonmethodist:job-120652-postdoctoral-fellow-0-postdoctoral-fellows-houston-methodist-academic-institute",
+   "school": "Houston Methodist",
+   "rank": 54,
+   "source": "houstonmethodist",
+   "source_label": "Houston Methodist (postdoctoral and clinical research fellows)",
+   "title": "Postdoctoral Fellow 0",
+   "url": "https://www.houstonmethodistcareers.org/job/120652/postdoctoral-fellow-0-postdoctoral-fellows-houston-methodist-academic-institute/",
+   "location": "",
+   "department": "",
+   "posted": "2026-10-22",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "At Houston Methodist, the Postdoctoral Fellow position is responsible for performing basic research duties under the supervision/direction of a Physician and/or Principal Investigator. This position may work in a laboratory setting or may consist of computer work that supports the department's research mission.\n FLSA STATUS \n Exempt \n QUALIFICATIONS \n EDUCATION Postdoctoral Fellow 0, 1, 2, 3, 4 – Doctor of Medicine (MD) from an accredited medical school or Terminal Degree in a related field (A letter from the academic institution certifying that all student work is complete will be considered for Postdoctoral Fellow 0 only.) \n EXPERIENCE Postdoctoral Fellow 0 – None\nPostdoctoral Fellow 1 – One year of Postdoc experience\nPostdoctoral Fellow 2 – Two years’ Postdoc experience\nPostdoctoral Fellow 3 – Three years’ Postdoc experience\nPostdoctoral Fellow 4 – Four years’ Postdoc experience \n SKI",
+   "fingerprint": "ec5dfc0dd021b55c",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Mixed or unclear",
+    "wet_terms": [
+     "bench research"
+    ],
+    "dry_terms": [
+     "clinical research",
+     "clinical trial",
+     "patient",
+     "patients"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Check",
+    "reason": "Mixed or unclear; division: Unclear"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "strong",
+    "department": "",
+    "reason": "Generic Houston Methodist Postdoctoral Fellow 0 posting; MD accepted with no experience, but no department, lab, or research focus is stated, and work may be lab or computer-based.",
+    "verify": "Which department or PI hires, whether work is wet-lab, and visa sponsorship availability.",
+    "missing": "",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Check",
+   "reason": "Generic Houston Methodist Postdoctoral Fellow 0 posting; MD accepted with no experience, but no department, lab, or research focus is stated, and work may be lab or computer-based.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "yes",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "strong",
+    "department": "",
+    "reason": "Postdoctoral Fellow 0 accepts an MD from an accredited medical school; department is not stated and duties may be laboratory-based.",
+    "verify": "Confirm department, whether duties are laboratory-based, and visa sponsorship availability",
+    "missing": "",
+    "deadline": ""
+   },
+   "review_version": 5,
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
+   "active": true
+  },
   "jhu:122357": {
    "key": "jhu:122357",
    "school": "Johns Hopkins",
@@ -5129,6 +5969,306 @@
    "reviewed_by": "Claude Sonnet",
    "verdict": "Excluded",
    "reason": "Entry-level Research Project Assistant II (high school diploma minimum) with peer recovery, outreach and HIV/HCV testing duties; not a fellow, postdoc or research associate role.",
+   "active": true
+  },
+  "kumc:JR010604": {
+   "key": "kumc:JR010604",
+   "school": "KU Medical Center",
+   "rank": 57,
+   "source": "kumc",
+   "source_label": "University of Kansas Medical Center",
+   "title": "Clinical Research Assistant (Temporary) - Cancer Center",
+   "url": "https://kumc.wd5.myworkdayjobs.com/kumc-jobs/job/Kansas-City-Metro-Area/Clinical-Research-Assistant--Temporary----Cancer-Center_JR010604",
+   "location": "Kansas City Metro Area",
+   "department": "",
+   "posted": "2026-10-09",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Department: \n SOM KC Cancer Center Clinical Trials ----- \n Clinical Research - Temps Position Title: \n Clinical Research Assistant (Temporary) - Cancer Center Job Family Group: \n Professional Staff Job Description Summary: \n The Clinical Research Assistant assists in entry level clinical research activities including collecting information from patients/study participants and families. This position provides physicians, administrative staff, sponsors and CRO representatives with requested information and support. \n This role is ideal for someone taking a gap year to gain clinical research experience before applying to medical school. \n The University of Kansas Cancer Center is the only National Cancer Institute designated Comprehensive Cancer Center in the region, 1 of only 58 in the nation to receive this distinction. Patients gain access to the most promising therapies, cutting-edge cl",
+   "fingerprint": "792c2616eac4ca07",
+   "rules": {
+    "division": "Hematology & Oncology",
+    "division_source": "department",
+    "research_type": "Clinical or dry research",
+    "wet_terms": [],
+    "dry_terms": [
+     "clinical research",
+     "clinical trial",
+     "gcp",
+     "irb",
+     "participant",
+     "participants",
+     "patient",
+     "patients"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Match",
+    "reason": "Clinical or dry research; Hematology & Oncology"
+   },
+   "ai": {
+    "role_type": "research_assistant",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "SOM KC Cancer Center Clinical Trials",
+    "reason": "Entry-level Clinical Research Assistant with a bachelor's-level preference, aimed at gap-year applicants; coordinator-type role, not a research fellow or postdoc, and not Internal Medicine.",
+    "verify": "",
+    "missing": "Required 2 years healthcare or research work experience; not an IM research role",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Entry-level Clinical Research Assistant with a bachelor's-level preference, aimed at gap-year applicants; coordinator-type role, not a research fellow or postdoc, and not Internal Medicine.",
+   "active": true
+  },
+  "kumc:JR010625": {
+   "key": "kumc:JR010625",
+   "school": "KU Medical Center",
+   "rank": 57,
+   "source": "kumc",
+   "source_label": "University of Kansas Medical Center",
+   "title": "Post Doctoral Fellow- Cardiology",
+   "url": "https://kumc.wd5.myworkdayjobs.com/kumc-jobs/job/Kansas-City-Metro-Area/Post-Doctoral-Fellow--Cardiology_JR010625",
+   "location": "Kansas City Metro Area",
+   "department": "",
+   "posted": "2026-10-15",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Department: \n SOM KC Cardiovascular Medicine Translational Research ----- \n Translational Research Position Title: \n Post Doctoral Fellow- Cardiology Job Family Group: \n Professional Staff Job Description Summary: \n The Post Doctoral Fellow in Department of Cardiology participates in cardiovascular research investigating molecular signaling and heart disease using in vitro studies and transgenic mouse models to advance understanding of cardiovascular disease mechanisms. This role provides advanced research training to support development of an independent research career. The fellow conducts research under the guidance of a Principal Investigator (PI), engages in professional development activities, and contributes to independent and collaborative research, dissemination of findings, and laboratory activities. Job Description: \n Job Duties Outlined: \n Research & Lab Responsibilities \n Co",
+   "fingerprint": "513c55d62fab3f21",
+   "rules": {
+    "division": "Cardiology",
+    "division_source": "department",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "cell culture",
+     "confocal",
+     "flow cytometry",
+     "mass spectrometry",
+     "microscopy",
+     "mouse",
+     "transgenic"
+    ],
+    "dry_terms": [
+     "irb"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: cell culture, confocal, flow cytometry, mass spectrometry"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "SOM KC Cardiovascular Medicine Translational Research",
+    "reason": "Core duties are in vitro studies and transgenic mouse models; the minimum requires a PhD in a basic-science discipline, and the role sits in Cardiology.",
+    "verify": "",
+    "missing": "Cell culture, microscopy, confocal imaging, animal/mouse studies, PhD in basic science",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Core duties are in vitro studies and transgenic mouse models; the minimum requires a PhD in a basic-science discipline, and the role sits in Cardiology.",
+   "active": true
+  },
+  "kumc:JR010642": {
+   "key": "kumc:JR010642",
+   "school": "KU Medical Center",
+   "rank": 57,
+   "source": "kumc",
+   "source_label": "University of Kansas Medical Center",
+   "title": "Clinical Research Assistant - Alzheimer's Disease Research Center (ADRC)",
+   "url": "https://kumc.wd5.myworkdayjobs.com/kumc-jobs/job/Kansas-City-Metro-Area/Clinical-Research-Assistant---Alzheimer-s-Disease-Research-Center--ADRC-_JR010642",
+   "location": "Kansas City Metro Area",
+   "department": "",
+   "posted": "2026-10-20",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Department: \n SOM KC The Alzheimer's Disease Center (ADC) ----- \n CRO - Staff Position Title: \n Clinical Research Assistant - Alzheimer's Disease Research Center (ADRC) Job Family Group: \n Professional Staff Job Description Summary: \n The Clinical Research Assistant assists in entry level clinical research activities. Under general supervision, the Clinical Research Assistant works with multidisciplinary teams including patients/study participants, families, physicians, administrative staff, and sponsor and CRO representatives to assist in coordination of all aspects of clinical research. This encompasses study recruitment, pre-screening for eligibility, data entry, maintenance of regulatory files, study visit scheduling, and collection data within scope of role. \n The University of Kansas Alzheimer’s Disease Research Center (KU ADRC) is a National Institute of Aging P30-designated natio",
+   "fingerprint": "082e9c821cf8b726",
+   "rules": {
+    "division": "Geriatrics & Palliative",
+    "division_source": "description",
+    "research_type": "Clinical or dry research",
+    "wet_terms": [],
+    "dry_terms": [
+     "clinical research",
+     "clinical trial",
+     "informed consent",
+     "participants",
+     "patient",
+     "patients"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Check",
+    "reason": "Clinical or dry research; division guessed from the description: Geriatrics & Palliative"
+   },
+   "ai": {
+    "role_type": "clinical_research_coordinator",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "SOM KC The Alzheimer's Disease Center (ADC)",
+    "reason": "Entry-level clinical research assistant/coordinator role requiring two years' experience, not a research fellow or postdoc; not Internal Medicine; candidate is not a match.",
+    "verify": "",
+    "missing": "Two years relevant clinical research experience; certification (CCRP/CCRC) preferred",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Entry-level clinical research assistant/coordinator role requiring two years' experience, not a research fellow or postdoc; not Internal Medicine; candidate is not a match.",
+   "active": true
+  },
+  "kumc:JR010645": {
+   "key": "kumc:JR010645",
+   "school": "KU Medical Center",
+   "rank": 57,
+   "source": "kumc",
+   "source_label": "University of Kansas Medical Center",
+   "title": "Post Doctoral Fellow - ONC Radiation Oncology",
+   "url": "https://kumc.wd5.myworkdayjobs.com/kumc-jobs/job/Kansas-City-Metro-Area/Post-Doctoral-Fellow---ONC-Radiation-Oncology_JR010645",
+   "location": "Kansas City Metro Area",
+   "department": "",
+   "posted": "2026-10-19",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Department: \n SOM KC Radiation Oncology ----- \n Radiation Oncology Position Title: \n Post Doctoral Fellow - ONC Radiation Oncology Job Family Group: \n Professional Staff Job Description Summary: \n Job Description Summary \n The Medical Physics Division in the Department of Radiation Oncology at the University of Kansas Medical Center seeks a Postdoctoral Fellow in Medical Physics to develop novel computational and experimental methods for image guided radiation therapy. The Fellow will have access to numerous state-of-the-art medical linear accelerators, CT scanners, and a FLASH-capable ProteusONE proton therapy system in the department. Postdoctoral scholars at the University of Kansas Medical Center are individuals who have received their terminal degree and who have opted to pursue further training in a postdoctoral appointment. Postdoctoral scholarship is a time-limited appointment, t",
+   "fingerprint": "d6baaf52d72acf2f",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "department",
+    "research_type": "Clinical or dry research",
+    "wet_terms": [],
+    "dry_terms": [
+     "irb"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": true
+    },
+    "notes": [],
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "yes",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "SOM KC Radiation Oncology",
+    "reason": "Postdoc in Medical Physics Division of Radiation Oncology developing image-guided radiotherapy methods; clearly outside Internal Medicine. Minimum accepts MD or equivalent.",
+    "verify": "",
+    "missing": "medical physics, image-guided radiotherapy methods, experimental physics methods, imaging analysis",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Other dept",
+   "reason": "Postdoc in Medical Physics Division of Radiation Oncology developing image-guided radiotherapy methods; clearly outside Internal Medicine. Minimum accepts MD or equivalent.",
+   "active": true
+  },
+  "kumc:JR010666": {
+   "key": "kumc:JR010666",
+   "school": "KU Medical Center",
+   "rank": 57,
+   "source": "kumc",
+   "source_label": "University of Kansas Medical Center",
+   "title": "Research Associate - CBP Del Rio Lab",
+   "url": "https://kumc.wd5.myworkdayjobs.com/kumc-jobs/job/Kansas-City-Metro-Area/Research-Associate---CBP-Del-Rio-Lab_JR010666",
+   "location": "Kansas City Metro Area",
+   "department": "",
+   "posted": "2026-10-23",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Department: \n SOM KC Department of Cell Biology and Physiology ----- \n Del Rio Lab Position Title: \n Research Associate - CBP Del Rio Lab Job Family Group: \n Professional Staff Job Description Summary: \n A full-time Research Associate position is immediately available for a highly motivated individual to support an NIH-funded R01 project investigating the neural mechanisms underlying cardiorespiratory regulation. \n Applicants should have a Bachelor’s degree in biology, neuroscience, physiology, biomedical sciences, or a related field with substantial relevant research experience; a Master’s degree or other advanced training is preferred. Experience with rodent models, in vivo physiology, neurophysiology, fiber photometry, electrophysiology, stereotaxic procedures, or related experimental approaches is highly desirable. \n The Research Associate in Dr. Del Rio’s laboratory will independent",
+   "fingerprint": "87d4ad76a877bc4f",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "department",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "in vivo",
+     "mouse",
+     "rat",
+     "rodent"
+    ],
+    "dry_terms": [
+     "data analys"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: in vivo, mouse, rat, rodent"
+   },
+   "ai": {
+    "role_type": "research_assistant",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "SOM KC Department of Cell Biology and Physiology",
+    "reason": "Bachelor's minimum makes it a staff role, not a postdoc. Core duties are in vivo, surgical, and in situ bench work, in Cell Biology and Physiology, not Internal Medicine.",
+    "verify": "",
+    "missing": "Rodent in vivo procedures, fiber photometry, electrophysiology, stereotaxic surgery, colony husbandry",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Bachelor's minimum makes it a staff role, not a postdoc. Core duties are in vivo, surgical, and in situ bench work, in Cell Biology and Physiology, not Internal Medicine.",
    "active": true
   },
   "louisville:R109394": {
@@ -6497,13 +7637,14 @@
     "im_division": "Infectious Diseases",
     "mbbs_without_phd_eligible": "yes",
     "visa": "not_stated",
-    "verdict": "match",
-    "confidence": "medium",
+    "verdict": "excluded",
+    "confidence": "high",
     "skills_fit": "strong",
     "department": "Department of Medicine, Infectious Disease Division",
-    "reason": "Dry epidemiological/population research in the Department of Medicine's Infectious Disease Division; requires a bachelor's in science plus 1-2 years of data experience, which the candidate meets. Role is research assistant level.",
-    "verify": "Whether the hospital sponsors J-1/H-1B visas for this hourly Research Assistant II role.",
-    "missing": ""
+    "reason": "Research Assistant II requires only a bachelor's degree and 1-2 years experience; entry-level assistant role with cohort outreach and mailings, not a fellow, postdoc or research associate position.",
+    "verify": "Whether the hospital would sponsor a visa for this entry-level staff role",
+    "missing": "",
+    "deadline": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
@@ -6517,12 +7658,12 @@
     "department": "The Department of Medicine's Infectious Disease Division",
     "reason": "Epidemiology and population-based dry research in Infectious Disease, with no lab work. Title is Research Assistant II, not a fellow or associate role. Bachelor's required, but experience in lieu of degree accepted; visa not stated."
    },
-   "review_attempts": 2,
+   "review_attempts": 3,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
-   "verdict": "Below level",
-   "reason": "Dry epidemiological/population research in the Department of Medicine's Infectious Disease Division; requires a bachelor's in science plus 1-2 years of data experience, which the candidate meets. Role is research assistant level.",
-   "review_version": 3,
+   "verdict": "Excluded",
+   "reason": "Research Assistant II requires only a bachelor's degree and 1-2 years experience; entry-level assistant role with cohort outreach and mailings, not a fellow, postdoc or research associate position.",
    "active": true
   },
   "massgeneralbrigham:RQ4083533": {
@@ -6625,13 +7766,14 @@
     "im_division": "Pulmonary & Critical Care",
     "mbbs_without_phd_eligible": "unclear",
     "visa": "not_stated",
-    "verdict": "check",
-    "confidence": "medium",
-    "skills_fit": "partial",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "strong",
     "department": "Division of Sleep and Circadian Disorders (Program in Sleep Medicine Epidemiology and Sleep and Cardiovascular Medicine)",
-    "reason": "Entry-level Research Assistant I (bachelor's required) doing recruitment, consent, data entry, study visits; coordinator-like, below candidate's target level; sleep division is IM-adjacent; visa and foreign degree equivalence unstated.",
-    "verify": "Whether the position sponsors visas and accepts a foreign MBBS as bachelor's equivalent",
-    "missing": "Clinical research tests, participant recruitment and consent coordination experience"
+    "reason": "Entry-level Research Assistant I requiring a bachelor's degree, with recruitment, consent and data-entry duties; not a postdoc, fellow or research associate role.",
+    "verify": "Whether the division sits within the Department of Medicine and whether visa sponsorship is offered for this staff role",
+    "missing": "",
+    "deadline": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
@@ -6645,12 +7787,12 @@
     "department": "",
     "reason": "Epidemiology and clinical sleep research role; Division of Sleep and Circadian Disorders, not stated as Internal Medicine. Bachelor's required, so an MBBS meets the minimum. No visa information."
    },
-   "review_attempts": 2,
+   "review_attempts": 3,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
-   "verdict": "Check",
-   "reason": "Entry-level Research Assistant I (bachelor's required) doing recruitment, consent, data entry, study visits; coordinator-like, below candidate's target level; sleep division is IM-adjacent; visa and foreign degree equivalence unstated.",
-   "review_version": 3,
+   "verdict": "Excluded",
+   "reason": "Entry-level Research Assistant I requiring a bachelor's degree, with recruitment, consent and data-entry duties; not a postdoc, fellow or research associate role.",
    "active": true
   },
   "massgeneralbrigham:RQ4083804": {
@@ -7581,6 +8723,222 @@
    "reason": "Core duties are wet-lab (in vitro transcription, qPCR, recombinant enzymes, cell culture); Department of Biophysics, not Internal Medicine; PhD required.",
    "active": true
   },
+  "mhif:mascsr-default-mdf-recruitment-recruitment-html-cid-39263a55-c11d-480c-b3b1-4599b9d7ad64-ccId-19000101-000001-jobId-577618-source-CC2-lang-en-US": {
+   "key": "mhif:mascsr-default-mdf-recruitment-recruitment-html-cid-39263a55-c11d-480c-b3b1-4599b9d7ad64-ccId-19000101-000001-jobId-577618-source-CC2-lang-en-US",
+   "school": "Minneapolis Heart Institute Foundation",
+   "rank": 58,
+   "source": "mhif",
+   "source_label": "Minneapolis Heart Institute Foundation (research scholars)",
+   "title": "Research Scholar, CCAD",
+   "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=39263a55-c11d-480c-b3b1-4599b9d7ad64&ccId=19000101_000001&jobId=577618&source=CC2&lang=en_US",
+   "location": "",
+   "department": "",
+   "posted": "",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Research Scholar, CCAD",
+   "fingerprint": "4a2849f55070f7c4",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Unclear",
+    "wet_terms": [],
+    "dry_terms": [],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Check",
+    "reason": "Unclear; division: Unclear"
+   },
+   "ai": {
+    "role_type": "other",
+    "research_type": "unclear",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "",
+    "reason": "Only title 'Research Scholar, CCAD' is given; no department, duties or degree rules. CCAD might be a cardiovascular unit, but the posting does not state it.",
+    "verify": "What CCAD stands for, the hiring department, duties, minimum degree and visa sponsorship",
+    "missing": "",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Check",
+   "reason": "Only title 'Research Scholar, CCAD' is given; no department, duties or degree rules. CCAD might be a cardiovascular unit, but the posting does not state it.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "other",
+    "research_type": "unclear",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "",
+    "reason": "Only the title 'Research Scholar, CCAD' is given, with no department, minimum degree, or research focus stated.",
+    "verify": "Full posting must show department, minimum degree, research focus, and whether MBBS without PhD qualifies.",
+    "missing": "",
+    "deadline": ""
+   },
+   "review_version": 5,
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
+   "active": true
+  },
+  "mhif:mascsr-default-mdf-recruitment-recruitment-html-cid-39263a55-c11d-480c-b3b1-4599b9d7ad64-ccId-19000101-000001-jobId-588688-source-CC2-lang-en-US": {
+   "key": "mhif:mascsr-default-mdf-recruitment-recruitment-html-cid-39263a55-c11d-480c-b3b1-4599b9d7ad64-ccId-19000101-000001-jobId-588688-source-CC2-lang-en-US",
+   "school": "Minneapolis Heart Institute Foundation",
+   "rank": 58,
+   "source": "mhif",
+   "source_label": "Minneapolis Heart Institute Foundation (research scholars)",
+   "title": "Advanced Cardiology Research Scholar, CCAD",
+   "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=39263a55-c11d-480c-b3b1-4599b9d7ad64&ccId=19000101_000001&jobId=588688&source=CC2&lang=en_US",
+   "location": "",
+   "department": "",
+   "posted": "",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Advanced Cardiology Research Scholar, CCAD",
+   "fingerprint": "566638a3f3d8455c",
+   "rules": {
+    "division": "Cardiology",
+    "division_source": "department",
+    "research_type": "Unclear",
+    "wet_terms": [],
+    "dry_terms": [],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Check",
+    "reason": "Unclear; division: Cardiology"
+   },
+   "ai": {
+    "role_type": "other",
+    "research_type": "unclear",
+    "im_division": "Cardiology",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "unclear",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "",
+    "reason": "Title suggests a cardiology research scholar (CCAD, likely a cardiac center), but no department, duties, degree rules or visa information are given to judge fit.",
+    "verify": "Confirm degree requirements, whether work is clinical/dry versus lab, Internal Medicine/Cardiology affiliation, and visa sponsorship.",
+    "missing": "",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Check",
+   "reason": "Title suggests a cardiology research scholar (CCAD, likely a cardiac center), but no department, duties, degree rules or visa information are given to judge fit.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "research_fellow",
+    "research_type": "unclear",
+    "im_division": "Cardiology",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "",
+    "reason": "Only the title is available: a cardiology research scholar role. Minimum degree, duties and sponsorship are not stated.",
+    "verify": "Confirm minimum degree (PhD vs MD), wet-lab duties, and visa sponsorship in full posting",
+    "missing": "Minimum degree and research duties not visible in title",
+    "deadline": ""
+   },
+   "review_version": 5,
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
+   "active": true
+  },
+  "mhif:mascsr-default-mdf-recruitment-recruitment-html-cid-39263a55-c11d-480c-b3b1-4599b9d7ad64-ccId-19000101-000001-jobId-588799-source-CC2-lang-en-US": {
+   "key": "mhif:mascsr-default-mdf-recruitment-recruitment-html-cid-39263a55-c11d-480c-b3b1-4599b9d7ad64-ccId-19000101-000001-jobId-588799-source-CC2-lang-en-US",
+   "school": "Minneapolis Heart Institute Foundation",
+   "rank": 58,
+   "source": "mhif",
+   "source_label": "Minneapolis Heart Institute Foundation (research scholars)",
+   "title": "Research Associate, CIRC and Core Lab",
+   "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=39263a55-c11d-480c-b3b1-4599b9d7ad64&ccId=19000101_000001&jobId=588799&source=CC2&lang=en_US",
+   "location": "",
+   "department": "",
+   "posted": "",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Research Associate, CIRC and Core Lab",
+   "fingerprint": "ca6995b7c46417c1",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Unclear",
+    "wet_terms": [],
+    "dry_terms": [],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Check",
+    "reason": "Unclear; division: Unclear"
+   },
+   "ai": {
+    "role_type": "research_associate",
+    "research_type": "unclear",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "",
+    "reason": "Only a title is given: 'Research Associate, CIRC and Core Lab'. No department, duties or degree rules are stated, and 'Core Lab' hints at possible lab work.",
+    "verify": "Hiring department, whether Core Lab duties are bench work, minimum degree, and visa sponsorship",
+    "missing": "",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Check",
+   "reason": "Only a title is given: 'Research Associate, CIRC and Core Lab'. No department, duties or degree rules are stated, and 'Core Lab' hints at possible lab work.",
+   "review_attempts": 1,
+   "ai_first": {
+    "role_type": "research_associate",
+    "research_type": "unclear",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "weak",
+    "department": "",
+    "reason": "Title only: 'Research Associate, CIRC and Core Lab'. No department, duties, or degree requirements stated. 'Core Lab' may signal wet-lab work.",
+    "verify": "Full posting: department, whether duties are wet-lab, minimum degree, and visa sponsorship",
+    "missing": "Laboratory techniques, if core lab duties are bench work; minimum degree unknown",
+    "deadline": ""
+   },
+   "review_version": 5,
+   "ai_review_done": true,
+   "reviewed_by": "Claude Sonnet",
+   "active": true
+  },
   "miami:R100072310": {
    "key": "miami:R100072310",
    "school": "Miami",
@@ -8270,15 +9628,16 @@
     "role_type": "postdoc",
     "research_type": "unclear",
     "im_division": "unclear",
-    "mbbs_without_phd_eligible": "yes",
+    "mbbs_without_phd_eligible": "unclear",
     "visa": "not_stated",
-    "verdict": "match",
+    "verdict": "check",
     "confidence": "low",
-    "skills_fit": "partial",
+    "skills_fit": "strong",
     "department": "Diabetes Research Institute",
-    "reason": "Postdoctoral Associate at the Diabetes Research Institute requires only an MD, with no experience required. Diabetes fits the candidate's interests, but the duties are generic and the lab type is not stated.",
-    "verify": "Whether the role is clinical/data-focused or bench work, and whether a foreign MBBS counts as an MD.",
-    "missing": "Specific duties and any lab techniques not stated; DRI is largely bench-based"
+    "reason": "Postdoctoral Associate at the Diabetes Research Institute requiring an MD, with no experience required. The posting does not say whether the work is wet-lab or clinical, and it is not clearly an Internal Medicine unit.",
+    "verify": "Whether the work is clinical/dry or bench-based, and whether the MBBS counts as the required doctorate.",
+    "missing": "",
+    "deadline": ""
    },
    "evaluated": true,
    "ai_attempts": 1,
@@ -8292,12 +9651,12 @@
     "department": "Diabetes Research Institute",
     "reason": "Postdoc at Diabetes Research Institute requires an MD; an MBBS meets that. Duties are generic with no wet-lab or clinical detail, and no Internal Medicine division or visa policy is stated."
    },
-   "review_attempts": 2,
+   "review_attempts": 3,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
    "verdict": "Check",
-   "reason": "Postdoctoral Associate at the Diabetes Research Institute requires only an MD, with no experience required. Diabetes fits the candidate's interests, but the duties are generic and the lab type is not stated.",
-   "review_version": 3,
+   "reason": "Postdoctoral Associate at the Diabetes Research Institute requiring an MD, with no experience required. The posting does not say whether the work is wet-lab or clinical, and it is not clearly an Internal Medicine unit.",
    "active": true
   },
   "miami:R100095489": {
@@ -11086,6 +12445,120 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Claims-based health services research housed in the Mindich Child Health institute and working with a pediatrics faculty member; it is clearly outside Internal Medicine. The posting lists MD as an eligible degree.",
+   "active": true
+  },
+  "musc:R-0000069457": {
+   "key": "musc:R-0000069457",
+   "school": "MUSC",
+   "rank": 59,
+   "source": "musc",
+   "source_label": "Medical University of South Carolina",
+   "title": "UNIV - Post Doctoral - Scholar - Exempt - Department of Neuroscience",
+   "url": "https://musc.wd1.myworkdayjobs.com/MUSC/job/Charleston/UNIV---Post-Doctoral---Scholar---Exempt---Department-of-Neuroscience_R-0000069457",
+   "location": "Charleston",
+   "department": "",
+   "posted": "2026-10-08",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Job Description Summary \n The Li Lab at MUSC is seeking highly motivated and creative postdoctoral fellows to join a growing and dynamic research team. Our lab studies how neuron-glia interactions shape brain development, plasticity, and disease, with a focus on oligodendrocyte precursor cells (OPCs) and their synaptic communication with neurons. (https://jiaxinglilab.org/) \n We combine in vivo imaging, molecular engineering, and systems-level approaches in zebrafish to uncover how neural activity regulates myelination and circuit function. Our work aims to establish neuron-OPC synapses as a fundamental mechanism of brain plasticity. As a new and well-supported lab, this is a unique opportunity to help build a research program from the ground up while driving high-impact discoveries. \n We are deeply committed to mentorship and scientific development. In our lab, you will be treated first",
+   "fingerprint": "e6bafa25a907b602",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "description",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "in vivo",
+     "molecular biology",
+     "zebrafish"
+    ],
+    "dry_terms": [],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: in vivo, molecular biology, zebrafish"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "Department of Neuroscience",
+    "reason": "Zebrafish in vivo imaging and molecular manipulation are core duties; requires a PhD; hosted by Neuroscience, not Internal Medicine.",
+    "verify": "",
+    "missing": "PhD; zebrafish in vivo imaging; molecular engineering; imaging analysis",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Zebrafish in vivo imaging and molecular manipulation are core duties; requires a PhD; hosted by Neuroscience, not Internal Medicine.",
+   "active": true
+  },
+  "musc:R-0000069860": {
+   "key": "musc:R-0000069860",
+   "school": "MUSC",
+   "rank": 59,
+   "source": "musc",
+   "source_label": "Medical University of South Carolina",
+   "title": "UNIV - Post Doctoral Fellow- Regenerative Medicine & Cell Biology",
+   "url": "https://musc.wd1.myworkdayjobs.com/MUSC/job/Charleston/UNIV---Post-Doctoral-Fellow--Regenerative-Medicine---Cell-Biology_R-0000069860-1",
+   "location": "Charleston",
+   "department": "",
+   "posted": "2026-10-15",
+   "first_seen": "2026-10-24",
+   "last_seen": "2026-10-24",
+   "snippet": "Job Description Summary \n The laboratory of Dr. Jorge Múnera in the Department of Regenerative Medicine and Cell Biology is looking for a postdoctoral fellow to study digestive diseases using animal models and human pluripotent stem cell derived small intestinal and colonic organoids. The Múnera lab is part of the established NIH funded Digestive Disease Research Core Center (DDRCC). In addition, the lab is also part of the MUSC Center of Biomedical Research Excellence (COBRE) in Digestive & Liver Disease (CDLD) which is funded through the National Institutes of General Medical Sciences (NIGMS). We are seeking a highly self-motivated applicant with a strong interest in stem cell research. The postdoctoral fellow will have access to multiple DDRCC and COBRE cores. Qualified applicants will have a recent PhD with peer-reviewed research publications, a demonstrated expertise in cell biology",
+   "fingerprint": "0614d3b058effd27",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "department",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "animal model",
+     "organoid",
+     "stem cell"
+    ],
+    "dry_terms": [],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: animal model, organoid, stem cell"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "Department of Regenerative Medicine and Cell Biology",
+    "reason": "Postdoc requires a recent PhD and centres on animal models and stem-cell organoid work in Regenerative Medicine and Cell Biology, not Internal Medicine.",
+    "verify": "Whether any duties are purely computational or clinical rather than bench-based",
+    "missing": "PhD, cell biology, animal model and organoid laboratory work, stem cell research",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Postdoc requires a recent PhD and centres on animal models and stem-cell organoid work in Regenerative Medicine and Cell Biology, not Internal Medicine.",
    "active": true
   },
   "nyulangone:23740975": {
@@ -22156,6 +23629,30 @@
    "posted": "2026-10-01",
    "seen": "2026-10-24"
   },
+  "houstonmethodist:job-116108-clinical-research-fellow-0-postdoctoral-fellows-houston-methodist-academic-institute": {
+   "posted": "2026-04-20",
+   "seen": "2026-10-24"
+  },
+  "houstonmethodist:job-118039-postdoc-for-dr-matei-lab-postdoctoral-fellows-houston-methodist-academic-institute": {
+   "posted": "2026-07-10",
+   "seen": "2026-10-24"
+  },
+  "houstonmethodist:job-118903-postdoctoral-fellow-postdoctoral-fellows-houston-methodist-academic-institute": {
+   "posted": "2026-08-17",
+   "seen": "2026-10-24"
+  },
+  "houstonmethodist:job-118906-postdoctoral-fellow-postdoctoral-fellows-houston-methodist-academic-institute": {
+   "posted": "2026-08-17",
+   "seen": "2026-10-24"
+  },
+  "houstonmethodist:job-119886-postdoctoral-fellow-0-postdoctoral-fellows-houston-methodist-academic-institute": {
+   "posted": "2026-09-18",
+   "seen": "2026-10-24"
+  },
+  "houstonmethodist:job-120102-graduate-research-fellow-chih-chi-andrew-hu-lab-postdoctoral-fellows-houston-methodist-academic-institute": {
+   "posted": "2026-09-30",
+   "seen": "2026-10-24"
+  },
   "iowa-postdoc:postdoc-view-3228": {
    "posted": "2019-12-13",
    "seen": "2026-10-24"
@@ -22229,6 +23726,106 @@
    "seen": "2026-10-24"
   },
   "miami:R100095537": {
+   "posted": "2026-10-02",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000008614": {
+   "posted": "2025-01-30",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000038471": {
+   "posted": "2024-12-13",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000043633": {
+   "posted": "2026-08-18",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000048830": {
+   "posted": "2025-07-31",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000052580": {
+   "posted": "2025-10-21",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000054928": {
+   "posted": "2025-12-15",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000056197": {
+   "posted": "2026-01-16",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000056646": {
+   "posted": "2026-01-28",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000057819": {
+   "posted": "2026-02-20",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000058651": {
+   "posted": "2026-03-10",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000059184": {
+   "posted": "2026-03-19",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000060613": {
+   "posted": "2026-04-17",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000061642": {
+   "posted": "2026-05-07",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000061784": {
+   "posted": "2026-05-12",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000063113": {
+   "posted": "2026-09-09",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000063993": {
+   "posted": "2026-06-24",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000065684": {
+   "posted": "2026-07-27",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000065685": {
+   "posted": "2026-07-27",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000066814": {
+   "posted": "2026-08-19",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000068185": {
+   "posted": "2026-09-16",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000068413": {
+   "posted": "2026-09-21",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000068583": {
+   "posted": "2026-09-23",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000068628": {
+   "posted": "2026-09-24",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000068761": {
+   "posted": "2026-09-28",
+   "seen": "2026-10-24"
+  },
+  "musc:R-0000069159": {
    "posted": "2026-10-02",
    "seen": "2026-10-24"
   },
