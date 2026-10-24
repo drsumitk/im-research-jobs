@@ -30,18 +30,24 @@ class Http:
         self.session.headers.update({"User-Agent": USER_AGENT, "Accept-Language": "en-US,en;q=0.9"})
         self.respect_robots = respect_robots
         self.max_requests_per_host = max_requests_per_host
-        self._last, self._count, self._robots = {}, {}, {}
+        self._last, self._count, self._robots, self._robots_note = {}, {}, {}, {}
 
     def _robots_for(self, scheme, host):
         if host not in self._robots:
             # RFC 9309: 4xx (no robots.txt) means allowed; 5xx or no answer means treat as disallowed.
             text = "User-agent: *\nDisallow: /"
+            self._robots_note[host] = "robots.txt could not be read (no answer), so the site is skipped today"
             try:
                 r = self.session.get(f"{scheme}://{host}/robots.txt", timeout=TIMEOUT)
                 if r.status_code == 200:
                     text = "" if "text/html" in r.headers.get("content-type", "") else r.text
+                    self._robots_note[host] = ""
                 elif 400 <= r.status_code < 500:
                     text = ""
+                    self._robots_note[host] = ""
+                else:
+                    self._robots_note[host] = (f"robots.txt could not be read (HTTP {r.status_code}, site may be "
+                                               "down for maintenance), so the site is skipped today")
             except requests.RequestException:
                 pass
             self._robots[host] = Robots(text)
@@ -66,7 +72,7 @@ class Http:
             rb = self._robots_for(p.scheme, p.netloc)
             path = p.path + (f"?{p.query}" if p.query else "")
             if not rb.allowed(path or "/"):
-                raise RobotsBlocked(f"robots.txt disallows {p.netloc}{p.path}")
+                raise RobotsBlocked(self._robots_note.get(p.netloc) or f"robots.txt disallows {p.netloc}{p.path}")
             if rb.crawl_delay:
                 delay = min(max(rb.crawl_delay, MIN_GAP_SECONDS), MAX_GAP_SECONDS)
         kw.setdefault("timeout", TIMEOUT)

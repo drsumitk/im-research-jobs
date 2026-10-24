@@ -97,7 +97,7 @@ def search(http, src, terms, title_ok):
 def details(http, src, job):
     r = http.get(job.url)
     parse_detail(r.text, job, src)
-    if not job.description:  # diagnostic for the private Actions log only
-        print(f"html_list: empty description for {job.url} (HTTP {r.status_code}, "
-              f"{r.headers.get('content-type')}, {len(r.content)} bytes)")
+    if not job.description:  # reported in the source's health entry so the cause can be seen
+        raise RuntimeError(f"empty job page (HTTP {r.status_code}, {r.headers.get('content-type')}, "
+                           f"{len(r.content)} bytes, encoding {r.headers.get('content-encoding')})")
     return job
