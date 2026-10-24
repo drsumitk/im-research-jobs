@@ -33,7 +33,7 @@ MAX_AI_ATTEMPTS = 3
 AI_GAP_SECONDS = 1.0  # pause between Claude calls to stay under per-minute rate limits
 SNIPPET_CHARS = 900
 TITLE_ONLY_CHARS = 200  # postings with less text than this carry only a title and department line
-REVIEW_VERSION = 3     # bump when the review instructions change, so undecided postings are reviewed again
+REVIEW_VERSION = 4     # bump when the review instructions change, so undecided postings are reviewed again
 
 
 def load_yaml(name):
@@ -176,9 +176,21 @@ AI_TO_VERDICT = {"match": "Match", "check": "Check", "other_dept": "Other dept",
 
 
 def verdict_of(res):
-    """Dashboard group for an AI result: a match whose required skills the candidate lacks is a stretch."""
+    """Dashboard group for an AI result. A match is kept as a Match only when the AI is reasonably sure:
+    a required skill the candidate lacks makes it a Stretch, an entry-level assistant job is Below level,
+    and a low-confidence match goes to Needs a look."""
     v = AI_TO_VERDICT[res["verdict"]]
-    return "Stretch" if v == "Match" and res.get("skills_fit") == "weak" else v
+    if v != "Match":
+        return v
+    if res.get("mbbs_without_phd_eligible") == "no":
+        return "Excluded"
+    if res.get("role_type") in ("research_assistant", "clinical_research_coordinator", "other"):
+        return "Below level"
+    if res.get("skills_fit") == "weak":
+        return "Stretch"
+    if res.get("confidence") == "low":
+        return "Check"
+    return v
 
 
 def needs_review(rec, profile):

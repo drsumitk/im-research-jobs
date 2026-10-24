@@ -114,12 +114,14 @@ function render() {
   }
   $("filters").hidden = false; list.hidden = false; sources.hidden = true;
   const conf = (j) => ({ high: 0, medium: 1, low: 2 }[(j.ai || {}).confidence] ?? 3);
+  const due = (j) => ((j.ai || {}).deadline && (j.ai || {}).deadline >= (state.meta.today || "")) ? j.ai.deadline : "9999";
   const rows = all.filter((j) => j.verdict === state.tab)
-    .sort((a, b) => conf(a) - conf(b) || (b.posted || b.first_seen || "").localeCompare(a.posted || a.first_seen || "")
-      || (a.rank - b.rank));
+    .sort((a, b) => conf(a) - conf(b) || due(a).localeCompare(due(b))
+      || (b.posted || b.first_seen || "").localeCompare(a.posted || a.first_seen || "") || (a.rank - b.rank));
   const hints = {
     "Match": "Clinical or dry research in Internal Medicine that the profile appears eligible for. Most certain first.",
     "Stretch": "Dry research in Internal Medicine, but a required skill is not in the profile (for example omics or machine learning).",
+    "Below level": "Research assistant, coordinator or outreach jobs below research fellow level.",
     "Check": "The AI could not decide even on a second look (usually because the posting says almost nothing). Open the posting to decide.",
     "Other dept": "Clinical or dry research outside Internal Medicine (for example epidemiology or pediatrics).",
     "Excluded": "Wet-lab work, citizenship requirement, no visa sponsorship, or a PhD-only requirement.",
@@ -139,6 +141,11 @@ function card(j) {
   const a = el("a", "title", j.title); a.href = safeUrl(j.url); a.target = "_blank"; a.rel = "noopener noreferrer";
   head.append(a);
   if (j.first_seen === state.meta.today) head.append(el("span", "badge new", "New today"));
+  const dl = (j.ai || {}).deadline;
+  if (dl && state.meta.today && dl >= state.meta.today) {
+    const left = daysBetween(state.meta.today, dl);
+    head.append(el("span", "badge " + (left <= 7 ? "warnb" : "ok"), `closes ${dl} (${left} day${left === 1 ? "" : "s"})`));
+  }
   if (state.marks[j.key] === "applied") head.append(el("span", "badge done", "Applied"));
   li.append(head);
 

@@ -153,3 +153,13 @@ def test_old_reviews_are_redone_after_instructions_change():
     done_new = dict(done_old, review_version=run.REVIEW_VERSION)
     assert run.needs_review(done_old, prof) and not run.needs_review(done_new, prof)
     assert not run.needs_review({"ai": {"verdict": "excluded"}}, prof)
+
+
+def test_match_grouping_rules_from_the_audit():
+    m = {"verdict": "match", "role_type": "postdoc", "confidence": "medium", "skills_fit": "strong",
+         "mbbs_without_phd_eligible": "yes"}
+    assert run.verdict_of(m) == "Match"
+    assert run.verdict_of(dict(m, role_type="research_assistant")) == "Below level"   # e.g. peer recovery assistant
+    assert run.verdict_of(dict(m, mbbs_without_phd_eligible="no")) == "Excluded"      # e.g. 3 years postdoc required
+    assert run.verdict_of(dict(m, confidence="low")) == "Check"                       # generic posting
+    assert run.verdict_of(dict(m, skills_fit="weak")) == "Stretch"                    # e.g. econometrics minimum

@@ -32,14 +32,15 @@ JSON fields:
 - "research_type": "clinical_or_dry" (human-subject, clinical trial, data, epidemiology, outcomes, evidence synthesis), "wet_lab" (bench, animal, cell or molecular lab work is a core duty), "mixed", or "unclear"
 - "department": the hiring department or division exactly as stated, or "" if not stated
 - "im_division": one of {divisions}, "not_internal_medicine", or "unclear"
-- "mbbs_without_phd_eligible": "yes" if an MD/MBBS or foreign medical degree without a PhD meets the stated minimum, "no" if a PhD (or US licensure, or a degree the candidate lacks) is strictly required, otherwise "unclear"
+- "mbbs_without_phd_eligible": "yes" if an MD/MBBS or foreign medical degree without a PhD meets the stated minimum, "no" if a PhD (or US licensure, or a degree the candidate lacks) is strictly required, or if the minimum requires prior postdoctoral experience or years of research experience the candidate's listed experience does not show, otherwise "unclear"
 - "visa": "sponsorship_stated", "no_sponsorship", "citizenship_required", or "not_stated"
-- "verdict": "match" (clinical_or_dry, Internal Medicine or clearly IM-relevant, candidate eligible), "check" (worth a human look: unclear department, unclear eligibility, or mixed work), "other_dept" (clinical or dry research but clearly outside Internal Medicine), or "excluded" (wet_lab, citizenship required, no sponsorship, or candidate clearly ineligible)
+- "verdict": "match" (a research fellow, postdoc or research associate role; clinical_or_dry; Internal Medicine or clearly IM-relevant; candidate eligible; not an outreach, peer-support, coordinator or entry-level assistant job), "check" (worth a human look: unclear department, unclear eligibility, or mixed work), "other_dept" (clinical or dry research but clearly outside Internal Medicine), or "excluded" (wet_lab, citizenship required, no sponsorship, or candidate clearly ineligible)
 - "reason": at most 25 words explaining the verdict, citing what the posting says
-- "skills_fit": "strong" (the candidate's listed experience covers the required qualifications), "partial", or "weak" (a required qualification is a specialised skill or background the candidate's listed experience does not show, e.g. omics or bioinformatics pipelines, machine learning development, imaging analysis, laboratory techniques)
+- "skills_fit": "strong" (the candidate's listed experience covers the minimum/required qualifications), "partial" (only preferred qualifications are missing), or "weak" (a minimum/required qualification is a specialised skill or background the candidate's listed experience does not show, e.g. omics or bioinformatics pipelines, machine learning development, econometrics or cost-effectiveness analysis, imaging analysis, laboratory techniques)
 - "missing": at most 12 words naming the required skills the candidate's listed experience does not show, or ""
 - "confidence": "high", "medium" or "low": how sure the verdict is, given what the posting states
 - "verify": at most 15 words naming the single fact the candidate should confirm before applying, or "" if none
+- "deadline": the application deadline or review date as YYYY-MM-DD if the posting states one, otherwise ""
 """
 
 FINAL_REVIEW = """
@@ -110,6 +111,8 @@ def _extract_json(text):
     for field, limit in (("department", 120), ("reason", 300), ("verify", 160), ("missing", 120)):
         v = data.get(field)
         clean[field] = " ".join(v.split())[:limit] if isinstance(v, str) else ""
+    d = data.get("deadline")
+    clean["deadline"] = d if isinstance(d, str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", d) else ""
     return clean
 
 
