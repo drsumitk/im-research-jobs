@@ -501,6 +501,7 @@ schools:
         # Job pages answer automated requests with an empty bot-check page (HTTP 202), so only the
         # list facts (title, department) are kept; open the posting to judge it.
         detail: none
+        department_must_match: '^\d+ - MD-'   # UF department codes starting "MD-" are the College of Medicine
 
   - rank: 43
     name: Medical College of Wisconsin

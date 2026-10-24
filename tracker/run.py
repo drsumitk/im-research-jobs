@@ -135,6 +135,10 @@ def run_source(school, src, profile, rules, state, today, skipped=None):
                 late_old += 1
                 continue  # the detail page gave an exact date outside the window
             ev = rules.evaluate(job)
+            dept_rule = src.get("department_must_match")
+            if dept_rule and not re.search(dept_rule, job.department or "", re.I):
+                ev = dict(ev, verdict="Other dept",
+                          reason=f"Department {job.department or '(not stated)'} is outside the medical school.")
             out[job.key] = {
                 "key": job.key, "school": school["name"], "rank": school["rank"],
                 "source": src["id"], "source_label": src.get("label", src["id"]),
