@@ -261,7 +261,7 @@ def test_phenom_list_and_detail():
 
 def test_board_houston_methodist_ldjson_date():
     from tracker.connectors import board
-    src = {"id": "houstonmethodist", "row": 'div:has(> a[href^="/job/"] > h2)', "link": 'a[href^="/job/"]',
+    src = {"id": "houstonmethodist", "row": 'div:has(> a[href^="/job/"])', "link": 'a[href^="/job/"]',
            "title": "h2", "date": "none", "detail": ".job-description", "detail_ldjson_date": True}
     base = "https://www.houstonmethodistcareers.org/jobs/postdoctoral-fellows/?radius=25"
     [j] = board.parse_list(load("board_houstonmethodist.html"), src, base)

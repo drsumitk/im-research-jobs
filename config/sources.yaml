@@ -657,7 +657,7 @@ schools:
         label: Houston Methodist (postdoctoral and clinical research fellows)
         type: board
         url: https://www.houstonmethodistcareers.org/jobs/postdoctoral-fellows/?radius=25
-        row: 'div:has(> a[href^="/job/"] > h2)'
+        row: 'div:has(> a[href^="/job/"])'
         link: 'a[href^="/job/"]'
         title: h2
         date: none
