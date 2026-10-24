@@ -31,7 +31,7 @@ function daysBetween(a, b) {
 }
 
 function schoolLabel(rank, name) {
-  return Number(rank) <= 20 ? `#${rank} ${name}` : `${name} (added)`;
+  return Number(rank) <= 50 ? `#${rank} ${name}` : `${name} (added)`;
 }
 
 function divisionOf(j) {

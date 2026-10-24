@@ -38,3 +38,32 @@ def iso_date(value):
         except ValueError:
             pass
     return v  # leave unknown formats (e.g. "Posted 3 Days Ago") as text
+
+
+_MONTHS = {m: i for i, m in enumerate(
+    ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], start=1)}
+_DATE_PATTERNS = [
+    # 2026-10-21
+    (re.compile(r"(?<!\d)(\d{4})-(\d{2})-(\d{2})(?!\d)"), ("y", "m", "d")),
+    # October 21, 2026 / Oct 21 2026 / December 22nd, 2025 / Sept. 4, 2026
+    (re.compile(r"\b([A-Za-z]{3,9})\.?\s+(\d{1,2})(?:st|nd|rd|th)?,?\s+(\d{4})\b"), ("mon", "d", "y")),
+    # 21 Oct 2026 / 4 September 2026
+    (re.compile(r"\b(\d{1,2})\s+([A-Za-z]{3,9})\.?,?\s+(\d{4})\b"), ("d", "mon", "y")),
+    # 10/21/2026, 10.21.2026, 10-21-2026 (US month-first)
+    (re.compile(r"\b(\d{1,2})[/.-](\d{1,2})[/.-](\d{4})\b"), ("m", "d", "y")),
+]
+
+
+def find_date(text):
+    """First calendar date found in free text, as YYYY-MM-DD; "" if none."""
+    for pat, order in _DATE_PATTERNS:
+        for m in pat.finditer(text or ""):
+            parts = dict(zip(order, m.groups()))
+            try:
+                month = int(parts["m"]) if "m" in parts else _MONTHS.get(parts["mon"][:3].lower())
+                if not month:
+                    continue
+                return datetime(int(parts["y"]), month, int(parts["d"])).strftime("%Y-%m-%d")
+            except (ValueError, KeyError):
+                continue
+    return ""

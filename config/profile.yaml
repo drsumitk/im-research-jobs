@@ -18,6 +18,8 @@ max_posting_age_days: 21
 search_terms:
   - postdoctoral
   - postdoc
+  - post doctoral
+  - post doc
   - research fellow
   - research associate
   - postgraduate associate
@@ -121,5 +123,5 @@ flags:
 # Claude classifier settings (used only if the ANTHROPIC_API_KEY secret is set).
 ai:
   model: claude-haiku-5-5
-  max_calls_per_run: 300
+  max_calls_per_run: 600
   max_description_chars: 8000

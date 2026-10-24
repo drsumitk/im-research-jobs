@@ -15,10 +15,14 @@ from ..models import Job
 from ..textutil import html_to_text, iso_date
 
 
-def title_from_slug(slug):
-    """'research-assistant-iii-non-lab-in-boston-ma-united-states-jid-2240' -> 'research assistant iii non lab'."""
-    m = re.match(r"^(.*)-in-.*?jid-\d+$", slug)
-    base = m.group(1) if m else re.sub(r"-?jid-\d+$", "", slug)
+def title_from_slug(slug, strip=None):
+    """'research-assistant-iii-non-lab-in-boston-ma-united-states-jid-2240' -> 'research assistant iii non lab'.
+    `strip` is an optional regular expression removed from the slug first (e.g. a location suffix)."""
+    if strip:
+        base = re.sub(strip, "", slug)
+    else:
+        m = re.match(r"^(.*)-in-.*?jid-\d+$", slug)
+        base = m.group(1) if m else re.sub(r"-?jid-\d+$", "", slug)
     return unquote(base).replace("-", " ").strip()
 
 
@@ -38,7 +42,7 @@ def parse_sitemap(xml_text, src):
         jobs.append(Job(
             source_id=src["id"],
             job_id=m.group(1),
-            title=title_from_slug(slug),
+            title=title_from_slug(slug, src.get("title_strip")),
             url=url,
             # A job cannot have been posted after the sitemap's last-modified date, so this is a safe
             # upper bound for the age filter. The detail page replaces it with the real posting date.

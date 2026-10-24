@@ -33,7 +33,10 @@ def search(http, src, terms, title_ok):
             url = (f"{API}?SearchText={quote(term)}&Limit={LIMIT}&Organization={src['organization']}"
                    f"&offset={page * LIMIT + 1}&sortfield=open_date&sortorder=descending")
             jobs, total = parse_list(http.get(url, headers={"Accept": "application/json"}).json(), src)
+            must = [m.lower() for m in src.get("location_must_include", [])]
             for j in jobs:
+                if must and not any(m in j.location.lower() for m in must):
+                    continue  # large health systems: keep only the medical school's city
                 seen.setdefault(j.key, j)
             if (page + 1) * LIMIT >= total or not jobs:
                 break

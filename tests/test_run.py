@@ -89,3 +89,10 @@ def test_old_posting_found_on_detail_page_is_remembered_and_not_reopened(monkeyp
     state = {"s:1": {"key": "s:1", "posted": "", "evaluated": True, "ai": {"verdict": "check"}}}
     out, health, old2 = run.run_source(school, src, PROFILE, rules, state, today, skipped=old)
     assert out == {} and opened == ["s:1"] and "s:1" in old2
+
+
+def test_undated_postings_expire_after_window_from_first_seen():
+    assert run.age_basis("", "2026-09-01", "2026-10-24") == "2026-09-01"
+    assert not run.is_recent(run.age_basis("", "2026-09-01", "2026-10-24"), "2026-10-24", 21)
+    assert run.is_recent(run.age_basis("", None, "2026-10-24"), "2026-10-24", 21)   # first seen today
+    assert run.age_basis("2026-10-20", "2026-01-01", "2026-10-24") == "2026-10-20"  # a real date wins

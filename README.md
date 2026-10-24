@@ -1,38 +1,69 @@
 # IM Research Jobs Tracker
 
-Checks the careers websites of the 20 US medical schools with the most NIH funding for Internal Medicine (BRIMR 2025 ranking) once a day. It keeps research-only roles (postdoctoral, research fellow, research associate; clinical research coordinator roles are excluded) first posted within the last 21 days, separates clinical or data research from wet-lab work, flags eligibility problems (citizenship, no visa sponsorship, PhD-only), and shows the results on a web dashboard hosted free on GitHub Pages (anyone with the link can open it; search engines are asked not to index it).
+Checks the careers websites and postdoc job boards of the 50 US medical schools with the most NIH funding for Internal Medicine (BRIMR 2025 ranking), plus Harvard and Mayo Clinic, once a day. It keeps research-only roles (postdoctoral, research fellow, research associate; clinical research coordinator roles are excluded) first posted within the last 21 days, separates clinical or data research from wet-lab work, flags eligibility problems (citizenship, no visa sponsorship, PhD-only), and shows the results on a web dashboard hosted free on GitHub Pages (anyone with the link can open it; search engines are asked not to index it).
 
 ## What it covers
 
-| Rank | School | Careers system | Read automatically |
+The 50 US medical schools with the most NIH funding for Internal Medicine (BRIMR 2025, `config/brimr_2025_im_top50.txt`), plus Harvard and Mayo Clinic. For each school the tracker reads the main HR careers site and, where one exists, the postdoc office's own list of openings. "Link only" sources cannot be read automatically (login, bot protection, or a robots.txt rule against automated reading); the dashboard's Sources tab links to them for a manual check.
+
+| Rank | School | Read automatically | Link only |
 |---|---|---|---|
-| 1 | Vanderbilt (VUMC and University) | Workday, Oracle | Yes |
-| 2 | UCSF | Oracle, UC Recruit | Yes |
-| 3 | Johns Hopkins | Eightfold | Yes |
-| 4 | Columbia | Clinch (bot protection) | No, link only |
-| 5 | Penn | Workday | Yes |
-| 6 | Pittsburgh | Taleo (login required) | No, link only |
-| 7 | WashU | Workday | Yes |
-| 8 | Duke | SuccessFactors | Yes |
-| 9 | UCLA | Jibe, UC Recruit | Yes |
-| 10 | Mount Sinai | Jibe | Yes |
-| 11 | NYU Langone | m-cloud | Yes |
-| 12 | Yale | Workday | Yes |
-| 13 | UC San Diego | Job list pages | Yes |
-| 14 | CU Anschutz | Taleo | Yes |
-| 15 | Stanford | Oracle | Yes |
-| 16 | Northwestern | PeopleSoft | No, link only |
-| 17 | Michigan | Job list pages | Yes |
-| 18 | Weill Cornell | SuccessFactors | Yes |
-| 19 | University of Washington | Workday | Yes |
-| 20 | UChicago | Workday | Yes |
-| added | Harvard (University and Mass General Brigham) | Harvard careers site job sitemap, Workday | Yes |
-| added | Mayo Clinic | Oracle | Yes |
-| added | Cleveland Clinic | Workday | Yes |
+| 1 | Vanderbilt | VUMC (Workday), University (Oracle), postdoc office board | |
+| 2 | UCSF | Oracle, UC Recruit | |
+| 3 | Johns Hopkins | Eightfold | |
+| 4 | Columbia | | Staff site (bot protection), academic jobs (PeopleAdmin) |
+| 5 | Penn | Workday | Postdoc programs job list |
+| 6 | Pittsburgh | | Staff site (login), postdoc job site |
+| 7 | WashU | Workday | |
+| 8 | Duke | SuccessFactors | |
+| 9 | UCLA | Jibe, UC Recruit | |
+| 10 | Mount Sinai | Jibe | |
+| 11 | NYU Langone | m-cloud | |
+| 12 | Yale | Workday, postdoc office board | |
+| 13 | UC San Diego | Job list pages, UC Recruit | |
+| 14 | CU Anschutz | Taleo | |
+| 15 | Stanford | Oracle, postdoc office board | |
+| 16 | Northwestern | | PeopleSoft, postdoc office list |
+| 17 | Michigan | Job list pages | |
+| 18 | Weill Cornell | SuccessFactors, postdoc office board | |
+| 19 | University of Washington | Workday | |
+| 20 | UChicago | Workday | |
+| 21 | UT Southwestern | m-cloud | |
+| 22 | Emory | Jibe (includes the faculty and postdoc portal) | |
+| 23 | UNC Chapel Hill | | PeopleAdmin |
+| 24 | UAB | | Careers site, postdoc office list |
+| 25 | UW-Madison | Job sitemap | Postdoc vacancy list |
+| 26 | Baylor College of Medicine | | SuccessFactors |
+| 27 | OHSU | iCIMS (postdoc portal and main portal) | |
+| 28 | Indiana University | | PeopleAdmin |
+| 29 | Boston University | SilkRoad | |
+| 30 | Wake Forest | m-cloud (Winston-Salem only) | |
+| 31 | South Florida | | Postdoc list (spreadsheet) |
+| 32 | Rutgers | | PeopleAdmin |
+| 33 | Case Western / Cleveland Clinic | Cleveland Clinic (Workday), University Hospitals (m-cloud) | Case Western |
+| 34 | Utah | | Careers site |
+| 35 | Albert Einstein | Jibe | |
+| 36 | Ohio State | Workday | |
+| 37 | Minnesota | | PeopleSoft |
+| 38 | Miami | Workday | |
+| 39 | UT Austin (Dell) | Workday | |
+| 40 | USC | Workday | |
+| 41 | Virginia | | Careers site |
+| 42 | Florida | PageUp job list | |
+| 43 | Medical College of Wisconsin | Workday | |
+| 44 | UMass Chan | iCIMS | |
+| 45 | Maryland, Baltimore | Oracle (faculty and postdoc site, staff site) | |
+| 46 | Tulane | Oracle (academic site, staff site) | |
+| 47 | Rochester | Workday, postdoc office list | |
+| 48 | Iowa | Postdoc openings (Carver College of Medicine) | |
+| 49 | UC Davis | UC Recruit | |
+| 50 | Louisville | Workday | |
+| added | Harvard | Harvard careers sitemap, Mass General Brigham (Workday) | |
+| added | Mayo Clinic | Oracle | |
 
-Harvard, Mayo Clinic and Cleveland Clinic are added by choice: they are not in BRIMR's Internal Medicine top 20 (Harvard's hospitals are ranked separately, Mayo's NIH funding is not coded by department, Cleveland Clinic is ranked jointly with Case Western). Beth Israel Deaconess (Harvard) is not yet included.
+Harvard and Mayo Clinic are added by choice: BRIMR ranks Harvard's teaching hospitals separately from the medical school, and Mayo's NIH funding is not coded by department. Beth Israel Deaconess (Harvard) is not included.
 
-Known gaps: postdoc posts that departments advertise only on Interfolio, lab websites or by email are not on these boards.
+Known gaps: postdoc posts that departments advertise only on Interfolio, lab websites or by email are not on these boards. Some iCIMS portals and postdoc boards show no posting date; such postings are shown for up to 21 days after the tracker first sees them (so on the first day after a new source is added, older undated postings can appear once and then drop off).
 
 ## How it decides
 

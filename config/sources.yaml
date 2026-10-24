@@ -1,8 +1,8 @@
-# Target schools: top 20 Departments of Internal Medicine by FY2025 NIH funding
-# (BRIMR 2025 ranking, https://brimr.org/brimr-rankings-of-nih-funding-in-2025/).
+# Target schools: top 50 Departments of Internal Medicine by FY2025 NIH funding
+# (BRIMR 2025 ranking, https://brimr.org/brimr-rankings-of-nih-funding-in-2025/), plus Harvard and Mayo.
 #
 # Each source tells the tracker which careers system a school uses.
-# type: workday | oracle | eightfold | rmk | jibe | mcloud | taleo | html_list | ucrecruit | manual
+# type: workday | oracle | eightfold | rmk | jibe | mcloud | taleo | html_list | ucrecruit | sitemap | board | icims | manual
 # "manual" sources are not fetched; the dashboard shows a direct link to check by hand.
 # Set enabled: false to pause a source without deleting it.
 
@@ -21,6 +21,17 @@ schools:
         type: oracle
         host: ecsr.fa.us2.oraclecloud.com
         site: CX_1
+      - id: vanderbilt-postdoc
+        label: Vanderbilt Office of Postdoctoral Affairs board
+        type: board
+        url: https://www.vanderbilt.edu/postdoc/prospective-postdocs/current-opportunities/
+        row: 'tr:has(a[href^="?id="])'
+        link: 'a[href^="?id="]'
+        date: 'td:nth-of-type(1)'
+        dept: 'td:nth-of-type(2)'
+        mentor: 'td:nth-of-type(4)'
+        title_template: 'Postdoctoral position: {dept} ({mentor})'
+        detail: main
 
   - rank: 2
     name: UCSF
@@ -52,6 +63,11 @@ schools:
         type: manual
         url: https://opportunities.columbia.edu/jobs/search?query=clinical+research
         reason: Site uses bot protection (AWS WAF) that blocks automated reading of job pages.
+      - id: columbia-academic
+        label: Columbia University (academic and postdoc positions)
+        type: manual
+        url: https://academicjobs.columbia.edu/postings/search?query=postdoctoral
+        reason: PeopleAdmin academic job site; its robots.txt does not allow automated reading.
 
   - rank: 5
     name: Penn
@@ -62,6 +78,11 @@ schools:
         host: wd1.myworkdaysite.com
         tenant: upenn
         site: careers-at-penn
+      - id: penn-postdoc
+        label: Penn Biomedical Postdoctoral Programs job list
+        type: manual
+        url: https://www.med.upenn.edu/postdoc/bpp-jobs
+        reason: Postdoc office list; could not be checked for automated reading, so it is linked for a manual look.
 
   - rank: 6
     name: Pittsburgh
@@ -71,6 +92,11 @@ schools:
         type: manual
         url: https://www.join.pitt.edu/
         reason: Staff job board (Taleo) requires a Pitt login; no public feed found.
+      - id: pitt-postdoc
+        label: Pitt Health Sciences postdoc job site
+        type: manual
+        url: https://www.postdocjobs.pitt.edu/SearchResults.aspx?s=0
+        reason: Listings open through page scripts, without individual links or dates.
 
   - rank: 7
     name: WashU
@@ -127,6 +153,15 @@ schools:
         host: yale.wd1.myworkdayjobs.com
         tenant: yale
         site: external_career_site
+      - id: yale-postdoc
+        label: Yale Office for Postdoctoral Affairs board
+        type: board
+        url: https://postdocs.yale.edu/applicants/open-positions?page={page}
+        pages: 4      # newest first, 10 per page
+        page_start: 0
+        row: li.reference-card
+        link: a.reference-card__heading-link
+        detail: .text-field
 
   - rank: 13
     name: UC San Diego
@@ -138,6 +173,10 @@ schools:
         search_path: /jobs?keywords={q}
         link_pattern: '/job/[0-9A-F]{32}$'
         detail: ldjson
+      - id: ucsd-academic
+        label: UC San Diego (academic recruitments)
+        type: ucrecruit
+        host: apol-recruit.ucsd.edu
 
   - rank: 14
     name: CU Anschutz
@@ -158,6 +197,16 @@ schools:
         type: oracle
         host: careersearch.stanford.edu
         site: stanford
+      - id: stanford-postdoc
+        label: Stanford Office of Postdoctoral Affairs board
+        type: board
+        url: https://postdocs.stanford.edu/prospective/opportunities?items_per_page=300
+        row: 'table.views-table tr'
+        link: 'a[href*="/prospective/opportunities/"]'
+        title: 'p strong'
+        title_template: 'Postdoctoral {title}'
+        dept_caption: true
+        detail: article
 
   - rank: 16
     name: Northwestern
@@ -167,6 +216,11 @@ schools:
         type: manual
         url: https://careers.northwestern.edu/
         reason: PeopleSoft job board needs an interactive browser session; no public feed found.
+      - id: northwestern-postdoc
+        label: Northwestern Office of Postdoctoral Affairs list
+        type: manual
+        url: https://postdocs.northwestern.edu/announcements/positions-at-northwestern/index.html
+        reason: List of PDF announcements without structured titles.
 
   - rank: 17
     name: Michigan
@@ -187,6 +241,16 @@ schools:
         label: Weill Cornell Medicine
         type: rmk
         host: jobs.weill.cornell.edu
+      - id: weillcornell-postdoc
+        label: Weill Cornell Office of Postdoctoral Affairs board
+        type: board
+        url: https://postdocs.weill.cornell.edu/opportunities/postdoctoral-positions
+        row: 'tr:has(a[href*="/opportunities/postdoctoral-positions/"])'
+        link: 'a[href*="/opportunities/postdoctoral-positions/"]'
+        date: td.views-field-created
+        dept: td.views-field-field-department
+        mentor: td.views-field-field-faculty-name
+        detail: '#main-content'
 
   - rank: 19
     name: University of Washington
@@ -208,11 +272,343 @@ schools:
         tenant: uchicago
         site: External
 
-  # Added at the user's request; not in the BRIMR Internal Medicine top 20.
-  # (Mayo's NIH funding is not coded by department; Cleveland Clinic is ranked jointly with
-  # Case Western; Harvard's teaching hospitals are ranked separately from the medical school.)
-  # Ranks above 20 only set the display order; the dashboard shows these as "added".
+  # ---- BRIMR 2025 Internal Medicine ranks 21 to 50 ----
   - rank: 21
+    name: UT Southwestern
+    sources:
+      - id: utsw
+        label: UT Southwestern Medical Center
+        type: mcloud
+        organization: 2166
+
+  - rank: 22
+    name: Emory
+    sources:
+      - id: emory
+        label: Emory University and Emory Healthcare (incl. faculty and postdoc portal)
+        type: jibe
+        host: careers.emory.edu
+
+  - rank: 23
+    name: UNC Chapel Hill
+    sources:
+      - id: unc
+        label: UNC Chapel Hill (incl. postdocs)
+        type: manual
+        url: https://unc.peopleadmin.com/postings/search?query=postdoc
+        reason: PeopleAdmin job site; its robots.txt does not allow automated reading.
+
+  - rank: 24
+    name: UAB
+    sources:
+      - id: uab-postdoc
+        label: UAB Office of Postdoctoral Education list
+        type: manual
+        url: https://www.uab.edu/postdocs/prospective-postdocs/available-positions
+        reason: robots.txt on www.uab.edu does not allow automated reading.
+      - id: uab
+        label: UAB and UAB Medicine careers
+        type: manual
+        url: https://www.uab.edu/careers/
+        reason: Job lists load by script; no public listing feed found.
+
+  - rank: 25
+    name: UW-Madison
+    sources:
+      - id: wisc
+        label: University of Wisconsin-Madison
+        type: sitemap
+        sitemap_url: https://jobs.wisc.edu/sitemap.xml
+        link_pattern: '/jobs/([^/]+)$'
+        title_strip: '-madison-wisconsin-united-states.*$'
+      - id: wisc-postdoc
+        label: UW-Madison postdoc and research intern vacancies
+        type: manual
+        url: https://hr.wisc.edu/postdoc-and-research-intern-vacancies/
+        reason: Listings load from a data path that robots.txt does not allow.
+
+  - rank: 26
+    name: Baylor College of Medicine
+    sources:
+      - id: bcm
+        label: Baylor College of Medicine (postdoc category)
+        type: manual
+        url: https://jobs.bcm.edu/go/Postdoctoral-Research/7891800/
+        reason: robots.txt does not allow automated reading.
+
+  - rank: 27
+    name: OHSU
+    sources:
+      - id: ohsu-postdoc
+        label: OHSU postdoctoral portal
+        type: icims
+        host: postdoctoral-ohsu.icims.com
+      - id: ohsu
+        label: OHSU
+        type: icims
+        host: externalcareers-ohsu.icims.com
+
+  - rank: 28
+    name: Indiana University
+    sources:
+      - id: iu
+        label: Indiana University School of Medicine (academic and postdoc positions)
+        type: manual
+        url: https://indiana.peopleadmin.com/postings/search?query=postdoctoral
+        reason: PeopleAdmin job site; its robots.txt does not allow automated reading.
+
+  - rank: 29
+    name: Boston University
+    sources:
+      - id: bu
+        label: Boston University
+        type: html_list
+        host: jobs.silkroad.com
+        search_path: /BU/External?SearchString={q}
+        link_pattern: '^/BU/External/jobs/\d+$'
+        title_selector: .sr-panel__title
+        detail: css
+        detail_selector: '#mainContent'
+        detail_date_label: 'Posted Date'
+
+  - rank: 30
+    name: Wake Forest
+    sources:
+      - id: wakeforest
+        label: Atrium Health Wake Forest Baptist and Wake Forest School of Medicine
+        type: mcloud
+        organization: 2297
+        location_must_include: [Winston-Salem, Winston Salem]
+
+  - rank: 31
+    name: South Florida
+    sources:
+      - id: usf
+        label: University of South Florida (postdoc list)
+        type: manual
+        url: https://www.usf.edu/postdoctoral-affairs/postdoc-services/opportunities.aspx
+        reason: The postdoc list is a spreadsheet on Box, and jobs.usf.edu does not allow automated reading.
+
+  - rank: 32
+    name: Rutgers
+    sources:
+      - id: rutgers
+        label: Rutgers (incl. RBHS postdocs)
+        type: manual
+        url: https://jobs.rutgers.edu/postings/search?435=Postdoc&commit=Search
+        reason: PeopleAdmin job site; its robots.txt does not allow automated reading.
+
+  - rank: 33
+    name: Case Western / Cleveland Clinic
+    sources:
+      - id: clevelandclinic
+        label: Cleveland Clinic
+        type: workday
+        host: ccf.wd1.myworkdayjobs.com
+        tenant: ccf
+        site: ClevelandClinicCareers
+      - id: uhhospitals
+        label: University Hospitals Cleveland Medical Center
+        type: mcloud
+        organization: 2022
+      - id: cwru
+        label: Case Western Reserve University
+        type: manual
+        url: https://employment.case.edu/
+        reason: Job lists load by script; no public listing feed found.
+
+  - rank: 34
+    name: Utah
+    sources:
+      - id: utah
+        label: University of Utah and U of U Health
+        type: manual
+        url: https://employment.utah.edu/jobs/?q=postdoc
+        reason: Job pages load by script; no readable job data found.
+
+  - rank: 35
+    name: Albert Einstein
+    sources:
+      - id: einstein
+        label: Albert Einstein College of Medicine
+        type: jibe
+        host: careers.einsteinmed.edu
+
+  - rank: 36
+    name: Ohio State
+    sources:
+      - id: osu
+        label: Ohio State University and Wexner Medical Center
+        type: workday
+        host: osu.wd1.myworkdayjobs.com
+        tenant: osu
+        site: OSUCareers
+
+  - rank: 37
+    name: Minnesota
+    sources:
+      - id: umn
+        label: "University of Minnesota (postdocs: job code 9546)"
+        type: manual
+        url: https://employment.umn.edu/
+        reason: Job site robots.txt does not allow automated reading.
+
+  - rank: 38
+    name: Miami
+    sources:
+      - id: miami
+        label: University of Miami
+        type: workday
+        host: umiami.wd1.myworkdayjobs.com
+        tenant: umiami
+        site: UMCareerStaff
+
+  - rank: 39
+    name: UT Austin (Dell)
+    sources:
+      - id: utaustin
+        label: UT Austin (incl. Dell Medical School)
+        type: workday
+        host: utaustin.wd1.myworkdayjobs.com
+        tenant: utaustin
+        site: UTstaff
+
+  - rank: 40
+    name: USC
+    sources:
+      - id: usc
+        label: University of Southern California (incl. Keck)
+        type: workday
+        host: usc.wd5.myworkdayjobs.com
+        tenant: usc
+        site: ExternalUSCCareers
+
+  - rank: 41
+    name: Virginia
+    sources:
+      - id: uva
+        label: University of Virginia and UVA Health
+        type: manual
+        url: https://jobs.virginia.edu/us/en/c/research-jobs
+        reason: Its Workday site disallows automated reading in robots.txt.
+
+  - rank: 42
+    name: Florida
+    sources:
+      - id: ufl
+        label: University of Florida
+        type: html_list
+        host: explore.jobs.ufl.edu
+        search_path: /en-us/search/?search-keyword={q}
+        link_pattern: '^/en-us/job/\d+/'
+        row_time: false          # the date in the list is the closing date
+        detail: css
+        detail_selector: '#job-content'
+        detail_date_label: 'Advertised:'
+
+  - rank: 43
+    name: Medical College of Wisconsin
+    sources:
+      - id: mcw
+        label: Medical College of Wisconsin
+        type: workday
+        host: mcw.wd503.myworkdayjobs.com
+        tenant: mcw
+        site: ExternalCareers
+
+  - rank: 44
+    name: UMass Chan
+    sources:
+      - id: umasschan
+        label: UMass Chan Medical School
+        type: icims
+        host: careers-umms.icims.com
+
+  - rank: 45
+    name: Maryland
+    sources:
+      - id: umb-academic
+        label: University of Maryland, Baltimore (faculty and postdoc)
+        type: oracle
+        host: efzv.fa.us6.oraclecloud.com
+        site: CX_1013
+      - id: umb
+        label: University of Maryland, Baltimore (staff)
+        type: oracle
+        host: efzv.fa.us6.oraclecloud.com
+        site: CX_1
+
+  - rank: 46
+    name: Tulane
+    sources:
+      - id: tulane-academic
+        label: Tulane University (academic and postdoc)
+        type: oracle
+        host: tulane-ibqejb.fa.ocs.oraclecloud.com
+        site: CX_1001
+      - id: tulane
+        label: Tulane University (staff)
+        type: oracle
+        host: tulane-ibqejb.fa.ocs.oraclecloud.com
+        site: CX_1
+
+  - rank: 47
+    name: Rochester
+    sources:
+      - id: rochester
+        label: University of Rochester
+        type: workday
+        host: rochester.wd5.myworkdayjobs.com
+        tenant: rochester
+        site: UR_Staff
+      - id: rochester-postdoc
+        label: URMC postdoctoral positions list
+        type: board
+        url: https://www.urmc.rochester.edu/education/post-doctoral/post-doctoral-positions
+        row: 'table tr:has(td)'
+        date: 'td:nth-of-type(1)'
+        mentor: 'td:nth-of-type(2)'
+        dept: 'td:nth-of-type(3)'
+        title_template: 'Postdoctoral position: {dept} ({mentor})'
+        detail: none      # the full advertisement is in the row
+
+  - rank: 48
+    name: Iowa
+    sources:
+      - id: iowa-postdoc
+        label: University of Iowa postdoc openings (Carver College of Medicine)
+        type: board
+        url: https://jobs.uiowa.edu/jobSearch/postdoc/searchResults.php?submit=Search+For+Openings&searchType=POSTDOC&org=17
+        row: 'tr:has(a[href*="/postdoc/view/"])'
+        link: 'a[href*="/postdoc/view/"]'
+        dept: 'td:nth-of-type(4)'
+        date: none
+        detail: body
+        detail_date_label: 'Advertising Started on:'
+
+  - rank: 49
+    name: UC Davis
+    sources:
+      - id: ucdavis
+        label: UC Davis (academic recruitments, incl. postdocs)
+        type: ucrecruit
+        host: recruit.ucdavis.edu
+
+  - rank: 50
+    name: Louisville
+    sources:
+      - id: louisville
+        label: University of Louisville
+        type: workday
+        host: uofl.wd1.myworkdayjobs.com
+        tenant: uofl
+        site: UofLCareerSite
+
+  # ---- Added at the user's request; not ranked by BRIMR Internal Medicine ----
+  # (Mayo's NIH funding is not coded by department; Harvard's teaching hospitals are ranked
+  # separately from the medical school.) Ranks above 50 only set the display order; the dashboard
+  # shows these as "added".
+  - rank: 51
     name: Harvard
     sources:
       - id: harvard
@@ -228,7 +624,7 @@ schools:
         site: MGBExternal
         max_pages: 25   # very large board; results are not sorted by date
 
-  - rank: 22
+  - rank: 52
     name: Mayo Clinic
     sources:
       - id: mayo
@@ -236,13 +632,3 @@ schools:
         type: oracle
         host: fa-euwp-saasfaprod1.fa.ocs.oraclecloud.com
         site: CX_1
-
-  - rank: 23
-    name: Cleveland Clinic
-    sources:
-      - id: clevelandclinic
-        label: Cleveland Clinic
-        type: workday
-        host: ccf.wd1.myworkdayjobs.com
-        tenant: ccf
-        site: ClevelandClinicCareers

@@ -66,6 +66,17 @@ def is_recent(posted, today, max_days):
     return True
 
 
+def has_date(posted):
+    p = (posted or "").strip()
+    return bool(re.fullmatch(r"\d{4}-\d{2}-\d{2}", p) or re.search(r"\d+\+?\s*days? ago", p, re.I))
+
+
+def age_basis(posted, first_seen, today):
+    """The posting date when the site gives one; otherwise the day the tracker first saw the posting,
+    so undated postings are shown for at most the same window after they first appear."""
+    return posted if has_date(posted) else (first_seen or today)
+
+
 def run_source(school, src, profile, rules, state, today, skipped=None):
     """Returns (records_by_key, health_entry, too_old_by_key). Never raises.
 
@@ -91,7 +102,8 @@ def run_source(school, src, profile, rules, state, today, skipped=None):
         new_details, detail_errors, late_old = 0, 0, 0
         for job in cands:
             old = state.get(job.key)
-            known = (skipped.get(job.key) or {}).get("posted") or (old or {}).get("posted")
+            known = (skipped.get(job.key) or {}).get("posted") or \
+                (age_basis(old.get("posted"), old.get("first_seen"), today) if old else "")
             if known and not is_recent(known, today, max_age):
                 too_old[job.key] = {"posted": known, "seen": today}
                 late_old += 1
@@ -115,8 +127,9 @@ def run_source(school, src, profile, rules, state, today, skipped=None):
                 except Exception as e:  # keep going; one bad page must not stop the source
                     detail_errors += 1
                     health["last_detail_error"] = str(e)[:200]
-            if not is_recent(job.posted, today, max_age):
-                too_old[job.key] = {"posted": job.posted, "seen": today}
+            basis = age_basis(job.posted, (old or {}).get("first_seen"), today)
+            if not is_recent(basis, today, max_age):
+                too_old[job.key] = {"posted": basis, "seen": today}
                 late_old += 1
                 continue  # the detail page gave an exact date outside the window
             ev = rules.evaluate(job)
@@ -203,7 +216,7 @@ def main(argv=None):
     tasks = [(school, src) for school in sources["schools"] for src in school["sources"]
              if not only or src["id"] in only]
     records, health, too_old = {}, [], {}
-    with ThreadPoolExecutor(max_workers=6) as pool:
+    with ThreadPoolExecutor(max_workers=8) as pool:
         for out, h, old in pool.map(lambda t: run_source(t[0], t[1], profile, rules, state, today, skipped), tasks):
             records.update(out)
             health.append(h)
@@ -221,13 +234,18 @@ def main(argv=None):
     for key, old in state.items():
         if key in records or key in too_old:
             continue
-        if not rules.title_ok(old.get("title", "")) or not is_recent(old.get("posted"), today, max_age):
+        basis = age_basis(old.get("posted"), old.get("first_seen"), today)
+        if not rules.title_ok(old.get("title", "")) or not is_recent(basis, today, max_age):
             continue  # no longer wanted (title rules changed) or posted too long ago
         limit = cutoff_failed if old.get("source") in failed else cutoff
         if old.get("last_seen", "") >= limit:
             records[key] = old
+    by_source = {src["id"]: school for school in sources["schools"] for src in school["sources"]}
     for rec in records.values():
         rec.pop("_description", None)
+        school = by_source.get(rec.get("source"))
+        if school:  # keep rank and school name in step with sources.yaml (e.g. after re-ranking)
+            rec["rank"], rec["school"] = school["rank"], school["name"]
         rec["active"] = rec.get("last_seen") == today
 
     meta = {"generated_utc": now.strftime("%Y-%m-%d %H:%M UTC"), "today": today,

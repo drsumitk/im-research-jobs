@@ -140,3 +140,97 @@ def test_sitemap_harvard():
     assert j.department == "Harvard Medical School / Global Health and Social Medicine"
     assert j.description.startswith("Department: Global Health and Social Medicine")
     assert "Mental Health for All Lab" in j.description and j.location == "Boston, MA, United States"
+
+
+def test_board_yale_time_and_link():
+    from tracker.connectors import board
+    src = {"id": "yale-postdoc", "url": "https://postdocs.yale.edu/applicants/open-positions?page={page}",
+           "row": "li.reference-card", "link": "a.reference-card__heading-link", "detail": ".text-field"}
+    jobs = board.parse_list(load("board_yale.html"), src, "https://postdocs.yale.edu/applicants/open-positions?page=0")
+    assert len(jobs) == 2 and jobs[1].posted == "2026-10-20"
+    assert "Internal Medicine" in jobs[1].title
+    assert jobs[1].url == ("https://postdocs.yale.edu/posts/2026-10-20-postdoctoral-associate-position-in-"
+                           "pharmaceutical-regulation-and-evidence")
+
+
+def test_board_stanford_caption_template_and_dedupe():
+    from tracker.connectors import board
+    src = {"id": "stanford-postdoc", "row": "table.views-table tr",
+           "link": 'a[href*="/prospective/opportunities/"]', "title": "p strong",
+           "title_template": "Postdoctoral {title}", "dept_caption": True}
+    jobs = board.parse_list(load("board_stanford.html"), src, "https://postdocs.stanford.edu/prospective/opportunities")
+    assert len(jobs) == 2 and jobs[0].key == jobs[1].key  # same opening listed under two departments
+    j = jobs[0]
+    assert j.title == "Postdoctoral Position with Louise Sun" and j.posted == "2026-09-04"
+    assert j.department == "Anesthesiology, Perioperative and Pain Medicine"
+
+
+def test_board_vanderbilt_cells_and_relative_link():
+    from tracker.connectors import board
+    src = {"id": "vanderbilt-postdoc", "row": 'tr:has(a[href^="?id="])', "link": 'a[href^="?id="]',
+           "date": "td:nth-of-type(1)", "dept": "td:nth-of-type(2)", "mentor": "td:nth-of-type(4)",
+           "title_template": "Postdoctoral position: {dept} ({mentor})"}
+    base = "https://www.vanderbilt.edu/postdoc/prospective-postdocs/current-opportunities/"
+    [j] = board.parse_list(load("board_vanderbilt.html"), src, base)
+    assert j.url == base + "?id=954" and j.posted == "2026-10-16"
+    assert j.title == "Postdoctoral position: Biological Sciences (Carl Johnson and Alexandre Tiriac)"
+
+
+def test_board_wcm_dotted_date():
+    from tracker.connectors import board
+    src = {"id": "wcm", "row": 'tr:has(a[href*="/opportunities/postdoctoral-positions/"])',
+           "link": 'a[href*="/opportunities/postdoctoral-positions/"]', "date": "td.views-field-created",
+           "dept": "td.views-field-field-department", "mentor": "td.views-field-field-faculty-name"}
+    [j] = board.parse_list(load("board_wcm.html"), src, "https://postdocs.weill.cornell.edu/opportunities/postdoctoral-positions")
+    assert j.posted == "2026-10-19" and j.department == "Appel Institute/BMRI"
+    assert j.title.startswith("Postdoctoral Associate in Neuroscience")
+
+
+def test_board_rochester_rows_without_links():
+    from tracker.connectors import board
+    src = {"id": "rochester-postdoc", "row": "table tr:has(td)", "date": "td:nth-of-type(1)",
+           "mentor": "td:nth-of-type(2)", "dept": "td:nth-of-type(3)",
+           "title_template": "Postdoctoral position: {dept} ({mentor})", "detail": "none"}
+    url = "https://www.urmc.rochester.edu/education/post-doctoral/post-doctoral-positions"
+    jobs = board.parse_list(load("board_rochester.html"), src, url)
+    assert len(jobs) == 2 and jobs[0].key != jobs[1].key and jobs[1].url == url
+    assert jobs[1].title == "Postdoctoral position: Hematology and Oncology (Naoko Takebe)"
+    assert jobs[1].posted == "2026-09-25" and jobs[1].description.startswith("Department: Hematology and Oncology")
+
+
+def test_board_iowa_detail_date_label():
+    from tracker.connectors import board
+    src = {"id": "iowa-postdoc", "row": 'tr:has(a[href*="/postdoc/view/"])', "link": 'a[href*="/postdoc/view/"]',
+           "dept": "td:nth-of-type(4)", "date": "none", "detail": "body",
+           "detail_date_label": "Advertising Started on:"}
+    [j] = board.parse_list(load("board_iowa_list.html"), src, "https://jobs.uiowa.edu/jobSearch/postdoc/searchResults.php")
+    assert j.posted == "" and j.department == "Internal Medicine" and j.url == "https://jobs.uiowa.edu/postdoc/view/4528"
+    board.parse_detail(load("board_iowa_detail.html"), j, src)
+    assert j.posted == "2025-12-22" and "Hematology/Oncology" in j.description
+
+
+def test_icims_list_and_detail():
+    from tracker.connectors import icims
+    src = {"id": "umasschan", "host": "careers-umms.icims.com"}
+    jobs = icims.parse_list(load("icims_list.html"), src)
+    assert [j.job_id for j in jobs] == ["51863", "42216"]
+    assert jobs[0].title == "Post Doc - Open Rank" and jobs[0].posted == "2026-08-17"
+    assert jobs[0].department == "Biochem & Molecular Biotech" and jobs[0].url.endswith("/jobs/51863/post-doc---open-rank/job")
+    assert jobs[1].posted == "" and jobs[1].department.startswith("Institute on Development")
+    icims.parse_detail(load("icims_detail.html"), jobs[0])
+    assert jobs[0].description.startswith("Department: Biochem") and "registry data" in jobs[0].description
+
+
+def test_find_date_formats():
+    from tracker.textutil import find_date
+    assert find_date("Posted on: September 04, 2026") == "2026-09-04"
+    assert find_date("Advertising Started on: Monday, December 22nd, 2025") == "2025-12-22"
+    assert find_date("Advertised: 21 Oct 2026 Eastern") == "2026-10-21"
+    assert find_date("10.19.2026") == "2026-10-19" and find_date("2026-10-20T00:00") == "2026-10-20"
+    assert find_date("$62,232.00 to Commensurate") == ""
+
+
+def test_sitemap_title_strip():
+    from tracker.connectors.sitemap import title_from_slug
+    s = "postdoctoral-research-associate-medicine-madison-wisconsin-united-states-270034a7-6177"
+    assert title_from_slug(s, "-madison-wisconsin-united-states.*$") == "postdoctoral research associate medicine"

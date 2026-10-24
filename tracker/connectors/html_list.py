@@ -7,7 +7,7 @@ from urllib.parse import quote, urljoin
 from bs4 import BeautifulSoup
 
 from ..models import Job
-from ..textutil import html_to_text, iso_date
+from ..textutil import find_date, html_to_text, iso_date
 
 
 def parse_list(page_html, src):
@@ -19,7 +19,8 @@ def parse_list(page_html, src):
         path = re.sub(r"^https?://[^/]+", "", href)
         if not pat.search(path):
             continue
-        title = a.get_text(" ", strip=True)
+        t_el = a.select_one(src["title_selector"]) if src.get("title_selector") else None
+        title = (t_el or a).get_text(" ", strip=True)
         if not title or title.lower() in ("apply now", "apply", "view job", "learn more"):
             continue
         if path in seen:
@@ -28,7 +29,7 @@ def parse_list(page_html, src):
         posted, dept = "", ""
         row = a.find_parent("tr")
         if row is not None:
-            t = row.find("time")
+            t = row.find("time") if src.get("row_time", True) else None  # some lists show a closing date
             if t and t.get("datetime"):
                 posted = iso_date(t["datetime"])
             d = row.select_one('[class*="department"]')
@@ -73,6 +74,12 @@ def parse_detail(page_html, job, src):
     else:
         el = soup.select_one(src.get("detail_selector", "main")) or soup.find("main") or soup.body
         job.description = html_to_text(str(el)) if el else ""
+    label = src.get("detail_date_label")
+    if label:
+        text = re.sub(r"\s+", " ", soup.get_text(" "))
+        i = text.find(label)
+        if i >= 0:
+            job.posted = find_date(text[i + len(label): i + len(label) + 80]) or job.posted
     return job
 
 
