@@ -1,5 +1,6 @@
 """Optional Claude classifier. Runs only when the ANTHROPIC_API_KEY environment variable is set
-(stored as an encrypted GitHub Actions secret, never in the code). Each job is classified once."""
+(stored as an encrypted GitHub Actions secret, never in the code). Each job is classified once by the
+main model; borderline verdicts can be re-checked once by a stronger review model (see run.apply_ai)."""
 import json
 import os
 import re
@@ -88,7 +89,7 @@ def _clean_posting(s):
     return re.sub(r"</?\s*(posting|job_posting|instructions?|system)\b[^>]*>", " ", s or "", flags=re.I)
 
 
-def classify(job, profile, session=None):
+def classify(job, profile, session=None, model=None):
     key = os.environ.get("ANTHROPIC_API_KEY")
     if not key:
         raise RuntimeError("ANTHROPIC_API_KEY not set")
@@ -101,7 +102,7 @@ def classify(job, profile, session=None):
             f"{desc}\n</job_posting>\n"
             "Classify the job posting above and reply with the JSON object only.")
     body = {
-        "model": ai.get("model", "claude-haiku-5-5"),
+        "model": model or ai.get("model", "claude-haiku-5-5"),
         "max_tokens": int(ai.get("max_output_tokens", 1500)),
         "system": SYSTEM.format(summary=" ".join(profile["candidate_summary"].split()),
                                 divisions=json.dumps(DIVISIONS)),

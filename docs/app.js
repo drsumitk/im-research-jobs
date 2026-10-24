@@ -153,6 +153,7 @@ function card(j) {
   const ai = j.ai || {};
   const add = (t, cls) => tags.append(el("span", "tag " + (cls || ""), t));
   const s = (x) => String(x == null ? "" : x);
+  if (j.reviewed_by) add("re-checked by " + s(j.reviewed_by));
   if (ai.role_type) add(s(ai.role_type).replace(/_/g, " "));
   if (ai.mbbs_without_phd_eligible) add("MBBS eligible: " + s(ai.mbbs_without_phd_eligible), ai.mbbs_without_phd_eligible === "no" ? "warn" : "");
   if (ai.visa) add("visa: " + s(ai.visa).replace(/_/g, " "), /no_|citizen/.test(s(ai.visa)) ? "warn" : "");
@@ -162,6 +163,9 @@ function card(j) {
   const det = el("details");
   det.append(el("summary", null, "Excerpt and rule signals"));
   det.append(el("p", "snippet", j.snippet || "(no text captured)"));
+  if (j.ai_first && j.ai_first.verdict) {
+    det.append(el("p", "signals", `First pass: ${s(j.ai_first.verdict).replace(/_/g, " ")}. ${s(j.ai_first.reason)}`));
+  }
   const r = j.rules || {};
   det.append(el("p", "signals", `Rules: ${r.research_type || "?"}; wet-lab terms: ${(r.wet_terms || []).join(", ") || "none"}; clinical terms: ${(r.dry_terms || []).join(", ") || "none"}`));
   li.append(det);

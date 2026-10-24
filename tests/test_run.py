@@ -96,3 +96,34 @@ def test_undated_postings_expire_after_window_from_first_seen():
     assert not run.is_recent(run.age_basis("", "2026-09-01", "2026-10-24"), "2026-10-24", 21)
     assert run.is_recent(run.age_basis("", None, "2026-10-24"), "2026-10-24", 21)   # first seen today
     assert run.age_basis("2026-10-20", "2026-01-01", "2026-10-24") == "2026-10-20"  # a real date wins
+
+
+def test_borderline_verdicts_get_one_review_by_the_stronger_model(monkeypatch):
+    monkeypatch.setattr(classify, "available", lambda: True)
+    calls = []
+
+    def fake(job, profile, session=None, model=None):
+        calls.append(model or "first")
+        if model:
+            return {"verdict": "match", "reason": "review: clinical outcomes in Cardiology"}
+        return {"verdict": "check" if job.title == "Research Fellow" else "excluded", "reason": "first pass"}
+
+    monkeypatch.setattr(classify, "classify", fake)
+    prof = dict(PROFILE, ai=dict(PROFILE["ai"], review_model="claude-sonnet-5-5", max_review_calls_per_run=5))
+    records = {"a": rec("a"), "b": dict(rec("b"), title="Postdoc lab")}
+    used = run.apply_ai(records, prof, [])
+    assert calls == ["first", "first", "claude-sonnet-5-5"] and used == 3
+    a = records["a"]
+    assert a["verdict"] == "Match" and a["ai_first"]["verdict"] == "check" and a["ai_review_done"]
+    assert records["b"]["verdict"] == "Excluded" and "ai_first" not in records["b"]
+    run.apply_ai(records, prof, [])  # nothing left to do on a later run
+    assert len(calls) == 3
+
+
+def test_review_switched_off_without_review_model(monkeypatch):
+    monkeypatch.setattr(classify, "available", lambda: True)
+    monkeypatch.setattr(classify, "classify", lambda job, profile, session=None, model=None:
+                        {"verdict": "check", "reason": "x"})
+    prof = dict(PROFILE, ai={k: v for k, v in PROFILE["ai"].items() if k != "review_model"})
+    records = {"a": rec("a")}
+    assert run.apply_ai(records, prof, []) == 1 and "ai_first" not in records["a"]

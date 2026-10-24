@@ -108,8 +108,9 @@ def run_source(school, src, profile, rules, state, today, skipped=None):
                 too_old[job.key] = {"posted": known, "seen": today}
                 late_old += 1
                 continue  # an exact date read earlier shows it is too old
-            ai_pending = bool(old) and classify.available() and not old.get("ai") \
-                and int(old.get("ai_attempts", 0)) < MAX_AI_ATTEMPTS
+            ai_pending = bool(old) and classify.available() and (
+                (not old.get("ai") and int(old.get("ai_attempts", 0)) < MAX_AI_ATTEMPTS)
+                or needs_review(old, profile))
             if old and old.get("evaluated") and not ai_pending:
                 old["last_seen"] = today
                 old["title"] = job.title or old["title"]
@@ -143,9 +144,14 @@ def run_source(school, src, profile, rules, state, today, skipped=None):
                 "fingerprint": fingerprint(job.description),
                 "rules": ev, "ai": None, "evaluated": bool(job.description),
                 "ai_attempts": int((old or {}).get("ai_attempts", 0)),
+                **{k: (old or {})[k] for k in ("ai", "review_attempts") if (old or {}).get(k)},
                 "verdict": ev["verdict"], "reason": ev["reason"],
                 "_description": job.description,  # removed before saving
             }
+            rec = out[job.key]
+            if rec.get("ai"):  # re-opened only for the review pass: keep the first AI verdict meanwhile
+                rec["verdict"] = AI_TO_VERDICT.get(rec["ai"].get("verdict"), rec["verdict"])
+                rec["reason"] = rec["ai"].get("reason", rec["reason"])
         health.update(status="ok", new_details=new_details, detail_errors=detail_errors,
                       candidates=len(cands) - late_old, too_old=len(titled) - len(cands) + late_old)
     except RobotsBlocked as e:
@@ -159,26 +165,42 @@ def run_source(school, src, profile, rules, state, today, skipped=None):
 AI_TO_VERDICT = {"match": "Match", "check": "Check", "other_dept": "Other dept", "excluded": "Excluded"}
 
 
+def needs_review(rec, profile):
+    """A first-pass AI verdict in the review list that the review model has not yet re-checked."""
+    ai = profile.get("ai", {})
+    first = rec.get("ai") or {}
+    return bool(ai.get("review_model")) and not rec.get("ai_review_done") \
+        and first.get("verdict") in set(ai.get("review_verdicts", ["check"])) \
+        and int(rec.get("review_attempts", 0)) < MAX_AI_ATTEMPTS
+
+
+def _job_of(rec):
+    from .models import Job
+    return Job(rec["source"], rec["key"], rec["title"], rec["url"], rec["location"],
+               rec["department"], rec["posted"], rec["_description"])
+
+
 def apply_ai(records, profile, log):
+    """First pass: the main model (Haiku) classifies each new posting once.
+    Second pass: the review model (Sonnet) re-checks postings the first pass left as borderline
+    ("check" by default) and its verdict replaces the first one. Both passes have a per-run budget."""
     if not classify.available():
         log.append("AI classifier off (no ANTHROPIC_API_KEY secret).")
         return 0
-    budget = int(profile.get("ai", {}).get("max_calls_per_run", 150))
+    ai = profile.get("ai", {})
+    budget = int(ai.get("max_calls_per_run", 150))
     used = errors = 0
     causes = Counter()
-    from .models import Job
     for rec in records.values():
         if used >= budget:
             log.append(f"AI budget of {budget} calls reached; remaining jobs are classified on the next run.")
             break
         if rec.get("ai") or not rec.get("_description") or int(rec.get("ai_attempts", 0)) >= MAX_AI_ATTEMPTS:
             continue
-        job = Job(rec["source"], rec["key"], rec["title"], rec["url"], rec["location"],
-                  rec["department"], rec["posted"], rec["_description"])
         rec["ai_attempts"] = int(rec.get("ai_attempts", 0)) + 1
         used += 1
         try:
-            res = classify.classify(job, profile)
+            res = classify.classify(_job_of(rec), profile)
         except Exception as e:
             # Full detail goes to the private Actions log; the public page gets only the cause category.
             print(f"AI error on {rec['key']}: {e}", file=sys.stderr)
@@ -190,11 +212,40 @@ def apply_ai(records, profile, log):
         rec["ai"] = res
         rec["verdict"] = AI_TO_VERDICT[res["verdict"]]
         rec["reason"] = res.get("reason", "")
+
+    review_model = ai.get("review_model")
+    review_budget = int(ai.get("max_review_calls_per_run", 0))
+    reviewed = 0
+    if review_model and review_budget:
+        for rec in records.values():
+            if reviewed >= review_budget:
+                log.append(f"Review budget of {review_budget} calls reached; remaining borderline postings "
+                           "are re-checked on the next run.")
+                break
+            if not rec.get("_description") or not needs_review(rec, profile):
+                continue
+            rec["review_attempts"] = int(rec.get("review_attempts", 0)) + 1
+            reviewed += 1
+            try:
+                res = classify.classify(_job_of(rec), profile, model=review_model)
+            except Exception as e:
+                print(f"AI review error on {rec['key']}: {e}", file=sys.stderr)
+                errors += 1
+                causes["review " + str(getattr(e, "category", type(e).__name__))] += 1
+                continue
+            finally:
+                time.sleep(AI_GAP_SECONDS)
+            rec["ai_first"] = rec["ai"]
+            rec["ai"] = res
+            rec["ai_review_done"] = True
+            rec["reviewed_by"] = ai.get("review_label", review_model)
+            rec["verdict"] = AI_TO_VERDICT[res["verdict"]]
+            rec["reason"] = res.get("reason", "")
     if errors:
         by_cause = ", ".join(f"{c} x{n}" for c, n in causes.most_common())
         log.append(f"AI classifier failed on {errors} posting(s) ({by_cause}); details are in the GitHub "
                    f"Actions log. Each posting is retried at most {MAX_AI_ATTEMPTS} times.")
-    return used
+    return used + reviewed
 
 
 def main(argv=None):

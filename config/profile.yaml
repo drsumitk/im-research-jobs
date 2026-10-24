@@ -125,3 +125,9 @@ ai:
   model: claude-haiku-5-5
   max_calls_per_run: 600
   max_description_chars: 8000
+  # Second opinion: postings the first model marks "check" (borderline) are re-checked once by a
+  # stronger model, whose verdict replaces the first. Remove review_model to switch this off.
+  review_model: claude-sonnet-5-5
+  review_label: Claude Sonnet
+  review_verdicts: [check]
+  max_review_calls_per_run: 80
