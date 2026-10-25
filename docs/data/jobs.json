@@ -1,11 +1,11 @@
 {
  "meta": {
-  "generated_utc": "2026-10-25 01:03 UTC",
+  "generated_utc": "2026-10-25 17:24 UTC",
   "today": "2026-10-25",
   "ai_enabled": true,
-  "ai_calls": 1,
+  "ai_calls": 9,
   "log": [],
-  "total": 436
+  "total": 437
  },
  "jobs": {
   "bilh:jobs-postdoctoral-fellow-boston-ma-jr101784": {
@@ -80,7 +80,8 @@
    "reviewed_by": "Claude Sonnet",
    "verdict": "Check",
    "reason": "Generic BIDMC postdoctoral fellow template; MD accepted, but no department, lab or research area stated, and it mentions 'conduct of experiments' and lab skills.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "bilh:jobs-postdoctoral-research-fellow-boston-ma-jr105136": {
    "key": "bilh:jobs-postdoctoral-research-fellow-boston-ma-jr105136",
@@ -154,7 +155,8 @@
    "reviewed_by": "Claude Sonnet",
    "verdict": "Check",
    "reason": "Postdoc fellow at BIDMC accepting 'Doctoral Degree or M.D.', so MBBS may qualify, but no department, lab or research focus is stated; work could be wet lab.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "bilh:jobs-postdoctoral-research-fellow-boston-ma-jr105378": {
    "key": "bilh:jobs-postdoctoral-research-fellow-boston-ma-jr105378",
@@ -228,7 +230,8 @@
    "reviewed_by": "Claude Sonnet",
    "verdict": "Check",
    "reason": "Generic BIDMC postdoctoral fellow template accepting Doctoral Degree or M.D.; no department, PI or lab named, and duties mention experiments and lab skills, so work type and IM fit are unknown.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "bilh:jobs-postdoctoral-research-fellow-boston-ma-jr105863": {
    "key": "bilh:jobs-postdoctoral-research-fellow-boston-ma-jr105863",
@@ -302,7 +305,8 @@
    "reviewed_by": "Claude Sonnet",
    "verdict": "Check",
    "reason": "Postdoctoral fellow at BIDMC accepting 'Doctoral Degree or M.D.'; no department, lab, or research area stated, and duties mention experiments and lab skills generically.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "bilh:jobs-postdoctoral-research-fellow-in-computational-oncology-boston-ma-jr101228": {
    "key": "bilh:jobs-postdoctoral-research-fellow-in-computational-oncology-boston-ma-jr101228",
@@ -357,7 +361,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Skills section requires a PhD in a quantitative field; the posting is in Pathology and focuses on computational cancer genomics.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "brown:REQ207288": {
    "key": "brown:REQ207288",
@@ -414,7 +419,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires LMHC/LCSW licensure and a master's in counseling or social work; posting states no visa sponsorship; not an Internal Medicine role.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "brown:REQ211624": {
    "key": "brown:REQ211624",
@@ -470,7 +476,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Bachelor's-level bilingual research assistant in a health promotion center; posting states no visa sponsorship and is outside Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "brown:REQ211883": {
    "key": "brown:REQ211883",
@@ -528,7 +535,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Senior Research Assistant requiring bachelor's degree; posting states not eligible for visa sponsorship; addiction research center, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "brown:REQ211912": {
    "key": "brown:REQ211912",
@@ -586,7 +594,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Research assistant role requiring a bachelor's degree; primarily laboratory-based alcohol administration sessions with biosample collection; posting states no visa sponsorship and is not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "bswhealth:26005020": {
    "key": "bswhealth:26005020",
@@ -639,7 +648,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Research Analyst 2 in Allied Health, minimum bachelor's degree; clinical data work, but outside Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "clevelandclinic:357907": {
    "key": "clevelandclinic:357907",
@@ -694,7 +704,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Neurosciences lab with bench/molecular/iPSC/mouse model work and hazardous chemical exposure; not Internal Medicine and wet-lab core duties, so excluded.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "clevelandclinic:357914": {
    "key": "clevelandclinic:357914",
@@ -749,7 +760,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are flow cytometry, single-cell RNA sequencing, microbiome sequencing and animal models; department is Ophthalmic Research, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "clevelandclinic:357922": {
    "key": "clevelandclinic:357922",
@@ -803,7 +815,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are in vivo and in vitro experiments on antibodies, immunology and virology, which is wet-lab work. Not Internal Medicine; PhD required, MD only with lab experience.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "cu-anschutz:39083": {
    "key": "cu-anschutz:39083",
@@ -862,7 +875,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are transgenic, cell culture, molecular and biochemical bench work; requires PhD in biochemistry/cell or molecular biology; Obstetrics and Gynecology department, not IM.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "cu-anschutz:40576": {
    "key": "cu-anschutz:40576",
@@ -1009,7 +1023,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are cell culture, rodent work, PCR, flow cytometry (wet lab); requires PhD; Dermatology, not IM; only US citizens or permanent residents eligible.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "cu-anschutz:41398": {
    "key": "cu-anschutz:41398",
@@ -1060,7 +1075,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Paleontology postdoc in Cell and Developmental Biology, not Internal Medicine; requires a PhD in paleontology or related field; explicitly no visa sponsorship.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "cu-anschutz:41430": {
    "key": "cu-anschutz:41430",
@@ -1113,7 +1129,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Department of Psychiatry, not Internal Medicine. Minimum qualifications require a PhD or MD/PhD in a relevant discipline, so the candidate's MBBS without PhD does not qualify.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "cu-anschutz:41460": {
    "key": "cu-anschutz:41460",
@@ -1173,7 +1190,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are animal models, flow cytometry, molecular biology and cell assays; minimum requires a doctoral degree (PhD, MD, MD/PhD) plus a first-author publication.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "cu-anschutz:41483": {
    "key": "cu-anschutz:41483",
@@ -1234,7 +1252,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are wet-lab and animal work (in vivo models, PCR, tissue culture); Otolaryngology, not Internal Medicine; requires a PhD or graduate degree with lab experience.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1344537600": {
    "key": "duke:1344537600",
@@ -1287,7 +1306,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Bench neurodevelopment lab requiring mouse genetics, organoids, stem cells and imaging; minimum requirement is a PhD in a biology field, and the department is Cell Biology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1382542600": {
    "key": "duke:1382542600",
@@ -1344,7 +1364,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Minimum requirement is a PhD, which the candidate lacks. Department is Population Health Sciences (REGAL cancer epidemiology), not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1394879000": {
    "key": "duke:1394879000",
@@ -1398,7 +1419,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab B-cell immunology role (flow cytometry, cell culture, molecular biology) requiring a PhD; Abdominal Transplant, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1409074200": {
    "key": "duke:1409074200",
@@ -1454,7 +1476,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab B-cell immunology with flow cytometry and mouse models; requires a PhD in immunology, which the candidate lacks; not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1410017400": {
    "key": "duke:1410017400",
@@ -1506,7 +1529,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires molecular and biochemical approaches with bench-style work; requires PhD or equivalent; sits in Neurology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1411414700": {
    "key": "duke:1411414700",
@@ -1568,7 +1592,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Clinical Research Specialist requiring only an Associate's degree and one year of experience; a coordinator-type assistant role, not a research fellow or postdoc.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1411458500": {
    "key": "duke:1411458500",
@@ -1618,7 +1643,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a PhD in CS, EE, biomedical engineering, informatics, biostatistics or a related discipline; not Internal Medicine; deep learning on medical imaging.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1412085300": {
    "key": "duke:1412085300",
@@ -1670,7 +1696,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Protein expression, purification, and biophysical/structural lab work is core; requires PhD and 8-10 years postdoc or industry experience; department is Cell Biology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1417051500": {
    "key": "duke:1417051500",
@@ -1725,7 +1752,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab molecular biology and vaccine work are core duties; requires PhD or MD/PhD; Duke Human Vaccine Institute is not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1418726400": {
    "key": "duke:1418726400",
@@ -1780,7 +1808,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires PhD and core duties are mammalian cell culture, animal xenograft/GEMM models, and bench-based molecular work; wet-lab excludes the candidate.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1420711500": {
    "key": "duke:1420711500",
@@ -1828,6 +1857,70 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab biochemistry postdoc (biochemistry, live-cell imaging, primary neurons) in Biochemistry; requires Ph.D. or equivalent doctoral training; not Internal Medicine.",
+   "active": true,
+   "title_only": false
+  },
+  "duke:1424490900": {
+   "key": "duke:1424490900",
+   "school": "Duke",
+   "rank": 8,
+   "source": "duke",
+   "source_label": "Duke University and Duke Health",
+   "title": "Postdoctoral Associate",
+   "url": "https://careers.duke.edu/job/Durham-Postdoctoral-Associate-NC-27710/1424490900/",
+   "location": "Durham, NC, US, 27710",
+   "department": "Head and Neck Surgery&Communications Sci",
+   "posted": "2026-10-25",
+   "first_seen": "2026-10-25",
+   "last_seen": "2026-10-25",
+   "snippet": "School of Medicine Established in 1930, Duke University School of Medicine is the youngest of the nation's top medical schools. Ranked sixth among medical schools in the nation, the School takes pride in being an inclusive community of outstanding learners, investigators, clinicians, and staff where interdisciplinary collaboration is embraced and great ideas accelerate translation of fundamental scientific discoveries to improve human health locally and around the globe. Composed of more than 2,600 faculty physicians and researchers, nearly 2,000 students, and more than 6,200 staff, the Duke University School of Medicine along with the Duke University School of Nursing, and Duke University Health System comprise Duke Health, a world-class academic medical center. The Health System encompasses Duke University Hospital, Duke Regional Hospital, Duke Raleigh Hospital, Duke Health Integrated ",
+   "fingerprint": "0cf5c5370cd6746d",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "department",
+    "research_type": "Clinical or dry research",
+    "wet_terms": [],
+    "dry_terms": [
+     "biostatistic",
+     "claims data",
+     "cohort",
+     "data analys",
+     "ehr",
+     "epidemiolog",
+     "health services research",
+     "observational"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "Head and Neck Surgery&Communications Sci",
+    "reason": "Minimum requires a doctorate in epidemiology, biostatistics or a related field; the posting is also in Head and Neck Surgery, not Internal Medicine.",
+    "verify": "",
+    "missing": "Claims, registry and EHR secondary dataset analysis; SEER-Medicare or similar oncology data experience",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Minimum requires a doctorate in epidemiology, biostatistics or a related field; the posting is also in Head and Neck Surgery, not Internal Medicine.",
    "active": true
   },
   "duke:1431207600": {
@@ -1889,7 +1982,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are laboratory experiments on patient-derived specimens, tissue culture, and animal models; department is Neurosurgery, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1431720400": {
    "key": "duke:1431720400",
@@ -1941,7 +2035,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Minimum requires a PhD, DrPH, or equivalent research doctorate in nursing or related fields. Based in the School of Nursing, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1432711600": {
    "key": "duke:1432711600",
@@ -1997,7 +2092,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Health policy research at Duke-Margolis Institute, a policy institute outside Internal Medicine; no wet-lab work and no visa sponsorship stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1432982400": {
    "key": "duke:1432982400",
@@ -2058,7 +2154,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are bioengineered muscle culture, contractile force, mitochondrial stress testing, qPCR, Western blot; requires a PhD and sits in Pediatrics, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1433460400": {
    "key": "duke:1433460400",
@@ -2111,7 +2208,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a Ph.D. in applied math or computational biology; hosted by Biostatistics & Bioinformatics and Mathematics, not Internal Medicine. Computational modeling role.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1433655400": {
    "key": "duke:1433655400",
@@ -2165,7 +2263,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Field-based clinical research specialist role (recruitment, consent, assessments) in department 'SSPP CCFP', not Internal Medicine; requires only a bachelor's degree; no visa statement.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1437764800": {
    "key": "duke:1437764800",
@@ -2213,7 +2312,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Posting describes onsite research laboratory work, mechanistic cancer research, and experimental design and data generation as core duties, which conflicts with the candidate's no-bench requirement.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1437771600": {
    "key": "duke:1437771600",
@@ -2263,7 +2363,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are molecular and cellular biology experiments in an onsite research laboratory, which is wet-lab work the candidate lacks; the posting does not address visa sponsorship.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1439134300": {
    "key": "duke:1439134300",
@@ -2319,7 +2420,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "AI and EHR-based HIV PrEP research housed in Department of Surgery, not Internal Medicine. Minimum lists M.D. as equivalent, but required qualifications demand a PhD.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1439183900": {
    "key": "duke:1439183900",
@@ -2371,7 +2473,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Funded by NIA T32 grant requiring US citizens or legal permanent residents; candidate needs visa sponsorship. Center for Study of Aging is not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1439519700": {
    "key": "duke:1439519700",
@@ -2419,7 +2522,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are molecular and translational lab experiments onsite in a research laboratory; requires PhD or doctorate with over 5 years postdoctoral training.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1439568400": {
    "key": "duke:1439568400",
@@ -2469,7 +2573,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are mechanistic cell signaling and experimental model work in a research laboratory (wet lab); requires PhD or doctorate and 5+ years postdoc training.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1439606600": {
    "key": "duke:1439606600",
@@ -2521,7 +2626,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are wet-lab mechanistic studies and assay development in the Tuveson Lab; the posting also requires a Ph.D. or equivalent doctorate.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1442247800": {
    "key": "duke:1442247800",
@@ -2573,7 +2679,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Anesthesiology basic-science lab; duties include molecular, genetic, and animal-model protocols and laboratory operations, which is wet-lab work. Not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1442266300": {
    "key": "duke:1442266300",
@@ -2629,7 +2736,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Coordinator-level support role (screening, consent, subject visits, sample processing) under CRC supervision, requiring an Associate's degree. Candidate seeks research fellow, postdoc, or associate roles, not coordinator roles.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1442378200": {
    "key": "duke:1442378200",
@@ -2682,7 +2790,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Clinical research role (participant recruitment, visits, data collection) in Psychiatry, not Internal Medicine. Minimum is an associate's degree, so MBBS qualifies. Role is coordinator-type, which the candidate excludes.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1442590200": {
    "key": "duke:1442590200",
@@ -2734,7 +2843,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab role (electrophysiology, lipid biochemistry, structural biology) in Biochemistry; requires a PhD in minimum requirements, so an MBBS without PhD is ineligible.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1442990600": {
    "key": "duke:1442990600",
@@ -2785,7 +2895,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab influenza research (primary cell culture, animal models, genomic screening); requires PhD or equivalent doctorate; department is Molecular Genetics and Microbiology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "duke:1442993300": {
    "key": "duke:1442993300",
@@ -2838,7 +2949,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab influenza pathogenesis work with primary cell culture and animal models; department is Molecular Genetics and Microbiology, not Internal Medicine; requires PhD or equivalent doctorate.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:157344": {
    "key": "emory:157344",
@@ -2888,7 +3000,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "HIV PrEP epidemiology postdoc in Emory's Epidemiology Department at Rollins School of Public Health, not Internal Medicine. Minimum qualification lists M.D., so MBBS qualifies. No visa info.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:157719": {
    "key": "emory:157719",
@@ -2939,7 +3052,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Statistical causal-inference methods postdoc in Biostatistics and Bioinformatics, not Internal Medicine. Minimum accepts an M.D.; no PhD required; visa not stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:162497": {
    "key": "emory:162497",
@@ -2987,7 +3101,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Laboratory research on skeletal tissue and Orthopaedics with experiments and lab meetings; wet-lab core duties, and the department is not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:163650": {
    "key": "emory:163650",
@@ -3035,7 +3150,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Lab-based postdoc designing experiments with a PI; animal experience preferred. No Internal Medicine department stated. Bench work appears core.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:163939": {
    "key": "emory:163939",
@@ -3090,7 +3206,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Required qualifications state 'A recently completed PhD in epidemiology, nursing, public health, or a related quantitative discipline.' No Internal Medicine division is stated, and no visa terms appear.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:164381": {
    "key": "emory:164381",
@@ -3145,7 +3262,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Pediatric surgical outcomes research (registries, clinical trials) in Department of Pediatrics; MD listed as qualifying degree, but not Internal Medicine. Visa not stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:164409": {
    "key": "emory:164409",
@@ -3195,7 +3313,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab neuro-oncology role: molecular characterization of glioblastoma and NF models, gene therapy, vectorology, molecular biology. Not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:168221": {
    "key": "emory:168221",
@@ -3246,7 +3365,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are lab work on patient-derived neuroendocrine tumor models and drug testing, which is wet-lab. No Internal Medicine department is named.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:169405": {
    "key": "emory:169405",
@@ -3301,7 +3421,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are animal models, CRISPR/shRNA functional genomics, and molecular biology lab work; requires a PhD, which the candidate lacks; not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:173004": {
    "key": "emory:173004",
@@ -3349,7 +3470,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires cancer metabolism and drug discovery experiments in a PI's laboratory, which implies bench work. No Internal Medicine link is stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:174174": {
    "key": "emory:174174",
@@ -3401,7 +3523,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Clinical and data research (EHR, NLP, trial eligibility) but hosted in Biomedical Informatics, not Internal Medicine. Minimum accepts M.D.; no visa statement.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:174214": {
    "key": "emory:174214",
@@ -3458,7 +3581,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are mouse osteoarthritis models with surgery, histology, and cell culture, which is wet-lab work. Department is not stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:174406": {
    "key": "emory:174406",
@@ -3510,7 +3634,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires iPSC, organoid, and microfluidics experience in a Davis lab for Pediatric Technologies and Devices; bench work is core and a PhD in biomedical engineering is required.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:174536": {
    "key": "emory:174536",
@@ -3565,7 +3690,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Postdoc in Epidemiology at Rollins School of Public Health, not Internal Medicine. Epidemiologic HIV/perinatal research. Minimum allows M.D.; visa not addressed.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:174539": {
    "key": "emory:174539",
@@ -3618,7 +3744,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are cell and molecular biology, mouse models, and CRISPR screening, which is wet-lab work. Posting names Hematology & Medical Oncology and does not state visa terms.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:174646": {
    "key": "emory:174646",
@@ -3666,7 +3793,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Lab-based cancer metabolism and drug discovery postdoc with experiments in the PI's laboratory; no Internal Medicine department stated. Wet-lab role excluded.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:174710": {
    "key": "emory:174710",
@@ -3714,7 +3842,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Title is Survivor Psychologist and no Internal Medicine link is stated; minimum qualifications accept M.D., and visa is not mentioned.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:174847": {
    "key": "emory:174847",
@@ -3781,7 +3910,8 @@
    "reviewed_by": "Claude Sonnet",
    "verdict": "Check",
    "reason": "Generic Emory postdoc template; minimum is a doctoral degree including M.D., but no department, lab, or research area is stated, so IM relevance and wet/dry work are unknown.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:174965": {
    "key": "emory:174965",
@@ -3834,7 +3964,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are genetic manipulation, CRISPR, barcoding and epigenomic readouts in cancer models; a cancer biology lab, not Internal Medicine, with wet-lab work central.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:174970": {
    "key": "emory:174970",
@@ -3887,7 +4018,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a PhD in computer science, informatics, or a related field (completed or within six months). No Internal Medicine department is stated; the work is NLP/LLM on clinical text.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:174976": {
    "key": "emory:174976",
@@ -3943,7 +4075,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Computational neuroimaging and proteomics postdoc for neurodegenerative disease; posting names no Internal Medicine department. Minimum allows MD, so MBBS is eligible.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:174994": {
    "key": "emory:174994",
@@ -3993,7 +4126,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab synthetic and medicinal chemistry role (multi-step synthesis, NMR, HPLC) in a pharmacology lab, not Internal Medicine; no clinical or dry research duties.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:175107": {
    "key": "emory:175107",
@@ -4069,7 +4203,8 @@
    "reviewed_by": "Claude Sonnet",
    "verdict": "Match",
    "reason": "Postdoc in Emory Dept of Medicine ID Division; clinical/implementation research on cancer screening; minimum is a doctoral degree incl. M.D., so an MBBS likely qualifies.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "emory:175225": {
    "key": "emory:175225",
@@ -4123,7 +4258,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Computational genomics postdoc in Human Genetics, not Internal Medicine. Minimum lists M.D. as acceptable doctoral equivalent. No sponsorship statement.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "harvard:1401": {
    "key": "harvard:1401",
@@ -4176,7 +4312,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Harvard states it cannot provide visa sponsorship. The lab is cognitive neuroscience in FAS, not Internal Medicine, and requires psychology or neuroscience background.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "harvard:1973": {
    "key": "harvard:1973",
@@ -4233,7 +4370,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are erythroid cell culture, cell line generation and lab experiments (wet lab); department is Immunology and Infectious Diseases; visa sponsorship explicitly not provided.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "harvard:1974": {
    "key": "harvard:1974",
@@ -4290,7 +4428,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Bench wet-lab role (erythroid cell culture, omics material generation) in Immunology and Infectious Diseases, not Internal Medicine; Harvard states no visa sponsorship.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "harvard:2287": {
    "key": "harvard:2287",
@@ -4348,7 +4487,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab cancer research (mouse husbandry, molecular biology, immunofluorescence) in Cell Biology, not Internal Medicine; Harvard states no visa sponsorship.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "harvard:2295": {
    "key": "harvard:2295",
@@ -4407,7 +4547,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are bench stem cell culture, genetic modification, and mouse work in the Ramanathan lab; Harvard states it cannot sponsor visas; not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "harvard:2299": {
    "key": "harvard:2299",
@@ -4457,7 +4598,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Business school case-study research assistant role, not Internal Medicine; posting states Harvard is unable to provide visa sponsorship.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "harvard:2312": {
    "key": "harvard:2312",
@@ -4513,7 +4655,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Research assistant in Harvard Chan School Social and Behavioral Sciences, a workplace-health intervention study; not Internal Medicine and not a postdoc or fellow role.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "harvard:2359": {
    "key": "harvard:2359",
@@ -4567,7 +4710,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Harvard states it cannot provide visa sponsorship for this position, and the role is in Global Health and Population, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "harvard:2396": {
    "key": "harvard:2396",
@@ -4575,7 +4719,7 @@
    "rank": 51,
    "source": "harvard",
    "source_label": "Harvard University (incl. Harvard Medical School)",
-   "title": "Research Assistant II â Neurodegenerative Disease Biomarkers",
+   "title": "research assistant ii neurodegenerative disease biomarkers",
    "url": "https://careers.harvard.edu/job/research-assistant-ii-neurodegenerative-disease-biomarkers-in--jid-2396",
    "location": ", ",
    "department": "Wyss Institute at Harvard University",
@@ -4628,7 +4772,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Bench-based research assistant role outside Internal Medicine; Harvard states it cannot provide visa sponsorship; wet-lab core duties.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "houstonmethodist:job-120371-postdoctoral-fellow-0-dr-wenliang-li-lab-postdoctoral-fellows-houston-methodist-academic-institute": {
    "key": "houstonmethodist:job-120371-postdoctoral-fellow-0-dr-wenliang-li-lab-postdoctoral-fellows-houston-methodist-academic-institute",
@@ -4671,24 +4816,22 @@
    },
    "ai": {
     "role_type": "postdoc",
-    "research_type": "unclear",
-    "im_division": "unclear",
-    "mbbs_without_phd_eligible": "unclear",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "yes",
     "visa": "not_stated",
-    "verdict": "check",
-    "confidence": "low",
-    "skills_fit": "partial",
+    "verdict": "excluded",
+    "confidence": "medium",
+    "skills_fit": "weak",
     "department": "",
-    "reason": "Postdoc 0 accepts an MD with no experience, but the posting names no department or research focus, only a PI (Dr. Wenliang Li). Work may be lab or computer-based.",
-    "verify": "Dr. Wenliang Li's lab focus (wet lab vs clinical/dry) and whether it sits in Internal Medicine",
-    "missing": "Possible lab or biomedical research skills; research focus not stated",
+    "reason": "Posting is silent on the work, but PI Wenliang Li runs a cancer metastasis/prostate cancer bench lab (cell, mouse models). MD accepted for Postdoc 0, but wet-lab core.",
+    "verify": "Whether the role is purely computational rather than bench work in the Li lab",
+    "missing": "Molecular/cell biology, mouse models, bench laboratory techniques in cancer research",
     "deadline": ""
    },
    "evaluated": true,
+   "title_only": false,
    "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Postdoc 0 accepts an MD with no experience, but the posting names no department or research focus, only a PI (Dr. Wenliang Li). Work may be lab or computer-based.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "postdoc",
     "research_type": "unclear",
@@ -4704,9 +4847,49 @@
     "missing": "Biomedical research knowledge is required; lab or dry-computing specifics are not described",
     "deadline": ""
    },
-   "review_version": 5,
+   "review_attempts": 1,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Excluded",
+   "reason": "Posting is silent on the work, but PI Wenliang Li runs a cancer metastasis/prostate cancer bench lab (cell, mouse models). MD accepted for Postdoc 0, but wet-lab core.",
+   "lookup_attempts": 1,
+   "ai_before_lookup": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "",
+    "reason": "Postdoc 0 accepts an MD with no experience, but the posting names no department or research focus, only a PI (Dr. Wenliang Li). Work may be lab or computer-based.",
+    "verify": "Dr. Wenliang Li's lab focus (wet lab vs clinical/dry) and whether it sits in Internal Medicine",
+    "missing": "Possible lab or biomedical research skills; research focus not stated",
+    "deadline": ""
+   },
+   "lookup": {
+    "pi": "Wenliang Li",
+    "lab_summary": "Studies molecular mechanisms of cancer metastasis and neuroendocrine prostate cancer using cell, biochemical, genomic and xenograft mouse approaches; publishes bench cancer biology papers (Neoplasia, Cell Death Discovery, Oncogene).",
+    "lab_sources": [
+     {
+      "url": "https://med.uth.edu/imm/2023/07/07/wenliang-li-phd/",
+      "title": "Wenliang Li, PhD - The Brown Foundation Institute of Molecular Medicine for the Prevention of Human Diseases"
+     },
+     {
+      "url": "https://gsbs.uth.edu/directory/profile?id=038d6dac-519e-4fdc-8aa7-b64b3714234f",
+      "title": "Dr. Wenliang Li - Directory - MD Anderson Cancer Center UTHealth Graduate School of Biomedical Sciences"
+     },
+     {
+      "url": "https://www.linkedin.com/in/tao-wang-806143254/",
+      "title": "Tao Wang - UT Southwestern Medical Center"
+     }
+    ],
+    "searches": 3,
+    "by": "Claude Sonnet with web search"
+   },
+   "lookup_version": 1,
    "active": true
   },
   "houstonmethodist:job-120372-postdoctoral-fellow-2-dr-wenliang-li-lab-postdoctoral-fellows-houston-methodist-academic-institute": {
@@ -4767,7 +4950,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Postdoctoral Fellow 2 requires an MD or terminal degree plus two years' postdoc experience; the candidate has neither the postdoc years nor a PhD.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "houstonmethodist:job-120526-postdoctoral-fellow-0-ob-gyn-research-postdoctoral-fellows-houston-methodist-academic-institute": {
    "key": "houstonmethodist:job-120526-postdoctoral-fellow-0-ob-gyn-research-postdoctoral-fellows-houston-methodist-academic-institute",
@@ -4827,7 +5011,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Postdoctoral role in Ob/Gyn Research, outside Internal Medicine. Posting allows lab or computer work and requires an MD or terminal degree.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "houstonmethodist:job-120642-postdoc-0-postdoctoral-fellows-houston-methodist-academic-institute": {
    "key": "houstonmethodist:job-120642-postdoc-0-postdoctoral-fellows-houston-methodist-academic-institute",
@@ -4906,7 +5091,8 @@
    "review_version": 5,
    "ai_review_done": true,
    "reviewed_by": "Claude Sonnet",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "houstonmethodist:job-120645-postdoc-2-postdoctoral-fellows-houston-methodist-academic-institute": {
    "key": "houstonmethodist:job-120645-postdoc-2-postdoctoral-fellows-houston-methodist-academic-institute",
@@ -4966,7 +5152,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Postdoctoral Fellow 2 requires two years' postdoc experience and an MD or terminal degree; the candidate shows no postdoc experience. Lab or computer work.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "houstonmethodist:job-120651-postdoctoral-fellow-0-postdoctoral-fellows-houston-methodist-academic-institute": {
    "key": "houstonmethodist:job-120651-postdoctoral-fellow-0-postdoctoral-fellows-houston-methodist-academic-institute",
@@ -5045,7 +5232,8 @@
    "review_version": 5,
    "ai_review_done": true,
    "reviewed_by": "Claude Sonnet",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "houstonmethodist:job-120652-postdoctoral-fellow-0-postdoctoral-fellows-houston-methodist-academic-institute": {
    "key": "houstonmethodist:job-120652-postdoctoral-fellow-0-postdoctoral-fellows-houston-methodist-academic-institute",
@@ -5124,7 +5312,8 @@
    "review_version": 5,
    "ai_review_done": true,
    "reviewed_by": "Claude Sonnet",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "jhu:122357": {
    "key": "jhu:122357",
@@ -5350,7 +5539,8 @@
    "ai_attempts": 2,
    "verdict": "Other dept",
    "reason": "Participant recruitment, consent, scheduling and blood draws in a School of Public Health study. Coordinator-style duties, not Internal Medicine, and not a research-only role.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "jhu:122561": {
    "key": "jhu:122561",
@@ -5400,7 +5590,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Data-management research assistant in Radiology (Cancer Imaging Research), not Internal Medicine. Minimum is a bachelor's degree; no visa or citizenship terms stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "jhu:122575": {
    "key": "jhu:122575",
@@ -5450,7 +5641,8 @@
    "ai_attempts": 2,
    "verdict": "Other dept",
    "reason": "Research assistant role in Neurology (SOM Neuro Cerebrovascular), not Internal Medicine. Data management and literature work; minimum is a bachelor's degree, which an MBBS exceeds.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "jhu:122576": {
    "key": "jhu:122576",
@@ -5500,7 +5692,8 @@
    "ai_attempts": 2,
    "verdict": "Other dept",
    "reason": "Research Assistant role in the Neurology (SOM Neuro Cerebrovascular) department, not Internal Medicine. Duties are data management and literature searches. Requires only a Bachelor's degree; visa is not stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "jhu:122632": {
    "key": "jhu:122632",
@@ -5550,7 +5743,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Clinical/data research role, but the department is Obstetrics & Gynecology, which is clearly outside Internal Medicine. Visa and degree eligibility are not stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "jhu:122671": {
    "key": "jhu:122671",
@@ -5602,7 +5796,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Clinical and data research role in the Department of Neurology, not Internal Medicine. Minimum is a bachelor's degree, so an MBBS likely qualifies. No visa information stated.",
-   "active": false
+   "active": false,
+   "title_only": false
   },
   "jhu:122683": {
    "key": "jhu:122683",
@@ -5650,7 +5845,8 @@
    "ai_attempts": 2,
    "verdict": "Other dept",
    "reason": "Computational biological physics role in Physics and Astronomy, not Internal Medicine. Requires a bachelor's degree and molecular simulation work. Visa sponsorship not stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "jhu:122696": {
    "key": "jhu:122696",
@@ -5700,7 +5896,8 @@
    "ai_attempts": 2,
    "verdict": "Other dept",
    "reason": "Casual hourly Research Assistant in the DSAI Institute (Whiting School of Engineering) doing data management and cleaning. Dry data work, but not Internal Medicine. Minimum is a Bachelor's; visa not stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "jhu:122765": {
    "key": "jhu:122765",
@@ -5751,7 +5948,8 @@
    "ai_attempts": 2,
    "verdict": "Other dept",
    "reason": "Research Assistant in the Department of International Health at JHU SPH; data management and analysis, not wet lab. Outside Internal Medicine. Bachelor's minimum; no visa stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "jhu:122766": {
    "key": "jhu:122766",
@@ -5801,7 +5999,8 @@
    "ai_attempts": 2,
    "verdict": "Other dept",
    "reason": "Data management and policy-brief research in JHU School of Public Health Health Policy & Management, not Internal Medicine. Requires only a bachelor's degree; no visa statement.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "jhu:122769": {
    "key": "jhu:122769",
@@ -5851,7 +6050,8 @@
    "ai_attempts": 2,
    "verdict": "Other dept",
    "reason": "Dry data and literature-review research role, but hiring unit is Department of International Health, not Internal Medicine. Visa sponsorship not stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "jhu:122799": {
    "key": "jhu:122799",
@@ -5907,7 +6107,8 @@
    "ai_attempts": 2,
    "verdict": "Other dept",
    "reason": "Clinical research assistant role in the Psychiatry and Behavioral Sciences behavioral pharmacology unit, not Internal Medicine. Minimum is a high school diploma; no visa sponsorship stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "jhu:122814": {
    "key": "jhu:122814",
@@ -5959,7 +6160,8 @@
    "ai_attempts": 2,
    "verdict": "Other dept",
    "reason": "Pediatrics/Adolescent Medicine department, not Internal Medicine. Minimum is a bachelor's degree, which an MBBS exceeds. Duties mix data work with clinical HIV testing and counseling. No visa information.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "jhu:122843": {
    "key": "jhu:122843",
@@ -6030,7 +6232,8 @@
    "reviewed_by": "Claude Sonnet",
    "verdict": "Excluded",
    "reason": "Entry-level Research Project Assistant II (high school diploma minimum) with peer recovery, outreach and HIV/HCV testing duties; not a fellow, postdoc or research associate role.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "kumc:JR010604": {
    "key": "kumc:JR010604",
@@ -6092,7 +6295,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Entry-level Clinical Research Assistant with a bachelor's-level preference, aimed at gap-year applicants; coordinator-type role, not a research fellow or postdoc, and not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "kumc:JR010625": {
    "key": "kumc:JR010625",
@@ -6155,7 +6359,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are in vitro studies and transgenic mouse models; the minimum requires a PhD in a basic-science discipline, and the role sits in Cardiology.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "kumc:JR010642": {
    "key": "kumc:JR010642",
@@ -6215,7 +6420,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Entry-level clinical research assistant/coordinator role requiring two years' experience, not a research fellow or postdoc; not Internal Medicine; candidate is not a match.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "kumc:JR010645": {
    "key": "kumc:JR010645",
@@ -6270,7 +6476,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Postdoc in Medical Physics Division of Radiation Oncology developing image-guided radiotherapy methods; clearly outside Internal Medicine. Minimum accepts MD or equivalent.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "kumc:JR010666": {
    "key": "kumc:JR010666",
@@ -6330,7 +6537,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Bachelor's minimum makes it a staff role, not a postdoc. Core duties are in vivo, surgical, and in situ bench work, in Cell Biology and Physiology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "louisville:R109394": {
    "key": "louisville:R109394",
@@ -6382,7 +6590,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are RNA/protein extraction, PCR, biochemical tests, and cell culture at the Price Institute of Surgical Research, which is not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "louisville:R109556": {
    "key": "louisville:R109556",
@@ -6433,7 +6642,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Research Assistant II in the Eating Anxiety and Treatment lab, Department of Psychology; clinical and non-clinical eating disorder studies, outside Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4064978": {
    "key": "massgeneralbrigham:RQ4064978",
@@ -6485,7 +6695,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a PhD in neuropsychology, cognitive science, or a related field; the lab is psychiatric/neuropsychology, not Internal Medicine, and no sponsorship is mentioned.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4069706": {
    "key": "massgeneralbrigham:RQ4069706",
@@ -6540,7 +6751,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab role (mouse models, cell and molecular biology, AAV gene therapy) at Eye and Ear Infirmary; requires MD/PhD with no experience substitution, and is not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4077555": {
    "key": "massgeneralbrigham:RQ4077555",
@@ -6598,7 +6810,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are postmortem brain cell culture, microscopy and single-cell transcriptomics in a neuroscience lab at McLean Hospital (psychiatry); wet-lab work and not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4077561": {
    "key": "massgeneralbrigham:RQ4077561",
@@ -6657,7 +6870,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab core duties (microscopy, cell culture, postmortem tissue, iPSC models); psychiatry hospital, not Internal Medicine; requires doctoral-level postdoc with no MBBS-eligibility stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4078447": {
    "key": "massgeneralbrigham:RQ4078447",
@@ -6711,7 +6925,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires PhD or PsyD in Clinical Psychology; role is psychotherapy delivery at McLean Hospital (psychiatry/psychology), not Internal Medicine, and the candidate lacks a PhD.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4079026": {
    "key": "massgeneralbrigham:RQ4079026",
@@ -6770,7 +6985,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are tissue imaging, antibody qualification, and bench assays in a cancer biology lab; not Internal Medicine and wet-lab per candidate profile.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4079692": {
    "key": "massgeneralbrigham:RQ4079692",
@@ -6827,7 +7043,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a doctorate in a related field, with no experience substitution. Candidate has an MBBS without a PhD. Rehabilitation research at Spaulding, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4080360": {
    "key": "massgeneralbrigham:RQ4080360",
@@ -6884,7 +7101,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Clinical/health-services research (trauma systems, participant recruitment, qualitative coding) at the Center for Surgery and Public Health, not Internal Medicine. Bachelor's required; no PhD or visa terms stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4081402": {
    "key": "massgeneralbrigham:RQ4081402",
@@ -6940,7 +7158,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Hired into Otolaryngology, not Internal Medicine. Duties include in vitro cell culture, ex vivo histology, and animal surgery, which the candidate lacks.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4082049": {
    "key": "massgeneralbrigham:RQ4082049",
@@ -6998,7 +7217,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a Ph.D. in bioinformatics, statistics, genetics or a related quantitative field; the candidate has no PhD. Posting does not address visa sponsorship.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4082261": {
    "key": "massgeneralbrigham:RQ4082261",
@@ -7054,7 +7274,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Human-subject MS neuropsychiatry study in the Center for Brain Circuit Therapeutics (neurology), not Internal Medicine. Requires a bachelor's degree; no visa statement.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4082304": {
    "key": "massgeneralbrigham:RQ4082304",
@@ -7107,7 +7328,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Clinical-trial data pooling in childhood apraxia of speech; posting asks for a PhD (or candidacy) in quantitative or communication-science fields, and it is not in Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4082415": {
    "key": "massgeneralbrigham:RQ4082415",
@@ -7169,7 +7391,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are bench and cell culture work (protein-DNA biochemistry, CRISPR, cloning); not Internal Medicine and the posting targets recent BS graduates.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4082480": {
    "key": "massgeneralbrigham:RQ4082480",
@@ -7225,7 +7448,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a PhD in a quantitative discipline completed before start; the candidate has no PhD. Department is not stated and the lab focuses on maternal and perioperative AI. J-1 sponsorship is available.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4082569": {
    "key": "massgeneralbrigham:RQ4082569",
@@ -7275,7 +7499,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Posting strictly requires a 'Doctorate of Science', which the MBBS-only candidate lacks. The role is in Neurology, not Internal Medicine, and visa sponsorship is not stated.",
-   "active": false
+   "active": false,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4082879": {
    "key": "massgeneralbrigham:RQ4082879",
@@ -7328,7 +7553,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a PhD in engineering, physics, or a related field; ultrasound hardware and signal processing work is not Internal Medicine and the candidate lacks a PhD.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4083055": {
    "key": "massgeneralbrigham:RQ4083055",
@@ -7380,7 +7606,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Computational eye-disease foundation-model research at Schepens/Mass Eye and Ear, ophthalmology not Internal Medicine. Dry research, so outside the IM target.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4083094": {
    "key": "massgeneralbrigham:RQ4083094",
@@ -7437,7 +7664,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Clinical research assistant role in neurology (title 'Research Neurology'; DBS and Parkinson's patients). Not Internal Medicine. Requires only a bachelor's degree; no PhD or visa terms stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4083117": {
    "key": "massgeneralbrigham:RQ4083117",
@@ -7490,7 +7718,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Research Assistant I in Neurology per diem; epidemiology and data work, but posting is Neurology, not Internal Medicine, and is an entry-level assistant role.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4083141": {
    "key": "massgeneralbrigham:RQ4083141",
@@ -7552,7 +7781,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are bench work: iPSC culture, HEK293 lines, molecular cloning, flow cytometry, western blots. Hiring unit is Neurology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4083261": {
    "key": "massgeneralbrigham:RQ4083261",
@@ -7602,7 +7832,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires current enrollment in an MD or PhD program with no experience substitution; site is Mass Eye and Ear, not Internal Medicine; title suggests molecular biotechnology.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4083461": {
    "key": "massgeneralbrigham:RQ4083461",
@@ -7652,7 +7883,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab role (biochemistry, cell biology, protein characterization) in neurodegeneration institute; requires PhD in biochemistry, cell biology or neuroscience; not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4083506": {
    "key": "massgeneralbrigham:RQ4083506",
@@ -7725,7 +7957,8 @@
    "reviewed_by": "Claude Sonnet",
    "verdict": "Excluded",
    "reason": "Research Assistant II requires only a bachelor's degree and 1-2 years experience; entry-level assistant role with cohort outreach and mailings, not a fellow, postdoc or research associate position.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4083533": {
    "key": "massgeneralbrigham:RQ4083533",
@@ -7779,7 +8012,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Oncology multicenter trial operations at MGB Cancer Institute, not Internal Medicine. Bachelor's required, so an MBBS likely qualifies. Duties are coordination and monitoring.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4083615": {
    "key": "massgeneralbrigham:RQ4083615",
@@ -7854,7 +8088,8 @@
    "reviewed_by": "Claude Sonnet",
    "verdict": "Excluded",
    "reason": "Entry-level Research Assistant I requiring a bachelor's degree, with recruitment, consent and data-entry duties; not a postdoc, fellow or research associate role.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4083804": {
    "key": "massgeneralbrigham:RQ4083804",
@@ -7911,7 +8146,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Clinical/data AI research housed in the STRATUS simulation center, with focus on emergency medicine, critical care, surgery, space and military medicine. Not Internal Medicine. Clinician-Scientist track accepts an MD.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "massgeneralbrigham:RQ4083980": {
    "key": "massgeneralbrigham:RQ4083980",
@@ -7964,7 +8200,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Clinical research assistant in Preventive Medicine per title; mainly administrative clinic work with possible trial recruitment. Not Internal Medicine. Requires only a high school diploma.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "mayo:386616": {
    "key": "mayo:386616",
@@ -8014,7 +8251,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duty is multi-step organic synthesis and F-18 radiochemistry (bench work) in a Nuclear Medicine lab, not Internal Medicine or dry research.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "mayo:391867": {
    "key": "mayo:391867",
@@ -8065,7 +8303,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Posting states 'Must have a Ph.D.' and the department is Cardiovascular Diseases, not Internal Medicine; work mixes engineering, CT physics and AI/ML.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "mayo:392771": {
    "key": "mayo:392771",
@@ -8117,7 +8356,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Molecular and genetic mechanisms and mouse-model evaluation are core duties; it is a genomics lab, not Internal Medicine, and the posting states no visa sponsorship.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "mayo:392910": {
    "key": "mayo:392910",
@@ -8175,7 +8415,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are hiPSC culture, organoids, and organ-on-chip bench work; not Internal Medicine; requires a Ph.D., M.D., or equivalent doctoral degree.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "mayo:393061": {
    "key": "mayo:393061",
@@ -8231,7 +8472,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are mouse genetics, organoids, iPSC models and cell culture, with a required 'high proficiency in cell culture' and a natural sciences degree; this is wet-lab work.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "mayo:393086": {
    "key": "mayo:393086",
@@ -8290,7 +8532,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Postdoctoral fellowship in the Center for Aesthetic Medicine and Surgery, not Internal Medicine. Includes regenerative and skin-aging science, and mentions J-1 sponsorship.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "mayo:393271": {
    "key": "mayo:393271",
@@ -8345,7 +8588,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a PhD in a quantitative or neuroscience field, which the MBBS-only candidate lacks. Department is Neuroscience, not Internal Medicine, and the work includes experimental validation.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "mayo:393288": {
    "key": "mayo:393288",
@@ -8414,7 +8658,8 @@
    "reviewed_by": "Claude Sonnet",
    "verdict": "Excluded",
    "reason": "Requires Ph.D., M.D. or equivalent plus at least three years of postdoctoral research experience; candidate's listed experience does not show this, so ineligible despite Endocrinology fit.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "mayo:393653": {
    "key": "mayo:393653",
@@ -8468,7 +8713,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a PhD in neuroscience, biology, laboratory medicine or a related field; the department is Laboratory Medicine and Pathology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "mayo:393662": {
    "key": "mayo:393662",
@@ -8506,20 +8752,21 @@
    },
    "ai": {
     "role_type": "research_fellow",
-    "research_type": "unclear",
-    "im_division": "unclear",
+    "research_type": "wet_lab",
+    "im_division": "Hematology & Oncology",
     "mbbs_without_phd_eligible": "yes",
     "visa": "sponsorship_stated",
-    "verdict": "check",
-    "confidence": "low",
-    "skills_fit": "partial",
+    "verdict": "excluded",
+    "confidence": "medium",
+    "skills_fit": "weak",
     "department": "",
-    "reason": "Mayo Research Fellow accepts an M.D. or equivalent, and J-1 sponsorship is mentioned. But the posting names no department or duties, and says clinical or laboratory work.",
-    "verify": "Whether Dr Sakemura's lab work is clinical/dry or bench, and which department it sits in",
-    "missing": "Posting does not specify duties; may require laboratory-based research",
+    "reason": "Dr. Sakemura's lab does CAR-T cell bench and humanized-mouse work in hematology. The posting itself doesn't state the duties. It accepts an MD but says nothing about the work.",
+    "verify": "Ask whether the role includes any clinical or dry-lab research without bench work.",
+    "missing": "CAR-T cell engineering, cell culture, in vivo mouse models, laboratory techniques",
     "deadline": ""
    },
    "evaluated": true,
+   "title_only": false,
    "ai_attempts": 1,
    "ai_first": {
     "role_type": "research_fellow",
@@ -8535,8 +8782,45 @@
    "ai_review_done": true,
    "review_version": 5,
    "reviewed_by": "Claude Sonnet",
-   "verdict": "Check",
-   "reason": "Mayo Research Fellow accepts an M.D. or equivalent, and J-1 sponsorship is mentioned. But the posting names no department or duties, and says clinical or laboratory work.",
+   "verdict": "Excluded",
+   "reason": "Dr. Sakemura's lab does CAR-T cell bench and humanized-mouse work in hematology. The posting itself doesn't state the duties. It accepts an MD but says nothing about the work.",
+   "lookup_attempts": 1,
+   "ai_before_lookup": {
+    "role_type": "research_fellow",
+    "research_type": "unclear",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "yes",
+    "visa": "sponsorship_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "",
+    "reason": "Mayo Research Fellow accepts an M.D. or equivalent, and J-1 sponsorship is mentioned. But the posting names no department or duties, and says clinical or laboratory work.",
+    "verify": "Whether Dr Sakemura's lab work is clinical/dry or bench, and which department it sits in",
+    "missing": "Posting does not specify duties; may require laboratory-based research",
+    "deadline": ""
+   },
+   "lookup": {
+    "pi": "Leo Sakemura, M.D., Ph.D.",
+    "lab_summary": "Hematology physician-scientist in Kenderian's T Cell Engineering Lab. Studies CAR-T cell resistance, cancer-associated fibroblasts and myeloid cells in myeloma and lymphoma. Papers use in vitro and humanized mouse experiments.",
+    "lab_sources": [
+     {
+      "url": "https://www.mayo.edu/research/faculty/sakemura-leo-m-d-ph-d/bio-20436689",
+      "title": "Leo Sakemura, M.D., Ph.D. - Mayo Clinic Faculty Profiles - Mayo Clinic Research"
+     },
+     {
+      "url": "https://mayoclinic.elsevierpure.com/en/persons/reona-leo-sakemura/",
+      "title": "Reona (Leo) Sakemura - Mayo Clinic"
+     },
+     {
+      "url": "https://www.mayo.edu/research/labs/t-cell-engineering/overview",
+      "title": "Overview - T Cell Engineering Laboratory - Mayo Clinic Research"
+     }
+    ],
+    "searches": 1,
+    "by": "Claude Sonnet with web search"
+   },
+   "lookup_version": 1,
    "active": true
   },
   "mayo:393729": {
@@ -8605,7 +8889,8 @@
    "review_version": 3,
    "ai_review_done": true,
    "reviewed_by": "Claude Sonnet",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "mayo:393734": {
    "key": "mayo:393734",
@@ -8674,7 +8959,8 @@
    "reviewed_by": "Claude Sonnet",
    "verdict": "Check",
    "reason": "Mayo Research Fellow in 'Molecular Medicine' accepts an M.D. and mentions J-1 sponsorship, but the posting gives no department or division and no duties, so clinical vs. lab work is unknown.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "mayo:394119": {
    "key": "mayo:394119",
@@ -8725,7 +9011,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Hosted by Radiation Oncology, not Internal Medicine. Requires a PhD in CS, ML, statistics, or a related field, which the candidate lacks.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "mcw:JR104085": {
    "key": "mcw:JR104085",
@@ -8782,7 +9069,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are wet-lab (in vitro transcription, qPCR, recombinant enzymes, cell culture); Department of Biophysics, not Internal Medicine; PhD required.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "mhif:mascsr-default-mdf-recruitment-recruitment-html-cid-39263a55-c11d-480c-b3b1-4599b9d7ad64-ccId-19000101-000001-jobId-577618-source-CC2-lang-en-US": {
    "key": "mhif:mascsr-default-mdf-recruitment-recruitment-html-cid-39263a55-c11d-480c-b3b1-4599b9d7ad64-ccId-19000101-000001-jobId-577618-source-CC2-lang-en-US",
@@ -8817,25 +9105,23 @@
     "reason": "Unclear; division: Unclear"
    },
    "ai": {
-    "role_type": "other",
-    "research_type": "unclear",
-    "im_division": "unclear",
+    "role_type": "research_fellow",
+    "research_type": "clinical_or_dry",
+    "im_division": "Cardiology",
     "mbbs_without_phd_eligible": "unclear",
-    "visa": "not_stated",
-    "verdict": "check",
-    "confidence": "low",
+    "visa": "sponsorship_stated",
+    "verdict": "match",
+    "confidence": "medium",
     "skills_fit": "partial",
-    "department": "",
-    "reason": "Only title 'Research Scholar, CCAD' is given; no department, duties or degree rules. CCAD might be a cardiovascular unit, but the posting does not state it.",
-    "verify": "What CCAD stands for, the hiring department, duties, minimum degree and visa sponsorship",
-    "missing": "",
+    "department": "Center for Coronary Artery Disease (CCAD), Minneapolis Heart Institute Foundation",
+    "reason": "Full-time clinical research scholar, no patient care, registries/trials in coronary disease; posting says they will assist with a research visa. No PhD requirement seen.",
+    "verify": "Confirm minimum degree (MD/equivalent) and whether imaging analysis experience is required.",
+    "missing": "Imaging data review (CT/intracoronary) listed in duties; no stated requirement",
     "deadline": ""
    },
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Only title 'Research Scholar, CCAD' is given; no department, duties or degree rules. CCAD might be a cardiovascular unit, but the posting does not state it.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "other",
     "research_type": "unclear",
@@ -8851,9 +9137,37 @@
     "missing": "",
     "deadline": ""
    },
-   "review_version": 5,
+   "review_attempts": 1,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Match",
+   "reason": "Full-time clinical research scholar, no patient care, registries/trials in coronary disease; posting says they will assist with a research visa. No PhD requirement seen.",
+   "find_attempts": 1,
+   "find_version": 1,
+   "ai_before_find": {
+    "role_type": "other",
+    "research_type": "unclear",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "partial",
+    "department": "",
+    "reason": "Only title 'Research Scholar, CCAD' is given; no department, duties or degree rules. CCAD might be a cardiovascular unit, but the posting does not state it.",
+    "verify": "What CCAD stands for, the hiring department, duties, minimum degree and visa sponsorship",
+    "missing": "",
+    "deadline": ""
+   },
+   "copy": {
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=39263a55-c11d-480c-b3b1-4599b9d7ad64&ccId=19000101_000001&lang=en_US&selectedMenuKey=CareerCenter&jobId=577618",
+    "title": "Career Center",
+    "kind": "primary",
+    "match": "job_id",
+    "excerpt": "--- meta-google-site-verification: Ty_uddsUiim55tteitR4CBf-iS7L7IrBrz_Aqt0hyF4 meta-viewport: width=device-width, initial-scale=1.0 title: Recruitment --- Please switch to a supported browser listed [here](https://support.adp.com/pub/paas/login_page/common/en_US/empl/netscr/base/logon/wfn_req.htm), or some features may not work correctly.",
+    "by": "Claude Sonnet with web search"
+   },
    "active": true
   },
   "mhif:mascsr-default-mdf-recruitment-recruitment-html-cid-39263a55-c11d-480c-b3b1-4599b9d7ad64-ccId-19000101-000001-jobId-588688-source-CC2-lang-en-US": {
@@ -8904,10 +9218,8 @@
     "deadline": ""
    },
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Title suggests a cardiology research scholar (CCAD, likely a cardiac center), but no department, duties, degree rules or visa information are given to judge fit.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "research_fellow",
     "research_type": "unclear",
@@ -8923,9 +9235,14 @@
     "missing": "Minimum degree and research duties not visible in title",
     "deadline": ""
    },
-   "review_version": 5,
+   "review_attempts": 1,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Title only",
+   "reason": "Title suggests a cardiology research scholar (CCAD, likely a cardiac center), but no department, duties, degree rules or visa information are given to judge fit.",
+   "find_attempts": 1,
+   "find_version": 1,
    "active": true
   },
   "mhif:mascsr-default-mdf-recruitment-recruitment-html-cid-39263a55-c11d-480c-b3b1-4599b9d7ad64-ccId-19000101-000001-jobId-588799-source-CC2-lang-en-US": {
@@ -8976,10 +9293,8 @@
     "deadline": ""
    },
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 1,
-   "verdict": "Check",
-   "reason": "Only a title is given: 'Research Associate, CIRC and Core Lab'. No department, duties or degree rules are stated, and 'Core Lab' hints at possible lab work.",
-   "review_attempts": 1,
    "ai_first": {
     "role_type": "research_associate",
     "research_type": "unclear",
@@ -8995,9 +9310,14 @@
     "missing": "Laboratory techniques, if core lab duties are bench work; minimum degree unknown",
     "deadline": ""
    },
-   "review_version": 5,
+   "review_attempts": 1,
    "ai_review_done": true,
+   "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "verdict": "Title only",
+   "reason": "Only a title is given: 'Research Associate, CIRC and Core Lab'. No department, duties or degree rules are stated, and 'Core Lab' hints at possible lab work.",
+   "find_attempts": 1,
+   "find_version": 1,
    "active": true
   },
   "miami:R100072310": {
@@ -9050,7 +9370,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Postdoc in Department of Psychiatry, outside Internal Medicine. Neuroimaging focus with some immunological work. Requires MD or PhD, so MBBS qualifies. Visa not stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100085663": {
    "key": "miami:R100085663",
@@ -9104,7 +9425,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires Ph.D. and lab focus on chemoproteomics, nucleosome biology, epigenetics (Dr. Zhipeng Wang's lab, Sylvester Cancer Center), indicating wet-lab work outside Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100089840": {
    "key": "miami:R100089840",
@@ -9157,7 +9479,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Cell Biology postdoc requiring Ph.D.; lab work includes molecular biology, microscopy, and flow cytometry; not Internal Medicine; candidate lacks PhD.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100090117": {
    "key": "miami:R100090117",
@@ -9210,7 +9533,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a Ph.D. and a wet-lab role: Weinberger lab uses molecular biology, microscopy and flow cytometry. Department is Cell Biology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100090218": {
    "key": "miami:R100090218",
@@ -9263,7 +9587,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Psychiatry department, not Internal Medicine. Core duties include collecting and analyzing specimens or tissue cultures and operating lab equipment, which is wet-lab work.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100091112": {
    "key": "miami:R100091112",
@@ -9321,7 +9646,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Lab of Dr. Stephen Nimer at Sylvester Cancer Center studying epigenetic regulation of hematopoiesis; the posting requires a PhD in relevant field, and the lab is cancer biology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100091663": {
    "key": "miami:R100091663",
@@ -9378,7 +9704,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties include tissue cultures, specimen dissection, and weighing/anesthetizing lab animals for experiments, which is wet-lab work the candidate lacks; the clinical study duties do not offset this.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100091742": {
    "key": "miami:R100091742",
@@ -9428,7 +9755,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a Ph.D. in a relevant field, which the MBBS candidate lacks. Department is SCCC Human Genetics, not Internal Medicine; the INTS11 cancer-target work suggests bench science.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100093905": {
    "key": "miami:R100093905",
@@ -9486,7 +9814,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are rodent and canine stroke surgery, stem cell delivery, and molecular/cell culture work in a Neurology lab; wet-lab, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100093933": {
    "key": "miami:R100093933",
@@ -9543,7 +9872,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are molecular, cell, and rodent bench work (Western blots, subcellular fractionation, histology); requires a PhD in a biomedical field, not an MBBS; neuroscience, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100095322": {
    "key": "miami:R100095322",
@@ -9597,7 +9927,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are laboratory experiments, specimen and tissue culture work, and lab equipment operation; the lab sits in Public Health Sciences and Sylvester, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100095347": {
    "key": "miami:R100095347",
@@ -9649,7 +9980,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a Ph.D. ('Ph.D. required'), so the MBBS candidate without a PhD is ineligible; the work is computational and sits in Public Health Sciences, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100095487": {
    "key": "miami:R100095487",
@@ -9718,7 +10050,8 @@
    "reviewed_by": "Claude Sonnet",
    "verdict": "Check",
    "reason": "Postdoctoral Associate at the Diabetes Research Institute requiring an MD, with no experience required. The posting does not say whether the work is wet-lab or clinical, and it is not clearly an Internal Medicine unit.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100095489": {
    "key": "miami:R100095489",
@@ -9773,7 +10106,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Posting is from the Department of Neurology, not Internal Medicine. It requires only a bachelor's degree. Duties mix stroke trial recruitment and data entry with laboratory experiments.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100095546": {
    "key": "miami:R100095546",
@@ -9826,7 +10160,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duty is conducting laboratory experiments and collecting/dissecting specimens or tissue cultures; psychology department, not Internal Medicine; no visa sponsorship stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100096161": {
    "key": "miami:R100096161",
@@ -9880,7 +10215,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Posting states 'Ph.D. required' for a postdoctoral associate role; the candidate has an MBBS without a PhD. Hiring unit is a cancer center lab, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100096836": {
    "key": "miami:R100096836",
@@ -9946,7 +10282,8 @@
    },
    "ai_review_done": true,
    "reviewed_by": "Claude Sonnet",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100097866": {
    "key": "miami:R100097866",
@@ -10009,7 +10346,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are in vivo murine studies, behavioral pain assays, molecular/cell culture, and LC-MS/MS; a wet-lab role in Surgery-linked gut-brain research, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100098042": {
    "key": "miami:R100098042",
@@ -10066,7 +10404,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are lab mouse colony maintenance, specimen and tissue culture work, animal anesthesia, and molecular biology techniques; department field is blank and no IM division is stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100099084": {
    "key": "miami:R100099084",
@@ -10116,7 +10455,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Pathology department role centered on digitizing glass histology slides and general lab work; not Internal Medicine, and bench/histology work is core, not clinical or dry research.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100099364": {
    "key": "miami:R100099364",
@@ -10166,7 +10506,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are coral spawning, fertilization, larval rearing and tank work, which is wet-lab experimental biology. It requires a marine biology Master's and is not in Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100099700": {
    "key": "miami:R100099700",
@@ -10221,7 +10562,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are aseptic cell therapy manufacturing, cell culture, and cGMP lab work (about 80%), with animal handling; this is wet-lab and not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100099728": {
    "key": "miami:R100099728",
@@ -10280,7 +10622,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are bench work: animal surgery, stem cell culture, genome editing, qPCR, immunoblotting; requires a PhD and 4+ years of direct lab experience.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100099742": {
    "key": "miami:R100099742",
@@ -10338,7 +10681,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Dermatology postdoc with core duties in molecular and cell biology bench work (PCR, Western blot, cell culture) and requires a doctorate; not Internal Medicine and not a fit for a wet-lab-averse candidate.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100099837": {
    "key": "miami:R100099837",
@@ -10388,7 +10732,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Postdoctoral associate in Neurology, which is outside Internal Medicine. Requires a 'Doctorate degree in relevant field'; the posting does not say whether an MBBS qualifies and does not state visa terms.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100099977": {
    "key": "miami:R100099977",
@@ -10442,7 +10787,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Clinical Research Data Specialist role is a coordinator-style position, which the candidate excluded; requires only a high school diploma, not an MBBS, and no Internal Medicine department is named.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100100045": {
    "key": "miami:R100100045",
@@ -10499,7 +10845,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are in vitro and in vivo experiments, mouse models, primary cell culture, flow cytometry; Ph.D. required, so MBBS candidate without PhD is ineligible.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100100458": {
    "key": "miami:R100100458",
@@ -10552,7 +10899,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duty is conducting laboratory experiments on specimens and tissue cultures; posting is from Dermatology, not Internal Medicine, and is wet-lab.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100100459": {
    "key": "miami:R100100459",
@@ -10602,7 +10950,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Posting describes laboratory-based research support in Ophthalmology (Bascom Palmer), not Internal Medicine. Also requires a master's degree and does not mention visa sponsorship.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100100647": {
    "key": "miami:R100100647",
@@ -10661,7 +11010,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are nanoparticle synthesis, in vitro cell culture, and in vivo animal testing; requires PhD in chemistry/engineering/materials; not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100100724": {
    "key": "miami:R100100724",
@@ -10720,7 +11070,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are bench work: animal surgery, stem cell culture, CRISPR, microscopy, qPCR; requires a PhD and 4+ years direct lab experience; no Internal Medicine link.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100100727": {
    "key": "miami:R100100727",
@@ -10779,7 +11130,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are nanoparticle synthesis, in vitro cell culture, and in vivo animal testing; requires PhD in chemistry or engineering-type field; no Internal Medicine link.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100100753": {
    "key": "miami:R100100753",
@@ -10831,7 +11183,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a Ph.D. and sits in Pharmacology (title, supervisor Dr. Slepak), not Internal Medicine; the candidate has an MBBS and no PhD.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100100772": {
    "key": "miami:R100100772",
@@ -10889,7 +11242,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are immunohistochemistry, cryosectioning, microscopy, and mouse colony work, which is wet-lab; the department is Physiology and Biophysics, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100100856": {
    "key": "miami:R100100856",
@@ -10939,7 +11293,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Coral aquaculture and husbandry role in Coral Reef Futures Lab (marine science, not Internal Medicine); requires U.S. citizenship or valid U.S. work authorization; no sponsorship offered.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100100882": {
    "key": "miami:R100100882",
@@ -10992,7 +11347,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a doctorate in a relevant field, which the MBBS-only candidate lacks. The T32 program sits in Psychiatry and Behavioral Sciences, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100101005": {
    "key": "miami:R100101005",
@@ -11045,7 +11401,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "T32 postdoc sits in Psychiatry and Behavioral Sciences, not Internal Medicine; the posting also requires a doctorate, which may exclude an MBBS-only candidate.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100101051": {
    "key": "miami:R100101051",
@@ -11103,7 +11460,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab role (CRISPR, mouse models, primary samples, molecular biology) and Ph.D. required; candidate has no PhD and no bench experience. Department field is blank.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100101052": {
    "key": "miami:R100101052",
@@ -11157,7 +11515,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a Ph.D. in a listed discipline, which an MBBS without PhD lacks; the work is computational genomics at Sylvester Cancer Center, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100101338": {
    "key": "miami:R100101338",
@@ -11209,7 +11568,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Physical oceanography postdoc in the Department of Ocean Sciences, not Internal Medicine. Requires a Ph.D. in oceanography or atmospheric sciences. No visa information.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100101439": {
    "key": "miami:R100101439",
@@ -11267,7 +11627,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Posting is for laboratory experiments with transgenic mice, tissue culture, and assays; the dermatology lab is wet-lab core work, not clinical or dry research.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100101516": {
    "key": "miami:R100101516",
@@ -11317,7 +11678,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Lab kit, sample, and logistics role in a cancer-center research lab (SCCC), not Internal Medicine. Requires only a high school diploma, so eligibility is not the issue. Visa not stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100101517": {
    "key": "miami:R100101517",
@@ -11367,7 +11729,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Lab-operations role in SCCC (cancer center), not Internal Medicine. Core duties are lab kits, sample chain of custody, phlebotomy coordination and Research Lab operations, not clinical or dry research.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100101583": {
    "key": "miami:R100101583",
@@ -11420,7 +11783,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are laboratory experiments and specimen or tissue culture work, a wet-lab role; it sits in Ophthalmology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100101751": {
    "key": "miami:R100101751",
@@ -11481,7 +11845,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are molecular/cell biology, RNA/DNA work, qPCR, cell culture, animal models: wet-lab. Department is Dermatology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100101766": {
    "key": "miami:R100101766",
@@ -11531,7 +11896,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a doctorate and core duties include designing biochemical detection assays and conducting experimental studies, which is bench work the candidate lacks. No department stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100101774": {
    "key": "miami:R100101774",
@@ -11583,7 +11949,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are wet-lab: specimens and tissue cultures, weighing and anesthetizing lab animals, sensitive lab equipment. Wet_lab is excluded despite the Department of Medicine link.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100101817": {
    "key": "miami:R100101817",
@@ -11636,7 +12003,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are diagnostic microbiology, PCR, NGS library prep and lab inventories; posting is in Bascom Palmer Ophthalmology, not Internal Medicine. Requires a Master's degree.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100101843": {
    "key": "miami:R100101843",
@@ -11690,7 +12058,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Posting is in Department of Psychiatry, not Internal Medicine, and core duties are laboratory experiments on specimens and tissue cultures, i.e. wet-lab work.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100101936": {
    "key": "miami:R100101936",
@@ -11741,7 +12110,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Postdoc at CIMAS in marine biology and fisheries, not Internal Medicine. Requires a PhD in oceanography, acoustics, or marine biology, which the MBBS-only candidate lacks.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100101938": {
    "key": "miami:R100101938",
@@ -11794,7 +12164,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Marine mammal bioacoustics at NOAA/CIMAS, not Internal Medicine; involves fieldwork deploying recorders and moorings, so no clinical or medical fit.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100101970": {
    "key": "miami:R100101970",
@@ -11853,7 +12224,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties include tissue culture, dissecting specimens, and anesthetizing lab animals, which is wet-lab work. The hiring unit is Public Health, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100101995": {
    "key": "miami:R100101995",
@@ -11903,7 +12275,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Posting is for Department of Molecular and Cellular Pharmacology, not Internal Medicine. It requires a 'Doctorate degree in relevant field' and does not mention visa sponsorship.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100102027": {
    "key": "miami:R100102027",
@@ -11955,7 +12328,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are wet-lab: islet isolation, molecular and cellular analyses, gene and protein expression, and mouse models. Excluded for wet-lab work despite the MD option.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100102049": {
    "key": "miami:R100102049",
@@ -12009,7 +12383,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Postdoc in the School of Nursing and Health Studies doing HIV and behavioral health implementation research; not Internal Medicine. Requires a doctoral degree in a listed relevant field, which does not mention medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100102127": {
    "key": "miami:R100102127",
@@ -12061,7 +12436,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties include collecting specimens and tissue cultures, weighing and anesthetizing lab animals, and operating lab equipment. Department is SCCC (cancer center), not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100102213": {
    "key": "miami:R100102213",
@@ -12111,7 +12487,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Postdoc in Department of Computer Science (ML for pediatric bone age); not Internal Medicine. Requires a doctorate in relevant field, so no MBBS-only eligibility.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "miami:R100102275": {
    "key": "miami:R100102275",
@@ -12168,7 +12545,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a Ph.D., Sc.D., Dr.P.H., or equivalent in epidemiology/biostatistics/public health; MBBS not listed. Hosted by Katz Center, not stated as Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "mountsinai:2000004H": {
    "key": "mountsinai:2000004H",
@@ -12226,7 +12604,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires US citizenship or green card, which rules out visa sponsorship. Hiring department is Psychiatry, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "mountsinai:3020882": {
    "key": "mountsinai:3020882",
@@ -12277,7 +12656,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a PhD in neuroscience, cognitive science or related fields. Work is EEG and peripheral electrophysiology at the Seaver Autism Center, not Internal Medicine. Visa not stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "mountsinai:3043258": {
    "key": "mountsinai:3043258",
@@ -12338,7 +12718,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are mouse breeding, stem cell culture, flow cytometry, PCR and Western blot; department is Stem Cell Biology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "mountsinai:3043330": {
    "key": "mountsinai:3043330",
@@ -12398,7 +12779,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are flow cytometry, ELISA, western blot, ELISPOT, qPCR, CyTOF and mouse work, plus experience handling mice. Wet-lab, so excluded.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "mountsinai:3043507": {
    "key": "mountsinai:3043507",
@@ -12449,7 +12831,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Computational neuroscience lab (Neurosciences), not Internal Medicine; HS/GED-level assistant role, no visa sponsorship stated, and candidate's MBBS background is not a fit.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "mountsinai:3043512": {
    "key": "mountsinai:3043512",
@@ -12506,7 +12889,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Claims-based health services research housed in the Mindich Child Health institute and working with a pediatrics faculty member; it is clearly outside Internal Medicine. The posting lists MD as an eligible degree.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "musc:R-0000069457": {
    "key": "musc:R-0000069457",
@@ -12563,7 +12947,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Zebrafish in vivo imaging and molecular manipulation are core duties; requires a PhD; hosted by Neuroscience, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "musc:R-0000069860": {
    "key": "musc:R-0000069860",
@@ -12620,7 +13005,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Postdoc requires a recent PhD and centres on animal models and stem-cell organoid work in Regenerative Medicine and Cell Biology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "nyulangone:23740975": {
    "key": "nyulangone:23740975",
@@ -12670,7 +13056,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are basic science experimentation in an assigned laboratory; requires a B.S./B.A. in Biomedical or Physical Sciences, which the candidate lacks; no Internal Medicine link.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "nyulangone:24019815": {
    "key": "nyulangone:24019815",
@@ -12720,7 +13107,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are independent basic science experimentation in an assigned laboratory; requires a B.S./B.A. in biomedical or physical sciences, which the MBBS candidate lacks, and it is not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "nyulangone:24019816": {
    "key": "nyulangone:24019816",
@@ -12770,7 +13158,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are independent basic science experimentation in an assigned laboratory; requires a B.S./B.A. in biomedical or physical sciences, which the candidate lacks, and the posting is not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "nyulangone:24030346": {
    "key": "nyulangone:24030346",
@@ -12820,7 +13209,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are independent basic science experimentation in an assigned laboratory, with experimental design and protocol work; no clinical or dry research and no Internal Medicine link.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R147042": {
    "key": "osu:R147042",
@@ -12871,7 +13261,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Bench research on axon-glia biology with in vivo/in vitro murine work as core duties; requires a doctoral degree in Biological Sciences; neurology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R150414": {
    "key": "osu:R150414",
@@ -12923,7 +13314,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a Ph.D. in immunology, molecular biology, neuroscience, or related field; candidate has no PhD. Neurology division, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R150581": {
    "key": "osu:R150581",
@@ -12973,7 +13365,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires PhD and hands-on device fabrication and materials work in Materials Science and Engineering, outside Internal Medicine; no MBBS-eligible path stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R151201": {
    "key": "osu:R151201",
@@ -13023,7 +13416,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are in vivo and in vitro lab studies of axon-glia metabolism; requires a PhD in biomedical or biological sciences, which the candidate lacks, and the role is Neurology rather than Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R151468": {
    "key": "osu:R151468",
@@ -13074,7 +13468,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Clinical research assistant role in Psychiatry (Institute of Brain, Behavior and Immunology), not Internal Medicine. Bachelor's minimum, which an MBBS meets. No visa information stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R153537": {
    "key": "osu:R153537",
@@ -13133,7 +13528,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Clinical Research Assistant role (coordinator-type, not research-only) in Cancer Center Clinical Trials Office, not Internal Medicine; posting states the university will not sponsor work visas.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R155245": {
    "key": "osu:R155245",
@@ -13184,7 +13580,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Astronomy postdoc in Arts and Sciences, not Internal Medicine; requires a Ph.D. in astronomy or a related field, which the MBBS candidate lacks.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R155249": {
    "key": "osu:R155249",
@@ -13235,7 +13632,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Astronomy postdoc in Arts and Sciences; requires a PhD in astronomy or a related field by hire. Not Internal Medicine and the candidate lacks a PhD.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R156349": {
    "key": "osu:R156349",
@@ -13285,7 +13683,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Bench research in the Beirowski lab (axon-glia, in vivo and in vitro mechanistic studies); requires a PhD in biomedical sciences and a doctoral degree in Biological Sciences. Neurology, not IM.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R156577": {
    "key": "osu:R156577",
@@ -13335,7 +13734,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Geophysics/AI earth science postdoc in Arts and Sciences, not Internal Medicine; requires a doctorate in a listed field, which the MBBS-without-PhD candidate lacks.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R156953": {
    "key": "osu:R156953",
@@ -13393,7 +13793,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a Ph.D. in biology/bioengineering and core duties are bench work (iPSC models, Ca2+ imaging, molecular cloning, gene editing); Ophthalmology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R157102": {
    "key": "osu:R157102",
@@ -13447,7 +13848,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a PhD and a nursing degree, and must be a US citizen or permanent resident. Hosted in the College of Nursing, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R158464": {
    "key": "osu:R158464",
@@ -13495,7 +13897,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a Doctoral Degree in Biological Sciences and centers on experiments studying cytoskeleton and signaling, which is wet-lab work the candidate lacks.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R158952": {
    "key": "osu:R158952",
@@ -13546,7 +13949,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Minimum qualification is a Ph.D. in clinical psychology, and the posting requires a clinical psychologist postdoc. The candidate has no PhD. Department is Palliative Medicine, not stated as Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R159026": {
    "key": "osu:R159026",
@@ -13603,7 +14007,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Dry genetic epidemiology and EHR/biobank research, but housed in Department of Biomedical Informatics, not Internal Medicine. Requires a doctorate in a listed quantitative field; MBBS does not qualify.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R160196": {
    "key": "osu:R160196",
@@ -13654,7 +14059,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires PhD and APA-accredited psychology program; primarily clinical psychotherapy role in Psychiatry, not Internal Medicine research; candidate ineligible.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R160444": {
    "key": "osu:R160444",
@@ -13702,7 +14108,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Quantum networking postdoc in CQISE, not Internal Medicine; requires a doctorate in a quantum-related field, which the candidate (MBBS, no PhD) lacks.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R160541": {
    "key": "osu:R160541",
@@ -13758,7 +14165,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are T cell immunology, cellular and molecular work, and in vivo studies; the posting requires a doctoral degree, which the candidate lacks.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R160623": {
    "key": "osu:R160623",
@@ -13814,7 +14222,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a PhD in chemistry or a related field; core duties are LC-MS metabolomics and lipidomics lab analyses; hosted in Human Sciences, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R160648": {
    "key": "osu:R160648",
@@ -13864,7 +14273,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Postdoc in Computer Science and Engineering on AI systems and HPC; requires a doctorate in CS/engineering-related field, not Internal Medicine, and the candidate lacks a PhD.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R160800": {
    "key": "osu:R160800",
@@ -13919,7 +14329,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Posting requires a PhD, ScD, or DrPH; it sits in Physical Medicine and Rehabilitation, not Internal Medicine. No visa sponsorship is mentioned.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R160823": {
    "key": "osu:R160823",
@@ -13975,7 +14386,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Bench and mouse-model work is core (CRISPR, stereotactic injections, tissue culture) and a PhD in neuroscience, molecular or cell biology is required; the candidate has no PhD and no wet-lab experience.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R160847": {
    "key": "osu:R160847",
@@ -14026,7 +14438,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are bench work: patient-derived immunology, recombinant protein and monoclonal antibody production, lab techniques; Otolaryngology, not Internal Medicine; no visa info.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R160922": {
    "key": "osu:R160922",
@@ -14076,7 +14489,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Psychology postdoc requiring a PhD in Clinical Psychology; candidate has an MBBS without a PhD, and the department is not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R160962": {
    "key": "osu:R160962",
@@ -14130,7 +14544,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires PhD in veterinary medicine or animal science; core duties include bench work, PCR/ELISA lab testing, and animal/wild bird sample collection, outside Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R160970": {
    "key": "osu:R160970",
@@ -14181,7 +14596,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Zebrafish embryology with genetic and live-imaging lab work; requires a Ph.D. in molecular genetics, not Internal Medicine, and the candidate has no PhD.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "osu:R161229": {
    "key": "osu:R161229",
@@ -14231,7 +14647,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab proteomics and LC-MS/MS biomarker bench work; department is Veterinary Clinical Sciences, not Internal Medicine; PhD explicitly required.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "rochester:R275198": {
    "key": "rochester:R275198",
@@ -14279,7 +14696,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Clinical Research Data Spec I, a data/CRC-style role in Cancer Center/Clin Trials Office, not Internal Medicine; candidate wants research-only roles, not coordinator roles.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "rochester:R275717": {
    "key": "rochester:R275717",
@@ -14333,7 +14751,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Human-subject child/family research in Psychology department at Mt. Hope Family Center, not Internal Medicine; role is a full-time research project coordinator with no visa information.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "rochester:R275718": {
    "key": "rochester:R275718",
@@ -14387,7 +14806,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Human-subject behavioral research (eye tracking, observation, surveys) in Psychology at Mt. Hope Family Center, not Internal Medicine. Minimum is an associate's degree, and no PhD or visa terms are stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-ananta-addala": {
    "key": "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-ananta-addala",
@@ -14444,7 +14864,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a PhD, DrPH, or equivalent doctoral degree; the MBBS without PhD does not qualify. The department is Pediatrics, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-arden-morris": {
    "key": "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-arden-morris",
@@ -14499,7 +14920,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Department is Surgery, not Internal Medicine; a PhD in CS, engineering, or math is required, which the MBBS candidate lacks.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-brendan-visser": {
    "key": "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-brendan-visser",
@@ -14549,7 +14971,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Surgical video education production in Surgery department, not Internal Medicine; primary duty is video production, not clinical or dry research.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-dan-congreve": {
    "key": "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-dan-congreve",
@@ -14597,7 +15020,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Postdoc in Electrical Engineering on nanoscale fabrication, optics and materials testing; requires a PhD and involves bench work, not Internal Medicine clinical or dry research.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-frederick-dirbas": {
    "key": "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-frederick-dirbas",
@@ -14658,7 +15082,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are murine in vivo, histology, flow cytometry, and cell culture (wet lab); department is Surgery, not Internal Medicine; PhD required.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-jon-park": {
    "key": "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-jon-park",
@@ -14708,7 +15133,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab cancer metastasis research with 3D cell culture and organ-on-a-chip; Neurosurgery department; requires PhD or MD/PhD, which the candidate lacks.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-juliet-knowles": {
    "key": "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-juliet-knowles",
@@ -14763,7 +15189,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Postdoc in Neurology requiring a PhD. Core duties include snRNAseq and proteomics from animal models and iPSC-derived neurons, and sample collection, which is wet-lab work.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-lillian-sung": {
    "key": "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-lillian-sung",
@@ -14813,7 +15240,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Postdoc in Stanford Pediatrics under Lillian Sung on clinical ML and observational studies. Qualifications accept 'PhD, MD, or equivalent'. Outside Internal Medicine, and visa is not stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-maneesh-kumar-misra": {
    "key": "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-maneesh-kumar-misra",
@@ -14875,7 +15303,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are hPSC organoid culture, CRISPR editing, and immune cell assays (bench work); department is Pathology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-michael-lin": {
    "key": "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-michael-lin",
@@ -14925,7 +15354,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab neuroscience work (voltage indicators, mouse brain surgery, electrophysiology) in Bioengineering/Neurobiology; requires a doctoral degree, which the candidate lacks, and it is not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-oliver-fringer": {
    "key": "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-oliver-fringer",
@@ -14976,7 +15406,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a Ph.D. in engineering or physical oceanography; the candidate has no PhD. Also a Civil and Environmental Engineering role, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-oliver-fringer-1": {
    "key": "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-oliver-fringer-1",
@@ -15027,7 +15458,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a PhD in engineering or physical sciences, a clearly ineligible degree for an MBBS-only candidate; it is also a Civil and Environmental Engineering role outside Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-sohail-husain": {
    "key": "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-sohail-husain",
@@ -15082,7 +15514,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are animal models, organ physiology, genetic models and omics in a Pediatrics GI lab; not Internal Medicine and wet-lab, despite stated visa sponsorship.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-spyridon-karadimas": {
    "key": "stanford-postdoc:prospective-opportunities-open-postdoctoral-position-faculty-mentor-spyridon-karadimas",
@@ -15132,7 +15565,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires PhD or MD/PhD in neuroscience-type field; core duties are circuit tracing, in vivo electrophysiology and motor behavior in Neurosurgery lab, with no Internal Medicine link.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "tulane-academic:1459": {
    "key": "tulane-academic:1459",
@@ -15183,7 +15617,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a Ph.D. in physics, chemistry, or related field; this is a computational physics role in SSE Physics, not Internal Medicine, and the candidate has no PhD.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "tulane-academic:2115": {
    "key": "tulane-academic:2115",
@@ -15233,7 +15668,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Bench neuroscience with mouse colony and genotyping as core duties; requires PhD; department is Cell & Molecular Biology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "tulane-academic:2130": {
    "key": "tulane-academic:2130",
@@ -15281,7 +15717,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Biochemistry and molecular biology postdoc requiring enzymology, protein biochemistry and molecular/cellular biology experience; wet-lab core and not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "tulane-academic:2194": {
    "key": "tulane-academic:2194",
@@ -15336,7 +15773,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a PhD in environmental health, epidemiology, or a related field. Hosted by Environmental Health Sciences, not Internal Medicine. Candidate has no PhD.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "ucdavis:JPF07934": {
    "key": "ucdavis:JPF07934",
@@ -15387,7 +15825,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Computational population genetics postdoc (GWAS methods, SWIF(r), simulations) in the Genome Center, College of Biological Sciences, not Internal Medicine. No bench duties listed.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "ucdavis:JPF07948": {
    "key": "ucdavis:JPF07948",
@@ -15437,7 +15876,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Physics postdoc building optical/interferometer detector hardware with optically trapped micro-disks; not Internal Medicine and core duties are bench instrumentation R&D, not clinical or dry research.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "uchicago:JR35557": {
    "key": "uchicago:JR35557",
@@ -15496,7 +15936,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet lab processing of biospecimens is a core duty; the role is a clinical research assistant doing enrollment, consent, and blood draws, not in Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "uchicago:JR35655": {
    "key": "uchicago:JR35655",
@@ -15547,7 +15988,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Posting states the position is not eligible for employer-sponsored employment authorization. It is also a Booth School of Business qualitative social science lab, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "ucla-recruit:JPF11386": {
    "key": "ucla-recruit:JPF11386",
@@ -15617,7 +16059,8 @@
    "reviewed_by": "Claude Sonnet",
    "verdict": "Match",
    "reason": "Postdoctoral research fellow in UCLA Medicine-Pulmonary Disease; policy/outcomes data research; eligibility lists Ph.D., M.D., J.D. or equivalent, so MBBS without PhD plausibly qualifies.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "ucla-recruit:JPF11396": {
    "key": "ucla-recruit:JPF11396",
@@ -15672,7 +16115,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are lentiviral vector generation, in vitro and animal transductions, and histology/ELISA/Western work. A Ph.D. or equivalent doctoral degree in biological sciences is required.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "ucla-recruit:JPF11400": {
    "key": "ucla-recruit:JPF11400",
@@ -15722,7 +16166,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are mechanistic immunology, dendritic cell and CD8+ T-cell work, and preclinical tumor models, which are wet-lab. Department is Nuclear Medicine, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "ucla-recruit:JPF11401": {
    "key": "ucla-recruit:JPF11401",
@@ -15779,7 +16224,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Basic science lab with cell culture, Western blots, PCR, mouse colonies and experiments; sits in Surgery, not Internal Medicine; requires a PhD.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "ucla-recruit:JPF11407": {
    "key": "ucla-recruit:JPF11407",
@@ -15827,7 +16273,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a Ph.D. in Physics or a related field, which the candidate lacks. The role is fusion simulation in Physics & Astronomy, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "ucla:11784": {
    "key": "ucla:11784",
@@ -15880,7 +16327,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Human-subject neuroimaging study run by Integrative Biology and Physiology, not Internal Medicine. Requires only a bachelor's degree (preferred), no PhD, and no wet-lab work.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "ucsf:10079": {
    "key": "ucsf:10079",
@@ -15940,7 +16388,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are hands-on bench research: molecular biology, protein expression, cell assays, animal work. Hiring unit is Ob-Gyn, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "ucsf:10810": {
    "key": "ucsf:10810",
@@ -15995,7 +16444,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are fungal culture, mammalian cell culture, Western blots, transfections, and molecular biology in the Sil lab, a basic-science microbiology/immunology role, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "ucsf:9873": {
    "key": "ucsf:9873",
@@ -16051,7 +16501,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are mouse experiments, RNAscope in situ hybridization, and tissue histology, which are wet-lab work; the department is Physiology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "ufl:en-us-job-519617-postdoctoral-associate": {
    "key": "ufl:en-us-job-519617-postdoctoral-associate",
@@ -16087,6 +16538,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 19020000 - EG-MECHANICAL - AEROSPACE ENG is outside the medical school.",
@@ -16127,6 +16579,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 16360100 - LS-PHYSICS-GENERAL is outside the medical school.",
@@ -16169,6 +16622,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 18380000 - ED-CTR EXCEL EARLY CHILD STUD is outside the medical school.",
@@ -16209,6 +16663,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 37044160 - SR-MM-HACISULEYMAN LAB is outside the medical school.",
@@ -16249,6 +16704,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 18070000 - ED-SHDOSE-SCHL OF HUM DEV&ORG is outside the medical school.",
@@ -16305,7 +16761,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Posting is a postdoc in a Pediatric Neurology department and a Developmental Network Neurobiology lab, not Internal Medicine; AI focus suggests computational work outside the candidate's listed skills.",
-   "active": true
+   "active": true,
+   "title_only": true
   },
   "ufl:en-us-job-535998-postdoctoral-researcher": {
    "key": "ufl:en-us-job-535998-postdoctoral-researcher",
@@ -16341,20 +16798,21 @@
    },
    "ai": {
     "role_type": "postdoc",
-    "research_type": "unclear",
-    "im_division": "unclear",
-    "mbbs_without_phd_eligible": "unclear",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
     "visa": "not_stated",
-    "verdict": "check",
-    "confidence": "low",
+    "verdict": "excluded",
+    "confidence": "high",
     "skills_fit": "weak",
     "department": "29240101 - MD-HOBI-GENERAL",
-    "reason": "Only a title and a cryptic department code are available. 'MD-' may mean Medicine and 'HOBI' may be hematology/oncology, but the work type and degree requirement are unknown.",
-    "verify": "Whether a PhD is required, whether the work is wet-lab, and whether the department is Internal Medicine",
-    "missing": "Unknown; postdocs often require a PhD and may involve wet-lab work",
-    "deadline": ""
+    "reason": "The posting requires a PhD in informatics, CS, statistics or a related STEM field. It also requires ML/deep learning skills. The department is Health Outcomes & Biomedical Informatics, not Internal Medicine.",
+    "verify": "",
+    "missing": "PhD; machine learning and deep learning; software development; AI/ML methods for EHR and imaging",
+    "deadline": "2026-11-13"
    },
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 1,
    "ai_first": {
     "role_type": "postdoc",
@@ -16374,8 +16832,33 @@
    "ai_review_done": true,
    "review_version": 5,
    "reviewed_by": "Claude Sonnet",
-   "verdict": "Check",
-   "reason": "Only a title and a cryptic department code are available. 'MD-' may mean Medicine and 'HOBI' may be hematology/oncology, but the work type and degree requirement are unknown.",
+   "verdict": "Excluded",
+   "reason": "The posting requires a PhD in informatics, CS, statistics or a related STEM field. It also requires ML/deep learning skills. The department is Health Outcomes & Biomedical Informatics, not Internal Medicine.",
+   "find_attempts": 1,
+   "find_version": 1,
+   "ai_before_find": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "unclear",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "weak",
+    "department": "29240101 - MD-HOBI-GENERAL",
+    "reason": "Only a title and a cryptic department code are available. 'MD-' may mean Medicine and 'HOBI' may be hematology/oncology, but the work type and degree requirement are unknown.",
+    "verify": "Whether a PhD is required, whether the work is wet-lab, and whether the department is Internal Medicine",
+    "missing": "Unknown; postdocs often require a PhD and may involve wet-lab work",
+    "deadline": ""
+   },
+   "copy": {
+    "url": "https://explore.jobs.ufl.edu/en-us/job/535998/postdoctoral-researcher",
+    "title": "University of Florida - Details - Postdoctoral Researcher",
+    "kind": "primary",
+    "match": "job_id",
+    "excerpt": "--- meta-apple-mobile-web-app-capable: yes meta-apple-mobile-web-app-status-bar-style: translucent black meta-apple-mobile-web-app-title: Careers at UF meta-mobile-web-app-capable: yes meta-viewport: width=device-width, initial-scale=1 title: University of Florida - Details - Postdoctoral Researcher --- --> Toggle navigation [![University of Florida](https://hr.ufl.edu/_pageup/images/uf.png)](http://ufl.edu) # [Careers at UF](http://explore.jobs.ufl.edu) - [Login](https://secure.dc4.pageuppeople.com/apply/674/aw/applicationForm/default.asp \"Sign in to complete your application, to view the status of your submission, and to update your account profile.\") ![Search](https://hr.ufl.edu/_pageup/images/icon-search.png) ## Postdoctoral Researcher [Apply now](https://secure.dc4.pageuppeople.com/apply/674/gateway/default.aspx?c=apply&lJobID=535998&lJobSourceTypeID=796&sLanguage=en-us) **Job no:**",
+    "by": "Claude Sonnet with web search"
+   },
    "active": true
   },
   "ufl:en-us-job-536853-postdoctoral-associate-in-high-energy-physics": {
@@ -16412,6 +16895,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 16360100 - LS-PHYSICS-GENERAL is outside the medical school.",
@@ -16468,7 +16952,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Department line is MD-Pediatric Infectious Diseases, not Internal Medicine. Duties and degree requirements are not shown in the title alone.",
-   "active": true
+   "active": true,
+   "title_only": true
   },
   "ufl:en-us-job-537843-postdoctoral-associate-martins-lab": {
    "key": "ufl:en-us-job-537843-postdoctoral-associate-martins-lab",
@@ -16504,6 +16989,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 37042060 - SR-IM-MARTINS LAB is outside the medical school.",
@@ -16544,6 +17030,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 18070000 - ED-SHDOSE-SCHL OF HUM DEV&ORG is outside the medical school.",
@@ -16584,6 +17071,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 32030000 - PH-MEDICINAL CHEMISTRY is outside the medical school.",
@@ -16627,6 +17115,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 37043010 - SR-CHEM-IZARD LAB is outside the medical school.",
@@ -16667,6 +17156,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 37041120 - SR-CHEM-LING XU LAB is outside the medical school.",
@@ -16707,6 +17197,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 16120100 - LS-CHEMISTRY-GENERAL is outside the medical school.",
@@ -16763,7 +17254,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Department is Molecular Genetics and Microbiology, not Internal Medicine; only title and department available, so research type unknown.",
-   "active": true
+   "active": true,
+   "title_only": true
   },
   "ufl:en-us-job-539984-postdoctoral-associate-disney-lab": {
    "key": "ufl:en-us-job-539984-postdoctoral-associate-disney-lab",
@@ -16799,6 +17291,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 37041030 - SR-CHEM-DISNEY LAB is outside the medical school.",
@@ -16855,7 +17348,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Department of Psychiatry, not Internal Medicine; full posting unavailable, so role duties and PhD requirement unknown.",
-   "active": true
+   "active": true,
+   "title_only": true
   },
   "ufl:en-us-job-540714-research-assistant-i-griffin-lab": {
    "key": "ufl:en-us-job-540714-research-assistant-i-griffin-lab",
@@ -16891,6 +17385,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 37044060 - SR-MM-GRIFFIN, P LAB is outside the medical school.",
@@ -16945,6 +17440,7 @@
     "deadline": ""
    },
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 1,
    "ai_first": {
     "role_type": "postdoc",
@@ -16964,8 +17460,10 @@
    "ai_review_done": true,
    "review_version": 5,
    "reviewed_by": "Claude Sonnet",
-   "verdict": "Check",
+   "verdict": "Title only",
    "reason": "Only a title and a cost-center code are given. 'MD-...' may mean Medicine and 'HOBI' may mean Hematology/Oncology, but the work type and degree rules are not stated.",
+   "find_attempts": 1,
+   "find_version": 1,
    "active": true
   },
   "ufl:en-us-job-540874-postdoctoral-associate-bannister-lab": {
@@ -17002,6 +17500,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 37044010 - SR-MM-BANNISTER LAB is outside the medical school.",
@@ -17042,6 +17541,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 16120100 - LS-CHEMISTRY-GENERAL is outside the medical school.",
@@ -17082,6 +17582,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 60100000 - AG-MICROBIOLOGY - CELL SCI is outside the medical school.",
@@ -17122,6 +17623,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 13050000 - DW-DIGITAL WORLD is outside the medical school.",
@@ -17178,7 +17680,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Department is MD-Neuroscience, not Internal Medicine; the title alone gives no research type or eligibility details.",
-   "active": true
+   "active": true,
+   "title_only": true
   },
   "ufl:en-us-job-541319-research-assistant-scientist": {
    "key": "ufl:en-us-job-541319-research-assistant-scientist",
@@ -17214,6 +17717,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 19050000 - EG-ELECTRICAL - COMPUTER ENG is outside the medical school.",
@@ -17254,6 +17758,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 57301000 - HS-HAMILTON SCHOOL ADMIN is outside the medical school.",
@@ -17294,6 +17799,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 16120100 - LS-CHEMISTRY-GENERAL is outside the medical school.",
@@ -17334,6 +17840,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 16360100 - LS-PHYSICS-GENERAL is outside the medical school.",
@@ -17374,6 +17881,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 60230000 - AG-HORTICULTURAL SCIENCES is outside the medical school.",
@@ -17414,6 +17922,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 60230000 - AG-HORTICULTURAL SCIENCES is outside the medical school.",
@@ -17454,6 +17963,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 16360100 - LS-PHYSICS-GENERAL is outside the medical school.",
@@ -17494,6 +18004,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 56021500 - NH-MAMMALS is outside the medical school.",
@@ -17550,7 +18061,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Department is Molecular Genetics and Microbiology, not Internal Medicine; research type and eligibility not stated in the title or department line.",
-   "active": true
+   "active": true,
+   "title_only": true
   },
   "ufl:en-us-job-541548-postdoctoral-associate": {
    "key": "ufl:en-us-job-541548-postdoctoral-associate",
@@ -17586,6 +18098,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 19340000 - EG-BIOMEDICAL ENGINEERING is outside the medical school.",
@@ -17626,6 +18139,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 19340000 - EG-BIOMEDICAL ENGINEERING is outside the medical school.",
@@ -17682,7 +18196,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Department is MD-Ophthalmology, clearly outside Internal Medicine; full posting not available to confirm research type.",
-   "active": true
+   "active": true,
+   "title_only": true
   },
   "ufl:en-us-job-541692-postdoctoral-associate": {
    "key": "ufl:en-us-job-541692-postdoctoral-associate",
@@ -17734,7 +18249,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Department is MD-Ophthalmology, clearly outside Internal Medicine. Posting body not available to confirm research type or eligibility.",
-   "active": true
+   "active": true,
+   "title_only": true
   },
   "ufl:en-us-job-541701-postdoctoral-associate-in-transportation-systems-safety-and-human-factors": {
    "key": "ufl:en-us-job-541701-postdoctoral-associate-in-transportation-systems-safety-and-human-factors",
@@ -17770,6 +18286,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 19220300 - EG-TECHNOLOGY TRAINING CENTER is outside the medical school.",
@@ -17810,6 +18327,7 @@
    },
    "ai": null,
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 0,
    "verdict": "Other dept",
    "reason": "Department 60740000 - AG-EREC-BELLE GLADE is outside the medical school.",
@@ -17866,7 +18384,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Department is Neurology-Epilepsy, not Internal Medicine; the title centres on MEG and multimodal neuroimaging, which is imaging work outside the candidate's listed experience.",
-   "active": true
+   "active": true,
+   "title_only": true
   },
   "ufl:en-us-job-541788-postdoctoral-associate-pulmonary": {
    "key": "ufl:en-us-job-541788-postdoctoral-associate-pulmonary",
@@ -17916,6 +18435,7 @@
     "deadline": ""
    },
    "evaluated": true,
+   "title_only": true,
    "ai_attempts": 1,
    "ai_first": {
     "role_type": "postdoc",
@@ -17935,8 +18455,10 @@
    "ai_review_done": true,
    "review_version": 5,
    "reviewed_by": "Claude Sonnet",
-   "verdict": "Check",
+   "verdict": "Title only",
    "reason": "Postdoctoral Associate in Pulmonary Medicine (IM division), but no duties, degree requirements or lab/clinical nature stated; pulmonary postdocs are often wet-lab and PhD-required.",
+   "find_attempts": 1,
+   "find_version": 1,
    "active": true
   },
   "uhhospitals:23474395": {
@@ -17994,7 +18516,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Clinical research coordinator role in Orthopedic research under Administrative Support; candidate explicitly excludes coordinator roles, and it is not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umb-academic:202": {
    "key": "umb-academic:202",
@@ -18049,7 +18572,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Posting states applicants 'must have a Ph.D. or equivalent' in Biostatistics or a related field; primary appointment is in Epidemiology and Public Health, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umb-academic:277": {
    "key": "umb-academic:277",
@@ -18105,7 +18629,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are anaerobic microbial cultivation, strain phenotyping, and animal and host-cell assays. Based in IGS/Microbiology, not Internal Medicine. Requires a doctoral degree in a biology field.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umb-academic:280": {
    "key": "umb-academic:280",
@@ -18162,7 +18687,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a PhD, ScD, or equivalent doctoral degree, which the MBBS candidate lacks. Department is Institute for Genome Sciences, not Internal Medicine. Work is epidemiologic and omics data analysis.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umb-academic:362": {
    "key": "umb-academic:362",
@@ -18218,7 +18744,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Computational omics and AI postdoc in the Institute for Genome Sciences, not Internal Medicine. Requires 'A PhD and/or MD', so eligibility is likely met. No visa statement.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umb:285": {
    "key": "umb:285",
@@ -18275,7 +18802,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Bench lab role: DNA/RNA extraction, PCR, qPCR, sequencing prep; requires bachelor's in biology/chemistry; not Internal Medicine; no sponsorship stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-269022-research-fellow": {
    "key": "umich:job-detail-269022-research-fellow",
@@ -18335,7 +18863,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are wet-lab molecular biology, ChIP, CRISPR, cell culture; requires a doctoral degree, which the MBBS-only candidate lacks.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-277122-research-fellow": {
    "key": "umich:job-detail-277122-research-fellow",
@@ -18387,7 +18916,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a PhD and US citizenship, national, or permanent residency; sits in Environmental Health Sciences, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-277900-research-fellow": {
    "key": "umich:job-detail-277900-research-fellow",
@@ -18443,7 +18973,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab role (orthotopic mouse models, cloning, cell culture) in Pediatrics; requires a PhD, which the candidate lacks. Not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-280086-research-fellow": {
    "key": "umich:job-detail-280086-research-fellow",
@@ -18496,7 +19027,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab developmental biology (Xenopus, mouse, stem cells, gene editing) in Cell & Developmental Biology, not Internal Medicine; PhD required.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-280167-research-fellow": {
    "key": "umich:job-detail-280167-research-fellow",
@@ -18553,7 +19085,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab molecular biology, tissue culture and high-throughput screens are core duties; department is Pediatrics-Hematology Oncol, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-280575-postdoctoral-research-fellow-multiomics-and-causal-inference": {
    "key": "umich:job-detail-280575-postdoctoral-research-fellow-multiomics-and-causal-inference",
@@ -18631,7 +19164,8 @@
    "reviewed_by": "Claude Sonnet",
    "verdict": "Stretch",
    "reason": "Postdoctoral fellow in Internal Medicine Cardiology; dry omics and causal inference work. MD is accepted as a doctoral degree, but required omics analysis skills are not shown.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-281612-research-fellow": {
    "key": "umich:job-detail-281612-research-fellow",
@@ -18683,7 +19217,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Only U.S. citizens, noncitizen nationals, or permanent residents are eligible. Department is Environmental Health Sciences, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-283700-research-fellow": {
    "key": "umich:job-detail-283700-research-fellow",
@@ -18731,7 +19266,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab chemical biology role in Medicinal Chemistry, College of Pharmacy; requires a PhD in chemistry-related field and involves cellular assays and bench work.",
-   "active": false
+   "active": false,
+   "title_only": false
   },
   "umich:job-detail-283721-research-fellow": {
    "key": "umich:job-detail-283721-research-fellow",
@@ -18807,7 +19343,8 @@
    "reviewed_by": "Claude Sonnet",
    "verdict": "Match",
    "reason": "Postdoctoral Research Fellow in Cardiometabolic Center, Division of Cardiovascular Medicine; clinical/outcomes research; required degree is PhD, MD, or equivalent doctoral degree, so MBBS qualifies.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-284021-research-fellow": {
    "key": "umich:job-detail-284021-research-fellow",
@@ -18858,7 +19395,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are wet lab molecular and cellular work plus AML xenotransplants; requires PhD or professional doctorate, which excludes an MBBS-only candidate.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-284023-research-fellow": {
    "key": "umich:job-detail-284023-research-fellow",
@@ -18916,7 +19454,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are cellular and molecular bench work, mouse tumor studies, and a PhD or equivalent doctoral degree is required; Pathology department, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-284029-research-fellow": {
    "key": "umich:job-detail-284029-research-fellow",
@@ -18974,7 +19513,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab molecular/cell biology and neuroscience role; requires M.D./Ph.D.; department is Ophthalmology and Visual Science, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-284106-research-fellow": {
    "key": "umich:job-detail-284106-research-fellow",
@@ -19028,7 +19568,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Bench-based cardiac molecular biology and mouse genetics lab in Pharmacology; requires PhD; not Internal Medicine and not clinical or dry research.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-284154-research-fellow": {
    "key": "umich:job-detail-284154-research-fellow",
@@ -19083,7 +19624,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are patch-clamp electrophysiology and 2-photon imaging in awake mice. Hosted by Kresge Hearing Research Institute, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-284290-research-fellow": {
    "key": "umich:job-detail-284290-research-fellow",
@@ -19176,7 +19718,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Cryo-ET/cryo-FIB structural biology with lab work on cell lines and tissue samples; requires a Ph.D. in chemistry, physics, or related field; not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-284293-research-fellow": {
    "key": "umich:job-detail-284293-research-fellow",
@@ -19233,7 +19776,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are bench work (western blots, CRISPR, iPSC culture, organoids) and a PhD is required; Life Sciences Institute, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-284309-research-fellow": {
    "key": "umich:job-detail-284309-research-fellow",
@@ -19295,7 +19839,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab leukemia epigenetics role (murine models, flow cytometry, ChIP-seq, CRISPR); requires PhD; Pathology department, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-284361-research-fellow": {
    "key": "umich:job-detail-284361-research-fellow",
@@ -19350,7 +19895,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Epidemiology Department, not Internal Medicine. Requires a conferred doctorate in epidemiology or public health; the candidate has no PhD. Visa sponsorship not stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-284376-research-fellow": {
    "key": "umich:job-detail-284376-research-fellow",
@@ -19405,7 +19951,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Postdoctoral fellow in the Epidemiology Department (School of Public Health), not Internal Medicine. Requires a conferred doctorate in epidemiology or public health; no visa sponsorship stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-284440-research-fellow": {
    "key": "umich:job-detail-284440-research-fellow",
@@ -19459,7 +20006,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Translational brain tumor lab with in vitro/in vivo modeling, cell lines, mouse models as core duties; requires PhD; Department of Neurosurgery, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-284446-research-fellow": {
    "key": "umich:job-detail-284446-research-fellow",
@@ -19513,7 +20061,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Drosophila neural circuit lab using cell and molecular biology, genetics, multi-omics bench work; requires PhD in neuroscience/cell or developmental biology; not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-284607-postdoctoral-research-fellow-hydrology-and-water-resources": {
    "key": "umich:job-detail-284607-postdoctoral-research-fellow-hydrology-and-water-resources",
@@ -19563,7 +20112,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Hydrology and water resources research in the School for Environment and Sustainability, not Internal Medicine; requires a PhD in an engineering or earth-science field.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-284614-research-fellow": {
    "key": "umich:job-detail-284614-research-fellow",
@@ -19620,7 +20170,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are IHC, RNA ISH, FISH, microscopy and Ventana histology work, which is wet-lab. The center is Translational Pathology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-284638-research-associate-temp": {
    "key": "umich:job-detail-284638-research-associate-temp",
@@ -19673,7 +20224,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Posting states visa sponsorship is not available; also School of Information, not Internal Medicine, with qualitative digital ethnography work.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-284688-research-associate-understanding-michigans-literacy-policy-research-project": {
    "key": "umich:job-detail-284688-research-associate-understanding-michigans-literacy-policy-research-project",
@@ -19727,7 +20279,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a PhD in education or a related field, which the candidate lacks, and the role sits in the School of Education, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-284701-postdoctoral-research-fellow-longitudinal-child-development-and-health": {
    "key": "umich:job-detail-284701-postdoctoral-research-fellow-longitudinal-child-development-and-health",
@@ -19783,7 +20336,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Longitudinal child development secondary data analysis in School of Kinesiology, not Internal Medicine; requires PhD or equivalent research doctorate.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-284754-research-fellow": {
    "key": "umich:job-detail-284754-research-fellow",
@@ -19837,7 +20391,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a conferred doctorate in epidemiology or public health, which the MBBS candidate lacks. Also sits in the School of Public Health Epidemiology Department, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "umich:job-detail-284756-research-associate-ii-temp": {
    "key": "umich:job-detail-284756-research-associate-ii-temp",
@@ -19887,7 +20442,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Bioinformatics, ontology and AI role in the Lab Animal Medicine Unit, not Internal Medicine. Lists a minimum PhD 'or equivalent experience'. No visa statement.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "usc:REQ20159325": {
    "key": "usc:REQ20159325",
@@ -19939,7 +20495,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "NIH-funded lab in Craniofacial Molecular Biology with cellular metabolism and laboratory equipment duties; not Internal Medicine; Ph.D. required.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "usc:REQ20181625": {
    "key": "usc:REQ20181625",
@@ -19999,7 +20556,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are organoid culture, molecular biology, and flow cytometry; minimum requires PhD or equivalent doctorate, which the candidate lacks; not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "usc:REQ20181626": {
    "key": "usc:REQ20181626",
@@ -20050,7 +20608,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Health policy and economics claims-data research at USC Schaeffer Center, not Internal Medicine. Department field blank; minimum is 'Ph.D. or equivalent doctorate'; visa not stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "usc:REQ20181631": {
    "key": "usc:REQ20181631",
@@ -20106,7 +20665,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires Ph.D. or equivalent doctorate completed within five years; the candidate has an MBBS without a PhD. Also sits in Occupational Therapy, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "usc:REQ20182328": {
    "key": "usc:REQ20182328",
@@ -20162,7 +20722,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are wet-lab (molecular cloning, cell culture, viral delivery, biosensor construction). A PhD is required, and the candidate lacks one. Not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utaustin:R_00048843": {
    "key": "utaustin:R_00048843",
@@ -20212,7 +20773,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Outreach and training role in a School of Social Work, not Internal Medicine; posting requires US work authorization without sponsorship and a driver's license.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utaustin:R_00049220": {
    "key": "utaustin:R_00049220",
@@ -20268,7 +20830,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Clinical trial monitoring CRA I role in Department of Psychiatry, not Internal Medicine. Requires only a bachelor's degree; visa sponsorship not stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utaustin:R_00049273": {
    "key": "utaustin:R_00049273",
@@ -20319,7 +20882,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Petroleum engineering drilling research, not Internal Medicine; requires a PhD within three years and lists lab testing as a preferred experience item, so the candidate is ineligible.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utaustin:R_00049385": {
    "key": "utaustin:R_00049385",
@@ -20371,7 +20935,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a PhD in sociology or related field received within three years; the candidate has no PhD. Sociology quantitative work, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utaustin:R_00049394": {
    "key": "utaustin:R_00049394",
@@ -20421,7 +20986,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires US citizenship and a PhD in engineering or science fields; it is an ARL GNSS/PNT role outside Internal Medicine, so the candidate is clearly ineligible.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utaustin:R_00049401": {
    "key": "utaustin:R_00049401",
@@ -20471,7 +21037,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires US citizenship and a PhD. Work is geospatial data fusion and ML for national security, outside Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utaustin:R_00049484": {
    "key": "utaustin:R_00049484",
@@ -20528,7 +21095,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Hiring department is Department of Psychiatry, not Internal Medicine. Core duties mix lab experiments and biospecimen processing with neuroimaging and neurocognitive assessments. Visa not stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utaustin:R_00049485": {
    "key": "utaustin:R_00049485",
@@ -20585,7 +21153,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Clinical research role (recruitment, consent, IRB, data collection) hiring from the Department of Neurology, not Internal Medicine; coordinator-style duties.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utaustin:R_00049558": {
    "key": "utaustin:R_00049558",
@@ -20641,7 +21210,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Entry-level clinical trial monitoring role in the Department of Psychiatry, not Internal Medicine. No wet-lab duties. Requires a bachelor's in life sciences or related field; no visa information.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utsw:23889315": {
    "key": "utsw:23889315",
@@ -20698,7 +21268,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Clinical research assistant role in the OB-Uro Pelvic Reconstructive Surgery department (ObGyn), not Internal Medicine. Degree requirements are met by an MBBS; no visa or citizenship language.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utsw:23969213": {
    "key": "utsw:23969213",
@@ -20746,7 +21317,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Radiology medical physics postdoc, not Internal Medicine. Requires a PhD in Physics or Engineering and PET/SPECT hardware and software experience, which the MBBS candidate lacks.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utsw:23972980": {
    "key": "utsw:23972980",
@@ -20804,7 +21376,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are in vitro and in vivo models, mouse models, organoids, and sequencing in Pathology, a non-IM department. Wet-lab work is excluded for this candidate.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utsw:23990636": {
    "key": "utsw:23990636",
@@ -20852,7 +21425,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Organic synthesis and chemical biology lab role (Chen lab, Biochemistry) with laboratory bench work as core duty; not Internal Medicine and not clinical or dry research.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utsw:23990645": {
    "key": "utsw:23990645",
@@ -20900,7 +21474,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab synthetic chemistry and chemical biology lab (natural product synthesis, Chen lab, Biochemistry); not Internal Medicine and no clinical or dry research duties.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utsw:23990646": {
    "key": "utsw:23990646",
@@ -20950,7 +21525,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Lab specimen processing role (accession, aliquot, storage, lab equipment) in Pathology, not Internal Medicine; core duties are laboratory and bench-type work.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utsw:23998037": {
    "key": "utsw:23998037",
@@ -21002,7 +21578,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are bench work: cell culture, mouse genotyping, flow cytometry, PCR, cell transfers. Immunology lab, not Internal Medicine, and no clinical or dry research.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utsw:24011482": {
    "key": "utsw:24011482",
@@ -21060,7 +21637,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are mouse surgery, histology, scRNA-seq, flow cytometry and CyTOF. Requires a PhD in a biological science. Trauma and immunology lab, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utsw:24011483": {
    "key": "utsw:24011483",
@@ -21116,7 +21694,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a PhD and core bench/animal/cell work (in vivo models, flow cytometry, single-cell sequencing); not Internal Medicine and not eligible for an MBBS without PhD.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utsw:24017001": {
    "key": "utsw:24017001",
@@ -21173,7 +21752,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Clinical Research Assistant II coordinator role with phlebotomy and specimen duties, not research-only; department is HG-Lab McNutt/Markey, not Internal Medicine; requires HS diploma or associate's plus experience.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utsw:24029999": {
    "key": "utsw:24029999",
@@ -21230,7 +21810,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a recent PhD in Public Health, Epidemiology, Psychology or related field; department is Social Behavioral Sciences, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utsw:24033833": {
    "key": "utsw:24033833",
@@ -21278,7 +21859,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a recent Ph.D. degree, which the candidate lacks. Hosted in the Department of Radiology, not Internal Medicine. Visa sponsorship is not addressed.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utsw:24035323": {
    "key": "utsw:24035323",
@@ -21326,7 +21908,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Pathology lab role; posting requires constructing and operating laboratory apparatus and equipment, a bench/wet-lab core duty, and is not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utsw:24038299": {
    "key": "utsw:24038299",
@@ -21382,7 +21965,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a PhD in computational biology, bioinformatics, biostatistics or related field; candidate has no PhD. Based in SPH Health Data Science and Biostatistics, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utsw:24039848": {
    "key": "utsw:24039848",
@@ -21434,7 +22018,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are immunology, bacterial pathogenesis, and vaccine work requiring cell culture and rodent models, which are wet-lab. Candidate has no wet-lab experience.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utsw:24039849": {
    "key": "utsw:24039849",
@@ -21482,7 +22067,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are molecular and cell-level study of autophagy and virus interactions, which is bench work, despite the Internal Medicine (Infectious Disease) department.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "utsw:24048019": {
    "key": "utsw:24048019",
@@ -21534,7 +22120,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Bench-based work (metabolomics, proteomics, antibody development, molecular biology) and a PhD or MD/PhD is required; not an Internal Medicine role.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "vanderbilt-postdoc:postdoc-prospective-postdocs-current-opportunities-id-949": {
    "key": "vanderbilt-postdoc:postdoc-prospective-postdocs-current-opportunities-id-949",
@@ -21582,7 +22169,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Law School fellowship requiring a law degree (JD); not Internal Medicine, and the candidate holds an MBBS with no law degree, so clearly ineligible.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "vanderbilt-postdoc:postdoc-prospective-postdocs-current-opportunities-id-951": {
    "key": "vanderbilt-postdoc:postdoc-prospective-postdocs-current-opportunities-id-951",
@@ -21632,7 +22220,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Seeks an 'experimentalist' for cellular, molecular, and immunology work on biospecimens; departments are Eye Institute, Neurology, and Pathology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "vanderbilt-postdoc:postdoc-prospective-postdocs-current-opportunities-id-952": {
    "key": "vanderbilt-postdoc:postdoc-prospective-postdocs-current-opportunities-id-952",
@@ -21682,7 +22271,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Physics & Astronomy postdoc in gravitational-wave astronomy; requires a Ph.D. in physics, astronomy, or equivalent, which the MBBS-without-PhD candidate lacks; not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "vanderbilt-postdoc:postdoc-prospective-postdocs-current-opportunities-id-953": {
    "key": "vanderbilt-postdoc:postdoc-prospective-postdocs-current-opportunities-id-953",
@@ -21730,7 +22320,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Clinical psychology postdoc requiring APA-accredited PhD/PsyD and internship; candidate lacks PhD and this is not Internal Medicine research.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "vanderbilt-postdoc:postdoc-prospective-postdocs-current-opportunities-id-954": {
    "key": "vanderbilt-postdoc:postdoc-prospective-postdocs-current-opportunities-id-954",
@@ -21786,7 +22377,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Neuroscience postdoc in Biological Sciences requiring mouse work, electrophysiology, dissections, histology; bench-based core duties. Requires a PhD; not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "vanderbilt-univ:10009051": {
    "key": "vanderbilt-univ:10009051",
@@ -21839,7 +22431,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Lab operations role in a biomedical engineering optics lab; cell culture, LN2, biosafety cabinets and biohazard waste are core duties. Not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "vumc:R-68845": {
    "key": "vumc:R-68845",
@@ -21898,7 +22491,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab mouse model and molecular/cellular work is core; requires PhD and postdoctoral fellowship; department is Dermatology, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "weillcornell:1436650200": {
    "key": "weillcornell:1436650200",
@@ -21957,7 +22551,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are assay development, ELISA, mass spectrometry and lab-standard sample work; requires a PhD in a laboratory science; not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "wustl:JR97934": {
    "key": "wustl:JR97934",
@@ -22021,7 +22616,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Cell biology postdoc with bench work (cell, biochemical, organoid, mouse models, lab environment with animal care); not Internal Medicine; requires Ph.D. or equivalent doctoral degree.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "wustl:JR97952": {
    "key": "wustl:JR97952",
@@ -22076,7 +22672,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab/in vivo animal work (two-photon imaging, optogenetics, animal care) in Otolaryngology; requires Ph.D. or M.D.-equivalent doctoral degree; not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "wustl:JR97986": {
    "key": "wustl:JR97986",
@@ -22127,7 +22724,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Postdoctoral fellowship in the Bursky School of Public Health on shared decision making and health communication, not Internal Medicine. Requires Ph.D., M.D., or equivalent; visa not stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "wustl:JR98080": {
    "key": "wustl:JR98080",
@@ -22186,7 +22784,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab postdoc in Dr. Challen's lab: mouse models, cell culture, ChIP, flow cytometry; laboratory environment with animal care. No Internal Medicine link stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "wustl:JR98122": {
    "key": "wustl:JR98122",
@@ -22241,7 +22840,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab postdoc in Pathology & Immunology with lab environment, animal care, and stem-cell/mouse work as core duties; not Internal Medicine and not a clinical or dry role.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "wustl:JR98134": {
    "key": "wustl:JR98134",
@@ -22295,7 +22895,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Lab-based postdoc with core bench duties (experiments, immunologic wet-lab techniques), a laboratory environment, and animal care. Title places it in Pediatrics, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "wustl:JR98170": {
    "key": "wustl:JR98170",
@@ -22348,7 +22949,8 @@
    "ai_attempts": 2,
    "verdict": "Other dept",
    "reason": "Dry-lab postdoc in Psychiatry (Cognitive & Perceptual Development Lab) analyzing infant fcMRI data. Not Internal Medicine. Requires M.D. or equivalent; no visa information stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "wustl:JR98181": {
    "key": "wustl:JR98181",
@@ -22409,7 +23011,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are hPSC differentiation, organoids, CUT&RUN and imaging in a stem cell lab; not Internal Medicine; requires Ph.D. or M.D. in molecular genetics.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "wustl:JR98216": {
    "key": "wustl:JR98216",
@@ -22466,7 +23069,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are mouse genetics, human vascular cell culture, iPSC models, and nanoparticle therapeutics, which is wet-lab work. Division sits in Pediatrics, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "wustl:JR98231": {
    "key": "wustl:JR98231",
@@ -22527,7 +23131,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab postdoc: rodent models, cell and organoid culture, flow cytometry as core duties, in Radiation Oncology, not Internal Medicine; candidate has no bench experience.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "wustl:JR98268": {
    "key": "wustl:JR98268",
@@ -22579,7 +23184,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab role: lab experiments, tissue cultures, assays, and animal care are core duties; department is Orthopedic Surgery, not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "wustl:JR98269": {
    "key": "wustl:JR98269",
@@ -22632,7 +23238,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Wet-lab bone-immune research with lab environment, animal care and lab techniques as core duties; not Internal Medicine and no visa sponsorship stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "yale-postdoc:posts-2026-10-07-postdoctoral-associate-in-viral-immunology-and-b-cell-biology-lucas-lab-department": {
    "key": "yale-postdoc:posts-2026-10-07-postdoctoral-associate-in-viral-immunology-and-b-cell-biology-lucas-lab-department",
@@ -22682,7 +23289,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Bench immunology lab (B cell biology, experiments, molecular biology) outside Internal Medicine; wet-lab core duties rule out the candidate.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "yale-postdoc:posts-2026-10-14-postdoctoral-associate-position-in-gerontologic-biostatistics-department-of": {
    "key": "yale-postdoc:posts-2026-10-14-postdoctoral-associate-position-in-gerontologic-biostatistics-department-of",
@@ -22735,7 +23343,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Requires a PhD in statistics or biostatistics and states applicants must be a US citizen or permanent resident. The candidate has no PhD and needs sponsorship.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "yale-postdoc:posts-2026-10-14-postdoctoral-associate-position-whitney-humanities-center-at-yale": {
    "key": "yale-postdoc:posts-2026-10-14-postdoctoral-associate-position-whitney-humanities-center-at-yale",
@@ -22783,7 +23392,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Humanities fellowship at Whitney Humanities Center; requires a Ph.D. in humanities-related research, which the MBBS candidate lacks, and is not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "yale-postdoc:posts-2026-10-16-postdoctoral-associate-ribosome-biology-rna-biology-and-functional-genomics": {
    "key": "yale-postdoc:posts-2026-10-16-postdoctoral-associate-ribosome-biology-rna-biology-and-functional-genomics",
@@ -22833,7 +23443,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are molecular, biochemical, and cell biological ribosome work with no clinical or dry-research focus; Department of Genetics is not Internal Medicine.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "yale-postdoc:posts-2026-10-16-postgraduate-associate-yale-school-of-medicine-dept-of-neurology": {
    "key": "yale-postdoc:posts-2026-10-16-postgraduate-associate-yale-school-of-medicine-dept-of-neurology",
@@ -22892,7 +23503,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Dedicated wet-lab role (PBMC isolation, flow cytometry, cytokine assays) in Neurology, not Internal Medicine; wet-lab experience required.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "yale-postdoc:posts-2026-10-19-postdoctoral-associate-position-archaia-the-yale-program-for-the-study-of-global": {
    "key": "yale-postdoc:posts-2026-10-19-postdoctoral-associate-position-archaia-the-yale-program-for-the-study-of-global",
@@ -22940,7 +23552,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Archaia antiquity program requires a Ph.D. in humanities/social science fields; no internal medicine link and candidate lacks a PhD.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "yale-postdoc:posts-2026-10-20-postdoctoral-associate-position-in-pharmaceutical-regulation-and-evidence": {
    "key": "yale-postdoc:posts-2026-10-20-postdoctoral-associate-position-in-pharmaceutical-regulation-and-evidence",
@@ -23016,7 +23629,8 @@
    "reviewed_by": "Claude Sonnet",
    "verdict": "Match",
    "reason": "Postdoctoral Associate in Yale Internal Medicine doing systematic review and evidence synthesis; MD or equivalent doctoral degree accepted, so an MBBS without a PhD plausibly qualifies.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "yale-postdoc:posts-2026-10-20-postdoctoral-associate-position-in-the-yale-collaboration-for-regulatory-rigor": {
    "key": "yale-postdoc:posts-2026-10-20-postdoctoral-associate-position-in-the-yale-collaboration-for-regulatory-rigor",
@@ -23089,7 +23703,8 @@
    "reviewed_by": "Claude Sonnet",
    "verdict": "Stretch",
    "reason": "Postdoctoral Associate in Yale General Internal Medicine; dry regulatory science and evidence synthesis work; MD accepted as minimum degree, though experience requirements are broad.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "yale-postdoc:posts-2026-10-20-postdoctoral-fellowpostdoctoral-associate-position-department-of-pediatrics-yale": {
    "key": "yale-postdoc:posts-2026-10-20-postdoctoral-fellowpostdoctoral-associate-position-department-of-pediatrics-yale",
@@ -23144,7 +23759,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Xenopus gene-editing, molecular and biochemical bench work is core; Pediatrics department, not Internal Medicine; requires PhD, MD, or MD/PhD in a basic science field.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "yale:138189WD": {
    "key": "yale:138189WD",
@@ -23201,7 +23817,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are laboratory operations, animal work, and biorepository maintenance with lab techniques like CRISPR and flow cytometry; the candidate has no wet-lab experience and the department is not stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "yale:138337WD": {
    "key": "yale:138337WD",
@@ -23256,7 +23873,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Clinical trials of digital interventions for alcohol, drug and smoking use, with psychology research methods. Not Internal Medicine. No department stated; no visa info.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "yale:138543WD": {
    "key": "yale:138543WD",
@@ -23313,7 +23931,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Research Assistant in Epidemiology of Microbial Diseases, YSPH, not Internal Medicine. Mixed duties include REDCap data work and blood smear and lab tasks. No visa info.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "yale:138544WD": {
    "key": "yale:138544WD",
@@ -23370,7 +23989,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Research Assistant supporting the ABCD Study in Yale's Department of Psychology, not Internal Medicine; the posting is human-subject research but outside IM.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "yale:138676WD": {
    "key": "yale:138676WD",
@@ -23425,7 +24045,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are laboratory operations, animal work, biorepository maintenance and bench assays (ELISA, Western blots, qPCR); candidate has no wet-lab experience. Department not stated.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "yale:138677WD": {
    "key": "yale:138677WD",
@@ -23495,7 +24116,8 @@
    },
    "ai_review_done": true,
    "reviewed_by": "Claude Sonnet",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "yale:138942WD": {
    "key": "yale:138942WD",
@@ -23549,7 +24171,8 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Yale Child Study Center clinical services data entry and QA for youth programs; not Internal Medicine. Department field blank, and it is a clerical-technical data role.",
-   "active": true
+   "active": true,
+   "title_only": false
   },
   "yale:139057WD": {
    "key": "yale:139057WD",
@@ -23610,7 +24233,8 @@
    "ai_attempts": 1,
    "verdict": "Excluded",
    "reason": "Core duties are laboratory work: PCR, sequencing, cell culture, daily operation of a specialized lab, and laboratory animals. Department not stated; requires a Master's in a scientific discipline.",
-   "active": true
+   "active": true,
+   "title_only": false
   }
  },
  "skipped": {
