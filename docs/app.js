@@ -174,7 +174,7 @@ function card(j) {
   }
   const lab = j.lookup || {};
   if (lab.lab_summary || (lab.lab_sources || []).length) {
-    const p = el("p", "lab", `Lab check${lab.pi ? " (" + String(lab.pi) + ")" : ""}: ${String(lab.lab_summary || "no lab details found")}`);
+    const p = el("p", "lab", `Lab check${lab.pi ? " (" + String(lab.pi) + ")" : ""}${lab.confirmed === false ? ", PI not confirmed at this institution" : ""}: ${String(lab.lab_summary || "no lab details found")}`);
     for (const src of (lab.lab_sources || []).slice(0, 3)) {
       const u = safeUrl(src.url);
       if (!u || u === "#") continue;

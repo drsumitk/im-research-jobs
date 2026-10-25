@@ -34,8 +34,8 @@ AI_GAP_SECONDS = 1.0  # pause between Claude calls to stay under per-minute rate
 SNIPPET_CHARS = 900
 TITLE_ONLY_CHARS = 200  # postings with less text than this carry only a title and department line
 REVIEW_VERSION = 5     # bump when the review instructions change, so undecided postings are reviewed again
-LOOKUP_VERSION = 1     # bump when the lab-lookup instructions change, so undecided postings are looked up again
-FIND_VERSION = 1       # bump when the find-the-posting instructions change
+LOOKUP_VERSION = 2     # bump when the lab-lookup instructions change, so undecided postings are looked up again
+FIND_VERSION = 2       # bump when the find-the-posting instructions change
 MAX_LOOKUP_ATTEMPTS = 2
 
 
@@ -208,6 +208,22 @@ def group_of(rec):
     return v
 
 
+def reset_outdated_web_checks(rec):
+    """Undo a lab lookup or a found copy made under older instructions, so it is done again."""
+    if rec.get("lookup") and int(rec.get("lookup_version", 0)) < LOOKUP_VERSION:
+        rec["ai"] = rec.pop("ai_before_lookup", rec.get("ai"))
+        rec.pop("lookup", None)
+        rec["lookup_attempts"] = 0
+    if int(rec.get("find_version", 0) or 0) and int(rec["find_version"]) < FIND_VERSION:
+        if rec.get("copy"):
+            rec["ai"] = rec.pop("ai_before_find", rec.get("ai"))
+            rec.pop("copy", None)
+        rec["find_attempts"] = 0
+    if rec.get("ai") and rec["ai"].get("verdict") in AI_TO_VERDICT and not rec.get("skip_ai"):
+        rec.setdefault("title_only", len(rec.get("snippet") or "") < TITLE_ONLY_CHARS)
+        rec["verdict"] = group_of(rec)
+
+
 def needs_find(rec, profile):
     """An undecided title-only posting for which no readable copy has been searched for yet."""
     ai = profile.get("ai", {})
@@ -375,7 +391,7 @@ def apply_ai(records, profile, log):
                 continue
             finally:
                 time.sleep(AI_GAP_SECONDS)
-            lab = {k: res.pop(k) for k in ("pi", "lab_summary", "lab_sources", "searches")}
+            lab = {k: res.pop(k) for k in ("pi", "lab_summary", "lab_sources", "searches", "confirmed")}
             lab["by"] = ai.get("lookup_label", lookup_model)
             rec.setdefault("ai_before_lookup", rec["ai"])
             rec["lookup"], rec["lookup_version"] = lab, LOOKUP_VERSION
@@ -401,6 +417,8 @@ def main(argv=None):
     DATA.mkdir(parents=True, exist_ok=True)
     saved = load_json(DATA / "jobs.json", {"jobs": {}})
     state = saved.get("jobs", {})
+    for rec in state.values():
+        reset_outdated_web_checks(rec)
     skipped = saved.get("skipped", {})
     now = datetime.now(timezone.utc)
     today = now.strftime("%Y-%m-%d")

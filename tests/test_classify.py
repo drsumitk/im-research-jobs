@@ -123,7 +123,11 @@ def test_lab_lookup_keeps_only_links_from_real_search_results(monkeypatch):
         {"type": "server_tool_use", "id": "s1", "name": "web_search", "input": {"query": "Sakemura lab Mayo"}},
         {"type": "web_search_tool_result", "tool_use_id": "s1", "content": [
             {"type": "web_search_result", "url": "https://www.mayo.edu/research/labs/x", "title": "X Lab",
-             "encrypted_content": "e"}]}]}
+             "encrypted_content": "e"}]},
+        {"type": "web_fetch_tool_result", "tool_use_id": "f1", "content": {
+            "type": "web_fetch_result", "url": "https://www.mayo.edu/research/labs/x",
+            "content": {"type": "document", "title": "X Lab", "source": {"type": "text", "media_type": "text/plain",
+                        "data": "Reona Leo Sakemura, M.D., Ph.D. Mayo Clinic, Rochester. CAR-T cell research."}}}}]}
     reply = ('{"role_type":"research_fellow","research_type":"wet_lab","department":"Hematology",'
              '"im_division":"Hematology & Oncology","mbbs_without_phd_eligible":"yes","visa":"not_stated",'
              '"verdict":"excluded","reason":"Lab papers are CAR-T cell engineering in mice.","confidence":"medium",'
@@ -134,6 +138,7 @@ def test_lab_lookup_keeps_only_links_from_real_search_results(monkeypatch):
     job = Job("mayo", "1", "RTP RESEARCH FELLOW LS with Dr Sakemura", "https://x", description="template")
     out = classify.lab_lookup(job, PROFILE, "Mayo Clinic", session=s)
     assert out["verdict"] == "excluded" and out["pi"] == "Reona Sakemura" and out["searches"] == 1
+    assert out["confirmed"]
     assert out["lab_sources"] == [{"url": "https://www.mayo.edu/research/labs/x", "title": "X Lab"}]
     tool = s.sent[0]["tools"][0]
     assert tool["type"] == "web_search_20250305" and tool["max_uses"] == PROFILE["ai"]["lookup_max_searches"]
@@ -164,7 +169,8 @@ def test_find_posting_accepts_only_a_copy_it_really_fetched(monkeypatch):
                 "type": "web_fetch_result", "url": "https://www.higheredjobs.com/x",
                 "content": {"type": "document", "title": "Postdoctoral Associate - Pulmonary",
                             "source": {"type": "text", "media_type": "text/plain",
-                                       "data": "Requisition 541788. MD or PhD. Analyse ICU cohort data."}}}},
+                                       "data": "Postdoctoral Associate - Pulmonary. Requisition 541788. MD or PhD. Analyse ICU cohort data. "
+                                       + "Duties include cohort analysis and manuscript writing. " * 12}}}},
             {"type": "text", "text": '{"verdict":"match","reason":"ICU cohort data analysis.","confidence":"medium",'
              '"role_type":"postdoc","research_type":"clinical_or_dry","mbbs_without_phd_eligible":"yes",'
              f'"copy_url":"{copy_url}","copy_kind":"secondary","copy_match":"job_id"}}'}]}
@@ -173,10 +179,26 @@ def test_find_posting_accepts_only_a_copy_it_really_fetched(monkeypatch):
               description="Department: 29050900 - MD-PULMONARY MEDICINE")
     out = classify.find_posting(job, PROFILE, "Florida", session=RecSession([FakeResp(200, reply("https://www.higheredjobs.com/x"))]))
     assert out["verdict"] == "match" and out["copy"]["kind"] == "secondary" and out["copy"]["match"] == "job_id"
-    assert out["copy"]["excerpt"].startswith("Requisition 541788")
+    assert out["copy"]["excerpt"].startswith("Postdoctoral Associate - Pulmonary. Requisition 541788")
     s = RecSession([FakeResp(200, reply("https://not-fetched.example/y"))])
     out = classify.find_posting(job, PROFILE, "Florida", session=s)
     assert out["copy"] is None and out["verdict"] == "check" and out["confidence"] == "low"
     names = [t["name"] for t in s.sent[0]["tools"]]
     assert names == ["web_search", "web_fetch"]
     assert "541788" in s.sent[0]["messages"][0]["content"]  # posting URL with job ID is given
+
+
+def test_page_checks_reject_unconfirmed_pi_and_non_posting_pages():
+    # A namesake at another institution does not confirm the PI.
+    assert not classify.page_names_pi("Wenliang Li, PhD, UTHealth Houston IMM", "Wenliang Li", "Houston Methodist")
+    assert classify.page_names_pi("Dr. Wenliang Li, Houston Methodist Research Institute", "Dr. Wenliang Li",
+                                  "Houston Methodist")
+    assert classify.page_names_pi("Beth Israel Deaconess Medical Center. Jane Q. Roe, MD", "Jane Roe",
+                                  "Beth Israel Deaconess (BILH)")
+    job = Job("mhif", "1", "Research Scholar, CCAD",
+              "https://workforcenow.adp.com/x?cid=a&ccId=19000101_000001&jobId=577618")
+    browser_page = "Please switch to a supported browser listed here, or some features may not work correctly."
+    assert not classify.page_shows_posting(browser_page, job, "title")
+    real = "Research Scholar, CCAD. Job 577618. " + "Clinical registry research in coronary disease. " * 12
+    assert classify.page_shows_posting(real, job, "job_id")
+    assert not classify.page_shows_posting(real.replace("577618", ""), job, "job_id")

@@ -174,7 +174,7 @@ def test_undecided_posting_naming_a_pi_gets_one_lab_lookup(monkeypatch):
     def fake_lookup(job, profile, school, session=None, model=None):
         lookups.append(job.title)
         return {"verdict": "excluded", "reason": "Lab papers are mouse CAR-T work.", "research_type": "wet_lab",
-                "pi": "A B", "lab_summary": "CAR-T", "lab_sources": [], "searches": 2}
+                "pi": "A B", "lab_summary": "CAR-T", "lab_sources": [], "searches": 2, "confirmed": True}
 
     monkeypatch.setattr(classify, "lab_lookup", fake_lookup)
     records = {"a": dict(rec("a"), title="Research Fellow with Dr Sakemura", school="Mayo Clinic"),
