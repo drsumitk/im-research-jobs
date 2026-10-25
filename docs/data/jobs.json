@@ -1,9 +1,9 @@
 {
  "meta": {
-  "generated_utc": "2026-10-25 17:24 UTC",
+  "generated_utc": "2026-10-25 17:32 UTC",
   "today": "2026-10-25",
   "ai_enabled": true,
-  "ai_calls": 9,
+  "ai_calls": 8,
   "log": [],
   "total": 437
  },
@@ -4816,17 +4816,17 @@
    },
    "ai": {
     "role_type": "postdoc",
-    "research_type": "wet_lab",
-    "im_division": "not_internal_medicine",
+    "research_type": "unclear",
+    "im_division": "unclear",
     "mbbs_without_phd_eligible": "yes",
     "visa": "not_stated",
-    "verdict": "excluded",
-    "confidence": "medium",
-    "skills_fit": "weak",
+    "verdict": "check",
+    "confidence": "low",
+    "skills_fit": "partial",
     "department": "",
-    "reason": "Posting is silent on the work, but PI Wenliang Li runs a cancer metastasis/prostate cancer bench lab (cell, mouse models). MD accepted for Postdoc 0, but wet-lab core.",
-    "verify": "Whether the role is purely computational rather than bench work in the Li lab",
-    "missing": "Molecular/cell biology, mouse models, bench laboratory techniques in cancer research",
+    "reason": "Posting says basic research, lab or computer work, with no department. I couldn't verify a Wenliang Li at Houston Methodist. The only match is at UTHealth, a cancer wet lab.",
+    "verify": "Ask whether Dr. Wenliang Li's lab at Houston Methodist does dry/clinical work, and about visa sponsorship.",
+    "missing": "Lab techniques likely, if the PI's work is cancer bench research",
     "deadline": ""
    },
    "evaluated": true,
@@ -4851,8 +4851,9 @@
    "ai_review_done": true,
    "review_version": 5,
    "reviewed_by": "Claude Sonnet",
-   "verdict": "Excluded",
-   "reason": "Posting is silent on the work, but PI Wenliang Li runs a cancer metastasis/prostate cancer bench lab (cell, mouse models). MD accepted for Postdoc 0, but wet-lab core.",
+   "lookup_version": 2,
+   "verdict": "Check",
+   "reason": "Posting says basic research, lab or computer work, with no department. I couldn't verify a Wenliang Li at Houston Methodist. The only match is at UTHealth, a cancer wet lab.",
    "lookup_attempts": 1,
    "ai_before_lookup": {
     "role_type": "postdoc",
@@ -4870,26 +4871,13 @@
     "deadline": ""
    },
    "lookup": {
-    "pi": "Wenliang Li",
-    "lab_summary": "Studies molecular mechanisms of cancer metastasis and neuroendocrine prostate cancer using cell, biochemical, genomic and xenograft mouse approaches; publishes bench cancer biology papers (Neoplasia, Cell Death Discovery, Oncogene).",
-    "lab_sources": [
-     {
-      "url": "https://med.uth.edu/imm/2023/07/07/wenliang-li-phd/",
-      "title": "Wenliang Li, PhD - The Brown Foundation Institute of Molecular Medicine for the Prevention of Human Diseases"
-     },
-     {
-      "url": "https://gsbs.uth.edu/directory/profile?id=038d6dac-519e-4fdc-8aa7-b64b3714234f",
-      "title": "Dr. Wenliang Li - Directory - MD Anderson Cancer Center UTHealth Graduate School of Biomedical Sciences"
-     },
-     {
-      "url": "https://www.linkedin.com/in/tao-wang-806143254/",
-      "title": "Tao Wang - UT Southwestern Medical Center"
-     }
-    ],
-    "searches": 3,
+    "pi": "",
+    "lab_summary": "",
+    "lab_sources": [],
+    "searches": 2,
+    "confirmed": false,
     "by": "Claude Sonnet with web search"
    },
-   "lookup_version": 1,
    "active": true
   },
   "houstonmethodist:job-120372-postdoctoral-fellow-2-dr-wenliang-li-lab-postdoctoral-fellows-houston-methodist-academic-institute": {
@@ -8757,12 +8745,12 @@
     "mbbs_without_phd_eligible": "yes",
     "visa": "sponsorship_stated",
     "verdict": "excluded",
-    "confidence": "medium",
+    "confidence": "high",
     "skills_fit": "weak",
-    "department": "",
-    "reason": "Dr. Sakemura's lab does CAR-T cell bench and humanized-mouse work in hematology. The posting itself doesn't state the duties. It accepts an MD but says nothing about the work.",
-    "verify": "Ask whether the role includes any clinical or dry-lab research without bench work.",
-    "missing": "CAR-T cell engineering, cell culture, in vivo mouse models, laboratory techniques",
+    "department": "Division of Hematology, Department of Internal Medicine (PI Leo Sakemura's appointment; the posting itself gives no depa",
+    "reason": "Dr Sakemura's lab does CAR-T cell engineering, with in vitro work and humanized mouse models, so bench work is a core duty. The posting accepts an M.D.",
+    "verify": "",
+    "missing": "CAR-T cell engineering, cell culture, animal models, and other wet-lab techniques",
     "deadline": ""
    },
    "evaluated": true,
@@ -8782,8 +8770,9 @@
    "ai_review_done": true,
    "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "lookup_version": 2,
    "verdict": "Excluded",
-   "reason": "Dr. Sakemura's lab does CAR-T cell bench and humanized-mouse work in hematology. The posting itself doesn't state the duties. It accepts an MD but says nothing about the work.",
+   "reason": "Dr Sakemura's lab does CAR-T cell engineering, with in vitro work and humanized mouse models, so bench work is a core duty. The posting accepts an M.D.",
    "lookup_attempts": 1,
    "ai_before_lookup": {
     "role_type": "research_fellow",
@@ -8801,8 +8790,8 @@
     "deadline": ""
    },
    "lookup": {
-    "pi": "Leo Sakemura, M.D., Ph.D.",
-    "lab_summary": "Hematology physician-scientist in Kenderian's T Cell Engineering Lab. Studies CAR-T cell resistance, cancer-associated fibroblasts and myeloid cells in myeloma and lymphoma. Papers use in vitro and humanized mouse experiments.",
+    "pi": "Leo Sakemura",
+    "lab_summary": "Translational CAR-T cell therapy for blood cancers (myeloma, lymphoma). It studies cancer-associated fibroblasts and monocytes and tests dual-targeting CAR-T cells in humanized mouse models. Papers are mostly in vitro and in vivo experiments.",
     "lab_sources": [
      {
       "url": "https://www.mayo.edu/research/faculty/sakemura-leo-m-d-ph-d/bio-20436689",
@@ -8813,14 +8802,14 @@
       "title": "Reona (Leo) Sakemura - Mayo Clinic"
      },
      {
-      "url": "https://www.mayo.edu/research/labs/t-cell-engineering/overview",
-      "title": "Overview - T Cell Engineering Laboratory - Mayo Clinic Research"
+      "url": "https://www.mayo.edu/research/labs/t-cell-engineering/about/research-team",
+      "title": "Research Team - T Cell Engineering Laboratory - Mayo Clinic Research"
      }
     ],
     "searches": 1,
+    "confirmed": true,
     "by": "Claude Sonnet with web search"
    },
-   "lookup_version": 1,
    "active": true
   },
   "mayo:393729": {
@@ -9105,18 +9094,18 @@
     "reason": "Unclear; division: Unclear"
    },
    "ai": {
-    "role_type": "research_fellow",
-    "research_type": "clinical_or_dry",
-    "im_division": "Cardiology",
+    "role_type": "other",
+    "research_type": "unclear",
+    "im_division": "unclear",
     "mbbs_without_phd_eligible": "unclear",
-    "visa": "sponsorship_stated",
-    "verdict": "match",
-    "confidence": "medium",
+    "visa": "not_stated",
+    "verdict": "check",
+    "confidence": "low",
     "skills_fit": "partial",
-    "department": "Center for Coronary Artery Disease (CCAD), Minneapolis Heart Institute Foundation",
-    "reason": "Full-time clinical research scholar, no patient care, registries/trials in coronary disease; posting says they will assist with a research visa. No PhD requirement seen.",
-    "verify": "Confirm minimum degree (MD/equivalent) and whether imaging analysis experience is required.",
-    "missing": "Imaging data review (CT/intracoronary) listed in duties; no stated requirement",
+    "department": "",
+    "reason": "Only title 'Research Scholar, CCAD' is given; no department, duties or degree rules. CCAD might be a cardiovascular unit, but the posting does not state it.",
+    "verify": "What CCAD stands for, the hiring department, duties, minimum degree and visa sponsorship",
+    "missing": "",
     "deadline": ""
    },
    "evaluated": true,
@@ -9141,33 +9130,10 @@
    "ai_review_done": true,
    "review_version": 5,
    "reviewed_by": "Claude Sonnet",
-   "verdict": "Match",
-   "reason": "Full-time clinical research scholar, no patient care, registries/trials in coronary disease; posting says they will assist with a research visa. No PhD requirement seen.",
+   "find_version": 2,
+   "verdict": "Title only",
+   "reason": "Only title 'Research Scholar, CCAD' is given; no department, duties or degree rules. CCAD might be a cardiovascular unit, but the posting does not state it.",
    "find_attempts": 1,
-   "find_version": 1,
-   "ai_before_find": {
-    "role_type": "other",
-    "research_type": "unclear",
-    "im_division": "unclear",
-    "mbbs_without_phd_eligible": "unclear",
-    "visa": "not_stated",
-    "verdict": "check",
-    "confidence": "low",
-    "skills_fit": "partial",
-    "department": "",
-    "reason": "Only title 'Research Scholar, CCAD' is given; no department, duties or degree rules. CCAD might be a cardiovascular unit, but the posting does not state it.",
-    "verify": "What CCAD stands for, the hiring department, duties, minimum degree and visa sponsorship",
-    "missing": "",
-    "deadline": ""
-   },
-   "copy": {
-    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=39263a55-c11d-480c-b3b1-4599b9d7ad64&ccId=19000101_000001&lang=en_US&selectedMenuKey=CareerCenter&jobId=577618",
-    "title": "Career Center",
-    "kind": "primary",
-    "match": "job_id",
-    "excerpt": "--- meta-google-site-verification: Ty_uddsUiim55tteitR4CBf-iS7L7IrBrz_Aqt0hyF4 meta-viewport: width=device-width, initial-scale=1.0 title: Recruitment --- Please switch to a supported browser listed [here](https://support.adp.com/pub/paas/login_page/common/en_US/empl/netscr/base/logon/wfn_req.htm), or some features may not work correctly.",
-    "by": "Claude Sonnet with web search"
-   },
    "active": true
   },
   "mhif:mascsr-default-mdf-recruitment-recruitment-html-cid-39263a55-c11d-480c-b3b1-4599b9d7ad64-ccId-19000101-000001-jobId-588688-source-CC2-lang-en-US": {
@@ -9239,10 +9205,10 @@
    "ai_review_done": true,
    "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "find_version": 2,
    "verdict": "Title only",
    "reason": "Title suggests a cardiology research scholar (CCAD, likely a cardiac center), but no department, duties, degree rules or visa information are given to judge fit.",
    "find_attempts": 1,
-   "find_version": 1,
    "active": true
   },
   "mhif:mascsr-default-mdf-recruitment-recruitment-html-cid-39263a55-c11d-480c-b3b1-4599b9d7ad64-ccId-19000101-000001-jobId-588799-source-CC2-lang-en-US": {
@@ -9314,10 +9280,10 @@
    "ai_review_done": true,
    "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "find_version": 2,
    "verdict": "Title only",
    "reason": "Only a title is given: 'Research Associate, CIRC and Core Lab'. No department, duties or degree rules are stated, and 'Core Lab' hints at possible lab work.",
    "find_attempts": 1,
-   "find_version": 1,
    "active": true
   },
   "miami:R100072310": {
@@ -16806,9 +16772,9 @@
     "confidence": "high",
     "skills_fit": "weak",
     "department": "29240101 - MD-HOBI-GENERAL",
-    "reason": "The posting requires a PhD in informatics, CS, statistics or a related STEM field. It also requires ML/deep learning skills. The department is Health Outcomes & Biomedical Informatics, not Internal Medicine.",
+    "reason": "Posting requires a PhD in informatics, CS, statistics or a related STEM field, plus ML/deep learning skills. The Health Outcomes & Biomedical Informatics dept is not Internal Medicine.",
     "verify": "",
-    "missing": "PhD; machine learning and deep learning; software development; AI/ML methods for EHR and imaging",
+    "missing": "PhD; machine learning/deep learning development; Python programming; software development; imaging/LLM informatics",
     "deadline": "2026-11-13"
    },
    "evaluated": true,
@@ -16832,10 +16798,10 @@
    "ai_review_done": true,
    "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "find_version": 2,
    "verdict": "Excluded",
-   "reason": "The posting requires a PhD in informatics, CS, statistics or a related STEM field. It also requires ML/deep learning skills. The department is Health Outcomes & Biomedical Informatics, not Internal Medicine.",
+   "reason": "Posting requires a PhD in informatics, CS, statistics or a related STEM field, plus ML/deep learning skills. The Health Outcomes & Biomedical Informatics dept is not Internal Medicine.",
    "find_attempts": 1,
-   "find_version": 1,
    "ai_before_find": {
     "role_type": "postdoc",
     "research_type": "unclear",
@@ -16856,7 +16822,7 @@
     "title": "University of Florida - Details - Postdoctoral Researcher",
     "kind": "primary",
     "match": "job_id",
-    "excerpt": "--- meta-apple-mobile-web-app-capable: yes meta-apple-mobile-web-app-status-bar-style: translucent black meta-apple-mobile-web-app-title: Careers at UF meta-mobile-web-app-capable: yes meta-viewport: width=device-width, initial-scale=1 title: University of Florida - Details - Postdoctoral Researcher --- --> Toggle navigation [![University of Florida](https://hr.ufl.edu/_pageup/images/uf.png)](http://ufl.edu) # [Careers at UF](http://explore.jobs.ufl.edu) - [Login](https://secure.dc4.pageuppeople.com/apply/674/aw/applicationForm/default.asp \"Sign in to complete your application, to view the status of your submission, and to update your account profile.\") ![Search](https://hr.ufl.edu/_pageup/images/icon-search.png) ## Postdoctoral Researcher [Apply now](https://secure.dc4.pageuppeople.com/apply/674/gateway/default.aspx?c=apply&lJobID=535998&lJobSourceTypeID=796&sLanguage=en-us) **Job no:**",
+    "excerpt": "--- meta-apple-mobile-web-app-capable: yes meta-apple-mobile-web-app-status-bar-style: translucent black meta-apple-mobile-web-app-title: Careers at UF meta-mobile-web-app-capable: yes meta-viewport: width=device-width, initial-scale=1 title: University of Florida - Details - Postdoctoral Researcher --- Toggle navigation [![University of Florida](https://hr.ufl.edu/_pageup/images/uf.png)](http://ufl.edu) # [Careers at UF](http://explore.jobs.ufl.edu) - [Login](https://secure.dc4.pageuppeople.com/apply/674/aw/applicationForm/default.asp \"Sign in to complete your application, to view the status of your submission, and to update your account profile.\") ![Search](https://hr.ufl.edu/_pageup/images/icon-search.png) ## Postdoctoral Researcher [Apply now](https://secure.dc4.pageuppeople.com/apply/674/gateway/default.aspx?c=apply&lJobID=535998&lJobSourceTypeID=796&sLanguage=en-us) **Job no:** 535",
     "by": "Claude Sonnet with web search"
    },
    "active": true
@@ -17460,10 +17426,10 @@
    "ai_review_done": true,
    "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "find_version": 2,
    "verdict": "Title only",
    "reason": "Only a title and a cost-center code are given. 'MD-...' may mean Medicine and 'HOBI' may mean Hematology/Oncology, but the work type and degree rules are not stated.",
    "find_attempts": 1,
-   "find_version": 1,
    "active": true
   },
   "ufl:en-us-job-540874-postdoctoral-associate-bannister-lab": {
@@ -18455,10 +18421,10 @@
    "ai_review_done": true,
    "review_version": 5,
    "reviewed_by": "Claude Sonnet",
+   "find_version": 2,
    "verdict": "Title only",
    "reason": "Postdoctoral Associate in Pulmonary Medicine (IM division), but no duties, degree requirements or lab/clinical nature stated; pulmonary postdocs are often wet-lab and PhD-required.",
    "find_attempts": 1,
-   "find_version": 1,
    "active": true
   },
   "uhhospitals:23474395": {

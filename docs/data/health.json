@@ -1,9 +1,9 @@
 {
  "meta": {
-  "generated_utc": "2026-10-25 17:24 UTC",
+  "generated_utc": "2026-10-25 17:32 UTC",
   "today": "2026-10-25",
   "ai_enabled": true,
-  "ai_calls": 9,
+  "ai_calls": 8,
   "log": [],
   "total": 437
  },
@@ -186,7 +186,7 @@
    "candidates": 31,
    "too_old": 7,
    "status": "ok",
-   "new_details": 1,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
