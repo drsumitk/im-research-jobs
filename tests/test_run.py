@@ -163,3 +163,55 @@ def test_match_grouping_rules_from_the_audit():
     assert run.verdict_of(dict(m, mbbs_without_phd_eligible="no")) == "Excluded"      # e.g. 3 years postdoc required
     assert run.verdict_of(dict(m, confidence="low")) == "Check"                       # generic posting
     assert run.verdict_of(dict(m, skills_fit="weak")) == "Stretch"                    # e.g. econometrics minimum
+
+
+def test_undecided_posting_naming_a_pi_gets_one_lab_lookup(monkeypatch):
+    monkeypatch.setattr(classify, "available", lambda: True)
+    lookups = []
+    monkeypatch.setattr(classify, "classify", lambda job, profile, session=None, model=None, **kw:
+                        {"verdict": "check", "reason": "no lab details", "confidence": "low"})
+
+    def fake_lookup(job, profile, school, session=None, model=None):
+        lookups.append(job.title)
+        return {"verdict": "excluded", "reason": "Lab papers are mouse CAR-T work.", "research_type": "wet_lab",
+                "pi": "A B", "lab_summary": "CAR-T", "lab_sources": [], "searches": 2}
+
+    monkeypatch.setattr(classify, "lab_lookup", fake_lookup)
+    records = {"a": dict(rec("a"), title="Research Fellow with Dr Sakemura", school="Mayo Clinic"),
+               "b": rec("b")}
+    run.apply_ai(records, PROFILE, [])
+    a = records["a"]
+    assert lookups == ["Research Fellow with Dr Sakemura"]
+    assert a["verdict"] == "Excluded" and a["ai_before_lookup"]["verdict"] == "check"
+    assert a["lookup"]["searches"] == 2 and a["lookup"]["by"] == PROFILE["ai"]["lookup_label"]
+    assert records["b"]["verdict"] == "Check" and "lookup" not in records["b"]
+    run.apply_ai(records, PROFILE, [])
+    assert len(lookups) == 1  # looked up once only
+
+
+def test_title_only_posting_is_searched_once_then_goes_to_title_only_tab(monkeypatch):
+    monkeypatch.setattr(classify, "available", lambda: True)
+    monkeypatch.setattr(classify, "classify", lambda job, profile, session=None, model=None, **kw:
+                        {"verdict": "check", "reason": "title only", "confidence": "low"})
+    finds = []
+
+    def fake_find(job, profile, school, session=None, model=None):
+        finds.append(job.title)
+        if job.title == "Postdoctoral Associate - Pulmonary":
+            return {"verdict": "match", "reason": "ICU cohorts", "confidence": "medium", "role_type": "postdoc",
+                    "searches": 2, "copy": {"url": "https://c", "title": "t", "kind": "secondary",
+                                            "match": "job_id", "excerpt": "e", "_text": "full copy text"}}
+        return {"verdict": "check", "reason": "no copy", "confidence": "low", "copy": None, "searches": 3}
+
+    monkeypatch.setattr(classify, "find_posting", fake_find)
+    monkeypatch.setattr(classify, "lab_lookup", lambda *a, **k: (_ for _ in ()).throw(AssertionError("no PI")))
+    short = lambda k, t: dict(rec(k), title=t, _description="Department: MD-PULMONARY", school="Florida")
+    records = {"a": short("a", "Postdoctoral Associate - Pulmonary"), "b": short("b", "Postdoctoral Researcher"),
+               "c": rec("c")}
+    run.apply_ai(records, PROFILE, [])
+    assert records["a"]["verdict"] == "Match" and records["a"]["copy"]["kind"] == "secondary"
+    assert "_text" not in records["a"]["copy"] and records["a"]["ai_before_find"]["verdict"] == "check"
+    assert records["b"]["verdict"] == "Title only" and records["b"]["find_version"] == run.FIND_VERSION
+    assert records["c"]["verdict"] == "Check"  # full text was read: stays in Needs a look
+    run.apply_ai(records, PROFILE, [])
+    assert len(finds) == 2  # each title-only posting is searched once

@@ -34,6 +34,9 @@ AI_GAP_SECONDS = 1.0  # pause between Claude calls to stay under per-minute rate
 SNIPPET_CHARS = 900
 TITLE_ONLY_CHARS = 200  # postings with less text than this carry only a title and department line
 REVIEW_VERSION = 5     # bump when the review instructions change, so undecided postings are reviewed again
+LOOKUP_VERSION = 1     # bump when the lab-lookup instructions change, so undecided postings are looked up again
+FIND_VERSION = 1       # bump when the find-the-posting instructions change
+MAX_LOOKUP_ATTEMPTS = 2
 
 
 def load_yaml(name):
@@ -112,7 +115,7 @@ def run_source(school, src, profile, rules, state, today, skipped=None):
                 continue  # an exact date read earlier shows it is too old
             ai_pending = bool(old) and classify.available() and (
                 (not old.get("ai") and int(old.get("ai_attempts", 0)) < MAX_AI_ATTEMPTS)
-                or needs_review(old, profile))
+                or needs_review(old, profile) or needs_find(old, profile) or needs_lookup(old, profile))
             if old and old.get("evaluated") and not ai_pending:
                 old["last_seen"] = today
                 old["title"] = job.title or old["title"]
@@ -150,16 +153,19 @@ def run_source(school, src, profile, rules, state, today, skipped=None):
                 "snippet": job.description[:SNIPPET_CHARS],
                 "fingerprint": fingerprint(job.description),
                 "rules": ev, "ai": None, "evaluated": bool(job.description),
+                "title_only": len(job.description or "") < TITLE_ONLY_CHARS,
                 "ai_attempts": int((old or {}).get("ai_attempts", 0)),
                 **{k: (old or {})[k] for k in ("ai", "ai_first", "review_attempts", "ai_review_done",
-                                                "review_version", "reviewed_by") if (old or {}).get(k)},
+                                                "review_version", "reviewed_by", "ai_before_lookup", "lookup_attempts",
+                                                "lookup_version", "lookup", "ai_before_find", "find_attempts",
+                                                "find_version", "copy") if (old or {}).get(k)},
                 "verdict": ev["verdict"], "reason": ev["reason"],
                 "_description": job.description,  # removed before saving
                 **({"skip_ai": True} if outside else {}),
             }
             rec = out[job.key]
             if rec.get("ai"):  # re-opened only for the review pass: keep the first AI verdict meanwhile
-                rec["verdict"] = verdict_of(rec["ai"]) if rec["ai"].get("verdict") in AI_TO_VERDICT \
+                rec["verdict"] = group_of(rec) if rec["ai"].get("verdict") in AI_TO_VERDICT \
                     else rec["verdict"]
                 rec["reason"] = rec["ai"].get("reason", rec["reason"])
         health.update(status="ok", new_details=new_details, detail_errors=detail_errors,
@@ -193,6 +199,28 @@ def verdict_of(res):
     return v
 
 
+def group_of(rec):
+    """Dashboard group for a record. An undecided posting whose page gave only its title goes to its
+    own "Title only" tab, so "Needs a look" holds only postings whose text was read."""
+    v = verdict_of(rec["ai"])
+    if v == "Check" and rec.get("title_only") and not rec.get("copy"):
+        return "Title only"
+    return v
+
+
+def needs_find(rec, profile):
+    """An undecided title-only posting for which no readable copy has been searched for yet."""
+    ai = profile.get("ai", {})
+    if not (ai.get("lookup_model") and int(ai.get("max_find_calls_per_run", 0))):
+        return False
+    title_only = rec.get("title_only", len(rec.get("_description") or rec.get("snippet") or "") < TITLE_ONLY_CHARS)
+    if not rec.get("ai") or rec.get("copy") or verdict_of(rec["ai"]) != "Check" or not title_only:
+        return False
+    if int(rec.get("find_attempts", 0)) >= MAX_LOOKUP_ATTEMPTS:
+        return False
+    return int(rec.get("find_version", 0)) < FIND_VERSION
+
+
 def needs_review(rec, profile):
     """A first-pass AI verdict in the review list that the review model has not yet re-checked."""
     ai = profile.get("ai", {})
@@ -204,6 +232,20 @@ def needs_review(rec, profile):
         # Reviewed under older instructions: review again if the posting is still in the review list.
         return int(rec.get("review_version", 1)) < REVIEW_VERSION and first.get("verdict") in wanted
     return first.get("verdict") in wanted
+
+
+def needs_lookup(rec, profile):
+    """An undecided posting ("Needs a look") that names a PI or lab and has not been looked up yet."""
+    ai = profile.get("ai", {})
+    if not (ai.get("lookup_model") and int(ai.get("max_lookup_calls_per_run", 0))):
+        return False
+    if not rec.get("ai") or verdict_of(rec["ai"]) != "Check":
+        return False
+    if int(rec.get("lookup_attempts", 0)) >= MAX_LOOKUP_ATTEMPTS:
+        return False
+    if rec.get("lookup") and int(rec.get("lookup_version", 0)) >= LOOKUP_VERSION:
+        return False
+    return classify.names_pi(" ".join([rec.get("title", ""), rec.get("_description") or rec.get("snippet", "")]))
 
 
 def _title_only(rec):
@@ -219,7 +261,9 @@ def _job_of(rec):
 def apply_ai(records, profile, log):
     """First pass: the main model (Haiku) classifies each new posting once.
     Second pass: the review model (Sonnet) re-checks postings the first pass left as borderline
-    ("check" by default) and its verdict replaces the first one. Both passes have a per-run budget."""
+    ("check" by default) and its verdict replaces the first one.
+    Third pass: postings still undecided that name a PI or lab get a lab lookup, in which the lookup model
+    searches the web for the lab and its papers. Each pass has its own per-run budget."""
     if not classify.available():
         log.append("AI classifier off (no ANTHROPIC_API_KEY secret).")
         return 0
@@ -247,7 +291,8 @@ def apply_ai(records, profile, log):
         finally:
             time.sleep(AI_GAP_SECONDS)
         rec["ai"] = res
-        rec["verdict"] = verdict_of(res)
+        rec["title_only"] = rec.get("title_only", _title_only(rec))
+        rec["verdict"] = group_of(rec)
         rec["reason"] = res.get("reason", "")
 
     review_model = ai.get("review_model")
@@ -278,13 +323,70 @@ def apply_ai(records, profile, log):
             rec["ai"] = res
             rec["ai_review_done"] = True
             rec["reviewed_by"] = ai.get("review_label", review_model)
-            rec["verdict"] = verdict_of(res)
+            rec["verdict"] = group_of(rec)
+            rec["reason"] = res.get("reason", "")
+    looked = 0
+    find_budget = int(ai.get("max_find_calls_per_run", 0))
+    if ai.get("lookup_model") and find_budget:
+        finds = 0
+        for rec in records.values():
+            if finds >= find_budget:
+                log.append(f"Find-the-posting budget of {find_budget} reached; the rest are searched on the next run.")
+                break
+            if "_description" not in rec or not needs_find(rec, profile):
+                continue
+            rec["find_attempts"] = int(rec.get("find_attempts", 0)) + 1
+            finds += 1
+            try:
+                res = classify.find_posting(_job_of(rec), profile, rec.get("school", ""), model=ai["lookup_model"])
+            except Exception as e:
+                print(f"AI find-posting error on {rec['key']}: {e}", file=sys.stderr)
+                errors += 1
+                causes["find " + str(getattr(e, "category", type(e).__name__))] += 1
+                continue
+            finally:
+                time.sleep(AI_GAP_SECONDS)
+            copy, searches = res.pop("copy"), res.pop("searches")
+            rec["find_version"] = FIND_VERSION
+            if copy:
+                rec["_description"] = copy.pop("_text")  # lets the lab lookup below read the copy too
+                copy["by"] = ai.get("lookup_label", ai["lookup_model"])
+                rec.setdefault("ai_before_find", rec["ai"])
+                rec["copy"], rec["ai"] = copy, res
+                rec["reason"] = res.get("reason", "")
+            rec["verdict"] = group_of(rec)
+        looked += finds
+    lookup_model, lookup_budget = ai.get("lookup_model"), int(ai.get("max_lookup_calls_per_run", 0))
+    if lookup_model and lookup_budget:
+        for rec in records.values():
+            if looked >= lookup_budget:
+                log.append(f"Lab lookup budget of {lookup_budget} reached; the rest are looked up on the next run.")
+                break
+            if not rec.get("_description") or not needs_lookup(rec, profile):
+                continue
+            rec["lookup_attempts"] = int(rec.get("lookup_attempts", 0)) + 1
+            looked += 1
+            try:
+                res = classify.lab_lookup(_job_of(rec), profile, rec.get("school", ""), model=lookup_model)
+            except Exception as e:
+                print(f"AI lab lookup error on {rec['key']}: {e}", file=sys.stderr)
+                errors += 1
+                causes["lookup " + str(getattr(e, "category", type(e).__name__))] += 1
+                continue
+            finally:
+                time.sleep(AI_GAP_SECONDS)
+            lab = {k: res.pop(k) for k in ("pi", "lab_summary", "lab_sources", "searches")}
+            lab["by"] = ai.get("lookup_label", lookup_model)
+            rec.setdefault("ai_before_lookup", rec["ai"])
+            rec["lookup"], rec["lookup_version"] = lab, LOOKUP_VERSION
+            rec["ai"] = res
+            rec["verdict"] = group_of(rec)
             rec["reason"] = res.get("reason", "")
     if errors:
         by_cause = ", ".join(f"{c} x{n}" for c, n in causes.most_common())
         log.append(f"AI classifier failed on {errors} posting(s) ({by_cause}); details are in the GitHub "
                    f"Actions log. Each posting is retried at most {MAX_AI_ATTEMPTS} times.")
-    return used + reviewed
+    return used + reviewed + looked
 
 
 def main(argv=None):
@@ -335,7 +437,8 @@ def main(argv=None):
         # Apply the current grouping rules to every saved AI result, including postings carried
         # over from sites that could not be read today.
         if rec.get("ai") and rec["ai"].get("verdict") in AI_TO_VERDICT and not rec.get("skip_ai"):
-            rec["verdict"] = verdict_of(rec["ai"])
+            rec.setdefault("title_only", len(rec.get("snippet") or "") < TITLE_ONLY_CHARS)
+            rec["verdict"] = group_of(rec)
         rec.pop("_description", None)
         school = by_source.get(rec.get("source"))
         if school:  # keep rank and school name in step with sources.yaml (e.g. after re-ranking)

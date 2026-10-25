@@ -121,8 +121,9 @@ function render() {
   const hints = {
     "Match": "Clinical or dry research in Internal Medicine that the profile appears eligible for. Most certain first.",
     "Stretch": "Dry research in Internal Medicine, but a required skill is not in the profile (for example omics or machine learning).",
+    "Title only": "Only the title could be read, and no readable copy of the posting was found on the web. Open the posting to read it.",
     "Below level": "Research assistant, coordinator or outreach jobs below research fellow level.",
-    "Check": "The AI could not decide even on a second look (usually because the posting says almost nothing). Open the posting to decide.",
+    "Check": "The AI could not decide even on a second look and, where a PI or lab is named, a web lookup of the lab (usually because the posting says almost nothing). Open the posting to decide.",
     "Other dept": "Clinical or dry research outside Internal Medicine (for example epidemiology or pediatrics).",
     "Excluded": "Wet-lab work, citizenship requirement, no visa sponsorship, or a PhD-only requirement.",
   };
@@ -161,6 +162,29 @@ function card(j) {
   const aiv = j.ai || {};
   if (aiv.verify) li.append(el("p", "verify", "Verify: " + String(aiv.verify)));
   if (aiv.missing) li.append(el("p", "verify", "Not in profile: " + String(aiv.missing)));
+  const cp = j.copy || null;
+  if (cp && cp.url) {
+    const p = el("p", "lab", `Read from a ${cp.kind === "primary" ? "primary copy (employer's own page)" : "secondary copy (job board)"}, matched by ${cp.match === "job_id" ? "job ID" : "title and department"}: `);
+    const u = safeUrl(cp.url);
+    if (u !== "#") {
+      const la = el("a", "src", String(cp.title || u).slice(0, 80)); la.href = u; la.target = "_blank"; la.rel = "noopener noreferrer";
+      p.append(la);
+    }
+    li.append(p);
+  }
+  const lab = j.lookup || {};
+  if (lab.lab_summary || (lab.lab_sources || []).length) {
+    const p = el("p", "lab", `Lab check${lab.pi ? " (" + String(lab.pi) + ")" : ""}: ${String(lab.lab_summary || "no lab details found")}`);
+    for (const src of (lab.lab_sources || []).slice(0, 3)) {
+      const u = safeUrl(src.url);
+      if (!u || u === "#") continue;
+      p.append(" ");
+      const la = el("a", "src", "[" + (String(src.title || "").slice(0, 60) || "source") + "]");
+      la.href = u; la.target = "_blank"; la.rel = "noopener noreferrer";
+      p.append(la);
+    }
+    li.append(p);
+  }
 
   const tags = el("p", "tags");
   const ai = j.ai || {};
@@ -169,6 +193,7 @@ function card(j) {
   if (ai.confidence) add(s(ai.confidence) + " confidence", ai.confidence === "low" ? "warn" : "");
   if (ai.skills_fit) add("skills fit: " + s(ai.skills_fit), ai.skills_fit === "weak" ? "warn" : "");
   if (j.reviewed_by) add("re-checked by " + s(j.reviewed_by));
+  if (j.lookup && j.lookup.by) add("lab looked up by " + s(j.lookup.by));
   if (ai.role_type) add(s(ai.role_type).replace(/_/g, " "));
   if (ai.mbbs_without_phd_eligible) add("MBBS eligible: " + s(ai.mbbs_without_phd_eligible), ai.mbbs_without_phd_eligible === "no" ? "warn" : "");
   if (ai.visa) add("visa: " + s(ai.visa).replace(/_/g, " "), /no_|citizen/.test(s(ai.visa)) ? "warn" : "");
@@ -178,6 +203,13 @@ function card(j) {
   const det = el("details");
   det.append(el("summary", null, "Excerpt and rule signals"));
   det.append(el("p", "snippet", j.snippet || "(no text captured)"));
+  if (cp && cp.excerpt) det.append(el("p", "snippet", "Copy: " + String(cp.excerpt)));
+  if (j.ai_before_find && j.ai_before_find.verdict) {
+    det.append(el("p", "signals", `Before reading the copy: ${s(j.ai_before_find.verdict).replace(/_/g, " ")}. ${s(j.ai_before_find.reason)}`));
+  }
+  if (j.ai_before_lookup && j.ai_before_lookup.verdict) {
+    det.append(el("p", "signals", `Before lab lookup: ${s(j.ai_before_lookup.verdict).replace(/_/g, " ")}. ${s(j.ai_before_lookup.reason)}`));
+  }
   if (j.ai_first && j.ai_first.verdict) {
     det.append(el("p", "signals", `First pass: ${s(j.ai_first.verdict).replace(/_/g, " ")}. ${s(j.ai_first.reason)}`));
   }

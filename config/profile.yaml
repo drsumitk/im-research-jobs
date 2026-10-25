@@ -133,3 +133,16 @@ ai:
   review_label: Claude Sonnet
   review_verdicts: [check, match]   # every borderline posting and every match gets a second opinion
   max_review_calls_per_run: 80
+  # Lab lookup: postings still in "Needs a look" that name a PI or lab are looked up once on the web
+  # (the lab's own pages, PubMed, NIH RePORTER) to tell wet-lab from clinical or dry work.
+  # Web search costs USD 10 per 1,000 searches plus tokens. Remove lookup_model to switch this off.
+  lookup_model: claude-sonnet-5-5
+  lookup_label: Claude Sonnet with web search
+  lookup_max_searches: 4
+  max_lookup_calls_per_run: 15
+  # Find the posting: undecided postings whose page gave only a title are searched for once (the
+  # employer's own pages first, then job-board copies with the same job ID or title) and read with web
+  # fetch, which honours robots.txt. Postings with no readable copy go to the "Title only" tab.
+  lookup_max_fetches: 3
+  lookup_max_fetch_tokens: 12000
+  max_find_calls_per_run: 15
