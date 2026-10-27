@@ -38,11 +38,13 @@ def parse_sitemap(xml_text, src):
         if not m:
             continue
         lastmod = re.search(r"<lastmod>\s*(.*?)\s*</lastmod>", block, re.S)
-        slug = url.rstrip("/").rsplit("/", 1)[-1]
+        parts = url.rstrip("/").split("/")
+        # title_segment picks the path part that carries the title (e.g. -2 when the last part is an ID)
+        slug = parts[int(src.get("title_segment", -1))]
         jobs.append(Job(
             source_id=src["id"],
             job_id=m.group(1),
-            title=title_from_slug(slug, src.get("title_strip")),
+            title=re.sub(r"\s+", " ", title_from_slug(slug, src.get("title_strip"))),
             url=url,
             # A job cannot have been posted after the sitemap's last-modified date, so this is a safe
             # upper bound for the age filter. The detail page replaces it with the real posting date.

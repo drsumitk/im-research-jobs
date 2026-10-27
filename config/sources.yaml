@@ -604,6 +604,23 @@ schools:
 
   # ---- BRIMR 2025 Internal Medicine ranks 51-107 (the whole ranked list) ----
 
+  - rank: 51
+    name: UT Health San Antonio
+    sources:
+      - id: utsa
+        label: UT Health San Antonio (staff and research)
+        type: oracle
+        host: fa-eomf-saasfaprod1.fa.ocs.oraclecloud.com
+        site: CX_1002
+      - id: utsa-postdoc
+        label: UT Health San Antonio Office of Postdoctoral Affairs board
+        type: board
+        url: https://opa.uthscsa.edu/prospective-postdocs/open-postdoctoral-positions/
+        row: 'p.large.bold:has(a[href*="/open-postdoctoral-positions/"])'
+        link: a
+        title_template: 'Postdoctoral position: {title}'
+        detail: main
+
   - rank: 52
     name: KU Medical Center
     sources:
@@ -613,6 +630,88 @@ schools:
         host: kumc.wd5.myworkdayjobs.com
         tenant: kumc
         site: kumc-jobs
+
+  - rank: 53
+    name: UIC
+    sources:
+      - id: uic
+        label: University of Illinois Chicago (Cornerstone job site)
+        type: manual
+        url: https://uic.csod.com/ux/ats/careersite/1/home?c=uic
+        reason: The Cornerstone job site loads its list by script; there is no page the tracker can read.
+
+  - rank: 54
+    name: Arizona
+    sources:
+      - id: arizona
+        label: University of Arizona (Cornerstone job site)
+        type: manual
+        url: https://arizona.csod.com/ux/ats/careersite/4/home?c=arizona
+        reason: The Cornerstone job site loads its list by script; there is no page the tracker can read.
+
+  - rank: 55
+    name: Georgetown
+    sources:
+      - id: georgetown
+        label: Georgetown University (staff and research staff)
+        type: workday
+        host: georgetown.wd1.myworkdayjobs.com
+        tenant: georgetown
+        site: Georgetown_Admin_Careers
+      - id: georgetown-interfolio
+        label: Georgetown academic and postdoc positions (Interfolio)
+        type: manual
+        url: https://apply.interfolio.com/11780/positions
+        reason: Georgetown posts postdocs on Interfolio, which loads its list by script.
+
+  - rank: 56
+    name: UTHealth Houston
+    sources:
+      - id: uthealth
+        label: UTHealth Houston (incl. postdocs)
+        type: phenom
+        host: careers.uth.tmc.edu
+        path: /us/en
+
+  - rank: 57
+    name: UNMC
+    sources:
+      - id: unmc
+        label: University of Nebraska Medical Center
+        type: manual
+        url: https://jobs.nebraska.edu/UniversityNebraskaSystem/go/University-of-Nebraska-Medical-Center/9754800/
+        reason: The Nebraska job site loads search results by script, and the UNMC PeopleAdmin search is closed to automated reading by robots.txt.
+
+  - rank: 58
+    name: UC Irvine
+    sources:
+      - id: uci-recruit
+        label: UC Irvine (academic recruitments, incl. postdocs)
+        type: ucrecruit
+        host: recruit.ap.uci.edu
+
+  - rank: 59
+    name: Temple
+    sources:
+      - id: temple-staff
+        label: Temple University (staff)
+        type: taleo
+        host: temple.taleo.net
+        section: tu_ex_staff
+        portal: "8100123629"
+      - id: temple-faculty
+        label: Temple University (faculty and academic)
+        type: taleo
+        host: temple.taleo.net
+        section: tu_ex_faculty
+        portal: "28100025969"
+      - id: temple-postdoc
+        label: Temple Office of Postdoctoral Affairs board
+        type: board
+        url: https://grad.temple.edu/postdoctoral-affairs/open-positions
+        row: div.collection__item
+        title: a.--trigger
+        detail: none
 
   - rank: 60
     name: Harvard
@@ -630,6 +729,24 @@ schools:
         site: MGBExternal
         max_pages: 25   # very large board; results are not sorted by date
 
+  - rank: 61
+    name: Kentucky
+    sources:
+      - id: uky
+        label: University of Kentucky
+        type: manual
+        url: https://careers.uky.edu/
+        reason: The UK job portal (ukjobs.uky.edu) is closed to automated reading by robots.txt; its Workday sites tested held no research jobs.
+
+  - rank: 62
+    name: Rush
+    sources:
+      - id: rush
+        label: Rush University Medical Center
+        type: manual
+        url: https://www.rush.edu/rush-careers/apply-position-rush
+        reason: Rush uses an Infor job system with no page the tracker can read.
+
   - rank: 63
     name: MUSC
     sources:
@@ -640,6 +757,257 @@ schools:
         tenant: musc
         site: MUSC
 
+  - rank: 64
+    name: Oklahoma (OUHSC)
+    sources:
+      - id: ou
+        label: University of Oklahoma (incl. Health Sciences Center)
+        type: manual
+        url: https://jobs.ou.edu/jobs/search?query=postdoctoral
+        reason: The job site answers automated requests with a bot check.
+      - id: ou-postdoc
+        label: OUHSC postdoc positions page
+        type: manual
+        url: https://graduate.ouhsc.edu/Postdoctoral-Fellows/Available-Positions
+
+  - rank: 65
+    name: VCU
+    sources:
+      - id: vcu
+        label: Virginia Commonwealth University
+        type: manual
+        url: https://vcujobs.com/
+        reason: The job site's robots.txt did not answer, so automated reading is skipped.
+
+  - rank: 66
+    name: Cincinnati
+    sources:
+      - id: ucincy
+        label: University of Cincinnati
+        type: manual
+        url: https://jobs.uc.edu/search/?q=post+doc
+        reason: The job site loads search results by script.
+
+  - rank: 67
+    name: Penn State (Hershey)
+    sources:
+      - id: psu-academic
+        label: Penn State (academic, College of Medicine / Hershey only)
+        type: workday
+        host: psu.wd1.myworkdayjobs.com
+        tenant: psu
+        site: PSU_Academic
+        location_must_include: [hershey, college of medicine, college-of-medicine]
+      - id: psu-staff
+        label: Penn State (staff, College of Medicine / Hershey only)
+        type: workday
+        host: psu.wd1.myworkdayjobs.com
+        tenant: psu
+        site: PSU_Staff
+        location_must_include: [hershey, college of medicine, college-of-medicine]
+
+  - rank: 68
+    name: UConn Health
+    sources:
+      - id: uconn-postdoc
+        label: UConn Health Office of Postdoctoral Affairs board
+        type: board
+        url: https://health.uconn.edu/postdoctoral-affairs/prospective-postdocs/job-postings/
+        row: div.panel.panel-default
+        title: h4.panel-title a
+        detail: none
+      - id: uconn-health
+        label: UConn Health jobs
+        type: manual
+        url: https://jobs.uchc.edu/CSS_External/CSSPage_SearchAndBrowseJobs.ASP
+
+  - rank: 69
+    name: Augusta (Medical College of Georgia)
+    sources:
+      - id: augusta
+        label: Augusta University (OneUSG PeopleSoft)
+        type: manual
+        url: https://www.augusta.edu/jobs/external
+        reason: The University System of Georgia PeopleSoft job search has no page the tracker can read.
+
+  - rank: 70
+    name: Dartmouth
+    sources:
+      - id: dartmouth-health
+        label: Dartmouth Health
+        type: manual
+        url: https://careers.dartmouth-health.org/
+        reason: iCIMS job site; the iCIMS portals tried refused automated requests.
+      - id: dartmouth-college
+        label: Dartmouth College (incl. Geisel)
+        type: manual
+        url: https://searchjobs.dartmouth.edu/
+        reason: Closed to automated reading by robots.txt.
+
+  - rank: 71
+    name: Jefferson
+    sources:
+      - id: jefferson
+        label: Thomas Jefferson University and Jefferson Health
+        type: workday
+        host: jeffersonhealth.wd5.myworkdayjobs.com
+        tenant: jeffersonhealth
+        site: ThomasJeffersonExternal
+
+  - rank: 72
+    name: Buffalo
+    sources:
+      - id: buffalo
+        label: University at Buffalo
+        type: manual
+        url: https://www.ubjobs.buffalo.edu/
+        reason: The search page is closed to automated reading by robots.txt.
+
+  - rank: 73
+    name: New Mexico
+    sources:
+      - id: unm
+        label: University of New Mexico (Cornerstone job site)
+        type: manual
+        url: https://unm.csod.com/ux/ats/careersite/18/home?c=unm
+        reason: The Cornerstone job site loads its list by script.
+
+  - rank: 74
+    name: Michigan State & Henry Ford
+    sources:
+      - id: msu
+        label: Michigan State University
+        type: manual
+        url: https://careers.msu.edu/jobs/search?query=postdoctoral
+        reason: The search results load by script.
+      - id: henryford
+        label: Henry Ford Health
+        type: manual
+        url: https://careers.henryford.com/
+
+  - rank: 75
+    name: Hawaii
+    sources:
+      - id: hawaii
+        label: University of Hawaii (NEOGOV)
+        type: manual
+        url: https://www.governmentjobs.com/careers/hawaiiedu
+        reason: Closed to automated reading by robots.txt.
+      - id: rcuh
+        label: Research Corporation of the University of Hawaii (grant-funded research jobs)
+        type: manual
+        url: https://www.rcuh.com/opportunities/job-openings/
+
+  - rank: 76
+    name: UTMB Galveston
+    sources:
+      - id: utmb
+        label: University of Texas Medical Branch
+        type: board
+        url: https://applyjobs.utmb.edu/latest-jobs?keywords={q}
+        row: div.job_list_row
+        link: div.jlr_title a
+        title: div.jlr_title a
+        date: none
+        detail: div.job_description
+        detail_ldjson_date: true
+
+  - rank: 77
+    name: LSU Health New Orleans
+    sources:
+      - id: lsuhsc
+        label: LSU Health Sciences Center New Orleans
+        type: manual
+        url: https://careers.lsuhsc.edu/jobs/search?query=postdoctoral
+        reason: The job site answers automated requests with a bot check.
+
+  - rank: 78
+    name: Stony Brook
+    sources:
+      - id: stonybrook
+        label: Stony Brook University and Stony Brook Medicine
+        type: taleo
+        host: stonybrooku.taleo.net
+        section: "2"
+        portal: "101430233"
+
+  - rank: 79
+    name: West Virginia
+    sources:
+      - id: wvu
+        label: West Virginia University (faculty and postdoc positions)
+        type: taleo
+        host: wvu.taleo.net
+        section: faculty
+        portal: "26100021550"
+
+  - rank: 80
+    name: Charles R. Drew
+    sources:
+      - id: drew
+        label: Charles R. Drew University (UKG job board)
+        type: manual
+        url: https://recruiting2.ultipro.com/CHA1037CHRS/JobBoard/7fb6ae1e-e3f6-44ac-8694-2577af27ab6b/
+        reason: The UKG job board loads its list by script.
+
+  - rank: 81
+    name: UAMS
+    sources:
+      - id: uams
+        label: University of Arkansas for Medical Sciences (UA System Workday, Little Rock only)
+        type: workday
+        host: uasys.wd5.myworkdayjobs.com
+        tenant: uasys
+        site: UASYS
+        location_must_include: [little rock, little-rock, uams]
+
+  - rank: 82
+    name: Vermont
+    sources:
+      - id: uvm
+        label: University of Vermont
+        type: manual
+        url: https://www.uvmjobs.com/
+        reason: The search page is closed to automated reading by robots.txt.
+
+  - rank: 83
+    name: UTHSC Memphis
+    sources:
+      - id: uthsc
+        label: University of Tennessee Health Science Center (UT System site, Memphis only)
+        type: oracle
+        host: fa-ewlq-saasfaprod1.fa.ocs.oraclecloud.com
+        site: CX_1
+        location_must_include: [memphis]
+
+  - rank: 84
+    name: Saint Louis University
+    sources:
+      - id: slu
+        label: Saint Louis University
+        type: workday
+        host: slu.wd5.myworkdayjobs.com
+        tenant: slu
+        site: Careers
+
+  - rank: 85
+    name: Puerto Rico (Medical Sciences)
+    sources:
+      - id: upr
+        label: University of Puerto Rico Medical Sciences Campus (job offers, in Spanish)
+        type: manual
+        url: https://rcm1.rcm.upr.edu/empleos-en-el-rcm/
+        reason: Openings are posted as documents for download.
+
+  - rank: 86
+    name: SUNY Downstate
+    sources:
+      - id: downstate
+        label: SUNY Downstate Health Sciences University
+        type: oracle
+        host: ibqujb.fa.ocs.oraclecloud.com
+        site: CX_1
+
   - rank: 87
     name: Brown
     sources:
@@ -649,6 +1017,209 @@ schools:
         host: brown.wd5.myworkdayjobs.com
         tenant: brown
         site: staff-careers-brown
+
+  - rank: 88
+    name: UMKC
+    sources:
+      - id: umkc
+        label: University of Missouri-Kansas City (PeopleSoft)
+        type: manual
+        url: https://www.umkc.edu/hr/careers/
+        reason: The University of Missouri PeopleSoft job search has no page the tracker can read.
+
+  - rank: 89
+    name: SUNY Upstate
+    sources:
+      - id: upstate
+        label: SUNY Upstate Medical University
+        type: manual
+        url: https://careers.upstate.edu/jobs/search?query=postdoctoral
+        reason: The job site answers automated requests with a bot check.
+
+  - rank: 90
+    name: Loyola Chicago
+    sources:
+      - id: loyola
+        label: Loyola University Chicago
+        type: manual
+        url: https://www.careers.luc.edu/
+        reason: The search page is closed to automated reading by robots.txt.
+
+  - rank: 91
+    name: George Washington
+    sources:
+      - id: gwu
+        label: George Washington University
+        type: manual
+        url: https://www.gwu.jobs/
+        reason: The search page is closed to automated reading by robots.txt.
+
+  - rank: 92
+    name: Texas A&M Health
+    sources:
+      - id: tamu
+        label: Texas A&M University (incl. Health Science Center)
+        type: workday
+        host: tamus.wd1.myworkdayjobs.com
+        tenant: tamus
+        site: TAMU_External
+
+  - rank: 93
+    name: Missouri (Columbia)
+    sources:
+      - id: muhealth
+        label: MU Health Care
+        type: phenom
+        host: careers.muhealth.org
+        path: /us/en
+      - id: mizzou
+        label: University of Missouri (PeopleSoft academic jobs)
+        type: manual
+        url: https://erecruit.umsystem.edu/psc/tamext/COLUM/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?FOCUS=Applicant&SiteId=9
+
+  - rank: 94
+    name: Wayne State
+    sources:
+      - id: wayne
+        label: Wayne State University
+        type: manual
+        url: https://jobs.wayne.edu/
+        reason: The job site refuses automated requests (HTTP 403).
+
+  - rank: 95
+    name: Tufts
+    sources:
+      - id: tufts
+        label: Tufts University (incl. School of Medicine and HNRCA)
+        type: jibe
+        host: jobs.tufts.edu
+      - id: tuftsmedicine
+        label: Tufts Medicine (Tufts Medical Center)
+        type: phenom
+        host: careers.tuftsmedicine.org
+        path: /us/en
+
+  - rank: 96
+    name: UCF
+    sources:
+      - id: ucf
+        label: University of Central Florida
+        type: manual
+        url: https://jobs.ucf.edu/jobs/search?query=postdoctoral
+        reason: The job site answers automated requests with a bot check.
+
+  - rank: 97
+    name: Loma Linda
+    sources:
+      - id: lomalinda
+        label: Loma Linda University Health
+        type: oracle
+        host: egln.fa.us2.oraclecloud.com
+        site: CX
+
+  - rank: 98
+    name: Meharry
+    sources:
+      - id: meharry
+        label: Meharry Medical College
+        type: workday
+        host: meharrymedicalcollege.wd12.myworkdayjobs.com
+        tenant: meharrymedicalcollege
+        site: external
+
+  - rank: 99
+    name: Toledo
+    sources:
+      - id: toledo
+        label: University of Toledo
+        type: manual
+        url: https://careers.utoledo.edu/
+        reason: The job site answers automated requests with a bot check.
+
+  - rank: 100
+    name: UMMC (Mississippi)
+    sources:
+      - id: ummc
+        label: University of Mississippi Medical Center
+        type: workday
+        host: ummc.wd5.myworkdayjobs.com
+        tenant: ummc
+        site: UMCCareers
+
+  - rank: 101
+    name: Washington State
+    sources:
+      - id: wsu
+        label: Washington State University
+        type: workday
+        host: wsu.wd5.myworkdayjobs.com
+        tenant: wsu
+        site: WSU_Jobs
+
+  - rank: 102
+    name: UNLV
+    sources:
+      - id: unlv
+        label: University of Nevada, Las Vegas
+        type: workday
+        host: nshe.wd1.myworkdayjobs.com
+        tenant: nshe
+        site: UNLV-External
+
+  - rank: 103
+    name: Texas Tech HSC
+    sources:
+      - id: ttuhsc
+        label: Texas Tech University Health Sciences Center (BrassRing)
+        type: manual
+        url: https://www.ttuhsc.edu/careers
+        reason: The BrassRing job site loads its list by script.
+
+  - rank: 104
+    name: Drexel
+    sources:
+      - id: drexel
+        label: Drexel University
+        type: manual
+        url: https://careers.drexel.edu/
+        reason: The job site answers automated requests with a bot check.
+
+  - rank: 105
+    name: East Tennessee State
+    sources:
+      - id: etsu
+        label: East Tennessee State University
+        type: oracle
+        host: fa-evyu-saasfaprod1.fa.ocs.oraclecloud.com
+        site: CX_1
+
+  - rank: 106
+    name: Morehouse
+    sources:
+      - id: morehouse
+        label: Morehouse School of Medicine
+        type: manual
+        url: https://www.msm.edu/work-at-msm/index.php
+        reason: The job search (careers.msm.edu) is closed to automated reading by robots.txt.
+
+  - rank: 107
+    name: Howard
+    sources:
+      - id: howard
+        label: Howard University
+        type: workday
+        host: howard.wd1.myworkdayjobs.com
+        tenant: howard
+        site: HU
+
+  - rank: 107
+    name: UT Tyler HSC
+    sources:
+      - id: uttyler
+        label: UT Tyler (incl. Health Science Center; PeopleSoft)
+        type: manual
+        url: https://www.uttyler.edu/careers/
+        reason: The UT System PeopleSoft job search has no page the tracker can read.
 
   # ---- Added at the user's request; not in the BRIMR Internal Medicine ranking ----
   # (Mayo's NIH funding is not coded by department; teaching hospitals, cancer centers and research
@@ -716,3 +1287,25 @@ schools:
         title: h3
         date: none
         detail: none   # job pages are on ADP and load by script; titles only
+
+  - rank: 906
+    name: MD Anderson
+    sources:
+      - id: mdanderson
+        label: MD Anderson Cancer Center
+        type: sitemap
+        # The careers site lists every open job in its sitemap (robots.txt allows all); job pages carry
+        # schema.org JobPosting data with the posting date.
+        sitemap_url: https://jobs.mdanderson.org/jobs-site.xml
+        link_pattern: '/search/jobdetails/[^/]+/([0-9a-f-]{36})$'
+        title_segment: -2
+
+  - rank: 907
+    name: Memorial Sloan Kettering
+    sources:
+      - id: msk
+        label: Memorial Sloan Kettering Cancer Center
+        type: workday
+        host: msk.wd108.myworkdayjobs.com
+        tenant: msk
+        site: MSKCC_Careers_Primary

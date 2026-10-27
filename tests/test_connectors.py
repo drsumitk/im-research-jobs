@@ -278,3 +278,12 @@ def test_board_mhif_distinct_ids_from_query_strings():
     jobs = board.parse_list(load("board_mhif.html"), src, "https://mplsheart.org/careers")
     assert [j.title for j in jobs] == ["Advanced Cardiology Research Scholar, CCAD", "Research Scholar, CCAD"]
     assert jobs[0].key != jobs[1].key and "jobId=588688" in jobs[0].url
+
+
+def test_sitemap_title_from_an_earlier_path_segment():
+    from tracker.connectors import sitemap
+    xml = ("<urlset><url><loc>https://jobs.example.org/search/jobdetails/postdoctoral-fellow---genetics/"
+           "5f6ee87b-142c-40e3-bcc4-ca14ab458d0e</loc><lastmod>2026-10-27</lastmod></url></urlset>")
+    src = {"id": "mda", "link_pattern": r"/search/jobdetails/[^/]+/([0-9a-f-]{36})$", "title_segment": -2}
+    jobs = sitemap.parse_sitemap(xml, src)
+    assert jobs[0].title == "postdoctoral fellow genetics" and jobs[0].job_id.startswith("5f6ee87b")
