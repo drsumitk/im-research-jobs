@@ -1,0 +1,325 @@
+[
+ {
+  "school": "UT Health San Antonio",
+  "rank": 51,
+  "source": "utsa-postdoc",
+  "label": "UT Health San Antonio Office of Postdoctoral Affairs board",
+  "type": "board",
+  "checked": "2026-10-27",
+  "found": 32,
+  "candidates": 32,
+  "too_old": 0,
+  "status": "ok",
+  "new_details": 3,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Postdoctoral position: T32 Postdoctoral Fellowship in Substance Use Disorder Research",
+   "Postdoctoral position: Postdoctoral Research Fellow",
+   "Postdoctoral position: Biology of Aging Postdoctoral Fellowship"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Postdoctoral position: T32 Postdoctoral Fellowship in Substance Use Disorder Research",
+    "url": "https://opa.uthscsa.edu/prospective-postdocs/open-postdoctoral-positions/t32-postdoctoral-fellowship-substance-use-disorder",
+    "posted": "",
+    "dept": "",
+    "text": "Posted Date: Wednesday, March 12, 2025 \n Position Description \n UT Health San Antonio is seeking qualified, highly motivated applicants for a NIDA T32 Postdoctoral Training Program. Postdoctoral fellows receive interdisciplinary training across various laboratories and areas of expertise, taking adv"
+   },
+   {
+    "title": "Postdoctoral position: Postdoctoral Research Fellow",
+    "url": "https://opa.uthscsa.edu/prospective-postdocs/open-postdoctoral-positions/postdoctoral-research-fellow-1",
+    "posted": "",
+    "dept": "",
+    "text": "Posted Date: Thursday, January 01, 2026 \n Position Description \n A postdoc position provides an opportunity for early-career researchers to gain valuable experience, develop independent research skills, and contribute to the advancement of scientific knowledge in their field of expertise. \n The post"
+   },
+   {
+    "title": "Postdoctoral position: Biology of Aging Postdoctoral Fellowship",
+    "url": "https://opa.uthscsa.edu/prospective-postdocs/open-postdoctoral-positions/biology-aging-postdoctoral-fellowship",
+    "posted": "",
+    "dept": "",
+    "text": "Posted Date: Wednesday, March 12, 2025 \n Position Description \n AVAILABLE IMMEDIATELY AT THE UT HEALTH SCIENCE CENTER AT SAN ANTONIO \n We have a Postdoctoral position available in the T32 Biology of Aging Training Program for Postdoctoral Research Fellows. This Training Program covers such areas as "
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "Temple",
+  "rank": 59,
+  "source": "temple-postdoc",
+  "label": "Temple Office of Postdoctoral Affairs board",
+  "type": "board",
+  "checked": "2026-10-27",
+  "found": 12,
+  "candidates": 1,
+  "too_old": 10,
+  "status": "ok",
+  "new_details": 0,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Postdoctoral position in vibriosis epidemiology, surveillance, and modeling"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Postdoctoral position in vibriosis epidemiology, surveillance, and modeling",
+    "url": "https://grad.temple.edu/postdoctoral-affairs/open-positions",
+    "posted": "2026-11-03",
+    "dept": "",
+    "text": "Postdoctoral position in vibriosis epidemiology, surveillance, and modeling The Department of Epidemiology and Biostatistics in Temple University's College of Public Health seeks a postdoctoral fellow to co ntribute to projects focused on vibriosis epidemiology, surveillance, and modeling under the "
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "Penn State (Hershey)",
+  "rank": 67,
+  "source": "psu-academic",
+  "label": "Penn State (academic, College of Medicine / Hershey only)",
+  "type": "workday",
+  "checked": "2026-10-27",
+  "found": 38,
+  "candidates": 3,
+  "too_old": 14,
+  "status": "ok",
+  "new_details": 3,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Postdoctoral Scholar - Obstetrics and Gynecology",
+   "Postdoctoral Scholar - Pediatric Oncology Translational Research Lab",
+   "Postdoctoral Scholar - Comparative Medicine"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Postdoctoral Scholar - Obstetrics and Gynecology",
+    "url": "https://psu.wd1.myworkdayjobs.com/PSU_Academic/job/College-of-Medicine/Postdoctoral-Scholar---Obstetrics-and-Gynecology_REQ_0000082943-3",
+    "posted": "2026-10-20",
+    "dept": "",
+    "text": "APPLICATION INSTRUCTIONS: \n CURRENT PENN STATE EMPLOYEE (faculty, staff, technical service, or student), please login to Workday to complete the internal application process . Please do not apply here, apply internally through Workday. \n CURRENT PENN STATE STUDENT (not employed previously at the uni"
+   },
+   {
+    "title": "Postdoctoral Scholar - Pediatric Oncology Translational Research Lab",
+    "url": "https://psu.wd1.myworkdayjobs.com/PSU_Academic/job/College-of-Medicine/Postdoctoral-Scholar---Pediatric-Oncology-Translational-Research-Lab_REQ_0000082769",
+    "posted": "2026-10-09",
+    "dept": "",
+    "text": "APPLICATION INSTRUCTIONS: \n CURRENT PENN STATE EMPLOYEE (faculty, staff, technical service, or student), please login to Workday to complete the internal application process . Please do not apply here, apply internally through Workday. \n CURRENT PENN STATE STUDENT (not employed previously at the uni"
+   },
+   {
+    "title": "Postdoctoral Scholar - Comparative Medicine",
+    "url": "https://psu.wd1.myworkdayjobs.com/PSU_Academic/job/College-of-Medicine/Postdoctoral-Scholar---Comparative-Medicine_REQ_0000082476-2",
+    "posted": "2026-10-07",
+    "dept": "",
+    "text": "APPLICATION INSTRUCTIONS: \n CURRENT PENN STATE EMPLOYEE (faculty, staff, technical service, or student), please login to Workday to complete the internal application process . Please do not apply here, apply internally through Workday. \n CURRENT PENN STATE STUDENT (not employed previously at the uni"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "Penn State (Hershey)",
+  "rank": 67,
+  "source": "psu-staff",
+  "label": "Penn State (staff, College of Medicine / Hershey only)",
+  "type": "workday",
+  "checked": "2026-10-27",
+  "found": 69,
+  "candidates": 4,
+  "too_old": 22,
+  "status": "ok",
+  "new_details": 3,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Postdoctoral Scholar - Obstetrics and Gynecology",
+   "Postdoctoral Scholar - Pediatric Oncology Translational Research Lab",
+   "Postdoctoral Scholar - Comparative Medicine"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Postdoctoral Scholar - Obstetrics and Gynecology",
+    "url": "https://psu.wd1.myworkdayjobs.com/PSU_Staff/job/College-of-Medicine/Postdoctoral-Scholar---Obstetrics-and-Gynecology_REQ_0000082943-2",
+    "posted": "2026-10-20",
+    "dept": "",
+    "text": "APPLICATION INSTRUCTIONS: \n CURRENT PENN STATE EMPLOYEE (faculty, staff, technical service, or student), please login to Workday to complete the internal application process . Please do not apply here, apply internally through Workday. \n CURRENT PENN STATE STUDENT (not employed previously at the uni"
+   },
+   {
+    "title": "Postdoctoral Scholar - Pediatric Oncology Translational Research Lab",
+    "url": "https://psu.wd1.myworkdayjobs.com/PSU_Staff/job/College-of-Medicine/Postdoctoral-Scholar---Pediatric-Oncology-Translational-Research-Lab_REQ_0000082769-3",
+    "posted": "2026-10-09",
+    "dept": "",
+    "text": "APPLICATION INSTRUCTIONS: \n CURRENT PENN STATE EMPLOYEE (faculty, staff, technical service, or student), please login to Workday to complete the internal application process . Please do not apply here, apply internally through Workday. \n CURRENT PENN STATE STUDENT (not employed previously at the uni"
+   },
+   {
+    "title": "Postdoctoral Scholar - Comparative Medicine",
+    "url": "https://psu.wd1.myworkdayjobs.com/PSU_Staff/job/College-of-Medicine/Postdoctoral-Scholar---Comparative-Medicine_REQ_0000082476-1",
+    "posted": "2026-10-07",
+    "dept": "",
+    "text": "APPLICATION INSTRUCTIONS: \n CURRENT PENN STATE EMPLOYEE (faculty, staff, technical service, or student), please login to Workday to complete the internal application process . Please do not apply here, apply internally through Workday. \n CURRENT PENN STATE STUDENT (not employed previously at the uni"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "UConn Health",
+  "rank": 68,
+  "source": "uconn-postdoc",
+  "label": "UConn Health Office of Postdoctoral Affairs board",
+  "type": "board",
+  "checked": "2026-10-27",
+  "found": 6,
+  "candidates": 1,
+  "too_old": 5,
+  "status": "ok",
+  "new_details": 0,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Postdoctoral Position \u2013 Regenerative Medicine and Obesity Research"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Postdoctoral Position \u2013 Regenerative Medicine and Obesity Research",
+    "url": "https://health.uconn.edu/postdoctoral-affairs/prospective-postdocs/job-postings/",
+    "posted": "2026-10-13",
+    "dept": "",
+    "text": "Postdoctoral Position \u2013 Regenerative Medicine and Obesity Research \n Posted: October 13, 2026 \n The Department of Pediatrics at UConn Health and the Scientific Center for Fetal and Neonatal Regenerative Medicine at Connecticut Children\u2019s Research Institute (CCRI) are seeking a highly motivated postd"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "UTMB Galveston",
+  "rank": 76,
+  "source": "utmb",
+  "label": "University of Texas Medical Branch",
+  "type": "board",
+  "checked": "2026-10-27",
+  "found": 10,
+  "candidates": 1,
+  "too_old": 0,
+  "status": "ok",
+  "new_details": 1,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Postdoctoral Fellow, Cardiovascular Medicine"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Postdoctoral Fellow, Cardiovascular Medicine",
+    "url": "https://applyjobs.utmb.edu/jobs/postdoctoral-fellow-cardiovascular-medicine-36920",
+    "posted": "",
+    "dept": "",
+    "text": "Minimum Qualifications: \n Ph.D., M.D. or Doctoral equivalent in any field. Scientific research experience. \n Job Description : \n The postdoctoral fellow will conduct, report and present research in his/her field of study under the supervision of a faculty mentor. This is a training position and is n"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "UAMS",
+  "rank": 81,
+  "source": "uams",
+  "label": "University of Arkansas for Medical Sciences (UA System Workday, Little Rock only)",
+  "type": "workday",
+  "checked": "2026-10-27",
+  "found": 166,
+  "candidates": 5,
+  "too_old": 5,
+  "status": "ok",
+  "new_details": 3,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Post Doctoral Fellow",
+   "Post Doctoral Fellow (Kaoud Laboratory)",
+   "Research Associate I"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Post Doctoral Fellow",
+    "url": "https://uasys.wd5.myworkdayjobs.com/UASYS/job/Little-Rock/Post-Doctoral-Fellow_R0092714-2",
+    "posted": "2026-10-15",
+    "dept": "Posting End Date: 12:01 a.m. CT 10/30/2026",
+    "text": "Current University of Arkansas System employees, including student employees and graduate assistants, need to log in to Workday via MyApps.Microsoft.com , then access Find Jobs from the Workday search bar to view and apply for open positions. Students at University of Arkansas System will also view "
+   },
+   {
+    "title": "Post Doctoral Fellow (Kaoud Laboratory)",
+    "url": "https://uasys.wd5.myworkdayjobs.com/UASYS/job/UAMS/Post-Doctoral-Fellow--Kaiud-Laboratory-_R0092592-2",
+    "posted": "2026-10-12",
+    "dept": "Posting End Date: 12:01 a.m. CT 11/13/2026",
+    "text": "Current University of Arkansas System employees, including student employees and graduate assistants, need to log in to Workday via MyApps.Microsoft.com , then access Find Jobs from the Workday search bar to view and apply for open positions. Students at University of Arkansas System will also view "
+   },
+   {
+    "title": "Research Associate I",
+    "url": "https://uasys.wd5.myworkdayjobs.com/UASYS/job/Little-Rock/Research-Associate-I_R0092374-1",
+    "posted": "2026-10-07",
+    "dept": "Posting End Date: 12:01 a.m. CT 11/8/2026",
+    "text": "Current University of Arkansas System employees, including student employees and graduate assistants, need to log in to Workday via MyApps.Microsoft.com , then access Find Jobs from the Workday search bar to view and apply for open positions. Students at University of Arkansas System will also view "
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "UTHSC Memphis",
+  "rank": 83,
+  "source": "uthsc",
+  "label": "University of Tennessee Health Science Center (UT System site, Memphis only)",
+  "type": "oracle",
+  "checked": "2026-10-27",
+  "found": 80,
+  "candidates": 1,
+  "too_old": 10,
+  "status": "ok",
+  "new_details": 1,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Postdoctoral Scholar-Pharmacology"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Postdoctoral Scholar-Pharmacology",
+    "url": "https://fa-ewlq-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/10485",
+    "posted": "2026-10-22",
+    "dept": "",
+    "text": "THIS IS A GRANT-FUNDED POSITION FUNDED UNTIL AUGUST 31, 2028. \n The Department of Pharmaceutical Sciences, College of Pharmacy at the University of Tennessee Health Sciences, seeks a Postdoctoral Scholar supported by NIH-funded projects. The main research focus is to develop innovative formulation s"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "MD Anderson",
+  "rank": 906,
+  "source": "mdanderson",
+  "label": "MD Anderson Cancer Center",
+  "type": "sitemap",
+  "checked": "2026-10-27",
+  "found": 413,
+  "candidates": 11,
+  "too_old": 73,
+  "status": "ok",
+  "new_details": 3,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Research Assistant II - Surgical Oncology - Research",
+   "Research Assistant II",
+   "Postdoctoral Fellow - Leadership Institute Research"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Research Assistant II - Surgical Oncology - Research",
+    "url": "https://jobs.mdanderson.org/search/jobdetails/research-assistant-ii---surgical-oncology---research/14860361-6849-419b-8bb6-99b9d5c06a63",
+    "posted": "2026-10-27",
+    "dept": "",
+    "text": "The University of Texas MD Anderson Cancer Center is a leading institution focused on cancer care, research, education, and prevention. Within the Department of Surgical Oncology, the Keung Laboratory is dedicated to understanding the molecular pathogenesis and immuno-oncology of soft tissue sarcoma"
+   },
+   {
+    "title": "Research Assistant II",
+    "url": "https://jobs.mdanderson.org/search/jobdetails/research-assistant-ii/8c46ff82-20bf-4a62-8da1-d0781b39d7e1",
+    "posted": "2026-10-27",
+    "dept": "",
+    "text": "Genetics is a basic science department located in the George and Cynthia Mitchell Basic Sciences Research Building at the world-renowned UT MD Anderson in the heart of the Texas Medical Center. The focus is on advancing knowledge of the molecular genetic mechanisms that regulate normal and abnormal "
+   },
+   {
+    "title": "Postdoctoral Fellow - Leadership Institute Research",
+    "url": "https://jobs.mdanderson.org/search/jobdetails/postdoctoral-fellow---leadership-institute-research/713c644a-b388-4a56-9ba2-68ca3d5deb80",
+    "posted": "2026-10-15",
+    "dept": "",
+    "text": "The MD Anderson Leadership Institute is seeking a driven individual with an interest in conducting and disseminating organizational research. In this highly developmental position, you will be working with leadership experts to conduct research on a myriad of programs and topics related to employee "
+   }
+  ],
+  "too_old_count": 0
+ }
+]
