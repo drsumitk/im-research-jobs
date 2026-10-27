@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-261992e4307f2777c4a",applicationID:"1056527107",browserID:"1134506551"};;/*! For license information please see nr-loader-rum-1.324.0.min.js.LICENSE.txt */
+(()=>{var e={8122(e,t,r){"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),a=0===Object.keys(r).length?e:r;for(let s in a)if(void 0!==e[s])try{if(null===e[s]){r[s]=null;continue}Array.isArray(e[s])&&Array.isArray(t[s])?r[s]=Array.from(new Set([...e[s],...t[s]])):e[s]instanceof Map||e[s]instanceof Set||e[s]instanceof Date||e[s]instanceof RegExp?r[s]=e[s]:"object"==typeof e[s]&&null!==t[s]&&"object"==typeof t[s]?r[s]=i(e[s],t[s]):r[s]=e[s]}catch(e){r[s]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},2555(e,t,r){"use strict";r.d(t,{f:()=>s});var n=r(384),i=r(8122);const a={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function s(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}r.d(t,["D",0,e=>(0,i.a)(e,a)])},7699(e,t,r){"use strict";var n=r(860);const i=1e6,a={[n.K7.logging]:!0,[n.K7.genericEvents]:!0,[n.K7.jserrors]:!0,[n.K7.ajax]:!0};r.d(t,["It",0,i,"KC",0,a,"qh",0,"SESSION_ERROR","zd",0,5e5])},9324(e,t,r){"use strict";r.d(t,["xv",0,"1.324.0"])},981(e,t,r){"use strict";r.d(t,["R",0,{AJAX:"AjaxRequest",PA:"PageAction",UA:"UserAction",BP:"BrowserPerformance",WS:"WebSocket",SPV:"SecurityPolicyViolation",JSE:"JavaScriptError",LOG:"Log",PVE:"PageView",PVT:"PageViewTiming",SR:"SessionReplay",ST:"SessionTrace",BI:"BrowserInteraction"}])},6154(e,t,r){"use strict";var n=r(1863);const i="undefined"!=typeof window&&!!window.document,a="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),s=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),o=Boolean("hidden"===s?.document?.visibilityState),c=""+s?.location,u=/iPad|iPhone|iPod/.test(s.navigator?.userAgent),d=u&&"undefined"==typeof SharedWorker,l=((()=>{const e=s.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)());r.d(t,["OF",0,u,"RI",0,i,"WN",0,l,"bv",0,a,"gm",0,s,"m",0,c,"mw",0,o,"sb",0,d,"zk",0,()=>{const e=s?.performance?.getEntriesByType?.("navigation")?.[0];if(e&&e.responseStart>0&&e.responseStart<s.performance.now())return e}])},3241(e,t,r){"use strict";r.d(t,{W:()=>i});var n=r(6154);function i(e={}){try{n.gm.dispatchEvent(new CustomEvent("newrelic",{detail:e}))}catch(e){}}},1687(e,t,r){"use strict";r.d(t,{Ak:()=>o,Ze:()=>u,x3:()=>c});var n=r(3241),i=r(3606),a=r(860),s=r(2646);function o(e,t){if(!e)return;const r={staged:!1,priority:a.P3[t]||0};e.runtime.drainRegistry.get(t)||e.runtime.drainRegistry.set(t,r)}function c(e,t){if(!e)return;const r=e.runtime.drainRegistry;r&&(r.get(t)&&r.delete(t),l(e,t,!1),r.size&&d(e))}function u(e,t="feature",r=!1){if(e){if(!e.runtime.drainRegistry.get(t)||r)return l(e,t);e.runtime.drainRegistry.get(t).staged=!0,d(e)}}function d(e){if(!e)return;const t=Array.from(e.runtime.drainRegistry);t.every(([e,t])=>t.staged)&&(t.sort((e,t)=>e[1].priority-t[1].priority),t.forEach(([t])=>{e.runtime.drainRegistry.delete(t),l(e,t)}))}function l(e,t,r=!0){if(!e)return;const a=e.ee,o=i.i.handlers;if(a&&!a.aborted&&a.backlog&&o){if((0,n.W)({type:"lifecycle",name:"drain",feature:t}),r){const e=a.backlog[t],r=o[t];if(r){for(let t=0;e&&t<e.length;++t)f(e[t],r);Object.entries(r).forEach(([e,t])=>{Object.values(t||{}).forEach(t=>{t[0]?.on&&t[0].context()instanceof s.y&&!t[0].listeners(e).includes(t[1])&&t[0].on(e,t[1])})})}}a.isolatedBacklog||delete o[t],a.backlog[t]=null,a.emit("drain-"+t,[])}}function f(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],a=e[2];n.apply(i,a)}})}},7836(e,t,r){"use strict";var n=r(384),i=r(8990),a=r(2646),s=r(5607);const o="nr@context:".concat(s.W),c=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&u.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,a){!1!==a&&(a=!0);if(c.aborted&&!i)return;t&&a&&t.emit(e,r,n);var o=g(n);m(e).forEach(e=>{e.apply(o,r)});var u=v()[s[e]];u&&u.push([f,e,r,o]);return o},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach(([e,n])=>{s[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=>{delete f.backlog[e]})},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,o,()=>new a.y(o)):new a.y(o)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),u=(0,n.Zm)();u.ee||(u.ee=c),r.d(t,["P",0,o,"ee",0,c])},2646(e,t,r){"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},9908(e,t,r){"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,a){a?(a.buffer([e],i),a.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},3606(e,t,r){"use strict";r.d(t,{i:()=>a});var n=r(9908);a.on=s;var i=a.handlers={};function a(e,t,r,a){s(a||n.d,i,e,t,r)}function s(e,t,r,i,a){a||(a="feature"),e||(e=n.d);var s=t[a]=t[a]||{};(s[r]=s[r]||[]).push([e,i])}},3878(e,t,r){"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function a(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>a,jT:()=>n,sp:()=>i})},5607(e,t,r){"use strict";const n=(0,r(9566).bz)();r.d(t,["W",0,n])},9566(e,t,r){"use strict";r.d(t,{LA:()=>s,bz:()=>a});var n=r(6154);function i(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".split("").map(e=>"x"===e?i(t,r++).toString(16):"y"===e?(3&i()|8).toString(16):e).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,a=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const s=[];for(var o=0;o<e;o++)s.push(i(r,a++).toString(16));return s.join("")}},2614(e,t,r){"use strict";r.d(t,["BB",0,18e5,"Wt",0,"NRBA_SESSION::","iL",0,{SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},"tS",0,{STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},"wk",0,144e5])},1863(e,t,r){"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},944(e,t,r){"use strict";r.d(t,{R:()=>i});var n=r(3241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},8990(e,t,r){"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},6389(e,t,r){"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout(()=>{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=>{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},1910(e,t,r){"use strict";r.d(t,{i:()=>a});var n=r(944);const i=new Map;function a(...e){return e.every(e=>{if(i.has(e))return i.get(e);const t="function"==typeof e?e.toString():"",r=t.includes("[native code]"),a=t.includes("nrWrapper");return r||a||(0,n.R)(64,e?.name||t),i.set(e,r),r})}},5289(e,t,r){"use strict";r.d(t,{GG:()=>s,Qr:()=>c,sB:()=>o});var n=r(3878),i=r(6389);function a(){return"undefined"==typeof document||"complete"===document.readyState}function s(e,t){if(a())return e();const r=(0,i.J)(e),s=setInterval(()=>{a()&&(clearInterval(s),r())},500);(0,n.sp)("load",r,t)}function o(e){if(a())return e();(0,n.DD)("DOMContentLoaded",e)}function c(e){if(a())return e();(0,n.sp)("popstate",e)}},384(e,t,r){"use strict";r.d(t,{Zm:()=>c,bQ:()=>d,dV:()=>u,pV:()=>l});var n=r(6154),i=r(1863),a=r(944),s=r(1910);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function c(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function u(){let e=c();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,s.i)(...Object.values(e.o))),e}function d(e,t){let r=c();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t,2===Object.keys(r.initializedAgents).length&&(0,a.R)(69)}function l(){return function(){let e=c();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=c();const t=e.init||{};e.init={...t}}(),u(),function(){let e=c();const t=e.loader_config||{};e.loader_config={...t}}(),c()}r.d(t,["NT",0,o])},2843(e,t,r){"use strict";r.d(t,{G:()=>a,u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)},r,i)}function a(e,t,r){(0,n.sp)("pagehide",e,t,r)}},9300(e,t,r){"use strict";r(860).K7.ajax;r.d(t,["mo",0,{NONE:"none",FAILURES:"failures",ALL:"all"}])},3969(e,t,r){"use strict";const n=r(860).K7.metrics;r.d(t,["TZ",0,n,"XG",0,"storeEventMetrics","xV",0,"storeSupportabilityMetrics"])},6630(e,t,r){"use strict";const n=r(860).K7.pageViewEvent;r.d(t,["T",0,n])},782(e,t,r){"use strict";const n=r(860).K7.pageViewTiming;r.d(t,["T",0,n])},4234(e,t,r){"use strict";r.d(t,{W:()=>i});var n=r(1687);class i{constructor(e,t){this.agentRef=e,this.ee=e?.ee,this.featureName=t,this.blocked=!1}deregisterDrain(){(0,n.x3)(this.agentRef,this.featureName)}}},7767(e,t,r){"use strict";var n=r(6154);r.d(t,["V",0,e=>n.RI&&!0===e?.privacy.cookies_enabled])},8362(e,t,r){"use strict";r.d(t,{d:()=>a});var n=r(9566),i=r(1741);class a extends i.W{agentIdentifier=(0,n.LA)(16)}},1741(e,t,r){"use strict";r.d(t,{W:()=>a});var n=r(944),i=r(4261);class a{#e(e,...t){if(this[e]!==a.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e,t=!1){return this.#e(i.Dl,e,t)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e("log",e,t)}start(){return this.#e("start")}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},4261(e,t,r){"use strict";r.d(t,["BL",0,"finished","CH",0,"recordReplay","Dl",0,"setUserId","Fw",0,"setPageViewName","PA",0,"setCurrentRouteName","Pv",0,"consent","Tb",0,"pauseReplay","U2",0,"addToTrace","V1",0,"measure","Wb",0,"wrapLogger","bt",0,"setErrorHandler","cD",0,"setCustomAttribute","dT",0,"interaction","eY",0,"register","fF",0,"recordCustomEvent","hG",0,"addPageAction","k6",0,"addRelease","nb",0,"setApplicationVersion","o5",0,"noticeError"])},1738(e,t,r){"use strict";r.d(t,{U:()=>l,Y:()=>d});var n=r(3241),i=r(9908),a=r(1863),s=r(944),o=r(3969),c=r(8362),u=r(860);function d(e,t,r,a){const d=a||r;!d||d[e]&&d[e]!==c.d.prototype[e]||(d[e]=function(){(0,i.p)(o.xV,["API/"+e+"/called"],void 0,u.K7.metrics,r.ee),(0,n.W)({drained:!!r.runtime?.activatedFeatures,type:"data",name:"api",feature:"api-"+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,s.R)(23,e)}})}function l(e,t,r,n,s){const o=e.info;null===r?delete o.jsAttributes[t]:o.jsAttributes[t]=r,(s||null===r)&&(0,i.p)("api-"+n,[(0,a.t)(),t,r],void 0,"session",e.ee)}},8374(e,t,r){r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860(e,t,r){"use strict";const n="events",i="jserrors",a="browser/blobs",s="browser/logs",o={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations"},c={[o.pageViewEvent]:1,[o.pageViewTiming]:2,[o.metrics]:3,[o.jserrors]:4,[o.softNav]:5,[o.ajax]:6,[o.sessionTrace]:7,[o.sessionReplay]:8,[o.logging]:9,[o.genericEvents]:10},u={[o.pageViewEvent]:"rum",[o.pageViewTiming]:n,[o.ajax]:n,[o.softNav]:n,[o.metrics]:i,[o.jserrors]:i,[o.sessionTrace]:a,[o.sessionReplay]:a,[o.logging]:s,[o.genericEvents]:"ins"};r.d(t,["$J",0,u,"K7",0,o,"P3",0,c,"XX",0,i,"Yy",0,s,"df",0,a,"hg",0,"connect"])}};const t={};function r(n){const i=t[n];if(void 0!==i)return i.exports;const a=t[n]={exports:{}};return e[n](a,a.exports,r),a.exports}r.m=e,r.d=(e,t)=>{if(Array.isArray(t))for(var n=0;n<t.length;){var i=t[n++],a=t[n++];r.o(e,i)?0===a&&n++:0===a?Object.defineProperty(e,i,{enumerable:!0,value:t[n++]}):Object.defineProperty(e,i,{enumerable:!0,get:a})}else for(var i in t)r.o(t,i)&&!r.o(e,i)&&Object.defineProperty(e,i,{enumerable:!0,get:t[i]})},r.f={},r.e=e=>Promise.all(Object.keys(r.f).reduce((t,n)=>(r.f[n](e,t),t),[])),r.u=e=>"nr-rum-1.324.0.min.js",r.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),(()=>{const e={},t="NRBA-1.324.0.PROD:";r.l=(n,i,a,s)=>{if(e[n])return void e[n].push(i);let o,c;if(void 0!==a){const e=document.getElementsByTagName("script");for(var u=0;u<e.length;u++){const r=e[u];if(r.getAttribute("src")==n||r.getAttribute("data-webpack")==t+a){o=r;break}}}if(!o){c=!0;var d={296:"sha512-Pjy0Jxmo6oAG6oGKLKrf8x8xyaSM1NuL7vLGv9xRLEw0hrpERDruLI5RxlCHNy0NpMyEPWhlC34zujXIR3qJPQ=="};o=document.createElement("script"),o.charset="utf-8",r.nc&&o.setAttribute("nonce",r.nc),o.setAttribute("data-webpack",t+a),o.src=n,0!==o.src.indexOf(window.location.origin+"/")&&(o.crossOrigin="anonymous"),d[s]&&(o.integrity=d[s])}e[n]=[i];const l=(t,r)=>{o.onerror=o.onload=null,clearTimeout(f);const i=e[n];if(delete e[n],o.parentNode?.removeChild(o),i?.forEach(e=>e(r)),t)return t(r)},f=setTimeout(l.bind(null,void 0,{type:"timeout",target:o}),12e4);o.onerror=l.bind(null,o.onerror),o.onload=l.bind(null,o.onload),c&&document.head.appendChild(o)}})(),r.r=e=>{Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.p="https://js-agent.newrelic.com/",(()=>{const e={374:0,840:0};r.f.j=(t,n)=>{let i=r.o(e,t)?e[t]:void 0;if(0!==i)if(i)n.push(i[2]);else{const a=new Promise((r,n)=>i=e[t]=[r,n]);n.push(i[2]=a);const s=r.p+r.u(t),o=new Error,c=n=>{if(r.o(e,t)&&(i=e[t],0!==i&&(e[t]=void 0),i)){const e=n&&("load"===n.type?"missing":n.type),r=n&&n.target&&n.target.src;o.message="Loading chunk "+t+" failed: ("+e+": "+r+")",o.name="ChunkLoadError",o.type=e,o.request=r,i[1](o)}};r.l(s,c,"chunk-"+t,t)}};const t=(t,n)=>{let[i,a,s]=n;var o,c,u=0;if(i.some(t=>0!==e[t])){for(o in a)r.o(a,o)&&(r.m[o]=a[o]);if(s)s(r)}for(t&&t(n);u<i.length;u++)c=i[u],r.o(e,c)&&e[c]&&e[c][0](),e[c]=0},n=self["webpackChunk:NRBA-1.324.0.PROD"]=self["webpackChunk:NRBA-1.324.0.PROD"]||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})(),(()=>{"use strict";r(8374);var e=r(8362),t=r(860);const n=Object.values(t.K7);var i=r(384),a=r(1741);var s=r(2555),o=r(981);t.K7.genericEvents,o.R.PA,o.R.UA,o.R.BP;const c={RESOURCES:"experimental.resources",REGISTER:"register"};var u=r(9300);const d=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var l=r(2614),f=r(944),g=r(8122);const p="[data-nr-mask]",m=e=>(0,g.a)(e,(()=>{const e={feature_flags:[],experimental:{register:!1,resources:!1,iframe_bridge:!1,iframe_domains:[]},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0,capture_payloads:u.mo.NONE},api:{register:{get enabled(){return e.feature_flags.includes(c.REGISTER)||e.experimental.register},set enabled(t){e.experimental.register=t},duplicate_data_to_container:!1,get allow_iframe_bridge(){return e.feature_flags.includes(c.IFRAME_BRIDGE)||e.experimental.iframe_bridge},set allow_iframe_bridge(t){e.experimental.iframe_bridge=t},get iframe_domains(){return e.experimental.iframe_domains},set iframe_domains(t){Array.isArray(t)?e.experimental.iframe_domains=t:(0,f.R)(1,t)}}},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(c.RESOURCES)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:l.wk,inactiveMs:l.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){d(t)?e.mask_selector="".concat(t,",").concat(p):""===t||null===t?e.mask_selector=p:(0,f.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){d(t)?e.block_selector+=",".concat(t):""!==t&&(0,f.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,f.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]},web_sockets:{enabled:!1}}})());var h=r(6154),v=r(9324);let b=0;const y={buildEnv:"PROD",distMethod:"CDN",version:v.xv,originTime:h.WN},_={consented:!1},w={activatedFeatures:void 0,appMetadata:{},configured:!1,get consented(){return this.session?.state?.consent||_.consented},set consented(e){_.consented=e},customTransaction:void 0,denyList:[],disabled:!1,drainRegistry:new Map,connector:void 0,harvester:void 0,v2Target:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++b},listeningForIframeMessages:!1},R="BA";var A=r(7836),x=r(3241);const E={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0};var S=r(9908);const k="newrelic-iframe-";function T(e,t={},n,o){let{init:c,info:u,loader_config:d,runtime:l={},exposed:f=!0}=t;if(!u){const e=(0,i.pV)();c=e.init,u=e.info,d=e.loader_config}var p;e.init=m(c||{}),e.loader_config=(p=d||{},(0,g.a)(p,E)),u.jsAttributes??={},h.bv&&(u.jsAttributes.isWorker=!0),e.info=(0,s.D)(u);const v=e.init;e.runtime??=(e=>{const t=(0,g.a)(e,w),r=Object.keys(y).reduce((e,t)=>(e[t]={value:y[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)})(l),e.runtime.v2Target??={type:R,instance:e.agentIdentifier,get id(){return e.runtime.appMetadata?.agents?.[0]?.entityGuid},get attributes(){return{"entity.guid":this.id,appId:e.info.applicationID}}},v.proxy.assets&&(e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e})(v.proxy.assets),e.runtime.configured||(Object.defineProperty(e,"beacons",{get:()=>[e.info.beacon,e.info.errorBeacon,e.init.proxy.assets,e.init.proxy.beacon].filter(Boolean)}),Object.defineProperty(e.runtime,"denyList",{get:()=>[...e.init.ajax.deny_list||[],...e.init.ajax.block_internal?e.beacons:[]]}),e.runtime.ptid=e.agentIdentifier,function(e){const t=(0,i.pV)();Object.getOwnPropertyNames(a.W.prototype).forEach(r=>{const n=a.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let i=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return i?i(...t):n})})}(e),e.runtime.loaderType=n,e.ee=A.ee.get(e.agentIdentifier),e.exposed=f,(0,x.W)({drained:!!e.runtime.activatedFeatures,type:"lifecycle",name:"initialize",feature:void 0,data:e.config}),e.init.api.register.allow_iframe_bridge&&h.gm.addEventListener("message",t=>{"string"==typeof t.data?.type&&t.data.type.startsWith(k)&&(0,S.p)("iframe-message",[t],void 0,"IFRAME",e.ee)}),e.runtime.configured=!0)}var j=r(1863),P=r(4261),N=r(1738);var O=r(1687),M=r(4234),I=r(5289),D=r(7767);function V(e){return!!(0,i.dV)().o.MO&&(0,D.V)(e)&&!0===e?.session_trace.enabled}var W=r(6389),B=r(7699);const C=new WeakSet,K=new WeakMap;class U extends M.W{constructor(e,t){super(e,t),this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=>{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=>{this.ee.on("manual-start-all",(0,W.J)(()=>{(0,O.Ak)(e,this.featureName),t()}))}):(0,O.Ak)(e,t)}importAggregator(e,t,n={}){if(this.featAggregate)return;const i=async()=>{if(await this.deferred,this.#t(e),!(0,s.f)(e.info))return(0,f.R)(43),e.ee.abort(),void this.loadedSuccessfully(!1);try{await async function(e,t,n){if(K.has(e))return K.get(e);const i=(async()=>{if((0,D.V)(e.init))try{const{setupAgentSession:t}=await r.e(296).then(r.bind(r,1768));t(e)}catch(e){(0,f.R)(20,e),t.emit("internal-error",[e]),(0,S.p)(B.qh,[e],void 0,n,t)}if(e.init.api.register.allow_iframe_bridge)try{const{setupIframeMFEMessageListener:t}=await Promise.resolve().then(function(){const e=new Error("Cannot find module '../../loaders/configure/iframe-message-handler'");throw e.code="MODULE_NOT_FOUND",e});t(e)}catch(e){(0,f.R)(23,e)}const[{Connector:i},{Harvester:a}]=await Promise.all([r.e(296).then(r.bind(r,6589)),r.e(296).then(r.bind(r,5237))]);e.runtime.connector=new i(e),e.runtime.harvester=new a(e);const s=Object.values(e.features).filter(t=>e.runtime.drainRegistry.has(t.featureName));Promise.all(s.map(e=>e.onAggregateImported)).then(()=>e.runtime.harvester.startTimer())})();K.set(e,i),await i}(e,this.ee,this.featureName)}catch(e){return(0,f.R)(79,e),this.ee.abort(),void this.loadedSuccessfully(!1)}try{if(!this.#r(this.featureName,e.runtime.session,e.init))return this.abortHandler?.(),(0,O.Ze)(this.agentRef,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:r}=await t();this.featAggregate=new r(e,n),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,f.R)(34,e),this.abortHandler?.(),(0,O.Ze)(this.agentRef,this.featureName,!0),this.loadedSuccessfully(!1)}};h.RI?(0,I.GG)(()=>i(),!0):i()}#r(e,r,n){if(this.blocked)return!1;switch(e){case t.K7.sessionReplay:return V(n)&&!!r;case t.K7.sessionTrace:return!!r;default:return!0}}#t(e){if(!C.has(e)&&(C.add(e),!(0,s.f)(e.info))){const t=(0,i.pV)();let r={...t.info?.jsAttributes};try{r={...r,...e.info?.jsAttributes}}catch(e){}T(e,{...t,info:{...t.info,jsAttributes:r},runtime:e.runtime},e.runtime.loaderType)}}}var L=r(6630);class F extends U{static featureName=L.T;constructor(e){var t;super(e,L.T),this.setupInspectionEvents(),t=e,(0,N.Y)(P.Fw,function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,S.p)("api-"+P.Fw,[(0,j.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=>e.init.feature_flags.includes("rum_v2")?r.e(296).then(r.bind(r,908)):r.e(296).then(r.bind(r,7927)))}setupInspectionEvents(){const e=(e,t)=>{e&&(0,x.W)({timeStamp:e.timeStamp,loaded:"complete"===e.target.readyState,type:"window",name:t,data:e.target.location+""})};(0,I.sB)(t=>{e(t,"DOMContentLoaded")}),(0,I.GG)(t=>{e(t,"load")}),(0,I.Qr)(t=>{e(t,"navigate")}),this.ee.on(l.tS.UPDATE,(e,t)=>{(0,x.W)({type:"lifecycle",name:"session",data:t})})}}class G extends e.d{constructor(e){var t;(super(),h.gm)?(this.features={},(0,i.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(F),T(this,e,e.loaderType||"agent"),t=this,(0,N.Y)(P.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return(0,N.U)(t,e,r,P.cD,n);(0,f.R)(40,typeof r)}else(0,f.R)(39,typeof e)},t),function(e){(0,N.Y)(P.Dl,function(t,r=!1){if("string"!=typeof t&&null!==t)return void(0,f.R)(41,typeof t);const n=e.info.jsAttributes["enduser.id"];r&&null!=n&&n!==t?(0,S.p)("api-setUserIdAndResetSession",[t],void 0,"session",e.ee):(0,N.U)(e,"enduser.id",t,P.Dl,!0)},e)}(this),function(e){(0,N.Y)(P.nb,function(t){if("string"==typeof t||null===t)return(0,N.U)(e,"application.version",t,P.nb,!1);(0,f.R)(42,typeof t)},e)}(this),function(e){(0,N.Y)("start",function(){e.ee.emit("manual-start-all")},e)}(this),function(e){(0,N.Y)(P.Pv,function(t=!0){if("boolean"==typeof t){if((0,S.p)("api-"+P.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=>{const r=t.featAggregate;e&&!r.sentRum&&r.sendRum?.()})}}else(0,f.R)(65,typeof t)},e)}(this),this.run()):(0,f.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return n.forEach(r=>{t[r]=!!e[r]?.enabled}),t}(this.init),r=[...this.desiredFeatures],i=this.init.feature_flags.includes("rum_v2");r.sort((e,r)=>t.P3[e.featureName]-t.P3[r.featureName]),r.forEach(r=>{if(!e[r.featureName]&&(i||r.featureName!==t.K7.pageViewEvent))return;const n=function(e){switch(e){case t.K7.ajax:return[t.K7.jserrors];case t.K7.sessionTrace:return[t.K7.ajax,t.K7.pageViewEvent];case t.K7.sessionReplay:return[t.K7.sessionTrace];case t.K7.pageViewTiming:return[t.K7.pageViewEvent];default:return[]}}(r.featureName).filter(e=>!(e in this.features));n.length>0&&(0,f.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)})}catch(e){(0,f.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,i.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}var H=r(2843),z=r(782);class Y extends U{static featureName=z.T;constructor(e){super(e,z.T),h.RI&&((0,H.u)(()=>(0,S.p)("docHidden",[(0,j.t)()],void 0,z.T,this.ee),!0),(0,H.G)(()=>(0,S.p)("winPagehide",[(0,j.t)()],void 0,z.T,this.ee)),this.importAggregator(e,()=>r.e(296).then(r.bind(r,9981))))}}var Z=r(3969);class q extends U{static featureName=Z.TZ;constructor(e){super(e,Z.TZ),this.importAggregator(e,()=>r.e(296).then(r.bind(r,9623)))}}new G({features:[F,Y,q],loaderType:"lite"})})()})();</script>
+<link rel="canonical" href="https://ouri.tufts.edu/job-board" />
+<meta name="google-site-verification" content="SPM0oNLmTUuCKCosC0NdakCOiWoGVmHLvn0C6VNzfdU" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/themes/custom/viceprovost/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Job Board | Tufts Office of University Research and Innovation</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_fN6pud1_P_I6DwBev-SNf72u7W97DI9sg-pHxih5zbs.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_zTtvrykj3PFemdAhYrKp1Qc3aMzVCXSntzFV4v1WdSo.css" />
+<link rel="stylesheet" media="all" href="//use.typekit.net/xdc5dve.css" />
+
+    
+  </head>
+  <body>
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRFPRDDP"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div  class="node--universal_page node--universal_page--under-office layout-container">
+  <div class="site-header">
+      <header role="banner">
+        <input class='navigation--checkbox' type='checkbox' id='isMenuOpen'/>
+        <label class='navigation--label' for='isMenuOpen'>
+        Menu
+        </label>
+            <div id="block-viceprovost-branding">
+  
+    
+        <a class="site-logo--link" href="https://www.tufts.edu/">
+      <img class="site-logo--image" src="/themes/custom/viceprovost/assets/logo.svg" alt="Tufts logo" id="site-logo" />
+    </a>
+  
+      <a class="site-slogan--link" href="/" rel="home">
+      <p class="site-slogan--text">Office of University Research and Innovation </p>
+    </a>
+  </div>
+<nav
+  role="navigation"
+  aria-labelledby="block-viceprovost-main-menu-menu"
+   id="block-viceprovost-main-menu" class="header-navigation">
+            
+  <h2 class="visually-hidden" id="block-viceprovost-main-menu-menu">Menu</h2>
+  
+
+        
+              <ul class="menu-wrapper">
+              <li class="menu-item--level-1">
+                                      <input  class='menu-item--checkbox' type='checkbox' id=menu-1 />
+            <label tabindex='0' class='menu-item--label' for=menu-1>
+              <a href=/about-ouri><span>About</span></a>
+                            <ul class=menu-wrapper--level-2>
+              <li class="menu-item--level-2">
+                  <a href=/our-vice-president-research-and-innovation><span>Vice President for Research and Innovation</span></a>
+                      </li>
+          <li class="menu-item--level-2">
+                  <a href=/leadership><span>Leadership</span></a>
+                      </li>
+          <li class="menu-item--level-2">
+                  <a href=/search?f%5B0%5D=type%3Aperson><span>Staff</span></a>
+                      </li>
+          <li class="menu-item--level-2">
+                  <a href=/support-offices-functions><span>Functions &amp; Programs</span></a>
+                      </li>
+        </ul>
+  
+            </label>
+                        </li>
+          <li class="menu-item--level-1">
+                  <a href=/research-resources><span>Information &amp; Resources</span></a>
+                      </li>
+          <li class="menu-item--level-1">
+                                      <input  class='menu-item--checkbox' type='checkbox' id=menu-3 />
+            <label tabindex='0' class='menu-item--label' for=menu-3>
+              <a href=/initiatives><span>Initiatives</span></a>
+                            <ul class=menu-wrapper--level-2>
+              <li class="menu-item--level-2">
+                  <a href=/internal-seed-funding-programs><span>Internal Seed Funding</span></a>
+                      </li>
+          <li class="menu-item--level-2">
+                  <a href=/tracc-tufts-research-administration-and-compliance-cohort><span>TRACC</span></a>
+                      </li>
+        </ul>
+  
+            </label>
+                        </li>
+          <li class="menu-item--level-1">
+                                      <input  class='menu-item--checkbox' type='checkbox' id=menu-4 />
+            <label tabindex='0' class='menu-item--label' for=menu-4>
+              <a href=/research-services><span>Services</span></a>
+                            <ul class=menu-wrapper--level-2>
+              <li class="menu-item--level-2">
+                  <a href=/research-scholarship-lifecycle><span>Research Lifecycle</span></a>
+                      </li>
+          <li class="menu-item--level-2">
+                  <a href=/support-offices-functions><span>Support Functions &amp; Programs</span></a>
+                      </li>
+          <li class="menu-item--level-2">
+                  <a href=/research-services/core-facilities-resources><span>Core Facilities &amp; Resources</span></a>
+                      </li>
+          <li class="menu-item--level-2">
+                  <a href=/search?f%5B0%5D=type%3Apolicy_form_guide><span>Policies, Forms &amp; Guides</span></a>
+                      </li>
+          <li class="menu-item--level-2">
+                  <a href=/training><span>Trainings</span></a>
+                      </li>
+        </ul>
+  
+            </label>
+                        </li>
+          <li class="menu-item--level-1">
+                                      <input  class='menu-item--checkbox' type='checkbox' id=menu-5 />
+            <label tabindex='0' class='menu-item--label' for=menu-5>
+              <a href=/news-events><span>News &amp; Events</span></a>
+                            <ul class=menu-wrapper--level-2>
+              <li class="menu-item--level-2">
+                  <a href=/search?search_api_fulltext=&amp;sort_bef_combine=created_DESC&amp;f%5B0%5D=type%3Anews><span>News</span></a>
+                      </li>
+          <li class="menu-item--level-2">
+                  <a href=/events-calendar><span>Events Calendar</span></a>
+                      </li>
+          <li class="menu-item--level-2">
+                  <a href=/search?search_api_fulltext=&amp;sort_bef_combine=created_DESC&amp;f%5B0%5D=type%3Aannouncement><span>Announcements</span></a>
+                      </li>
+          <li class="menu-item--level-2">
+                  <a href=/annual-reports><span>Annual Reports</span></a>
+                      </li>
+        </ul>
+  
+            </label>
+                        </li>
+        </ul>
+  
+
+
+  </nav>
+<div id="block-collaborationoverlay">
+  
+      <input class='header-collaborate--checkbox' type='checkbox' id='Collaborate' />
+    <label class='header-collaborate--label'for='Collaborate'>Collaborate</label>
+    
+  <div class='header-collaborate--overlay'>
+    <div class='page-width'>
+              
+            <div><h1>Find Collaborators</h1>
+
+<p>Meaningful relationships are the foundation of successful, interdisciplinary research.</p>
+
+<div class="wysiwyg-three-columns">
+<div class="column">
+<h2>Faculty Profiles</h2>
+
+<p>Faculty Profiles is a search directory for Tufts faculty profiles which include bios, publications, research areas, and more.</p>
+<span class="button-arrow"><a href="https://facultyprofiles.tufts.edu/">Find Tufts Faculty</a></span></div>
+
+<div class="column">
+<h2>Dimensions</h2>
+
+<p>Explore Tufts' scholarly activities using Dimensions, a research knowledge base.</p>
+<span class="button-arrow"><a href="https://app.dimensions.ai/discover/publication?or_facet_research_org=grid.429997.8">Explore Publications, Grants &amp; Co-Authors</a></span></div>
+
+<div class="column">
+<h2>Corporate Connections</h2>
+
+<p>Collaborations outside of academia are essential to Tufts success.</p>
+
+<p><span class="button-arrow"><a href="/technology-transfer-industry-collaboration">Technology Commercialization</a></span></p>
+
+<p><span class="button-arrow"><a href="https://cfr.tufts.edu/">Connect with Corporations or Foundations</a></span></p>
+</div>
+</div>
+
+<div class="wysiwyg-three-columns">
+<div class="column">
+<h2>Tufts Facilities &amp; Technologies</h2>
+
+<div>
+<p>Find research facilities and resources that are available at Tufts and connect with the experts who support them.</p>
+</div>
+
+<p><span class="button-arrow"><a href="/research-services/core-facilities-resources">Search Core Facilities &amp; Resources</a></span></p>
+
+<p><span class="button-arrow"><a href="/technology-publisher">Search Technologies for Licensing</a></span></p>
+</div>
+
+<div class="column">
+<h2>Support Functions</h2>
+
+<p>Meet the teams that support research both within the OURI and beyond.</p>
+
+<p><span class="button-arrow"><a href="/research-support">Connect with Support Functions</a></span></p>
+
+<p><span class="button-arrow"><a href="/contact-ouri">Contact the OURI</a></span></p>
+</div>
+
+<div class="column">
+<h2>Tufts Centers &amp; Institutes</h2>
+
+<p>Tufts University is home to more than 45 interdisciplinary centers and institutes with expertise on a broad range of topics.</p>
+<span class="button-arrow"><a href="https://provost.tufts.edu/centers-institutes/">See all Centers &amp; Institutes</a></span></div>
+</div></div>
+      
+          </div>
+  </div>
+</div>
+<div class="views-exposed-form bef-exposed-form header-search" data-bef-auto-submit-full-form="" data-bef-auto-submit="" data-bef-auto-submit-delay="500" id="block-site-search-form" data-drupal-selector="views-exposed-form-search-page-1">
+      <input class='header-search--checkbox' type='checkbox' id='isSearchOpen' />
+    <label class='header-search--label' for='isSearchOpen'>Search</label>
+    <div class='header-search-dialog'>
+        <div class='header-search-dialog--background'></div>
+        <form action="/search" method="get" id="views-exposed-form-search-page-1" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-item-search-api-fulltext js-form-item-search-api-fulltext">
+      <label for="edit-search-api-fulltext">Search</label>
+        <input placeholder="search term" data-bef-auto-submit-exclude="" id="search-input-669" data-drupal-selector="edit-search-api-fulltext" type="text" name="search_api_fulltext" value="" size="30" maxlength="128" class="form-text" />
+
+        </div>
+<div class="js-form-item form-item js-form-type-select form-item-sort-bef-combine js-form-item-sort-bef-combine">
+      <label for="edit-sort-bef-combine">Sort</label>
+        <select id="bef-combine-431" data-drupal-selector="edit-sort-bef-combine" name="sort_bef_combine" class="form-select"><option value="search_api_relevance_DESC" selected="selected">Relevance</option><option value="created_DESC">Newest</option><option value="created_ASC">Oldest</option><option value="title_ASC">Title Asc</option><option value="title_DESC">Title Desc</option></select>
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-bef-auto-submit-click="" id="search-submit-670" data-drupal-selector="edit-submit-search" type="submit" value="Search" class="button js-form-submit form-submit" />
+<a href="/search" class="search-see-all button-alt">See All</a></div>
+
+
+</form>
+
+    </div>
+    
+        
+  </div>
+
+
+      </header>
+  </div>
+
+  
+  
+
+    <div>
+    <div id="block-viceprovost-breadcrumbs" class="page-width breadcrumb">
+  
+    
+        <nav role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <ol>
+          <li>
+                  <a href="/support-offices-functions">Support Functions & Programs</a>
+              </li>
+        </ol>
+  </nav>
+
+  </div>
+
+  </div>
+
+
+  
+
+  
+
+  <main class='site-content' role="main" class="container">
+    <a id="main-content" tabindex="-1"></a>
+    <div class="layout-content">
+        <div>
+    <div id="block-viceprovost-content">
+  
+    
+      
+
+
+<article role="article" about="/job-board" class="universal-page universal-page--under-office no-sidebar has-aside">
+            <div class='office-hero'>
+            <div><article>
+  
+      
+    <img loading="lazy" src="/sites/default/files/styles/full_width_hero/public/2020-05/hero-students-hall.jpg?itok=j3id287_" width="1800" height="750" alt="students" typeof="foaf:Image" />
+
+
+
+
+  </article>
+</div>
+      </div>
+  
+      <div class='page-width'>
+      <div class='office-header'>
+        <div class='office-header-title-wrapper'>
+          
+          <span class='office-header--circle'>
+            <a href="/about-postdoctoral-scholars-program">About</a>
+            
+            <div>PDOC</div>
+      
+          </span>
+          <div class='office-header-text-wrapper'>
+            <div class='office-header--breadcrumb line-spacer'>
+                              <div id="block-viceprovost-breadcrumbs" class="page-width breadcrumb">
+  
+    
+        <nav role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <ol>
+          <li>
+                  <a href="/support-offices-functions">Support Functions & Programs</a>
+              </li>
+        </ol>
+  </nav>
+
+  </div>
+
+                          </div>
+            <h1 class="office-header--title"><span>Postdoctoral Scholars</span>
+</h1>
+          </div>
+          
+        </div>
+        <div class='office-header--summary component-spacer'>
+          
+            <div>The Postdoctoral Scholars Program helps postdoctoral scholars broaden their research abilities and equip themselves with the skills necessary for a successful career.</div>
+      
+        </div>
+        <nav class='office-header--menu'>
+          
+      <div>
+              <div><a href="/about-postdoctoral-scholars-program">About</a></div>
+              <div><a href="/postdoc-faqs">FAQs</a></div>
+              <div><a href="/job-board" class="is-active">Job Board</a></div>
+              <div><a href="/postdoctoral-scholars-news-updates">News &amp; Updates</a></div>
+              <div><a href="/postdoc-101">Postdoc 101</a></div>
+              <div><a href="/postdoctoral-scholars-resources-policies">Resources &amp; Policies</a></div>
+          </div>
+  
+        </nav>
+      </div>
+    </div>
+  
+  
+    <div class='main-layout'>
+    <div class="main-wrapper page-width">
+      <div class="main">
+                  <aside class="aside">  <div class="sidebar-dialog">
+    
+          <h5 class="title-spacer">Contact Us</h5>
+      <div class='row-nowrap top line-spacer reset-paragraph'>
+        <span class='icon-location-pin size-32'></span>
+        <span class='size-16_32'></span>
+        <span class='link-black reset-paragraph'>
+          
+            <div><p>75 Kneeland St, Suite 800<br />
+Boston, MA 02111</p></div>
+      
+        </span>
+      </div>
+    
+          <div class='office--email row-nowrap line-spacer link-black no-underline'>
+        <span class='icon-email size-32'></span>
+        <span class='size-16_32'></span>
+          
+            <div><a href="mailto:ouri@tufts.edu">ouri@tufts.edu</a></div>
+      
+      </div>
+    
+          <div class='row-nowrap line-spacer link-black no-underline'>
+        <span class='icon-phone size-32'></span>
+        <span class='size-16_32'></span>
+        
+            <div><a href="tel:%28617%29636-6550">(617) 636-6550</a></div>
+      
+      </div>
+    
+    
+      </div>
+
+      <div class='sidebar-dialog'>
+      <h5 class='title-spacer'>Stay Updated</h5>
+      
+            <div>
+<div class='buttons-block'>
+  <div class="buttons-block--container">
+          <div class="buttons-block--button"><a href="https://elist.tufts.edu/wws/subscribe/all_university_postdocs">Join the Postdoc E-list (Postdocs only)</a></div>
+          <div class="buttons-block--button"><a href="https://tufts.us2.list-manage.com/subscribe?u=64f973235b0fda8cf76465cf0&amp;id=2707d4bd47">Subscribe to Tufts Research News</a></div>
+          <div class="buttons-block--button"><a href="https://sites.tufts.edu/tuftspda/">Tufts PDA</a></div>
+          <div class="buttons-block--button"><a href="https://bostonpostdocs.org/aboutthebpda">Boston PDA</a></div>
+          <div class="buttons-block--button"><a href="https://www.nationalpostdoc.org/">National PDA</a></div>
+      </div>
+</div>
+</div>
+      
+    </div>
+  </aside>
+                <div class='main-content-wrapper'>
+                                                      <div class="main--content">
+                
+  
+      <div>
+              <div>  <div  class="paragraph paragraph--type--accordian paragraph--view-mode--default component-spacer">
+          <h2 class="accordian-title title-spacer">
+            <div>Opportunities at Tufts</div>
+      </h2>
+        <input class="accordian-expand-all-checkbox"
+      type="checkbox"
+      id="expand-all-3660" />
+
+    <label class="accordian-expand-all-label no-js"
+      for="expand-all-3660">
+      Expand all
+    </label>
+    <label class="accordian-collapse-all-label"
+      for="expand-all-3660">
+      Collapse all
+    </label>
+          
+      <div>
+              <div>  <div class="paragraph paragraph--type--accordian-item paragraph--view-mode--default">
+          <input class="accordian-show-content" type="checkbox" id="expand-3816"/>
+      <label class='accordian-item-title' for="expand-3816">
+        
+            Postdoctoral Fellowship in Molecular Neuroscience
+      
+      </label>
+      <div class="accordian-item-content">
+        
+            <p>The Osterweil lab is recruiting a motivated individual to fill a postdoctoral position in molecular neuroscience. You will be joining the exciting, fast-paced environment at Boston Children’s Hospital/ Harvard Medical School investigating cell type-specific mRNA translation in neural function and dysfunction (<a href="https://www.osterlab.org/">www.osterlab.org</a>).</p>
+
+<p>Our group has a number of hypothesis-driven projects that are aimed at identifying critical mechanisms in neural plasticity, and determining how these processes go awry in neurodevelopmental disorders such as fragile X syndrome. We are using molecular approaches including TRAP-seq, scRNA-seq, and spatial transcriptomics, and combining these with electrophysiological and behavioral assays to answer research questions and test potential therapeutic approaches that arise from this work. We are also employing new models to determine the conservation of synaptic mechanisms between mouse and human.</p>
+
+<p>Candidates must have a PhD in neuroscience, cell biology, or a related field, and show evidence of good productivity in the form of publications. Experience with either molecular neuroscience and mouse brain surgical techniques, or RNA-seq and bioinformatics, is greatly preferred.</p>
+
+<p>Please send a CV, cover letter with statement of interest, and 2-3 letters of references to:<br /><a href="mailto:emily.osterweil@childrens.harvard.edu">emily.osterweil@childrens.harvard.edu</a>. Applications will be accepted until a suitable candidate is found.</p>
+
+<p>Boston Children’s Hospital is an Equal Opportunity / Affirmative Action Employer. Qualified applicants will receive consideration for employment without regard to their race, color, religion, national origin, sex, sexual orientation, gender identity, protected veteran status or disability.</p>
+
+<p>Boston Children’s Hospital requires all employees to be vaccinated against COVID-19 and Flu, (unless you are eligible for a medical or religious exemption).</p>
+
+<p><strong>Closing Date: N/A (until appropriate applicant is found)</strong></p>
+      
+      </div>
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+              <div>  <div  class="paragraph paragraph--type--accordian paragraph--view-mode--default component-spacer">
+          <h2 class="accordian-title title-spacer">
+            <div>And Beyond</div>
+      </h2>
+        <input class="accordian-expand-all-checkbox"
+      type="checkbox"
+      id="expand-all-3663" />
+
+    <label class="accordian-expand-all-label no-js"
+      for="expand-all-3663">
+      Expand all
+    </label>
+    <label class="accordian-collapse-all-label"
+      for="expand-all-3663">
+      Collapse all
+    </label>
+          
+      <div>
+              <div>  <div class="paragraph paragraph--type--accordian-item paragraph--view-mode--default">
+          <input class="accordian-show-content" type="checkbox" id="expand-4430"/>
+      <label class='accordian-item-title' for="expand-4430">
+        
+            Analyst, Disease Market Research | Massachusetts, Greater Boston Area, Full-Time
+      
+      </label>
+      <div class="accordian-item-content">
+        
+            <div>
+<p><span><span><span>We are hiring recent graduates and postdocs interested in applying their scientific knowledge, training, and project management skills to a career in pharmaceutical market research. While an advanced degree is required, ideally in the biologic sciences, experience in market research is not; we provide on-the-job training, extensive experiential learning opportunities, and formal courses as needed. If you’re looking for a way to apply your education and training to real world business problems related to the development of novel therapeutics for rare diseases, please consider applying.</span></span></span></p>
+
+<p><span><span><span><strong>About REACH. </strong>We are a startup market research company aiming to help the world’s life sciences professionals master any rare disease market, quickly. Our work is a combination of research, data analytics, and storytelling. We are looking to expand our team to help build on and accelerate our early momentum. Our clients include pharmaceutical companies, life sciences consulting firms, and academic <span>institutions.</span></span></span></span></p>
+
+<p><span><span><span><strong>About the Role. </strong>REACH is currently looking for an upbeat and enthusiastic Analyst to generate disease market analyses and insights. A successful candidate will thrive in our fast-paced entrepreneurial environment and have the ability to autonomously conduct market research projects directly or in collaboration with contractors and junior staff. This role offers the opportunity for rapid professional growth and the ability to be integral in shaping our company’s research capabilities and operations. We are looking for someone who wants to take a fresh, modern approach to conducting and delivering disease market insights and solutions to the life sciences industry. As the company grows, this role can easily transition into a leadership role and we are looking for someone with leadership potential.</span></span></span></p>
+
+<p><strong><span><span><span>Key responsibilities <span>include:</span></span></span></span></strong></p>
+
+<ul><li><span><span><span><span><span>Conduct primary and secondary market research for rare diseases that span all therapeutic <span>areas.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span>Author market research studies for our product <span>solutions.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span>Conduct custom market research <span>projects.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span>Create sales and marketing content (e.g., blogs, video animations, case studies, white papers, infographics, LinkedIn campaign content) to support business development activities.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Participate in client meetings and conference speaking <span>engagements.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><span>Take on special projects as they arise. Example past projects include webpage re-design (ranging from content creation to the visual design), creating marketing brochures, identifying and selecting a vendor for a specific REACH need, and designing prototypes for new products and testing with pharmaceutical professionals.</span></span></span></span></span></span></span></li>
+</ul><p><span><span><span><strong>What we’re looking for. </strong>We care about the usual items (e.g., education, work experience, technical skills); these are the fundamentals that you’ll see below. We also care deeply about who you are as a person – your values, your soft skills, and your attitude towards working amidst constant change and challenge. If you are looking for a role that is a mix of core responsibilities (e.g., work aligned to your superpower skills) and new responsibilities that could change from month to month (sometimes week to week), then you just might be a fit for the REACH experience.</span></span></span></p>
+</div>
+
+<p><strong><span><span><span>Qualifications</span></span></span></strong></p>
+
+<ul><li><span><span><span><span>Advanced degree (MS, MBA, MPH, or PhD) in the life sciences with 0-2 years of pharmaceutical market research or consulting experience.</span></span></span></span></li>
+	<li><span><span><span><span>Must be authorized to work in the<span> U.S.</span></span></span></span></span></li>
+</ul><p><strong><span><span>Required Skills and <span>Proficiencies</span></span></span></strong></p>
+
+<ul><li><span><span><span><span>A wiz with Microsoft PowerPoint and <span>Excel.</span></span></span></span></span></li>
+	<li><span><span><span><span>Strong data visualization skills. We are looking for not just the ability to create various charts and tables but the imagination and creativity to convey data, information, and insights in a visually compelling and easy-to-understand format.</span></span></span></span></li>
+	<li><span><span><span><span>Strong writing skills are a must. We value brevity in writing and the ability to convey ideas and insights in pithy and impactful statements.</span></span></span></span></li>
+	<li><span><span><span><span>Experience conducting primary market research (quantitative and qualitative) with physicians is <span>required.</span></span></span></span></span></li>
+</ul><p><strong><span><span><span>Benefits</span></span></span></strong></p>
+
+<ul><li><span><span><span><span>Health coverage including medical and dental <span>insurance</span></span></span></span></span></li>
+	<li><span><span><span><span>401(k) plan with Company <span>match</span></span></span></span></span></li>
+	<li><span><span><span><span>Unlimited paid time off (if you’re not taking time off, we will insist that you <span>do)</span></span></span></span></span></li>
+	<li><span><span><span><span>Work from home with annual team offsite <span>meetings</span></span></span></span></span></li>
+	<li><span><span><span><span>Flexible schedule with most working hours during business hours in eastern <span>time</span></span></span></span></span></li>
+</ul><p><span><span><strong>Location: </strong>Massachusetts (preferably Greater Boston <span>area).</span></span></span></p>
+
+<p><span><span><strong><span><span><span><span>Apply. </span></span></span></span></strong><span><span><span><span>Submit your resume along with a one-page cover letter to Amanda at </span></span></span></span><a href="mailto:atheocles@reachmr.com"><span><span><span>atheocles@reachmr.com</span></span></span></a><span><span><span><span><span>.</span></span></span></span></span> </span></span></p>
+
+<p><span><span><span><span><span><span><span>View the REACH Market Research <a href="https://reachmr.com/about/careers/">careers page</a> for more information.</span></span></span></span></span></span></span></p>
+      
+      </div>
+      </div>
+</div>
+              <div>  <div class="paragraph paragraph--type--accordian-item paragraph--view-mode--default">
+          <input class="accordian-show-content" type="checkbox" id="expand-3703"/>
+      <label class='accordian-item-title' for="expand-3703">
+        
+            ADCES Foundation: Postdoctoral Fellowship Opportunities
+      
+      </label>
+      <div class="accordian-item-content">
+        
+            <p><span><span><span><span>Funding opportunity from the <a href="https://www.adces.org/home"><span>ADCES Foundation</span></a> and the <a href="http://send.adces.org/link.cfm?r=UD3x0OMiYjCb_SbXQsNMrQ~~&amp;pe=qAzefG-G2YMO2FO_qQYma1VXIVrrxVlYCrGm75gbaGyX0-dDKtrAxe9L570dg4t_eFslRiP4qyHnv2kdmaCh5w~~&amp;t=-pa_8gcDCxKjwyja2h8nZw~~"><span>Certification Board for Diabetes Care and Education (CBDCE)</span></a>, to support the career of emerging leaders in diabetes care and education. <a href="https://www.adces.org/diabetes-research/post-doctoral-fellowship-program"><span>The research fellowship</span></a> reinforces long-term goals by both organizations to build on existing research in diabetes care and enhance health outcomes for people with diabetes, prediabetes and other cardiometabolic conditions. </span></span></span></span></p>
+
+<p><span><span><span><span><span><span>More information can be found on the <a href="https://www.adces.org/diabetes-research/post-doctoral-fellowship-program">ADCES Foundation website</a>.</span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span>If you are an early career scientist who is interested in this opportunity, please reach out to the ADCES Research Fellowship Committee at <a href="mailto:grants@adces.org"><span>grants@adces.org</span></a>.</span></span></span></span></span></span></p>
+      
+      </div>
+      </div>
+</div>
+              <div>  <div class="paragraph paragraph--type--accordian-item paragraph--view-mode--default">
+          <input class="accordian-show-content" type="checkbox" id="expand-3705"/>
+      <label class='accordian-item-title' for="expand-3705">
+        
+            Check Out These Links
+      
+      </label>
+      <div class="accordian-item-content">
+        
+            <ul><li><a href="https://bostonpostdocs.org/job-postings?mc_cid=b66539a431&amp;mc_eid=19e24f70fc">BPDA Job Openings</a></li>
+	<li><a href="https://careers.nationalpostdoc.org/jobs/">Job Search Engine by the NPDA</a></li>
+</ul>
+      
+      </div>
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+          </div>
+  
+
+            </div>
+                  </div>
+      </div>
+          </div>
+      </div>
+
+  
+    
+
+  </article>
+
+  </div>
+
+  </div>
+
+    </div>
+  </main>
+
+  <footer class='site-footer' role="contentinfo" id="site-footer">
+    <div class='footer-wrapper'>
+        <div class='footer-column--first footer-column'>
+          <div class='footer-branding'>
+            <div class='footer-branding--logo'></div>
+            <div class='footer-branding--copyright'>
+              © Tufts University 2026
+            </div>
+          </div>
+                        <div>
+    <nav role="navigation" aria-labelledby="block-footerfirstcolumn-menu" id="block-footerfirstcolumn">
+            
+  <h2 class="visually-hidden" id="block-footerfirstcolumn-menu">Footer First Column</h2>
+  
+
+        
+              <ul>
+              <li>
+        <a href="https://access.tufts.edu/accessibility">Accessibility</a>
+              </li>
+          <li>
+        <a href="https://oeo.tufts.edu/policies-procedures-1/non-discrimination-statement/">Non-Discrimination Statement</a>
+              </li>
+          <li>
+        <a href="https://www.tufts.edu/about/privacy">Privacy</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+                  </div>
+              <div class='footer-column--second footer-column'>
+            <div>
+    <div id="block-contactus">
+  
+      <h2>Contact us</h2>
+    
+      
+  </div>
+<div id="block-footeremailandphonenumber">
+  
+    
+      
+            <div><div style="margin-bottom: .5rem;"><a href="mailto:ouri@tufts.edu">OURI@tufts.edu</a></div>
+
+<div><a href="tel:617-636-6550">(617) 636-6550</a></div>
+</div>
+      
+  </div>
+<nav role="navigation" aria-labelledby="block-footersecondcolumn-menu" id="block-footersecondcolumn">
+            
+  <h2 class="visually-hidden" id="block-footersecondcolumn-menu">Footer Second Column</h2>
+  
+
+        
+              <ul>
+              <li>
+        <a href="/contact-ouri" data-drupal-link-system-path="node/3109">More Contact Information</a>
+              </li>
+          <li>
+        <a href="/research-support">See Support Functions &amp; Programs</a>
+              </li>
+          <li>
+        <a href="/search?f%5B0%5D=type%3Aperson" data-drupal-link-query="{&quot;f&quot;:[&quot;type:person&quot;]}" data-drupal-link-system-path="search">Search OURI Staff</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+        </div>
+                    <div class='footer-column--third footer-column'>
+            <div>
+    <nav role="navigation" aria-labelledby="block-footerthirdcolumn-menu" id="block-footerthirdcolumn">
+      
+  <h2 id="block-footerthirdcolumn-menu">More Ways to Connect</h2>
+  
+
+        
+              <ul>
+              <li>
+        <a href="https://elist.tufts.edu/sympa/subscribe/ouri-announcements?previous_action=info">Subscribe to Announcements</a>
+              </li>
+          <li>
+        <a href="mailto:ouri-communications@tufts.edu">Submit News &amp; Events</a>
+              </li>
+          <li>
+        <a href="mailto:OURI-Communications@tufts.edu">Website Support</a>
+              </li>
+          <li>
+        <a href="mailto:ouri@tufts.edu">General Feedback</a>
+              </li>
+          <li>
+        <a href="https://www.linkedin.com/company/research-at-tufts/?viewAsMember=true">Research@Tufts</a>
+              </li>
+          <li>
+        <a href="https://twitter.com/tuftsouri">@TuftsOURI</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+        </div>
+                    <div class='footer-column--fourth footer-column'>
+            <div>
+    <div id="block-nbsp">
+  
+      <h2> </h2>
+    
+      
+  </div>
+<div id="block-clickstream">
+  
+    
+      
+            <div><script src="https://jumbobeacon.tufts.edu/jumbobeacon.min.js"></script></div>
+      
+  </div>
+<nav role="navigation" aria-labelledby="block-footerfourthcolumn-menu" id="block-footerfourthcolumn">
+            
+  <h2 class="visually-hidden" id="block-footerfourthcolumn-menu">Footer Fourth Column</h2>
+  
+
+        
+              <ul>
+              <li>
+        <a href="/technology-commercialization-0" data-drupal-link-system-path="node/1713">Technology Commercialization</a>
+              </li>
+          <li>
+        <a href="https://cfr.tufts.edu/">Corporate Partnerships</a>
+              </li>
+          <li>
+        <a href="/search?search_api_fulltext=&amp;sort_bef_combine=created_DESC&amp;f%5B0%5D=type%3Aannouncement" data-drupal-link-query="{&quot;f&quot;:[&quot;type:announcement&quot;],&quot;search_api_fulltext&quot;:&quot;&quot;,&quot;sort_bef_combine&quot;:&quot;created_DESC&quot;}" data-drupal-link-system-path="search">See Announcements</a>
+              </li>
+          <li>
+        <a href="/events-calendar" data-drupal-link-system-path="node/124476">See Upcoming Events</a>
+              </li>
+          <li>
+        <a href="/featured-research" data-drupal-link-system-path="node/1966">See Featured Research</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+        </div>
+          </div>
+  </footer>
+
+</div>
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/2260","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","gtm":{"tagId":null,"settings":{"data_layer":"dataLayer","include_classes":false,"allowlist_classes":"","blocklist_classes":"","include_environment":false,"environment_id":"","environment_token":""},"tagIds":["GTM-MRFPRDDP"]},"gtag":{"tagId":"UA-18999860-20","otherIds":[],"events":[],"additionalConfigInfo":[]},"suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"better_exposed_filters\/auto_submit,better_exposed_filters\/general,google_tag\/gtag,google_tag\/gtag.ajax,google_tag\/gtm,paragraphs\/drupal.paragraphs.unpublished,system\/base,viceprovost\/global","theme":"viceprovost","theme_token":null},"ajaxTrustedUrl":{"\/search":true},"user":{"uid":0,"permissionsHash":"02bbeb49ade02df9c498e9ab10727aff6126f5ad53b6f37e4d2885784df34700"}}</script>
+<script src="/sites/default/files/js/js_Hsu8gzkyhsHQtcRDcfchazrx4xKDtTINilS0IdPoIf0.js"></script>
+<script src="//siteimproveanalytics.com/js/siteanalyze_66356018.js" defer async></script>
+<script src="/modules/contrib/google_tag/js/gtm.js?tnky2h"></script>
+<script src="/modules/contrib/google_tag/js/gtag.js?tnky2h"></script>
+<script src="/sites/default/files/js/js_ziqbj9Nid7OSdHIYrOwuw7DahmV622VDGCsYubdqbr8.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-261992e4307f2777c4a","applicationID":"1056527107","transactionName":"ZgZQbUZZW0ZRVxcNW19Mc1pAUVpbH3AREURQD25XW1xQaXNbDRBGXg9eXEZke1pUUTUNUUYgXVdASlpZXFERSQpHCldO","queueTime":0,"applicationTime":1206,"atts":"SkFTGw5DSEg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,1977 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Search Page</title>
+
+<script type="importmap" data-turbo-track="reload" nonce="D6nhfCe549Ewgl0vVzJssQ==">{
+  "imports": {
+    "bootstrap": "/assets/bootstrap5.bundle.min-deb29bee.js",
+    "bootstrap4": "/assets/bootstrap4.bundle.min-d7959006.js",
+    "bootstrap3": "/assets/bootstrap3.min-1f4007be.js",
+    "popper": "/assets/popper-449549cf.js",
+    "@hotwired/stimulus": "/assets/stimulus.min-4b1e420e.js",
+    "@hotwired/stimulus-loading": "/assets/stimulus-loading-1fc53fe7.js",
+    "@hotwired/turbo-rails": "/assets/turbo.min-9fd88cd5.js",
+    "@rails/actioncable/src": "/assets/actioncable.esm-e0ec9819.js",
+    "/video.js@^8.23.6?target=es2022": "/assets/video.bundle-b5d9f907.js",
+    "/node/buffer.mjs": "/assets/buffer-d3dff9eb.js",
+    "video.js": "/assets/video.bundle-b5d9f907.js",
+    "videojs-youtube": "/assets/videojs-youtube.bundle-d07ae8f5.js",
+    "jquery": "/assets/jquery-50ed4c0e.js",
+    "rails-ujs": "/assets/railsujs-b26e7859.js",
+    "urijs": "/assets/urijs.bundle-2f63978b.js",
+    "js-cookie": "/assets/js-cookie-d035a5ac.js",
+    "selectize": "/assets/selectize.min-39919ed8.js",
+    "intl-tel-input": "/assets/intl-tel-input-e2a7bbf1.js",
+    "intl-tel-input-utils": "/assets/intl-tel-input-utils-19ab02f1.js",
+    "@googlemaps/markerclustererplus": "/assets/@googlemaps--markerclustererplus-6c5af0a4.js",
+    "sifter": "/assets/sifter-f29b9961.js",
+    "microplugin": "/assets/microplugin-5e90f84f.js",
+    "local-time": "/assets/local-time-6402c124.js",
+    "@googlemaps/js-api-loader": "/assets/@googlemaps--js-api-loader-ad292afd.js",
+    "sites/apply_url": "/assets/sites/apply_url-a7bf484c.js",
+    "sites/beacons/beacon_utils": "/assets/sites/beacons/beacon_utils-6a48977d.js",
+    "sites/beacons/location_beacon": "/assets/sites/beacons/location_beacon-70491b38.js",
+    "sites/beacons/video_beacon": "/assets/sites/beacons/video_beacon-1d89aedd.js",
+    "sites/boot": "/assets/sites/boot-284faa9a.js",
+    "sites/bootstrap5_hoisting": "/assets/sites/bootstrap5_hoisting-95b6837c.js",
+    "sites/bootstrap_wrapper": "/assets/sites/bootstrap_wrapper-fcde323e.js",
+    "sites/candidate_assistant_web_component": "/assets/sites/candidate_assistant_web_component-289fd8fb.js",
+    "sites/candidate_populator": "/assets/sites/candidate_populator-7ab22d90.js",
+    "sites/chatbot_initialisation": "/assets/sites/chatbot_initialisation-cd7e23d4.js",
+    "sites/chatbot_turbo_streams": "/assets/sites/chatbot_turbo_streams-03a7ea7a.js",
+    "sites/chatbot_web_component": "/assets/sites/chatbot_web_component-53056b77.js",
+    "sites/common_pages": "/assets/sites/common_pages-2b18a5df.js",
+    "sites/common_turbo_streams": "/assets/sites/common_turbo_streams-006121b1.js",
+    "sites/controllers/application": "/assets/sites/controllers/application-385a27bb.js",
+    "sites/controllers/blocks/carousel/accessibility_controller": "/assets/sites/controllers/blocks/carousel/accessibility_controller-9ab6d386.js",
+    "sites/controllers/blocks/carousel/video_block_controller": "/assets/sites/controllers/blocks/carousel/video_block_controller-afb20fe4.js",
+    "sites/controllers/blocks/google_map/map_controller": "/assets/sites/controllers/blocks/google_map/map_controller-1d02e9ff.js",
+    "sites/controllers/blocks/job_search_form_controller": "/assets/sites/controllers/blocks/job_search_form_controller-953c5072.js",
+    "sites/controllers/blocks/jobs_controller": "/assets/sites/controllers/blocks/jobs_controller-046289f4.js",
+    "sites/controllers/blocks/linked_image_controller": "/assets/sites/controllers/blocks/linked_image_controller-af416b1d.js",
+    "sites/controllers/blocks/near_me_controller": "/assets/sites/controllers/blocks/near_me_controller-675be1a4.js",
+    "sites/controllers/blocks/recruitment_event_controller": "/assets/sites/controllers/blocks/recruitment_event_controller-61a8ba82.js",
+    "sites/controllers/blocks/recruitment_events/filter_controller": "/assets/sites/controllers/blocks/recruitment_events/filter_controller-060126f4.js",
+    "sites/controllers/call_to_action/form_controller": "/assets/sites/controllers/call_to_action/form_controller-d691ef31.js",
+    "sites/controllers/call_to_action/greenhouse/education_controller": "/assets/sites/controllers/call_to_action/greenhouse/education_controller-8570545b.js",
+    "sites/controllers/call_to_action/greenhouse/education_date_controller": "/assets/sites/controllers/call_to_action/greenhouse/education_date_controller-9547c28d.js",
+    "sites/controllers/call_to_action/greenhouse/education_select_controller": "/assets/sites/controllers/call_to_action/greenhouse/education_select_controller-433c01b0.js",
+    "sites/controllers/call_to_action/job_alert_field_controller": "/assets/sites/controllers/call_to_action/job_alert_field_controller-863fb0e3.js",
+    "sites/controllers/call_to_action/job_conditional_question_controller": "/assets/sites/controllers/call_to_action/job_conditional_question_controller-3c2263fa.js",
+    "sites/controllers/call_to_action/job_questions_controller": "/assets/sites/controllers/call_to_action/job_questions_controller-06c32d9e.js",
+    "sites/controllers/candidate_assistant_controller": "/assets/sites/controllers/candidate_assistant_controller-ae2e1c1d.js",
+    "sites/controllers/chatbot/auto_click_controller": "/assets/sites/controllers/chatbot/auto_click_controller-e5638424.js",
+    "sites/controllers/chatbot/carousel_controller": "/assets/sites/controllers/chatbot/carousel_controller-f2f89f5d.js",
+    "sites/controllers/chatbot/container_controller": "/assets/sites/controllers/chatbot/container_controller-c79bad08.js",
+    "sites/controllers/chatbot/dropdown_controller": "/assets/sites/controllers/chatbot/dropdown_controller-942a6efa.js",
+    "sites/controllers/chatbot/resume_dropzone_controller": "/assets/sites/controllers/chatbot/resume_dropzone_controller-4edc74bd.js",
+    "sites/controllers/chatbot/window_controller": "/assets/sites/controllers/chatbot/window_controller-db3f830b.js",
+    "sites/controllers/debounced_search_controller": "/assets/sites/controllers/debounced_search_controller-def656c5.js",
+    "sites/controllers/discussions/search_controller": "/assets/sites/controllers/discussions/search_controller-68af9ddc.js",
+    "sites/controllers/exit_call_to_action_modal_controller": "/assets/sites/controllers/exit_call_to_action_modal_controller-459daa15.js",
+    "sites/controllers/focus_controller": "/assets/sites/controllers/focus_controller-574bf08e.js",
+    "sites/controllers/frame_loader_controller": "/assets/sites/controllers/frame_loader_controller-1ff12fb5.js",
+    "sites/controllers": "/assets/sites/controllers/index-d3d79060.js",
+    "sites/controllers/init/explicit_consent_modal_controller": "/assets/sites/controllers/init/explicit_consent_modal_controller-7797894c.js",
+    "sites/controllers/init/implied_consent_controller": "/assets/sites/controllers/init/implied_consent_controller-5bc72890.js",
+    "sites/controllers/jobs/filter_controller": "/assets/sites/controllers/jobs/filter_controller-e66637dc.js",
+    "sites/controllers/jobs/search_controller": "/assets/sites/controllers/jobs/search_controller-d5148c87.js",
+    "sites/controllers/jobs/table_results_controller": "/assets/sites/controllers/jobs/table_results_controller-ee718736.js",
+    "sites/controllers/kiosk_controller": "/assets/sites/controllers/kiosk_controller-d511d8dc.js",
+    "sites/controllers/manage_cookies_link_reloader_controller": "/assets/sites/controllers/manage_cookies_link_reloader_controller-860dd65a.js",
+    "sites/controllers/page_events_controller": "/assets/sites/controllers/page_events_controller-39710bd2.js",
+    "sites/controllers/phone_validator_controller": "/assets/sites/controllers/phone_validator_controller-8c54de77.js",
+    "sites/controllers/popover_controller": "/assets/sites/controllers/popover_controller-5afd2f56.js",
+    "sites/controllers/relaunch_cookies_consent_controller": "/assets/sites/controllers/relaunch_cookies_consent_controller-65f024e8.js",
+    "sites/controllers/signin_modal_controller": "/assets/sites/controllers/signin_modal_controller-467da8b6.js",
+    "sites/controllers/stream_invoker_controller": "/assets/sites/controllers/stream_invoker_controller-2228a793.js",
+    "sites/controllers/tracking_controller": "/assets/sites/controllers/tracking_controller-9ce93909.js",
+    "sites/controllers/turbo_frame_scroller_controller": "/assets/sites/controllers/turbo_frame_scroller_controller-2749edf5.js",
+    "sites/controllers/view_event_controller": "/assets/sites/controllers/view_event_controller-0bb5c744.js",
+    "sites/controllers/window_opener_controller": "/assets/sites/controllers/window_opener_controller-2e053a72.js",
+    "sites/cookie_check": "/assets/sites/cookie_check-7c05e3c9.js",
+    "sites/cookie_utils": "/assets/sites/cookie_utils-d802686d.js",
+    "sites/cookies": "/assets/sites/cookies-ad90af97.js",
+    "sites/easy-autocomplete": "/assets/sites/easy-autocomplete-66f05834.js",
+    "sites/explicit_consent_modal_launcher": "/assets/sites/explicit_consent_modal_launcher-a1746763.js",
+    "sites/fixed_layout": "/assets/sites/fixed_layout-1c507a2c.js",
+    "sites/form_submission_redirection_helper": "/assets/sites/form_submission_redirection_helper-663f04d0.js",
+    "sites/implied_consent_launcher": "/assets/sites/implied_consent_launcher-fda457b1.js",
+    "sites/log_requests": "/assets/sites/log_requests-4c491138.js",
+    "sites/page_init_utils": "/assets/sites/page_init_utils-b4150e39.js",
+    "sites/page_initialisation": "/assets/sites/page_initialisation-69373bc0.js",
+    "sites/pages_bs3_im": "/assets/sites/pages_bs3_im-fdcf97bb.js",
+    "sites/pages_bs4_im": "/assets/sites/pages_bs4_im-93fb6778.js",
+    "sites/pages_bs5_im": "/assets/sites/pages_bs5_im-06f1f839.js",
+    "sites/post_search_control": "/assets/sites/post_search_control-91fed340.js",
+    "sites/rails": "/assets/sites/rails-e78178d6.js",
+    "sites/search_control": "/assets/sites/search_control-aea456d4.js",
+    "sites/third_party_libraries": "/assets/sites/third_party_libraries-58576559.js",
+    "sites/track_video": "/assets/sites/track_video-5f9b9f10.js",
+    "sites/track_view": "/assets/sites/track_view-3c955de0.js",
+    "sites/turbo": "/assets/sites/turbo-72260e1e.js",
+    "sites/uri": "/assets/sites/uri-d111543a.js",
+    "sites/url_utils": "/assets/sites/url_utils-604f5312.js",
+    "sites/videojs": "/assets/sites/videojs-4ccfd84d.js",
+    "sites/videojsandyoutube": "/assets/sites/videojsandyoutube-35c7a836.js",
+    "common/controllers/base_controller": "/assets/common/controllers/base_controller-6dcafa6e.js",
+    "common/controllers/base_phone_validator_controller": "/assets/common/controllers/base_phone_validator_controller-23240a22.js",
+    "common/controllers/form_submitter_controller": "/assets/common/controllers/form_submitter_controller-af882ba1.js",
+    "common/controllers/popover_controller": "/assets/common/controllers/popover_controller-39e676e1.js",
+    "common/controllers/reset_form_controller": "/assets/common/controllers/reset_form_controller-2a8c1c7b.js",
+    "common/controllers/stream_resync_controller": "/assets/common/controllers/stream_resync_controller-22092ae2.js",
+    "common/controllers/submit_on_enter_controller": "/assets/common/controllers/submit_on_enter_controller-fe4275a4.js",
+    "common/controllers/tooltip_controller": "/assets/common/controllers/tooltip_controller-d88bcf5f.js",
+    "common/controllers/trim_paste_controller": "/assets/common/controllers/trim_paste_controller-c4862e3a.js",
+    "common/fetch_utils": "/assets/common/fetch_utils-e7bde16d.js",
+    "common/google_maps": "/assets/common/google_maps-7911cd4a.js",
+    "common/jquery_hoisting": "/assets/common/jquery_hoisting-40c1f769.js",
+    "common/local_time": "/assets/common/local_time-f50fc497.js",
+    "common/namespace_jquery": "/assets/common/namespace_jquery-7bdd2a5d.js",
+    "common/ready": "/assets/common/ready-da958d74.js",
+    "common/storage": "/assets/common/storage-2a93f1c2.js"
+  },
+  "integrity": {
+    "/assets/bootstrap5.bundle.min-deb29bee.js": "sha384-pYV1Utcbz0hlCRuUv+fDNeGzdPM10LP81pt74sf2UplJqX8GAlzwGzutN44ms5L/",
+    "/assets/bootstrap4.bundle.min-d7959006.js": "sha384-ZVUGiK8J6NEsirhcrgBe1gmwAaU0WtNvBR4xnlkiyGgyujoTZS4LHgrABGhMHD9h",
+    "/assets/bootstrap3.min-1f4007be.js": "sha384-0St00rjHYzLpEmTuW5uUs90JnKpT8w3ILUIbN3aoN7fXGt8c0abcWlY4i0URdW3u",
+    "/assets/popper-449549cf.js": "sha384-lpZmRQPT/FjW5iUnxw5TGoBC4fPdNEu1tWujtFTrRPDJZ/eO2jLoJTybmE27wT3I",
+    "/assets/stimulus.min-4b1e420e.js": "sha384-PLQtvitPk+G0Zfik69/N9+9AHeMAZ2YdEUTQ+YJeK3em/7J61ba9l1jI/PZMIqJB",
+    "/assets/stimulus-loading-1fc53fe7.js": "sha384-yyduaPFQxI6xUc7KddtRGwzhjT89gHVn23FvCbuk5C1bKEUWcXO3vNj12K3trzeK",
+    "/assets/turbo.min-9fd88cd5.js": "sha384-0xc/YHF/dvXiyjjstL7uCZoPwFTk0ozhvKW3tlZz4wlcG6xuncetfrGjLCqsAuAM",
+    "/assets/actioncable.esm-e0ec9819.js": "sha384-thuNT7tlzJOBbPUdTaVpTDE9m3lrvxX+Ap9Lat4AaKWOiyea76siAXtnlDPAAEqF",
+    "/assets/video.bundle-b5d9f907.js": "sha384-drC0q37OcYhbdnPEiaX1F0xMbZn/JdB1ZMdbofPMk/AsmdaqdkAjAiMnirA1MBWd",
+    "/assets/buffer-d3dff9eb.js": "sha384-1m6gmnZ/mwiZGPPF/D0rtdDsjTWCazOT4pgZLFEMnN6i/Bf9tQtXracmMsAvdIup",
+    "/assets/videojs-youtube.bundle-d07ae8f5.js": "sha384-H99Yjdw1rgIp4tBztIrFlQtlodPfPJR9Mha5qERrP2LlG7xrZXWtQ2QWo733QagU",
+    "/assets/jquery-50ed4c0e.js": "sha384-Z75CBsz1Gkd6eRIoVoDkSuzLUBvNFwdK9NuckSItXurNCPW4l5KUUm/HoV8Swpky",
+    "/assets/railsujs-b26e7859.js": "sha384-+0e1hUDBTNe29iIVgjQv4WwkxvIR3cJBiL23zfTljNhKeJ8OJgrhkXHEG/SADJ12",
+    "/assets/urijs.bundle-2f63978b.js": "sha384-H/Y8gUI0OVE8Kvr2VqEvmQtlEoK/DluTLj2Y1Zn67M9Q4piwwQwAuK/3JxLiEMIs",
+    "/assets/js-cookie-d035a5ac.js": "sha384-mTl+f2lb9ViMaJdCZ3zcA1FFNkj7UBcfj+cp8ovykyAz4CBgTNRCa7+v92hVz+aP",
+    "/assets/selectize.min-39919ed8.js": "sha384-DvXT28IQwflZAp4QxrinSK6I0dLT48oh/s1+JD+zPaogsOFesx/jN7wQFi/OQnj6",
+    "/assets/intl-tel-input-e2a7bbf1.js": "sha384-xUj4ssTpP2f0YNlNhZv3ve8RUs+eesrTaaLGt6xKOmwILfp2RyL58Bal7LdnO++a",
+    "/assets/intl-tel-input-utils-19ab02f1.js": "sha384-z+QYObxijHlDHIQVYsj5T41SCu0HEE5vOYexH1kFl95vsbdqwTdEzt7c5enPf5J9",
+    "/assets/@googlemaps--markerclustererplus-6c5af0a4.js": "sha384-2nptLpZTpaC7WOhG8tk1jiY7XbTK85iuwmgDNAHw8gMwfHMFkM3oPNxbpNJHODYz",
+    "/assets/sifter-f29b9961.js": "sha384-cGhyoHClJXS89XrFSyO8veEZvdeS1mTCssJC1Csn/c56fFnZIdl/hIdj2LP4dx3Y",
+    "/assets/microplugin-5e90f84f.js": "sha384-xaO0HisNA+huX+Op4GwZjoqaRBD7xKUGqHGgJvwirmJgg0L/9iezi6m5eS8Tdn6x",
+    "/assets/local-time-6402c124.js": "sha384-OTOY6VXRrOR0rvM/q+vFr7kQOvwoeGeHVxN/L4VQQilywR6it9VSIWKF8P7225OT",
+    "/assets/@googlemaps--js-api-loader-ad292afd.js": "sha384-pIosJGxxRt/dq+/RyRJR0VUHeeoaY6BQW59mZT+sdsSAui/hvLpfirrobdGcOqSj",
+    "/assets/sites/apply_url-a7bf484c.js": "sha384-ilHKx4IISDt+10hrCl0ywablyl1tVeJvogeLkHVK87U26yEUpVd/w065hoFDi2CO",
+    "/assets/sites/beacons/beacon_utils-6a48977d.js": "sha384-8rNmZuS2X4w85SFuLpK/ZmvUzfVtVKK7qsXqIF0V8PaYx3Ayv9m7B1gX7NX46iW1",
+    "/assets/sites/beacons/location_beacon-70491b38.js": "sha384-MjxIaVnJCzelUL5bzukHTeQpn2ApWV2rJoC18Io8HWmPkGQj9w0BJSLKXxaORK/X",
+    "/assets/sites/beacons/video_beacon-1d89aedd.js": "sha384-v1YLSjDQMaHXNLwbxcw6jtXzdYq34Nu8HvNgBWwUUoX23ec/MtZWyFYhp1E4Yl45",
+    "/assets/sites/boot-284faa9a.js": "sha384-0+E6cWpDqenmWoSV7R5pHm3bZrBFwx+P1yjBYLuRng+xBhPbEseiFmq9ddVE4xiw",
+    "/assets/sites/bootstrap5_hoisting-95b6837c.js": "sha384-03H9wSJrWD5qmGLdr1AS/g423iXWj7ZUXUE4dVIQoyxFiw0tTBI02xMRlsRPDeXy",
+    "/assets/sites/bootstrap_wrapper-fcde323e.js": "sha384-yPf/0+YT8cnelQHV79CQ+WIZ1gMvLDYol101xa9IxXbbE5ZYTkI/+ifH3jqGw+z5",
+    "/assets/sites/candidate_assistant_web_component-289fd8fb.js": "sha384-Do0uxhfESdw2ng1OuVm2LWZmRaAi4q1IRVsDws4g1fmu8tpEgUaEWUdnlgI3+3xx",
+    "/assets/sites/candidate_populator-7ab22d90.js": "sha384-IXK/zn8SZoMRlSRlPK2NGQJttPkvL8Of4CUV+YTu5t3ruF/oGaiZ689qPJ1PFv1T",
+    "/assets/sites/chatbot_initialisation-cd7e23d4.js": "sha384-96Me+4ZRxWJvjcxieezx9UvSZJUTC5WFST0QlkBR1PNc9gFpjoRKnycqpxqXOLrw",
+    "/assets/sites/chatbot_turbo_streams-03a7ea7a.js": "sha384-I9T3BPZf7E12R5vEg63W5jfRcWX4qaie8jaH0cMLlS7ebf0IDBoxfI6LG5BLk0b0",
+    "/assets/sites/chatbot_web_component-53056b77.js": "sha384-v2TX5UoW15il0Rv16+iJvCs6fVOBRMtrlheuRtG8UunEkIP0JnVQZPsG9Wt9EH9S",
+    "/assets/sites/common_pages-2b18a5df.js": "sha384-zvIuZujHcpn5rDUmgNMKSCDIP2capk/ewR6PyAT4cQwNKzfMJS7yJnBYnH6EG1yb",
+    "/assets/sites/common_turbo_streams-006121b1.js": "sha384-kuK3LfAQ/zsQVWpYU9LAaj7SxmKi2kFOfHJThPvJUAUzccnehkB2uLZFJNj/R6lQ",
+    "/assets/sites/controllers/application-385a27bb.js": "sha384-JJS7xl0pAiQO8B4Mil1u7V67rOcxDnT8cjJ+2FfxZFWE8SgfsKnK4Q0SVEHgS0g0",
+    "/assets/sites/controllers/blocks/carousel/accessibility_controller-9ab6d386.js": "sha384-j50W+xql8WoOEF4bfdUTNQWRVXwP91mpLQbnQo/0br6O5d1IlJAZ06w+FuOkopVR",
+    "/assets/sites/controllers/blocks/carousel/video_block_controller-afb20fe4.js": "sha384-WEjFi+aj+Dgp4d7zFfJi0BjjLRz/jATGj4FUiyNrchxz7I0IMj+oqCJOAgP8hjNQ",
+    "/assets/sites/controllers/blocks/google_map/map_controller-1d02e9ff.js": "sha384-BKOCFmBzRYAGPWdDZDgZi/U2+tFivjT0Dp/ncqnyEAv5KvFaqZW4vXrbgkZttp/a",
+    "/assets/sites/controllers/blocks/job_search_form_controller-953c5072.js": "sha384-/j32BnbS/9qyxZoOUPVyYsqY/0soVl0HcTXoVSjIaFFHXCxCfEfY0abY2HQbY7yy",
+    "/assets/sites/controllers/blocks/jobs_controller-046289f4.js": "sha384-t8M3owE6OcbvxTPpPDFw3kwfwN3dhBX3m7o5gWfy4O/rlaAd2bU/klosOoXdCD6x",
+    "/assets/sites/controllers/blocks/linked_image_controller-af416b1d.js": "sha384-SEEhUsS/JIbMoxXjMWrXDHbxlNkTfP4c5mFKyVOo7we2RAtYQ7c6JW0UliyyIose",
+    "/assets/sites/controllers/blocks/near_me_controller-675be1a4.js": "sha384-c1nf/2Hp/aqcXDDCdzhLyfZAVfMLiacnmhXsZ/Dx8jXTykKTUBpXCCpHKuzBLVy1",
+    "/assets/sites/controllers/blocks/recruitment_event_controller-61a8ba82.js": "sha384-8Eqx4+23/gMWuXQUdlvtCQDiL1xxT/jXpEmjSryn/sf/GmkqNhMLvdbzgeGmCkmT",
+    "/assets/sites/controllers/blocks/recruitment_events/filter_controller-060126f4.js": "sha384-X4+5hmcmCvVFaHvlsOfypRYeIXmXzNAQwPAwT9eEb4nXBaICfoC1qNisOnWgbym5",
+    "/assets/sites/controllers/call_to_action/form_controller-d691ef31.js": "sha384-b5zZE0GkthtcQbYUBP6Y2sCdKDaxAbmd11HYngru9QVpr44X/fygjZRU9d47Q6pB",
+    "/assets/sites/controllers/call_to_action/greenhouse/education_controller-8570545b.js": "sha384-Qcrq0m+Z0W2H+ElIVrUCGaLNfL7VNDXRwyLPUi73P5Jpp5W3uxKfvGTvBfx/bAJe",
+    "/assets/sites/controllers/call_to_action/greenhouse/education_date_controller-9547c28d.js": "sha384-0qeLBtPfNBRa+HCKwfvJYl4okUsA41Oj8SA2D1cwEmMfgIG505ylq2+hXYAKlVCV",
+    "/assets/sites/controllers/call_to_action/greenhouse/education_select_controller-433c01b0.js": "sha384-fJs1hxXsVxLtCe9jCSAbAkD5vZz7IhhiCKAI5CM74L1FGuCkVTo2wzfN2u7NLC2b",
+    "/assets/sites/controllers/call_to_action/job_alert_field_controller-863fb0e3.js": "sha384-/wTuCh1Zbi5dK43ureNUTOZfTI9Xm3pwcbSUcep0jmQk4baqv0/Jua8q7JbVlcj1",
+    "/assets/sites/controllers/call_to_action/job_conditional_question_controller-3c2263fa.js": "sha384-e+E5MCPuAkM7WZOYKX3AYwUAGzvuOzpoEZJeLoc/ScmfJNCf1qJEXWrl/I7vfpc7",
+    "/assets/sites/controllers/call_to_action/job_questions_controller-06c32d9e.js": "sha384-VbTy03DDF0PPaIEB6zBymSxptzPOepcRWKvyBqAWSUXeqXa/z75WW6tYtMobApOm",
+    "/assets/sites/controllers/candidate_assistant_controller-ae2e1c1d.js": "sha384-niauyBhzTQsgDynXG8l42sClvJIguhFDXRBRj04k17VTgzvNiYFHhgWaBxS7EQd6",
+    "/assets/sites/controllers/chatbot/auto_click_controller-e5638424.js": "sha384-QPY7CfgdCwVtaSB44r4TNQNk5CRdqGIMkQsiySvNvfsva3Po1TCp8VOt04eKpw71",
+    "/assets/sites/controllers/chatbot/carousel_controller-f2f89f5d.js": "sha384-PGViH/wfLfrjaZGVNbQvLp4VbZpgEJUiQ1d2oOxKBAp45B/gRXEQY5DTlanNtzZZ",
+    "/assets/sites/controllers/chatbot/container_controller-c79bad08.js": "sha384-fhKSHA8gJaa2qENWK0yMf+8GLKSJVBHmLatj4Wp7zUSglZ39918onJYg9SdLjpHg",
+    "/assets/sites/controllers/chatbot/dropdown_controller-942a6efa.js": "sha384-F6fAbXxeeSJhZE7EkOda+nnlwbATIwCNVDj7EtrOV+y7k1AfR7BbNmmWyX2UThEQ",
+    "/assets/sites/controllers/chatbot/resume_dropzone_controller-4edc74bd.js": "sha384-nefhaLaK7Jq6PNx45iuyze2ydiakNWomenLU6RshBESRKJC2CFDWMGL/6ngi48rU",
+    "/assets/sites/controllers/chatbot/window_controller-db3f830b.js": "sha384-1bu734QkClBj93DMkejVlQAOwc06/O+0zQIgUYXWxJ0q7E8+J5aDTYEGNGG6jvyF",
+    "/assets/sites/controllers/debounced_search_controller-def656c5.js": "sha384-/ukmLK9uKQ7TZVPGqoYzzAlJpMGZR7hpc6P7LTe4GA9kjLYHJg9kHQkQR9c2vO0i",
+    "/assets/sites/controllers/discussions/search_controller-68af9ddc.js": "sha384-18MRFincnhotvbv/AybHUA5xgNCagW7e463cmXdAHg1rp3sINhuWalx/jZLYsK0j",
+    "/assets/sites/controllers/exit_call_to_action_modal_controller-459daa15.js": "sha384-FHzH/NTTVRH/7KAAaAPV8QPTKHLwpK5K+MrFtd8lGA3JZ3plomnU7gCytCSg6nR2",
+    "/assets/sites/controllers/focus_controller-574bf08e.js": "sha384-a7NcmKvB+Bgdp/NHpfCdrBQv7CCYGZHGUUrH5RMPgZnnJivImzF+43JgdLrpZ8OK",
+    "/assets/sites/controllers/frame_loader_controller-1ff12fb5.js": "sha384-jMpe0XXks9vxZ7EovODbn/YeWtpVVok0OrjmDYkZdctnNbPjodoY2GSm0EZb9vnz",
+    "/assets/sites/controllers/index-d3d79060.js": "sha384-bIfbc77L7UuT99verR3EHN8xujUXrin81aZZ9AODezDXIam5lTYf3bBb3t8lozQq",
+    "/assets/sites/controllers/init/explicit_consent_modal_controller-7797894c.js": "sha384-BXxbAF9hZw8aBh3dwg/I6DbAA7PnN8soIp4RjzeSkactaOHLyY34l10BmfgBymcj",
+    "/assets/sites/controllers/init/implied_consent_controller-5bc72890.js": "sha384-aXQobYfjbSp3Hsyzg5akC6W3629lEO3nMEd242/Aa9Y6RtiUvGXfWLuQCBl+Ohrh",
+    "/assets/sites/controllers/jobs/filter_controller-e66637dc.js": "sha384-nZuylqAAygh0Pz8NfMAYSsXm6ATpD46e3ihnHCGS6cQ6BdIyawsIrr6CFKK6GJPf",
+    "/assets/sites/controllers/jobs/search_controller-d5148c87.js": "sha384-RKvow7vgAqx0PFWWiC6IS+ZTNKLGRnbJDOFEAWP6mHVwx7FPGABLm07KyueROomt",
+    "/assets/sites/controllers/jobs/table_results_controller-ee718736.js": "sha384-B94tqeKgwdNCY2TVxE5bcStVCXr0D84pIrCk1MWNBamAEq/QiIQ/MkMIPhqXE3c8",
+    "/assets/sites/controllers/kiosk_controller-d511d8dc.js": "sha384-5r4TzsvJQJbhuOoJwXRSy5rSr9QgBJ+WsYWEiCfyg9OObzRQQlRPMXpQUpJOz9hr",
+    "/assets/sites/controllers/manage_cookies_link_reloader_controller-860dd65a.js": "sha384-42MFpEtVNTxD0DlkgATP9jgTMxN15t74k3B2PwTgdREnBEJjEnnaE6D3UlV5GgwU",
+    "/assets/sites/controllers/page_events_controller-39710bd2.js": "sha384-+EjMoDGpiwPVKbFF+tZAGuOU9YR+MpMZw5ZKT5JkEfsdaHHjvjozDYVxyM+vEkAA",
+    "/assets/sites/controllers/phone_validator_controller-8c54de77.js": "sha384-MmFKLpPYjjDclIfk8AP8hgrqnP6cokWgyGXLJJ/XKIy/82ha8ktjDKkfphrYrMyC",
+    "/assets/sites/controllers/popover_controller-5afd2f56.js": "sha384-NZVhRJ22eEqrLOM1YvYz6dsnxhUKpsF1kD0fFphHh/zw3vxsEqI1la9Kh5N1HcL1",
+    "/assets/sites/controllers/relaunch_cookies_consent_controller-65f024e8.js": "sha384-M9shSDmhKJEXBR/KMnotl7Zbh2IglWnYs+gWJMT3dggQYDwYnrZnaPZSnQj+y0Zp",
+    "/assets/sites/controllers/signin_modal_controller-467da8b6.js": "sha384-Fr85vyQBo9zSR2+mWd74d1hAVfwcLDLdFOm09LotonvyZuJsO+CohrioqVJ/tRtp",
+    "/assets/sites/controllers/stream_invoker_controller-2228a793.js": "sha384-ug/nby6HJM1ov/e6hP2nNlTaL6g3JGpxCwnaeoZ9EQj9897tm6uhqp6guzQIMqoR",
+    "/assets/sites/controllers/tracking_controller-9ce93909.js": "sha384-o+clsKq658VYnwCRezdccDewJC5XqL0n4+Dwvi+XtNdEwDW4RguFeCRUxRa1n+Fm",
+    "/assets/sites/controllers/turbo_frame_scroller_controller-2749edf5.js": "sha384-Y+QpONCei6dn/CtWaIC6Bq0/7XGLTzVwUH/u8Ow1VxkZv1sr2RqT0DdC7fgsX3mT",
+    "/assets/sites/controllers/view_event_controller-0bb5c744.js": "sha384-eWRQSfIx1r4ua6x2l5p69RI4Lic88kfoqCwc1BxVRdxBbDJ3BBMo7p9dYJX0Eixh",
+    "/assets/sites/controllers/window_opener_controller-2e053a72.js": "sha384-l38oEGkVC+X7/bgEZzTPoBx0UQFmYBC5fVtw8pwkPd6FJ9LWTcUVj5ZtXA/luoLe",
+    "/assets/sites/cookie_check-7c05e3c9.js": "sha384-Z6IGNiz+UsghTYen5j5mAExED9YpQXvtfwclUmsp6mPjeXqxVVFNAUo7P4fHs5aR",
+    "/assets/sites/cookie_utils-d802686d.js": "sha384-BBXzPGdOS60kM0zPYhSBI5frw7tVSzFp2CGdJMM4wEKhxMp9DkZ3CoAQI36wAVVR",
+    "/assets/sites/cookies-ad90af97.js": "sha384-b62SNTDkJKDHcFrGyITxb0o5C3o57RwRz39rVMoHeWWB8Bue3pDpyeFVLeeg3Qd3",
+    "/assets/sites/easy-autocomplete-66f05834.js": "sha384-DKMjk9MmJ8piThLfXrNdn+RIC0ods/UR8XXT5FMm9U7CVuxLboZc8fpc0wsCrOfP",
+    "/assets/sites/explicit_consent_modal_launcher-a1746763.js": "sha384-Pmdrz3UffAekXZgRa3H30lHeg2OTPC8LitMfw6GaencUQEIM0aEJk7HmpKv96dpz",
+    "/assets/sites/fixed_layout-1c507a2c.js": "sha384-4P82bZGN1OILMadKswBVx8FDabw/l/4nx5pfVgXTzu72U+PDr6uGS8d+n/yOSVzj",
+    "/assets/sites/form_submission_redirection_helper-663f04d0.js": "sha384-811WbiPjPRnhbEY+FDVnTuiCD0qX8DSGRl5XuSJmg8ffUL2mErv274sOaFbV64hK",
+    "/assets/sites/implied_consent_launcher-fda457b1.js": "sha384-YJf6Ltl1sljHk9dB1yumEBPkk5Q9VOHx5lp3U1UREONBNNyyCeYktZyqtmxIaARw",
+    "/assets/sites/log_requests-4c491138.js": "sha384-89NQL/c8eLr1P5OSQVEw6+oLduDbMfel4XV6WLyj00vESl+CBOOBeRX10mBLZ2/n",
+    "/assets/sites/page_init_utils-b4150e39.js": "sha384-XIVRKXM1Ji/r50f1czQdguM85s9yNWZAP5MTL+IDLfPgPM5/MjGIhkPK2V9b0Dfh",
+    "/assets/sites/page_initialisation-69373bc0.js": "sha384-kieiIM17qO7ULRLCfXS2VoQYgS+MTjwnQMbJ7a8uiKKDDMh80D6L3Mg1UzFK5Q9+",
+    "/assets/sites/pages_bs3_im-fdcf97bb.js": "sha384-K09MUA1anuNDYxGTzWqrEOQBph4BcDWQ1aLy79UlYIUTMcgYg090kcMuHYoQtDVW",
+    "/assets/sites/pages_bs4_im-93fb6778.js": "sha384-g+TnKegayoBmNieXixOANJPepUv1RWl8LJZDbV9Q++i9vJUcNoXz+wTbsKHa8wBb",
+    "/assets/sites/pages_bs5_im-06f1f839.js": "sha384-jKJO1sNVTDuaZPio3s8OeLJQGqd8zFxMaTEHS7xldLxL0DMwh488JSiJ5PX8o9vv",
+    "/assets/sites/post_search_control-91fed340.js": "sha384-GOtpaWmgQ1GStmM5zELm5dXmRZC4Tev29JsqvitPnOQl6g6iCiGNuWgYHyXx0VYp",
+    "/assets/sites/rails-e78178d6.js": "sha384-6kbkoH9zD+sIU/Agxj7eCQ513tWs23qF5MFM1vhgGe7S1PSvd3dOwzy0AZoHfl6i",
+    "/assets/sites/search_control-aea456d4.js": "sha384-ydicH+SopPoqUNTZVDKTAmhPWEXn2O237lY1Lc2cvAMJvTmHhuaBb85kO4yfBUAS",
+    "/assets/sites/third_party_libraries-58576559.js": "sha384-SobETnBoA6f+xEy0n5ma2QoRDRgR3/+X07OpFyWbYkxtZVU+RZsfmExo7i9YM7LD",
+    "/assets/sites/track_video-5f9b9f10.js": "sha384-8xoeCcGQtulWpoEWoAkQu/ZJL+Lo0DnMM/vE4jBcPL5+0OcmAlcpItZUJLh7sL2Y",
+    "/assets/sites/track_view-3c955de0.js": "sha384-LeOb7BAkuW9tN58vJqd73xtmwqk7jLg2NGqDRyv5rCHHWYJ9Q15CXNfT2+fFOMB0",
+    "/assets/sites/turbo-72260e1e.js": "sha384-ReKB/LkhnKLxGKqnp4qX53RVBynOyNpyrqyj2usqlTWyoGOuKDXydFkUdr9U4nI+",
+    "/assets/sites/uri-d111543a.js": "sha384-qIoohSK/0htGMg4xQ3Lu1yDvyLoU4m7c+6EuRxTWWNxlr3JSsbnDkx/62FF+gMRh",
+    "/assets/sites/url_utils-604f5312.js": "sha384-RxsjSoEmcGUu709VGjYvM3VWMmmsK2IeHzyPhz12e++Z/J41+Z8BNmlbdTTHbZbY",
+    "/assets/sites/videojs-4ccfd84d.js": "sha384-+KJP/nuEQHrdANCJarNtpxedj4Aembt+4Xb3LqomDnGYzTWVa0YnpjWjOx20Pf1W",
+    "/assets/sites/videojsandyoutube-35c7a836.js": "sha384-KC43BZCX5i15bzv0I8VVuWkXkKMg3mXctOIYwuNAPgq2fW1FqwV77oZUsQ0c6tKZ",
+    "/assets/common/controllers/base_controller-6dcafa6e.js": "sha384-FEDAA9XyZrVOD3YPVbda+uMQY/9LHS7xxJ/sdQJJWzOWjURKrObQqa9PD3un1aGv",
+    "/assets/common/controllers/base_phone_validator_controller-23240a22.js": "sha384-pWe6+pGSpcG3DaUpWiSYrjudzdNPkiwB5engOM763TnCVGr2ApV68ra63GWkT0lE",
+    "/assets/common/controllers/form_submitter_controller-af882ba1.js": "sha384-xG50Xp+dgq5SchOhyTcUBFWHXetwvaixVDXxJ7q5DrbrjQX/RoYH4YO7ui8ctTeJ",
+    "/assets/common/controllers/popover_controller-39e676e1.js": "sha384-rOW53sb+YAGWIeACcPleBkCSplJ5Wb800W/9lIMZKQBspQsEFyzRBTO/JQC6J9E6",
+    "/assets/common/controllers/reset_form_controller-2a8c1c7b.js": "sha384-oMlzNeuv8tps9j71YiteEH9F4bsJRniRmCnSIZT4+aJc8HA/+ZAUyJeWDuqILWyQ",
+    "/assets/common/controllers/stream_resync_controller-22092ae2.js": "sha384-GlfX9yt6UDqiDIimraygR4XchlmdM5tT5ooIrAN50uCULsgidwDXyCtDla/scvkr",
+    "/assets/common/controllers/submit_on_enter_controller-fe4275a4.js": "sha384-QGJ7+OYElqH6LCU0xeS4ogV6y9XumZnIedM3gwYtVTv4rEp4w50KyFbufVQyP2Q1",
+    "/assets/common/controllers/tooltip_controller-d88bcf5f.js": "sha384-qFVLoQSHuiSQe46K8kvveLiyle+thpztjeoO1o7meiHhoZMyUIsoMHkJvwpJt/rY",
+    "/assets/common/controllers/trim_paste_controller-c4862e3a.js": "sha384-tZLfwECTn2Fn+SXtKOjWtoAHIpaINWijxjCGTXGgHt/MRfkKextG/4rqO4AyXIDj",
+    "/assets/common/fetch_utils-e7bde16d.js": "sha384-jKmGVJZ8cXsih9/QwWTV76UoDIBCuyR4yjVZAyv9RlM08EChzZ1126uAN3b5Rgny",
+    "/assets/common/google_maps-7911cd4a.js": "sha384-WhwTtTCXXRSQ+kwaYc+0iQPPADV0PcGAd95jeL/SyU1UK2wyGSwmaJg2HZiDLHfI",
+    "/assets/common/jquery_hoisting-40c1f769.js": "sha384-Omfc8HSKOPbxmsnQsxESjDQDDPEO+kVloG5XK6kQJvPDQdl5cCjRd2a8CWPov/Nz",
+    "/assets/common/local_time-f50fc497.js": "sha384-urLAZhrdUf6pUbQZ6dnRr+SYRhThPYyucoF+ujteFxXU3pAhLYCt0MYwE+TGrFob",
+    "/assets/common/namespace_jquery-7bdd2a5d.js": "sha384-W5E3BMiThGd6hGY+xv8q3kpEEgtbkAuRLhXMGGQ/nj/xZJW14R5vI83za3+DCRea",
+    "/assets/common/ready-da958d74.js": "sha384-rD3xjxB9qVkbVsKydOOWvrE+fy9RWWFcudLTe/rvS9jULv2/6OBZbwv8SXLZ4Dju",
+    "/assets/common/storage-2a93f1c2.js": "sha384-boDpyWUvHFVlfcyAjGpDKTCi8nwk4jHd4oPAISoxgkLATxWDEudgHpigjg3BBmLn"
+  }
+}</script>
+<link rel="modulepreload" href="/assets/bootstrap5.bundle.min-deb29bee.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-pYV1Utcbz0hlCRuUv+fDNeGzdPM10LP81pt74sf2UplJqX8GAlzwGzutN44ms5L/">
+<link rel="modulepreload" href="/assets/bootstrap4.bundle.min-d7959006.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-ZVUGiK8J6NEsirhcrgBe1gmwAaU0WtNvBR4xnlkiyGgyujoTZS4LHgrABGhMHD9h">
+<link rel="modulepreload" href="/assets/bootstrap3.min-1f4007be.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-0St00rjHYzLpEmTuW5uUs90JnKpT8w3ILUIbN3aoN7fXGt8c0abcWlY4i0URdW3u">
+<link rel="modulepreload" href="/assets/popper-449549cf.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-lpZmRQPT/FjW5iUnxw5TGoBC4fPdNEu1tWujtFTrRPDJZ/eO2jLoJTybmE27wT3I">
+<link rel="modulepreload" href="/assets/stimulus.min-4b1e420e.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-PLQtvitPk+G0Zfik69/N9+9AHeMAZ2YdEUTQ+YJeK3em/7J61ba9l1jI/PZMIqJB">
+<link rel="modulepreload" href="/assets/stimulus-loading-1fc53fe7.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-yyduaPFQxI6xUc7KddtRGwzhjT89gHVn23FvCbuk5C1bKEUWcXO3vNj12K3trzeK">
+<link rel="modulepreload" href="/assets/turbo.min-9fd88cd5.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-0xc/YHF/dvXiyjjstL7uCZoPwFTk0ozhvKW3tlZz4wlcG6xuncetfrGjLCqsAuAM">
+<link rel="modulepreload" href="/assets/actioncable.esm-e0ec9819.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-thuNT7tlzJOBbPUdTaVpTDE9m3lrvxX+Ap9Lat4AaKWOiyea76siAXtnlDPAAEqF">
+<link rel="modulepreload" href="/assets/video.bundle-b5d9f907.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-drC0q37OcYhbdnPEiaX1F0xMbZn/JdB1ZMdbofPMk/AsmdaqdkAjAiMnirA1MBWd">
+<link rel="modulepreload" href="/assets/buffer-d3dff9eb.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-1m6gmnZ/mwiZGPPF/D0rtdDsjTWCazOT4pgZLFEMnN6i/Bf9tQtXracmMsAvdIup">
+<link rel="modulepreload" href="/assets/videojs-youtube.bundle-d07ae8f5.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-H99Yjdw1rgIp4tBztIrFlQtlodPfPJR9Mha5qERrP2LlG7xrZXWtQ2QWo733QagU">
+<link rel="modulepreload" href="/assets/jquery-50ed4c0e.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-Z75CBsz1Gkd6eRIoVoDkSuzLUBvNFwdK9NuckSItXurNCPW4l5KUUm/HoV8Swpky">
+<link rel="modulepreload" href="/assets/railsujs-b26e7859.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-+0e1hUDBTNe29iIVgjQv4WwkxvIR3cJBiL23zfTljNhKeJ8OJgrhkXHEG/SADJ12">
+<link rel="modulepreload" href="/assets/urijs.bundle-2f63978b.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-H/Y8gUI0OVE8Kvr2VqEvmQtlEoK/DluTLj2Y1Zn67M9Q4piwwQwAuK/3JxLiEMIs">
+<link rel="modulepreload" href="/assets/js-cookie-d035a5ac.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-mTl+f2lb9ViMaJdCZ3zcA1FFNkj7UBcfj+cp8ovykyAz4CBgTNRCa7+v92hVz+aP">
+<link rel="modulepreload" href="/assets/selectize.min-39919ed8.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-DvXT28IQwflZAp4QxrinSK6I0dLT48oh/s1+JD+zPaogsOFesx/jN7wQFi/OQnj6">
+<link rel="modulepreload" href="/assets/intl-tel-input-e2a7bbf1.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-xUj4ssTpP2f0YNlNhZv3ve8RUs+eesrTaaLGt6xKOmwILfp2RyL58Bal7LdnO++a">
+<link rel="modulepreload" href="/assets/intl-tel-input-utils-19ab02f1.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-z+QYObxijHlDHIQVYsj5T41SCu0HEE5vOYexH1kFl95vsbdqwTdEzt7c5enPf5J9">
+<link rel="modulepreload" href="/assets/@googlemaps--markerclustererplus-6c5af0a4.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-2nptLpZTpaC7WOhG8tk1jiY7XbTK85iuwmgDNAHw8gMwfHMFkM3oPNxbpNJHODYz">
+<link rel="modulepreload" href="/assets/sifter-f29b9961.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-cGhyoHClJXS89XrFSyO8veEZvdeS1mTCssJC1Csn/c56fFnZIdl/hIdj2LP4dx3Y">
+<link rel="modulepreload" href="/assets/microplugin-5e90f84f.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-xaO0HisNA+huX+Op4GwZjoqaRBD7xKUGqHGgJvwirmJgg0L/9iezi6m5eS8Tdn6x">
+<link rel="modulepreload" href="/assets/local-time-6402c124.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-OTOY6VXRrOR0rvM/q+vFr7kQOvwoeGeHVxN/L4VQQilywR6it9VSIWKF8P7225OT">
+<link rel="modulepreload" href="/assets/@googlemaps--js-api-loader-ad292afd.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-pIosJGxxRt/dq+/RyRJR0VUHeeoaY6BQW59mZT+sdsSAui/hvLpfirrobdGcOqSj">
+<link rel="modulepreload" href="/assets/sites/apply_url-a7bf484c.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-ilHKx4IISDt+10hrCl0ywablyl1tVeJvogeLkHVK87U26yEUpVd/w065hoFDi2CO">
+<link rel="modulepreload" href="/assets/sites/beacons/beacon_utils-6a48977d.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-8rNmZuS2X4w85SFuLpK/ZmvUzfVtVKK7qsXqIF0V8PaYx3Ayv9m7B1gX7NX46iW1">
+<link rel="modulepreload" href="/assets/sites/beacons/location_beacon-70491b38.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-MjxIaVnJCzelUL5bzukHTeQpn2ApWV2rJoC18Io8HWmPkGQj9w0BJSLKXxaORK/X">
+<link rel="modulepreload" href="/assets/sites/beacons/video_beacon-1d89aedd.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-v1YLSjDQMaHXNLwbxcw6jtXzdYq34Nu8HvNgBWwUUoX23ec/MtZWyFYhp1E4Yl45">
+<link rel="modulepreload" href="/assets/sites/boot-284faa9a.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-0+E6cWpDqenmWoSV7R5pHm3bZrBFwx+P1yjBYLuRng+xBhPbEseiFmq9ddVE4xiw">
+<link rel="modulepreload" href="/assets/sites/bootstrap5_hoisting-95b6837c.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-03H9wSJrWD5qmGLdr1AS/g423iXWj7ZUXUE4dVIQoyxFiw0tTBI02xMRlsRPDeXy">
+<link rel="modulepreload" href="/assets/sites/bootstrap_wrapper-fcde323e.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-yPf/0+YT8cnelQHV79CQ+WIZ1gMvLDYol101xa9IxXbbE5ZYTkI/+ifH3jqGw+z5">
+<link rel="modulepreload" href="/assets/sites/candidate_assistant_web_component-289fd8fb.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-Do0uxhfESdw2ng1OuVm2LWZmRaAi4q1IRVsDws4g1fmu8tpEgUaEWUdnlgI3+3xx">
+<link rel="modulepreload" href="/assets/sites/candidate_populator-7ab22d90.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-IXK/zn8SZoMRlSRlPK2NGQJttPkvL8Of4CUV+YTu5t3ruF/oGaiZ689qPJ1PFv1T">
+<link rel="modulepreload" href="/assets/sites/chatbot_initialisation-cd7e23d4.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-96Me+4ZRxWJvjcxieezx9UvSZJUTC5WFST0QlkBR1PNc9gFpjoRKnycqpxqXOLrw">
+<link rel="modulepreload" href="/assets/sites/chatbot_turbo_streams-03a7ea7a.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-I9T3BPZf7E12R5vEg63W5jfRcWX4qaie8jaH0cMLlS7ebf0IDBoxfI6LG5BLk0b0">
+<link rel="modulepreload" href="/assets/sites/chatbot_web_component-53056b77.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-v2TX5UoW15il0Rv16+iJvCs6fVOBRMtrlheuRtG8UunEkIP0JnVQZPsG9Wt9EH9S">
+<link rel="modulepreload" href="/assets/sites/common_pages-2b18a5df.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-zvIuZujHcpn5rDUmgNMKSCDIP2capk/ewR6PyAT4cQwNKzfMJS7yJnBYnH6EG1yb">
+<link rel="modulepreload" href="/assets/sites/common_turbo_streams-006121b1.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-kuK3LfAQ/zsQVWpYU9LAaj7SxmKi2kFOfHJThPvJUAUzccnehkB2uLZFJNj/R6lQ">
+<link rel="modulepreload" href="/assets/sites/controllers/application-385a27bb.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-JJS7xl0pAiQO8B4Mil1u7V67rOcxDnT8cjJ+2FfxZFWE8SgfsKnK4Q0SVEHgS0g0">
+<link rel="modulepreload" href="/assets/sites/controllers/blocks/carousel/accessibility_controller-9ab6d386.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-j50W+xql8WoOEF4bfdUTNQWRVXwP91mpLQbnQo/0br6O5d1IlJAZ06w+FuOkopVR">
+<link rel="modulepreload" href="/assets/sites/controllers/blocks/carousel/video_block_controller-afb20fe4.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-WEjFi+aj+Dgp4d7zFfJi0BjjLRz/jATGj4FUiyNrchxz7I0IMj+oqCJOAgP8hjNQ">
+<link rel="modulepreload" href="/assets/sites/controllers/blocks/google_map/map_controller-1d02e9ff.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-BKOCFmBzRYAGPWdDZDgZi/U2+tFivjT0Dp/ncqnyEAv5KvFaqZW4vXrbgkZttp/a">
+<link rel="modulepreload" href="/assets/sites/controllers/blocks/job_search_form_controller-953c5072.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-/j32BnbS/9qyxZoOUPVyYsqY/0soVl0HcTXoVSjIaFFHXCxCfEfY0abY2HQbY7yy">
+<link rel="modulepreload" href="/assets/sites/controllers/blocks/jobs_controller-046289f4.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-t8M3owE6OcbvxTPpPDFw3kwfwN3dhBX3m7o5gWfy4O/rlaAd2bU/klosOoXdCD6x">
+<link rel="modulepreload" href="/assets/sites/controllers/blocks/linked_image_controller-af416b1d.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-SEEhUsS/JIbMoxXjMWrXDHbxlNkTfP4c5mFKyVOo7we2RAtYQ7c6JW0UliyyIose">
+<link rel="modulepreload" href="/assets/sites/controllers/blocks/near_me_controller-675be1a4.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-c1nf/2Hp/aqcXDDCdzhLyfZAVfMLiacnmhXsZ/Dx8jXTykKTUBpXCCpHKuzBLVy1">
+<link rel="modulepreload" href="/assets/sites/controllers/blocks/recruitment_event_controller-61a8ba82.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-8Eqx4+23/gMWuXQUdlvtCQDiL1xxT/jXpEmjSryn/sf/GmkqNhMLvdbzgeGmCkmT">
+<link rel="modulepreload" href="/assets/sites/controllers/blocks/recruitment_events/filter_controller-060126f4.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-X4+5hmcmCvVFaHvlsOfypRYeIXmXzNAQwPAwT9eEb4nXBaICfoC1qNisOnWgbym5">
+<link rel="modulepreload" href="/assets/sites/controllers/call_to_action/form_controller-d691ef31.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-b5zZE0GkthtcQbYUBP6Y2sCdKDaxAbmd11HYngru9QVpr44X/fygjZRU9d47Q6pB">
+<link rel="modulepreload" href="/assets/sites/controllers/call_to_action/greenhouse/education_controller-8570545b.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-Qcrq0m+Z0W2H+ElIVrUCGaLNfL7VNDXRwyLPUi73P5Jpp5W3uxKfvGTvBfx/bAJe">
+<link rel="modulepreload" href="/assets/sites/controllers/call_to_action/greenhouse/education_date_controller-9547c28d.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-0qeLBtPfNBRa+HCKwfvJYl4okUsA41Oj8SA2D1cwEmMfgIG505ylq2+hXYAKlVCV">
+<link rel="modulepreload" href="/assets/sites/controllers/call_to_action/greenhouse/education_select_controller-433c01b0.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-fJs1hxXsVxLtCe9jCSAbAkD5vZz7IhhiCKAI5CM74L1FGuCkVTo2wzfN2u7NLC2b">
+<link rel="modulepreload" href="/assets/sites/controllers/call_to_action/job_alert_field_controller-863fb0e3.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-/wTuCh1Zbi5dK43ureNUTOZfTI9Xm3pwcbSUcep0jmQk4baqv0/Jua8q7JbVlcj1">
+<link rel="modulepreload" href="/assets/sites/controllers/call_to_action/job_conditional_question_controller-3c2263fa.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-e+E5MCPuAkM7WZOYKX3AYwUAGzvuOzpoEZJeLoc/ScmfJNCf1qJEXWrl/I7vfpc7">
+<link rel="modulepreload" href="/assets/sites/controllers/call_to_action/job_questions_controller-06c32d9e.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-VbTy03DDF0PPaIEB6zBymSxptzPOepcRWKvyBqAWSUXeqXa/z75WW6tYtMobApOm">
+<link rel="modulepreload" href="/assets/sites/controllers/candidate_assistant_controller-ae2e1c1d.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-niauyBhzTQsgDynXG8l42sClvJIguhFDXRBRj04k17VTgzvNiYFHhgWaBxS7EQd6">
+<link rel="modulepreload" href="/assets/sites/controllers/chatbot/auto_click_controller-e5638424.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-QPY7CfgdCwVtaSB44r4TNQNk5CRdqGIMkQsiySvNvfsva3Po1TCp8VOt04eKpw71">
+<link rel="modulepreload" href="/assets/sites/controllers/chatbot/carousel_controller-f2f89f5d.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-PGViH/wfLfrjaZGVNbQvLp4VbZpgEJUiQ1d2oOxKBAp45B/gRXEQY5DTlanNtzZZ">
+<link rel="modulepreload" href="/assets/sites/controllers/chatbot/container_controller-c79bad08.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-fhKSHA8gJaa2qENWK0yMf+8GLKSJVBHmLatj4Wp7zUSglZ39918onJYg9SdLjpHg">
+<link rel="modulepreload" href="/assets/sites/controllers/chatbot/dropdown_controller-942a6efa.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-F6fAbXxeeSJhZE7EkOda+nnlwbATIwCNVDj7EtrOV+y7k1AfR7BbNmmWyX2UThEQ">
+<link rel="modulepreload" href="/assets/sites/controllers/chatbot/resume_dropzone_controller-4edc74bd.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-nefhaLaK7Jq6PNx45iuyze2ydiakNWomenLU6RshBESRKJC2CFDWMGL/6ngi48rU">
+<link rel="modulepreload" href="/assets/sites/controllers/chatbot/window_controller-db3f830b.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-1bu734QkClBj93DMkejVlQAOwc06/O+0zQIgUYXWxJ0q7E8+J5aDTYEGNGG6jvyF">
+<link rel="modulepreload" href="/assets/sites/controllers/debounced_search_controller-def656c5.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-/ukmLK9uKQ7TZVPGqoYzzAlJpMGZR7hpc6P7LTe4GA9kjLYHJg9kHQkQR9c2vO0i">
+<link rel="modulepreload" href="/assets/sites/controllers/discussions/search_controller-68af9ddc.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-18MRFincnhotvbv/AybHUA5xgNCagW7e463cmXdAHg1rp3sINhuWalx/jZLYsK0j">
+<link rel="modulepreload" href="/assets/sites/controllers/exit_call_to_action_modal_controller-459daa15.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-FHzH/NTTVRH/7KAAaAPV8QPTKHLwpK5K+MrFtd8lGA3JZ3plomnU7gCytCSg6nR2">
+<link rel="modulepreload" href="/assets/sites/controllers/focus_controller-574bf08e.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-a7NcmKvB+Bgdp/NHpfCdrBQv7CCYGZHGUUrH5RMPgZnnJivImzF+43JgdLrpZ8OK">
+<link rel="modulepreload" href="/assets/sites/controllers/frame_loader_controller-1ff12fb5.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-jMpe0XXks9vxZ7EovODbn/YeWtpVVok0OrjmDYkZdctnNbPjodoY2GSm0EZb9vnz">
+<link rel="modulepreload" href="/assets/sites/controllers/index-d3d79060.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-bIfbc77L7UuT99verR3EHN8xujUXrin81aZZ9AODezDXIam5lTYf3bBb3t8lozQq">
+<link rel="modulepreload" href="/assets/sites/controllers/init/explicit_consent_modal_controller-7797894c.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-BXxbAF9hZw8aBh3dwg/I6DbAA7PnN8soIp4RjzeSkactaOHLyY34l10BmfgBymcj">
+<link rel="modulepreload" href="/assets/sites/controllers/init/implied_consent_controller-5bc72890.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-aXQobYfjbSp3Hsyzg5akC6W3629lEO3nMEd242/Aa9Y6RtiUvGXfWLuQCBl+Ohrh">
+<link rel="modulepreload" href="/assets/sites/controllers/jobs/filter_controller-e66637dc.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-nZuylqAAygh0Pz8NfMAYSsXm6ATpD46e3ihnHCGS6cQ6BdIyawsIrr6CFKK6GJPf">
+<link rel="modulepreload" href="/assets/sites/controllers/jobs/search_controller-d5148c87.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-RKvow7vgAqx0PFWWiC6IS+ZTNKLGRnbJDOFEAWP6mHVwx7FPGABLm07KyueROomt">
+<link rel="modulepreload" href="/assets/sites/controllers/jobs/table_results_controller-ee718736.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-B94tqeKgwdNCY2TVxE5bcStVCXr0D84pIrCk1MWNBamAEq/QiIQ/MkMIPhqXE3c8">
+<link rel="modulepreload" href="/assets/sites/controllers/kiosk_controller-d511d8dc.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-5r4TzsvJQJbhuOoJwXRSy5rSr9QgBJ+WsYWEiCfyg9OObzRQQlRPMXpQUpJOz9hr">
+<link rel="modulepreload" href="/assets/sites/controllers/manage_cookies_link_reloader_controller-860dd65a.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-42MFpEtVNTxD0DlkgATP9jgTMxN15t74k3B2PwTgdREnBEJjEnnaE6D3UlV5GgwU">
+<link rel="modulepreload" href="/assets/sites/controllers/page_events_controller-39710bd2.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-+EjMoDGpiwPVKbFF+tZAGuOU9YR+MpMZw5ZKT5JkEfsdaHHjvjozDYVxyM+vEkAA">
+<link rel="modulepreload" href="/assets/sites/controllers/phone_validator_controller-8c54de77.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-MmFKLpPYjjDclIfk8AP8hgrqnP6cokWgyGXLJJ/XKIy/82ha8ktjDKkfphrYrMyC">
+<link rel="modulepreload" href="/assets/sites/controllers/popover_controller-5afd2f56.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-NZVhRJ22eEqrLOM1YvYz6dsnxhUKpsF1kD0fFphHh/zw3vxsEqI1la9Kh5N1HcL1">
+<link rel="modulepreload" href="/assets/sites/controllers/relaunch_cookies_consent_controller-65f024e8.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-M9shSDmhKJEXBR/KMnotl7Zbh2IglWnYs+gWJMT3dggQYDwYnrZnaPZSnQj+y0Zp">
+<link rel="modulepreload" href="/assets/sites/controllers/signin_modal_controller-467da8b6.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-Fr85vyQBo9zSR2+mWd74d1hAVfwcLDLdFOm09LotonvyZuJsO+CohrioqVJ/tRtp">
+<link rel="modulepreload" href="/assets/sites/controllers/stream_invoker_controller-2228a793.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-ug/nby6HJM1ov/e6hP2nNlTaL6g3JGpxCwnaeoZ9EQj9897tm6uhqp6guzQIMqoR">
+<link rel="modulepreload" href="/assets/sites/controllers/tracking_controller-9ce93909.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-o+clsKq658VYnwCRezdccDewJC5XqL0n4+Dwvi+XtNdEwDW4RguFeCRUxRa1n+Fm">
+<link rel="modulepreload" href="/assets/sites/controllers/turbo_frame_scroller_controller-2749edf5.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-Y+QpONCei6dn/CtWaIC6Bq0/7XGLTzVwUH/u8Ow1VxkZv1sr2RqT0DdC7fgsX3mT">
+<link rel="modulepreload" href="/assets/sites/controllers/view_event_controller-0bb5c744.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-eWRQSfIx1r4ua6x2l5p69RI4Lic88kfoqCwc1BxVRdxBbDJ3BBMo7p9dYJX0Eixh">
+<link rel="modulepreload" href="/assets/sites/controllers/window_opener_controller-2e053a72.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-l38oEGkVC+X7/bgEZzTPoBx0UQFmYBC5fVtw8pwkPd6FJ9LWTcUVj5ZtXA/luoLe">
+<link rel="modulepreload" href="/assets/sites/cookie_check-7c05e3c9.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-Z6IGNiz+UsghTYen5j5mAExED9YpQXvtfwclUmsp6mPjeXqxVVFNAUo7P4fHs5aR">
+<link rel="modulepreload" href="/assets/sites/cookie_utils-d802686d.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-BBXzPGdOS60kM0zPYhSBI5frw7tVSzFp2CGdJMM4wEKhxMp9DkZ3CoAQI36wAVVR">
+<link rel="modulepreload" href="/assets/sites/cookies-ad90af97.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-b62SNTDkJKDHcFrGyITxb0o5C3o57RwRz39rVMoHeWWB8Bue3pDpyeFVLeeg3Qd3">
+<link rel="modulepreload" href="/assets/sites/easy-autocomplete-66f05834.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-DKMjk9MmJ8piThLfXrNdn+RIC0ods/UR8XXT5FMm9U7CVuxLboZc8fpc0wsCrOfP">
+<link rel="modulepreload" href="/assets/sites/explicit_consent_modal_launcher-a1746763.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-Pmdrz3UffAekXZgRa3H30lHeg2OTPC8LitMfw6GaencUQEIM0aEJk7HmpKv96dpz">
+<link rel="modulepreload" href="/assets/sites/fixed_layout-1c507a2c.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-4P82bZGN1OILMadKswBVx8FDabw/l/4nx5pfVgXTzu72U+PDr6uGS8d+n/yOSVzj">
+<link rel="modulepreload" href="/assets/sites/form_submission_redirection_helper-663f04d0.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-811WbiPjPRnhbEY+FDVnTuiCD0qX8DSGRl5XuSJmg8ffUL2mErv274sOaFbV64hK">
+<link rel="modulepreload" href="/assets/sites/implied_consent_launcher-fda457b1.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-YJf6Ltl1sljHk9dB1yumEBPkk5Q9VOHx5lp3U1UREONBNNyyCeYktZyqtmxIaARw">
+<link rel="modulepreload" href="/assets/sites/log_requests-4c491138.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-89NQL/c8eLr1P5OSQVEw6+oLduDbMfel4XV6WLyj00vESl+CBOOBeRX10mBLZ2/n">
+<link rel="modulepreload" href="/assets/sites/page_init_utils-b4150e39.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-XIVRKXM1Ji/r50f1czQdguM85s9yNWZAP5MTL+IDLfPgPM5/MjGIhkPK2V9b0Dfh">
+<link rel="modulepreload" href="/assets/sites/page_initialisation-69373bc0.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-kieiIM17qO7ULRLCfXS2VoQYgS+MTjwnQMbJ7a8uiKKDDMh80D6L3Mg1UzFK5Q9+">
+<link rel="modulepreload" href="/assets/sites/pages_bs3_im-fdcf97bb.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-K09MUA1anuNDYxGTzWqrEOQBph4BcDWQ1aLy79UlYIUTMcgYg090kcMuHYoQtDVW">
+<link rel="modulepreload" href="/assets/sites/pages_bs4_im-93fb6778.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-g+TnKegayoBmNieXixOANJPepUv1RWl8LJZDbV9Q++i9vJUcNoXz+wTbsKHa8wBb">
+<link rel="modulepreload" href="/assets/sites/pages_bs5_im-06f1f839.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-jKJO1sNVTDuaZPio3s8OeLJQGqd8zFxMaTEHS7xldLxL0DMwh488JSiJ5PX8o9vv">
+<link rel="modulepreload" href="/assets/sites/post_search_control-91fed340.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-GOtpaWmgQ1GStmM5zELm5dXmRZC4Tev29JsqvitPnOQl6g6iCiGNuWgYHyXx0VYp">
+<link rel="modulepreload" href="/assets/sites/rails-e78178d6.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-6kbkoH9zD+sIU/Agxj7eCQ513tWs23qF5MFM1vhgGe7S1PSvd3dOwzy0AZoHfl6i">
+<link rel="modulepreload" href="/assets/sites/search_control-aea456d4.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-ydicH+SopPoqUNTZVDKTAmhPWEXn2O237lY1Lc2cvAMJvTmHhuaBb85kO4yfBUAS">
+<link rel="modulepreload" href="/assets/sites/third_party_libraries-58576559.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-SobETnBoA6f+xEy0n5ma2QoRDRgR3/+X07OpFyWbYkxtZVU+RZsfmExo7i9YM7LD">
+<link rel="modulepreload" href="/assets/sites/track_video-5f9b9f10.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-8xoeCcGQtulWpoEWoAkQu/ZJL+Lo0DnMM/vE4jBcPL5+0OcmAlcpItZUJLh7sL2Y">
+<link rel="modulepreload" href="/assets/sites/track_view-3c955de0.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-LeOb7BAkuW9tN58vJqd73xtmwqk7jLg2NGqDRyv5rCHHWYJ9Q15CXNfT2+fFOMB0">
+<link rel="modulepreload" href="/assets/sites/turbo-72260e1e.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-ReKB/LkhnKLxGKqnp4qX53RVBynOyNpyrqyj2usqlTWyoGOuKDXydFkUdr9U4nI+">
+<link rel="modulepreload" href="/assets/sites/uri-d111543a.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-qIoohSK/0htGMg4xQ3Lu1yDvyLoU4m7c+6EuRxTWWNxlr3JSsbnDkx/62FF+gMRh">
+<link rel="modulepreload" href="/assets/sites/url_utils-604f5312.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-RxsjSoEmcGUu709VGjYvM3VWMmmsK2IeHzyPhz12e++Z/J41+Z8BNmlbdTTHbZbY">
+<link rel="modulepreload" href="/assets/sites/videojs-4ccfd84d.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-+KJP/nuEQHrdANCJarNtpxedj4Aembt+4Xb3LqomDnGYzTWVa0YnpjWjOx20Pf1W">
+<link rel="modulepreload" href="/assets/sites/videojsandyoutube-35c7a836.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-KC43BZCX5i15bzv0I8VVuWkXkKMg3mXctOIYwuNAPgq2fW1FqwV77oZUsQ0c6tKZ">
+<link rel="modulepreload" href="/assets/common/controllers/base_controller-6dcafa6e.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-FEDAA9XyZrVOD3YPVbda+uMQY/9LHS7xxJ/sdQJJWzOWjURKrObQqa9PD3un1aGv">
+<link rel="modulepreload" href="/assets/common/controllers/base_phone_validator_controller-23240a22.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-pWe6+pGSpcG3DaUpWiSYrjudzdNPkiwB5engOM763TnCVGr2ApV68ra63GWkT0lE">
+<link rel="modulepreload" href="/assets/common/controllers/form_submitter_controller-af882ba1.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-xG50Xp+dgq5SchOhyTcUBFWHXetwvaixVDXxJ7q5DrbrjQX/RoYH4YO7ui8ctTeJ">
+<link rel="modulepreload" href="/assets/common/controllers/popover_controller-39e676e1.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-rOW53sb+YAGWIeACcPleBkCSplJ5Wb800W/9lIMZKQBspQsEFyzRBTO/JQC6J9E6">
+<link rel="modulepreload" href="/assets/common/controllers/reset_form_controller-2a8c1c7b.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-oMlzNeuv8tps9j71YiteEH9F4bsJRniRmCnSIZT4+aJc8HA/+ZAUyJeWDuqILWyQ">
+<link rel="modulepreload" href="/assets/common/controllers/stream_resync_controller-22092ae2.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-GlfX9yt6UDqiDIimraygR4XchlmdM5tT5ooIrAN50uCULsgidwDXyCtDla/scvkr">
+<link rel="modulepreload" href="/assets/common/controllers/submit_on_enter_controller-fe4275a4.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-QGJ7+OYElqH6LCU0xeS4ogV6y9XumZnIedM3gwYtVTv4rEp4w50KyFbufVQyP2Q1">
+<link rel="modulepreload" href="/assets/common/controllers/tooltip_controller-d88bcf5f.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-qFVLoQSHuiSQe46K8kvveLiyle+thpztjeoO1o7meiHhoZMyUIsoMHkJvwpJt/rY">
+<link rel="modulepreload" href="/assets/common/controllers/trim_paste_controller-c4862e3a.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-tZLfwECTn2Fn+SXtKOjWtoAHIpaINWijxjCGTXGgHt/MRfkKextG/4rqO4AyXIDj">
+<link rel="modulepreload" href="/assets/common/fetch_utils-e7bde16d.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-jKmGVJZ8cXsih9/QwWTV76UoDIBCuyR4yjVZAyv9RlM08EChzZ1126uAN3b5Rgny">
+<link rel="modulepreload" href="/assets/common/google_maps-7911cd4a.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-WhwTtTCXXRSQ+kwaYc+0iQPPADV0PcGAd95jeL/SyU1UK2wyGSwmaJg2HZiDLHfI">
+<link rel="modulepreload" href="/assets/common/jquery_hoisting-40c1f769.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-Omfc8HSKOPbxmsnQsxESjDQDDPEO+kVloG5XK6kQJvPDQdl5cCjRd2a8CWPov/Nz">
+<link rel="modulepreload" href="/assets/common/local_time-f50fc497.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-urLAZhrdUf6pUbQZ6dnRr+SYRhThPYyucoF+ujteFxXU3pAhLYCt0MYwE+TGrFob">
+<link rel="modulepreload" href="/assets/common/namespace_jquery-7bdd2a5d.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-W5E3BMiThGd6hGY+xv8q3kpEEgtbkAuRLhXMGGQ/nj/xZJW14R5vI83za3+DCRea">
+<link rel="modulepreload" href="/assets/common/ready-da958d74.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-rD3xjxB9qVkbVsKydOOWvrE+fy9RWWFcudLTe/rvS9jULv2/6OBZbwv8SXLZ4Dju">
+<link rel="modulepreload" href="/assets/common/storage-2a93f1c2.js" nonce="D6nhfCe549Ewgl0vVzJssQ==" integrity="sha384-boDpyWUvHFVlfcyAjGpDKTCi8nwk4jHd4oPAISoxgkLATxWDEudgHpigjg3BBmLn">
+<script type="module" nonce="D6nhfCe549Ewgl0vVzJssQ==">import "sites/pages_bs5_im"</script>
+  <script type="module" nonce="D6nhfCe549Ewgl0vVzJssQ==">import "sites/videojsandyoutube"</script>
+
+
+<meta name="turbo-cache-control" content="no-cache" />
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="o705ms_668ZqgBII43mSck8L8nSYkTn9FPTP5wMTsI9NVQhcVW3KB78u6rflJ_I1Cwmzz4eoBGhdCyknWY_U5g" />
+
+
+<meta name="locale-attributes" data-locale="en-US" data-language="en" data-region="US" />
+
+<link href="https://careers.lsuhsc.edu/jobs/search" rel="canonical" />
+
+
+<link rel="alternate" hreflang="en-us" href="https://careers.lsuhsc.edu/jobs/search" />
+
+
+
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <meta name="description" id="meta_tag_description" />
+        <meta name="twitter:card" property="twitter:card" content="summary_large_image" id="meta_tag_twitter_card" />
+        <meta name="og:title" property="og:title" content="Search Page" id="meta_tag_og_title" />
+        <meta name="og:url" property="og:url" content="https://careers.lsuhsc.edu/search-page" id="meta_tag_og_url" />
+        <meta name="twitter:image0:src" property="twitter:image0:src" content="https://d25wby5c7p9100.cloudfront.net/public/uploads/183cbb5a23593ea1a5c0fefe90afc1b4/images/files/fe3dca12bff440e6501d1a3a7f97a006/large/LSUHSC_Building.jpg?1763588815" id="meta_tag_twitter_image0_src" />
+        <meta name="og:image" property="og:image" content="https://d25wby5c7p9100.cloudfront.net/public/uploads/183cbb5a23593ea1a5c0fefe90afc1b4/images/files/fe3dca12bff440e6501d1a3a7f97a006/large/LSUHSC_Building.jpg?1763588815" id="meta_tag_og_image" />
+
+  <link rel="stylesheet" crossorigin="anonymous" href="/assets/vendor/fontawesome/css/fontawesome.min-c6573fb4.css" integrity="sha384-B5nyPZa7e84uCJEYHtevCdVYtQosWsbDSRtq3cy/jeSVtQW05GL8CKXO7waXsjPK" />
+<link rel="stylesheet" crossorigin="anonymous" href="/assets/vendor/fontawesome/css/solid.min-de2ced19.css" integrity="sha384-0qiZXWNiGeKekWgcuPL1dUWSKB/+NkMEe8SNy/XVt2BSNMEPIS3AOKXarAaRJf34" />
+<link rel="stylesheet" crossorigin="anonymous" href="/assets/vendor/fontawesome/css/brands.min-873b2c76.css" integrity="sha384-geDkPgznRP8PhmNXuGumbVIg13mKAaqxPc96V0xCDXwu0ErfBUC4Sur+Qm8lMArz" />
+<link rel="stylesheet" crossorigin="anonymous" href="/assets/vendor/fontawesome/css/regular-d32040f4.css" integrity="sha384-Fwn7TTjGxQKLi1Pw2ghrAHf9hRpaF6TJ4pYjJvCRe/+fwTFR6sOhW9+YfPDPNQQa" />
+<link rel="stylesheet" crossorigin="anonymous" href="/assets/vendor/fontawesome/css/v4-shims.min-09e2750e.css" integrity="sha384-cCODJHSivNBsaHei/8LC0HUD58kToSbDU+xT7Rs51BO1v/IvgT/uM0W6xMoUqKfn" /> 
+
+  <link rel="stylesheet" href="/assets/vendor/bootstrap5/bootstrap.min-2d5c1157.css" media="all" integrity="sha384-6v+ZWwZ4tvxU6p65OVtxtBahKNWCRg8fcVbMoQfol31tcrGz7QRB+fpSXst6b6sO" />
+<link rel="stylesheet" href="/assets/vendor/animate-css/animate-e5193cef.css" media="all" integrity="sha384-iAM+Oidt1083nxoS5N8N9zWTmPW+5dzUeWdreOxoSFiU0y/jhsnqZh7OgtXtMR1I" />
+<link rel="stylesheet" href="/assets/vendor/video-js/video-js-941c5b39.css" media="all" integrity="sha384-FTL3/NcK7fyX2Wjq1fJtFmQq0ZrBsTOYLSLybPXwARdpRxVO44w30lMGxfg/9lpp" />
+<link rel="stylesheet" href="/assets/vendor/easy-autocomplete/easy-autocomplete.min-f6af51b5.css" media="all" integrity="sha384-P5ToecSfmrvG28hMuQRRF981pQVbyF6qnQ2T8aIE96Hqrm0V/E5HynaQMP9+Fkcb" />
+<link rel="stylesheet" href="/assets/vendor/selectize/selectize.bootstrap3-7b67965d.css" media="all" integrity="sha384-qLvy10qSxuycHKeomMn3VBNmq3qNrWemUU9wm0BnrjDVTjEZEvh4P72zlh0U+5Hi" />
+<link rel="stylesheet" href="/assets/vendor/intl-tel-input/css/intlTelInput.min-da8c13c7.css" media="all" integrity="sha384-VuPFhY5EMLVahfq/RnpFuSp+hcKd1HWKZCCecBe/pgT+TCSCffmVesAIZChgkXoH" />
+<link rel="stylesheet" href="/assets/sites/pages_bs5-e46f6b4d.css" media="all" integrity="sha384-hfVs7L3r2AmtvHN8w68ohAquDqUJO/KGZTCPkvXnDYvZhW4+fIlLCksbOmcmbna8" />
+<link rel="stylesheet" href="/assets/sites/utility-51d3d629.css" media="all" integrity="sha384-p1RIDf396+uJ3a8x3txyojg43MtH8SeFMB5cKVEOuKI2FGP+wMps5LgAeK8eT1DK" />
+<link rel="stylesheet" href="/assets/sites/common-fc466d55.css" media="all" integrity="sha384-MM1jtjEy34rX54JrrnMB8baiEsSFPvezsdSMXS9Gqq1zniDuKOm1ysaAYKsyQYVI" />
+<link rel="stylesheet" href="/assets/sites/candidate_assistant_page/desktop-590a1618.css" media="all" integrity="sha384-UVCn6faX1qi2aLesRP9h5veVWR942YRRshUAKlcfyKcz5xZ+mURAQnLWZzz0qn6O" />
+<link rel="stylesheet" href="/assets/sites/call_to_actions-f3cd9607.css" media="all" integrity="sha384-StyRdNvt53GQeb9+7PJIZOAPkOXXkWnRAtNbZoW4e9fW83f+sQ/XJlAf5pWqC8BN" />
+<link rel="stylesheet" href="/assets/sites/job_application-479b6a33.css" media="all" integrity="sha384-gV/JlaYK+AaFtEpTdfelq+FUha2hI7V7ddJcnGcNhlsfJTkykuhT7AUCKkl5Fjg3" />
+<link rel="stylesheet" href="/assets/sites/job_questions-5d5df1ac.css" media="all" integrity="sha384-Nsbh2vV1sGcrV8rQmI4wxp9OEqU4cnLflPSUx1j5N/phUskYv26LjoT/2wGddc1M" />
+<link rel="stylesheet" href="/assets/sites/consent-9654708c.css" media="all" integrity="sha384-QbCWTtXo1MzHKHVbBbH2Jl7voxpiovj3kpN11D1i2rqeZ+dT6LzHGwSIPHBIJo5W" />
+<link rel="stylesheet" href="/assets/sites/linkedin-8d846b52.css" media="all" integrity="sha384-2mE9PUVoo2NPgNq4Ls1rOMCjRR9IVwNR1FQ1NJAb/8qpxptnDYtDBYw2O9HHs7M+" />
+<link rel="stylesheet" href="/assets/sites/maps-90b6a423.css" media="all" integrity="sha384-/k6NJsnhU8fLlW6JeGKF6NPErQS9bZ7ahZSGr2/P/S/oAwdCIRamWH3VufaQRNEH" />
+<link rel="stylesheet" href="/assets/sites/editor-d16bdf54.css" media="all" integrity="sha384-hMnvnacQcMLZ95AgvSYdPje+7bVf4wqUGdhSKNuE4zeqn9HkKZE5FcUrHF6xrLA3" />
+<link rel="stylesheet" href="/assets/sites/analysis-9111a8f6.css" media="all" integrity="sha384-XD7UKa1B/ZPppAkzY6TF0vvxPyetcjhC/ABX2gZJkJD/LkPvkVGwvCQe5GTasF6N" />
+<link rel="stylesheet" href="/assets/sites/job_search-85a81f26.css" media="all" integrity="sha384-ft3HxvummPoh+oqG7476rnO493s5z07wXhpQ0SAPb5b5eaJ1jg5LK3rKZkSfsKIb" />
+<link rel="stylesheet" href="/assets/sites/video-da1767ef.css" media="all" integrity="sha384-/0ZoL6MSjFSpD4qMokn0CDmrwX+qJ6Lhip1LPEXTT53LWtD1CyYZgAPqa5PZtNWD" />
+<link rel="stylesheet" href="/assets/sites/favourites-dcd56393.css" media="all" integrity="sha384-RSPfa9JYF1HPbVOBo6/72sarGJUUoEi5uzvT6+BjTzsOuUvEZKpw1GiSn/TW4hT6" />
+<link rel="stylesheet" href="/assets/sites/toast-f2dc36ed.css" media="all" integrity="sha384-/xZ5xfFQjl4LW5SQBH+r7ioTfT2bqkhbHb9Za0Cr07ggPeeSnrUUvH+ZWbQpJgGF" />
+<link rel="stylesheet" href="/assets/sites/candidate_settings-df19bfd3.css" media="all" integrity="sha384-aWtp7PyQhh1DHeWC3SNowpvrnLWg8ADXvoakuNKcDZVeYBYVqUlSkdJ3FJo7drrC" />
+<link rel="stylesheet" href="/assets/sites/blogs-290bfcd3.css" media="all" integrity="sha384-Wm8fcZHl7rmpdQ12nREYIZe/vS9wEf4vTtQSxr6TjX4UgjTQMZvjF+LBThLT/tEJ" />
+<link rel="stylesheet" href="/assets/sites/post_card-de722794.css" media="all" integrity="sha384-j5rPdYC9IY/IGqptWs72RYaqnhV2SR15Fe3Dg+Jjt9XnYs8OGOCGNzN7wu4TAdiu" />
+<link rel="stylesheet" href="/assets/sites/faqs-caa7bf6e.css" media="all" integrity="sha384-V4LTZIV34aJYJ8+FMv5z/XZBKGb72soKeaZoOnRL5q7uGtLCxtde/Eq+M2H4rRMR" />
+<link rel="stylesheet" href="/assets/sites/carousel-31751253.css" media="all" integrity="sha384-cc8XaIXiOUbYFCS+2grIs7Zc1oDqLyxnJfe1mSZXnOoZNma6zh/lLvu/QspT5mMD" />
+<link rel="stylesheet" href="/assets/sites/tile_layout-00d9a114.css" media="all" integrity="sha384-vx37uFNdkE3hTqpm+gKWV3+Sg2R0RMNnVJ5ZAHN3Y00Nne7IXR775769cSRdR9A0" />
+<link rel="stylesheet" href="/assets/sites/employee_connections-25e132ea.css" media="all" integrity="sha384-+Fy7nkjWz1Ls7QT4nyqxGeUlqCoifcmSLdr6t6AFObqaCKh2QfzstLSN/eQPtSuW" />
+<link rel="stylesheet" href="/assets/sites/sitemap-5494fd43.css" media="all" integrity="sha384-Ix7AL3GgpsNcuiGcefCsPZmdVuficn5NnVxbcro+lLmQ3Tk8PPCC05a4BoBlZSJr" />
+<link rel="stylesheet" href="/assets/sites/candidate_matching_assistant-b834eeb6.css" media="all" integrity="sha384-rvsBHKPvmwvp0eXrJbKZmhD009aSo7ZoN6gHTlK5xfEl3B7db50Al+SRLbZyRZU8" />
+<link rel="stylesheet" href="/assets/sites/pages_common_imports-65117a93.css" media="all" integrity="sha384-oGnttDAul52koQBTpdawGJFa/x12zyi7xBl/Ilct26Jtpc54Sl6sv6YnFisDZRJn" />
+<link rel="stylesheet" href="/assets/sites/themes/modern_bs5-2c81d5cb.css" media="all" integrity="sha384-ObrgTvP8C8lAwb69cCzC3b1iDV7SABZcoZx/Fz8gY30ANf5l8wyFETjpHH6jCQ7X" />
+
+<link rel="stylesheet" href="/themes/d04527e78bdbc448eefd50041ae4fb07/branded_stylesheet/branded_stylesheet-1769693660.css" id="branded_style" />
+<link rel="stylesheet" href="/themes/d04527e78bdbc448eefd50041ae4fb07/custom_stylesheet/custom_stylesheet-1769693660.css" id="custom_css" />
+<script src="https://583ec472ee7d.edge.sdk.awswaf.com/583ec472ee7d/ff2b87c263f8/challenge.js" defer="defer"></script>
+</head>
+<body>
+<!-- custom headers and menus -->
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid theme-three-nav-container">
+        <a class="navbar-brand" href="https://www.lsuhsc.edu/" target="_blank"><img class="brand-logo" src="https://d25wby5c7p9100.cloudfront.net/public/uploads/183cbb5a23593ea1a5c0fefe90afc1b4/images/files/a3dc946da476cd69524b6ddf4dbcaa34/large/InstHorizGW16x4in300dpi.png?1763588815" alt="LSU Health Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse pt-1" id="navbarCollapse">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/jobs/search" target="_top">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.lsuhsc.edu/aboutus/" target="_blank">Why LSU Health - New Orleans</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.lsuhsc.edu/news/default.aspx" target="_blank">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.lsuhsc.edu/administration/hrm/docs/LSUHSC%20Benefits%20Snapshot.pdf" target="_blank">Benefits</a>
+          </li>
+          </ul>
+<!--           <ul class="navbar-nav ml-auto">
+           
+				<span class="nav-item"><a class="nav-link" href="/me/settings"><i class="fa fa-cog"></i> Your settings</a></span>
+			
+          </li>
+        </ul> -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="existing-applicant-btn nav-link" href="https://secure.dc4.pageuppeople.com/apply/1218/aw/applicationForm/default.asp" target="_blank">Applicant Login</a>
+          </li>
+        </ul>
+      </div>
+  </div>
+</nav>
+
+  <div id="kiosk_mode_active" class="alert alert-success visible-in-kiosk-mode" role="alert">Kiosk mode</div>
+
+<div class="page-body page not-editing">
+  <script id="js_variables" nonce="D6nhfCe549Ewgl0vVzJssQ==">
+//<![CDATA[
+window.js_vars={};js_vars.priority_country_codes=["US","GB","AU","IE"];js_vars.cta_redirection_target="_blank";js_vars.google_maps={"api_key":"AIzaSyATBtM1jy-Lec8OmD6WxPs6A27Ub4Rt0BA"};js_vars.company={"uid":"183cbb5a23593ea1a5c0fefe90afc1b4"};js_vars.page={"uid":"1760af9df180c75d5210fd608cd75466"};js_vars.i18n={"local_time":{"date":{"day_names":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"abbr_day_names":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"month_names":["January","February","March","April","May","June","July","August","September","October","November","December"],"abbr_month_names":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]},"time":{"am":"am","pm":"pm"}},"enable_cookies":"We've detected that your browser cookies are disabled. Please enable your cookies to use this website","form_error":"Sorry! There was a problem sending this form"};js_vars.configuration={"field_mapping_names":["string_field_1","string_field_2","string_field_3","string_field_4","string_field_5","string_field_6","string_field_7","string_field_8","string_field_9","string_field_10","string_field_11","string_field_12","string_field_13","string_field_14","string_field_15","dropdown_field_1","dropdown_field_2","dropdown_field_3","dropdown_field_4","dropdown_field_5","dropdown_field_6","dropdown_field_7","dropdown_field_8","dropdown_field_9","dropdown_field_10","dropdown_field_11","dropdown_field_12","dropdown_field_13","dropdown_field_14","dropdown_field_15"],"job_alert_field_selection_limit":10};js_vars.migrate_cookie={"active":false,"from_domain":null};js_vars.heatmap_tracking={"active":false,"links":{"create":{"url":"/tracking/page_event_sequences.json"}}};js_vars.ct={"active":false,"links":{"create_view":{"url":"/tracking/view_events.json"},"create_video":{"url":"/tracking/video_events.json"}}};js_vars.bot=true;js_vars.links={"meta_data":{"url":"/me/metadata?company_id=183cbb5a23593ea1a5c0fefe90afc1b4&page_id=1760af9df180c75d5210fd608cd75466","method":"GET","format":"json"},"consent":{"url":"/me/consents?company_id=183cbb5a23593ea1a5c0fefe90afc1b4","method":"GET","format":"json"},"location":{"url":"/me/locations","method":"POST","format":"json"},"country_code":{"url":"/me/candidates/countries","method":"GET","format":"json"},"job_search":{"url":"https://careers.lsuhsc.edu/jobs/search"}};js_vars.nonce="D6nhfCe549Ewgl0vVzJssQ==";js_vars.third_party_libraries={};
+//]]>
+</script>
+  
+  <div class='page-rows'>
+    <div class="page-row hero-no-gutter" id="page_row_0" data-uid="0df26a93c3ef47051f23991b06be4f6a">
+      <div class="page-row-inner">
+        <div class="container-fluid page-row-container">
+          <div class="page-row-and-new-button">
+            <div class="row page-row-border">
+              
+                <div class="col-md-12">
+          <div class="block-wrapper " data-uid="e65182132921a8e3a98288c8a1e211f9">
+      <div class="block-image">
+  
+      <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(&#39;https://d25wby5c7p9100.cloudfront.net/public/uploads/183cbb5a23593ea1a5c0fefe90afc1b4/images/files/fe3dca12bff440e6501d1a3a7f97a006/large/LSUHSC_Building.jpg?1763588815&#39;);background-position: 50% 50%" class="page-block block-image-cover " id="page_block_e65182132921a8e3a98288c8a1e211f9" title="" aria-label="Building, Office Building, City, Urban, Shopping Mall, Condo, Convention Center, High Rise, Person, Car" data-open-newtab="false" data-controller="" data-action="click-&gt;blocks--linked-image#click keydown.enter-&gt;blocks--linked-image#click">
+  <span class="on-page-invisible-image">
+    <img alt="Building, Office Building, City, Urban, Shopping Mall, Condo, Convention Center, High Rise, Person, Car" loading="lazy" fetchpriority="auto" src="https://d25wby5c7p9100.cloudfront.net/public/uploads/183cbb5a23593ea1a5c0fefe90afc1b4/images/files/fe3dca12bff440e6501d1a3a7f97a006/large/LSUHSC_Building.jpg?1763588815" />
+  </span>
+  <div class="block-image-text" id="block_image_text_0_0">
+    <h1 style="text-align:center;">We're Hiring!</h1>
+</div></div>
+</div>
+
+    </div>
+  
+
+  </div>
+
+            </div>
+            
+          </div>
+        </div>
+      </div>
+</div>    <div class="page-row p-t-60 p-b-60" id="page_row_1" data-uid="73bc737a54da9de6ea7a71e90c518465">
+      <div class="page-row-inner">
+        <div class="container page-row-container">
+          <div class="page-row-and-new-button">
+            <div class="row page-row-border">
+              
+                <div class="col-md-12">
+          <div class="block-wrapper " data-uid="1fa8461f5c8e93a2af81eb10704079f5">
+      <div class='block-job-search-results' data-controller="jobs--search">
+  
+      <div class="page-block" id="page_block_1fa8461f5c8e93a2af81eb10704079f5" data-uid="1fa8461f5c8e93a2af81eb10704079f5" data-jobs--search-target="pageBlock">
+        <form class="job-search-results-form" data-jobs--search-target="form" data-action="jobs--search#submitForm" action="https://careers.lsuhsc.edu/jobs/search" accept-charset="UTF-8" method="get">
+  <input type="hidden" name="block_uid" id="block_uid" value="1fa8461f5c8e93a2af81eb10704079f5" />
+  <input type="hidden" name="block_index" id="block_index" value="0" />
+  <input type="hidden" name="page_row_uid" id="page_row_uid" value="73bc737a54da9de6ea7a71e90c518465" />
+  <input type="hidden" name="page_row_index" id="page_row_index" value="1" />
+  <input type="hidden" name="page_version_uid" id="page_version_uid" value="d2ff851f544ae8c5ba0c8f36cc71e9a6" />
+  <input type="hidden" name="page" id="page" value="1" class="historical" />
+  
+  <input type="hidden" name="location_uids" id="location_uids" />
+  <input type="hidden" name="sort" id="sort" data-jobs--search-target="sort" />
+  <div class="job-search-results job-search-side-filters">
+  <a class="visually-hidden-focusable sr-only sr-only-focusable" href="#jobs_search_results_1fa8461f5c8e93a2af81eb10704079f5">Skip to jobs search results</a>
+    <div class="row">
+      <div class="col-md-3">
+        <button name="button" type="button" class="btn btn-primary clear-filters-button" data-action="jobs--search#clearFilters">Clear Filters</button>
+
+        <div class="job-search-categories job-search-filter-groups" data-show-counts="true">
+
+  <section aria-label="Filter jobs">
+    
+    
+    
+    
+    
+    
+    
+      <div class="job-search-filter job-search-filter-employment-types" data-controller="jobs--filter">
+    <h4 class="job-search-filter-header employment_types">Employment Type</h4>
+    <label class="sr-only" data-turbo-permanent="true" for="search_employment_types">Search employment types</label>
+    <input type="text" name="search_employment_types" id="search_employment_types" value="" class="form-control m-b-10 search-filter" placeholder="Search" data-jobs--filter-target="searchFilter" data-action="keyup-&gt;jobs--filter#keyUp" data-turbo-permanent="true" />
+    <fieldset>
+      <span id="aria_counts_employment_type_1_0" class="sr-only visually-hidden" data-model-name="employment_types" data-jobs--filter-target="ariaVisibilityCount" data-template="%{count} filter options found" aria-live="polite" aria-atomic="true" aria-role="status">6 filter options found</span>
+      <legend class="sr-only" data-turbo-permanent>Employment Type</legend>
+      <ul class="list-unstyled job-search-list-items employment_types" role="list">
+          <li data-filter="employment_type" data-value="faculty" data-count="4" role="listitem" data-jobs--filter-target="listItem">
+            <label id="label_employment_type_1_0_0" for="filter_employment_type_1_0_0" data-value="9290c84c437e451fd084a786a6367d37" data-turbo-permanent>
+              <input type="checkbox" name="employment_type_uids[]" id="filter_employment_type_1_0_0" value="9290c84c437e451fd084a786a6367d37" class="job-search-results-filter historical" data-jobs--search-target="checkbox" data-action="jobs--search#filterChange" role="checkbox" />
+              <span class="job-search-list-item-label" title="Faculty">
+                Faculty
+</span>              <span class="job-search-list-item-count sr-only">
+                (4 items)
+</span>            </label>
+            <span class="badge float-right" id="employment_type_count_1_0_0" aria-hidden='true'>4</span>
+          </li>
+          <li data-filter="employment_type" data-value="fellows" data-count="8" role="listitem" data-jobs--filter-target="listItem">
+            <label id="label_employment_type_1_0_1" for="filter_employment_type_1_0_1" data-value="b6484347812cc80f0e64ba91fa833881" data-turbo-permanent>
+              <input type="checkbox" name="employment_type_uids[]" id="filter_employment_type_1_0_1" value="b6484347812cc80f0e64ba91fa833881" class="job-search-results-filter historical" data-jobs--search-target="checkbox" data-action="jobs--search#filterChange" role="checkbox" />
+              <span class="job-search-list-item-label" title="Fellows">
+                Fellows
+</span>              <span class="job-search-list-item-count sr-only">
+                (8 items)
+</span>            </label>
+            <span class="badge float-right" id="employment_type_count_1_0_1" aria-hidden='true'>8</span>
+          </li>
+          <li data-filter="employment_type" data-value="other academic" data-count="2" role="listitem" data-jobs--filter-target="listItem">
+            <label id="label_employment_type_1_0_2" for="filter_employment_type_1_0_2" data-value="f64e6bad19b4efbcbd6d96715670a1e6" data-turbo-permanent>
+              <input type="checkbox" name="employment_type_uids[]" id="filter_employment_type_1_0_2" value="f64e6bad19b4efbcbd6d96715670a1e6" class="job-search-results-filter historical" data-jobs--search-target="checkbox" data-action="jobs--search#filterChange" role="checkbox" />
+              <span class="job-search-list-item-label" title="Other Academic">
+                Other Academic
+</span>              <span class="job-search-list-item-count sr-only">
+                (2 items)
+</span>            </label>
+            <span class="badge float-right" id="employment_type_count_1_0_2" aria-hidden='true'>2</span>
+          </li>
+          <li data-filter="employment_type" data-value="staff- classified" data-count="0" role="listitem" data-jobs--filter-target="listItem">
+            <label id="label_employment_type_1_0_3" for="filter_employment_type_1_0_3" data-value="8fa7d9402230bea1ccbcc78e9febf78c" data-turbo-permanent>
+              <input type="checkbox" name="employment_type_uids[]" id="filter_employment_type_1_0_3" value="8fa7d9402230bea1ccbcc78e9febf78c" class="job-search-results-filter historical" data-jobs--search-target="checkbox" data-action="jobs--search#filterChange" role="checkbox" />
+              <span class="job-search-list-item-label" title="Staff- Classified">
+                Staff- Classified
+</span>              <span class="job-search-list-item-count sr-only">
+                (0 items)
+</span>            </label>
+            <span class="badge float-right" id="employment_type_count_1_0_3" aria-hidden='true'>0</span>
+          </li>
+          <li data-filter="employment_type" data-value="staff- unclassified" data-count="0" role="listitem" data-jobs--filter-target="listItem">
+            <label id="label_employment_type_1_0_4" for="filter_employment_type_1_0_4" data-value="868170d69d4584d002e36ef13f1437bc" data-turbo-permanent>
+              <input type="checkbox" name="employment_type_uids[]" id="filter_employment_type_1_0_4" value="868170d69d4584d002e36ef13f1437bc" class="job-search-results-filter historical" data-jobs--search-target="checkbox" data-action="jobs--search#filterChange" role="checkbox" />
+              <span class="job-search-list-item-label" title="Staff- Unclassified">
+                Staff- Unclassified
+</span>              <span class="job-search-list-item-count sr-only">
+                (0 items)
+</span>            </label>
+            <span class="badge float-right" id="employment_type_count_1_0_4" aria-hidden='true'>0</span>
+          </li>
+          <li data-filter="employment_type" data-value="student" data-count="0" role="listitem" data-jobs--filter-target="listItem">
+            <label id="label_employment_type_1_0_5" for="filter_employment_type_1_0_5" data-value="9d551abf6eeb7882869dd84c27895b43" data-turbo-permanent>
+              <input type="checkbox" name="employment_type_uids[]" id="filter_employment_type_1_0_5" value="9d551abf6eeb7882869dd84c27895b43" class="job-search-results-filter historical" data-jobs--search-target="checkbox" data-action="jobs--search#filterChange" role="checkbox" />
+              <span class="job-search-list-item-label" title="Student">
+                Student
+</span>              <span class="job-search-list-item-count sr-only">
+                (0 items)
+</span>            </label>
+            <span class="badge float-right" id="employment_type_count_1_0_5" aria-hidden='true'>0</span>
+          </li>
+      </ul>
+    </fieldset>
+  </div>
+
+    
+    
+    
+      <div class="job-search-filter job-search-filter-cities" data-controller="jobs--filter">
+    <h4 class="job-search-filter-header cities">City</h4>
+    <label class="sr-only" data-turbo-permanent="true" for="search_cities">Search cities</label>
+    <input type="text" name="search_cities" id="search_cities" value="" class="form-control m-b-10 search-filter" placeholder="Search" data-jobs--filter-target="searchFilter" data-action="keyup-&gt;jobs--filter#keyUp" data-turbo-permanent="true" />
+    <fieldset>
+      <span id="aria_counts_city_1_0" class="sr-only visually-hidden" data-model-name="cities" data-jobs--filter-target="ariaVisibilityCount" data-template="%{count} filter options found" aria-live="polite" aria-atomic="true" aria-role="status">6 filter options found</span>
+      <legend class="sr-only" data-turbo-permanent>City</legend>
+      <ul class="list-unstyled job-search-list-items cities" role="list">
+          <li data-filter="city" data-value="baton rouge" data-count="0" role="listitem" data-jobs--filter-target="listItem">
+            <label id="label_city_1_0_0" for="filter_city_1_0_0" data-value="Baton Rouge" data-turbo-permanent>
+              <input type="checkbox" name="cities[]" id="filter_city_1_0_0" value="Baton Rouge" class="job-search-results-filter historical" data-jobs--search-target="checkbox" data-action="jobs--search#filterChange" role="checkbox" />
+              <span class="job-search-list-item-label" title="Baton Rouge">
+                Baton Rouge
+</span>              <span class="job-search-list-item-count sr-only">
+                (0 items)
+</span>            </label>
+            <span class="badge float-right" id="city_count_1_0_0" aria-hidden='true'>0</span>
+          </li>
+          <li data-filter="city" data-value="bogalusa" data-count="0" role="listitem" data-jobs--filter-target="listItem">
+            <label id="label_city_1_0_1" for="filter_city_1_0_1" data-value="Bogalusa" data-turbo-permanent>
+              <input type="checkbox" name="cities[]" id="filter_city_1_0_1" value="Bogalusa" class="job-search-results-filter historical" data-jobs--search-target="checkbox" data-action="jobs--search#filterChange" role="checkbox" />
+              <span class="job-search-list-item-label" title="Bogalusa">
+                Bogalusa
+</span>              <span class="job-search-list-item-count sr-only">
+                (0 items)
+</span>            </label>
+            <span class="badge float-right" id="city_count_1_0_1" aria-hidden='true'>0</span>
+          </li>
+          <li data-filter="city" data-value="independence" data-count="0" role="listitem" data-jobs--filter-target="listItem">
+            <label id="label_city_1_0_2" for="filter_city_1_0_2" data-value="Independence" data-turbo-permanent>
+              <input type="checkbox" name="cities[]" id="filter_city_1_0_2" value="Independence" class="job-search-results-filter historical" data-jobs--search-target="checkbox" data-action="jobs--search#filterChange" role="checkbox" />
+              <span class="job-search-list-item-label" title="Independence">
+                Independence
+</span>              <span class="job-search-list-item-count sr-only">
+                (0 items)
+</span>            </label>
+            <span class="badge float-right" id="city_count_1_0_2" aria-hidden='true'>0</span>
+          </li>
+          <li data-filter="city" data-value="lafayette" data-count="0" role="listitem" data-jobs--filter-target="listItem">
+            <label id="label_city_1_0_3" for="filter_city_1_0_3" data-value="Lafayette" data-turbo-permanent>
+              <input type="checkbox" name="cities[]" id="filter_city_1_0_3" value="Lafayette" class="job-search-results-filter historical" data-jobs--search-target="checkbox" data-action="jobs--search#filterChange" role="checkbox" />
+              <span class="job-search-list-item-label" title="Lafayette">
+                Lafayette
+</span>              <span class="job-search-list-item-count sr-only">
+                (0 items)
+</span>            </label>
+            <span class="badge float-right" id="city_count_1_0_3" aria-hidden='true'>0</span>
+          </li>
+          <li data-filter="city" data-value="new orleans" data-count="14" role="listitem" data-jobs--filter-target="listItem">
+            <label id="label_city_1_0_4" for="filter_city_1_0_4" data-value="New Orleans" data-turbo-permanent>
+              <input type="checkbox" name="cities[]" id="filter_city_1_0_4" value="New Orleans" class="job-search-results-filter historical" data-jobs--search-target="checkbox" data-action="jobs--search#filterChange" role="checkbox" />
+              <span class="job-search-list-item-label" title="New Orleans">
+                New Orleans
+</span>              <span class="job-search-list-item-count sr-only">
+                (14 items)
+</span>            </label>
+            <span class="badge float-right" id="city_count_1_0_4" aria-hidden='true'>14</span>
+          </li>
+          <li data-filter="city" data-value="other" data-count="0" role="listitem" data-jobs--filter-target="listItem">
+            <label id="label_city_1_0_5" for="filter_city_1_0_5" data-value="Other" data-turbo-permanent>
+              <input type="checkbox" name="cities[]" id="filter_city_1_0_5" value="Other" class="job-search-results-filter historical" data-jobs--search-target="checkbox" data-action="jobs--search#filterChange" role="checkbox" />
+              <span class="job-search-list-item-label" title="Other">
+                Other
+</span>              <span class="job-search-list-item-count sr-only">
+                (0 items)
+</span>            </label>
+            <span class="badge float-right" id="city_count_1_0_5" aria-hidden='true'>0</span>
+          </li>
+      </ul>
+    </fieldset>
+  </div>
+
+    
+        <div class="job-search-filter job-search-filter-string-field-1-values" data-controller="jobs--filter">
+    <h4 class="job-search-filter-header string_field_1_values">Business Sector</h4>
+    <label class="sr-only" data-turbo-permanent="true" for="search_string_field_1_values">Search</label>
+    <input type="text" name="search_string_field_1_values" id="search_string_field_1_values" value="" class="form-control m-b-10 search-filter" placeholder="Search" data-jobs--filter-target="searchFilter" data-action="keyup-&gt;jobs--filter#keyUp" data-turbo-permanent="true" />
+    <fieldset>
+      <span id="aria_counts_string_field_1_1_0" class="sr-only visually-hidden" data-model-name="string_field_1_values" data-jobs--filter-target="ariaVisibilityCount" data-template="%{count} filter options found" aria-live="polite" aria-atomic="true" aria-role="status">8 filter options found</span>
+      <legend class="sr-only" data-turbo-permanent>Business Sector</legend>
+      <ul class="list-unstyled job-search-list-items string_field_1_values" role="list">
+          <li data-filter="string_field_1" data-value="academic affairs" data-count="0" role="listitem" data-jobs--filter-target="listItem">
+            <label id="label_string_field_1_1_0_0" for="filter_string_field_1_1_0_0" data-value="Academic Affairs" data-turbo-permanent>
+              <input type="checkbox" name="string_field_1[]" id="filter_string_field_1_1_0_0" value="Academic Affairs" class="job-search-results-filter historical" data-jobs--search-target="checkbox" data-action="jobs--search#filterChange" role="checkbox" />
+              <span class="job-search-list-item-label" title="Academic Affairs">
+                Academic Affairs
+</span>              <span class="job-search-list-item-count sr-only">
+                (0 items)
+</span>            </label>
+            <span class="badge float-right" id="string_field_1_count_1_0_0" aria-hidden='true'>0</span>
+          </li>
+          <li data-filter="string_field_1" data-value="administration" data-count="0" role="listitem" data-jobs--filter-target="listItem">
+            <label id="label_string_field_1_1_0_1" for="filter_string_field_1_1_0_1" data-value="Administration" data-turbo-permanent>
+              <input type="checkbox" name="string_field_1[]" id="filter_string_field_1_1_0_1" value="Administration" class="job-search-results-filter historical" data-jobs--search-target="checkbox" data-action="jobs--search#filterChange" role="checkbox" />
+              <span class="job-search-list-item-label" title="Administration">
+                Administration
+</span>              <span class="job-search-list-item-count sr-only">
+                (0 items)
+</span>            </label>
+            <span class="badge float-right" id="string_field_1_count_1_0_1" aria-hidden='true'>0</span>
+          </li>
+          <li data-filter="string_field_1" data-value="allied health" data-count="0" role="listitem" data-jobs--filter-target="listItem">
+            <label id="label_string_field_1_1_0_2" for="filter_string_field_1_1_0_2" data-value="Allied Health" data-turbo-permanent>
+              <input type="checkbox" name="string_field_1[]" id="filter_string_field_1_1_0_2" value="Allied Health" class="job-search-results-filter historical" data-jobs--search-target="checkbox" data-action="jobs--search#filterChange" role="checkbox" />
+              <span class="job-search-list-item-label" title="Allied Health">
+                Allied Health
+</span>              <span class="job-search-list-item-count sr-only">
+                (0 items)
+</span>            </label>
+            <span class="badge float-right" id="string_field_1_count_1_0_2" aria-hidden='true'>0</span>
+          </li>
+          <li data-filter="string_field_1" data-value="community &amp; security affairs" data-count="0" role="listitem" data-jobs--filter-target="listItem">
+            <label id="label_string_field_1_1_0_3" for="filter_string_field_1_1_0_3" data-value="Community &amp; Security Affairs" data-turbo-permanent>
+              <input type="checkbox" name="string_field_1[]" id="filter_string_field_1_1_0_3" value="Community &amp; Security Affairs" class="job-search-results-filter historical" data-jobs--search-target="checkbox" data-action="jobs--search#filterChange" role="checkbox" />
+              <span class="job-search-list-item-label" title="Community &amp; Security Affairs">
+                Community &amp; Security Affairs
+</span>              <span class="job-search-list-item-count sr-only">
+                (0 items)
+</span>            </label>
+            <span class="badge float-right" id="string_field_1_count_1_0_3" aria-hidden='true'>0</span>
+          </li>
+          <li data-filter="string_field_1" data-value="dentistry" data-count="0" role="listitem" data-jobs--filter-target="listItem">
+            <label id="label_string_field_1_1_0_4" for="filter_string_field_1_1_0_4" data-value="Dentistry" data-turbo-permanent>
+              <input type="checkbox" name="string_field_1[]" id="filter_string_field_1_1_0_4" value="Dentistry" class="job-search-results-filter historical" data-jobs--search-target="checkbox" data-action="jobs--search#filterChange" role="checkbox" />
+              <span class="job-search-list-item-label" title="Dentistry">
+                Dentistry
+</span>              <span class="job-search-list-item-count sr-only">
+                (0 items)
+</span>            </label>
+            <span class="badge float-right" id="string_field_1_count_1_0_4" aria-hidden='true'>0</span>
+          </li>
+          <li data-filter="string_field_1" data-value="medicine" data-count="12" role="listitem" data-jobs--filter-target="listItem">
+            <label id="label_string_field_1_1_0_5" for="filter_string_field_1_1_0_5" data-value="Medicine" data-turbo-permanent>
+              <input type="checkbox" name="string_field_1[]" id="filter_string_field_1_1_0_5" value="Medicine" class="job-search-results-filter historical" data-jobs--search-target="checkbox" data-action="jobs--search#filterChange" role="checkbox" />
+              <span class="job-search-list-item-label" title="Medicine">
+                Medicine
+</span>              <span class="job-search-list-item-count sr-only">
+                (12 items)
+</span>            </label>
+            <span class="badge float-right" id="string_field_1_count_1_0_5" aria-hidden='true'>12</span>
+          </li>
+          <li data-filter="string_field_1" data-value="nursing" data-count="2" role="listitem" data-jobs--filter-target="listItem">
+            <label id="label_string_field_1_1_0_6" for="filter_string_field_1_1_0_6" data-value="Nursing" data-turbo-permanent>
+              <input type="checkbox" name="string_field_1[]" id="filter_string_field_1_1_0_6" value="Nursing" class="job-search-results-filter historical" data-jobs--search-target="checkbox" data-action="jobs--search#filterChange" role="checkbox" />
+              <span class="job-search-list-item-label" title="Nursing">
+                Nursing
+</span>              <span class="job-search-list-item-count sr-only">
+                (2 items)
+</span>            </label>
+            <span class="badge float-right" id="string_field_1_count_1_0_6" aria-hidden='true'>2</span>
+          </li>
+          <li data-filter="string_field_1" data-value="public health" data-count="0" role="listitem" data-jobs--filter-target="listItem">
+            <label id="label_string_field_1_1_0_7" for="filter_string_field_1_1_0_7" data-value="Public Health" data-turbo-permanent>
+              <input type="checkbox" name="string_field_1[]" id="filter_string_field_1_1_0_7" value="Public Health" class="job-search-results-filter historical" data-jobs--search-target="checkbox" data-action="jobs--search#filterChange" role="checkbox" />
+              <span class="job-search-list-item-label" title="Public Health">
+                Public Health
+</span>              <span class="job-search-list-item-count sr-only">
+                (0 items)
+</span>            </label>
+            <span class="badge float-right" id="string_field_1_count_1_0_7" aria-hidden='true'>0</span>
+          </li>
+      </ul>
+    </fieldset>
+  </div>
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+  </section>
+</div>
+      </div>
+      <div class="col-md-9 col-xs-12 col-12">
+        <div class="job-search-results">
+          <div class="job-search-control">
+  <div class="row">
+    <div class="col">
+      <label class="sr-only" for="search_control_query_1_0">Search by job title, location, department, category, etc.</label>
+      <div class="input-group">
+        <input type="text" name="query" id="search_control_query_1_0" value="postdoctoral" class="form-control historical" maxlength="100" placeholder="Search by job title, location, department, category, etc." autocomplete="off" data-autocomplete-enabled="false" data-jobs--search-target="freetext" />
+        <span class="input-group-btn">
+          <button name="button" type="submit" class="btn btn-primary" id="search_control_button_1_0">Search</button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+          <div class="job-search-results-table job-search-results-content" role="region" aria-live="polite">
+            <div class="row job-search-results-sub-search-actions">
+              <div class="col-3 job-search-results-dropdown">
+                
+              </div>
+            </div>
+            <div id="jobs_search_results_1fa8461f5c8e93a2af81eb10704079f5" data-jobs--search-target="jobsSearchResults" aria-live="polite" aria-label="Jobs search results" tabindex="0" role="region">
+              
+<div class="row job-search-results-card-row">
+    <article class="col-12 job-search-results-card-col" aria-labelledby="link_job_title_1_0_0">
+      <div class="card job-search-results-card">
+        <div class="card-body job-search-results-card-body">
+          <h3 class="card-title job-search-results-card-title">
+            <a id="link_job_title_1_0_0" href="https://careers.lsuhsc.edu/jobs/research-fellow-new-orleans-louisiana-united-states-9ffa023a-b707-466e-923a-34716e9b6eef">RESEARCH FELLOW</a>
+</h3>          <div class="job-component-details job-component-details-d26b6e3b11bd97cd2d4ca8d6bd3bbbf2">
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-requisition-identifier">
+    <i class="fas fa-passport" aria-hidden="true" aria-label="Requisition identifier" title="Requisition identifier"></i>
+    <span id="requisition_identifier_icon_text_d26b6e3b11bd97cd2d4ca8d6bd3bbbf2_1fa8461f5c8e93a2af81eb10704079f5">
+      497349
+</span></li>
+
+        
+
+        
+
+</ul>  </div>
+
+  <div class="job-component-list job-component-list-location">
+  <ul>
+        <li class="job-component-icon-and-text job-component-location">
+    <i class="fas fa-location-arrow" aria-hidden="true" aria-label="Location" title="Location"></i>
+    <span id="location_icon_text_d26b6e3b11bd97cd2d4ca8d6bd3bbbf2_1fa8461f5c8e93a2af81eb10704079f5">
+      New Orleans, Louisiana
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  <div class="job-component-list job-component-list-employment_type">
+  <ul>
+        <li class="job-component-icon-and-text job-component-employment-type">
+    <i class="far fa-clock" aria-hidden="true" aria-label="Employment type" title="Employment type"></i>
+    <span id="employment_type_icon_text_d26b6e3b11bd97cd2d4ca8d6bd3bbbf2_1fa8461f5c8e93a2af81eb10704079f5">
+      Fellows
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  
+  
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-string-field-1">
+    <i class="fas fa-asterisk" aria-hidden="true" aria-label="Business Sector" title="Business Sector"></i>
+    <span id="string_field_1_icon_text_d26b6e3b11bd97cd2d4ca8d6bd3bbbf2_1fa8461f5c8e93a2af81eb10704079f5">
+      Medicine
+</span></li>
+
+</ul>  </div>
+
+  
+</div>
+            <p class="card-text job-search-results-summary" id="summary_1_0_0">A Postdoctoral Research Fellow position is available at the LSU Health Sciences Center Neuroscience Center of Excellence.</p>
+        </div>
+        <div class="card-footer job-search-results-footer">
+          <a aria-label="Read more: RESEARCH FELLOW" id="link_read_more_1_0_0" href="https://careers.lsuhsc.edu/jobs/research-fellow-new-orleans-louisiana-united-states-9ffa023a-b707-466e-923a-34716e9b6eef">
+            Read more
+            <i class="fas fa-chevron-right"></i>
+</a>        </div>
+      </div>
+</article>    <article class="col-12 job-search-results-card-col" aria-labelledby="link_job_title_1_0_1">
+      <div class="card job-search-results-card">
+        <div class="card-body job-search-results-card-body">
+          <h3 class="card-title job-search-results-card-title">
+            <a id="link_job_title_1_0_1" href="https://careers.lsuhsc.edu/jobs/research-fellow-new-orleans-louisiana-united-states-384ffe96-c17d-4f3e-b227-ebe614ce4df9">RESEARCH FELLOW</a>
+</h3>          <div class="job-component-details job-component-details-2c5ab8bbec391c75e83ab333214a9bb0">
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-requisition-identifier">
+    <i class="fas fa-passport" aria-hidden="true" aria-label="Requisition identifier" title="Requisition identifier"></i>
+    <span id="requisition_identifier_icon_text_2c5ab8bbec391c75e83ab333214a9bb0_1fa8461f5c8e93a2af81eb10704079f5">
+      497334
+</span></li>
+
+        
+
+        
+
+</ul>  </div>
+
+  <div class="job-component-list job-component-list-location">
+  <ul>
+        <li class="job-component-icon-and-text job-component-location">
+    <i class="fas fa-location-arrow" aria-hidden="true" aria-label="Location" title="Location"></i>
+    <span id="location_icon_text_2c5ab8bbec391c75e83ab333214a9bb0_1fa8461f5c8e93a2af81eb10704079f5">
+      New Orleans, Louisiana
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  <div class="job-component-list job-component-list-employment_type">
+  <ul>
+        <li class="job-component-icon-and-text job-component-employment-type">
+    <i class="far fa-clock" aria-hidden="true" aria-label="Employment type" title="Employment type"></i>
+    <span id="employment_type_icon_text_2c5ab8bbec391c75e83ab333214a9bb0_1fa8461f5c8e93a2af81eb10704079f5">
+      Fellows
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  
+  
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-string-field-1">
+    <i class="fas fa-asterisk" aria-hidden="true" aria-label="Business Sector" title="Business Sector"></i>
+    <span id="string_field_1_icon_text_2c5ab8bbec391c75e83ab333214a9bb0_1fa8461f5c8e93a2af81eb10704079f5">
+      Medicine
+</span></li>
+
+</ul>  </div>
+
+  
+</div>
+            <p class="card-text job-search-results-summary" id="summary_1_0_1">A Postdoctoral Research Fellow position is available at the LSU Health Sciences Center, Neuroscience Center of Excellence.</p>
+        </div>
+        <div class="card-footer job-search-results-footer">
+          <a aria-label="Read more: RESEARCH FELLOW" id="link_read_more_1_0_1" href="https://careers.lsuhsc.edu/jobs/research-fellow-new-orleans-louisiana-united-states-384ffe96-c17d-4f3e-b227-ebe614ce4df9">
+            Read more
+            <i class="fas fa-chevron-right"></i>
+</a>        </div>
+      </div>
+</article>    <article class="col-12 job-search-results-card-col" aria-labelledby="link_job_title_1_0_2">
+      <div class="card job-search-results-card">
+        <div class="card-body job-search-results-card-body">
+          <h3 class="card-title job-search-results-card-title">
+            <a id="link_job_title_1_0_2" href="https://careers.lsuhsc.edu/jobs/research-fellow-new-orleans-louisiana-united-states-3dedeb56-463e-4ab2-91cb-2d1a05e5abdd">RESEARCH FELLOW</a>
+</h3>          <div class="job-component-details job-component-details-64658294210e8a15e6636c33979fadd8">
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-requisition-identifier">
+    <i class="fas fa-passport" aria-hidden="true" aria-label="Requisition identifier" title="Requisition identifier"></i>
+    <span id="requisition_identifier_icon_text_64658294210e8a15e6636c33979fadd8_1fa8461f5c8e93a2af81eb10704079f5">
+      497480
+</span></li>
+
+        
+
+        
+
+</ul>  </div>
+
+  <div class="job-component-list job-component-list-location">
+  <ul>
+        <li class="job-component-icon-and-text job-component-location">
+    <i class="fas fa-location-arrow" aria-hidden="true" aria-label="Location" title="Location"></i>
+    <span id="location_icon_text_64658294210e8a15e6636c33979fadd8_1fa8461f5c8e93a2af81eb10704079f5">
+      New Orleans, Louisiana
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  <div class="job-component-list job-component-list-employment_type">
+  <ul>
+        <li class="job-component-icon-and-text job-component-employment-type">
+    <i class="far fa-clock" aria-hidden="true" aria-label="Employment type" title="Employment type"></i>
+    <span id="employment_type_icon_text_64658294210e8a15e6636c33979fadd8_1fa8461f5c8e93a2af81eb10704079f5">
+      Fellows
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  
+  
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-string-field-1">
+    <i class="fas fa-asterisk" aria-hidden="true" aria-label="Business Sector" title="Business Sector"></i>
+    <span id="string_field_1_icon_text_64658294210e8a15e6636c33979fadd8_1fa8461f5c8e93a2af81eb10704079f5">
+      Medicine
+</span></li>
+
+</ul>  </div>
+
+  
+</div>
+            <p class="card-text job-search-results-summary" id="summary_1_0_2">The Department of Cell Biology and Anatomy seeks a postdoctoral fellow with a PhD in Physics, Engineering, Computational Neuroscience or a related field This individual will collaborate with Dr. Carmen Canavier on computationally intensive projects</p>
+        </div>
+        <div class="card-footer job-search-results-footer">
+          <a aria-label="Read more: RESEARCH FELLOW" id="link_read_more_1_0_2" href="https://careers.lsuhsc.edu/jobs/research-fellow-new-orleans-louisiana-united-states-3dedeb56-463e-4ab2-91cb-2d1a05e5abdd">
+            Read more
+            <i class="fas fa-chevron-right"></i>
+</a>        </div>
+      </div>
+</article>    <article class="col-12 job-search-results-card-col" aria-labelledby="link_job_title_1_0_3">
+      <div class="card job-search-results-card">
+        <div class="card-body job-search-results-card-body">
+          <h3 class="card-title job-search-results-card-title">
+            <a id="link_job_title_1_0_3" href="https://careers.lsuhsc.edu/jobs/research-fellow-new-orleans-louisiana-united-states-0fb9dba1-e190-49b0-8b77-8eddfa5b6455">RESEARCH FELLOW</a>
+</h3>          <div class="job-component-details job-component-details-d72b84d6713b96ac5b01e5cf2ae6fe30">
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-requisition-identifier">
+    <i class="fas fa-passport" aria-hidden="true" aria-label="Requisition identifier" title="Requisition identifier"></i>
+    <span id="requisition_identifier_icon_text_d72b84d6713b96ac5b01e5cf2ae6fe30_1fa8461f5c8e93a2af81eb10704079f5">
+      497386
+</span></li>
+
+        
+
+        
+
+</ul>  </div>
+
+  <div class="job-component-list job-component-list-location">
+  <ul>
+        <li class="job-component-icon-and-text job-component-location">
+    <i class="fas fa-location-arrow" aria-hidden="true" aria-label="Location" title="Location"></i>
+    <span id="location_icon_text_d72b84d6713b96ac5b01e5cf2ae6fe30_1fa8461f5c8e93a2af81eb10704079f5">
+      New Orleans, Louisiana
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  <div class="job-component-list job-component-list-employment_type">
+  <ul>
+        <li class="job-component-icon-and-text job-component-employment-type">
+    <i class="far fa-clock" aria-hidden="true" aria-label="Employment type" title="Employment type"></i>
+    <span id="employment_type_icon_text_d72b84d6713b96ac5b01e5cf2ae6fe30_1fa8461f5c8e93a2af81eb10704079f5">
+      Fellows
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  
+  
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-string-field-1">
+    <i class="fas fa-asterisk" aria-hidden="true" aria-label="Business Sector" title="Business Sector"></i>
+    <span id="string_field_1_icon_text_d72b84d6713b96ac5b01e5cf2ae6fe30_1fa8461f5c8e93a2af81eb10704079f5">
+      Medicine
+</span></li>
+
+</ul>  </div>
+
+  
+</div>
+            <p class="card-text job-search-results-summary" id="summary_1_0_3">LSU Health Sciences Center New Orleans is seeking a highly motivated Postdoctoral Fellow to join the laboratory of Dr. Rebecca Buckley in the Department of Genetics.</p>
+        </div>
+        <div class="card-footer job-search-results-footer">
+          <a aria-label="Read more: RESEARCH FELLOW" id="link_read_more_1_0_3" href="https://careers.lsuhsc.edu/jobs/research-fellow-new-orleans-louisiana-united-states-0fb9dba1-e190-49b0-8b77-8eddfa5b6455">
+            Read more
+            <i class="fas fa-chevron-right"></i>
+</a>        </div>
+      </div>
+</article>    <article class="col-12 job-search-results-card-col" aria-labelledby="link_job_title_1_0_4">
+      <div class="card job-search-results-card">
+        <div class="card-body job-search-results-card-body">
+          <h3 class="card-title job-search-results-card-title">
+            <a id="link_job_title_1_0_4" href="https://careers.lsuhsc.edu/jobs/research-fellow-new-orleans-louisiana-united-states-460e7a75-9687-4174-a24e-79e95600365b">RESEARCH FELLOW</a>
+</h3>          <div class="job-component-details job-component-details-21a0e4dfcebc0782677e60a235b88086">
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-requisition-identifier">
+    <i class="fas fa-passport" aria-hidden="true" aria-label="Requisition identifier" title="Requisition identifier"></i>
+    <span id="requisition_identifier_icon_text_21a0e4dfcebc0782677e60a235b88086_1fa8461f5c8e93a2af81eb10704079f5">
+      497122
+</span></li>
+
+        
+
+        
+
+</ul>  </div>
+
+  <div class="job-component-list job-component-list-location">
+  <ul>
+        <li class="job-component-icon-and-text job-component-location">
+    <i class="fas fa-location-arrow" aria-hidden="true" aria-label="Location" title="Location"></i>
+    <span id="location_icon_text_21a0e4dfcebc0782677e60a235b88086_1fa8461f5c8e93a2af81eb10704079f5">
+      New Orleans, Louisiana
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  <div class="job-component-list job-component-list-employment_type">
+  <ul>
+        <li class="job-component-icon-and-text job-component-employment-type">
+    <i class="far fa-clock" aria-hidden="true" aria-label="Employment type" title="Employment type"></i>
+    <span id="employment_type_icon_text_21a0e4dfcebc0782677e60a235b88086_1fa8461f5c8e93a2af81eb10704079f5">
+      Fellows
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  
+  
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-string-field-1">
+    <i class="fas fa-asterisk" aria-hidden="true" aria-label="Business Sector" title="Business Sector"></i>
+    <span id="string_field_1_icon_text_21a0e4dfcebc0782677e60a235b88086_1fa8461f5c8e93a2af81eb10704079f5">
+      Medicine
+</span></li>
+
+</ul>  </div>
+
+  
+</div>
+            <p class="card-text job-search-results-summary" id="summary_1_0_4">A Postdoctoral Fellow position is available at the LSU Health Sciences Center Neuroscience Center of Excellence. Our laboratory investigates the molecular and cellular mechanisms underlying aging, synaptic structural plasticity, and neurodegeneration using complementary Drosophila and mouse models.</p>
+        </div>
+        <div class="card-footer job-search-results-footer">
+          <a aria-label="Read more: RESEARCH FELLOW" id="link_read_more_1_0_4" href="https://careers.lsuhsc.edu/jobs/research-fellow-new-orleans-louisiana-united-states-460e7a75-9687-4174-a24e-79e95600365b">
+            Read more
+            <i class="fas fa-chevron-right"></i>
+</a>        </div>
+      </div>
+</article>    <article class="col-12 job-search-results-card-col" aria-labelledby="link_job_title_1_0_5">
+      <div class="card job-search-results-card">
+        <div class="card-body job-search-results-card-body">
+          <h3 class="card-title job-search-results-card-title">
+            <a id="link_job_title_1_0_5" href="https://careers.lsuhsc.edu/jobs/staff-scientist-sr-new-orleans-louisiana-united-states-e56a5bbe-54ef-448e-bff8-a88a8e35f55b">STAFF SCIENTIST SR</a>
+</h3>          <div class="job-component-details job-component-details-0035720525f8c6f5c19ff4f9cccbc5d9">
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-requisition-identifier">
+    <i class="fas fa-passport" aria-hidden="true" aria-label="Requisition identifier" title="Requisition identifier"></i>
+    <span id="requisition_identifier_icon_text_0035720525f8c6f5c19ff4f9cccbc5d9_1fa8461f5c8e93a2af81eb10704079f5">
+      497079
+</span></li>
+
+        
+
+        
+
+</ul>  </div>
+
+  <div class="job-component-list job-component-list-location">
+  <ul>
+        <li class="job-component-icon-and-text job-component-location">
+    <i class="fas fa-location-arrow" aria-hidden="true" aria-label="Location" title="Location"></i>
+    <span id="location_icon_text_0035720525f8c6f5c19ff4f9cccbc5d9_1fa8461f5c8e93a2af81eb10704079f5">
+      New Orleans, Louisiana
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  <div class="job-component-list job-component-list-employment_type">
+  <ul>
+        <li class="job-component-icon-and-text job-component-employment-type">
+    <i class="far fa-clock" aria-hidden="true" aria-label="Employment type" title="Employment type"></i>
+    <span id="employment_type_icon_text_0035720525f8c6f5c19ff4f9cccbc5d9_1fa8461f5c8e93a2af81eb10704079f5">
+      Other Academic
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  
+  
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-string-field-1">
+    <i class="fas fa-asterisk" aria-hidden="true" aria-label="Business Sector" title="Business Sector"></i>
+    <span id="string_field_1_icon_text_0035720525f8c6f5c19ff4f9cccbc5d9_1fa8461f5c8e93a2af81eb10704079f5">
+      Medicine
+</span></li>
+
+</ul>  </div>
+
+  
+</div>
+            <p class="card-text job-search-results-summary" id="summary_1_0_5">The Department of Cell Biology and Anatomy seeks a senior staff scientist with a PhD in Physics, Engineering or a related field as well as a minimum of three years postdoctoral work in a biologically related field.  This individual will collaborate with Dr. Carmen Canavier on computationally intensive projects and will be expected to develop collaborations with other LSUHSC  faculty that require the successful candidate’s computational expertise. These collaborative efforts are expected to result in extramural funding.
+
+Required qualifications include proficiency in Neuron and/or Netpyne Software Packages, excellent Python programming skills, proficiency in working in the Linux Environment, and proficiency in utilizing HPC clusters and SLURM scripts. Experience with large scale neural simulations and bifurcation analysis of the genesis of oscillations is preferred but not required.
+
+</p>
+        </div>
+        <div class="card-footer job-search-results-footer">
+          <a aria-label="Read more: STAFF SCIENTIST SR" id="link_read_more_1_0_5" href="https://careers.lsuhsc.edu/jobs/staff-scientist-sr-new-orleans-louisiana-united-states-e56a5bbe-54ef-448e-bff8-a88a8e35f55b">
+            Read more
+            <i class="fas fa-chevron-right"></i>
+</a>        </div>
+      </div>
+</article>    <article class="col-12 job-search-results-card-col" aria-labelledby="link_job_title_1_0_6">
+      <div class="card job-search-results-card">
+        <div class="card-body job-search-results-card-body">
+          <h3 class="card-title job-search-results-card-title">
+            <a id="link_job_title_1_0_6" href="https://careers.lsuhsc.edu/jobs/research-fellow-new-orleans-louisiana-united-states-3b8e1013-b770-4a34-af51-82de13a7a951">RESEARCH FELLOW</a>
+</h3>          <div class="job-component-details job-component-details-7c97f41c576c27904be684f3a6445203">
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-requisition-identifier">
+    <i class="fas fa-passport" aria-hidden="true" aria-label="Requisition identifier" title="Requisition identifier"></i>
+    <span id="requisition_identifier_icon_text_7c97f41c576c27904be684f3a6445203_1fa8461f5c8e93a2af81eb10704079f5">
+      497496
+</span></li>
+
+        
+
+        
+
+</ul>  </div>
+
+  <div class="job-component-list job-component-list-location">
+  <ul>
+        <li class="job-component-icon-and-text job-component-location">
+    <i class="fas fa-location-arrow" aria-hidden="true" aria-label="Location" title="Location"></i>
+    <span id="location_icon_text_7c97f41c576c27904be684f3a6445203_1fa8461f5c8e93a2af81eb10704079f5">
+      New Orleans, Louisiana
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  <div class="job-component-list job-component-list-employment_type">
+  <ul>
+        <li class="job-component-icon-and-text job-component-employment-type">
+    <i class="far fa-clock" aria-hidden="true" aria-label="Employment type" title="Employment type"></i>
+    <span id="employment_type_icon_text_7c97f41c576c27904be684f3a6445203_1fa8461f5c8e93a2af81eb10704079f5">
+      Fellows
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  
+  
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-string-field-1">
+    <i class="fas fa-asterisk" aria-hidden="true" aria-label="Business Sector" title="Business Sector"></i>
+    <span id="string_field_1_icon_text_7c97f41c576c27904be684f3a6445203_1fa8461f5c8e93a2af81eb10704079f5">
+      Medicine
+</span></li>
+
+</ul>  </div>
+
+  
+</div>
+            <p class="card-text job-search-results-summary" id="summary_1_0_6">The School of Medicine at the Louisiana State University Health Sciences Center (LSUHSC) in New Orleans seeks applications for a postdoctoral research fellow position to perform experiments related to the central nervous system’s contribution to blood pressure regulation and gene modifications leading to neuro-cardiovascular dysregulation.</p>
+        </div>
+        <div class="card-footer job-search-results-footer">
+          <a aria-label="Read more: RESEARCH FELLOW" id="link_read_more_1_0_6" href="https://careers.lsuhsc.edu/jobs/research-fellow-new-orleans-louisiana-united-states-3b8e1013-b770-4a34-af51-82de13a7a951">
+            Read more
+            <i class="fas fa-chevron-right"></i>
+</a>        </div>
+      </div>
+</article>    <article class="col-12 job-search-results-card-col" aria-labelledby="link_job_title_1_0_7">
+      <div class="card job-search-results-card">
+        <div class="card-body job-search-results-card-body">
+          <h3 class="card-title job-search-results-card-title">
+            <a id="link_job_title_1_0_7" href="https://careers.lsuhsc.edu/jobs/research-fellow-new-orleans-louisiana-united-states-0faf871b-1789-4ef8-94ef-9ec4ea4c4685">RESEARCH FELLOW</a>
+</h3>          <div class="job-component-details job-component-details-af17850c4dbf3cdf5eb5f8ee701388b9">
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-requisition-identifier">
+    <i class="fas fa-passport" aria-hidden="true" aria-label="Requisition identifier" title="Requisition identifier"></i>
+    <span id="requisition_identifier_icon_text_af17850c4dbf3cdf5eb5f8ee701388b9_1fa8461f5c8e93a2af81eb10704079f5">
+      497387
+</span></li>
+
+        
+
+        
+
+</ul>  </div>
+
+  <div class="job-component-list job-component-list-location">
+  <ul>
+        <li class="job-component-icon-and-text job-component-location">
+    <i class="fas fa-location-arrow" aria-hidden="true" aria-label="Location" title="Location"></i>
+    <span id="location_icon_text_af17850c4dbf3cdf5eb5f8ee701388b9_1fa8461f5c8e93a2af81eb10704079f5">
+      New Orleans, Louisiana
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  <div class="job-component-list job-component-list-employment_type">
+  <ul>
+        <li class="job-component-icon-and-text job-component-employment-type">
+    <i class="far fa-clock" aria-hidden="true" aria-label="Employment type" title="Employment type"></i>
+    <span id="employment_type_icon_text_af17850c4dbf3cdf5eb5f8ee701388b9_1fa8461f5c8e93a2af81eb10704079f5">
+      Fellows
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  
+  
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-string-field-1">
+    <i class="fas fa-asterisk" aria-hidden="true" aria-label="Business Sector" title="Business Sector"></i>
+    <span id="string_field_1_icon_text_af17850c4dbf3cdf5eb5f8ee701388b9_1fa8461f5c8e93a2af81eb10704079f5">
+      Medicine
+</span></li>
+
+</ul>  </div>
+
+  
+</div>
+            <p class="card-text job-search-results-summary" id="summary_1_0_7">The NSF EPSCoR CREST Center for Adaptive Nanomotor Design at LSU Health Sciences Center in New Orleans is accepting applications for a Research Fellow to join the Department of Genetics.</p>
+        </div>
+        <div class="card-footer job-search-results-footer">
+          <a aria-label="Read more: RESEARCH FELLOW" id="link_read_more_1_0_7" href="https://careers.lsuhsc.edu/jobs/research-fellow-new-orleans-louisiana-united-states-0faf871b-1789-4ef8-94ef-9ec4ea4c4685">
+            Read more
+            <i class="fas fa-chevron-right"></i>
+</a>        </div>
+      </div>
+</article>    <article class="col-12 job-search-results-card-col" aria-labelledby="link_job_title_1_0_8">
+      <div class="card job-search-results-card">
+        <div class="card-body job-search-results-card-body">
+          <h3 class="card-title job-search-results-card-title">
+            <a id="link_job_title_1_0_8" href="https://careers.lsuhsc.edu/jobs/research-fellow-new-orleans-louisiana-united-states-8f961f7a-b996-4fe4-97e6-8cfcd7a8e076">RESEARCH FELLOW</a>
+</h3>          <div class="job-component-details job-component-details-074bfbcd0bbfa83a4cf3d7dd29ae55fe">
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-requisition-identifier">
+    <i class="fas fa-passport" aria-hidden="true" aria-label="Requisition identifier" title="Requisition identifier"></i>
+    <span id="requisition_identifier_icon_text_074bfbcd0bbfa83a4cf3d7dd29ae55fe_1fa8461f5c8e93a2af81eb10704079f5">
+      497428
+</span></li>
+
+        
+
+        
+
+</ul>  </div>
+
+  <div class="job-component-list job-component-list-location">
+  <ul>
+        <li class="job-component-icon-and-text job-component-location">
+    <i class="fas fa-location-arrow" aria-hidden="true" aria-label="Location" title="Location"></i>
+    <span id="location_icon_text_074bfbcd0bbfa83a4cf3d7dd29ae55fe_1fa8461f5c8e93a2af81eb10704079f5">
+      New Orleans, Louisiana
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  <div class="job-component-list job-component-list-employment_type">
+  <ul>
+        <li class="job-component-icon-and-text job-component-employment-type">
+    <i class="far fa-clock" aria-hidden="true" aria-label="Employment type" title="Employment type"></i>
+    <span id="employment_type_icon_text_074bfbcd0bbfa83a4cf3d7dd29ae55fe_1fa8461f5c8e93a2af81eb10704079f5">
+      Fellows
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  
+  
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-string-field-1">
+    <i class="fas fa-asterisk" aria-hidden="true" aria-label="Business Sector" title="Business Sector"></i>
+    <span id="string_field_1_icon_text_074bfbcd0bbfa83a4cf3d7dd29ae55fe_1fa8461f5c8e93a2af81eb10704079f5">
+      Medicine
+</span></li>
+
+</ul>  </div>
+
+  
+</div>
+            <p class="card-text job-search-results-summary" id="summary_1_0_8">The NSF EPSCoR-funded Center for Nanomotor Development at LSU Health Sciences Center in New Orleans is seeking a highly motivated Research Fellow.</p>
+        </div>
+        <div class="card-footer job-search-results-footer">
+          <a aria-label="Read more: RESEARCH FELLOW" id="link_read_more_1_0_8" href="https://careers.lsuhsc.edu/jobs/research-fellow-new-orleans-louisiana-united-states-8f961f7a-b996-4fe4-97e6-8cfcd7a8e076">
+            Read more
+            <i class="fas fa-chevron-right"></i>
+</a>        </div>
+      </div>
+</article>    <article class="col-12 job-search-results-card-col" aria-labelledby="link_job_title_1_0_9">
+      <div class="card job-search-results-card">
+        <div class="card-body job-search-results-card-body">
+          <h3 class="card-title job-search-results-card-title">
+            <a id="link_job_title_1_0_9" href="https://careers.lsuhsc.edu/jobs/staff-scientist-or-staff-scientist-sr-new-orleans-louisiana-united-states">STAFF SCIENTIST OR STAFF SCIENTIST SR.</a>
+</h3>          <div class="job-component-details job-component-details-c628aafee494c6964c1d40935f3df7c8">
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-requisition-identifier">
+    <i class="fas fa-passport" aria-hidden="true" aria-label="Requisition identifier" title="Requisition identifier"></i>
+    <span id="requisition_identifier_icon_text_c628aafee494c6964c1d40935f3df7c8_1fa8461f5c8e93a2af81eb10704079f5">
+      497125
+</span></li>
+
+        
+
+        
+
+</ul>  </div>
+
+  <div class="job-component-list job-component-list-location">
+  <ul>
+        <li class="job-component-icon-and-text job-component-location">
+    <i class="fas fa-location-arrow" aria-hidden="true" aria-label="Location" title="Location"></i>
+    <span id="location_icon_text_c628aafee494c6964c1d40935f3df7c8_1fa8461f5c8e93a2af81eb10704079f5">
+      New Orleans, Louisiana
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  <div class="job-component-list job-component-list-employment_type">
+  <ul>
+        <li class="job-component-icon-and-text job-component-employment-type">
+    <i class="far fa-clock" aria-hidden="true" aria-label="Employment type" title="Employment type"></i>
+    <span id="employment_type_icon_text_c628aafee494c6964c1d40935f3df7c8_1fa8461f5c8e93a2af81eb10704079f5">
+      Other Academic
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  
+  
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-string-field-1">
+    <i class="fas fa-asterisk" aria-hidden="true" aria-label="Business Sector" title="Business Sector"></i>
+    <span id="string_field_1_icon_text_c628aafee494c6964c1d40935f3df7c8_1fa8461f5c8e93a2af81eb10704079f5">
+      Medicine
+</span></li>
+
+</ul>  </div>
+
+  
+</div>
+            <p class="card-text job-search-results-summary" id="summary_1_0_9">The Center of excellence-Cancer is searching for a STAFF SCIENTIST OR STAFF SCIENTIST SR. The Staff Scientist will conduct research that integrates molecular biology, genomic, and proteomic approaches to identify novel therapeutic targets and pathways involved in castration-resistant prostate cancer (CRPC).</p>
+        </div>
+        <div class="card-footer job-search-results-footer">
+          <a aria-label="Read more: STAFF SCIENTIST OR STAFF SCIENTIST SR." id="link_read_more_1_0_9" href="https://careers.lsuhsc.edu/jobs/staff-scientist-or-staff-scientist-sr-new-orleans-louisiana-united-states">
+            Read more
+            <i class="fas fa-chevron-right"></i>
+</a>        </div>
+      </div>
+</article>    <article class="col-12 job-search-results-card-col" aria-labelledby="link_job_title_1_0_10">
+      <div class="card job-search-results-card">
+        <div class="card-body job-search-results-card-body">
+          <h3 class="card-title job-search-results-card-title">
+            <a id="link_job_title_1_0_10" href="https://careers.lsuhsc.edu/jobs/associate-professor-professor-villere-endowed-chair-new-orleans-louisiana-united-states">ASSOCIATE PROFESSOR / PROFESSOR - VILLERE ENDOWED CHAIR</a>
+</h3>          <div class="job-component-details job-component-details-4a337fc890c24184b2cddc99a2eea20d">
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-requisition-identifier">
+    <i class="fas fa-passport" aria-hidden="true" aria-label="Requisition identifier" title="Requisition identifier"></i>
+    <span id="requisition_identifier_icon_text_4a337fc890c24184b2cddc99a2eea20d_1fa8461f5c8e93a2af81eb10704079f5">
+      496591
+</span></li>
+
+        
+
+        
+
+</ul>  </div>
+
+  <div class="job-component-list job-component-list-location">
+  <ul>
+        <li class="job-component-icon-and-text job-component-location">
+    <i class="fas fa-location-arrow" aria-hidden="true" aria-label="Location" title="Location"></i>
+    <span id="location_icon_text_4a337fc890c24184b2cddc99a2eea20d_1fa8461f5c8e93a2af81eb10704079f5">
+      New Orleans, Louisiana
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  <div class="job-component-list job-component-list-employment_type">
+  <ul>
+        <li class="job-component-icon-and-text job-component-employment-type">
+    <i class="far fa-clock" aria-hidden="true" aria-label="Employment type" title="Employment type"></i>
+    <span id="employment_type_icon_text_4a337fc890c24184b2cddc99a2eea20d_1fa8461f5c8e93a2af81eb10704079f5">
+      Faculty
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  
+  
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-string-field-1">
+    <i class="fas fa-asterisk" aria-hidden="true" aria-label="Business Sector" title="Business Sector"></i>
+    <span id="string_field_1_icon_text_4a337fc890c24184b2cddc99a2eea20d_1fa8461f5c8e93a2af81eb10704079f5">
+      Medicine
+</span></li>
+
+</ul>  </div>
+
+  
+</div>
+            <p class="card-text job-search-results-summary" id="summary_1_0_10">The Department of Ophthalmology in the School of Medicine at LSU Health Sciences Center New Orleans, LA is accepting applications for an established, senior researcher in retinal disease, preferably retinitis pigmentosa.</p>
+        </div>
+        <div class="card-footer job-search-results-footer">
+          <a aria-label="Read more: ASSOCIATE PROFESSOR / PROFESSOR - VILLERE ENDOWED CHAIR" id="link_read_more_1_0_10" href="https://careers.lsuhsc.edu/jobs/associate-professor-professor-villere-endowed-chair-new-orleans-louisiana-united-states">
+            Read more
+            <i class="fas fa-chevron-right"></i>
+</a>        </div>
+      </div>
+</article>    <article class="col-12 job-search-results-card-col" aria-labelledby="link_job_title_1_0_11">
+      <div class="card job-search-results-card">
+        <div class="card-body job-search-results-card-body">
+          <h3 class="card-title job-search-results-card-title">
+            <a id="link_job_title_1_0_11" href="https://careers.lsuhsc.edu/jobs/assistant-professor-associate-professor-professor-new-orleans-louisiana-united-states-5f315474-f7bf-4945-8764-2fb2e690131a">ASSISTANT PROFESSOR/ ASSOCIATE PROFESSOR/ PROFESSOR</a>
+</h3>          <div class="job-component-details job-component-details-800e8774ec4d7c41256e56be9692b1e7">
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-requisition-identifier">
+    <i class="fas fa-passport" aria-hidden="true" aria-label="Requisition identifier" title="Requisition identifier"></i>
+    <span id="requisition_identifier_icon_text_800e8774ec4d7c41256e56be9692b1e7_1fa8461f5c8e93a2af81eb10704079f5">
+      497010
+</span></li>
+
+        
+
+        
+
+</ul>  </div>
+
+  <div class="job-component-list job-component-list-location">
+  <ul>
+        <li class="job-component-icon-and-text job-component-location">
+    <i class="fas fa-location-arrow" aria-hidden="true" aria-label="Location" title="Location"></i>
+    <span id="location_icon_text_800e8774ec4d7c41256e56be9692b1e7_1fa8461f5c8e93a2af81eb10704079f5">
+      New Orleans, Louisiana
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  <div class="job-component-list job-component-list-employment_type">
+  <ul>
+        <li class="job-component-icon-and-text job-component-employment-type">
+    <i class="far fa-clock" aria-hidden="true" aria-label="Employment type" title="Employment type"></i>
+    <span id="employment_type_icon_text_800e8774ec4d7c41256e56be9692b1e7_1fa8461f5c8e93a2af81eb10704079f5">
+      Faculty
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  
+  
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-string-field-1">
+    <i class="fas fa-asterisk" aria-hidden="true" aria-label="Business Sector" title="Business Sector"></i>
+    <span id="string_field_1_icon_text_800e8774ec4d7c41256e56be9692b1e7_1fa8461f5c8e93a2af81eb10704079f5">
+      Medicine
+</span></li>
+
+</ul>  </div>
+
+  
+</div>
+            <p class="card-text job-search-results-summary" id="summary_1_0_11">The Department of Physiology in the School of Medicine at LSU Health Sciences Center in New Orleans, LA invites applications for an academic faculty position at the rank of Assistant Professor, Associate Professor, or Full Professor from outstanding candidates with a Ph.D., M.D. (or equivalent) degree.</p>
+        </div>
+        <div class="card-footer job-search-results-footer">
+          <a aria-label="Read more: ASSISTANT PROFESSOR/ ASSOCIATE PROFESSOR/ PROFESSOR" id="link_read_more_1_0_11" href="https://careers.lsuhsc.edu/jobs/assistant-professor-associate-professor-professor-new-orleans-louisiana-united-states-5f315474-f7bf-4945-8764-2fb2e690131a">
+            Read more
+            <i class="fas fa-chevron-right"></i>
+</a>        </div>
+      </div>
+</article>    <article class="col-12 job-search-results-card-col" aria-labelledby="link_job_title_1_0_12">
+      <div class="card job-search-results-card">
+        <div class="card-body job-search-results-card-body">
+          <h3 class="card-title job-search-results-card-title">
+            <a id="link_job_title_1_0_12" href="https://careers.lsuhsc.edu/jobs/assistant-professor-associate-professor-nurse-scientist-new-orleans-louisiana-united-states">ASSISTANT PROFESSOR/ ASSOCIATE PROFESSOR-NURSE SCIENTIST</a>
+</h3>          <div class="job-component-details job-component-details-a3d351eed930e3beadea1d20b9b59df7">
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-requisition-identifier">
+    <i class="fas fa-passport" aria-hidden="true" aria-label="Requisition identifier" title="Requisition identifier"></i>
+    <span id="requisition_identifier_icon_text_a3d351eed930e3beadea1d20b9b59df7_1fa8461f5c8e93a2af81eb10704079f5">
+      496832
+</span></li>
+
+        
+
+        
+
+</ul>  </div>
+
+  <div class="job-component-list job-component-list-location">
+  <ul>
+        <li class="job-component-icon-and-text job-component-location">
+    <i class="fas fa-location-arrow" aria-hidden="true" aria-label="Location" title="Location"></i>
+    <span id="location_icon_text_a3d351eed930e3beadea1d20b9b59df7_1fa8461f5c8e93a2af81eb10704079f5">
+      New Orleans, Louisiana
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  <div class="job-component-list job-component-list-employment_type">
+  <ul>
+        <li class="job-component-icon-and-text job-component-employment-type">
+    <i class="far fa-clock" aria-hidden="true" aria-label="Employment type" title="Employment type"></i>
+    <span id="employment_type_icon_text_a3d351eed930e3beadea1d20b9b59df7_1fa8461f5c8e93a2af81eb10704079f5">
+      Faculty
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  
+  
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-string-field-1">
+    <i class="fas fa-asterisk" aria-hidden="true" aria-label="Business Sector" title="Business Sector"></i>
+    <span id="string_field_1_icon_text_a3d351eed930e3beadea1d20b9b59df7_1fa8461f5c8e93a2af81eb10704079f5">
+      Nursing
+</span></li>
+
+</ul>  </div>
+
+  
+</div>
+            <p class="card-text job-search-results-summary" id="summary_1_0_12">LSU Health New Orleans School of Nursing is seeking a highly motivated individual to join our faculty as a Nurse Scientist. Our School of Nursing is recognized for its excellence within an academic health sciences center environment, offering a unique opportunity to engage in interdisciplinary research and innovation.</p>
+        </div>
+        <div class="card-footer job-search-results-footer">
+          <a aria-label="Read more: ASSISTANT PROFESSOR/ ASSOCIATE PROFESSOR-NURSE SCIENTIST" id="link_read_more_1_0_12" href="https://careers.lsuhsc.edu/jobs/assistant-professor-associate-professor-nurse-scientist-new-orleans-louisiana-united-states">
+            Read more
+            <i class="fas fa-chevron-right"></i>
+</a>        </div>
+      </div>
+</article>    <article class="col-12 job-search-results-card-col" aria-labelledby="link_job_title_1_0_13">
+      <div class="card job-search-results-card">
+        <div class="card-body job-search-results-card-body">
+          <h3 class="card-title job-search-results-card-title">
+            <a id="link_job_title_1_0_13" href="https://careers.lsuhsc.edu/jobs/assistant-professor-or-associate-professor-research-nurse-scientist-new-orleans-louisiana-united-states">ASSISTANT PROFESSOR OR ASSOCIATE PROFESSOR-RESEARCH NURSE SCIENTIST</a>
+</h3>          <div class="job-component-details job-component-details-b4272c53933c87d7c5ec58957dbf309d">
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-requisition-identifier">
+    <i class="fas fa-passport" aria-hidden="true" aria-label="Requisition identifier" title="Requisition identifier"></i>
+    <span id="requisition_identifier_icon_text_b4272c53933c87d7c5ec58957dbf309d_1fa8461f5c8e93a2af81eb10704079f5">
+      497034
+</span></li>
+
+        
+
+        
+
+</ul>  </div>
+
+  <div class="job-component-list job-component-list-location">
+  <ul>
+        <li class="job-component-icon-and-text job-component-location">
+    <i class="fas fa-location-arrow" aria-hidden="true" aria-label="Location" title="Location"></i>
+    <span id="location_icon_text_b4272c53933c87d7c5ec58957dbf309d_1fa8461f5c8e93a2af81eb10704079f5">
+      New Orleans, Louisiana
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  <div class="job-component-list job-component-list-employment_type">
+  <ul>
+        <li class="job-component-icon-and-text job-component-employment-type">
+    <i class="far fa-clock" aria-hidden="true" aria-label="Employment type" title="Employment type"></i>
+    <span id="employment_type_icon_text_b4272c53933c87d7c5ec58957dbf309d_1fa8461f5c8e93a2af81eb10704079f5">
+      Faculty
+</span></li>
+
+  </ul>
+</div>
+
+  
+  
+  
+  
+  
+  
+    <div class="job-component-list">
+    <ul>
+          <li class="job-component-icon-and-text job-component-string-field-1">
+    <i class="fas fa-asterisk" aria-hidden="true" aria-label="Business Sector" title="Business Sector"></i>
+    <span id="string_field_1_icon_text_b4272c53933c87d7c5ec58957dbf309d_1fa8461f5c8e93a2af81eb10704079f5">
+      Nursing
+</span></li>
+
+</ul>  </div>
+
+  
+</div>
+            <p class="card-text job-search-results-summary" id="summary_1_0_13">LSU Health New Orleans School of Nursing is seeking a highly motivated individual to join our faculty as a Nurse Scientist.</p>
+        </div>
+        <div class="card-footer job-search-results-footer">
+          <a aria-label="Read more: ASSISTANT PROFESSOR OR ASSOCIATE PROFESSOR-RESEARCH NURSE SCIENTIST" id="link_read_more_1_0_13" href="https://careers.lsuhsc.edu/jobs/assistant-professor-or-associate-professor-research-nurse-scientist-new-orleans-louisiana-united-states">
+            Read more
+            <i class="fas fa-chevron-right"></i>
+</a>        </div>
+      </div>
+</article></div>
+
+  <div class='bottom-pagination'>
+      <div class="row pagination-container">
+  <div class="col-md-4">
+    <div class="table-counts" role="alert" aria-live="polite">
+      <p>
+        Displaying <b>all&nbsp;14</b> entries
+      </p>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="text-right">
+      
+    </div>
+  </div>
+</div>
+
+  </div>
+
+</div>          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+</form>
+</div></div>
+
+
+    </div>
+  
+
+  </div>
+
+            </div>
+            
+          </div>
+        </div>
+      </div>
+</div></div>
+</div>
+
+<!-- custom footer -->
+
+    
+  
+
+<a id="link_candidate_details" style="display: none" aria-hidden="true" href="/v1/candidate_details">Candidate Details</a>
+
+
+<footer class="site-footer" id="theme_two_footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-9">
+                <h6>Our Equal Opportunity Statement:</h6>
+                <p class="text-justify">LSU Health New Orleans seeks candidates who will contribute to a climate where students, faculty, and staff of all identities and backgrounds have equitable access and success opportunities. As an equal opportunity employer, we welcome all to apply without regard to race, color, religion, age, sex, national origin, physical or mental disability, genetics, protected veteran status, military status, sexual orientation, gender identity or expression, or any other characteristic protected by federal, state, or local laws. LSU Health New Orleans is also designated as a <a href="https://legis.la.gov/Legis/Law.aspx?p=y&d=1239772" target="_blank">State As a Model Employer (SAME)</a> agency and provides assistance to persons needing accommodations or with the accessibility of materials. For those seeking such accommodations or assistance related to this search, we encourage you to contact the Office of Human Resource Management <a href="mailto:hrmada@lsuhsc.edu">(HRMADA@lsuhsc.edu)</a>.</p>
+            </div>
+
+            <div class="col-sm-12 col-md-3 footer-column-3">
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                    <li><a href="mailto:recruittalent@lsuhsc.edu">Contact Us</a></li>
+                    <li><a href="https://www.lsuhsc.edu/aboutus/" target="_blank">About Us</a></li>
+                    <li><a href="https://www.lsuhsc.edu/disclaimer.aspx" target="_blank">Disclaimer</a></li>
+                    <li><a href="https://www.lsuhsc.edu/privacypolicy.aspx" target="_blank">Privacy Policy</a></li>
+                    <li><a href="https://www.lsuhsc.edu/administration/hrm/" target="_blank">HRM Homepage</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">© 2026  All Rights Reserved by
+                    <a href="#">LSU Health</a>.
+                </p>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <ul class="social-icons">
+                    <li><a class="facebook" href="https://www.facebook.com/LSUHSC/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="twitter-x" href="https://twitter.com/LSUHealthNO/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a class="instagram" href="https://www.instagram.com/lsu_health_sciences_center/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a class="youtube" href="https://www.youtube.com/channel/UCHY3PRHRo952YVxHTy6NkbA/videos" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

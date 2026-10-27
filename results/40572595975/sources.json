@@ -1,0 +1,604 @@
+[
+ {
+  "school": "Georgetown",
+  "rank": 55,
+  "source": "georgetown",
+  "label": "georgetown",
+  "type": "workday",
+  "checked": "2026-10-27",
+  "found": 28,
+  "candidates": 2,
+  "too_old": 0,
+  "status": "ok",
+  "new_details": 2,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Senior Research Assistant",
+   "Clinical Research Associate"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Senior Research Assistant",
+    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Medical-Center/Senior-Research-Assistant_JR27811-1",
+    "posted": "2026-10-13",
+    "dept": "",
+    "text": "Georgetown University comprises two unique campuses in the nation\u2019s capital. With the Hilltop Campus located in the heart of the historic Georgetown neighborhood, and the Capitol Campus, just minutes from the U.S. Capitol and U.S. Supreme Court, Georgetown University offers rigorous academic program"
+   },
+   {
+    "title": "Clinical Research Associate",
+    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Medical-Center/Clinical-Research-Associate_JR25746-1",
+    "posted": "2026-10-27",
+    "dept": "",
+    "text": "Georgetown University comprises two unique campuses in the nation\u2019s capital. With the Hilltop Campus located in the heart of the historic Georgetown neighborhood, and the Capitol Campus, just minutes from the U.S. Capitol and U.S. Supreme Court, Georgetown University offers rigorous academic program"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "UTHealth Houston",
+  "rank": 56,
+  "source": "uthealth",
+  "label": "uthealth",
+  "type": "phenom",
+  "checked": "2026-10-27",
+  "found": 57,
+  "candidates": 11,
+  "too_old": 0,
+  "status": "ok",
+  "new_details": 3,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Postdoctoral Research Fellow - Anesthesiology",
+   "Postdoctoral Research Fellow - Pediatrics",
+   "Postdoctoral Research Fellow - Anesthesiology"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Postdoctoral Research Fellow - Anesthesiology",
+    "url": "https://careers.uth.tmc.edu/us/en/job/260000N2",
+    "posted": "2026-10-27",
+    "dept": "Research",
+    "text": "The Department of Anesthesiology is seeking a Postdoctoral Research Fellow position for Dr. Xie's lab. Dr. Xie joined UTHealth as a Professor to support our general OR and obstetric anesthesia services and research divisions. \n What we do here changes the world. UTHealth Houston is Texas\u2019 resource f"
+   },
+   {
+    "title": "Postdoctoral Research Fellow - Pediatrics",
+    "url": "https://careers.uth.tmc.edu/us/en/job/2600029D",
+    "posted": "2026-10-27",
+    "dept": "Research",
+    "text": "This position will work in the Li Lab in the Department of Pediatrics, Pediatric Research Center. The Pediatric Research Center is home to wide-ranging research focused on identifying the causes of birth defects with the ultimate goal of developing prevention and treatment strategies. \n The postdoct"
+   },
+   {
+    "title": "Postdoctoral Research Fellow - Anesthesiology",
+    "url": "https://careers.uth.tmc.edu/us/en/job/260000ZH",
+    "posted": "2026-10-27",
+    "dept": "Research",
+    "text": "Dr. Yafen Liang's lab is seeking a Postdoctoral Research Fellow to join the team. Dr. Liang is the Vice Chair, Clinical Research and Chief within the Division of Cardiovascular Anesthesiology. \n What we do here changes the world. UTHealth Houston is Texas\u2019 resource for healthcare education, innovati"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "UNMC",
+  "rank": 57,
+  "source": "unmc",
+  "label": "unmc",
+  "type": "rmk",
+  "checked": "2026-10-27",
+  "found": 0,
+  "candidates": 0,
+  "too_old": 0,
+  "status": "ok",
+  "new_details": 0,
+  "detail_errors": 0,
+  "candidate_titles": [],
+  "candidate_samples": [],
+  "too_old_count": 0
+ },
+ {
+  "school": "UC Irvine",
+  "rank": 58,
+  "source": "uci-recruit",
+  "label": "uci-recruit",
+  "type": "ucrecruit",
+  "checked": "2026-10-27",
+  "found": 317,
+  "candidates": 6,
+  "too_old": 58,
+  "status": "ok",
+  "new_details": 0,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Postdoctoral Scholar - Goulding Lab",
+   "Postdoctoral Scholar \u2014 RF/mm-Wave Integrated Circuit Design",
+   "UCI - Postdoctoral Scholar \u2013 Sparks Laboratory",
+   "26-27 Arnold and Mabel Beckman Foundation Postdoctoral Research Fellowship",
+   "26-27 Postdoctoral Scholar - Immuno - Virology and Vaccine Development (Pool Ad)",
+   "Postdoctoral Scholar"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Postdoctoral Scholar - Goulding Lab",
+    "url": "https://recruit.ap.uci.edu/JPF10475",
+    "posted": "2026-10-08",
+    "dept": "",
+    "text": "Description \n The Goulding Lab at UC Irvine, in collaboration with the Hayes Lab at UC Santa Barbara, is seeking a postdoctoral scholar with expertise in cryo-electron microscopy to investigate the molecular mechanisms of bacterial competition. Bacteria use contact-dependent and secreted systems to "
+   },
+   {
+    "title": "Postdoctoral Scholar \u2014 RF/mm-Wave Integrated Circuit Design",
+    "url": "https://recruit.ap.uci.edu/JPF10478",
+    "posted": "2026-10-12",
+    "dept": "",
+    "text": "Description \n Postdoctoral Scholar \u2014 RF/mm-Wave Integrated Circuit Design \nNanoscale Communication Integrated Circuits (NCIC) Laboratory \nDepartment of Electrical Engineering and Computer Science, University of California, Irvine \n Position \nThe NCIC Laboratory, directed by Prof. Payam Heydari, is s"
+   },
+   {
+    "title": "UCI - Postdoctoral Scholar \u2013 Sparks Laboratory",
+    "url": "https://recruit.ap.uci.edu/JPF10479",
+    "posted": "2026-10-13",
+    "dept": "",
+    "text": "Description \n POSITION SUMMARY \nThe Sparks Laboratory seeks a motivated Postdoctoral Scholar to investigate the molecular and epigenetic mechanisms that regulate early human pluripotent stem cell (hPSC) differentiation. The scholar will contribute to an NIGMS MIRA/R35 research program focused on neu"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "Cincinnati",
+  "rank": 66,
+  "source": "ucincy",
+  "label": "ucincy",
+  "type": "rmk",
+  "checked": "2026-10-27",
+  "found": 0,
+  "candidates": 0,
+  "too_old": 0,
+  "status": "ok",
+  "new_details": 0,
+  "detail_errors": 0,
+  "candidate_titles": [],
+  "candidate_samples": [],
+  "too_old_count": 0
+ },
+ {
+  "school": "Penn State",
+  "rank": 67,
+  "source": "psu-academic",
+  "label": "psu-academic",
+  "type": "workday",
+  "checked": "2026-10-27",
+  "found": 220,
+  "candidates": 12,
+  "too_old": 39,
+  "status": "ok",
+  "new_details": 3,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Postdoctoral Scholar",
+   "Post-doctoral Associate in Socioecological Outcomes and Monitoring of Restoration in Dryland Ecosystems",
+   "MINDSET Postdoctoral Scholar"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Postdoctoral Scholar",
+    "url": "https://psu.wd1.myworkdayjobs.com/PSU_Academic/job/Penn-State-University-Park/Postdoctoral-Scholar_REQ_0000083440-1",
+    "posted": "2026-10-26",
+    "dept": "",
+    "text": "APPLICATION INSTRUCTIONS: \n CURRENT PENN STATE EMPLOYEE (faculty, staff, technical service, or student), please login to Workday to complete the internal application process . Please do not apply here, apply internally through Workday. \n CURRENT PENN STATE STUDENT (not employed previously at the uni"
+   },
+   {
+    "title": "Post-doctoral Associate in Socioecological Outcomes and Monitoring of Restoration in Dryland Ecosystems",
+    "url": "https://psu.wd1.myworkdayjobs.com/PSU_Academic/job/Penn-State-University-Park/Post-doctoral-Associate-in-Socioecological-Outcomes-and-Monitoring-of-Restoration-in-Dryland-Ecosystems_REQ_0000078390",
+    "posted": "2026-10-23",
+    "dept": "",
+    "text": "APPLICATION INSTRUCTIONS: \n CURRENT PENN STATE EMPLOYEE (faculty, staff, technical service, or student), please login to Workday to complete the internal application process . Please do not apply here, apply internally through Workday. \n CURRENT PENN STATE STUDENT (not employed previously at the uni"
+   },
+   {
+    "title": "MINDSET Postdoctoral Scholar",
+    "url": "https://psu.wd1.myworkdayjobs.com/PSU_Academic/job/Penn-State-University-Park/MINDSET-Postdoctoral-Scholar_REQ_0000083496-1",
+    "posted": "2026-10-23",
+    "dept": "",
+    "text": "APPLICATION INSTRUCTIONS: \n CURRENT PENN STATE EMPLOYEE (faculty, staff, technical service, or student), please login to Workday to complete the internal application process . Please do not apply here, apply internally through Workday. \n CURRENT PENN STATE STUDENT (not employed previously at the uni"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "Penn State",
+  "rank": 67,
+  "source": "psu-staff",
+  "label": "psu-staff",
+  "type": "workday",
+  "checked": "2026-10-27",
+  "found": 243,
+  "candidates": 7,
+  "too_old": 25,
+  "status": "ok",
+  "new_details": 3,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Postdoctoral Scholar - Obstetrics and Gynecology",
+   "Postdoctoral Scholar - Pediatric Oncology Translational Research Lab",
+   "Postdoctoral Scholar - Comparative Medicine"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Postdoctoral Scholar - Obstetrics and Gynecology",
+    "url": "https://psu.wd1.myworkdayjobs.com/PSU_Staff/job/College-of-Medicine/Postdoctoral-Scholar---Obstetrics-and-Gynecology_REQ_0000082943-2",
+    "posted": "2026-10-20",
+    "dept": "",
+    "text": "APPLICATION INSTRUCTIONS: \n CURRENT PENN STATE EMPLOYEE (faculty, staff, technical service, or student), please login to Workday to complete the internal application process . Please do not apply here, apply internally through Workday. \n CURRENT PENN STATE STUDENT (not employed previously at the uni"
+   },
+   {
+    "title": "Postdoctoral Scholar - Pediatric Oncology Translational Research Lab",
+    "url": "https://psu.wd1.myworkdayjobs.com/PSU_Staff/job/College-of-Medicine/Postdoctoral-Scholar---Pediatric-Oncology-Translational-Research-Lab_REQ_0000082769-3",
+    "posted": "2026-10-09",
+    "dept": "",
+    "text": "APPLICATION INSTRUCTIONS: \n CURRENT PENN STATE EMPLOYEE (faculty, staff, technical service, or student), please login to Workday to complete the internal application process . Please do not apply here, apply internally through Workday. \n CURRENT PENN STATE STUDENT (not employed previously at the uni"
+   },
+   {
+    "title": "Postdoctoral Scholar - Comparative Medicine",
+    "url": "https://psu.wd1.myworkdayjobs.com/PSU_Staff/job/College-of-Medicine/Postdoctoral-Scholar---Comparative-Medicine_REQ_0000082476-1",
+    "posted": "2026-10-07",
+    "dept": "",
+    "text": "APPLICATION INSTRUCTIONS: \n CURRENT PENN STATE EMPLOYEE (faculty, staff, technical service, or student), please login to Workday to complete the internal application process . Please do not apply here, apply internally through Workday. \n CURRENT PENN STATE STUDENT (not employed previously at the uni"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "Jefferson",
+  "rank": 71,
+  "source": "jefferson",
+  "label": "jefferson",
+  "type": "workday",
+  "checked": "2026-10-27",
+  "found": 290,
+  "candidates": 4,
+  "too_old": 9,
+  "status": "ok",
+  "new_details": 3,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Post-Doc Fel Train/Taxed",
+   "Post-Doc Fel Train/Taxed",
+   "Post Doctoral fellow"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Post-Doc Fel Train/Taxed",
+    "url": "https://jeffersonhealth.wd5.myworkdayjobs.com/ThomasJeffersonExternal/job/Philadelphia-PA/Post-Doc-Fel-Train-Taxed_REQ-0038138-2",
+    "posted": "2026-10-27",
+    "dept": "",
+    "text": "Number of Positions In Requisition \n 1\n Job Details \n Thomas Jefferson\u2019s Department of Family and Community Medicine seeks two post-doctoral scholars in the HRSA-funded Jefferson Mental Illness, Addiction, Preventive Care, and Promotion of Nutrition and Wellness in Primary Care (Jeff-MAPPP) T32 Post"
+   },
+   {
+    "title": "Post-Doc Fel Train/Taxed",
+    "url": "https://jeffersonhealth.wd5.myworkdayjobs.com/ThomasJeffersonExternal/job/Philadelphia-PA/Post-Doc-Fel-Train-Taxed_REQ-0039209-1",
+    "posted": "2026-10-27",
+    "dept": "",
+    "text": "Number of Positions In Requisition \n 1\n Job Details \n Thomas Jefferson\u2019s Department of Family and Community Medicine seeks two post-doctoral scholars in the HRSA-funded Jefferson Mental Illness, Addiction, Preventive Care, and Promotion of Nutrition and Wellness in Primary Care (Jeff-MAPPP) T32 Post"
+   },
+   {
+    "title": "Post Doctoral fellow",
+    "url": "https://jeffersonhealth.wd5.myworkdayjobs.com/ThomasJeffersonExternal/job/Philadelphia-PA/Post-Doctoral-fellow_REQ-0038146",
+    "posted": "2026-10-21",
+    "dept": "",
+    "text": "Number of Positions In Requisition \n 1\n Job Details \n The Snyder lab is recruiting a postdoctoral fellow to investigate immune mechanisms of retinal and CNS pathology during viral infection. The successful candidate will have an immunology background. Candidates who are recent PhD graduates with exp"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "UAMS",
+  "rank": 81,
+  "source": "uams",
+  "label": "uams",
+  "type": "workday",
+  "checked": "2026-10-27",
+  "found": 267,
+  "candidates": 8,
+  "too_old": 9,
+  "status": "ok",
+  "new_details": 3,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Post Doctoral Fellow",
+   "Post Doctoral Fellow Researcher - Robotics, Advanced Manufacturing and Materials Innovation- 12 MONTH",
+   "Post Doctoral Fellow (Kaoud Laboratory)"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Post Doctoral Fellow",
+    "url": "https://uasys.wd5.myworkdayjobs.com/UASYS/job/Little-Rock/Post-Doctoral-Fellow_R0092714-2",
+    "posted": "2026-10-15",
+    "dept": "Posting End Date: 12:01 a.m. CT 10/30/2026",
+    "text": "Current University of Arkansas System employees, including student employees and graduate assistants, need to log in to Workday via MyApps.Microsoft.com , then access Find Jobs from the Workday search bar to view and apply for open positions. Students at University of Arkansas System will also view "
+   },
+   {
+    "title": "Post Doctoral Fellow Researcher - Robotics, Advanced Manufacturing and Materials Innovation- 12 MONTH",
+    "url": "https://uasys.wd5.myworkdayjobs.com/UASYS/job/Fayetteville-AR/Post-Doctoral-Fellow-Researcher---Robotics--Advanced-Manufacturing-and-Materials-Innovation--12-MONTH_R0090037-1",
+    "posted": "2026-10-14",
+    "dept": "Posting End Date: 12:01 a.m. CT 12/31/2026",
+    "text": "Current University of Arkansas System employees, including student employees and graduate assistants, need to log in to Workday via MyApps.Microsoft.com, then access Find Jobs from the Workday search bar to view and apply for open positions. \n Students at all University of Arkansas institutions will"
+   },
+   {
+    "title": "Post Doctoral Fellow (Kaoud Laboratory)",
+    "url": "https://uasys.wd5.myworkdayjobs.com/UASYS/job/UAMS/Post-Doctoral-Fellow--Kaiud-Laboratory-_R0092592-2",
+    "posted": "2026-10-12",
+    "dept": "Posting End Date: 12:01 a.m. CT 11/13/2026",
+    "text": "Current University of Arkansas System employees, including student employees and graduate assistants, need to log in to Workday via MyApps.Microsoft.com , then access Find Jobs from the Workday search bar to view and apply for open positions. Students at University of Arkansas System will also view "
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "UTHSC",
+  "rank": 83,
+  "source": "uthsc",
+  "label": "uthsc",
+  "type": "oracle",
+  "checked": "2026-10-27",
+  "found": 180,
+  "candidates": 7,
+  "too_old": 28,
+  "status": "ok",
+  "new_details": 3,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Postdoctoral Scholar-Pharmacology",
+   "Post-Doctoral Research Associate: Department of Ecology and Evolutionary Biology - UTK",
+   "Post-Doctoral Research Associate: Center for Advanced Materials and Manufacturing - UTK"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Postdoctoral Scholar-Pharmacology",
+    "url": "https://fa-ewlq-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/10485",
+    "posted": "2026-10-22",
+    "dept": "",
+    "text": "THIS IS A GRANT-FUNDED POSITION FUNDED UNTIL AUGUST 31, 2028. \n The Department of Pharmaceutical Sciences, College of Pharmacy at the University of Tennessee Health Sciences, seeks a Postdoctoral Scholar supported by NIH-funded projects. The main research focus is to develop innovative formulation s"
+   },
+   {
+    "title": "Post-Doctoral Research Associate: Department of Ecology and Evolutionary Biology - UTK",
+    "url": "https://fa-ewlq-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/10402",
+    "posted": "2026-10-15",
+    "dept": "",
+    "text": "The Suissa lab in the Department of Ecology and Evolutionary Biology at the University of Tennessee, Knoxville (UTK) is seeking a highly motivated Postdoctoral Research Fellow to join the lab (https://www.botaneelab.com/). This 2-year, full-time position will focus on the hydraulics of seed-free pla"
+   },
+   {
+    "title": "Post-Doctoral Research Associate: Center for Advanced Materials and Manufacturing - UTK",
+    "url": "https://fa-ewlq-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/10279",
+    "posted": "2026-10-08",
+    "dept": "",
+    "text": "The Center for Advanced Materials and Manufacturing (CAMM) at the University of Tennessee is seeking a Postdoctoral Research Fellow with research interest and expertise in low-dimensional quantum materials. CAMM is a newly funded NSF Materials Research Science and Engineering Research Center (MRSEC)"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "Saint Louis University",
+  "rank": 84,
+  "source": "slu",
+  "label": "slu",
+  "type": "workday",
+  "checked": "2026-10-27",
+  "found": 21,
+  "candidates": 1,
+  "too_old": 9,
+  "status": "ok",
+  "new_details": 1,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Post Doctoral Fellow, Zhang Lab"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Post Doctoral Fellow, Zhang Lab",
+    "url": "https://slu.wd5.myworkdayjobs.com/Careers/job/Macelwane-Hall/Post-Doctoral-Fellow--Zhang-Lab_2026-10136",
+    "posted": "2026-10-20",
+    "dept": "",
+    "text": "Who is Saint Louis University? Founded in 1818, Saint Louis University is one of the nation\u2019s oldest and most prestigious Catholic universities. SLU, which also has a campus in Madrid, Spain, is recognized for world-class academics, life-changing research, compassionate health care, and a strong com"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "Texas A&M Health",
+  "rank": 92,
+  "source": "tamu",
+  "label": "tamu",
+  "type": "workday",
+  "checked": "2026-10-27",
+  "found": 82,
+  "candidates": 15,
+  "too_old": 8,
+  "status": "ok",
+  "new_details": 3,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Postdoctoral Research Associate",
+   "Postdoctoral Research Associate- Lee Lab",
+   "Postdoctoral Research Associate"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Postdoctoral Research Associate",
+    "url": "https://tamus.wd1.myworkdayjobs.com/TAMU_External/job/College-Station-TX/Postdoctoral-Research-Associate_R-098272-1",
+    "posted": "2026-10-27",
+    "dept": "",
+    "text": "Job Title \n Postdoctoral Research Associate \n Agency \n Texas A&M University Health Science Center \n Department \n Health Policy And Management \n Proposed Minimum Salary \n Commensurate \n Job Location \n College Station, Texas \n Job Type \n Staff \n Job Description \n Our Commitment \n Texas A&M University "
+   },
+   {
+    "title": "Postdoctoral Research Associate- Lee Lab",
+    "url": "https://tamus.wd1.myworkdayjobs.com/TAMU_External/job/Bryan-TX/Postdoctoral-Research-Associate--Lee-Lab_R-098258-1",
+    "posted": "2026-10-26",
+    "dept": "",
+    "text": "Job Title \n Postdoctoral Research Associate- Lee Lab \n Agency \n Texas A&M University Health Science Center \n Department \n Cell Biology and Genetics \n Proposed Minimum Salary \n Commensurate \n Job Location \n Bryan, Texas \n Job Type \n Staff \n Job Description \n Our Commitment \n Texas A&M University is c"
+   },
+   {
+    "title": "Postdoctoral Research Associate",
+    "url": "https://tamus.wd1.myworkdayjobs.com/TAMU_External/job/College-Station-TX/Postdoctoral-Research-Associate_R-098225-1",
+    "posted": "2026-10-22",
+    "dept": "",
+    "text": "Job Title \n Postdoctoral Research Associate \n Agency \n Texas A&M University \n Department \n Physics And Astronomy \n Proposed Minimum Salary \n Commensurate \n Job Location \n College Station, Texas \n Job Type \n Staff \n Job Description \n Here\u2019s a Glimpse of the Job \n The Postdoctoral Research Associate w"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "Missouri",
+  "rank": 93,
+  "source": "muhealth",
+  "label": "muhealth",
+  "type": "phenom",
+  "checked": "2026-10-27",
+  "found": 78,
+  "candidates": 0,
+  "too_old": 0,
+  "status": "ok",
+  "new_details": 0,
+  "detail_errors": 0,
+  "candidate_titles": [],
+  "candidate_samples": [],
+  "too_old_count": 0
+ },
+ {
+  "school": "Tufts",
+  "rank": 95,
+  "source": "tuftsmedicine",
+  "label": "tuftsmedicine",
+  "type": "phenom",
+  "checked": "2026-10-27",
+  "found": 152,
+  "candidates": 0,
+  "too_old": 2,
+  "status": "ok",
+  "new_details": 0,
+  "detail_errors": 0,
+  "candidate_titles": [],
+  "candidate_samples": [],
+  "too_old_count": 0
+ },
+ {
+  "school": "Loma Linda",
+  "rank": 97,
+  "source": "lomalinda",
+  "label": "lomalinda",
+  "type": "oracle",
+  "checked": "2026-10-27",
+  "found": 67,
+  "candidates": 1,
+  "too_old": 3,
+  "status": "ok",
+  "new_details": 1,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Research Assistant"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Research Assistant",
+    "url": "https://egln.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/17585",
+    "posted": "2026-10-21",
+    "dept": "",
+    "text": "School of Behavioral Health \n ***This position is funded through a grant and is contingent upon continued grant funding. Employment in this role is subject to the availability of grant funds and may be limited to the duration of the grant period.*** \n Job Summary: The Research Assistant supports the"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "Meharry",
+  "rank": 98,
+  "source": "meharry",
+  "label": "meharry",
+  "type": "workday",
+  "checked": "2026-10-27",
+  "found": 32,
+  "candidates": 1,
+  "too_old": 5,
+  "status": "ok",
+  "new_details": 1,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Postdoc Research Associate"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Postdoc Research Associate",
+    "url": "https://meharrymedicalcollege.wd12.myworkdayjobs.com/external/job/Main-Campus/Postdoc-Research-Associate_JR101922",
+    "posted": "2026-10-12",
+    "dept": "",
+    "text": "The successful applicant for this position will join a vibrant cancer biology laboratory that uses highly innovative molecular techniques including biochemical, multi-omics and multianalyte approaches for basic and translational cancer research. \n Essential Functions (Principal Duties and Job Respon"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "Washington State",
+  "rank": 101,
+  "source": "wsu",
+  "label": "wsu",
+  "type": "workday",
+  "checked": "2026-10-27",
+  "found": 27,
+  "candidates": 1,
+  "too_old": 1,
+  "status": "ok",
+  "new_details": 1,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Postdoctoral Research Associate - Sustainable & Circular Polymer Materials"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Postdoctoral Research Associate - Sustainable & Circular Polymer Materials",
+    "url": "https://wsu.wd5.myworkdayjobs.com/WSU_Jobs/job/Pullman-WA/Postdoctoral-Research-Associate---Sustainable---Circular-Polymer-Materials_R-15573",
+    "posted": "2026-10-21",
+    "dept": "",
+    "text": "Online applications must be received before 11:59pm on: \n November 4, 2026 If a date is not listed above, review the Applicant Instructions below for more details. \n Available Title(s): \n 306-YY_FACULTY - Postdoctoral Research Associate \n Business Title: \n Postdoctoral Research Associate - Sustainab"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "UNLV",
+  "rank": 102,
+  "source": "unlv",
+  "label": "unlv",
+  "type": "workday",
+  "checked": "2026-10-27",
+  "found": 121,
+  "candidates": 1,
+  "too_old": 3,
+  "status": "ok",
+  "new_details": 1,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Assistant Research Analyst, Nevada Institute for Children\u2019s Research & Policy, School of Public Health (hybrid flexible work schedule) [R0153977]"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Assistant Research Analyst, Nevada Institute for Children\u2019s Research & Policy, School of Public Health (hybrid flexible work schedule) [R0153977]",
+    "url": "https://nshe.wd1.myworkdayjobs.com/UNLV-External/job/UNLV1-Main-Campus-Las-Vegas/Assistant-Research-Analyst--Nevada-Institute-for-Children-s-Research---Policy--School-of-Public-Health--hybrid-flexible-work-schedule---R0153977-_R0153977",
+    "posted": "2026-10-27",
+    "dept": "",
+    "text": "The University of Nevada, Las Vegas (UNLV) appreciates your interest in employment. We ask that you keep in mind the following when completing your application: \n Once you start the application process you cannot save your work. Please ensure you have all required attachment(s) available to complete"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "ETSU",
+  "rank": 105,
+  "source": "etsu",
+  "label": "etsu",
+  "type": "oracle",
+  "checked": "2026-10-27",
+  "found": 51,
+  "candidates": 0,
+  "too_old": 2,
+  "status": "ok",
+  "new_details": 0,
+  "detail_errors": 0,
+  "candidate_titles": [],
+  "candidate_samples": [],
+  "too_old_count": 0
+ }
+]
