@@ -1,0 +1,29 @@
+[
+ {
+  "school": "UTMB",
+  "rank": 76,
+  "source": "utmb",
+  "label": "utmb",
+  "type": "board",
+  "checked": "2026-10-27",
+  "found": 10,
+  "candidates": 1,
+  "too_old": 0,
+  "status": "ok",
+  "new_details": 1,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Postdoctoral Fellow, Cardiovascular Medicine"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Postdoctoral Fellow, Cardiovascular Medicine",
+    "url": "https://applyjobs.utmb.edu/jobs/postdoctoral-fellow-cardiovascular-medicine-36920",
+    "posted": "",
+    "dept": "",
+    "text": "\ud83c\udf0e \n English \n English (United Kingdom) \n Fran\u00e7ais (France) \n Italiano \n Norsk \n Suomi \n Svenska \n Espa\u00f1ol \n Portugu\u00eas (Brasil) \n Nederlands \n Fran\u00e7ais \n \u65e5\u672c\u8a9e \n Deutsch \n P\u0443\u0441\u0441\u043a\u0438\u0439 \n Polski \n Portugu\u00eas \n \ud55c\uad6d\uc5b4 \n \u4e2d\u6587(\u4e2d\u56fd) \n \u4e2d\u6587(\u53f0\u7063) \n \u0e44\u0e17\u0e22 \n \u010ce\u0161tina \n T\u00fcrk\u00e7e \n Magyar \n Rom\u00e2n\u0103 \n Sloven\u010dina \n \ue705 This job posting i"
+   }
+  ],
+  "too_old_count": 0
+ }
+]

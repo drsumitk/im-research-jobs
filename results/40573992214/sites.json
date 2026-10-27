@@ -1,0 +1,86 @@
+[
+ {
+  "label": "mda-robots",
+  "url": "https://jobs.mdanderson.org/robots.txt",
+  "status": 200,
+  "length": 75,
+  "final": "https://jobs.mdanderson.org/robots.txt",
+  "title": "",
+  "ats": {},
+  "job_links": [],
+  "followed": []
+ },
+ {
+  "label": "mda-sitemap",
+  "url": "https://jobs.mdanderson.org/sitemap.xml",
+  "status": 200,
+  "length": 263,
+  "final": "https://jobs.mdanderson.org/sitemap.xml",
+  "title": "",
+  "ats": {},
+  "job_links": [],
+  "followed": []
+ },
+ {
+  "label": "morehouse-pa",
+  "url": "https://careers.msm.edu/postings/search",
+  "status": "robots",
+  "note": "robots.txt disallows careers.msm.edu/postings/search"
+ },
+ {
+  "label": "augusta-external",
+  "url": "https://www.augusta.edu/jobs/external",
+  "status": 200,
+  "length": 73927,
+  "final": "https://careers.hprod.onehcm.usg.edu/psc/careers/CAREERS/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?FOCUS=Applicant&SiteId=12000&",
+  "title": "Careers",
+  "ats": {
+   "peoplesoft": [
+    "https://careers.hprod.onehcm.usg.edu/psc/careers/CAREERS/APPLICANT",
+    "https://careers.hprod.onehcm.usg.edu/psc/careers/CAREERS/APPLICANT/c/PTGP_MENU.PTGP_USERPREF_FL.GBL?CONTEXTIDPARAMS=PSFT_HR---HRS_CG_SEARCH_FL",
+    "https://careers.hprod.onehcm.usg.edu/psc/careers/CAREERS/HRMS/?cmd=expire",
+    "https://careers.hprod.onehcm.usg.edu/psc/careers/CAREERS/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL",
+    "https://careers.hprod.onehcm.usg.edu/psc/careers/CAREERS/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?FOCUS=Applicant&SiteId=12000&&PAGE=HRS_CAREERS_FL"
+   ]
+  },
+  "job_links": [
+   {
+    "text": "Job Data",
+    "href": "javascript:submitAction_win0(document.win0,'PTSMENU$4');"
+   },
+   {
+    "text": "Sign Out",
+    "href": "javascript:DoLogout('https://careers.hprod.onehcm.usg.edu/psp/careers/?cmd=logout')"
+   },
+   {
+    "text": "support@usg.edu",
+    "href": "mailto: support@usg.edu?subject=Job%20Opening%20Questions"
+   },
+   {
+    "text": "HRTalentAcquisition@augusta.edu",
+    "href": "mailto: HRTalentAcquisition@augusta.edu?subject=Job%20Opening%20Questions"
+   },
+   {
+    "text": "View All Jobs",
+    "href": "javascript:submitAction_win0(document.win0,'NAV_PB$0');"
+   },
+   {
+    "text": "My Job Notifications",
+    "href": "javascript:submitAction_win0(document.win0,'NAV_PB$1');"
+   },
+   {
+    "text": "My Job Applications",
+    "href": "javascript:submitAction_win0(document.win0,'NAV_PB$2');"
+   },
+   {
+    "text": "My Favorite Jobs",
+    "href": "javascript:submitAction_win0(document.win0,'NAV_PB$3');"
+   },
+   {
+    "text": "Augusta University Careers",
+    "href": "javascript:submitAction_win0(document.win0,'DERIVED_HRS_CG_HRS_HOME_PB');"
+   }
+  ],
+  "followed": []
+ }
+]
