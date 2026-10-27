@@ -1,0 +1,1398 @@
+[
+ {
+  "label": "mdanderson-taleo",
+  "url": "https://mdanderson.taleo.net/careersection/MDA_ex/jobsearch.ftl",
+  "status": 200,
+  "length": 85890,
+  "final": "https://jobs.mdanderson.org/",
+  "title": "Home | MD Anderson",
+  "ats": {
+   "taleo": [
+    "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl"
+   ]
+  },
+  "job_links": [
+   {
+    "text": "here",
+    "href": "https://jobs.mdanderson.org/creative/candidate-log-in"
+   },
+   {
+    "text": "Already Applied (opens in a new tab)",
+    "href": "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl"
+   },
+   {
+    "text": "Current Employee (opens in a new tab)",
+    "href": "https://employeejobs.mdanderson.org/Search/SearchJobs?utm_campaign=currentemployee&utm_source=careersite&utm_medium=currentemployeebutton&utm_content=searchemployeejobs"
+   },
+   {
+    "text": "Nursing",
+    "href": "https://jobs.mdanderson.org/careers/nursing"
+   },
+   {
+    "text": "Research",
+    "href": "https://jobs.mdanderson.org/careers/research"
+   },
+   {
+    "text": "Allied Health",
+    "href": "https://jobs.mdanderson.org/careers/allied-health"
+   },
+   {
+    "text": "Faculty",
+    "href": "https://jobs.mdanderson.org/careers/faculty"
+   },
+   {
+    "text": "Executive",
+    "href": "https://jobs.mdanderson.org/careers/executive"
+   },
+   {
+    "text": "Philanthropy",
+    "href": "https://jobs.mdanderson.org/careers/philanthropy"
+   },
+   {
+    "text": "Trainee Programs",
+    "href": "https://jobs.mdanderson.org/careers/training"
+   },
+   {
+    "text": "Already Applied (opens in a new tab)",
+    "href": "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl"
+   },
+   {
+    "text": "Current Employee (opens in a new tab)",
+    "href": "https://employeejobs.mdanderson.org/Search/SearchJobs?utm_campaign=currentemployee&utm_source=careersite&utm_medium=currentemployeebutton&utm_content=searchemployeejobs"
+   },
+   {
+    "text": "Search Nursing Jobs",
+    "href": "https://jobs.mdanderson.org/search/searchjobs?categoryid=d0066a33-0de5-4467-a365-324b5beb041e"
+   },
+   {
+    "text": "Search Research Jobs",
+    "href": "https://jobs.mdanderson.org/search/searchjobs?categoryid=39755a11-953f-4730-abed-99c16d2c73c2"
+   },
+   {
+    "text": "Search Allied Health Jobs",
+    "href": "https://jobs.mdanderson.org/search/searchjobs?categoryid=4dacea6c-1c92-4db2-9235-a066e50a00be"
+   },
+   {
+    "text": "Search Faculty Jobs",
+    "href": "https://jobs.mdanderson.org/search/searchjobs?categoryid=2c19dba0-598b-4f7b-a2c3-3feebcba9abc"
+   },
+   {
+    "text": "Search Executive Jobs",
+    "href": "https://jobs.mdanderson.org/search/searchjobs?categoryid=c8931290-a5bd-4e0f-940e-1e7234197928"
+   },
+   {
+    "text": "Search Philanthropy Jobs",
+    "href": "https://jobs.mdanderson.org/search/searchjobs?categoryid=3330a738-a6b9-43c7-be86-5363a1762f41"
+   },
+   {
+    "text": "Search Trainee Programs",
+    "href": "https://jobs.mdanderson.org/careers/training"
+   },
+   {
+    "text": "<span>See all jobs</span>",
+    "href": "https://jobs.mdanderson.org/search/searchjobs"
+   },
+   {
+    "text": "Nursing Work at the top of your profession and grow.",
+    "href": "https://jobs.mdanderson.org/careers/nursing"
+   },
+   {
+    "text": "Research Join the greatest minds and see research in action.",
+    "href": "https://jobs.mdanderson.org/careers/research"
+   },
+   {
+    "text": "Allied Health Be part of a supportive team that is always learning.",
+    "href": "https://jobs.mdanderson.org/careers/allied-health"
+   },
+   {
+    "text": "Faculty Be the catalyst for teaching and cancer research.",
+    "href": "https://jobs.mdanderson.org/careers/faculty"
+   },
+   {
+    "text": "Executive Be a leader with an inspiring mission.",
+    "href": "https://jobs.mdanderson.org/careers/executive"
+   }
+  ],
+  "followed": [
+   {
+    "url": "https://jobs.mdanderson.org/creative/candidate-log-in",
+    "final": "https://jobs.mdanderson.org/candidate-log-in",
+    "status": 200,
+    "ats": {
+     "taleo": [
+      "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl"
+     ]
+    }
+   },
+   {
+    "url": "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl",
+    "final": "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl",
+    "status": 200,
+    "ats": {}
+   },
+   {
+    "url": "https://employeejobs.mdanderson.org/Search/SearchJobs?utm_campaign=currentemployee&utm_source=careersite&utm_medium=currentemployeebutton&utm_content=searchemployeejobs",
+    "final": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=a79d6801-c0b5-49f2-b442-092517159c0c&redirect_uri=https%3A%2F%2Femployeejobs.mdanderson.org%2Fsignin-oidc&response_type=id_token&scope=openid%20profile&response_mode=form_post&nonce=639287276737261401.ZDVlOWY3MWEtMWU1Yy00MWVmLThjZGItMTU4ZDgwY2I4NDk5YjlmZmNmZjYtYjg1NS00MjY3LWE5ZDItY2YyOTg5YTg2ODZm&client_info=1&x-client-brkrver=IDWeb.3.15.0.0&state=CfDJ8K9ovTvrxytKknwy9Ue8l60zrQwb9AvcZWTTmx0fPBmFzVm3C2N3mY2lNhsVxOaqYYoUGHyOqrkr-M3b_WVI5AcoG6GoBxMgS6AFG94VkzRky1RdE70i0BDBbd3Wn-_QVL2Zfz-TPnuELU4uHq-PqPxH2Mw4NPMwrhkUQ0diy4vDt3EP1FNoYoboKfp6MI2XnkPpkk66V3eEmA8a6WCEfiRdFWTZoLN2cyhO93K-yRAgBM8Xo7kQl5osLI51UYvdTtqIlSMN_WsPxo2ZtdqemsH6d55tzVg0n5TqhWT9IbJeR1sYnjyq9X_Vmh5sC05zzPxfkaHS39Ueo9XGr0uhV2g&x-client-SKU=ID_NET10_0&x-client-ver=8.22.0.0",
+    "status": 200,
+    "ats": {}
+   },
+   {
+    "url": "https://jobs.mdanderson.org/careers/nursing",
+    "final": "https://jobs.mdanderson.org/careers/nursing",
+    "status": 200,
+    "ats": {
+     "taleo": [
+      "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "label": "temple-faculty-taleo",
+  "url": "https://temple.taleo.net/careersection/tu_ex_faculty/jobsearch.ftl",
+  "status": 200,
+  "length": 43504,
+  "final": "https://temple.taleo.net/careersection/tu_ex_faculty/jobsearch.ftl",
+  "title": "Job Search",
+  "ats": {
+   "taleo_portal": [
+    "portal=28100025969"
+   ]
+  },
+  "job_links": [
+   {
+    "text": "View All Jobs",
+    "href": "https://temple.taleo.net/careersection/tu_ex_faculty/jobsearch.ftl"
+   },
+   {
+    "text": "Add Job Field",
+    "href": "https://temple.taleo.net/careersection/tu_ex_faculty/jobsearch.ftl"
+   },
+   {
+    "text": "Access My Saved Searches",
+    "href": "https://temple.taleo.net/careersection/tu_ex_faculty/mysearches.ftl"
+   },
+   {
+    "text": "You can also view all available job openings.",
+    "href": "https://temple.taleo.net/careersection/tu_ex_faculty/jobsearch.ftl"
+   }
+  ],
+  "followed": [
+   {
+    "url": "https://temple.taleo.net/careersection/tu_ex_faculty/mysearches.ftl",
+    "final": "https://temple.taleo.net/careersection/tu_ex_faculty/mysearches.ftl",
+    "status": 200,
+    "ats": {}
+   }
+  ]
+ },
+ {
+  "label": "utmb-latest",
+  "url": "https://applyjobs.utmb.edu/latest-jobs",
+  "status": 200,
+  "length": 93878,
+  "final": "https://applyjobs.utmb.edu/latest-jobs",
+  "title": "New Jobs - UTMB Health Careers",
+  "ats": {
+   "taleo": [
+    "https://aa083.taleo.net/careersection/mysubmissions.ftl?lang=en",
+    "https://aa083.taleo.net/careersection/profile.ftl?lang=en"
+   ],
+   "selectminds": [
+    "https://aa083.referrals.selectminds.com/",
+    "https://aa083.referrals.selectminds.com/admin",
+    "https://aa083.referrals.selectminds.com/campaigns/create",
+    "https://aa083.referrals.selectminds.com/info/help",
+    "https://aa083.referrals.selectminds.com/logout"
+   ]
+  },
+  "job_links": [
+   {
+    "text": "JOBS",
+    "href": "https://aa083.referrals.selectminds.com/"
+   },
+   {
+    "text": "PROMOTE JOBS",
+    "href": "https://aa083.referrals.selectminds.com/campaigns/create"
+   },
+   {
+    "text": "JOBS",
+    "href": "https://aa083.referrals.selectminds.com/"
+   },
+   {
+    "text": "PROMOTE JOBS",
+    "href": "https://aa083.referrals.selectminds.com/campaigns/create"
+   },
+   {
+    "text": "",
+    "href": "https://applyjobs.utmb.edu/"
+   },
+   {
+    "text": "Jobs",
+    "href": "https://applyjobs.utmb.edu/"
+   },
+   {
+    "text": "Help",
+    "href": "https://applyjobs.utmb.edu/info/help"
+   },
+   {
+    "text": "ER Technician II - ED Clear Lake (7P-7A)",
+    "href": "https://applyjobs.utmb.edu/jobs/er-technician-ii-ed-clear-lake-7p-7a-36914"
+   },
+   {
+    "text": "\ud83d\udd0d Webster, Texas, United States",
+    "href": "https://applyjobs.utmb.edu/jobs/36914/other-jobs-matching/location-only"
+   },
+   {
+    "text": "Mental Health Clinician (MHC) - Ney Unit",
+    "href": "https://applyjobs.utmb.edu/jobs/mental-health-clinician-mhc-ney-unit-36913"
+   },
+   {
+    "text": "\ud83d\udd0d Hondo, Texas, United States",
+    "href": "https://applyjobs.utmb.edu/jobs/36913/other-jobs-matching/location-only"
+   },
+   {
+    "text": "Vocational Nurse (LVN) - TJJD Gainesville",
+    "href": "https://applyjobs.utmb.edu/jobs/vocational-nurse-lvn-tjjd-gainesville-36912"
+   },
+   {
+    "text": "\ud83d\udd0d Gainesville, Texas, United States",
+    "href": "https://applyjobs.utmb.edu/jobs/36912/other-jobs-matching/location-only"
+   },
+   {
+    "text": "Vocational Nurse (LVN) - Casual Appointment - San Saba Unit",
+    "href": "https://applyjobs.utmb.edu/jobs/vocational-nurse-lvn-casual-appointment-san-saba-unit-36911"
+   },
+   {
+    "text": "\ud83d\udd0d San Saba, Texas, United States",
+    "href": "https://applyjobs.utmb.edu/jobs/36911/other-jobs-matching/location-only"
+   },
+   {
+    "text": "Nurse Clinician (RN) - PBL - Stringfellow Unit",
+    "href": "https://applyjobs.utmb.edu/jobs/nurse-clinician-rn-pbl-stringfellow-unit-36910"
+   },
+   {
+    "text": "\ud83d\udd0d Rosharon, Texas, United States",
+    "href": "https://applyjobs.utmb.edu/jobs/36910/other-jobs-matching/location-only"
+   },
+   {
+    "text": "Certified Medication Aide (CMA) - Michael Unit",
+    "href": "https://applyjobs.utmb.edu/jobs/certified-medication-aide-cma-michael-unit-36909"
+   },
+   {
+    "text": "\ud83d\udd0d Tennessee Colony, Texas, United States",
+    "href": "https://applyjobs.utmb.edu/jobs/36909/other-jobs-matching/location-only"
+   },
+   {
+    "text": "Medical Assistant I - Angleton Medical Specialties (19.99 Hours or Less, Non-Ben",
+    "href": "https://applyjobs.utmb.edu/jobs/medical-assistant-i-angleton-medical-specialties-19-99-hours-or-less-non-benefit-bearing-36908"
+   },
+   {
+    "text": "\ud83d\udd0d Angleton, Texas, United States",
+    "href": "https://applyjobs.utmb.edu/jobs/36908/other-jobs-matching/location-only"
+   },
+   {
+    "text": "Certified Medication Aide (CMA) - Memorial Unit",
+    "href": "https://applyjobs.utmb.edu/jobs/certified-medication-aide-cma-memorial-unit-36907"
+   },
+   {
+    "text": "\ud83d\udd0d Rosharon, Texas, United States",
+    "href": "https://applyjobs.utmb.edu/jobs/36907/other-jobs-matching/location-only"
+   },
+   {
+    "text": "Medical Assistant I - Angleton Family Medicine",
+    "href": "https://applyjobs.utmb.edu/jobs/medical-assistant-i-angleton-family-medicine-36906"
+   },
+   {
+    "text": "\ud83d\udd0d Angleton, Texas, United States",
+    "href": "https://applyjobs.utmb.edu/jobs/36906/other-jobs-matching/location-only"
+   }
+  ],
+  "followed": [
+   {
+    "url": "https://aa083.referrals.selectminds.com/",
+    "final": "https://aa083.referrals.selectminds.com/",
+    "status": 200,
+    "ats": {
+     "taleo": [
+      "https://aa083.taleo.net/careersection/mysubmissions.ftl?lang=en",
+      "https://aa083.taleo.net/careersection/profile.ftl?lang=en"
+     ],
+     "selectminds": [
+      "https://aa083.referrals.selectminds.com",
+      "https://aa083.referrals.selectminds.com/",
+      "https://aa083.referrals.selectminds.com/admin",
+      "https://aa083.referrals.selectminds.com/campaigns/create",
+      "https://aa083.referrals.selectminds.com/hot-jobs"
+     ]
+    }
+   },
+   {
+    "url": "https://aa083.referrals.selectminds.com/campaigns/create",
+    "final": "https://aa083.referrals.selectminds.com/campaigns/create",
+    "status": 200,
+    "ats": {
+     "selectminds": [
+      "https://aa083.referrals.selectminds.com/campaigns/create"
+     ]
+    }
+   },
+   {
+    "url": "https://applyjobs.utmb.edu/",
+    "final": "https://applyjobs.utmb.edu/",
+    "status": 200,
+    "ats": {
+     "taleo": [
+      "https://aa083.taleo.net/careersection/mysubmissions.ftl?lang=en",
+      "https://aa083.taleo.net/careersection/profile.ftl?lang=en"
+     ],
+     "selectminds": [
+      "https://aa083.referrals.selectminds.com/",
+      "https://aa083.referrals.selectminds.com/admin",
+      "https://aa083.referrals.selectminds.com/campaigns/create",
+      "https://aa083.referrals.selectminds.com/info/help",
+      "https://aa083.referrals.selectminds.com/logout"
+     ]
+    }
+   },
+   {
+    "url": "https://applyjobs.utmb.edu/info/help",
+    "final": "https://applyjobs.utmb.edu/info/help",
+    "status": 200,
+    "ats": {
+     "taleo": [
+      "https://aa083.taleo.net/careersection/mysubmissions.ftl?lang=en",
+      "https://aa083.taleo.net/careersection/profile.ftl?lang=en"
+     ],
+     "selectminds": [
+      "https://aa083.referrals.selectminds.com/",
+      "https://aa083.referrals.selectminds.com/admin",
+      "https://aa083.referrals.selectminds.com/campaigns/create",
+      "https://aa083.referrals.selectminds.com/info/help",
+      "https://aa083.referrals.selectminds.com/logout"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "label": "nebraska-search",
+  "url": "https://jobs.nebraska.edu/search/?q=postdoc",
+  "status": 200,
+  "length": 49964,
+  "final": "https://jobs.nebraska.edu/search/?q=postdoc",
+  "title": "Postdoc - theboardof Jobs",
+  "ats": {
+   "successfactors": [
+    "https://api41.sapsf.com",
+    "https://career41.sapsf.com",
+    "https://hcm41.sapsf.com/messagebundle/_/vmod_3/common!/verp/ui/common-messagebundles/resources/i18n/common-components/messagebundle.properties",
+    "https://hcm41.sapsf.com/verp/vmod_3",
+    "https://hcm41.sapsf.com/verp/vmod_3/ui/widget-loader/resources/widget-loader.js"
+   ],
+   "rmk": [
+    "jobs2web",
+    "rmkcdn"
+   ]
+  },
+  "job_links": [
+   {
+    "text": "English (United States)",
+    "href": "https://jobs.nebraska.edu/search/?q=postdoc&locale=en_US"
+   },
+   {
+    "text": "English (United States)",
+    "href": "https://jobs.nebraska.edu/search/?q=postdoc&locale=en_US"
+   }
+  ],
+  "followed": [
+   {
+    "url": "https://jobs.nebraska.edu/search/?q=postdoc&locale=en_US",
+    "final": "https://jobs.nebraska.edu/search/?q=postdoc&locale=en_US",
+    "status": 200,
+    "ats": {
+     "successfactors": [
+      "https://api41.sapsf.com",
+      "https://career41.sapsf.com",
+      "https://hcm41.sapsf.com/messagebundle/_/vmod_3/common!/verp/ui/common-messagebundles/resources/i18n/common-components/messagebundle.properties",
+      "https://hcm41.sapsf.com/verp/vmod_3",
+      "https://hcm41.sapsf.com/verp/vmod_3/ui/widget-loader/resources/widget-loader.js"
+     ],
+     "rmk": [
+      "jobs2web",
+      "rmkcdn"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "label": "nebraska-unmc",
+  "url": "https://jobs.nebraska.edu/UniversityNebraskaSystem/go/University-of-Nebraska-Medical-Center/9754800/",
+  "status": 200,
+  "length": 68007,
+  "final": "https://jobs.nebraska.edu/UniversityNebraskaSystem/go/University-of-Nebraska-Medical-Center/9754800/",
+  "title": "",
+  "ats": {
+   "peopleadmin": [
+    "https://unomaha.peopleadmin.com/"
+   ],
+   "successfactors": [
+    "https://api41.sapsf.com",
+    "https://career41.sapsf.com",
+    "https://hcm41.sapsf.com/messagebundle/_/vmod_3/common!/verp/ui/common-messagebundles/resources/i18n/common-components/messagebundle.properties",
+    "https://hcm41.sapsf.com/verp/vmod_3",
+    "https://hcm41.sapsf.com/verp/vmod_3/ui/widget-loader/resources/widget-loader.js"
+   ],
+   "rmk": [
+    "/go/University-of-Nebraska-Medical-Center/9754800/",
+    "/go/University-of-Nebraska-System/9756900/",
+    "/go/University-of-Nebraska-at-Kearney/9754600/",
+    "jobs2web",
+    "rmkcdn"
+   ]
+  },
+  "job_links": [
+   {
+    "text": "",
+    "href": "https://jobs.nebraska.edu/UniversityNebraskaSystem"
+   },
+   {
+    "text": "UNL",
+    "href": "https://employment.unl.edu/"
+   },
+   {
+    "text": "UNMC",
+    "href": "https://jobs.unmc.edu"
+   },
+   {
+    "text": "",
+    "href": "https://jobs.nebraska.edu/UniversityNebraskaSystem"
+   },
+   {
+    "text": "UNL",
+    "href": "https://employment.unl.edu/"
+   },
+   {
+    "text": "UNMC",
+    "href": "https://jobs.unmc.edu"
+   },
+   {
+    "text": "",
+    "href": "https://jobs.nebraska.edu/UniversityNebraskaSystem"
+   },
+   {
+    "text": "UNL",
+    "href": "https://employment.unl.edu/"
+   },
+   {
+    "text": "UNMC",
+    "href": "https://jobs.unmc.edu"
+   },
+   {
+    "text": "JOBS HOME",
+    "href": "https://jobs.nebraska.edu/UniversityNebraskaSystem/"
+   }
+  ],
+  "followed": [
+   {
+    "url": "https://jobs.nebraska.edu/UniversityNebraskaSystem",
+    "final": "https://jobs.nebraska.edu/UniversityNebraskaSystem",
+    "status": 200,
+    "ats": {
+     "peopleadmin": [
+      "https://unomaha.peopleadmin.com/"
+     ],
+     "successfactors": [
+      "https://career41.sapsf.com",
+      "https://hcm41.sapsf.com/verp/vmod_v1/ui/extlib/jquery_3.5.1/jquery-migrate.js",
+      "https://hcm41.sapsf.com/verp/vmod_v1/ui/extlib/jquery_3.5.1/jquery.js",
+      "https://rmkcdn.successfactors.com/e82826e4/35335297-2fcf-4421-a84c-e.jpg",
+      "https://rmkcdn.successfactors.com/e82826e4/41d7c5e3-2a65-4629-8620-d.jpg"
+     ],
+     "rmk": [
+      "/go/Faculty-University-of-Nebraska-System/9754900/",
+      "/go/Staff-University-of-Nebraska-System/9755000/",
+      "/go/University-of-Nebraska-System/9756900/",
+      "/go/University-of-Nebraska-at-Kearney/9754600/",
+      "rmkcdn"
+     ]
+    }
+   },
+   {
+    "url": "https://employment.unl.edu/",
+    "status": "robots",
+    "note": "robots.txt disallows employment.unl.edu/"
+   },
+   {
+    "url": "https://jobs.unmc.edu",
+    "final": "https://unmc.peopleadmin.com",
+    "status": 200,
+    "ats": {
+     "peopleadmin": [
+      "https://unk.peopleadmin.com/",
+      "https://unmc.peopleadmin.com/hr/sessions/new",
+      "https://unmc.peopleadmin.com/postings/search",
+      "https://unomaha.peopleadmin.com/"
+     ]
+    }
+   },
+   {
+    "url": "https://jobs.nebraska.edu/UniversityNebraskaSystem/",
+    "final": "https://jobs.nebraska.edu/UniversityNebraskaSystem/",
+    "status": 200,
+    "ats": {
+     "peopleadmin": [
+      "https://unomaha.peopleadmin.com/"
+     ],
+     "successfactors": [
+      "https://career41.sapsf.com",
+      "https://hcm41.sapsf.com/verp/vmod_v1/ui/extlib/jquery_3.5.1/jquery-migrate.js",
+      "https://hcm41.sapsf.com/verp/vmod_v1/ui/extlib/jquery_3.5.1/jquery.js",
+      "https://rmkcdn.successfactors.com/e82826e4/35335297-2fcf-4421-a84c-e.jpg",
+      "https://rmkcdn.successfactors.com/e82826e4/41d7c5e3-2a65-4629-8620-d.jpg"
+     ],
+     "rmk": [
+      "/go/Faculty-University-of-Nebraska-System/9754900/",
+      "/go/Staff-University-of-Nebraska-System/9755000/",
+      "/go/University-of-Nebraska-System/9756900/",
+      "/go/University-of-Nebraska-at-Kearney/9754600/",
+      "rmkcdn"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "label": "msu-page",
+  "url": "https://careers.msu.edu/jobs/search?page=1&query=postdoctoral",
+  "status": 200,
+  "length": 793186,
+  "final": "https://careers.msu.edu/jobs/search?page=1&query=postdoctoral",
+  "title": "Search Page",
+  "ats": {
+   "pageup": [
+    "https://secure.dc4.pageuppeople.com/apply/782/aw/applicationForm/default.asp"
+   ]
+  },
+  "job_links": [
+   {
+    "text": "Student Employment",
+    "href": "https://careers.msu.edu/student-employment"
+   },
+   {
+    "text": "Careers",
+    "href": "https://careers.msu.edu/jobs/search"
+   },
+   {
+    "text": "Skip to jobs search results",
+    "href": "https://careers.msu.edu/jobs/search?page=1&query=postdoctoral#jobs_search_results_868e7c343241b462244f7ed0dba54dd8"
+   },
+   {
+    "text": "Postdoctoral Scholar-Fixed Term",
+    "href": "https://careers.msu.edu/jobs/postdoctoral-scholar-fixed-term-east-lansing-michigan-united-states-47b694a1-1655-47bc-a9c9-54eaf4fb0d5a"
+   },
+   {
+    "text": "Show More",
+    "href": "https://careers.msu.edu/jobs/.job-component-details-a0279e043546375f79842ceaa603e590 .job-component-list-category .collapse"
+   },
+   {
+    "text": "Show Less",
+    "href": "https://careers.msu.edu/jobs/.job-component-details-a0279e043546375f79842ceaa603e590 .job-component-list-category .collapse"
+   },
+   {
+    "text": "Read more",
+    "href": "https://careers.msu.edu/jobs/postdoctoral-scholar-fixed-term-east-lansing-michigan-united-states-47b694a1-1655-47bc-a9c9-54eaf4fb0d5a"
+   },
+   {
+    "text": "Postdoctoral Scholar-Fixed Term",
+    "href": "https://careers.msu.edu/jobs/postdoctoral-scholar-fixed-term-east-lansing-michigan-united-states-28ce883c-f8e0-41dc-86fd-be87689808aa"
+   },
+   {
+    "text": "Show More",
+    "href": "https://careers.msu.edu/jobs/.job-component-details-3f06ce165729544cfc58af0e685aa50e .job-component-list-category .collapse"
+   },
+   {
+    "text": "Show Less",
+    "href": "https://careers.msu.edu/jobs/.job-component-details-3f06ce165729544cfc58af0e685aa50e .job-component-list-category .collapse"
+   },
+   {
+    "text": "Read more",
+    "href": "https://careers.msu.edu/jobs/postdoctoral-scholar-fixed-term-east-lansing-michigan-united-states-28ce883c-f8e0-41dc-86fd-be87689808aa"
+   },
+   {
+    "text": "Postdoctoral Scholar-Fixed Term",
+    "href": "https://careers.msu.edu/jobs/postdoctoral-scholar-fixed-term-east-lansing-michigan-united-states-7410415a-3d10-44fc-a304-263512084e50"
+   },
+   {
+    "text": "Show More",
+    "href": "https://careers.msu.edu/jobs/.job-component-details-8615e58511df5871976ad4f59da47a78 .job-component-list-category .collapse"
+   },
+   {
+    "text": "Show Less",
+    "href": "https://careers.msu.edu/jobs/.job-component-details-8615e58511df5871976ad4f59da47a78 .job-component-list-category .collapse"
+   },
+   {
+    "text": "Read more",
+    "href": "https://careers.msu.edu/jobs/postdoctoral-scholar-fixed-term-east-lansing-michigan-united-states-7410415a-3d10-44fc-a304-263512084e50"
+   },
+   {
+    "text": "Postdoctoral Scholar-Fixed Term",
+    "href": "https://careers.msu.edu/jobs/postdoctoral-scholar-fixed-term-east-lansing-michigan-united-states-a4c9d337-579c-419f-b782-e5bb02751a41"
+   },
+   {
+    "text": "Show More",
+    "href": "https://careers.msu.edu/jobs/.job-component-details-7a4c1fc23aabeb94de69a6deb0c8b68a .job-component-list-category .collapse"
+   },
+   {
+    "text": "Show Less",
+    "href": "https://careers.msu.edu/jobs/.job-component-details-7a4c1fc23aabeb94de69a6deb0c8b68a .job-component-list-category .collapse"
+   },
+   {
+    "text": "Read more",
+    "href": "https://careers.msu.edu/jobs/postdoctoral-scholar-fixed-term-east-lansing-michigan-united-states-a4c9d337-579c-419f-b782-e5bb02751a41"
+   },
+   {
+    "text": "Postdoctoral Scholar-Fixed Term",
+    "href": "https://careers.msu.edu/jobs/postdoctoral-scholar-fixed-term-east-lansing-michigan-united-states-ff6a74ee-8c9c-481c-a696-881a7a633784"
+   },
+   {
+    "text": "Show More",
+    "href": "https://careers.msu.edu/jobs/.job-component-details-76e28afe4df7fcb2c4a6279a8f17d3a7 .job-component-list-category .collapse"
+   },
+   {
+    "text": "Show Less",
+    "href": "https://careers.msu.edu/jobs/.job-component-details-76e28afe4df7fcb2c4a6279a8f17d3a7 .job-component-list-category .collapse"
+   },
+   {
+    "text": "Read more",
+    "href": "https://careers.msu.edu/jobs/postdoctoral-scholar-fixed-term-east-lansing-michigan-united-states-ff6a74ee-8c9c-481c-a696-881a7a633784"
+   },
+   {
+    "text": "Postdoctoral Scholar-Fixed Term",
+    "href": "https://careers.msu.edu/jobs/postdoctoral-scholar-fixed-term-east-lansing-michigan-united-states-e4d90b39-b467-4a18-aee3-aad3d14f6cba"
+   },
+   {
+    "text": "Show More",
+    "href": "https://careers.msu.edu/jobs/.job-component-details-09236018ef64e0fa0fdd90d0853ca1fd .job-component-list-category .collapse"
+   }
+  ],
+  "followed": [
+   {
+    "url": "https://careers.msu.edu/student-employment",
+    "final": "https://careers.msu.edu/student-employment",
+    "status": 200,
+    "ats": {
+     "pageup": [
+      "https://secure.dc4.pageuppeople.com/apply/782/aw/applicationForm/default.asp"
+     ]
+    }
+   },
+   {
+    "url": "https://careers.msu.edu/jobs/search",
+    "final": "https://careers.msu.edu/jobs/search",
+    "status": 200,
+    "ats": {
+     "pageup": [
+      "https://secure.dc4.pageuppeople.com/apply/782/aw/applicationForm/default.asp"
+     ]
+    }
+   },
+   {
+    "url": "https://careers.msu.edu/jobs/search?page=1&query=postdoctoral#jobs_search_results_868e7c343241b462244f7ed0dba54dd8",
+    "final": "https://careers.msu.edu/jobs/search?page=1&query=postdoctoral#jobs_search_results_868e7c343241b462244f7ed0dba54dd8",
+    "status": 200,
+    "ats": {
+     "pageup": [
+      "https://secure.dc4.pageuppeople.com/apply/782/aw/applicationForm/default.asp"
+     ]
+    }
+   },
+   {
+    "url": "https://careers.msu.edu/jobs/postdoctoral-scholar-fixed-term-east-lansing-michigan-united-states-47b694a1-1655-47bc-a9c9-54eaf4fb0d5a",
+    "final": "https://careers.msu.edu/jobs/postdoctoral-scholar-fixed-term-east-lansing-michigan-united-states-47b694a1-1655-47bc-a9c9-54eaf4fb0d5a",
+    "status": 202,
+    "ats": {}
+   }
+  ]
+ },
+ {
+  "label": "morehouse",
+  "url": "https://www.msm.edu/",
+  "status": 200,
+  "length": 53944,
+  "final": "https://www.msm.edu/",
+  "title": "Morehouse School of Medicine - MSM - Atlanta",
+  "ats": {},
+  "job_links": [
+   {
+    "text": "Careers",
+    "href": "https://www.msm.edu/work-at-msm/index.php"
+   },
+   {
+    "text": "Work at MSM | Jobs",
+    "href": "https://www.msm.edu/work-at-msm/index.php"
+   }
+  ],
+  "followed": [
+   {
+    "url": "https://www.msm.edu/work-at-msm/index.php",
+    "final": "https://www.msm.edu/work-at-msm/index.php",
+    "status": 200,
+    "ats": {}
+   }
+  ]
+ },
+ {
+  "label": "howard-med",
+  "url": "https://medicine.howard.edu/faculty-positions",
+  "status": 200,
+  "length": 30870,
+  "final": "https://medicine.howard.edu/faculty-positions",
+  "title": "Faculty Positions | Howard University College of Medicine",
+  "ats": {},
+  "job_links": [],
+  "followed": []
+ },
+ {
+  "label": "howard",
+  "url": "https://howard.edu/",
+  "status": 200,
+  "length": 176437,
+  "final": "https://howard.edu/",
+  "title": "Howard University Home | Excellence in Truth and Service",
+  "ats": {},
+  "job_links": [
+   {
+    "text": "Career Opportunities",
+    "href": "https://hr.howard.edu/careers"
+   },
+   {
+    "text": "Apply",
+    "href": "https://hr.howard.edu/careers"
+   },
+   {
+    "text": "Careers",
+    "href": "https://hr.howard.edu/careers"
+   }
+  ],
+  "followed": [
+   {
+    "url": "https://hr.howard.edu/careers",
+    "final": "https://hr.howard.edu/careers",
+    "status": 200,
+    "ats": {
+     "workday": [
+      "https://howard.wd1.myworkdayjobs.com/HU"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "label": "uttyler",
+  "url": "https://www.uttyler.edu/",
+  "status": 200,
+  "length": 129289,
+  "final": "https://www.uttyler.edu/",
+  "title": "The University of Texas at Tyler | UT Tyler",
+  "ats": {},
+  "job_links": [
+   {
+    "text": "Undergraduate Research",
+    "href": "https://www.uttyler.edu/research/office/undergraduate-research-opportunities/index.php"
+   },
+   {
+    "text": "Career Opportunities",
+    "href": "https://www.uttyler.edu/careers/index.php"
+   },
+   {
+    "text": "Careers at UT Tyler",
+    "href": "https://www.uttyler.edu/careers/index.php"
+   }
+  ],
+  "followed": [
+   {
+    "url": "https://www.uttyler.edu/research/office/undergraduate-research-opportunities/index.php",
+    "final": "https://www.uttyler.edu/research/office/undergraduate-research-opportunities/",
+    "status": 200,
+    "ats": {}
+   },
+   {
+    "url": "https://www.uttyler.edu/careers/index.php",
+    "final": "https://www.uttyler.edu/careers/",
+    "status": 200,
+    "ats": {
+     "peoplesoft": [
+      "HRS_HRAM",
+      "https://zahr-prd-candidate-ada.utshare.utsystem.edu/psc/ZAHRPRDADA/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?FOCUS=Applicant&amp;Page=HRS_APP_SCHJOB&amp;Action=U&amp;FOCUS=Applicant&amp;SiteId="
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "label": "ttuhsc",
+  "url": "https://www.ttuhsc.edu/",
+  "status": 200,
+  "length": 493278,
+  "final": "https://www.ttuhsc.edu/",
+  "title": "Home | Texas Tech University Health Sciences Center",
+  "ats": {},
+  "job_links": [
+   {
+    "text": "Careers",
+    "href": "https://www.ttuhsc.edu/careers"
+   },
+   {
+    "text": "Careers",
+    "href": "https://www.ttuhsc.edu/careers"
+   },
+   {
+    "text": "Veteran's Employment & Resources",
+    "href": "https://www.ttuhsc.edu/human-resources/military-veterans"
+   },
+   {
+    "text": "Careers at TTUHSC",
+    "href": "https://www.ttuhsc.edu/careers"
+   },
+   {
+    "text": "Careers at TTUHSC",
+    "href": "https://www.ttuhsc.edu/careers"
+   },
+   {
+    "text": "Explore Opportunities",
+    "href": "https://www.ttuhsc.edu/"
+   },
+   {
+    "text": "Student Research Opportunities",
+    "href": "https://www.ttuhsc.edu/research/student-research-opportunities"
+   },
+   {
+    "text": "Careers",
+    "href": "https://www.ttuhsc.edu/managed-care/careers"
+   },
+   {
+    "text": "Careers at TTUHSC",
+    "href": "https://www.ttuhsc.edu/careers"
+   },
+   {
+    "text": "Careers at TTUHSC",
+    "href": "https://www.ttuhsc.edu/careers"
+   },
+   {
+    "text": "Explore Opportunities",
+    "href": "https://www.ttuhsc.edu/"
+   },
+   {
+    "text": "Student Research Opportunities",
+    "href": "https://www.ttuhsc.edu/research/student-research-opportunities"
+   },
+   {
+    "text": "Careers",
+    "href": "https://www.ttuhsc.edu/managed-care/careers"
+   },
+   {
+    "text": "Careers",
+    "href": "https://www.ttuhsc.edu/careers"
+   },
+   {
+    "text": "Careers",
+    "href": "https://www.ttuhsc.edu/careers"
+   },
+   {
+    "text": "Veteran's Employment & Resources",
+    "href": "https://www.ttuhsc.edu/human-resources/military-veterans"
+   },
+   {
+    "text": "Careers at TTUHSC",
+    "href": "https://www.ttuhsc.edu/careers"
+   }
+  ],
+  "followed": [
+   {
+    "url": "https://www.ttuhsc.edu/careers",
+    "final": "https://www.ttuhsc.edu/careers",
+    "status": 200,
+    "ats": {
+     "brassring": [
+      "https://jobs.brassring.com/1033/ASP/TG/cim_home.asp?partnerid=25898&amp;siteid=5281",
+      "https://jobs.brassring.com/1033/ASP/TG/cim_home.asp?partnerid=25898&amp;siteid=5283",
+      "https://jobs.brassring.com/1033/ASP/TG/cim_home.asp?partnerid=25898&amp;siteid=5284"
+     ]
+    }
+   },
+   {
+    "url": "https://www.ttuhsc.edu/human-resources/military-veterans",
+    "final": "https://www.ttuhsc.edu/human-resources/military-veterans",
+    "status": 200,
+    "ats": {
+     "brassring": [
+      "https://jobs.brassring.com/1033/ASP/TG/cim_home.asp?partnerid=25898&amp;siteid=5281",
+      "https://jobs.brassring.com/1033/ASP/TG/cim_home.asp?partnerid=25898&amp;siteid=5283",
+      "https://sjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=25898&amp;siteid=5281#home",
+      "https://sjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=25898&amp;siteid=5283#home"
+     ]
+    }
+   },
+   {
+    "url": "https://www.ttuhsc.edu/research/student-research-opportunities",
+    "final": "https://www.ttuhsc.edu/research/student-research-opportunities",
+    "status": 200,
+    "ats": {}
+   },
+   {
+    "url": "https://www.ttuhsc.edu/managed-care/careers",
+    "final": "https://www.ttuhsc.edu/managed-care/careers",
+    "status": 200,
+    "ats": {
+     "brassring": [
+      "https://sjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=25898&amp;siteid=5283#keyWordSearch=Managed%20Care&amp;Campus=HSC%20-%20Correctional%20Managed%20Health%20Care"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "label": "drew",
+  "url": "https://www.cdrewu.edu/",
+  "status": 200,
+  "length": 333341,
+  "final": "https://www.cdrewu.edu/",
+  "title": "Charles R. Drew University of Medicine & Science I A Private University with a Public Mission",
+  "ats": {
+   "ultipro": [
+    "https://recruiting2.ultipro.com/CHA1037CHRS/JobBoard/7fb6ae1e-e3f6-44ac-8694-2577af27ab6b/?q=&#038;o=postedDateDesc&#038;w=&#038;wc=&#038;we=&#038;wpst="
+   ]
+  },
+  "job_links": [
+   {
+    "text": "Roadmap your Career Path",
+    "href": "https://www.cdrewu.edu/events/roadmap-your-career-path/"
+   },
+   {
+    "text": "Employment",
+    "href": "https://recruiting2.ultipro.com/CHA1037CHRS/JobBoard/7fb6ae1e-e3f6-44ac-8694-2577af27ab6b/?q=&o=postedDateDesc&w=&wc=&we=&wpst="
+   }
+  ],
+  "followed": [
+   {
+    "url": "https://www.cdrewu.edu/events/roadmap-your-career-path/",
+    "final": "https://www.cdrewu.edu/events/roadmap-your-career-path/",
+    "status": 200,
+    "ats": {
+     "ultipro": [
+      "https://recruiting2.ultipro.com/CHA1037CHRS/JobBoard/7fb6ae1e-e3f6-44ac-8694-2577af27ab6b/?q=&#038;o=postedDateDesc&#038;w=&#038;wc=&#038;we=&#038;wpst="
+     ]
+    }
+   },
+   {
+    "url": "https://recruiting2.ultipro.com/CHA1037CHRS/JobBoard/7fb6ae1e-e3f6-44ac-8694-2577af27ab6b/?q=&o=postedDateDesc&w=&wc=&we=&wpst=",
+    "final": "https://recruiting2.ultipro.com/CHA1037CHRS/JobBoard/7fb6ae1e-e3f6-44ac-8694-2577af27ab6b/?q=&o=postedDateDesc&w=&wc=&we=&wpst=",
+    "status": 200,
+    "ats": {
+     "ultipro": [
+      "https://ignite.cdn.ultipro.com/dls-cdn/ignite/v7.18.0/tokens/css/ignite-tokens.css",
+      "https://ignite.cdn.ultipro.com/dls-cdn/ignite/v7.18.0/tokens/fonts/noto/ignite-fonts-noto-hinted-cdn.css",
+      "https://ignite.cdn.ultipro.com/dls-cdn/ignite/v7.18.0/tokens/fonts/volte/ignite-fonts-volte-cdn.css",
+      "https://ignite.cdn.ultipro.com/dls-cdn/ignite/v7.18.0/web-components/ignite/ignite.esm.js",
+      "https://ignite.cdn.ultipro.com/dls-cdn/ignite/v7.18.0/web-components/ignite/ignite.js"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "label": "augusta",
+  "url": "https://www.augusta.edu/",
+  "status": 200,
+  "length": 70596,
+  "final": "https://www.augusta.edu/",
+  "title": "Augusta University",
+  "ats": {},
+  "job_links": [
+   {
+    "text": "Career Services",
+    "href": "https://www.augusta.edu/careerservices/"
+   },
+   {
+    "text": "Graduate & Postdoctoral Research",
+    "href": "https://www.augusta.edu/ipso/"
+   },
+   {
+    "text": "Working at AU",
+    "href": "https://www.augusta.edu/hr/jobs"
+   },
+   {
+    "text": "GCC Research in Progress featuring Dr. Nagendra Singh: \"One tag, two jobs: UFM1 ",
+    "href": "https://calendar.augusta.edu/event/gcc-research-in-progress-featuring-dr-nagendra-singh-one-tag-two-jobs-ufm1-licenses-cdc1-development-and-cross-presentation-in-tumor-immunity/"
+   },
+   {
+    "text": "Student Experience Opportunities that enhance the academic experience and foster",
+    "href": "https://www.augusta.edu/student-life/sle/"
+   },
+   {
+    "text": "Employment",
+    "href": "https://www.augusta.edu/hr/jobs/"
+   }
+  ],
+  "followed": [
+   {
+    "url": "https://www.augusta.edu/careerservices/",
+    "final": "https://www.augusta.edu/careerservices/",
+    "status": 200,
+    "ats": {}
+   },
+   {
+    "url": "https://www.augusta.edu/ipso/",
+    "final": "https://www.augusta.edu/ipso/",
+    "status": 200,
+    "ats": {}
+   },
+   {
+    "url": "https://www.augusta.edu/hr/jobs",
+    "final": "https://www.augusta.edu/hr/jobs/",
+    "status": 200,
+    "ats": {}
+   },
+   {
+    "url": "https://calendar.augusta.edu/event/gcc-research-in-progress-featuring-dr-nagendra-singh-one-tag-two-jobs-ufm1-licenses-cdc1-development-and-cross-presentation-in-tumor-immunity/",
+    "final": "https://calendar.augusta.edu/event/gcc-research-in-progress-featuring-dr-nagendra-singh-one-tag-two-jobs-ufm1-licenses-cdc1-development-and-cross-presentation-in-tumor-immunity/",
+    "status": 200,
+    "ats": {}
+   }
+  ]
+ },
+ {
+  "label": "wayne",
+  "url": "https://wayne.edu/",
+  "status": "error",
+  "note": "FetchError: HTTP 403 from wayne.edu/"
+ },
+ {
+  "label": "vcu",
+  "url": "https://www.vcu.edu/",
+  "status": 200,
+  "length": 309253,
+  "final": "https://www.vcu.edu/",
+  "title": "Virginia Commonwealth University",
+  "ats": {},
+  "job_links": [
+   {
+    "text": "Jobs",
+    "href": "https://vcujobs.com"
+   },
+   {
+    "text": "Career-ready grads",
+    "href": "https://www.vcu.edu/why-vcu/#Chapter---Career"
+   },
+   {
+    "text": "Jobs",
+    "href": "https://vcujobs.com"
+   },
+   {
+    "text": "Career-ready grads",
+    "href": "https://www.vcu.edu/why-vcu/#Chapter---Career"
+   },
+   {
+    "text": "Jobs",
+    "href": "https://vcujobs.com/"
+   }
+  ],
+  "followed": [
+   {
+    "url": "https://vcujobs.com",
+    "final": "https://vcujobs.com/",
+    "status": 200,
+    "ats": {
+     "pageup": [
+      "https://secure.dc4.pageuppeople.com/apply/1212/aw/applicationForm/default.asp"
+     ]
+    }
+   },
+   {
+    "url": "https://www.vcu.edu/why-vcu/#Chapter---Career",
+    "final": "https://www.vcu.edu/why-vcu/#Chapter---Career",
+    "status": 200,
+    "ats": {}
+   },
+   {
+    "url": "https://vcujobs.com/",
+    "final": "https://vcujobs.com/",
+    "status": 200,
+    "ats": {
+     "pageup": [
+      "https://secure.dc4.pageuppeople.com/apply/1212/aw/applicationForm/default.asp"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "label": "upr-rcm",
+  "url": "https://www.rcm.upr.edu/",
+  "status": 200,
+  "length": 233600,
+  "final": "https://rcm1.rcm.upr.edu/",
+  "title": "Inicio - Recinto de Ciencias M\u00e9dicas - UPR",
+  "ats": {},
+  "job_links": [],
+  "followed": []
+ },
+ {
+  "label": "hawaii-jabsom",
+  "url": "https://jabsom.hawaii.edu/",
+  "status": 200,
+  "length": 49796,
+  "final": "https://jabsom.hawaii.edu/",
+  "title": "Home Page | John A. Burns School of Medicine",
+  "ats": {},
+  "job_links": [
+   {
+    "text": "Work at JABSOM",
+    "href": "https://www.schooljobs.com/careers/hawaiiedu?department[0]=University%20of%20Hawai%27i%20at%20Manoa%20-%20John%20A.%20Burns%20School%20of%20Medicine&sort=PostingDate%7CDescending"
+   },
+   {
+    "text": "equal opportunity institution",
+    "href": "https://www.hawaii.edu/offices/eeo/policies"
+   }
+  ],
+  "followed": [
+   {
+    "url": "https://www.schooljobs.com/careers/hawaiiedu?department[0]=University%20of%20Hawai%27i%20at%20Manoa%20-%20John%20A.%20Burns%20School%20of%20Medicine&sort=PostingDate%7CDescending",
+    "status": "robots",
+    "note": "robots.txt disallows www.schooljobs.com/careers/hawaiiedu"
+   },
+   {
+    "url": "https://www.hawaii.edu/offices/eeo/policies",
+    "final": "https://www.hawaii.edu/offices/eeo/policies/",
+    "status": 200,
+    "ats": {
+     "neogov": [
+      "https://www.governmentjobs.com/careers/hawaiiedu"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "label": "uky-postdoc-list",
+  "url": "https://medicine.uky.edu/sites/graduate/job-postings",
+  "status": 200,
+  "length": 160405,
+  "final": "https://medicine.uky.edu/sites/graduate/job-postings",
+  "title": "Office of Biomedical Education | Job Postings | University of Kentucky College of Medicine",
+  "ats": {},
+  "job_links": [
+   {
+    "text": "Postdoctoral Trainees",
+    "href": "https://medicine.uky.edu/sites/graduate/postdoctoral-trainees"
+   },
+   {
+    "text": "Job Postings",
+    "href": "https://medicine.uky.edu/sites/graduate/job-postings"
+   },
+   {
+    "text": "Postdoctoral Resources and Links",
+    "href": "https://medicine.uky.edu/sites/graduate/postdoctoral-resources-and-links"
+   },
+   {
+    "text": "Current Opportunites for Undergraduates",
+    "href": "https://medicine.uky.edu/sites/graduate/current-opportunities-undergraduates"
+   },
+   {
+    "text": "Postdoctoral Trainees",
+    "href": "https://medicine.uky.edu/sites/graduate/postdoctoral-trainees"
+   },
+   {
+    "text": "Post Job",
+    "href": "https://uky.az1.qualtrics.com/jfe/form/SV_em15M4PnJkhJQqi"
+   },
+   {
+    "text": "National Postdoc Association",
+    "href": "https://careers.nationalpostdoc.org/"
+   },
+   {
+    "text": "An Equal Opportunity University",
+    "href": "https://www.uky.edu/equal-opportunity-university/"
+   }
+  ],
+  "followed": [
+   {
+    "url": "https://medicine.uky.edu/sites/graduate/postdoctoral-trainees",
+    "final": "https://medicine.uky.edu/sites/graduate/postdoctoral-trainees",
+    "status": 200,
+    "ats": {}
+   },
+   {
+    "url": "https://medicine.uky.edu/sites/graduate/postdoctoral-resources-and-links",
+    "final": "https://medicine.uky.edu/sites/graduate/postdoctoral-resources-and-links",
+    "status": 200,
+    "ats": {}
+   },
+   {
+    "url": "https://medicine.uky.edu/sites/graduate/current-opportunities-undergraduates",
+    "final": "https://medicine.uky.edu/sites/graduate/current-opportunities-undergraduates",
+    "status": 200,
+    "ats": {}
+   },
+   {
+    "url": "https://uky.az1.qualtrics.com/jfe/form/SV_em15M4PnJkhJQqi",
+    "final": "https://uky.az1.qualtrics.com/jfe/form/SV_em15M4PnJkhJQqi",
+    "status": 200,
+    "ats": {}
+   }
+  ]
+ },
+ {
+  "label": "georgetown-careers",
+  "url": "https://careers.georgetown.edu/",
+  "status": 200,
+  "length": 95164,
+  "final": "https://careers.georgetown.edu/",
+  "title": "Careers | Georgetown University",
+  "ats": {
+   "workday": [
+    "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers"
+   ],
+   "interfolio": [
+    "https://apply.interfolio.com/11780/positions"
+   ]
+  },
+  "job_links": [
+   {
+    "text": "Careers",
+    "href": "https://careers.georgetown.edu"
+   },
+   {
+    "text": "Search and Apply for Jobs",
+    "href": "https://careers.georgetown.edu/"
+   },
+   {
+    "text": "Staff Positions",
+    "href": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers"
+   },
+   {
+    "text": "Student Employment",
+    "href": "https://careers.georgetown.edu/student-employment/"
+   },
+   {
+    "text": "Frequently Asked Questions",
+    "href": "https://careers.georgetown.edu/faqs/"
+   },
+   {
+    "text": "Benefits At-A-Glance",
+    "href": "https://careers.georgetown.edu/benefits/"
+   },
+   {
+    "text": "Contact",
+    "href": "https://careers.georgetown.edu/contacts/"
+   },
+   {
+    "text": "Search and Apply for Jobs",
+    "href": "https://careers.georgetown.edu/"
+   },
+   {
+    "text": "Staff Positions",
+    "href": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers"
+   },
+   {
+    "text": "Student Employment",
+    "href": "https://careers.georgetown.edu/student-employment/"
+   },
+   {
+    "text": "Frequently Asked Questions",
+    "href": "https://careers.georgetown.edu/faqs/"
+   },
+   {
+    "text": "Benefits At-A-Glance",
+    "href": "https://careers.georgetown.edu/benefits/"
+   },
+   {
+    "text": "Contact",
+    "href": "https://careers.georgetown.edu/contacts/"
+   },
+   {
+    "text": "Georgetown Career Opportunities",
+    "href": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers"
+   },
+   {
+    "text": "Learn More",
+    "href": "https://careers.georgetown.edu/https-careers-georgetown-edu/"
+   },
+   {
+    "text": "More",
+    "href": "https://careers.georgetown.edu/benefits/"
+   },
+   {
+    "text": "Equal Opportunity/Affirmative Action Employer",
+    "href": "https://policymanual.hr.georgetown.edu/200-hiring-and-employment/201-equal-employment-opportunity-affirmative-action/"
+   },
+   {
+    "text": "Office for Equal Opportunity Compliance\u2019s Veteran and Military Employment websit",
+    "href": "https://oeoc.georgetown.edu/veteran-and-military-employment/"
+   },
+   {
+    "text": "Remote Work at Georgetown",
+    "href": "https://hr.georgetown.edu/telework/"
+   },
+   {
+    "text": "Sitemap",
+    "href": "https://careers.georgetown.edu/sitemap"
+   }
+  ],
+  "followed": [
+   {
+    "url": "https://careers.georgetown.edu",
+    "final": "https://careers.georgetown.edu/",
+    "status": 200,
+    "ats": {
+     "workday": [
+      "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers"
+     ],
+     "interfolio": [
+      "https://apply.interfolio.com/11780/positions"
+     ]
+    }
+   },
+   {
+    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers",
+    "final": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers",
+    "status": 200,
+    "ats": {
+     "workday": [
+      "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers",
+      "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/assets/logo"
+     ]
+    }
+   },
+   {
+    "url": "https://careers.georgetown.edu/student-employment/",
+    "final": "https://careers.georgetown.edu/student-employment/",
+    "status": 200,
+    "ats": {
+     "workday": [
+      "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers"
+     ],
+     "interfolio": [
+      "https://apply.interfolio.com/11780/positions"
+     ]
+    }
+   },
+   {
+    "url": "https://careers.georgetown.edu/faqs/",
+    "final": "https://careers.georgetown.edu/faqs/",
+    "status": 200,
+    "ats": {
+     "workday": [
+      "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers"
+     ],
+     "interfolio": [
+      "https://apply.interfolio.com/11780/positions"
+     ]
+    }
+   }
+  ]
+ }
+]
