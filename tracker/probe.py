@@ -52,6 +52,11 @@ ATS_PATTERNS = {
     "lever": r"https?://jobs\.lever\.co/[^\s\"'<>]*",
     "paycom": r"https?://[\w.-]*paycom(?:online)?\.(?:com|net)[^\s\"'<>]*",
     "hirebridge": r"https?://[\w.-]*hirebridge\.com[^\s\"'<>]*",
+    "taleo_portal": r"portal[\"']?\s*[=:]\s*[\"']?\d{6,}",
+    "csod": r"https?://[\w.-]+\.csod\.com[^\s\"'<>]*",
+    "neogov": r"https?://www\.governmentjobs\.com/careers/[^\s\"'<>]*",
+    "infor": r"https?://[\w.-]*cloud\.infor\.com[^\s\"'<>]*",
+    "peoplesoft": r"https?://[\w.-]+/psc/[^\s\"'<>]*|HRS_HRAM|HRS_CE",
 }
 JOB_LINK = re.compile(r"career|jobs?\b|employment|opportunit|join our|work (?:at|for|with)|postdoc", re.I)
 
@@ -65,6 +70,13 @@ def _fingerprint(html):
     return hits
 
 
+def _save_html(label, text):
+    d = OUT / "html"
+    d.mkdir(parents=True, exist_ok=True)
+    name = re.sub(r"[^A-Za-z0-9]+", "-", label).strip("-")[:60] or "page"
+    (d / f"{name}.html").write_text(text[:400000], encoding="utf-8")
+
+
 def probe_site(http, label, url):
     res = {"label": label, "url": url}
     try:
@@ -73,8 +85,9 @@ def probe_site(http, label, url):
         return dict(res, status="robots", note=str(e)[:200])
     except Exception as e:
         return dict(res, status="error", note=f"{type(e).__name__}: {str(e)[:200]}")
+    _save_html(label, r.text)
     soup = BeautifulSoup(r.text, "html.parser")
-    res.update(status=r.status_code, final=r.url, title=(soup.title.get_text(" ", strip=True)[:150] if soup.title else ""),
+    res.update(status=r.status_code, length=len(r.text), final=r.url, title=(soup.title.get_text(" ", strip=True)[:150] if soup.title else ""),
                ats=_fingerprint(r.text))
     links = []
     for a in soup.find_all("a", href=True):

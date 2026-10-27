@@ -74,7 +74,12 @@ def search(http, src, terms, title_ok):
             jobs, page_total = parse_list(r.json(), src)
             if total is None:
                 total = page_total  # Workday may report the total only on the first page
+            must = [m.lower() for m in src.get("location_must_include", [])]
             for j in jobs:
+                where = f"{j.location} {j.extra.get('path', '')}".lower()
+                # "2 Locations" style entries name no place, so keep them for the AI to judge
+                if must and not any(m in where for m in must) and not re.search(r"\d+ locations", where):
+                    continue
                 seen.setdefault(j.key, j)
             if len(jobs) < PAGE or (total and (page + 1) * PAGE >= total):
                 break
