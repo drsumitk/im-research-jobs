@@ -1,0 +1,4 @@
+mda-robots | https://jobs.mdanderson.org/robots.txt
+mda-sitemap | https://jobs.mdanderson.org/sitemap.xml
+morehouse-pa | https://careers.msm.edu/postings/search
+augusta-external | https://www.augusta.edu/jobs/external
