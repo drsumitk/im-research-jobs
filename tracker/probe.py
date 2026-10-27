@@ -114,6 +114,14 @@ def probe_site(http, label, url):
     return res
 
 
+def _safe(fn, *a):
+    try:
+        return fn(*a)
+    except Exception as e:  # one bad page must not stop the probe
+        import traceback
+        return {"args": [str(x) for x in a[1:]], "status": "crash", "note": traceback.format_exc()[-800:]}
+
+
 def read_brimr(url):
     from openpyxl import load_workbook  # installed only in the probe workflow
     data = Http().get(url).content
@@ -153,7 +161,7 @@ def run_candidates(only):
         return health
 
     with ThreadPoolExecutor(max_workers=8) as pool:
-        report = list(pool.map(one, tasks))
+        report = list(pool.map(lambda t: _safe(one, t), tasks))
     return report
 
 
@@ -173,7 +181,7 @@ def main(argv=None):
                 label, url = [x.strip() for x in line.split("|", 1)]
                 rows.append((label, url))
         with ThreadPoolExecutor(max_workers=8) as pool:
-            res = list(pool.map(lambda r: probe_site(Http(), *r), rows))
+            res = list(pool.map(lambda r: _safe(probe_site, Http(), *r), rows))
         (OUT / "sites.json").write_text(json.dumps(res, indent=1), encoding="utf-8")
     if args.only is not None:
         only = {s for s in args.only.split(",") if s}

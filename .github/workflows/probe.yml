@@ -54,8 +54,10 @@ jobs:
           [ -n "$BRIMR_URL" ] && args+=(--brimr "$BRIMR_URL")
           [ -n "$SITES_FILE" ] && args+=(--sites "$SITES_FILE")
           [ "$RUN_SOURCES" = "true" ] && args+=(--only "$ONLY")
-          python -m tracker.probe "${args[@]}"
+          mkdir -p probe
+          python -m tracker.probe "${args[@]}" > probe/log.txt 2>&1 || echo "probe exited with $?" >> probe/log.txt
       - name: Publish results on the probe branch
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
