@@ -1,5 +1,1 @@
-# Candidate sources under test (read only by the "Probe sources" workflow, never by the daily scan).
-schools:
-  - {rank: 76, name: UTMB, sources: [
-      {id: utmb, type: board, url: "https://applyjobs.utmb.edu/latest-jobs?keywords={q}", row: div.job_list_row,
-       link: "div.jlr_title a", title: "div.jlr_title a", date: none, detail: main}]}
+schools: []
