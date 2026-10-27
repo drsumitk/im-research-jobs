@@ -1,0 +1,70 @@
+name: Probe sources
+
+# Setup helper, started by hand only. It reads candidate careers sites (respecting robots.txt, like the
+# daily scan) and publishes what it found on the "probe" branch. It uses no secrets and no AI.
+on:
+  workflow_dispatch:
+    inputs:
+      brimr_url:
+        description: "BRIMR spreadsheet URL to read (optional)"
+        required: false
+        default: ""
+      sites_file:
+        description: "File in the repo listing careers pages to fingerprint (optional)"
+        required: false
+        default: ""
+      only:
+        description: "Comma-separated candidate source ids to test (empty = all in config/probe_sources.yaml)"
+        required: false
+        default: ""
+      run_sources:
+        description: "Test candidate sources"
+        type: boolean
+        default: false
+
+permissions: {}
+
+concurrency:
+  group: probe
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write      # to publish results on the probe branch
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install pinned dependencies
+        run: pip install -r requirements.txt openpyxl==3.1.5
+      - name: Probe
+        env:
+          BRIMR_URL: ${{ inputs.brimr_url }}
+          SITES_FILE: ${{ inputs.sites_file }}
+          ONLY: ${{ inputs.only }}
+          RUN_SOURCES: ${{ inputs.run_sources }}
+        run: |
+          args=()
+          [ -n "$BRIMR_URL" ] && args+=(--brimr "$BRIMR_URL")
+          [ -n "$SITES_FILE" ] && args+=(--sites "$SITES_FILE")
+          [ "$RUN_SOURCES" = "true" ] && args+=(--only "$ONLY")
+          python -m tracker.probe "${args[@]}"
+      - name: Publish results on the probe branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mv probe /tmp/probe-out
+          git fetch origin probe || true
+          if git rev-parse --verify -q origin/probe >/dev/null; then
+            git checkout -B probe origin/probe
+          else
+            git checkout --orphan probe && git rm -rfq .
+          fi
+          mkdir -p "results/${GITHUB_RUN_ID}" && cp -r /tmp/probe-out/. "results/${GITHUB_RUN_ID}/"
+          git add results && git commit -qm "Probe results ${GITHUB_RUN_ID}" && git push origin probe
