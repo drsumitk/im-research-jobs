@@ -99,7 +99,10 @@ def run_source(school, src, profile, rules, state, today, skipped=None):
     http = Http()
     out = {}
     try:
-        found = mod.search(http, src, profile["search_terms"], rules.title_ok)
+        found = mod.search(http, src, src.get("search_terms") or profile["search_terms"], rules.title_ok)
+        must = [m.lower() for m in src.get("location_must_include", [])]
+        if must and src["type"] not in ("workday", "taleo", "mcloud"):  # those filter while searching
+            found = [j for j in found if any(m in f"{j.location} {j.department} {j.url}".lower() for m in must)]
         max_age = profile.get("max_posting_age_days")
         titled = [j for j in found if rules.title_ok(j.title)]
         cands = [j for j in titled if is_recent(j.posted, today, max_age)]
