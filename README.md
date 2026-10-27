@@ -58,17 +58,75 @@ US medical schools ranked by NIH funding for Internal Medicine (BRIMR 2025, `con
 | 48 | Iowa | Postdoc openings (Carver College of Medicine) | |
 | 49 | UC Davis | UC Recruit | |
 | 50 | Louisville | Workday | |
-| added | Harvard | Harvard careers sitemap, Mass General Brigham (Workday) | |
+| 51 | UT Health San Antonio | UT Health San Antonio (staff and research) (Oracle); UT Health San Antonio Office of Postdoctoral Affairs board (job board page) |  |
+| 52 | KU Medical Center | University of Kansas Medical Center (Workday) |  |
+| 53 | UIC |  | University of Illinois Chicago (Cornerstone job site) |
+| 54 | Arizona |  | University of Arizona (Cornerstone job site) |
+| 55 | Georgetown | Georgetown University (staff and research staff) (Workday) | Georgetown academic and postdoc positions (Interfolio) |
+| 56 | UTHealth Houston | UTHealth Houston (incl. postdocs) (Phenom careers site) |  |
+| 57 | UNMC |  | University of Nebraska Medical Center |
+| 58 | UC Irvine | UC Irvine (academic recruitments, incl. postdocs) (UC Recruit) |  |
+| 59 | Temple | Temple University (staff) (Taleo); Temple University (faculty and academic) (Taleo); Temple Office of Postdoctoral Affairs board (job board page) |  |
+| 60 | Harvard | Harvard University (incl. Harvard Medical School) (careers sitemap); Mass General Brigham (MGH, Brigham and Women's) (Workday) |  |
+| 61 | Kentucky |  | University of Kentucky |
+| 62 | Rush |  | Rush University Medical Center |
+| 63 | MUSC | Medical University of South Carolina (Workday) |  |
+| 64 | Oklahoma (OUHSC) |  | University of Oklahoma (incl. Health Sciences Center); OUHSC postdoc positions page |
+| 65 | VCU |  | Virginia Commonwealth University |
+| 66 | Cincinnati |  | University of Cincinnati |
+| 67 | Penn State (Hershey) | Penn State (College of Medicine / Hershey only) (Workday) |  |
+| 68 | UConn Health | UConn Health Office of Postdoctoral Affairs board (job board page) | UConn Health jobs |
+| 69 | Augusta (Medical College of Georgia) |  | Augusta University (OneUSG PeopleSoft) |
+| 70 | Dartmouth |  | Dartmouth Health; Dartmouth College (incl. Geisel) |
+| 71 | Jefferson | Thomas Jefferson University and Jefferson Health (Workday) |  |
+| 72 | Buffalo |  | University at Buffalo |
+| 73 | New Mexico |  | University of New Mexico (Cornerstone job site) |
+| 74 | Michigan State & Henry Ford |  | Michigan State University; Henry Ford Health |
+| 75 | Hawaii |  | University of Hawaii (NEOGOV); Research Corporation of the University of Hawaii (grant-funded research jobs) |
+| 76 | UTMB Galveston | University of Texas Medical Branch (job board page) |  |
+| 77 | LSU Health New Orleans |  | LSU Health Sciences Center New Orleans |
+| 78 | Stony Brook | Stony Brook University and Stony Brook Medicine (Taleo) |  |
+| 79 | West Virginia | West Virginia University (faculty and postdoc positions) (Taleo) |  |
+| 80 | Charles R. Drew |  | Charles R. Drew University (UKG job board) |
+| 81 | UAMS | University of Arkansas for Medical Sciences (UA System Workday, Little Rock only) (Workday) |  |
+| 82 | Vermont |  | University of Vermont |
+| 83 | UTHSC Memphis | University of Tennessee Health Science Center (UT System site, Memphis only) (Oracle) |  |
+| 84 | Saint Louis University | Saint Louis University (Workday) |  |
+| 85 | Puerto Rico (Medical Sciences) |  | University of Puerto Rico Medical Sciences Campus (job offers, in Spanish) |
+| 86 | SUNY Downstate | SUNY Downstate Health Sciences University (Oracle) |  |
+| 87 | Brown | Brown University (staff and research positions) (Workday) |  |
+| 88 | UMKC |  | University of Missouri-Kansas City (PeopleSoft) |
+| 89 | SUNY Upstate |  | SUNY Upstate Medical University |
+| 90 | Loyola Chicago |  | Loyola University Chicago |
+| 91 | George Washington |  | George Washington University |
+| 92 | Texas A&M Health | Texas A&M University (incl. Health Science Center) (Workday) |  |
+| 93 | Missouri (Columbia) | MU Health Care (Phenom careers site) | University of Missouri (PeopleSoft academic jobs) |
+| 94 | Wayne State |  | Wayne State University |
+| 95 | Tufts | Tufts University (incl. School of Medicine and HNRCA) (careers site); Tufts Medicine (Tufts Medical Center) (Phenom careers site) |  |
+| 96 | UCF |  | University of Central Florida |
+| 97 | Loma Linda | Loma Linda University Health (Oracle) |  |
+| 98 | Meharry | Meharry Medical College (Workday) |  |
+| 99 | Toledo |  | University of Toledo |
+| 100 | UMMC (Mississippi) | University of Mississippi Medical Center (Workday) |  |
+| 101 | Washington State | Washington State University (Workday) |  |
+| 102 | UNLV | University of Nevada, Las Vegas (Workday) |  |
+| 103 | Texas Tech HSC |  | Texas Tech University Health Sciences Center (BrassRing) |
+| 104 | Drexel |  | Drexel University |
+| 105 | East Tennessee State | East Tennessee State University (Oracle) |  |
+| 106 | Morehouse |  | Morehouse School of Medicine |
+| 107 | Howard | Howard University (Workday) |  |
+| 107 | UT Tyler HSC |  | UT Tyler (incl. Health Science Center; PeopleSoft) |
 | added | Mayo Clinic | Oracle | |
 | added | Beth Israel Deaconess / Beth Israel Lahey Health | BILH careers site (covers BIDMC) | Joslin Diabetes Center (iCIMS) |
 | added | Houston Methodist | Postdoctoral fellow job category (careers site) | |
 | added | Baylor Scott & White | Phenom careers site | |
-| added | Brown University | Workday (staff site) | |
-| added | KU Medical Center | Workday | |
 | added | Minneapolis Heart Institute Foundation | Careers page (titles only; job pages are on ADP) | |
-| added | MUSC | Workday | |
+| added | MD Anderson Cancer Center | Careers sitemap (job pages carry posting dates) | |
+| added | Memorial Sloan Kettering | Workday | |
 
-Harvard, Mayo Clinic and Beth Israel Deaconess / Beth Israel Lahey Health are added by choice: BRIMR ranks Harvard's teaching hospitals separately from the medical school, and Mayo's NIH funding is not coded by department. Six more (Houston Methodist, Baylor Scott & White, Brown, KU Medical Center, Minneapolis Heart Institute Foundation, MUSC) were added because a LinkedIn sample showed foreign medical graduates currently holding research fellow or postdoc posts there.
+Harvard (rank 60), KU Medical Center (52), MUSC (63) and Brown (87) are in the BRIMR list. Mayo Clinic, Beth Israel Deaconess / Beth Israel Lahey Health, Houston Methodist, Baylor Scott & White, Minneapolis Heart Institute Foundation, MD Anderson and Memorial Sloan Kettering are added by choice: BRIMR ranks medical schools only, so teaching hospitals, cancer centers and research foundations are not in it, and Mayo's NIH funding is not coded by department.
+
+Of the 115 institutions, 72 are read automatically every day and 43 can only be linked (mostly job sites that load results by script, answer automated requests with a bot check, or close their search pages to automated reading in robots.txt).
 
 Known gaps: postdoc posts that departments advertise only on Interfolio, lab websites or by email are not on these boards. Some iCIMS portals and postdoc boards show no posting date; such postings are shown for up to 21 days after the tracker first sees them (so on the first day after a new source is added, older undated postings can appear once and then drop off).
 

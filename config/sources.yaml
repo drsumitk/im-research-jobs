@@ -619,7 +619,9 @@ schools:
         row: 'p.large.bold:has(a[href*="/open-postdoctoral-positions/"])'
         link: a
         title_template: 'Postdoctoral position: {title}'
+        date: none
         detail: main
+        detail_date_label: 'Posted Date:'
 
   - rank: 52
     name: KU Medical Center
@@ -711,6 +713,7 @@ schools:
         url: https://grad.temple.edu/postdoctoral-affairs/open-positions
         row: div.collection__item
         title: a.--trigger
+        date: none   # dates in the text are deadlines or start dates, not posting dates
         detail: none
 
   - rank: 60
@@ -791,15 +794,10 @@ schools:
   - rank: 67
     name: Penn State (Hershey)
     sources:
-      - id: psu-academic
-        label: Penn State (academic, College of Medicine / Hershey only)
-        type: workday
-        host: psu.wd1.myworkdayjobs.com
-        tenant: psu
-        site: PSU_Academic
-        location_must_include: [hershey, college of medicine, college-of-medicine]
       - id: psu-staff
-        label: Penn State (staff, College of Medicine / Hershey only)
+        label: Penn State (College of Medicine / Hershey only)
+        # Postdocs are posted on both PSU_Academic and PSU_Staff; the staff site carried every one tested,
+        # so only it is read, to avoid duplicates.
         type: workday
         host: psu.wd1.myworkdayjobs.com
         tenant: psu
