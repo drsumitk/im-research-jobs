@@ -1,20 +1,48 @@
 # Candidate sources under test (read only by the "Probe sources" workflow, never by the daily scan).
 schools:
-  - {rank: 55, name: Georgetown, sources: [{id: georgetown, type: workday, host: georgetown.wd1.myworkdayjobs.com, tenant: georgetown, site: Georgetown_Admin_Careers}]}
-  - {rank: 56, name: UTHealth Houston, sources: [{id: uthealth, type: phenom, host: careers.uth.tmc.edu, path: /us/en}]}
-  - {rank: 57, name: UNMC, sources: [{id: unmc, type: rmk, host: jobs.nebraska.edu}]}
-  - {rank: 58, name: UC Irvine, sources: [{id: uci-recruit, type: ucrecruit, host: recruit.ap.uci.edu}]}
-  - {rank: 66, name: Cincinnati, sources: [{id: ucincy, type: rmk, host: jobs.uc.edu}]}
-  - {rank: 67, name: Penn State, sources: [{id: psu-academic, type: workday, host: psu.wd1.myworkdayjobs.com, tenant: psu, site: PSU_Academic}, {id: psu-staff, type: workday, host: psu.wd1.myworkdayjobs.com, tenant: psu, site: PSU_Staff}]}
-  - {rank: 71, name: Jefferson, sources: [{id: jefferson, type: workday, host: jeffersonhealth.wd5.myworkdayjobs.com, tenant: jeffersonhealth, site: ThomasJeffersonExternal}]}
-  - {rank: 81, name: UAMS, sources: [{id: uams, type: workday, host: uasys.wd5.myworkdayjobs.com, tenant: uasys, site: UASYS}]}
-  - {rank: 83, name: UTHSC, sources: [{id: uthsc, type: oracle, host: fa-ewlq-saasfaprod1.fa.ocs.oraclecloud.com, site: CX_1}]}
-  - {rank: 84, name: Saint Louis University, sources: [{id: slu, type: workday, host: slu.wd5.myworkdayjobs.com, tenant: slu, site: Careers}]}
-  - {rank: 92, name: Texas A&M Health, sources: [{id: tamu, type: workday, host: tamus.wd1.myworkdayjobs.com, tenant: tamus, site: TAMU_External}]}
-  - {rank: 93, name: Missouri, sources: [{id: muhealth, type: phenom, host: careers.muhealth.org, path: /us/en}]}
-  - {rank: 95, name: Tufts, sources: [{id: tuftsmedicine, type: phenom, host: careers.tuftsmedicine.org, path: /us/en}]}
-  - {rank: 97, name: Loma Linda, sources: [{id: lomalinda, type: oracle, host: egln.fa.us2.oraclecloud.com, site: CX}]}
-  - {rank: 98, name: Meharry, sources: [{id: meharry, type: workday, host: meharrymedicalcollege.wd12.myworkdayjobs.com, tenant: meharrymedicalcollege, site: external}]}
-  - {rank: 101, name: Washington State, sources: [{id: wsu, type: workday, host: wsu.wd5.myworkdayjobs.com, tenant: wsu, site: WSU_Jobs}]}
-  - {rank: 102, name: UNLV, sources: [{id: unlv, type: workday, host: nshe.wd1.myworkdayjobs.com, tenant: nshe, site: UNLV-External}]}
-  - {rank: 105, name: ETSU, sources: [{id: etsu, type: oracle, host: fa-evyu-saasfaprod1.fa.ocs.oraclecloud.com, site: CX_1}]}
+  - {rank: 51, name: UT Health San Antonio, sources: [
+      {id: utsa-cx1002, type: oracle, host: fa-eomf-saasfaprod1.fa.ocs.oraclecloud.com, site: CX_1002},
+      {id: utsa-cx1, type: oracle, host: fa-eomf-saasfaprod1.fa.ocs.oraclecloud.com, site: CX_1},
+      {id: utsa-opa, type: board, url: "https://opa.uthscsa.edu/prospective-postdocs/open-postdoctoral-positions/",
+       row: 'p.large.bold:has(a[href*="/open-postdoctoral-positions/"])', link: a, title_template: "Postdoctoral position: {title}", detail: main}]}
+  - {rank: 59, name: Temple, sources: [
+      {id: temple-staff, type: taleo, host: temple.taleo.net, section: tu_ex_staff, portal: "8100123629"},
+      {id: temple-postdoc, type: board, url: "https://grad.temple.edu/postdoctoral-affairs/open-positions",
+       row: div.collection__item, title: a.--trigger, detail: none}]}
+  - {rank: 61, name: Kentucky, sources: [
+      {id: uky-kd, type: workday, host: univofky.wd108.myworkdayjobs.com, tenant: univofky, site: UKKD},
+      {id: uky-sc, type: workday, host: univofky.wd108.myworkdayjobs.com, tenant: univofky, site: UKSC},
+      {id: uky-ss, type: workday, host: univofky.wd108.myworkdayjobs.com, tenant: univofky, site: UKSS}]}
+  - {rank: 64, name: Oklahoma, sources: [
+      {id: ou, type: board, url: "https://jobs.ou.edu/jobs/search?query={q}", row: article.job-search-results-card-col,
+       link: h3 a, title: h3 a, date: none, detail: none}]}
+  - {rank: 68, name: UConn Health, sources: [
+      {id: uconn-postdoc, type: board, url: "https://health.uconn.edu/postdoctoral-affairs/prospective-postdocs/job-postings/",
+       row: div.panel.panel-default, title: h4.panel-title a, detail: none}]}
+  - {rank: 74, name: Michigan State, sources: [
+      {id: msu, type: board, url: "https://careers.msu.edu/jobs/search?page=1&query={q}", row: article.job-search-results-card-col,
+       link: h3 a, title: h3 a, date: none, detail: none}]}
+  - {rank: 77, name: LSU Health New Orleans, sources: [
+      {id: lsuhsc, type: board, url: "https://careers.lsuhsc.edu/jobs/search?query={q}", row: article.job-search-results-card-col,
+       link: h3 a, title: h3 a, date: none, detail: none}]}
+  - {rank: 78, name: Stony Brook, sources: [{id: stonybrook, type: taleo, host: stonybrooku.taleo.net, section: "2", portal: "101430233"}]}
+  - {rank: 79, name: West Virginia, sources: [
+      {id: wvu, type: taleo, host: wvu.taleo.net, section: faculty, portal: "26100021550"},
+      {id: wvumedicine-wvuh, type: workday, host: wvumedicine.wd1.myworkdayjobs.com, tenant: wvumedicine, site: WVUH},
+      {id: wvumedicine-uha, type: workday, host: wvumedicine.wd1.myworkdayjobs.com, tenant: wvumedicine, site: UHA}]}
+  - {rank: 86, name: SUNY Downstate, sources: [{id: downstate, type: oracle, host: ibqujb.fa.ocs.oraclecloud.com, site: CX_1}]}
+  - {rank: 89, name: SUNY Upstate, sources: [
+      {id: upstate, type: board, url: "https://careers.upstate.edu/jobs/search?query={q}", row: article.job-search-results-card-col,
+       link: h3 a, title: h3 a, date: none, detail: none}]}
+  - {rank: 95, name: Tufts, sources: [{id: tufts, type: jibe, host: jobs.tufts.edu}]}
+  - {rank: 96, name: UCF, sources: [
+      {id: ucf, type: board, url: "https://jobs.ucf.edu/jobs/search?query={q}", row: article.job-search-results-card-col,
+       link: h3 a, title: h3 a, date: none, detail: none}]}
+  - {rank: 99, name: Toledo, sources: [
+      {id: toledo, type: board, url: "https://careers.utoledo.edu/jobs/search?query={q}", row: article.job-search-results-card-col,
+       link: h3 a, title: h3 a, date: none, detail: none}]}
+  - {rank: 100, name: UMMC, sources: [{id: ummc, type: workday, host: ummc.wd5.myworkdayjobs.com, tenant: ummc, site: UMCCareers}]}
+  - {rank: 104, name: Drexel, sources: [
+      {id: drexel, type: board, url: "https://careers.drexel.edu/jobs/search?query={q}", row: article.job-search-results-card-col,
+       link: h3 a, title: h3 a, date: none, detail: none}]}
+  - {rank: 907, name: Memorial Sloan Kettering, sources: [{id: msk, type: workday, host: msk.wd108.myworkdayjobs.com, tenant: msk, site: MSKCC_Careers_Primary}]}
