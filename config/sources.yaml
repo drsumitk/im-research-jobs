@@ -1,5 +1,5 @@
-# Target schools: top 50 Departments of Internal Medicine by FY2025 NIH funding
-# (BRIMR 2025 ranking, https://brimr.org/brimr-rankings-of-nih-funding-in-2025/), plus Harvard and Mayo.
+# Target schools: all Departments of Internal Medicine ranked by FY2025 NIH funding
+# (BRIMR 2025 ranking, 108 departments, https://brimr.org/brimr-rankings-of-nih-funding-in-2025/), plus added institutions.
 #
 # Each source tells the tracker which careers system a school uses.
 # type: workday | oracle | eightfold | rmk | jibe | mcloud | taleo | html_list | ucrecruit | sitemap | board | icims | phenom | manual
@@ -602,11 +602,19 @@ schools:
         tenant: uofl
         site: UofLCareerSite
 
-  # ---- Added at the user's request; not ranked by BRIMR Internal Medicine ----
-  # (Mayo's NIH funding is not coded by department; Harvard's teaching hospitals are ranked
-  # separately from the medical school.) Ranks above 50 only set the display order; the dashboard
-  # shows these as "added".
-  - rank: 51
+  # ---- BRIMR 2025 Internal Medicine ranks 51-107 (the whole ranked list) ----
+
+  - rank: 52
+    name: KU Medical Center
+    sources:
+      - id: kumc
+        label: University of Kansas Medical Center
+        type: workday
+        host: kumc.wd5.myworkdayjobs.com
+        tenant: kumc
+        site: kumc-jobs
+
+  - rank: 60
     name: Harvard
     sources:
       - id: harvard
@@ -622,7 +630,32 @@ schools:
         site: MGBExternal
         max_pages: 25   # very large board; results are not sorted by date
 
-  - rank: 52
+  - rank: 63
+    name: MUSC
+    sources:
+      - id: musc
+        label: Medical University of South Carolina
+        type: workday
+        host: musc.wd1.myworkdayjobs.com
+        tenant: musc
+        site: MUSC
+
+  - rank: 87
+    name: Brown
+    sources:
+      - id: brown
+        label: Brown University (staff and research positions)
+        type: workday
+        host: brown.wd5.myworkdayjobs.com
+        tenant: brown
+        site: staff-careers-brown
+
+  # ---- Added at the user's request; not in the BRIMR Internal Medicine ranking ----
+  # (Mayo's NIH funding is not coded by department; teaching hospitals, cancer centers and research
+  # foundations are ranked separately from medical schools.) Ranks from 901 only set the display order;
+  # the dashboard shows these as "added".
+
+  - rank: 901
     name: Mayo Clinic
     sources:
       - id: mayo
@@ -631,7 +664,7 @@ schools:
         host: fa-euwp-saasfaprod1.fa.ocs.oraclecloud.com
         site: CX_1
 
-  - rank: 53
+  - rank: 902
     name: Beth Israel Deaconess (BILH)
     sources:
       - id: bilh
@@ -648,9 +681,7 @@ schools:
         url: https://jobs-joslin.icims.com/jobs/intro
         reason: Separate iCIMS job site; the other iCIMS portals tried (OHSU, UMass Chan) refused automated requests.
 
-  # ---- Added 2026-10-24: institutions where foreign medical graduates currently hold research
-  # fellow or postdoc posts (from a LinkedIn sample), not in the BRIMR top 50 ----
-  - rank: 54
+  - rank: 903
     name: Houston Methodist
     sources:
       - id: houstonmethodist
@@ -664,7 +695,7 @@ schools:
         detail: .job-description
         detail_ldjson_date: true
 
-  - rank: 55
+  - rank: 904
     name: Baylor Scott & White
     sources:
       - id: bswhealth
@@ -673,27 +704,7 @@ schools:
         host: jobs.bswhealth.com
         path: /us/en
 
-  - rank: 56
-    name: Brown
-    sources:
-      - id: brown
-        label: Brown University (staff and research positions)
-        type: workday
-        host: brown.wd5.myworkdayjobs.com
-        tenant: brown
-        site: staff-careers-brown
-
-  - rank: 57
-    name: KU Medical Center
-    sources:
-      - id: kumc
-        label: University of Kansas Medical Center
-        type: workday
-        host: kumc.wd5.myworkdayjobs.com
-        tenant: kumc
-        site: kumc-jobs
-
-  - rank: 58
+  - rank: 905
     name: Minneapolis Heart Institute Foundation
     sources:
       - id: mhif
@@ -705,13 +716,3 @@ schools:
         title: h3
         date: none
         detail: none   # job pages are on ADP and load by script; titles only
-
-  - rank: 59
-    name: MUSC
-    sources:
-      - id: musc
-        label: Medical University of South Carolina
-        type: workday
-        host: musc.wd1.myworkdayjobs.com
-        tenant: musc
-        site: MUSC

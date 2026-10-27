@@ -31,7 +31,7 @@ function daysBetween(a, b) {
 }
 
 function schoolLabel(rank, name) {
-  return Number(rank) <= 50 ? `#${rank} ${name}` : `${name} (added)`;
+  return Number(rank) < 900 ? `#${rank} ${name}` : `${name} (added)`;
 }
 
 function divisionOf(j) {
@@ -63,7 +63,7 @@ async function init() {
   const m = state.meta;
   $("meta").textContent = `Updated ${m.generated_utc || "?"} · ${state.jobs.length} postings tracked · AI classifier ${m.ai_enabled ? "on" : "off (keyword rules only)"}`;
 
-  const schools = [...new Set(state.jobs.map((j) => `${String(j.rank).padStart(2, "0")}|${j.school}`))].sort();
+  const schools = [...new Set(state.jobs.map((j) => `${String(j.rank).padStart(3, "0")}|${j.school}`))].sort();
   for (const s of schools) {
     const [, name] = s.split("|");
     const o = el("option", null, name); o.value = name; $("school").append(o);

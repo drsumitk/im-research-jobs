@@ -4,7 +4,7 @@ Checks the careers websites and postdoc job boards of the 50 US medical schools 
 
 ## What it covers
 
-The 50 US medical schools with the most NIH funding for Internal Medicine (BRIMR 2025, `config/brimr_2025_im_top50.txt`), plus Harvard, Mayo Clinic and Beth Israel Deaconess / Beth Israel Lahey Health. For each school the tracker reads the main HR careers site and, where one exists, the postdoc office's own list of openings. "Link only" sources cannot be read automatically (login, bot protection, or a robots.txt rule against automated reading); the dashboard's Sources tab links to them for a manual check.
+US medical schools ranked by NIH funding for Internal Medicine (BRIMR 2025, `config/brimr_2025_im.txt`, which lists 108 departments), plus added institutions such as Mayo Clinic and Beth Israel Deaconess / Beth Israel Lahey Health. For each school the tracker reads the main HR careers site and, where one exists, the postdoc office's own list of openings. "Link only" sources cannot be read automatically (login, bot protection, or a robots.txt rule against automated reading); the dashboard's Sources tab links to them for a manual check.
 
 | Rank | School | Read automatically | Link only |
 |---|---|---|---|
