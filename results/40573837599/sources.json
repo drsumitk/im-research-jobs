@@ -1,0 +1,46 @@
+[
+ {
+  "school": "Temple",
+  "rank": 59,
+  "source": "temple-faculty",
+  "label": "temple-faculty",
+  "type": "taleo",
+  "checked": "2026-10-27",
+  "found": 2,
+  "candidates": 0,
+  "too_old": 0,
+  "status": "ok",
+  "new_details": 0,
+  "detail_errors": 0,
+  "candidate_titles": [],
+  "candidate_samples": [],
+  "too_old_count": 0
+ },
+ {
+  "school": "Howard",
+  "rank": 107,
+  "source": "howard",
+  "label": "howard",
+  "type": "workday",
+  "checked": "2026-10-27",
+  "found": 53,
+  "candidates": 1,
+  "too_old": 4,
+  "status": "ok",
+  "new_details": 1,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Post Doctoral Fellow"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Post Doctoral Fellow",
+    "url": "https://howard.wd1.myworkdayjobs.com/HU/job/Seeley-G-Mudd-Building-College-of-Medicine/Post-Doctoral-Fellow_JR108711-1",
+    "posted": "2026-10-06",
+    "dept": "",
+    "text": "The Talent Acquisition department hires qualified candidates to fill positions which contribute to the overall strategic success of Howard University. Hiring staff \u201cfor fit\u201d makes significant contributions to Howard University\u2019s overall mission. \n At Howard University, we prioritize well-being and p"
+   }
+  ],
+  "too_old_count": 0
+ }
+]

@@ -1,0 +1,1406 @@
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="google-site-verification" content="oH4M8OgCKWFHTeOcyp1hZy-WqWuUspBuZxCjg619J6I" />
+    <meta name="detectify-verification" content="fb7af99f2d22eaeb07b95e0853cb4780" />
+    
+    
+
+    <link rel="preconnect" href="https://activatecdn.blob.core.windows.net" />
+    <link rel="preconnect" href="https://activatecdn.azureedge.net" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+
+    <script>
+(function() {
+  'use strict';
+
+  // ── DataLayer + gtag helper ──
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+
+  // ── EU/EEA + UK + CH region codes (GDPR jurisdictions) ──
+  var EU = [
+    'AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE',
+    'IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE',
+    'IS','LI','NO','GB','CH'
+  ];
+
+  // ── Configuration (overridden by configure()) ──
+  var config = {
+    cmpType: null,              // 'usercentrics' | 'onetrust' | null
+    googleConsent: 'cmp',       // 'cmp' (CMP pushes GCM signals) | 'none' (no GCM, CMP uses Autoblocker)
+    defaults: 'ccpa',           // 'ccpa' (EU denied, rest granted) | 'gdpr' (all denied globally)
+    signalCategories: null      // OT-only: per-client { gcmSignal: [otCategoryIds] } override (merged with defaults)
+  };
+
+  // ── Reusable consent state objects ──
+  var ALL_DENIED = {
+    'ad_storage': 'denied', 'analytics_storage': 'denied',
+    'ad_user_data': 'denied', 'ad_personalization': 'denied'
+  };
+  var ALL_GRANTED = {
+    'ad_storage': 'granted', 'analytics_storage': 'granted',
+    'ad_user_data': 'granted', 'ad_personalization': 'granted'
+  };
+
+  // ── GCM v2 Defaults ──
+  // CCPA posture set immediately for backward compatibility: clients without
+  // a configure() call still get GDPR-safe defaults for EU visitors.
+  // configure() can override to GDPR-global or disable GCM entirely.
+  var denied = {}; for (var p in ALL_DENIED) denied[p] = ALL_DENIED[p];
+  denied['wait_for_update'] = 500; denied['region'] = EU;
+  gtag('consent', 'default', denied);
+
+  var granted = {}; for (var q in ALL_GRANTED) granted[q] = ALL_GRANTED[q];
+  granted['wait_for_update'] = 500;
+  gtag('consent', 'default', granted);
+
+  // ── Configure ──
+  // Called from _CustomAnalyticsHead.cshtml to set up consent for this client.
+  // Must be called BEFORE CMP and GTM script tags in the same partial.
+  // Only the first call takes effect (subsequent calls are ignored).
+  var _configured = false;
+  function configure(options) {
+    if (_configured) return;
+    _configured = true;
+
+    for (var k in options) {
+      if (config.hasOwnProperty(k)) config[k] = options[k];
+    }
+    config._configured = true; // expose for test assertions
+
+    // ── GCM overrides ──
+    if (config.googleConsent === 'none') {
+      // No GCM: override initial defaults with all-granted so Google tags fire
+      // freely if they load. The CMP manages them via Autoblocker (script blocking).
+      gtag('consent', 'update', ALL_GRANTED);
+    } else if (config.defaults === 'gdpr') {
+      // GDPR-global + GCM: push an additional global-denied default that overrides
+      // the CCPA global-granted fallback. All regions denied until CMP grants.
+      var globalDenied = {}; for (var r in ALL_DENIED) globalDenied[r] = ALL_DENIED[r];
+      globalDenied['wait_for_update'] = 500;
+      gtag('consent', 'default', globalDenied);
+    }
+
+    _setupConsentListeners();
+
+    // For OT+GCM returning visitors: read the saved consent cookie and push the correct
+    // GCM state now, before GTM loads. Without this, tags fire against the CCPA-granted
+    // default before OptanonWrapper runs, regardless of what the user previously chose.
+    if (config.cmpType === 'onetrust' && config.googleConsent === 'cmp') {
+      try {
+        var _m = document.cookie.match(/OptanonConsent=([^;]*)/);
+        if (_m) {
+          var _g = decodeURIComponent(_m[1]).match(/groups=([^&]*)/);
+          if (_g) {
+            // Build a string of the categories the user previously consented to (value=1),
+            // then derive GCM state from it via the same signal→category map.
+            var _granted = '';
+            _g[1].split(',').forEach(function(pair) {
+              var p = pair.split(':');
+              if (p[1] === '1') _granted += ',' + p[0] + ',';
+            });
+            gtag('consent', 'update', _gcmFromActiveGroups(_granted));
+          }
+        }
+      } catch(e) {}
+    }
+  }
+
+  // ── GCM signal vocabulary ──
+  // Callers express consent needs as GCM signal names (analytics_storage, ad_storage, …) —
+  // the standard, CMP-agnostic vocabulary. For UC, the engine reads the signal directly from
+  // _gcmState. For OT, it maps the signal to the OT category IDs that grant it and checks
+  // OptanonActiveGroups. OT category IDs are account-specific, so the map is overridable per
+  // client via configure({ signalCategories: { analytics_storage: ['C0003'] } }).
+  var GCM_TO_OT_CATEGORIES = {
+    'analytics_storage':  ['C0002'],           // Performance
+    'ad_storage':         ['C0004', 'C0005'],  // Targeting + Social Media
+    'ad_user_data':       ['C0004'],
+    'ad_personalization': ['C0004']
+  };
+
+  // Default OT map merged with any per-client signalCategories override.
+  function _signalMap() {
+    var map = {};
+    for (var s in GCM_TO_OT_CATEGORIES) map[s] = GCM_TO_OT_CATEGORIES[s];
+    if (config.signalCategories) {
+      for (var o in config.signalCategories) map[o] = config.signalCategories[o];
+    }
+    return map;
+  }
+
+  // Derive a GCM consent-state object from a string of granted OT category IDs.
+  // A signal is granted if ANY of its mapped categories appears in the string.
+  function _gcmFromActiveGroups(activeGroups) {
+    var map = _signalMap(), state = {};
+    for (var signal in map) {
+      var cats = map[signal], granted = false;
+      for (var i = 0; i < cats.length; i++) {
+        if (activeGroups.indexOf(cats[i]) !== -1) { granted = true; break; }
+      }
+      state[signal] = granted ? 'granted' : 'denied';
+    }
+    return state;
+  }
+
+  // Tracked GCM state for UC branch — mirrors what the CMP has pushed via gtag('consent','update',...)
+  var _gcmState = {
+    'ad_storage': 'denied', 'analytics_storage': 'denied',
+    'ad_user_data': 'denied', 'ad_personalization': 'denied'
+  };
+
+  // ── Consent callback queue ──
+  // Each entry is { cb, signals, defer }. A callback fires when ANY of its GCM signals
+  // is granted (and, when defer is set, the idle trigger has also fired).
+  // Entries are removed on first fire (one-shot per page).
+  var _queue = [];
+
+  // ── Idle/gesture deferral primitive ── (rationale in file header)
+  // Fires on the first user gesture or a 3s timeout, whichever comes first.
+  var _idleFired = false;
+  var _idleQueue = [];
+  var IDLE_EVENTS = ['scroll', 'mousemove', 'keydown', 'touchstart', 'click'];
+
+  function _fireIdle() {
+    if (_idleFired) return;
+    _idleFired = true;
+    var pending = _idleQueue;
+    _idleQueue = [];
+    for (var n = 0; n < pending.length; n++) {
+      try { pending[n](); } catch (e) { /* swallow — one bad callback shouldn't block others */ }
+    }
+    _tryFlush(); // release consent-queue entries that were waiting on the idle gate
+  }
+
+  for (var ev = 0; ev < IDLE_EVENTS.length; ev++) {
+    document.addEventListener(IDLE_EVENTS[ev], _fireIdle, { once: true, passive: true });
+  }
+  setTimeout(_fireIdle, 3000);
+
+  // Run fn when the idle trigger has fired (immediately if it already has).
+  function _onIdle(fn) {
+    if (_idleFired) { fn(); return; }
+    _idleQueue.push(fn);
+  }
+
+  function _isGranted(signal) {
+    if (config.cmpType === 'usercentrics') {
+      return _gcmState[signal] === 'granted';
+    }
+    if (config.cmpType === 'onetrust') {
+      var active = window.OptanonActiveGroups || '';
+      var cats = _signalMap()[signal] || [];
+      for (var i = 0; i < cats.length; i++) {
+        if (active.indexOf(cats[i]) !== -1) return true;
+      }
+      return false;
+    }
+    return false;
+  }
+
+  // Synchronous check for event-handler code that can't use the onConsent queue.
+  // No CMP configured → true (legacy behavior, mirrors onConsent's immediate-fire branch).
+  function isGranted(signal) {
+    if (!config._configured) return true;
+    return _isGranted(signal);
+  }
+
+  // Re-entrancy-safe. A fired callback may itself call onConsent() — e.g. the MiQ pixel's
+  // callback calls core.common.getTrackingPixel(), which wraps onConsent() — pushing to
+  // _queue and re-entering _tryFlush() mid-iteration (the idle gate's _fireIdle() also
+  // re-enters here). Snapshot and clear the queue up front so nested calls mutate the live
+  // array freely; deferred-but-not-yet-idle and not-yet-granted entries are requeued.
+  // (Previously the loop cached its index and spliced _queue in place, so a nested flush
+  // that drained the queue left the outer loop reading an undefined entry.)
+  function _tryFlush() {
+    var pending = _queue.slice();
+    _queue.length = 0;
+    for (var i = 0; i < pending.length; i++) {
+      var entry = pending[i];
+      if (entry.defer && !_idleFired) { _queue.push(entry); continue; } // still waiting on idle gate
+      var matched = false;
+      for (var j = 0; j < entry.signals.length; j++) {
+        if (_isGranted(entry.signals[j])) { matched = true; break; }
+      }
+      if (matched) {
+        try { entry.cb(); } catch (e) { /* swallow — one bad callback shouldn't block others */ }
+      } else {
+        _queue.push(entry);
+      }
+    }
+  }
+
+  function _ingestGcmUpdate(entry) {
+    if (entry && entry[0] === 'consent' && entry[1] === 'update' && entry[2]) {
+      for (var k in entry[2]) {
+        if (_gcmState.hasOwnProperty(k)) _gcmState[k] = entry[2][k];
+      }
+    }
+  }
+
+  // No CMP configured → fire immediately (preserves pre-CMP client behavior).
+  //   With options.defer: wait for the gesture/3s idle trigger instead.
+  // CMP configured → queue with required GCM signals (default ad_storage = marketing/targeting).
+  //   With options.defer: fires only when BOTH a signal is granted AND the
+  //   idle trigger has fired (in either order).
+  function onConsent(callback, options) {
+    var defer = !!(options && options.defer);
+    if (!config._configured) {
+      if (defer) { _onIdle(callback); } else { callback(); }
+      return;
+    }
+    var signals = (options && options.signals) || ['ad_storage'];
+    _queue.push({ cb: callback, signals: signals, defer: defer });
+    _tryFlush();
+  }
+
+  function _setupConsentListeners() {
+    if (config.cmpType === 'usercentrics') {
+      // UC pushes GCM consent updates to dataLayer. Capture existing entries first
+      // (UC may have already pushed before this runs), then intercept future pushes.
+      for (var i = 0; i < dataLayer.length; i++) _ingestGcmUpdate(dataLayer[i]);
+      var _origPush = dataLayer.push;
+      dataLayer.push = function() {
+        var result = _origPush.apply(dataLayer, arguments);
+        for (var j = 0; j < arguments.length; j++) _ingestGcmUpdate(arguments[j]);
+        _tryFlush();
+        return result;
+      };
+    }
+
+    if (config.cmpType === 'onetrust') {
+      // OneTrust calls window.OptanonWrapper() on SDK init and on every consent change.
+      // The engine owns this function — OT client templates should NOT define it.
+      // For googleConsent:'cmp', push GCM signals to the dataLayer so GTM tags re-evaluate
+      // consent state on every change, using the same signal→category map as everything else.
+      // This makes site code fully responsible for OT GCM management.
+      window.OptanonWrapper = function() {
+        if (config.googleConsent === 'cmp') {
+          gtag('consent', 'update', _gcmFromActiveGroups(window.OptanonActiveGroups || ''));
+          // Emit a named, triggerable event AFTER the consent update so GTM tags gated
+          // on it evaluate against the already-updated consent state (avoids ordering race).
+          // Reuses the same 'consent_status' name UC pushes natively, so one GTM trigger
+          // works across UC and OneTrust clients.
+          dataLayer.push({ event: 'consent_status' });
+        }
+        _tryFlush();
+      };
+    }
+  }
+
+  // ── Helpers ──
+  function loadScript(src) {
+    var s = document.createElement('script');
+    s.src = src; s.async = true;
+    document.head.appendChild(s);
+    return s;
+  }
+
+  // ── GTM loader (deferred) ──
+  // Loads a GTM container after the first user gesture or 3s — same trigger as
+  // deferred onConsent entries. Consent is intentionally NOT checked here: GTM
+  // gates its own tags via GCM (googleConsent: 'cmp' clients).
+  // Do NOT use for OneTrust Autoblocker clients (googleConsent: 'none') — they
+  // need a static <script src> tag that Autoblocker can detect and gate.
+  // Dedupes per container id. opts: { dataLayerName: 'dataLayer', defer: true }.
+  var _gtmLoaded = {};
+  function loadGtm(containerId, opts) {
+    if (!containerId || _gtmLoaded[containerId]) return;
+    _gtmLoaded[containerId] = true;
+    var dlName = (opts && opts.dataLayerName) || 'dataLayer';
+    function inject() {
+      window[dlName] = window[dlName] || [];
+      window[dlName].push({ 'gtm.start': new Date().getTime(), 'event': 'gtm.js' });
+      var dl = dlName !== 'dataLayer' ? '&l=' + dlName : '';
+      loadScript('https://www.googletagmanager.com/gtm.js?id=' + containerId + dl);
+    }
+    if (opts && opts.defer === false) { inject(); return; }
+    _onIdle(inject);
+  }
+
+  function firePixel(src) {
+    var img = document.createElement('img');
+    img.src = src; img.alt = '';
+    img.style.cssText = 'position:absolute;overflow:hidden;width:1px;height:1px;';
+    document.body.appendChild(img);
+    return img;
+  }
+
+  // ── Expose API ──
+  window.__consent = {
+    config: config,
+    configure: configure,
+    onConsent: onConsent,
+    isGranted: isGranted,
+    onIdle: _onIdle,
+    loadScript: loadScript,
+    loadGtm: loadGtm,
+    firePixel: firePixel
+  };
+})();
+</script>
+
+
+    
+    <link rel="canonical" href="https://jobs.mdanderson.org/careers/research" />
+
+    <link rel="preconnect" href="https://c.tile.openstreetmap.org/"/>
+    <link async rel="shortcut icon" type="image/x-icon" href="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/favicon.ico" />
+    <link async rel="icon" type="image/x-icon" href="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/favicon.ico" />
+
+    <link id="async-css" rel="stylesheet" type="text/css" href="/content/cssbundle.min.css" media="print" />
+    <script>
+        // Initiate the cssbundle with media type of print, then switch to all during onload to avoid render blocking.
+        document.getElementById('async-css').onload = function () {
+          this.media = 'all';
+        };
+    </script>
+
+                <link rel="preload" as="style" href="https://activatecdn.azureedge.net/activatedata/35Content/Themes/activate-site.3ec61c07a107.min.css" integrity="sha384-rzddQxpl2ZQvKp32Rr/iNXrQlVasSfhHMCaXYI5WHhKoOinl12IZbEYayQqN2h5q" crossorigin="anonymous" />
+                <link rel="stylesheet" type="text/css" href="https://activatecdn.azureedge.net/activatedata/35Content/Themes/activate-site.3ec61c07a107.min.css" integrity="sha384-rzddQxpl2ZQvKp32Rr/iNXrQlVasSfhHMCaXYI5WHhKoOinl12IZbEYayQqN2h5q" crossorigin="anonymous" />
+
+    <link rel="preload" as="style" href="/content/MDAnderson/Styles/_Components.min.css?v=sJ1hFlh2w_QZlWYObgGP39pO9s57CaxJ6SEDYeGUYIU" />
+    <link rel="stylesheet" type="text/css" href="/content/MDAnderson/Styles/_Components.min.css?v=sJ1hFlh2w_QZlWYObgGP39pO9s57CaxJ6SEDYeGUYIU" />
+
+    
+
+    
+<script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="yFEWWP4d4PO1X1" async></script>
+<script src="//tags.tiqcdn.com/utag/mdanderson/mdandersonorg/prod/utag.sync.js"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayerMDAnd','GTM-TW9HHFCK');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-843646919"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-843646919');
+</script>
+    
+    <meta name="description" content="Why do so many of the greatest minds in cancer research work at MD Anderson? Learn about careers in cancer research at MD Anderson." /><meta name="twitter:card" content="summary" /><meta name="viewport" content="width=device-width, initial-scale=1" /><script src="/content/Shared/Scripts/lite-yt/lite-yt-embed.min.js" defer></script><link href="/content/Shared/Styles/lite-yt/lite-yt-embed.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/mqt2aon.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap" media="print" onload="this.media='all'">
+<noscript>
+    <link rel="stylesheet" href="https://use.typekit.net/mqt2aon.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+</noscript>
+ 
+    
+
+    
+    <link rel="preload" href="/content/Shared/FontAwesome/fontawesome-free-6.5.2-web/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/content/Shared/FontAwesome/fontawesome-free-6.5.2-web/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/content/Shared/FontAwesome/fontawesome-free-6.5.2-web/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:900;font-display:optional;src:url("/content/Shared/FontAwesome/fontawesome-free-6.5.2-web/webfonts/fa-solid-900.woff2") format("woff2")}
+        @font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:400;font-display:optional;src:url("/content/Shared/FontAwesome/fontawesome-free-6.5.2-web/webfonts/fa-regular-400.woff2") format("woff2")}
+        @font-face{font-family:"Font Awesome 6 Brands";font-style:normal;font-weight:400;font-display:optional;src:url("/content/Shared/FontAwesome/fontawesome-free-6.5.2-web/webfonts/fa-brands-400.woff2") format("woff2")}
+    </style>
+    <link rel="preload" href="/content/Shared/FontAwesome/fontawesome-free-6.5.2-web/css/all.min.css" as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/content/Shared/FontAwesome/fontawesome-free-6.5.2-web/css/v4-shims.min.css" as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/content/Shared/FontAwesome/fontawesome-free-6.5.2-web/css/all.min.css">
+        <link rel="stylesheet" href="/content/Shared/FontAwesome/fontawesome-free-6.5.2-web/css/v4-shims.min.css">
+    </noscript>
+
+
+    <title>Research | MD Anderson</title>
+</head>
+
+<body class="careers-research has-banner">
+    <script>
+    (function (w) {
+        var activateCore = {};
+        Object.defineProperty(w, 'core', {
+            configurable: true,
+            enumerable: true,
+            get: function () { return activateCore; },
+            set: function () { }
+        });
+    })(window);
+</script>
+
+    <script>
+        // Editor traffic, for client scripts that fire third-party tags. They cannot use the server
+        // gate, and they cannot rely on __consent: suppressing _CustomAnalyticsHead removes
+        // __consent.configure(), and an unconfigured engine runs every onConsent callback.
+        window.__editorTraffic = false;
+    </script>
+
+        <script src="/dist/Clients/MDAnderson/ClientDependencies.min.js?v=Bpx6tFiahIRScBmUfUQT0rmtsSG1I1Gyv-CPmDiN65g"></script>
+
+    <script defer src="/dist/Shared/Bundles/jQueryUi.min.js?v=IrNcXVNpLeMoV157Jbx_so_uj1o4rJ12I0jZ7Exuafk"></script>
+
+    <script defer src="/dist/Shared/common.min.js?v=UuMI1Aq7xAaVfIvUyuotn9c-pshIW_8q3GQVsOIOJ8A"></script>
+
+    
+        <script>
+            __consent.onConsent(function() {
+                __consent.loadScript('https://analytics.talentegy.com/1faf115c-0e49-49d1-974a-8709ea935463.js');
+            }, { signals: ['analytics_storage'], defer: true });
+        </script>
+
+    <script type="text/javascript">
+        function processActionFail(data) { 
+            core.common.processActionFail(data); 
+        }; 
+        $('body').addClass('careers-research'); $('body').addClass('Index index ');
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            core.common.initSemanticInputs();
+core.common.getTrackingPixel(1);        });
+    </script>
+    <script type="text/javascript">
+        __consent.onConsent(function () {
+            try {
+                if (sessionStorage.getItem('entry_referrer') === null) {
+                    sessionStorage.setItem('entry_referrer', document.referrer || '');
+                }
+                if (sessionStorage.getItem('entry_attribution') === null) {
+                    var params = new URLSearchParams(window.location.search);
+                    var utmKeys = Array.from(params.keys()).filter(function(k) {
+                        return k.indexOf('utm_') === 0 || k === 'gclid' || k === 'fbclid' || k === 'msclkid' || k === 'source';
+                    });
+                    if (utmKeys.length > 0) {
+                        var attribution = {};
+                        utmKeys.forEach(function(k) { attribution[k] = params.get(k); });
+                        sessionStorage.setItem('entry_attribution', JSON.stringify(attribution));
+                    }
+                }
+            } catch (_) {
+                // sessionStorage unavailable (private mode, restricted iframe)
+            }
+        }, { signals: ['analytics_storage'] });
+    </script>
+    <script type="text/javascript">
+        function logEvent(path, data) {
+            try {
+                const url = `/log/${path}`;
+                if (typeof navigator !== 'undefined' && typeof navigator.sendBeacon === 'function') {
+                    let payload;
+                    if (data !== undefined) {
+                        payload = new Blob([JSON.stringify(data)], { type: 'application/json' });
+                    }
+                    return navigator.sendBeacon(url, payload);
+                }
+                return fetch(url, {
+                    method: 'POST',
+                    body: data !== undefined ? JSON.stringify(data) : null,
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    keepalive: true
+                }).then(
+                    () => true, // queued
+                    () => false // network error
+                );
+            } catch (e) {
+                console.error(e);
+                return false;
+            }
+        }
+    </script>
+    <script defer src="/content/MDAnderson/Scripts/_clientScript.min.js?v=HjJYEc_DyCCaatKb8R4Txb_pV6R9QhovPKmpGCRsYBw"></script>
+    <script defer src="/content/Shared/Scripts/bootstrap5.js?v=lWI92ngf1cKsoM4R1LWT0uCG7if2he9cISpsRkV-ECs"></script>
+    
+
+    <input aria-hidden="true" id="ReportSuite" name="ReportSuite" type="hidden" value="nasrMDAnderson" />
+    
+
+
+        <script type="text/javascript">
+            window.dataLayer = window.dataLayer || [];
+            dataLayer.push(
+            {
+                pageData:
+                {
+                    pageName:
+                        'Research | MD Anderson',
+                    pageUrl: 'https://jobs.mdanderson.org/careers/research',
+                    referringURL: '',
+                    sysEnvironment: 'desktop'
+                }
+            });
+        </script>
+
+<!-- Tealium Data Layer Values -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TW9HHFCK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script>
+var utag_data={};var page_section='';var page_category='';var pathName=window.location.pathname.replace('.html','');var pathArray=pathName.trim().split('/');var categoryArray=[];var page_name='';var delimiter=':';var subCategoryIndex=1;var language='en';var device='desktop';for(var i=0;i<pathArray.length;i++){if(i===0||pathArray[i].length===0){delimiter='';}else{delimiter=':';}
+if(pathArray[i].length>0){page_name=page_name+pathArray[i]+delimiter;categoryArray.push(pathArray[i]);}}
+for(var i=0;i<categoryArray.length;i++){if(i===0){page_section=categoryArray[i];}else if(i===1){page_category=categoryArray[i];}else{utag_data['page_subcategory'+subCategoryIndex]=categoryArray[i];subCategoryIndex++;}}
+if(page_name.length>0){page_name=page_name.substring(0,page_name.length-1);}
+if(navigator.userAgent.match(/Android/i)!=null||navigator.userAgent.match(/BlackBerry/i)!=null||navigator.userAgent.match(/iPhone|iPad|iPod/i)!=null||navigator.userAgent.match(/Opera Mini/i)!=null||navigator.userAgent.match(/IEMobile/i)!=null){if(Math.max(document.documentElement.clientWidth,window.innerWidth||0)>752){device='tablet';}else{device='mobile';}}
+utag_data.page_name=page_name;utag_data.page_section=page_section;utag_data.page_category=page_category;utag_data.Language=language;utag_data.Device=device;</script>
+
+
+<!-- Tealium Loading script asynchronously -->
+<!-- Loading script asynchronously -->
+<script type="text/javascript">
+    (function(a,b,c,d){
+    a='//tags.tiqcdn.com/utag/mdanderson/jobs.mdandersonorg/prod/utag.js';
+    b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+    a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+    })();
+</script>
+
+<!--
+Start of Floodlight Tag: Please do not remove
+Activity name of this tag: MD Anderson - Universal Pixel - DV360
+URL of the webpage where the tag is expected to be placed:
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 06/08/2021
+-->
+<script type="text/javascript">
+  var axel = Math.random() + "";
+  var a = axel * 10000000000000;
+
+  var iframe = document.createElement('iframe');
+  iframe.src = 'https://10952130.fls.doubleclick.net/activityi;src=10952130;type=invmedia;cat=mdand0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=' + a + '?';
+  iframe.width = '1';
+  iframe.height = '1';
+  iframe.frameBorder = '0';
+  iframe.style.display = 'none';
+
+  document.body.appendChild(iframe);
+</script>
+<noscript>
+  <iframe src="https://10952130.fls.doubleclick.net/activityi;src=10952130;type=invmedia;cat=mdand0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+<!-- End of Floodlight Tag: Please do not remove -->
+
+
+<div id="header" role="banner" class="main-header">
+    
+    
+<style type="text/css">.Band.banner {position: relative;z-index:9999;width:100%;text-align: center;color: #FFFFFF;font-size: 20pxl;font-weight: normal;line-height:1.2;}.Band.banner a {color: #000000;font-size: ;text-decoration: underline;font-weight: bold;}</style>
+<div id="banner-block" class="Band banner" style="background-color: #undefined; padding: 10px 5% 10px 5%; color: #FFFFFF">MD Anderson is experiencing intermittent candidate login issues. Click <a
+  href="https://jobs.mdanderson.org/creative/candidate-log-in">here</a>
+to learn more.</div>
+<script type="text/javascript">$(document).ready(function () {if ('p' === 'fo') {setTimeout(function () {$('#banner-block').slideUp('slow', function () { });}, 0);}});</script>
+    
+
+<style>
+    /* Hides the AMP banner block */
+    #banner-block {
+	    display: none !important;
+    }
+</style>
+
+
+<div class="wrapper header-fixed">
+  <a href="#content" class="visually-hidden skip-link--content">Skip to main content</a>
+  <div class="logo">
+    <a href="/" aria-label="Go to MD Anderson Careers Home page">
+      <img src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/logo.svg"
+           alt="The University of Texas MD Anderson Cancer Center"/></a>
+  </div>
+
+  <button class="menu-button desktop-hide" aria-label="navigation menu" tabindex="0">
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </button>
+
+    <nav class="navigation" aria-label="Main">
+        <div class="container">
+            <ul class="extra-buttons">
+              <!---<li><a class="button" href="/talentnetwork/talentnetwork">Join Our Talent Network</a></li>-->
+              <li>
+                <a class="button" href="https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl" target="_blank"
+                   rel="external noopener noreferrer">
+                  Already Applied
+                  <span class="sr-only">(opens in a new tab)</span>
+                </a>
+                <a class="button"
+                   href="https://employeejobs.mdanderson.org/Search/SearchJobs?utm_campaign=currentemployee&utm_source=careersite&utm_medium=currentemployeebutton&utm_content=searchemployeejobs"
+                   target="_blank" rel="external noopener noreferrer">
+                  Current Employee
+                  <span class="sr-only">(opens in a new tab)</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="main-nav">
+              <li class=" drop-down">
+              <a href="/about" class="has-submenu">About Us</a>
+              <button class="drop-down__toggle" data-trigger="dropdown-about-us" aria-haspopup="true" aria-expanded="false" aria-label="About us">
+              </button>
+              <div class="submenu" id="dropdown-about-us">
+                  <ul>
+                    <li class=""><a href="/about/benefits">Benefits</a></li>
+                    <li class=""><a href="/about/communities">Communities and Connections</a></li>
+                    <li class=""><a href="/about/military">Military Hiring</a></li>
+                    <li class=""><a href="/about/houston">Living in Houston</a></li>
+                    <li class=""><a href="/about/apply">Apply FAQ</a></li>
+                    <li class=""><a href="/locations/locations">Locations</a></li>
+                    <li class=" last-in-line"><a href="/events/events">Events</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class=""><a href="/careers/nursing">Nursing</a></li>
+              <li class="active"><a href="/careers/research">Research</a></li>
+              <li class=""><a href="/careers/allied-health">Allied Health</a></li>
+              <li class=""><a href="/careers/faculty">Faculty</a></li>
+              <li class=""><a href="/careers/executive">Executive</a></li>
+              <li class=""><a href="/careers/philanthropy">Philanthropy</a></li>
+             <li class=""><a href="/careers/training">Trainee Programs</a></li>
+              <li class=" last-in-line"><a href="/events/events">Events</a></li>
+              <li>
+                <a class="desktop-hide" href="https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl" target="_blank"
+                   rel="external noopener noreferrer">
+                  Already Applied
+                  <span class="sr-only">(opens in a new tab)</span>
+                </a>
+              </li>
+              <li>
+                <a class="desktop-hide"
+                   href="https://employeejobs.mdanderson.org/Search/SearchJobs?utm_campaign=currentemployee&utm_source=careersite&utm_medium=currentemployeebutton&utm_content=searchemployeejobs"
+                   target="_blank" rel="external noopener noreferrer">
+                  Current Employee
+                  <span class="sr-only">(opens in a new tab)</span>
+                </a>
+              </li>
+            </ul>
+            </div>
+        </nav>
+
+
+    </div>
+            <div class="header-search">
+                <div class="wrapper">
+                    
+
+<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css" href="/ReusableComponents/JobSearchForm/JobSearchForm.min.css?v=O9Nc8B48S1DL-KJ90FQv0XMPtJghBnT3n61efI28U00" />
+<noscript><link rel="stylesheet" type="text/css" href="/ReusableComponents/JobSearchForm/JobSearchForm.min.css?v=O9Nc8B48S1DL-KJ90FQv0XMPtJghBnT3n61efI28U00" /></noscript>
+<script type="text/javascript">
+    var isLoaded = false; 
+    var isScriptLoaded = false; 
+    window.expectedInputs = JSON.parse('["keyword","categoryid","citystate"]');
+</script>
+        <script defer src="/ReusableComponents/JobSearchForm/JobSearchScripts.js?v=biiskoMvhmv-9saZf14qRhOmjZXENwgppIRsRb8iF7o"></script>
+
+
+    <form class="float-search-form ui form" role="form" aria-label="Jobs search form" autocomplete="off" onsubmit="submitFloatForm(event, 'float')">
+        
+
+        <link rel="stylesheet" href="/dist/Shared/virtual-select.min.css">
+    <script src="/dist/Shared/virtual-select.min.js"></script>
+    <link rel="stylesheet" href="/dist/Shared/tooltip.min.css">
+    <script src="/dist/Shared/tooltip.min.js"></script>
+
+
+        <script defer src="/dist/Shared/Bundles/jQueryUiDialog.min.js?v=EZgL2BbbFjbGsvnaP6tLJrM2nQ4W8uuVaCcw-LOyQLc"></script>
+        <script defer src="/dist/Shared/jquery.jtable.min.js?v=AvtAUMDr8xe_yw16Geut9DRygod5NfX-7J4twg8xaDo"></script>
+
+
+<div class="fields">
+        <div class="field keyword">
+                        <label for="Keyword">Keyword or Req #</label>
+                            <div class="input-container keyword-input-container" style="position: relative;">
+                                <input aria-label="Keyword or Req #" autocomplete="new-password" id="Keyword" name="Keyword" placeholder="Keyword or Req #" tabindex="0" type="text" value="" />
+                                <div class="icon-container">
+                                    <i id="keyword-clear-btn" aria-label="Clear keyword" role="button" tabindex="0" style="display: none;"></i>
+                                </div>
+                            </div>
+                            <script>
+                                (function() {
+                                    // Prevent re-execution if this script has already run
+                                    if (window.keywordClearBtnInitialized) {
+                                        return;
+                                    }
+                                    window.keywordClearBtnInitialized = true;
+
+                                    const keywordInputElement = document.getElementById('Keyword');
+                                    const classList = keywordInputElement.classList;
+                                    const clearBtn = document.getElementById('keyword-clear-btn');
+
+                                    function toggleKeywordClearBtn() {
+                                        if (keywordInputElement.value) {
+                                            clearBtn.style.display = '';
+                                            clearBtn.setAttribute('tabindex', '0');
+                                            clearBtn.setAttribute('aria-label', 'Clear keyword');
+                                            clearBtn.setAttribute('role', 'button');
+                                            clearBtn.setAttribute('aria-keyshortcuts', 'Enter or Space to clear');
+                                            clearBtn.setAttribute('aria-controls', 'Keyword');
+                                            classList.add('changed-input');
+                                            classList.add('has-value');
+                                        } else {
+                                            clearBtn.style.display = 'none';
+                                            clearBtn.removeAttribute('tabindex');
+                                            clearBtn.removeAttribute('aria-label');
+                                            clearBtn.removeAttribute('role');
+                                            clearBtn.removeAttribute('aria-keyshortcuts');
+                                            clearBtn.removeAttribute('aria-controls');
+                                            classList.remove('changed-input');
+                                            classList.remove('has-value');
+                                        }
+                                    }
+
+                                    keywordInputElement.addEventListener('input', () => {
+                                        toggleKeywordClearBtn();
+                                    });
+
+                                    clearBtn.addEventListener('click', function () {
+                                        keywordInputElement.value = '';
+                                        keywordInputElement.dispatchEvent(new Event('input'));
+                                        keywordInputElement.focus();
+                                    });
+
+                                    clearBtn.addEventListener('keypress', function (event) {
+                                        if (event.key === 'Enter' || event.key === ' ') {
+                                            event.preventDefault();
+                                            clearBtn.click();
+                                        }
+                                    });
+
+                                    // Show/hide on page load
+                                    toggleKeywordClearBtn();
+                                    keywordElement = document.querySelector('.field.keyword');
+                                    keywordElement.addEventListener('focusin', () => {
+                                        announce('Enter a keyword to search for jobs.', true);
+                                    });
+                                })(); // Close IIFE
+                            </script>
+
+        </div>
+        <div class="field categoryid">
+                        <label for="CategoryID">Job Category</label>
+                            <select id="categoryMultiSelect" name="CategoryID" multiple class="virtual-select">
+                                    <option value="16b12eae-069a-4cb6-b2f6-f26f93a47875">Accounting/Finance</option>
+                                    <option value="8d67510b-9820-43a3-a1a8-3a7bfd24f55c">Admin/Clerical Support</option>
+                                    <option value="4dacea6c-1c92-4db2-9235-a066e50a00be">Allied Health</option>
+                                    <option value="3bbf2c70-7e25-4132-a741-7805eda2e608">Audit / Compliance</option>
+                                    <option value="8e8f28b6-2228-4776-8b72-9f521fa2529e">Environmental Health &amp; Safety</option>
+                                    <option value="c8931290-a5bd-4e0f-940e-1e7234197928">Executive</option>
+                                    <option value="07179597-20d1-427f-91a5-1198724778c0">Facilities</option>
+                                    <option value="2c19dba0-598b-4f7b-a2c3-3feebcba9abc">Faculty</option>
+                                    <option value="337adfea-0ccd-487c-95f3-83b42e5d60b6">Faculty Leadership</option>
+                                    <option value="0c5e5f52-05ab-48f4-b169-b963d8b10fff">Food &amp; Dining</option>
+                                    <option value="a2caef0e-54a0-48cc-bb4b-50645b6a1ab4">Healthcare/Business Support</option>
+                                    <option value="d89a6117-3ddb-4883-8f76-df7b371c5ef4">Human Resources</option>
+                                    <option value="bc21c03b-a745-4e51-884b-0d8e7dfd4abf">Information Technology</option>
+                                    <option value="f94390db-8b45-448d-a9b4-cfde08c6b521">Law Enforcement/Security</option>
+                                    <option value="22a9802d-62e1-492b-816b-7a8a9a087c65">Legal</option>
+                                    <option value="d7d8d0c8-7415-469f-9d93-79b6fe192271">Managerial/Professional</option>
+                                    <option value="f28f6b8f-8986-4957-9a3f-b0ba37be050e">Marketing/Communication</option>
+                                    <option value="d0066a33-0de5-4467-a365-324b5beb041e">Nursing</option>
+                                    <option value="44737d5e-5300-4ad5-9798-1fe987501aa6">Other</option>
+                                    <option value="3330a738-a6b9-43c7-be86-5363a1762f41">Philanthropic/Bus Development</option>
+                                    <option value="39755a11-953f-4730-abed-99c16d2c73c2">Research</option>
+                                    <option value="a40a18b8-4868-4a7e-91e8-ee8370c51f70">Service Skilled Trade</option>
+                                    <option value="c288fb5f-cf0c-4431-a6f1-8cd418b5e0c9">Trainee</option>
+                            </select>
+                            <script>
+                                const categoryInstance = VirtualSelect.init({
+                                    ele: '#categoryMultiSelect',
+                                    multiple: true,
+                                    search: 23 > 5,
+                                    showCheckbox: true,
+                                    placeholder: "Job Category",
+                                    searchPlaceholderText: 'Search...',
+                                    optionsSelectedText: 'Categories Selected',
+                                    disableAllOptionsSelectedText: true,
+                                    optionsCount: 5,
+                                    zIndex: 4,
+                                    showDropboxAsPopup: false,
+                                    focusSelectedOptionOnOpen: false,
+                                    showDuration: 0,
+                                    hideDuration: 0
+                                });
+                            </script>
+
+        </div>
+        <div class="field citystate">
+                    <label for="CityState">City, State</label>
+<select aria-label="City, State" class="ui search dropdown" data-dropdownsearch="true" data-fieldClassName="citystate" data-optionName="city state" data-placeholder="City, State" data-val="true" data-val-required="The CityState field is required." id="CityState" name="CityState"><option value="">City, State</option>
+<option value="Bellair, N/A">Bellair, N/A</option>
+<option value="Remote (Within US), N/A">Remote (Within US), N/A</option>
+<option value="Bastrop, TX">Bastrop, TX</option>
+<option value="Bellaire, TX">Bellaire, TX</option>
+<option value="Conroe, TX">Conroe, TX</option>
+<option value="Galveston, TX">Galveston, TX</option>
+<option value="Houston, TX">Houston, TX</option>
+<option value="Katy, TX">Katy, TX</option>
+<option value="League City, TX">League City, TX</option>
+<option value="Missouri City, TX">Missouri City, TX</option>
+<option value="North Houston, TX">North Houston, TX</option>
+<option value="Northwest Houston, TX">Northwest Houston, TX</option>
+<option value="Remote (Within Texas), TX">Remote (Within Texas), TX</option>
+<option value="Smithville, TX">Smithville, TX</option>
+<option value="Sugar Land, TX">Sugar Land, TX</option>
+<option value="The Woodlands, TX">The Woodlands, TX</option>
+<option value="Tyler, TX">Tyler, TX</option>
+</select>
+        </div>
+
+    <div class="field actionbutton">
+            <button type="submit" id="Search" class="ui button floatsearch" data-results-type="table">
+                Search Jobs
+            </button>
+        <input data-val="true" data-val-required="The ClientID field is required." id="ClientID" name="ClientID" type="hidden" value="7ea6a66a-8563-4445-92f0-fe84e01bfd09" />
+    </div>
+</div>
+
+    <script src="/dist/Shared/form-dropdown.min.js?v=OH7CBvw40MPEIgThHs1v_-UAv7ZGnTWZqsNRaIHLlT0"></script>
+
+    <script src="/dist/Shared/multi-select-dropdowns.min.js?v=qxijhlQ5B1YYOLC5zrxJqFSO3haFq0vuXgb7fLsS7qg"></script>
+
+
+
+
+
+
+
+
+
+
+        <div class="form-data all">
+            <a class="Action" href="/search/searchjobs">&lt;span&gt;See all jobs&lt;/span&gt;</a>
+        </div>
+    </form>
+
+
+<script type="text/javascript" id="element-to-hide">
+    window.addEventListener('DOMContentLoaded', function () {
+        (function ($) {
+            const $keywordInput = $('#Keyword');
+            if ($keywordInput.length) {
+                setTimeout(function () {
+                    $keywordInput.autocomplete({
+                    minLength: 3,
+                    appendTo: '.field.keyword',
+                    source: function (request, response) {
+                        $.ajax({
+                            url: '/Search/AutocompleteSuggestions',
+                            dataType: 'json',
+                            data: {
+                                keyword: request.term.replace('<', '')
+                            },
+                            success: function (data) {
+                                $keywordInput.val($keywordInput.val().replace('<', ''));
+                                response(data);
+                            }
+                        });
+                    }
+                });
+                }, 50);
+            }
+
+            $(".float-search-form.ui.form").submit(function (event) {
+                $keywordInput.val($keywordInput.val().replace('<', ''));
+            });
+        })(jQuery);
+    });
+</script>
+
+        <script defer src="/js/form-tracking.js?v=WFXUl4NH0I582nVdRDarsOARlVmiAER1YOyp46c6Aq8"></script>
+
+                </div>
+            </div>
+<script>
+    $(document).ready(function() {
+      const dropdownsToggle = $('.drop-down__toggle');
+      const dropdownMenus = $('.submenu')
+
+        $('.header-search form.float-search-form').removeAttr('tabindex');
+        $('.header-search form.float-search-form .field.geolocation i.search-find-me').attr({
+            'role': 'button',
+            'aria-label': 'Find my location'
+        });
+
+
+      function setAriaExpandedFalse() {
+        dropdownsToggle.each(function () {
+          $(this).attr('aria-expanded', 'false');
+        });
+      }
+
+      function handleDropdownClick(e) {
+        const btn = e.currentTarget;
+        const dropdownId = btn.dataset.trigger;
+        const dropdownElement = document.getElementById(dropdownId);
+
+        dropdownsToggle.each(function () {
+          const drop = document.getElementById($(this).data('trigger'));
+          if (drop && drop.id !== dropdownId) {
+            drop.classList.remove('open');
+          }
+
+          if (this !== btn) {
+            $(this).attr('aria-expanded', 'false');
+          }
+        });
+
+        dropdownElement.classList.toggle("open");
+        btn.setAttribute('aria-expanded', btn.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
+        e.stopPropagation();
+      }
+
+      dropdownsToggle.on('click', handleDropdownClick);
+
+      $(document).on('keydown', function (e) {
+        if (e.key === 'Escape') {
+          dropdownMenus.removeClass('open');
+          setAriaExpandedFalse();
+        }
+      });
+
+      /* Top Banner close button logic */
+      const topBanner = $('.top-banner');
+      const topBannerCloseBtn = $('.top-banner__close');
+
+      function closeTopBanner() {
+        topBanner.slideUp();
+      }
+
+      topBannerCloseBtn.on('click', closeTopBanner);
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      $('form.float-search-form .categoryid .menu').attr('tabindex', '-1');
+    });
+</script>
+<script src="/content/MDAnderson/Scripts/slick/slick.min.js" defer></script>
+
+    
+</div>
+
+
+<div id="content" class="main-content" role="main">
+    
+    
+
+
+<div class="research-page internal-pages">
+    <section class="hero" aria-labelledby="hero-heading">
+        <div class="wrapper">
+            <ul class="three-blocks">
+                <li class="content">
+                    <h1 id="hero-heading">Research Careers</h1>
+                    <h2><span>Be more</span><br /> inspired, innovative, supported.</h2>
+                    <a href="/search/searchjobs?categoryid=39755a11-953f-4730-abed-99c16d2c73c2" class="button">Search Research Jobs ></a>
+                </li>
+                <li class="img-block"><img src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/Research1a.webp" alt="MD Anderson laboratory employee with pipette" width="349"
+                                           height="360"/></li>
+                <li class="img-block"><img src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/Research1b.webp" alt="MD Anderson employees opening laboratory fridge" width="720"
+                                           height="360" fetchpriority="high"/></li>
+            </ul>
+        </div>
+    </section>
+
+
+    <div class="offset">
+        <section class="content" aria-labelledby="research-careers-info-heading">
+            <h2 class="sr-only" id="research-careers-info-heading">Research careers at MD Anderson and recognized awards</h2>
+            <ul class="two-blocks center-align">
+                <li>
+                    <p>
+                        Why do so many of the greatest minds in cancer research work at The University of Texas MD Anderson Cancer Center? They're here because we offer a unique environment that accelerates their ability to end cancer. As part of our team, you'll work with experts in different research areas, as well as the world's leading cancer doctors. Bright students and trainees contribute further to our dynamic setting. Our collaborative approach brings precision medicine to the forefront of cancer care and research and allows you to reach your full potential.
+                    </p>
+                </li>
+                <li>
+                    <ul class="awards">
+                        <li>
+                            <img src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/_awards/HOS_Badge-Spc_Cancer-2025-2026-v2.avif"
+                                 alt="MD Anderson award - U.S. News & World Report America's Best Hospitals 2025-2026" width="145" height="142"
+                                 loading="lazy"/>
+                        </li>
+                        <li>
+                            <img src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/_awards/Glassdoor-bptw-2026.avif" alt="Glassdoor's Best Places to Work award 2026" width="145" height="122" loading="lazy"/>
+                        </li>
+                        <li>
+                            <img src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/_awards/forbes-large-employe-2025-xl.avif"
+                                alt="MD Anderson award - Forbes 2025 America's Best Large Employers" width="145" height="116" loading="lazy"/>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="bg-grey" aria-labelledby="opportunities-heading">
+            <h2 id="opportunities-heading" class="sr-only">Information on research careers and growth opportunities at MD Anderson</h2>
+            <ul class="wrapper content two-blocks">
+                <li>
+                    <div class="right">
+                        <div class="icon red"><img src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/ResearchIcon1.webp" alt="" width="72" height="72" loading="lazy" aria-hidden="true"/></div>
+                        <h3>World-Class Research</h3>
+                        <p>Our researchers’ productivity is impressive. By securing federal funding, publishing in peer-review journals and bringing
+                            research into the clinic, our researchers uphold our status as one of the nation's top comprehensive cancer centers. We’ve
+                            secured over $200 million in NIH funding and had almost 3,500 peer-review articles published.</p>
+                    </div>
+                    <div><img src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/Research2.webp" alt="MD Anderson employees in laboratory with petri dish samples" width="540" height="391"
+                    loading="lazy"/></div>
+                    <div>
+                        <div class="icon orange"><img
+                          src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/ResearchIcon2.webp" alt="" width="72" height="72" loading="lazy" aria-hidden="true"/></div>
+                        <h3>Unique Experience </h3>
+                        <p>Four Research Types. One Goal. We focus on Basic Science, Translational, Clinical & Prevention and Personalized Risk
+                            Assessment.</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div class="icon blue"><img
+                          src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/ResearchIcon3.webp" alt="" width="72" height="72" loading="lazy" aria-hidden="true"/></div>
+                        <h3>Learning Environment</h3>
+                        <p>You do not necessarily need oncology experience to work at UT MD Anderson. We welcome individuals from all backgrounds who
+                            have the willingness to learn more about oncology. We promote collaboration and multidisciplinary approaches to encourage
+                            open dialogue across our enterprise and promote the exchange of ideas. </p>
+                    </div>
+                    <div>
+                        <div class="icon purple"><img
+                          src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/ResearchIcon4.webp" alt="" width="72" height="72" loading="lazy" aria-hidden="true"/></div>
+                        <h3>Rapid Results</h3>
+                        <p>At UT MD Anderson, critical scientific knowledge gained in the laboratory is rapidly translated into clinical care. Tomorrow's
+                            medicine is available to our patients first, since we have the most cancer clinical trials in the world - more than 1,360.
+                            Our partnerships with Pharma offer an exciting opportunity to participate in the activation of innovative trials.</p>
+                    </div>
+                    <div>
+                        <div class="icon green"><img
+                          src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/ResearchIcon5.webp" alt="" width="72" height="72" loading="lazy" aria-hidden="true"/></div>
+                        <h3>Growth Potential</h3>
+                        <p>There are many opportunities for growth and development at UT MD Anderson. Assistants and scientists often advance to senior
+                            and manager level roles, and in some areas of specialization, development paths are available as well. For example, in our
+                            Clinical Genomics Lab we have a defined path leading to a Sr. Technologist, Supervisor, Coordinator and Manager.</p>
+                    </div>
+                    <div><a class="button" href="/search/searchjobs?categoryid=39755a11-953f-4730-abed-99c16d2c73c2 ">Search Research Jobs ></a></div>
+                </li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="testimonials-heading">
+            <h2 id="testimonials-heading" class="sr-only">MD Anderson staff testimonials</h2>
+            <ul class="wrapper bg-grey testimonials autoplay-slick-slider">
+                <li class="two-blocks">
+                    <div>
+                        <div>
+                            <p>I have experienced tremendous growth at MD Anderson.</p>
+                            <span>Amiben</span>
+                            <cite>Clinical Studies Coordinator – MPH</cite>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#" class="pop-modal" data-video-id="41Int10jOPU"
+                           data-video-title="Why MD Anderson: Sr. clinical studies coordinator Amiben Patel"
+                           aria-label="Open Amiben video testimonial popup">
+                            <img src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/photos/ResearchAmiben.webp"
+                          alt="Careers in research at MD Anderson" width="480" height="268" loading="lazy"/>
+                        </a>
+                    </div>
+                </li>
+                <li class="two-blocks">
+                    <div>
+                        <div>
+                            <p>Getting to know patients is rewarding. Their resilience inspires me.</p>
+                            <span>David</span>
+                            <cite>Sr. Clinical Studies Coordinator - CCRP</cite>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#" class="pop-modal" data-video-id="-uSQEAs6aig"
+                           data-video-title="Why MD Anderson: Sr. clinical studies coordinator David McCue"
+                           aria-label="Open David video testimonial popup"><img
+                          src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/photos/ResearchDavid.webp"
+                          alt="MD Anderson Research employee video testimonial: David, Sr. Clinical Studies Coordinator " width="480" height="268" loading="lazy"/></a>
+                    </div>
+                </li>
+                <li class="two-blocks">
+                    <div>
+                        <div>
+                            <p>The research we do can be directly translated into the clinical lab.</p>
+                            <span>Dzifa</span>
+                            <cite>Scientific Project Director - PHD</cite>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#" class="pop-modal" data-video-id="8SgNDt3t9OM"
+                           data-video-title="Why MD Anderson: Scientific project director Dzifa Duose"
+                           aria-label="Open Dzifa video testimonial popup"><img
+                          src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/photos/ResearchDzifa.webp"
+                          alt="MD Anderson Research employee video testimonial: Dzifa, Scientific Project Director" width="480" height="268" loading="lazy"/></a>
+                    </div>
+                </li>
+                <li class="two-blocks">
+                    <div>
+                        <div>
+                            <p>The research at MD Anderson is cutting edge because we specialize.</p>
+                            <span>Nicole</span>
+                            <cite>Clinical Studies Coordinator - BS</cite>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#" class="pop-modal" data-video-id="WVJ-xovK5s0"
+                           data-video-title="Why MD Anderson: Clinical studies coordinator Nichole Ard"
+                           aria-label="Open Nicole video testimonial popup"><img
+                          src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/photos/ResearchNichole.webp"
+                          alt="MD Anderson Research employee video testimonial: Nicole, Clinical Studies Coordinator" width="480" height="268" loading="lazy"/></a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="modal video-modal" id="video-modal" role="dialog">
+    <div class="video">
+        <button class="close" aria-label="Close testimonial video popup" aria-controls="video-modal">X</button>
+        <div class="video--modal--wrapper"></div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.pop-modal').on('click', function (e) {
+            e.preventDefault();
+
+            const videoId = $(this).data('video-id');
+            const videoTitle = $(this).data('video-title');
+            const videoModal = $('#video-modal');
+            const videoWrapper = videoModal.find('.video--modal--wrapper');
+            const liteYoutubeElement = `
+            <lite-youtube
+                videoid="${videoId}"
+                title="${videoTitle}">
+            </lite-youtube>`;
+
+            videoModal.attr('aria-label', `Play Video of ${videoTitle}`);
+            videoWrapper.empty();
+            videoWrapper.append(liteYoutubeElement);
+            videoModal.fadeIn();
+            $('#video-modal .lty-playbtn').focus();
+        });
+
+        function closeModal() {
+            const videoModal = $('#video-modal');
+            const videoWrapper = videoModal.find('.video--modal--wrapper');
+            videoWrapper.empty();
+            videoModal.fadeOut();
+        }
+
+        // Close modal on 'X' click
+        $('#video-modal .close').on('click', function () {
+            closeModal();
+        });
+
+        // Close modal on click outside the video container
+        $(document).on('click', function (e) {
+            if ($(e.target).closest('.video').length === 0 && $(e.target).closest('.pop-modal').length === 0) {
+                closeModal();
+            }
+        });
+        // Close modal when the Escape key is pressed
+        $(document).on('keydown', function (e) {
+            if (e.key === 'Escape' || e.key === 'Esc') {
+                closeModal();
+            }
+        });
+    });
+</script>
+
+
+
+<script>
+    $(document).ready(function () {
+        $('.testimonials').slick({
+            dots: false,
+            infinite: true,
+            speed: 800,
+            slidesToShow: 1,
+            autoplay: true,
+            autoplaySpeed: 8000,
+            arrows: true,
+        });
+    });
+</script>
+    
+    
+</div>
+
+
+<div id="footer" class="main-footer" role="contentinfo">
+    
+    
+
+<div class="bg-grey">
+
+<div class="tagline wrapper">
+    <h2><span>Be more</span> at UT MD Anderson</h2>
+</div>
+
+    <ul class="social wrapper">
+        <li>
+            <a target="_blank" href="https://www.facebook.com/MDAnderson" rel="noreferrer external">
+                <span class="sr-only">Visit our Facebook page (this link opens a new tab)</span>
+                <img src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/_social/social-facebook.svg" alt="" aria-hidden="true" loading="lazy" width="30" height="30"/>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://x.com/UTMDAnderson" rel="noreferrer external">
+                <span class="sr-only">Visit our X page (this link opens a new tab)</span>
+                <img src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/_social/logo-x.svg" alt="" aria-hidden="true" loading="lazy" width="30" height="30"/>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.youtube.com/c/mdanderson" rel="noreferrer external">
+                <span class="sr-only">Visit our YouTube page (this link opens a new tab)</span>
+                <img src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/_social/social-youtube.svg" alt="" aria-hidden="true" loading="lazy" width="30" height="30"/>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.linkedin.com/company/mdandersoncancercenter" rel="noreferrer external">
+                <span class="sr-only">Visit our LinkedIn page (this link opens a new tab)</span>
+                <img src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/_social/social-linkedin.svg" alt="" aria-hidden="true" loading="lazy" width="30" height="30"/>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="links wrapper">
+        <li><a href="/applicant-rights" target="_blank" rel="noopener noreferrer" aria-label="Applicant Rights & Notices">Applicant Rights & Notices</a></li>
+        <li><a href="/eeo-accessibility" target="_blank" rel="noopener noreferrer" aria-label="EEO / Accessibility">EEO / Accessibility</a></li>
+        <li><a target="_blank" href="https://www.mdanderson.org/" rel="noopener noreferrer" aria-label="mdanderson.org (this link opens a new tab)">mdanderson.org</a></li>
+    </ul>
+
+</div>
+
+<div class="bg-black">
+    <div class="wrapper">
+        <div>
+            <img src="https://activatecdn.azureedge.net/activatedata/35Content/MDAnderson/Images/_footer/footer.webp" alt="Making Cancer History" loading="lazy" width="315" height="31"/>
+        </div>
+        <p>&copy; 2026
+            <a target="_blank" href="https://www.mdanderson.org/" rel="noopener noreferrer" aria-label="Visit mdanderson.org (this link opens a new tab)">
+                <span class="sr-only">Visit </span>
+                The University of Texas MD Anderson Cancer Center. All rights reserved.
+                <span class="sr-only">(this link opens a new tab)</span>
+            </a>
+        </p>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        const backToTopBtn = $('#BackToTop');
+        backToTopBtn.attr({
+            'tabindex': '0',
+            'role': 'button',
+            'aria-label': 'Back to top'
+        }).removeAttr('aria-hidden');
+        backToTopBtn.on('mouseenter', function () {
+            announce('Back to top', true);
+        });
+
+        const skipLink = $('.skip-link--content');
+        backToTopBtn.on('keypress', function (e) {
+            if (e.key === 'Enter' || e.keyCode === 13) {
+                backToTopBtn.click();
+                skipLink.focus();
+            }
+        });
+
+    });
+</script>
+
+    <script async src="//jsv3.recruitics.com/2b09ce84-0003-11f0-bdd8-b7bb09fcf086.js" loading="eager"></script>
+
+    <i id="BackToTop" class="fa fa-arrow-up" aria-hidden="true"></i>
+    <div class="attribution-container">
+        
+<a href="https://www.nasrecruitment.com/solutions/recruitment-marketing-platform/activate-platform" target="_blank" rel="noopener">
+    <img src="https://activatecdn.azureedge.net/activatedata/35Content/Shared/Images/default-attribution_white.svg" alt="Powered by Activate®" />
+</a>
+
+        <a href="https://www.nasrecruitment.com/terms-of-use-privacy-policy/"
+           target="_blank" 
+           style="float: right; clear: both; font-size: .8rem; margin-bottom: 5px; margin-right: 5px;">
+            Terms of Use and Privacy Policy
+        </a>
+    </div>
+    
+</div>
+
+
+<script type="text/javascript">
+    var systemVariations = JSON.parse('{"Activate:ApplyButtonColor":"Activate:ApplyButtonColor:Default","Activate:ClearAllStaticSearch":"Activate:ClearAllStaticSearch:Default","Activate:AutoFilterJobResults":"Activate:AutoFilterJobResults:Default","Activate:OpenDropdownsOnFocus":"Activate:OpenDropdownsOnFocus:Disabled","Activate:SourceToAtsTracking":"Activate:SourceToAtsTracking:Disabled","Activate:SimilarJobsSemanticSearch":"Activate:SimilarJobsSemanticSearch:Keyword","Activate:EnhancedJobDetails":"Activate:EnhancedJobDetails:Default","Activate:SemanticSearch":"Activate:SemanticSearch:Keyword"}');
+    if (window.variations) {
+        for (var key in systemVariations) {
+            window.variations[key] = systemVariations[key];
+        }
+    } else {
+        window.variations = systemVariations;
+    }
+
+
+    if (window.variations) {
+        var ev = { event: 'ab_variations_loaded', variations: window.variations };
+        window.dataLayer = window.dataLayer || [];
+        Object.keys(window).forEach(function (key) {
+            if (key.toLowerCase().indexOf('datalayer') === 0
+                && window[key]
+                && typeof window[key].push === 'function') {
+                window[key].push(ev);
+            }
+        });
+    }
+        </script>
+
+
+
+
+
+
+    <div id="global-announcer-container" aria-live="polite"></div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const container = document.getElementById('global-announcer-container');
+        window.announce = function(message, assertive = false, timeout = 5000) {
+            if (!container) {
+                console.error('Cannot announce message. Global announcer container not found.');
+                return;
+            }
+            container.textContent = '';
+            container.setAttribute('aria-live', assertive ? 'assertive' : 'polite');
+            container.textContent = message;
+
+            setTimeout(() => {
+                container.setAttribute('aria-live', 'polite');
+                container.textContent = '';
+            }, timeout);
+        };
+    });
+</script>
+<style>
+    #global-announcer-container {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute !important;
+        width: 1px;
+    }
+</style>
+</body>
+</html>

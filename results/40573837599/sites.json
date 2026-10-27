@@ -1,0 +1,355 @@
+[
+ {
+  "label": "mda-search",
+  "url": "https://jobs.mdanderson.org/search/searchjobs?keyword=postdoctoral",
+  "status": 200,
+  "length": 63243,
+  "final": "https://jobs.mdanderson.org/search/searchjobs?keyword=postdoctoral",
+  "title": "Search Jobs | MD Anderson",
+  "ats": {
+   "taleo": [
+    "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl"
+   ]
+  },
+  "job_links": [
+   {
+    "text": "here",
+    "href": "https://jobs.mdanderson.org/creative/candidate-log-in"
+   },
+   {
+    "text": "Already Applied (opens in a new tab)",
+    "href": "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl"
+   },
+   {
+    "text": "Current Employee (opens in a new tab)",
+    "href": "https://employeejobs.mdanderson.org/Search/SearchJobs?utm_campaign=currentemployee&utm_source=careersite&utm_medium=currentemployeebutton&utm_content=searchemployeejobs"
+   },
+   {
+    "text": "Nursing",
+    "href": "https://jobs.mdanderson.org/careers/nursing"
+   },
+   {
+    "text": "Research",
+    "href": "https://jobs.mdanderson.org/careers/research"
+   },
+   {
+    "text": "Allied Health",
+    "href": "https://jobs.mdanderson.org/careers/allied-health"
+   },
+   {
+    "text": "Faculty",
+    "href": "https://jobs.mdanderson.org/careers/faculty"
+   },
+   {
+    "text": "Executive",
+    "href": "https://jobs.mdanderson.org/careers/executive"
+   },
+   {
+    "text": "Philanthropy",
+    "href": "https://jobs.mdanderson.org/careers/philanthropy"
+   },
+   {
+    "text": "Trainee Programs",
+    "href": "https://jobs.mdanderson.org/careers/training"
+   },
+   {
+    "text": "Already Applied (opens in a new tab)",
+    "href": "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl"
+   },
+   {
+    "text": "Current Employee (opens in a new tab)",
+    "href": "https://employeejobs.mdanderson.org/Search/SearchJobs?utm_campaign=currentemployee&utm_source=careersite&utm_medium=currentemployeebutton&utm_content=searchemployeejobs"
+   },
+   {
+    "text": "Careers",
+    "href": "https://jobs.mdanderson.org/"
+   },
+   {
+    "text": "Search Jobs",
+    "href": "https://jobs.mdanderson.org/search/searchjobs"
+   }
+  ],
+  "followed": [
+   {
+    "url": "https://jobs.mdanderson.org/creative/candidate-log-in",
+    "final": "https://jobs.mdanderson.org/candidate-log-in",
+    "status": 200,
+    "ats": {
+     "taleo": [
+      "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl"
+     ]
+    }
+   },
+   {
+    "url": "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl",
+    "final": "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl",
+    "status": 200,
+    "ats": {}
+   },
+   {
+    "url": "https://employeejobs.mdanderson.org/Search/SearchJobs?utm_campaign=currentemployee&utm_source=careersite&utm_medium=currentemployeebutton&utm_content=searchemployeejobs",
+    "final": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=a79d6801-c0b5-49f2-b442-092517159c0c&redirect_uri=https%3A%2F%2Femployeejobs.mdanderson.org%2Fsignin-oidc&response_type=id_token&scope=openid%20profile&response_mode=form_post&nonce=639287279094963177.ZmI4YTM2OWUtMTRhOS00ZjNmLTgyODktMDRiM2EwYmIzNTIzMGEyMTNjYTYtODE4MC00MDRhLThkOWYtMmI0MjJjNmY2Yjhi&client_info=1&x-client-brkrver=IDWeb.3.15.0.0&state=CfDJ8K9ovTvrxytKknwy9Ue8l60HpzbBkLMaCyuu8yPql2htfKWuSshFbGBVsGnUH2LXaeM2ZM2rGCvxqhBAivQh38etAnVZ_h4MHiXhhSVek_MvSsszUPXpv-TYX5owDh2irrgysaynV31ptS8ybhJlj_Ld94K8fGQ8lGJWZmAeaxTixNfd-YGF1Tp2VabnubzzRLlgkt__D37Uqr_bI2d56LS2HeIJYJ5EchWwkHjh4KOlcDiYNV482xaua81HXAllyB9Io9SQhPqlKx6xqGGqKn--LEoXCPuYcMbB_NAyZmUU-52YMDDsfty4RY85hu0gzSofUsVZuXmQjnSIYtfhAlk&x-client-SKU=ID_NET10_0&x-client-ver=8.22.0.0",
+    "status": 200,
+    "ats": {}
+   },
+   {
+    "url": "https://jobs.mdanderson.org/careers/nursing",
+    "final": "https://jobs.mdanderson.org/careers/nursing",
+    "status": 200,
+    "ats": {
+     "taleo": [
+      "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "label": "mda-research",
+  "url": "https://jobs.mdanderson.org/careers/research",
+  "status": 200,
+  "length": 69893,
+  "final": "https://jobs.mdanderson.org/careers/research",
+  "title": "Research | MD Anderson",
+  "ats": {
+   "taleo": [
+    "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl"
+   ]
+  },
+  "job_links": [
+   {
+    "text": "here",
+    "href": "https://jobs.mdanderson.org/creative/candidate-log-in"
+   },
+   {
+    "text": "Already Applied (opens in a new tab)",
+    "href": "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl"
+   },
+   {
+    "text": "Current Employee (opens in a new tab)",
+    "href": "https://employeejobs.mdanderson.org/Search/SearchJobs?utm_campaign=currentemployee&utm_source=careersite&utm_medium=currentemployeebutton&utm_content=searchemployeejobs"
+   },
+   {
+    "text": "Nursing",
+    "href": "https://jobs.mdanderson.org/careers/nursing"
+   },
+   {
+    "text": "Research",
+    "href": "https://jobs.mdanderson.org/careers/research"
+   },
+   {
+    "text": "Allied Health",
+    "href": "https://jobs.mdanderson.org/careers/allied-health"
+   },
+   {
+    "text": "Faculty",
+    "href": "https://jobs.mdanderson.org/careers/faculty"
+   },
+   {
+    "text": "Executive",
+    "href": "https://jobs.mdanderson.org/careers/executive"
+   },
+   {
+    "text": "Philanthropy",
+    "href": "https://jobs.mdanderson.org/careers/philanthropy"
+   },
+   {
+    "text": "Trainee Programs",
+    "href": "https://jobs.mdanderson.org/careers/training"
+   },
+   {
+    "text": "Already Applied (opens in a new tab)",
+    "href": "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl"
+   },
+   {
+    "text": "Current Employee (opens in a new tab)",
+    "href": "https://employeejobs.mdanderson.org/Search/SearchJobs?utm_campaign=currentemployee&utm_source=careersite&utm_medium=currentemployeebutton&utm_content=searchemployeejobs"
+   },
+   {
+    "text": "<span>See all jobs</span>",
+    "href": "https://jobs.mdanderson.org/search/searchjobs"
+   },
+   {
+    "text": "Search Research Jobs >",
+    "href": "https://jobs.mdanderson.org/search/searchjobs?categoryid=39755a11-953f-4730-abed-99c16d2c73c2"
+   },
+   {
+    "text": "Search Research Jobs >",
+    "href": "https://jobs.mdanderson.org/search/searchjobs?categoryid=39755a11-953f-4730-abed-99c16d2c73c2 "
+   }
+  ],
+  "followed": [
+   {
+    "url": "https://jobs.mdanderson.org/creative/candidate-log-in",
+    "final": "https://jobs.mdanderson.org/candidate-log-in",
+    "status": 200,
+    "ats": {
+     "taleo": [
+      "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl"
+     ]
+    }
+   },
+   {
+    "url": "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl",
+    "final": "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl",
+    "status": 200,
+    "ats": {}
+   },
+   {
+    "url": "https://employeejobs.mdanderson.org/Search/SearchJobs?utm_campaign=currentemployee&utm_source=careersite&utm_medium=currentemployeebutton&utm_content=searchemployeejobs",
+    "final": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=a79d6801-c0b5-49f2-b442-092517159c0c&redirect_uri=https%3A%2F%2Femployeejobs.mdanderson.org%2Fsignin-oidc&response_type=id_token&scope=openid%20profile&response_mode=form_post&nonce=639287279094877997.YmQ5NjFiNDktNTgzYi00YmJhLWFhZDYtMDEzZThhZDAzYzcwYzEyMjg0NDQtOTVlZC00YjU4LTkzMDktYzA4NDkwMTY1NzEx&client_info=1&x-client-brkrver=IDWeb.3.15.0.0&state=CfDJ8K9ovTvrxytKknwy9Ue8l63Aa7iZ5mvjN3fj6jZ4o29t7juFHSeNmUsZpQRwVQJg081ugOn-qEDRP9GUZRL2wb8ACA4Mv40geWlz6FD1lUEcDV4hVgnTki8W7w1BswkOcrFXkuAKE4q7tXbOGFrDaz4p2du8WHZNnBwuMuglDxhK6h4WkVKKPghRpAYfb0XigF7-0Vlyjak8-F2ITumlYQE8vW_44h-qFildwJKXsPSsHKZBsu8-4vt9uDtg0OyeeQEe7HBVURPqRYvln8G8D5oXGzla3aGktE3Li-NQEJiGe7G7ezL2e5lngvdESKZgsHOblGdYlRi5mY2oRj6MSOg&x-client-SKU=ID_NET10_0&x-client-ver=8.22.0.0",
+    "status": 200,
+    "ats": {}
+   },
+   {
+    "url": "https://jobs.mdanderson.org/careers/nursing",
+    "final": "https://jobs.mdanderson.org/careers/nursing",
+    "status": 200,
+    "ats": {
+     "taleo": [
+      "https://mdanderson.taleo.net/careersection/MDA_ex/mysubmissions.ftl"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "label": "unmc-pa",
+  "url": "https://unmc.peopleadmin.com/postings/search?query=postdoc",
+  "status": "robots",
+  "note": "robots.txt disallows unmc.peopleadmin.com/postings/search"
+ },
+ {
+  "label": "morehouse-jobs",
+  "url": "https://www.msm.edu/work-at-msm/index.php",
+  "status": 200,
+  "length": 51732,
+  "final": "https://www.msm.edu/work-at-msm/index.php",
+  "title": "Work at Morehouse School of Medicine | Morehouse School of Medicine",
+  "ats": {},
+  "job_links": [
+   {
+    "text": "Careers",
+    "href": "https://www.msm.edu/work-at-msm/index.php"
+   },
+   {
+    "text": "Work at MSM",
+    "href": "https://www.msm.edu/work-at-msm/"
+   },
+   {
+    "text": "Why Work at MSM?",
+    "href": "https://www.msm.edu/about_us/MSMmoments.php"
+   },
+   {
+    "text": "View Career Vacancies",
+    "href": "http://careers.msm.edu/postings/search"
+   },
+   {
+    "text": "View Career Vacancies >",
+    "href": "https://careers.msm.edu/postings/search"
+   },
+   {
+    "text": "Career Vacancies",
+    "href": "https://careers.msm.edu/postings/search"
+   },
+   {
+    "text": "Current Employees",
+    "href": "https://careers.msm.edu/hr/login"
+   },
+   {
+    "text": "Work at MSM | Jobs",
+    "href": "https://www.msm.edu/work-at-msm/index.php"
+   }
+  ],
+  "followed": [
+   {
+    "url": "https://www.msm.edu/work-at-msm/",
+    "final": "https://www.msm.edu/work-at-msm/",
+    "status": 200,
+    "ats": {}
+   },
+   {
+    "url": "https://www.msm.edu/about_us/MSMmoments.php",
+    "final": "https://www.msm.edu/about_us/MSMmoments.php",
+    "status": 200,
+    "ats": {}
+   },
+   {
+    "url": "http://careers.msm.edu/postings/search",
+    "status": "robots",
+    "note": "robots.txt disallows careers.msm.edu/postings/search"
+   },
+   {
+    "url": "https://careers.msm.edu/postings/search",
+    "status": "robots",
+    "note": "robots.txt disallows careers.msm.edu/postings/search"
+   }
+  ]
+ },
+ {
+  "label": "augusta-jobs",
+  "url": "https://www.augusta.edu/hr/jobs/",
+  "status": 200,
+  "length": 37603,
+  "final": "https://www.augusta.edu/hr/jobs/",
+  "title": "Start Your Career - Work at Augusta University",
+  "ats": {},
+  "job_links": [
+   {
+    "text": "Search Jobs",
+    "href": "https://www.augusta.edu/hr/jobs/#job-portals"
+   },
+   {
+    "text": "Search Jobs",
+    "href": "https://www.augusta.edu/hr/jobs/#job-portals"
+   },
+   {
+    "text": "Internal Applicants",
+    "href": "https://www.augusta.edu/jobs/internal"
+   },
+   {
+    "text": "External Applicants",
+    "href": "https://www.augusta.edu/jobs/external"
+   }
+  ],
+  "followed": [
+   {
+    "url": "https://www.augusta.edu/hr/jobs/#job-portals",
+    "final": "https://www.augusta.edu/hr/jobs/#job-portals",
+    "status": 200,
+    "ats": {}
+   },
+   {
+    "url": "https://www.augusta.edu/jobs/internal",
+    "final": "https://selfservice.hprod.onehcm.usg.edu/my.policy",
+    "status": 200,
+    "ats": {}
+   },
+   {
+    "url": "https://www.augusta.edu/jobs/external",
+    "final": "https://careers.hprod.onehcm.usg.edu/psc/careers/CAREERS/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?FOCUS=Applicant&SiteId=12000&",
+    "status": 200,
+    "ats": {
+     "peoplesoft": [
+      "https://careers.hprod.onehcm.usg.edu/psc/careers/CAREERS/APPLICANT",
+      "https://careers.hprod.onehcm.usg.edu/psc/careers/CAREERS/APPLICANT/c/PTGP_MENU.PTGP_USERPREF_FL.GBL?CONTEXTIDPARAMS=PSFT_HR---HRS_CG_SEARCH_FL",
+      "https://careers.hprod.onehcm.usg.edu/psc/careers/CAREERS/HRMS/?cmd=expire",
+      "https://careers.hprod.onehcm.usg.edu/psc/careers/CAREERS/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL",
+      "https://careers.hprod.onehcm.usg.edu/psc/careers/CAREERS/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?FOCUS=Applicant&SiteId=12000&&PAGE=HRS_CAREERS_FL"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "label": "upr-empleos",
+  "url": "https://rcm1.rcm.upr.edu/empleos-en-el-rcm/",
+  "status": 200,
+  "length": 217451,
+  "final": "https://rcm1.rcm.upr.edu/empleos-en-el-rcm/",
+  "title": "Empleos en el Recinto de Ciencias M\u00e9dcias - Recinto de Ciencias M\u00e9dicas - UPR",
+  "ats": {},
+  "job_links": [],
+  "followed": []
+ }
+]
