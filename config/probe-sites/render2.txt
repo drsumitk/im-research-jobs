@@ -1,0 +1,10 @@
+uic-sq | https://uic.csod.com/ux/ats/careersite/1/home?c=uic&sq=postdoc | render
+uic-search | https://uic.csod.com/ux/ats/careersite/1/home?c=uic&search=postdoc | render
+uic-job | https://uic.csod.com/ux/ats/careersite/1/home/requisition/21188?c=uic | render
+interfolio-search | https://apply.interfolio.com/11780/positions?search=postdoctoral | render
+interfolio-keyword | https://apply.interfolio.com/11780/positions?keyword=postdoctoral | render
+interfolio-job | https://apply.interfolio.com/194969 | render
+nebraska-sorted | https://jobs.nebraska.edu/search/?q=post+doc&sortColumn=referencedate&sortDirection=desc | render
+uc-sorted | https://jobs.uc.edu/search/?q=post+doc&sortColumn=referencedate&sortDirection=desc | render
+uc-job | https://jobs.uc.edu/job/Post-Doc-Fellow%2C-Department-of-Neurology-&-Rehabilitation-Medicine/104478-en_US | render
+drew-job | https://recruiting2.ultipro.com/CHA1037CHRS/JobBoard/7fb6ae1e-e3f6-44ac-8694-2577af27ab6b/OpportunityDetail?opportunityId=60e70af6-a468-4b9b-9230-984b81ccd9eb | render
