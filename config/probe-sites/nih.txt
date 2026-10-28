@@ -1,0 +1,4 @@
+nih-robots | https://www.training.nih.gov/robots.txt
+nih-jobs | https://www.training.nih.gov/jobs/
+nih-jobs-p2 | https://www.training.nih.gov/jobs/?page=2
+nih-job | https://www.training.nih.gov/jobs/pdf-tr-083126/
