@@ -9,12 +9,12 @@
   detail_date_label: 'Posted Date'       # optional
 
 Job pages are rendered only for titles that pass the title rules and that the tracker has not read
-before, at most MAX_DETAILS per run.
+before, at most MAX_DETAILS per run; any left over are read on the next run.
 """
 from . import board
 from ..browser import Browser
 
-MAX_DETAILS = 25
+MAX_DETAILS = 40
 
 
 def search(http, src, terms, title_ok):
