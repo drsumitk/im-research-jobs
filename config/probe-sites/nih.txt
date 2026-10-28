@@ -1,2 +1,1 @@
-nih-pd | https://www.training.nih.gov/jobs/?position_type=1&nih_only=on&page=1
-nih-job2 | https://www.training.nih.gov/jobs/pdf-npn-012627/
+nih-sitemap | https://www.training.nih.gov/sitemap.xml
