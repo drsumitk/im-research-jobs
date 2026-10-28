@@ -1,11 +1,11 @@
 {
  "meta": {
-  "generated_utc": "2026-10-28 04:42 UTC",
+  "generated_utc": "2026-10-28 07:34 UTC",
   "today": "2026-10-28",
   "ai_enabled": true,
-  "ai_calls": 31,
+  "ai_calls": 27,
   "log": [],
-  "total": 594
+  "total": 620
  },
  "jobs": {
   "arizona:ux-ats-careersite-4-home-requisition-27264-c-arizona": {
@@ -3137,6 +3137,73 @@
    "reason": "Minimum requires a doctorate in epidemiology, biostatistics or a related field; the posting is also in Head and Neck Surgery, not Internal Medicine.",
    "active": true
   },
+  "duke:1424967800": {
+   "key": "duke:1424967800",
+   "school": "Duke",
+   "rank": 8,
+   "source": "duke",
+   "source_label": "Duke University and Duke Health",
+   "title": "Postdoctoral Associate",
+   "url": "https://careers.duke.edu/job/Durham-Postdoctoral-Associate-NC-27710/1424967800/",
+   "location": "Durham, NC, US, 27710",
+   "department": "Headache",
+   "posted": "2026-10-28",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "School of Medicine Established in 1930, Duke University School of Medicine is the youngest of the nation's top medical schools. Ranked sixth among medical schools in the nation, the School takes pride in being an inclusive community of outstanding learners, investigators, clinicians, and staff where interdisciplinary collaboration is embraced and great ideas accelerate translation of fundamental scientific discoveries to improve human health locally and around the globe. Composed of more than 2,600 faculty physicians and researchers, nearly 2,000 students, and more than 6,200 staff, the Duke University School of Medicine along with the Duke University School of Nursing, and Duke University Health System comprise Duke Health, a world-class academic medical center. The Health System encompasses Duke University Hospital, Duke Regional Hospital, Duke Raleigh Hospital, Duke Health Integrated ",
+   "fingerprint": "aea99e3142f806b6",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "cell culture",
+     "confocal",
+     "elisa",
+     "immunohistochemistry",
+     "in vivo",
+     "laboratory techniques",
+     "microscopy",
+     "mouse"
+    ],
+    "dry_terms": [
+     "data analys",
+     "python",
+     "r"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": true,
+     "md_or_foreign_md_ok": true
+    },
+    "notes": [],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: cell culture, confocal, elisa, immunohistochemistry"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "Headache",
+    "reason": "Core duties are rodent behavioral assays, stereotaxic surgery, cell culture and miniscope imaging; neuroscience doctorate required, not Internal Medicine.",
+    "verify": "",
+    "missing": "Rodent surgery, cell culture, calcium/miniscope imaging, neuroscience doctorate",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Core duties are rodent behavioral assays, stereotaxic surgery, cell culture and miniscope imaging; neuroscience doctorate required, not Internal Medicine.",
+   "active": true
+  },
   "duke:1431207600": {
    "key": "duke:1431207600",
    "school": "Duke",
@@ -3538,6 +3605,125 @@
    "ai_attempts": 1,
    "verdict": "Other dept",
    "reason": "Computational genomics role in Biostatistics & Bioinformatics, not Internal Medicine; requires a recent quantitative bachelor's degree and Python/Linux skills.",
+   "active": true
+  },
+  "duke:1434981000": {
+   "key": "duke:1434981000",
+   "school": "Duke",
+   "rank": 8,
+   "source": "duke",
+   "source_label": "Duke University and Duke Health",
+   "title": "Clinical Research Specialist, Sr.",
+   "url": "https://careers.duke.edu/job/Durham-Clinical-Research-Specialist%2C-Sr_-NC-27710/1434981000/",
+   "location": "Durham, NC, US, 27710",
+   "department": "Ophthalmology Research Administration",
+   "posted": "2026-10-28",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "School of Medicine Established in 1930, Duke University School of Medicine is the youngest of the nation's top medical schools. Ranked sixth among medical schools in the nation, the School takes pride in being an inclusive community of outstanding learners, investigators, clinicians, and staff where interdisciplinary collaboration is embraced and great ideas accelerate translation of fundamental scientific discoveries to improve human health locally and around the globe. Composed of more than 2,600 faculty physicians and researchers, nearly 2,000 students, and more than 6,200 staff, the Duke University School of Medicine along with the Duke University School of Nursing, and Duke University Health System comprise Duke Health, a world-class academic medical center. The Health System encompasses Duke University Hospital, Duke Regional Hospital, Duke Raleigh Hospital, Duke Health Integrated ",
+   "fingerprint": "effab57671dbdf90",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "department",
+    "research_type": "Clinical or dry research",
+    "wet_terms": [],
+    "dry_terms": [
+     "clinical research",
+     "participant",
+     "participants",
+     "patient",
+     "patients"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
+   },
+   "ai": {
+    "role_type": "research_assistant",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "confidence": "high",
+    "skills_fit": "strong",
+    "department": "Ophthalmology Research Administration",
+    "reason": "Clinical Research Specialist role requiring only an Associate's degree, in Duke Eye Center (ophthalmology), not Internal Medicine; data entry and screening duties.",
+    "verify": "",
+    "missing": "",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Other dept",
+   "reason": "Clinical Research Specialist role requiring only an Associate's degree, in Duke Eye Center (ophthalmology), not Internal Medicine; data entry and screening duties.",
+   "active": true
+  },
+  "duke:1435005600": {
+   "key": "duke:1435005600",
+   "school": "Duke",
+   "rank": 8,
+   "source": "duke",
+   "source_label": "Duke University and Duke Health",
+   "title": "Postdoctoral Associate",
+   "url": "https://careers.duke.edu/job/Durham-Postdoctoral-Associate-NC-27710/1435005600/",
+   "location": "Durham, NC, US, 27710",
+   "department": "Retinal Ophthalmology",
+   "posted": "2026-10-28",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "School of Medicine Established in 1930, Duke University School of Medicine is the youngest of the nation's top medical schools. Ranked sixth among medical schools in the nation, the School takes pride in being an inclusive community of outstanding learners, investigators, clinicians, and staff where interdisciplinary collaboration is embraced and great ideas accelerate translation of fundamental scientific discoveries to improve human health locally and around the globe. Composed of more than 2,600 faculty physicians and researchers, nearly 2,000 students, and more than 6,200 staff, the Duke University School of Medicine along with the Duke University School of Nursing, and Duke University Health System comprise Duke Health, a world-class academic medical center. The Health System encompasses Duke University Hospital, Duke Regional Hospital, Duke Raleigh Hospital, Duke Health Integrated ",
+   "fingerprint": "538336e73476fcfe",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "department",
+    "research_type": "Clinical or dry research",
+    "wet_terms": [],
+    "dry_terms": [
+     "cohort",
+     "data analys",
+     "data management",
+     "patient"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "Retinal Ophthalmology",
+    "reason": "Postdoctoral ML and ophthalmic imaging role in Duke Eye Center's Retinal Ophthalmology, clearly outside Internal Medicine.",
+    "verify": "Whether a PhD is required and whether visa sponsorship is offered",
+    "missing": "Machine learning/deep learning model development, ophthalmic imaging analysis, AI validation methods",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Other dept",
+   "reason": "Postdoctoral ML and ophthalmic imaging role in Duke Eye Center's Retinal Ophthalmology, clearly outside Internal Medicine.",
    "active": true
   },
   "duke:1437764800": {
@@ -16219,6 +16405,1431 @@
    "reason": "Wet-lab postdoc (in vitro, iPSC, mouse models) in Regenerative Medicine and Cell Biology, not Internal Medicine; candidate has no bench experience.",
    "active": true
   },
+  "nih-oite:jobs-ccbpdf-062927": {
+   "key": "nih-oite:jobs-ccbpdf-062927",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "Cancer Computational Biologist (Luna Lab, NLM/NCI) (Postdoctoral Fellow)",
+   "url": "https://www.training.nih.gov/jobs/ccbpdf-062927/",
+   "location": "National Library of Medicine and National Cancer Institute, Bethesda, MD and surrounding area",
+   "department": "",
+   "posted": "2026-10-15",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n Cancer Computational Biologist (Luna Lab, NLM/NCI) (Postdoctoral Fellow) \n Job \n Cancer Computational Biologist (Luna Lab, NLM/NCI) (Postdoctoral Fellow) \n Organization \n National Library of Medicine and National Cancer Institute, Bethesda, MD and surrounding area \n The Luna lab is jointly affiliated with the National Library of Medicine (NLM) and the National Cancer Institute (NCI). The dual ambitions of the lab are to make biomedical data and information accessible, as well as, to advance cancer research that helps people live longer, healthier lives. We seek outstanding, highly motivated, and skilled candidates to join our team with the goal of advancing novel cancer therapeutic strategies. \n About the position \n This position offers a unique opportunity to contribute collaboratively to cutting-edge research in the field of cancer therapeutics and precision medic",
+   "fingerprint": "cedb7c17d19aaca0",
+   "rules": {
+    "division": "Hematology & Oncology",
+    "division_source": "department",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "mouse",
+     "organoid",
+     "proteomic",
+     "rnaseq",
+     "single-cell"
+    ],
+    "dry_terms": [
+     "clinical trial",
+     "data analys",
+     "data management",
+     "patient",
+     "patients",
+     "python",
+     "r"
+    ],
+    "flags": {
+     "citizenship_required": true,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [
+     "US citizenship or permanent residency mentioned"
+    ],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: mouse, organoid, proteomic, rnaseq"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "",
+    "reason": "Essential qualification requires a PhD in a listed computational or biomedical field; the candidate has an MBBS without a PhD. Lab is NLM/NCI, not Internal Medicine.",
+    "verify": "",
+    "missing": "PhD; omics data analysis; machine learning or mathematical modeling; cancer research experience",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Essential qualification requires a PhD in a listed computational or biomedical field; the candidate has an MBBS without a PhD. Lab is NLM/NCI, not Internal Medicine.",
+   "active": true
+  },
+  "nih-oite:jobs-ecbpdf-062927": {
+   "key": "nih-oite:jobs-ecbpdf-062927",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "Evolutionary Computational Biologist (Postdoctoral Fellow)",
+   "url": "https://www.training.nih.gov/jobs/ecbpdf-062927/",
+   "location": "Division of Intramural Research, National Library of Medicine, Bethesda, MD and surrounding area",
+   "department": "",
+   "posted": "2026-10-19",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n Evolutionary Computational Biologist (Postdoctoral Fellow) \n Job \n Evolutionary Computational Biologist (Postdoctoral Fellow) \n Organization \n Division of Intramural Research, National Library of Medicine, Bethesda, MD and surrounding area \n Join a dynamic and interdisciplinary team advancing the field of evolutionary genomics with mathematical modeling of evolutionary processes under the leadership of Dr. Eugene Koonin in the Division of Intramural Research (DIR) at the National Library of Medicine (NLM). \n About the position \n The NLM is one of the 27 institutes at the National Institutes of Health (NIH). The NLM is the world’s largest biomedical library and a leader in research, development, and training in biomedical informatics and health information technology. The DIR within the NLM has two primary research areas: computational health research and computation",
+   "fingerprint": "1263341660e18610",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "molecular biology",
+     "mouse",
+     "proteomic"
+    ],
+    "dry_terms": [],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: molecular biology, mouse, proteomic"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "partial",
+    "department": "Division of Intramural Research, National Library of Medicine",
+    "reason": "Postdoc in computational evolutionary genomics at NLM requires a PhD in a relevant field; not Internal Medicine; candidate has no PhD.",
+    "verify": "Whether the PhD requirement could be waived for an MBBS candidate with research experience",
+    "missing": "PhD; genomics, phylogenetics or computational biology experience",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Postdoc in computational evolutionary genomics at NLM requires a PhD in a relevant field; not Internal Medicine; candidate has no PhD.",
+   "active": true
+  },
+  "nih-oite:jobs-ggpcpdf-122927": {
+   "key": "nih-oite:jobs-ggpcpdf-122927",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "Genetics and Genomics of Pancreatic Cancer Postdoctoral Fellowship",
+   "url": "https://www.training.nih.gov/jobs/ggpcpdf-122927/",
+   "location": "Division of Cancer Epidemiology and Genetics, National Cancer Institute, NIH, Bethesda, MD and surrounding area",
+   "department": "",
+   "posted": "2026-10-15",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n Genetics and Genomics of Pancreatic Cancer Postdoctoral Fellowship \n Job \n Genetics and Genomics of Pancreatic Cancer Postdoctoral Fellowship \n Organization \n Division of Cancer Epidemiology and Genetics, National Cancer Institute, NIH, Bethesda, MD and surrounding area \n Scientific focus area \n Epidemiology, \n Genetics and Genomics\n A Post-Doctoral Research position is available in the Amundadottir Lab at the Division of Cancer Epidemiology and Genetics, the National Cancer Institute, NIH. \n About the position \n Work with Dr. Laufey Amundadottir . \n The core focus of our lab is to map and interrogate the mechanisms by which inherited risk variants predispose individuals to pancreatic ductal adenocarcinoma (PDAC). With the results of a new GWAS study in hand (from 38,000 PDAC patients and over 2 million control subjects) we are conducting large scale genomic screens",
+   "fingerprint": "faf65d4ff3ccc3f0",
+   "rules": {
+    "division": "Hematology & Oncology",
+    "division_source": "department",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "crispr",
+     "ipsc",
+     "mouse",
+     "organoid",
+     "proteomic"
+    ],
+    "dry_terms": [
+     "epidemiolog",
+     "patients"
+    ],
+    "flags": {
+     "citizenship_required": true,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": true
+    },
+    "notes": [
+     "US citizenship or permanent residency mentioned"
+    ],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: crispr, ipsc, mouse, organoid"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "Division of Cancer Epidemiology and Genetics, National Cancer Institute, NIH",
+    "reason": "Core duties are wet-lab: organoid and iPSC cultures, CRISPR screens, MPRA; requires PhD or MD/PhD. Not Internal Medicine.",
+    "verify": "",
+    "missing": "PhD, CRISPR/MPRA functional screens, organoid/iPSC culture, primary cell models, laboratory techniques",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Core duties are wet-lab: organoid and iPSC cultures, CRISPR screens, MPRA; requires PhD or MD/PhD. Not Internal Medicine.",
+   "active": true
+  },
+  "nih-oite:jobs-icurepdf-113026": {
+   "key": "nih-oite:jobs-icurepdf-113026",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "iCURE Postdoctoral Fellow",
+   "url": "https://www.training.nih.gov/jobs/icurepdf-113026/",
+   "location": "NCI, Bethesda, MD and surrounding area",
+   "department": "",
+   "posted": "2026-10-15",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n iCURE Postdoctoral Fellow \n Job \n iCURE Postdoctoral Fellow \n Organization \n NCI, Bethesda, MD and surrounding area \n Scientific focus area \n Epidemiology, \n Cancer Biology, \n Health Disparities\n The Intramural Continuing Umbrella of Research Experiences (iCURE) program offers recent college graduates, post-masters individuals, graduate students, and postdoctoral fellows paid fellowships within the NCI intramural research program. \n About the position \n iCure scholars explore basic and clinical research, cancer epidemiology and genetics, cancer control science, and global health. Multi-level mentoring is core to iCURE, beginning at application and continuing throughout the experience. iCURE provides postdoctoral iCURE scholars: \n Research experience awards for up to three years \n Opportunities to work closely with world-class biomedical research scientists in the NC",
+   "fingerprint": "24140af7518ab516",
+   "rules": {
+    "division": "Hematology & Oncology",
+    "division_source": "description",
+    "research_type": "Mixed or unclear",
+    "wet_terms": [
+     "mouse"
+    ],
+    "dry_terms": [
+     "clinical research",
+     "epidemiolog",
+     "participants"
+    ],
+    "flags": {
+     "citizenship_required": true,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [
+     "US citizenship or permanent residency mentioned"
+    ],
+    "verdict": "Excluded",
+    "reason": "US citizenship or permanent residency mentioned"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "yes",
+    "visa": "citizenship_required",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "strong",
+    "department": "",
+    "reason": "iCURE requires US citizenship, non-citizen national or permanent residency status; the candidate needs visa sponsorship. Research areas are NCI cancer epidemiology and biology, not Internal Medicine.",
+    "verify": "",
+    "missing": "",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "iCURE requires US citizenship, non-citizen national or permanent residency status; the candidate needs visa sponsorship. Research areas are NCI cancer epidemiology and biology, not Internal Medicine.",
+   "active": true
+  },
+  "nih-oite:jobs-irta-pdf-123126": {
+   "key": "nih-oite:jobs-irta-pdf-123126",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "IRTA Postdoctoral Fellow",
+   "url": "https://www.training.nih.gov/jobs/irta-pdf-123126/",
+   "location": "National Institute of Dental and Craniofacial Research (NIDCR), Bethesda, MD and surrounding area",
+   "department": "",
+   "posted": "2026-10-22",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n IRTA Postdoctoral Fellow \n Job \n IRTA Postdoctoral Fellow \n Organization \n National Institute of Dental and Craniofacial Research (NIDCR), Bethesda, MD and surrounding area \n Scientific focus area \n Chemical Biology, \n Structural Biology, \n Developmental Biology, \n Microbiology and Infectious Diseases, \n Molecular Biology and Biochemistry\n The Samara Lab at the National Institute of Dental and Craniofacial Research (NIDCR) at the NIH is seeking a postdoctoral researcher to join our group. We integrate in vitro biochemical and structural methods with in cellulo models and patient data to study the functions of glycosyltransferases and the glycans they produce, and understand how their dysregulation impacts human health. \n About the position \n The NIH offers unique opportunities to collaborate with people from various fields, including clinicians, and use in vivo and ",
+   "fingerprint": "5d7f5c89b653eba6",
+   "rules": {
+    "division": "Infectious Diseases",
+    "division_source": "description",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "in vivo",
+     "molecular biology",
+     "mouse"
+    ],
+    "dry_terms": [
+     "patient"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: in vivo, molecular biology, mouse"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "",
+    "reason": "Wet-lab structural and biochemical glycobiology postdoc at NIDCR; requires a PhD and under one year postdoc experience; not Internal Medicine.",
+    "verify": "",
+    "missing": "PhD in biomedical sciences; structural biology and biochemistry lab methods",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Wet-lab structural and biochemical glycobiology postdoc at NIDCR; requires a PhD and under one year postdoc experience; not Internal Medicine.",
+   "active": true
+  },
+  "nih-oite:jobs-pd-110226": {
+   "key": "nih-oite:jobs-pd-110226",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "Postdoctoral Fellow",
+   "url": "https://www.training.nih.gov/jobs/pd-110226/",
+   "location": "NIH National Human Genome Research Institute, Bethesda, MD and surrounding area",
+   "department": "",
+   "posted": "2026-10-15",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n Postdoctoral Fellow \n Job \n Postdoctoral Fellow \n Organization \n NIH National Human Genome Research Institute, Bethesda, MD and surrounding area \n Scientific focus area \n Genetics and Genomics, \n Social and Behavioral Sciences\n The Health Communication and Behavior Unit, led by Dr. Susan Persky, is now seeking a postdoctoral fellow to join their team studying the psychological, behavioral, and clinical processes involved in how people understand, respond to, and act on genomic and health information. \n About the position \n How do people make sense of complex health information: a genetic risk result, unfamiliar genomic concepts, an unexpected diagnosis? How do we communicate that information in ways that support health-promoting decisions and behavior? How can emerging technologies support effective genomics translation into clinical and community settings? \n We are",
+   "fingerprint": "7bb98a6b4fc27175",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Mixed or unclear",
+    "wet_terms": [
+     "mouse"
+    ],
+    "dry_terms": [
+     "clinical research",
+     "clinical trial",
+     "health services research",
+     "patient"
+    ],
+    "flags": {
+     "citizenship_required": true,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [
+     "US citizenship or permanent residency mentioned"
+    ],
+    "verdict": "Excluded",
+    "reason": "US citizenship or permanent residency mentioned"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "no_sponsorship",
+    "verdict": "other_dept",
+    "confidence": "medium",
+    "skills_fit": "weak",
+    "department": "",
+    "reason": "Behavioral and health communication postdoc at NHGRI; not Internal Medicine. Requires a recent doctorate in listed behavioral or public health fields; citizens and permanent residents only.",
+    "verify": "Whether NIH accepts an MBBS as the required doctorate and whether it sponsors visas",
+    "missing": "Strong quantitative experimental or clinical research methods training in psychology or behavioral science",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Other dept",
+   "reason": "Behavioral and health communication postdoc at NHGRI; not Internal Medicine. Requires a recent doctorate in listed behavioral or public health fields; citizens and permanent residents only.",
+   "active": true
+  },
+  "nih-oite:jobs-pd-110626": {
+   "key": "nih-oite:jobs-pd-110626",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "Postdoctoral Fellow",
+   "url": "https://www.training.nih.gov/jobs/pd-110626/",
+   "location": "National Cancer Institute, Bethesda, MD and surrounding area",
+   "department": "",
+   "posted": "2026-10-22",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n Postdoctoral Fellow \n Job \n Postdoctoral Fellow \n Organization \n National Cancer Institute, Bethesda, MD and surrounding area \n Scientific focus area \n Biomedical Engineering and Biophysics, \n Computational Biology, \n Clinical Research\n The Molecular Imaging Branch at the National Cancer Institute Center for Cancer Research is now seeking a postdoctoral fellow to join their team in Bethesda, Maryland. \n About the position \n The NCI Molecular Imaging Branch engages in both clinical and pre-clinical research to develop targeted imaging methods for the purpose of accelerating the development of cancer therapies. More specifically, the Imaging Physics section of the Molecular Imaging Branch develops new technologies to power the next generation of imaging devices for PET imaging. \n For instance, we are developing novel PET detectors and imaging systems, a PET scanner us",
+   "fingerprint": "b942b551594bfe12",
+   "rules": {
+    "division": "Hematology & Oncology",
+    "division_source": "description",
+    "research_type": "Mixed or unclear",
+    "wet_terms": [
+     "mouse"
+    ],
+    "dry_terms": [
+     "clinical research",
+     "python"
+    ],
+    "flags": {
+     "citizenship_required": true,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [
+     "US citizenship or permanent residency mentioned"
+    ],
+    "verdict": "Excluded",
+    "reason": "US citizenship or permanent residency mentioned"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "mixed",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "citizenship_required",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "",
+    "reason": "Requires recent PhD in physics or engineering; posting says only U.S. citizens and permanent residents are eligible; imaging physics with benchtop work, not Internal Medicine.",
+    "verify": "",
+    "missing": "PhD in physics/engineering, radiation detector hands-on, Monte Carlo simulation (GEANT4/GATE), benchtop work",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Requires recent PhD in physics or engineering; posting says only U.S. citizens and permanent residents are eligible; imaging physics with benchtop work, not Internal Medicine.",
+   "active": true
+  },
+  "nih-oite:jobs-pd-12292026": {
+   "key": "nih-oite:jobs-pd-12292026",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "Postdoctoral Fellow (NLM & NIMH)",
+   "url": "https://www.training.nih.gov/jobs/pd-12292026/",
+   "location": "National Library of Medicine and National Institute of Mental Health, NIH, Bethesda, MD and surrounding area",
+   "department": "",
+   "posted": "2026-10-15",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n Postdoctoral Fellow (NLM & NIMH) \n Job \n Postdoctoral Fellow (NLM & NIMH) \n Organization \n National Library of Medicine and National Institute of Mental Health, NIH, Bethesda, MD and surrounding area \n Scientific focus area \n Computational Biology, \n Neuroscience\n Join a dynamic and interdisciplinary team pushing the frontiers of single cell genomics and neuroscience through the unique postdoctoral fellowship offered jointly through the National Library of Medicine and the National Institute of Mental Health. \n About the position \n The National Library of Medicine and the National Institute of Mental Health are part of the National Institutes of Health 27 institutes located on the Bethesda campus. NLM is the world’s largest biomedical library and a leader in biomedical informatics and health information technology research, development, and scientific training. The ",
+   "fingerprint": "f08f45be6fa0b1cf",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "mouse",
+     "single cell",
+     "single-cell"
+    ],
+    "dry_terms": [
+     "biostatistic",
+     "clinical research",
+     "data analys",
+     "python",
+     "r"
+    ],
+    "flags": {
+     "citizenship_required": true,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [
+     "US citizenship or permanent residency mentioned"
+    ],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: mouse, single cell, single-cell"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "mixed",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "citizenship_required",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "",
+    "reason": "Postdoc in neuroscience and single-cell genomics requires a doctorate; restricts eligibility to US citizens and permanent residents; not Internal Medicine.",
+    "verify": "",
+    "missing": "Doctorate, Python, Linux/HPC, machine learning, single-cell omics pipelines",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Postdoc in neuroscience and single-cell genomics requires a doctorate; restricts eligibility to US citizens and permanent residents; not Internal Medicine.",
+   "active": true
+  },
+  "nih-oite:jobs-pdf-010227": {
+   "key": "nih-oite:jobs-pdf-010227",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "Postdoctoral Fellowship",
+   "url": "https://www.training.nih.gov/jobs/pdf-010227/",
+   "location": "Experimental Immunology Branch, National Cancer Institute, NIH, Bethesda, MD and surrounding area",
+   "department": "",
+   "posted": "2026-10-15",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n Postdoctoral Fellowship \n Job \n Postdoctoral Fellowship \n Organization \n Experimental Immunology Branch, National Cancer Institute, NIH, Bethesda, MD and surrounding area \n Scientific focus area \n Cancer Biology, \n Cell Biology, \n Stem Cell Biology, \n Immunology, \n Molecular Biology and Biochemistry\n A Postdoctoral Fellowship position is immediately available in the laboratory of Dr. Stanley Adoro within the Experimental Immunology Branch, NCI, in Bethesda, Maryland. \n About the position \n Learn more about the laboratory of Dr. Stanley Adoro . \n The central goal of our research is to better understand mechanisms that regulate normal blood cell generation from hematopoietic stem and progenitor cells. In parallel, we seek to elucidate cellular programs that prevent hematopoietic cell dysfunction and malignancy. While it is now well-established that deregulation in the",
+   "fingerprint": "ad970ab524479629",
+   "rules": {
+    "division": "Hematology & Oncology",
+    "division_source": "description",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "animal model",
+     "confocal",
+     "crispr",
+     "flow cytometry",
+     "microscopy",
+     "molecular biology",
+     "mouse",
+     "proteomic"
+    ],
+    "dry_terms": [],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: animal model, confocal, crispr, flow cytometry"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "",
+    "reason": "Wet-lab postdoc (CRISPR, animal models, flow cytometry, stem cell biology) requiring a Ph.D. in immunology or molecular/cell biology; not Internal Medicine.",
+    "verify": "Confirm whether any non-bench, clinical or data role exists in this lab",
+    "missing": "PhD required; CRISPR gene editing; stem cell biology; wet-lab and animal model work",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Wet-lab postdoc (CRISPR, animal models, flow cytometry, stem cell biology) requiring a Ph.D. in immunology or molecular/cell biology; not Internal Medicine.",
+   "active": true
+  },
+  "nih-oite:jobs-pdf-011527": {
+   "key": "nih-oite:jobs-pdf-011527",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "Postdoctoral Fellow – Investigating Feeding-related Neural Circuits using Two-Photon Fluorescence Lifetime Microscopy",
+   "url": "https://www.training.nih.gov/jobs/pdf-011527/",
+   "location": "NIDDK - Neuromodulation and motivation section, Bethesda, MD and surrounding area",
+   "department": "",
+   "posted": "2026-10-16",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n Postdoctoral Fellow – Investigating Feeding-related Neural Circuits using Two-Photon Fluorescence Lifetime Microscopy \n Job \n Postdoctoral Fellow – Investigating Feeding-related Neural Circuits using Two-Photon Fluorescence Lifetime Microscopy \n Organization \n NIDDK - Neuromodulation and motivation section, Bethesda, MD and surrounding area \n Scientific focus area \n Neuroscience\n The postdoc would develop and lead a novel research direction within the broader research goals of the Lutas lab. \n About the position \n The Lutas lab studies how monoamines, hormones, and peptides influence non-homeostatic feeding, which can lead to the development of obesity. It has been challenging to address this question because these neuromodulator signals can change slowly across days to months necessitating the ability to track these small changes longitudinally. Fluorescence lifeti",
+   "fingerprint": "2c318b4576c16b5c",
+   "rules": {
+    "division": "Endocrinology",
+    "division_source": "description",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "mice",
+     "microscopy",
+     "mouse",
+     "rodent",
+     "transgenic"
+    ],
+    "dry_terms": [],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: mice, microscopy, mouse, rodent"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "",
+    "reason": "Requires a PhD and centres on in vivo mouse neural circuit imaging with transgenic mice and viral reagents, which is wet lab work outside Internal Medicine.",
+    "verify": "",
+    "missing": "PhD; two-photon microscopy; fluorescence lifetime imaging; rodent model experience",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Requires a PhD and centres on in vivo mouse neural circuit imaging with transgenic mice and viral reagents, which is wet lab work outside Internal Medicine.",
+   "active": true
+  },
+  "nih-oite:jobs-pdf-012227": {
+   "key": "nih-oite:jobs-pdf-012227",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "Postdoctoral Fellow",
+   "url": "https://www.training.nih.gov/jobs/pdf-012227/",
+   "location": "Joana Vidigal, Bethesda, MD and surrounding area",
+   "department": "",
+   "posted": "2026-10-23",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n Postdoctoral Fellow \n Job \n Postdoctoral Fellow \n Organization \n Joana Vidigal, Bethesda, MD and surrounding area \n Scientific focus area \n Cancer Biology, \n Cell Biology, \n Developmental Biology, \n Genetics and Genomics, \n Immunology, \n Molecular Biology and Biochemistry, \n RNA Biology, \n Stem Cell Biology\n The Vidigal lab seeking a postdoctoral researcher interested in dissecting small RNA biology using mouse models. \n About the position \n Our lab combines mouse genetics with computational, biochemical, imaging, and genomic approaches to gain a comprehensive understanding of the regulatory functions of small RNA in vivo. Current projects focus on the physiological roles of AGO-mediated RNA cleavage. Although this is a highly conserved process—also known as RNAi—its functions in mammals remain poorly understood. \n About the project: \n You will be working with mouse",
+   "fingerprint": "eb51d8b2acc62759",
+   "rules": {
+    "division": "Hematology & Oncology",
+    "division_source": "description",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "in vivo",
+     "molecular biology",
+     "mouse",
+     "murine",
+     "stem cell"
+    ],
+    "dry_terms": [],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: in vivo, molecular biology, mouse, murine"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "",
+    "reason": "Mouse genetics, biochemistry and molecular biology lab research on small RNA; not Internal Medicine; requires PhD within a year of defense.",
+    "verify": "",
+    "missing": "Mouse genetics, molecular biology lab work, PhD, RNA biology",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Mouse genetics, biochemistry and molecular biology lab research on small RNA; not Internal Medicine; requires PhD within a year of defense.",
+   "active": true
+  },
+  "nih-oite:jobs-pdf-031727": {
+   "key": "nih-oite:jobs-pdf-031727",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "Postdoctoral Fellow",
+   "url": "https://www.training.nih.gov/jobs/pdf-031727/",
+   "location": "National Institute on Drug Abuse, Baltimore, MD",
+   "department": "",
+   "posted": "2026-10-20",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n Postdoctoral Fellow \n Job \n Postdoctoral Fellow \n Organization \n National Institute on Drug Abuse, Baltimore, MD \n Scientific focus area \n Neuroscience, \n Clinical Research\n The National Institute on Drug Abuse (NIDA), Intramural Research Program (IRP), is recruiting a postdoctoral fellow to join the Translational and Clinical Neuroimaging Section in Baltimore, Maryland. \n About the position \n The fellow will join an interdisciplinary team of scientists and physicians using multimodal magnetic resonance imaging, including task-based functional MRI, resting-state functional connectivity, and MRI-based physiological assessments to investigate the neurobiology of substance use disorders. Research focuses on potential pharmacological treatments, co-occurring psychiatric conditions, and the cognitive and affective processes involved in addiction. \n The fellowship offers ",
+   "fingerprint": "d5eb5ed43d917895",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "description",
+    "research_type": "Mixed or unclear",
+    "wet_terms": [
+     "mouse"
+    ],
+    "dry_terms": [
+     "clinical research"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": true
+    },
+    "notes": [],
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "mixed",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "",
+    "reason": "NIDA Intramural neuroimaging postdoc in a Translational and Clinical Neuroimaging Section, not Internal Medicine; the posting is clearly outside the target department.",
+    "verify": "Whether an MBBS counts as the 'equivalent doctoral degree' NIDA accepts",
+    "missing": "Functional MRI and neuroimaging analysis; psychiatric or addiction research background",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Other dept",
+   "reason": "NIDA Intramural neuroimaging postdoc in a Translational and Clinical Neuroimaging Section, not Internal Medicine; the posting is clearly outside the target department.",
+   "active": true
+  },
+  "nih-oite:jobs-pdf-062927": {
+   "key": "nih-oite:jobs-pdf-062927",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "Postdoctoral Fellow in Microbial Genomics and Bioinformatics",
+   "url": "https://www.training.nih.gov/jobs/pdf-062927/",
+   "location": "Division of Intramural Research, National Library of Medicine, Bethesda, MD and surrounding area",
+   "department": "",
+   "posted": "2026-10-19",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n Postdoctoral Fellow in Microbial Genomics and Bioinformatics \n Job \n Postdoctoral Fellow in Microbial Genomics and Bioinformatics \n Organization \n Division of Intramural Research, National Library of Medicine, Bethesda, MD and surrounding area \n Join a dynamic and interdisciplinary team pushing the frontiers of large-scale microbial genomics, metagenomics, and phage–bacteria interaction biology under the leadership of Dr. Xiaofang Jiang in the Division of Intramural Research (DIR) at the National Library of Medicine (NLM). \n About the position \n The NLM is one of the 27 institutes at the National Institutes of Health (NIH). The NLM is the world’s largest biomedical library and a leader in research, development, and training in biomedical informatics and health information technology. The DIR within the NLM has two primary research areas: computational health researc",
+   "fingerprint": "4f9d2c0d960f97ee",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Mixed or unclear",
+    "wet_terms": [
+     "mouse"
+    ],
+    "dry_terms": [
+     "data analys",
+     "python",
+     "r"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Check",
+    "reason": "Mixed or unclear; division: Unclear"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "",
+    "reason": "Essential qualification is a Ph.D. within the last five years in bioinformatics or a related field. The role is microbial genomics in NLM computational biology, not Internal Medicine.",
+    "verify": "",
+    "missing": "PhD; Python/R/Bash proficiency; comparative genomics; metagenomics; genomic data analysis",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Essential qualification is a Ph.D. within the last five years in bioinformatics or a related field. The role is microbial genomics in NLM computational biology, not Internal Medicine.",
+   "active": true
+  },
+  "nih-oite:jobs-pdf-092927": {
+   "key": "nih-oite:jobs-pdf-092927",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "Postdoctoral Fellow in Social and Behavioral Sciences",
+   "url": "https://www.training.nih.gov/jobs/pdf-092927/",
+   "location": "NICHD, Bethesda, MD and surrounding area",
+   "department": "",
+   "posted": "2026-10-16",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n Postdoctoral Fellow in Social and Behavioral Sciences \n Job \n Postdoctoral Fellow in Social and Behavioral Sciences \n Organization \n NICHD, Bethesda, MD and surrounding area \n Scientific focus area \n Epidemiology, \n Social and Behavioral Sciences, \n Health Disparities\n The Social and Behavioral Sciences Branch (SBSB) within NICHD’s Division of Population Health Research is inviting applications for postdoctoral fellows to join collaborative, multi-disciplinary teams and develop their own projects within the scope of ongoing research in the Branch. \n About the position \n SBSB research investigates novel social, behavioral, and environmental determinants of health in population-based observational and experimental studies. \n Postdoctoral fellowships are available within the research groups led by Dr. Bobby Cheon, Dr. Stephen Gilman, and Dr. Tonja Nansel. Fellows will ",
+   "fingerprint": "c695c063e7a952b3",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Mixed or unclear",
+    "wet_terms": [
+     "mouse"
+    ],
+    "dry_terms": [
+     "epidemiolog",
+     "observational",
+     "population health"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Check",
+    "reason": "Mixed or unclear; division: Unclear"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "confidence": "high",
+    "skills_fit": "strong",
+    "department": "Social and Behavioral Sciences Branch (SBSB), Division of Population Health Research, NICHD",
+    "reason": "Postdoc in NICHD's Social and Behavioral Sciences Branch, population-based observational research; not Internal Medicine. Visa not stated.",
+    "verify": "Whether an MBBS counts as the required doctoral degree for SBSB postdocs",
+    "missing": "",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Other dept",
+   "reason": "Postdoc in NICHD's Social and Behavioral Sciences Branch, population-based observational research; not Internal Medicine. Visa not stated.",
+   "active": true
+  },
+  "nih-oite:jobs-pdf-11302026": {
+   "key": "nih-oite:jobs-pdf-11302026",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "Postdoctoral Fellow",
+   "url": "https://www.training.nih.gov/jobs/pdf-11302026/",
+   "location": "National Human Genome Research Institute, Bethesda, MD and surrounding area",
+   "department": "",
+   "posted": "2026-10-26",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n Postdoctoral Fellow \n Job \n Postdoctoral Fellow \n Organization \n National Human Genome Research Institute, Bethesda, MD and surrounding area \n Scientific focus area \n Genetics and Genomics, \n Computational Biology\n The Kidney Genetics and Genomic Unit at the National Human Genome Research Institute, led by Dr. Jonathan Marquez, is seeking to hire a Postdoctoral researcher to conduct independent research on the development of structural kidney diseases in an Intramural lab environment. \n About the position \n The Kidney Genetics and Genomic Unit at the National Human Genome Research Institute is seeking to hire a postdoctoral researcher to conduct independent research on the development of structural kidney diseases. Specifically, the postdoctoral researcher will analyze single nucleus transcriptomic datasets (sci-RNA-seq3, 10X) and/or genome sequencing datasets (Illu",
+   "fingerprint": "7ba8c6f014e12540",
+   "rules": {
+    "division": "Nephrology",
+    "division_source": "description",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "biochemical assay",
+     "immunohistochemistry",
+     "mouse",
+     "rna-seq",
+     "wet lab"
+    ],
+    "dry_terms": [
+     "data analys"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: biochemical assay, immunohistochemistry, mouse, rna-seq"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "",
+    "reason": "Kidney Genetics unit at NHGRI requires doctoral training and computational omics analysis; not Internal Medicine, and wet lab is optional.",
+    "verify": "Whether the NHGRI kidney unit sits under any Internal Medicine division",
+    "missing": "PhD-level training, single-nucleus transcriptomic and genome sequencing analysis expertise",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Other dept",
+   "reason": "Kidney Genetics unit at NHGRI requires doctoral training and computational omics analysis; not Internal Medicine, and wet lab is optional.",
+   "active": true
+  },
+  "nih-oite:jobs-pdf-122526": {
+   "key": "nih-oite:jobs-pdf-122526",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "Postdoctoral Fellow",
+   "url": "https://www.training.nih.gov/jobs/pdf-122526/",
+   "location": "National Institute of Neurological Disorders and Stroke, Bethesda, MD and surrounding area",
+   "department": "",
+   "posted": "2026-10-15",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n Postdoctoral Fellow \n Job \n Postdoctoral Fellow \n Organization \n National Institute of Neurological Disorders and Stroke, Bethesda, MD and surrounding area \n Scientific focus area \n Biomedical Engineering and Biophysics\n About the position \n The MRI Engineering Team (MRIEngT) of the Laboratory of Functional and Molecular Imaging (LFMI), National Institute of Neurological Disorders and Stroke, Division of Intramural Research, is currently seeking a highly motivated individual to join our group in developing state-of-the-art radiofrequency (RF) hardware for the next generation of MRI systems. The team plays a central role in designing and building innovative hardware solutions that enable advanced imaging applications across a wide range of research areas. The MRIEngT is in the NIH In Vivo NMR Center, a multi-institutional and multi-disciplinary facility with a wide v",
+   "fingerprint": "4210cc0a17e7e84c",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "description",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "in vivo",
+     "mouse"
+    ],
+    "dry_terms": [],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: in vivo, mouse"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "unclear",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "",
+    "reason": "Requires a PhD in electrical engineering, physics, biomedical engineering or related field; RF hardware role at NINDS, not Internal Medicine.",
+    "verify": "Confirm no PhD waiver exists for this NINDS RF hardware postdoc",
+    "missing": "PhD in EE/physics/BME; RF circuit and MRI coil hardware experience",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Requires a PhD in electrical engineering, physics, biomedical engineering or related field; RF hardware role at NINDS, not Internal Medicine.",
+   "active": true
+  },
+  "nih-oite:jobs-pdf-122926": {
+   "key": "nih-oite:jobs-pdf-122926",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "ORISE: NIH Postdoctoral Fellowship Clinical Standards and Informatics",
+   "url": "https://www.training.nih.gov/jobs/pdf-122926/",
+   "location": "Oak Ridge Institute for Science and Education (ORISE), Bethesda, MD and surrounding area (remote)",
+   "department": "",
+   "posted": "2026-10-15",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n ORISE: NIH Postdoctoral Fellowship Clinical Standards and Informatics \n Job \n ORISE: NIH Postdoctoral Fellowship Clinical Standards and Informatics \n Organization \n Oak Ridge Institute for Science and Education (ORISE), Bethesda, MD and surrounding area (remote) \n The National Institutes of Health (NIH) Office of Data Science Strategy (ODSS) is seeking recent Postdocs to apply for a STEM learning fellowship focused on developing expertise in clinical informatics under the guidance of dedicated mentors. \n About the position \n This fellowship opportunity provides experience in clinical standards, Common Data Elements (CDE), and common data models, while engaging in real-world STEM projects involving clinical study data, electronic health records (EHR), and real-world data. \n Through this fellowship, participants will engage in mentored learning experiences designed to",
+   "fingerprint": "36dd8778390d3273",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Mixed or unclear",
+    "wet_terms": [
+     "mouse"
+    ],
+    "dry_terms": [
+     "clinical research",
+     "ehr",
+     "electronic health record",
+     "participants",
+     "patient"
+    ],
+    "flags": {
+     "citizenship_required": true,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [
+     "US citizenship or permanent residency mentioned"
+    ],
+    "verdict": "Excluded",
+    "reason": "US citizenship or permanent residency mentioned"
+   },
+   "ai": {
+    "role_type": "research_fellow",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "confidence": "high",
+    "skills_fit": "partial",
+    "department": "",
+    "reason": "Clinical informatics fellowship under NIH Office of Data Science Strategy, not Internal Medicine. Requires a doctoral degree in relevant fields.",
+    "verify": "Whether an MBBS counts as a doctoral degree in relevant fields for this NIH fellowship",
+    "missing": "FHIR, Common Data Elements, common data model experience",
+    "deadline": "2026-10-13"
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Other dept",
+   "reason": "Clinical informatics fellowship under NIH Office of Data Science Strategy, not Internal Medicine. Requires a doctoral degree in relevant fields.",
+   "active": true
+  },
+  "nih-oite:jobs-pdf-npn-012627": {
+   "key": "nih-oite:jobs-pdf-npn-012627",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "Postdoctoral Fellow - Mechanistic Neuropharmacology/Neuroscience",
+   "url": "https://www.training.nih.gov/jobs/pdf-npn-012627/",
+   "location": "National Institute on Drug Abuse, Baltimore, MD",
+   "department": "",
+   "posted": "2026-10-26",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n Postdoctoral Fellow - Mechanistic Neuropharmacology/Neuroscience \n Job \n Postdoctoral Fellow - Mechanistic Neuropharmacology/Neuroscience \n Organization \n National Institute on Drug Abuse, Baltimore, MD \n Scientific focus area \n Neuroscience, \n Biomedical Engineering and Biophysics, \n Chemical Biology, \n Molecular Biology and Biochemistry, \n Molecular Pharmacology\n The National Institute on Drug Abuse (NIDA), Intramural Research Program (IRP), is recruiting a postdoctoral fellow to join the Biobehavioral Imaging & Molecular Neuropsychopharmacology Section in Baltimore, Maryland. \n About the position \n We invite applications for a postdoctoral researcher to investigate how drugs act in the brain and translate mechanistic discoveries into new therapeutic approaches. We seek a curious, rigorous, and collaborative scientist interested in connecting molecular pharmacolog",
+   "fingerprint": "3493ce7c636d2e0f",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "description",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "in vivo",
+     "molecular biology",
+     "mouse"
+    ],
+    "dry_terms": [],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": true
+    },
+    "notes": [],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: in vivo, molecular biology, mouse"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "unclear",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "",
+    "reason": "NIDA postdoc requires in vitro and in vivo pharmacology, cellular assays and molecular biology; wet lab is core, and the lab is not Internal Medicine.",
+    "verify": "",
+    "missing": "receptor pharmacology, cellular assays, molecular biology, electrophysiology, neuromodulation",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "NIDA postdoc requires in vitro and in vivo pharmacology, cellular assays and molecular biology; wet lab is core, and the lab is not Internal Medicine.",
+   "active": true
+  },
+  "nih-oite:jobs-pdfcaincats-112926": {
+   "key": "nih-oite:jobs-pdfcaincats-112926",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "Postdoctoral Fellow (Cheminformatics/AI-ML at NCATS)",
+   "url": "https://www.training.nih.gov/jobs/pdfcaincats-112926/",
+   "location": "NCATS, Bethesda, MD and surrounding area",
+   "department": "",
+   "posted": "2026-10-15",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n Postdoctoral Fellow (Cheminformatics/AI-ML at NCATS) \n Job \n Postdoctoral Fellow (Cheminformatics/AI-ML at NCATS) \n Organization \n NCATS, Bethesda, MD and surrounding area \n Scientific focus area \n Chemical Biology, \n Molecular Pharmacology, \n Computational Biology\n The NIH National Center for Advancing Translational Sciences, Division of Preclinical Innovation, seeks a qualified postdoctoral fellow to conduct interdisciplinary research at the interface of cheminformatics, AI/machine learning, high-throughput screening (HTS), and therapeutic discovery. \n About the position \n NCATS, a major translational research component of NIH, seeks applications from outstanding candidates to fill a computational chemistry/cheminformatics postdoctoral fellow position in the Therapeutic Development Branch (TDB). \n The selected fellow will work under the co-mentorship of Wei Zheng,",
+   "fingerprint": "fb538d9f0465bc50",
+   "rules": {
+    "division": "Not Internal Medicine",
+    "division_source": "description",
+    "research_type": "Mixed or unclear",
+    "wet_terms": [
+     "mouse"
+    ],
+    "dry_terms": [
+     "python",
+     "r"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "Division of Preclinical Innovation",
+    "reason": "Computational chemistry/AI-ML postdoc in NCATS Division of Preclinical Innovation, not Internal Medicine; requires a Ph.D.",
+    "verify": "Whether NCATS would sponsor a J-1 or H-1B visa for this fellow",
+    "missing": "PhD; molecular dynamics; virtual screening; AI/ML model development; cheminformatics",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Other dept",
+   "reason": "Computational chemistry/AI-ML postdoc in NCATS Division of Preclinical Innovation, not Internal Medicine; requires a Ph.D.",
+   "active": true
+  },
+  "nih-oite:jobs-pdfcml-062927": {
+   "key": "nih-oite:jobs-pdfcml-062927",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "Postdoctoral Fellow for Clinical Machine Learning",
+   "url": "https://www.training.nih.gov/jobs/pdfcml-062927/",
+   "location": "Division of Intramural Research, National Library of Medicine, Bethesda, MD and surrounding area",
+   "department": "",
+   "posted": "2026-10-19",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n Postdoctoral Fellow for Clinical Machine Learning \n Job \n Postdoctoral Fellow for Clinical Machine Learning \n Organization \n Division of Intramural Research, National Library of Medicine, Bethesda, MD and surrounding area \n The Care Health and Reasoning Machines (CHARM) lab led by Dr. Jeremy C. Weiss at the National Library of Medicine seeks to hire a postdoctoral fellow at the intersection(s) of the following research areas: longitudinal machine learning, multi-modal analysis, clinical informatics, and population health. \n About the position \n The National Library of Medicine (NLM) is one of the 27 institutes at the National Institutes of Health (NIH). NLM is the world’s largest biomedical library and a leader in research, development, and training in biomedical informatics and health information technology. The Division of Intramural Research (DIR) within NLM has ",
+   "fingerprint": "229f669ad8673c4a",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Mixed or unclear",
+    "wet_terms": [
+     "mouse"
+    ],
+    "dry_terms": [
+     "biostatistic",
+     "electronic health record",
+     "patient",
+     "population health",
+     "python",
+     "r"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": true
+    },
+    "notes": [],
+    "verdict": "Check",
+    "reason": "Mixed or unclear; division: Unclear"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "yes",
+    "visa": "not_stated",
+    "verdict": "other_dept",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "Division of Intramural Research, National Library of Medicine",
+    "reason": "Postdoc in NLM's Division of Intramural Research (CHARM lab, clinical machine learning), not Internal Medicine; the posting accepts an MD.",
+    "verify": "Whether the NIH postdoc position offers J-1 or H-1B sponsorship for foreign medical graduates",
+    "missing": "Machine learning development (PyTorch, sklearn), longitudinal and multimodal modeling, Python",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Other dept",
+   "reason": "Postdoc in NLM's Division of Intramural Research (CHARM lab, clinical machine learning), not Internal Medicine; the posting accepts an MD.",
+   "active": true
+  },
+  "nih-oite:jobs-pdflrr-043027": {
+   "key": "nih-oite:jobs-pdflrr-043027",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "Postdoctoral Fellow - Long-Read RNA Methods Development for Neurodegeneration",
+   "url": "https://www.training.nih.gov/jobs/pdflrr-043027/",
+   "location": "Translational Neurogenetics Unit, Center for Alzheimer’s Disease and Related Dementias (CARD), National Institute on Aging (NIA), NIH, Framingham, MA",
+   "department": "",
+   "posted": "2026-10-15",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n Postdoctoral Fellow - Long-Read RNA Methods Development for Neurodegeneration \n Job \n Postdoctoral Fellow - Long-Read RNA Methods Development for Neurodegeneration \n Organization \n Translational Neurogenetics Unit, Center for Alzheimer’s Disease and Related Dementias (CARD), National Institute on Aging (NIA), NIH, Framingham, MA \n Scientific focus area \n Neuroscience, \n RNA Biology, \n Genetics and Genomics\n A postdoctoral position is available in the Translational Neurogenetics Unit led by Dr. Kimberley Billingsley at the Center for Alzheimer's Disease and Related Dementias (CARD), National Institute on Aging, NIH. \n About the position \n Our group uses long-read sequencing of human brain tissue to understand how genetic risk leads to molecular changes in Alzheimer's disease, Parkinson's disease and related dementias. Most genetic risk for neurodegenerative disease w",
+   "fingerprint": "81893790237ce152",
+   "rules": {
+    "division": "Geriatrics & Palliative",
+    "division_source": "description",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "library prep",
+     "molecular biology",
+     "mouse",
+     "proteomic",
+     "rna-seq",
+     "wet lab"
+    ],
+    "dry_terms": [
+     "cohort",
+     "data analys",
+     "python",
+     "r"
+    ],
+    "flags": {
+     "citizenship_required": true,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [
+     "US citizenship or permanent residency mentioned"
+    ],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: library prep, molecular biology, mouse, proteomic"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "wet_lab",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "citizenship_required",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "Translational Neurogenetics Unit, Center for Alzheimer's Disease and Related Dementias (CARD)",
+    "reason": "Core duty is wet-lab method development; requires a PhD; only U.S. citizens and permanent residents are eligible. Not Internal Medicine.",
+    "verify": "",
+    "missing": "Hands-on RNA wet-lab work, NGS library preparation, PhD, protocol development",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Core duty is wet-lab method development; requires a PhD; only U.S. citizens and permanent residents are eligible. Not Internal Medicine.",
+   "active": true
+  },
+  "nih-oite:jobs-pdflrt-043027": {
+   "key": "nih-oite:jobs-pdflrt-043027",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "Postdoctoral Fellow in Long-Read Transcriptomics and Multi-Omics of Neurodegeneration",
+   "url": "https://www.training.nih.gov/jobs/pdflrt-043027/",
+   "location": "Translational Neurogenetics Unit, Center for Alzheimer’s Disease and Related Dementias (CARD), National Institute on Aging (NIA), NIH, Bethesda, MD and surrounding area",
+   "department": "",
+   "posted": "2026-10-15",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n Postdoctoral Fellow in Long-Read Transcriptomics and Multi-Omics of Neurodegeneration \n Job \n Postdoctoral Fellow in Long-Read Transcriptomics and Multi-Omics of Neurodegeneration \n Organization \n Translational Neurogenetics Unit, Center for Alzheimer’s Disease and Related Dementias (CARD), National Institute on Aging (NIA), NIH, Bethesda, MD and surrounding area \n Scientific focus area \n Neuroscience, \n RNA Biology, \n Genetics and Genomics, \n Computational Biology\n A postdoctoral position is available in the Translational Neurogenetics Unit led by Dr. Kimberley Billingsley at the Center for Alzheimer's Disease and Related Dementias (CARD), National Institute on Aging, NIH. \n About the position \n Our group uses long-read sequencing of human brain tissue to understand how genetic risk leads to molecular changes in Alzheimer's disease, Parkinson's disease and related ",
+   "fingerprint": "752eda69fc11ec87",
+   "rules": {
+    "division": "Geriatrics & Palliative",
+    "division_source": "description",
+    "research_type": "Wet lab",
+    "wet_terms": [
+     "molecular biology",
+     "mouse",
+     "proteomic",
+     "rna-seq",
+     "wet lab"
+    ],
+    "dry_terms": [
+     "cohort",
+     "python",
+     "r"
+    ],
+    "flags": {
+     "citizenship_required": true,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [
+     "US citizenship or permanent residency mentioned"
+    ],
+    "verdict": "Excluded",
+    "reason": "Wet-lab signals: molecular biology, mouse, proteomic, rna-seq"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "citizenship_required",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "",
+    "reason": "Requires a PhD and states only U.S. citizens and permanent residents are eligible; the group is in neurogenetics, not Internal Medicine.",
+    "verify": "",
+    "missing": "PhD; high-throughput sequencing analysis in Linux/HPC; Python/R for sequencing data",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Requires a PhD and states only U.S. citizens and permanent residents are eligible; the group is in neurogenetics, not Internal Medicine.",
+   "active": true
+  },
+  "nih-oite:jobs-pdfpmh-123026": {
+   "key": "nih-oite:jobs-pdfpmh-123026",
+   "school": "NIH (intramural)",
+   "rank": 908,
+   "source": "nih-oite",
+   "source_label": "NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)",
+   "title": "Postdoctoral Fellowship in Population Mental Health",
+   "url": "https://www.training.nih.gov/jobs/pdfpmh-123026/",
+   "location": "National Institute on Minority Health and Health Disparities, Bethesda, MD and surrounding area",
+   "department": "",
+   "posted": "2026-10-15",
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-10-28",
+   "snippet": "Home \n Job listings \n Postdoctoral Fellowship in Population Mental Health \n Job \n Postdoctoral Fellowship in Population Mental Health \n Organization \n National Institute on Minority Health and Health Disparities, Bethesda, MD and surrounding area \n Scientific focus area \n Epidemiology, \n Social and Behavioral Sciences, \n Health Disparities, \n Clinical Research\n We are seeking a full-time postdoctoral fellow to join the Population Mental Health Lab. The lab is housed in the National Institute on Minority Health and Health Disparities, Division of Intramural Research. \n About the position \n The mission of the Population Mental Health Lab is to advance research on the complex and interrelated factors that influence anxiety, depression, and overall psychological well-being across diverse populations in the United States. The lab also aims to develop and evaluate effective strategies to impro",
+   "fingerprint": "97d2b76402db67a2",
+   "rules": {
+    "division": "Unclear",
+    "division_source": "none",
+    "research_type": "Mixed or unclear",
+    "wet_terms": [
+     "mouse"
+    ],
+    "dry_terms": [
+     "biostatistic",
+     "clinical research",
+     "data analys",
+     "epidemiolog",
+     "statistical analys"
+    ],
+    "flags": {
+     "citizenship_required": false,
+     "no_sponsorship": false,
+     "sponsorship_mentioned": false,
+     "phd_only": false,
+     "md_or_foreign_md_ok": false
+    },
+    "notes": [],
+    "verdict": "Check",
+    "reason": "Mixed or unclear; division: Unclear"
+   },
+   "ai": {
+    "role_type": "postdoc",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "no",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "weak",
+    "department": "Division of Intramural Research (NIMHD)",
+    "reason": "Postdoc at NIMHD Population Mental Health Lab requires a completed PhD in social/behavioral science, biostatistics, epidemiology or related field; candidate has no PhD.",
+    "verify": "",
+    "missing": "PhD in social/behavioral science, biostatistics, epidemiology or related field",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Postdoc at NIMHD Population Mental Health Lab requires a completed PhD in social/behavioral science, biostatistics, epidemiology or related field; candidate has no PhD.",
+   "active": true
+  },
   "nyulangone:23740975": {
    "key": "nyulangone:23740975",
    "school": "NYU",
@@ -22498,17 +24109,23 @@
    "url": "https://jobs.uc.edu/job/Clinical-Research-Assistant%2C-Department-of-Surgery%2C-Trauma-Surgery-Research/104251-en_US",
    "location": "",
    "department": "",
-   "posted": "",
+   "posted": "2026-10-12",
    "first_seen": "2026-10-28",
    "last_seen": "2026-10-28",
-   "snippet": "",
-   "fingerprint": "e3b0c44298fc1c14",
+   "snippet": "Clinical Research Assistant, Department of Surgery, Trauma Surgery Research \n Skip to main content \n Language \n English (United States) \n Sign In To My Profile \n Employee Login \n Search Jobs \n Sign in or Create Account \n FAQ \n Why Choose UC \n Language \n English (United States) \n Sign In To My Profile \n Employee Login \n Search Jobs \n Sign in or Create Account \n FAQ \n Why Choose UC \n Sign In To My Profile \n Employee Login \n Menu \n Search Jobs \n Sign in or Create Account \n FAQ \n Why Choose UC \n Search Jobs \n Job Description \n Job Alerts Link \n Apply now\n Job Title: \n Clinical Research Assistant, Department of Surgery, Trauma Surgery Research\n Posting Start Date: \n 10/12/26\n Work Arrangement: \n Onsite\n Current UC employees must apply internally via SuccessFactors \n Next Lives at the University of Cincinnati \n Founded in 1819, the University of Cincinnati ranks among the nation’s best urban p",
+   "fingerprint": "fcdf87be48183e5b",
    "rules": {
     "division": "Not Internal Medicine",
     "division_source": "department",
-    "research_type": "Unclear",
+    "research_type": "Clinical or dry research",
     "wet_terms": [],
-    "dry_terms": [],
+    "dry_terms": [
+     "clinical research",
+     "clinical trial",
+     "human subjects",
+     "participants",
+     "patients"
+    ],
     "flags": {
      "citizenship_required": false,
      "no_sponsorship": false,
@@ -22517,15 +24134,29 @@
      "md_or_foreign_md_ok": false
     },
     "notes": [],
-    "verdict": "Check",
-    "reason": "Description could not be read; open the posting."
+    "verdict": "Other dept",
+    "reason": "Department does not look like Internal Medicine"
    },
-   "ai": null,
-   "evaluated": false,
-   "title_only": true,
-   "ai_attempts": 0,
-   "verdict": "Check",
-   "reason": "Description could not be read; open the posting.",
+   "ai": {
+    "role_type": "research_assistant",
+    "research_type": "clinical_or_dry",
+    "im_division": "not_internal_medicine",
+    "mbbs_without_phd_eligible": "yes",
+    "visa": "not_stated",
+    "verdict": "excluded",
+    "confidence": "high",
+    "skills_fit": "strong",
+    "department": "Department of Surgery",
+    "reason": "Entry-level Clinical Research Assistant (high school minimum) in Trauma Surgery, not a fellow, postdoc or research associate role; not Internal Medicine.",
+    "verify": "",
+    "missing": "",
+    "deadline": ""
+   },
+   "evaluated": true,
+   "title_only": false,
+   "ai_attempts": 1,
+   "verdict": "Excluded",
+   "reason": "Entry-level Clinical Research Assistant (high school minimum) in Trauma Surgery, not a fellow, postdoc or research associate role; not Internal Medicine.",
    "active": true
   },
   "ucincy:job-Post-Doc-Fellow-2C-Department-of-Neurology-amp-Rehabilitation-Medicine-104478-en-US": {
