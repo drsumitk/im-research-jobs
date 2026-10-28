@@ -60,8 +60,8 @@ US medical schools ranked by NIH funding for Internal Medicine (BRIMR 2025, `con
 | 50 | Louisville | Workday | |
 | 51 | UT Health San Antonio | UT Health San Antonio (staff and research) (Oracle); UT Health San Antonio Office of Postdoctoral Affairs board (job board page) |  |
 | 52 | KU Medical Center | University of Kansas Medical Center (Workday) |  |
-| 53 | UIC |  | University of Illinois Chicago (Cornerstone job site) |
-| 54 | Arizona |  | University of Arizona (Cornerstone job site) |
+| 53 | UIC | University of Illinois Chicago (Cornerstone, read in a headless browser) | |
+| 54 | Arizona | University of Arizona (Cornerstone, read in a headless browser) | |
 | 55 | Georgetown | Georgetown University (staff and research staff) (Workday) | Georgetown academic and postdoc positions (Interfolio) |
 | 56 | UTHealth Houston | UTHealth Houston (incl. postdocs) (Phenom careers site) |  |
 | 57 | UNMC |  | University of Nebraska Medical Center |
@@ -73,21 +73,21 @@ US medical schools ranked by NIH funding for Internal Medicine (BRIMR 2025, `con
 | 63 | MUSC | Medical University of South Carolina (Workday) |  |
 | 64 | Oklahoma (OUHSC) |  | University of Oklahoma (incl. Health Sciences Center); OUHSC postdoc positions page |
 | 65 | VCU |  | Virginia Commonwealth University |
-| 66 | Cincinnati |  | University of Cincinnati |
+| 66 | Cincinnati | University of Cincinnati (careers site, read in a headless browser) | |
 | 67 | Penn State (Hershey) | Penn State (College of Medicine / Hershey only) (Workday) |  |
 | 68 | UConn Health | UConn Health Office of Postdoctoral Affairs board (job board page) | UConn Health jobs |
 | 69 | Augusta (Medical College of Georgia) |  | Augusta University (OneUSG PeopleSoft) |
 | 70 | Dartmouth |  | Dartmouth Health; Dartmouth College (incl. Geisel) |
 | 71 | Jefferson | Thomas Jefferson University and Jefferson Health (Workday) |  |
 | 72 | Buffalo |  | University at Buffalo |
-| 73 | New Mexico |  | University of New Mexico (Cornerstone job site) |
+| 73 | New Mexico | University of New Mexico (Cornerstone, read in a headless browser) | |
 | 74 | Michigan State & Henry Ford |  | Michigan State University; Henry Ford Health |
 | 75 | Hawaii |  | University of Hawaii (NEOGOV); Research Corporation of the University of Hawaii (grant-funded research jobs) |
 | 76 | UTMB Galveston | University of Texas Medical Branch (job board page) |  |
 | 77 | LSU Health New Orleans |  | LSU Health Sciences Center New Orleans |
 | 78 | Stony Brook | Stony Brook University and Stony Brook Medicine (Taleo) |  |
 | 79 | West Virginia | West Virginia University (faculty and postdoc positions) (Taleo) |  |
-| 80 | Charles R. Drew |  | Charles R. Drew University (UKG job board) |
+| 80 | Charles R. Drew | Charles R. Drew University (UKG job board, read in a headless browser) | |
 | 81 | UAMS | University of Arkansas for Medical Sciences (UA System Workday, Little Rock only) (Workday) |  |
 | 82 | Vermont |  | University of Vermont |
 | 83 | UTHSC Memphis | University of Tennessee Health Science Center (UT System site, Memphis only) (Oracle) |  |
@@ -126,7 +126,9 @@ US medical schools ranked by NIH funding for Internal Medicine (BRIMR 2025, `con
 
 Harvard (rank 60), KU Medical Center (52), MUSC (63) and Brown (87) are in the BRIMR list. Mayo Clinic, Beth Israel Deaconess / Beth Israel Lahey Health, Houston Methodist, Baylor Scott & White, Minneapolis Heart Institute Foundation, MD Anderson and Memorial Sloan Kettering are added by choice: BRIMR ranks medical schools only, so teaching hospitals, cancer centers and research foundations are not in it, and Mayo's NIH funding is not coded by department.
 
-Of the 115 institutions, 72 are read automatically every day and 43 can only be linked (mostly job sites that load results by script, answer automated requests with a bot check, or close their search pages to automated reading in robots.txt).
+Of the 115 institutions, 77 are read automatically every day and 38 can only be linked (job sites that answer automated requests with a bot check, close their search pages to automated reading in robots.txt, need clicks to show any jobs, or show only part of the list).
+
+Five job sites build their job list with JavaScript (UIC, Arizona, New Mexico, Cincinnati, Charles R. Drew). The daily scan opens those in a headless Chromium browser on the GitHub runner: it checks robots.txt first, keeps Chromium's own headless identity, does not download images, and stops at any bot check instead of trying to pass it.
 
 Known gaps: postdoc posts that departments advertise only on Interfolio, lab websites or by email are not on these boards. Some iCIMS portals and postdoc boards show no posting date; such postings are shown for up to 21 days after the tracker first sees them (so on the first day after a new source is added, older undated postings can appear once and then drop off).
 

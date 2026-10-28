@@ -43,7 +43,7 @@ title_include:
 # ... and must not match any of these.
 title_exclude:
   - '\bnurse\b|\brn\b|\(rn\)|nurse practitioner|physician assistant|\bpa\b|\(pa\)'
-  - 'pharmacist|pharmacy'
+  - '^(?!.*post[- ]?doc).*(pharmacist|pharmacy)'   # keeps College of Pharmacy postdocs (pharmacoepidemiology)
   - 'professor|instructor|faculty|lecturer|chair\b'
   - 'hospitalist|physician\b(?!.*scientist)'
   - 'technician|technologist|histotech|lab(oratory)? manager|animal|veterinar'
