@@ -1,0 +1,194 @@
+[
+ {
+  "school": "UIC",
+  "rank": 53,
+  "source": "uic",
+  "label": "University of Illinois Chicago (Cornerstone job site)",
+  "type": "rendered",
+  "checked": "2026-10-28",
+  "found": 41,
+  "candidates": 3,
+  "too_old": 3,
+  "status": "ok",
+  "new_details": 0,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Research Associate I - Social Sciences",
+   "Research Associate II - Social Sciences (Hourly)",
+   "Research Associate II - Interventionist (Hourly)"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Research Associate I - Social Sciences",
+    "url": "https://uic.csod.com/ux/ats/careersite/1/home/requisition/21224?c=uic",
+    "posted": "2026-10-26",
+    "dept": "",
+    "text": "Sign In \n Create Profile \n English (US) English (UK) \n Research Associate I - Social Sciences \n Chicago, IL, United States \n | \n 1043263 \n Apply Now \n Share \n Save Job \n Posted on: 10/26/2026 - Application Deadline: 11/10/2026 \n Back to Search \n Research Associate I- Social Sciences \n Hiring Departm"
+   },
+   {
+    "title": "Research Associate II - Social Sciences (Hourly)",
+    "url": "https://uic.csod.com/ux/ats/careersite/1/home/requisition/21238?c=uic",
+    "posted": "2026-10-22",
+    "dept": "",
+    "text": "Sign In \n Create Profile \n English (US) English (UK) \n Research Associate II - Social Sciences (Hourly) \n Chicago, IL, United States \n | \n 1036817 \n Apply Now \n Share \n Save Job \n Posted on: 10/22/2026 - Application Deadline: 10/30/2026 \n Back to Search \n Research Associate II - Social Sciences (Hou"
+   },
+   {
+    "title": "Research Associate II - Interventionist (Hourly)",
+    "url": "https://uic.csod.com/ux/ats/careersite/1/home/requisition/21222?c=uic",
+    "posted": "2026-10-22",
+    "dept": "",
+    "text": "Sign In \n Create Profile \n English (US) English (UK) \n Research Associate II - Interventionist (Hourly) \n Chicago, IL, United States \n | \n 1043497 \n Apply Now \n Share \n Save Job \n Posted on: 10/22/2026 - Application Deadline: 11/6/2026 \n Back to Search \n Research Associate II - Interventionist (Hour"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "Arizona",
+  "rank": 54,
+  "source": "arizona",
+  "label": "University of Arizona (Cornerstone job site)",
+  "type": "rendered",
+  "checked": "2026-10-28",
+  "found": 71,
+  "candidates": 19,
+  "too_old": 10,
+  "status": "ok",
+  "new_details": 0,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Postdoctoral Research Associate, Department of Translational Neurosciences (College of Medicine-Phx)",
+   "Postdoctoral Research Associate, Cellular & Molecular Medicine (Full-Time)",
+   "Postdoctoral Research Associate (Postdoctoral Scholar in Prevention & Education) (COE)",
+   "Postdoctoral Research Associate, Department of Child Health (College of Medicine - Phoenix)",
+   "Postdoctoral Research Associate, Center for Applied NanoBioscience and Medicine (COM-P)",
+   "Postdoctoral Research Associate (I-IV), Orthopedic Surgery",
+   "Postdoctoral Research Associate I, Physiology",
+   "Postdoctoral Research Associate- Halladay Lab, Department of Neuroscience",
+   "Postdoctoral Research Associate I, Immunobiology",
+   "Postdoctoral Research Associate, Steward Observatory (High Contrast Imaging)",
+   "Postdoctoral Research Associate, Adaptive Learning Agents and Computational Cognitive Science",
+   "Postdoctoral Research Associate - Instrumentation, Steward Observatory",
+   "Postdoctoral Research Associate, Steward Observatory (High-Contrast Imaging & Interferometry)",
+   "Postdoctoral Research Associate, Steward Observatory (Multiple Positions)",
+   "Postdoctoral Research Associate I"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Postdoctoral Research Associate, Department of Translational Neurosciences (College of Medicine-Phx)",
+    "url": "https://arizona.csod.com/ux/ats/careersite/4/home/requisition/27477?c=arizona",
+    "posted": "2026-10-27",
+    "dept": "",
+    "text": "Sign In \n Create Profile \n English (US) \n Postdoctoral Research Associate, Department of Translational Neurosciences (College of Medicine-Phx) \n Phoenix, AZ, United States \n | \n req27477 \n Apply Now \n Share \n Save Job \n Posted on: 10/27/2026 \n Back to Search \n Postdoctoral Research Associate, Depart"
+   },
+   {
+    "title": "Postdoctoral Research Associate, Cellular & Molecular Medicine (Full-Time)",
+    "url": "https://arizona.csod.com/ux/ats/careersite/4/home/requisition/27478?c=arizona",
+    "posted": "2026-10-27",
+    "dept": "",
+    "text": "Sign In \n Create Profile \n English (US) \n Postdoctoral Research Associate, Cellular & Molecular Medicine (Full-Time) \n Tucson, AZ, United States \n | \n req27478 \n Apply Now \n Share \n Save Job \n Posted on: 10/27/2026 \n Back to Search \n Postdoctoral Research Associate, Cellular & Molecular Medicine (Fu"
+   },
+   {
+    "title": "Postdoctoral Research Associate (Postdoctoral Scholar in Prevention & Education) (COE)",
+    "url": "https://arizona.csod.com/ux/ats/careersite/4/home/requisition/27460?c=arizona",
+    "posted": "2026-10-26",
+    "dept": "",
+    "text": "Sign In \n Create Profile \n English (US) \n Postdoctoral Research Associate (Postdoctoral Scholar in Prevention & Education) (COE) \n Tucson, AZ, United States \n | \n req27460 \n Apply Now \n Share \n Save Job \n Posted on: 10/26/2026 \n Back to Search \n Postdoctoral Research Associate (Postdoctoral Scholar "
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "Cincinnati",
+  "rank": 66,
+  "source": "ucincy",
+  "label": "University of Cincinnati",
+  "type": "rendered",
+  "checked": "2026-10-28",
+  "found": 44,
+  "candidates": 10,
+  "too_old": 18,
+  "status": "ok",
+  "new_details": 3,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Post-Doctoral Fellow, Real Estate Center, Carl H. Lindner College of Business",
+   "Post Doc Fellow, Department of Neurology & Rehabilitation Medicine",
+   "Post Doc Fellow, Orthopaedic Surgery",
+   "Research Fellow, Du Lab, College of Medicine, Department of Cancer Biology",
+   "Research Fellow, Part Time, Du Lab, College of Medicine, Department of Cancer Biology",
+   "Research Fellow, Orthopaedic Surgery",
+   "Research Associate, AI Bio Lab",
+   "Research Associate, Internal Medicine Division of Pulmonary, Critical Care & Sleep Medicine",
+   "Clinical Research Assistant, Department of Surgery, Trauma Surgery Research",
+   "Research Associate, Chemistry, College of Arts & Sciences"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Post-Doctoral Fellow, Real Estate Center, Carl H. Lindner College of Business",
+    "url": "https://jobs.uc.edu/job/Post-Doctoral-Fellow%2C-Real-Estate-Center%2C-Carl-H_-Lindner-College-of-Business/104389-en_US",
+    "posted": "2026-10-16",
+    "dept": "",
+    "text": "Post-Doctoral Fellow, Real Estate Center, Carl H. Lindner College of Business \n Skip to main content \n Language \n English (United States) \n Sign In To My Profile \n Employee Login \n Search Jobs \n Sign in or Create Account \n FAQ \n Why Choose UC \n Language \n English (United States) \n Sign In To My Prof"
+   },
+   {
+    "title": "Post Doc Fellow, Department of Neurology & Rehabilitation Medicine",
+    "url": "https://jobs.uc.edu/job/Post-Doc-Fellow%2C-Department-of-Neurology-&amp;-Rehabilitation-Medicine/104478-en_US",
+    "posted": "2026-10-21",
+    "dept": "",
+    "text": "Post Doc Fellow, Department of Neurology & Rehabilitation Medicine \n Skip to main content \n Language \n English (United States) \n Sign In To My Profile \n Employee Login \n Search Jobs \n Sign in or Create Account \n FAQ \n Why Choose UC \n Language \n English (United States) \n Sign In To My Profile \n Emplo"
+   },
+   {
+    "title": "Post Doc Fellow, Orthopaedic Surgery",
+    "url": "https://jobs.uc.edu/job/Post-Doc-Fellow%2C-Orthopaedic-Surgery/104469-en_US",
+    "posted": "2026-10-21",
+    "dept": "",
+    "text": "Post Doc Fellow, Orthopaedic Surgery \n Skip to main content \n Language \n English (United States) \n Sign In To My Profile \n Employee Login \n Search Jobs \n Sign in or Create Account \n FAQ \n Why Choose UC \n Language \n English (United States) \n Sign In To My Profile \n Employee Login \n Search Jobs \n Sign"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "New Mexico",
+  "rank": 73,
+  "source": "unm",
+  "label": "University of New Mexico (Cornerstone job site)",
+  "type": "rendered",
+  "checked": "2026-10-28",
+  "found": 83,
+  "candidates": 1,
+  "too_old": 8,
+  "status": "ok",
+  "new_details": 0,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Post Doctoral Fellow - Biology"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Post Doctoral Fellow - Biology",
+    "url": "https://unm.csod.com/ux/ats/careersite/18/home/requisition/38152?c=unm",
+    "posted": "2026-10-21",
+    "dept": "",
+    "text": "Sign In \n Create Profile \n English (US) \n Post Doctoral Fellow - Biology \n Albuquerque, NM, United States \n | \n req38152 \n Apply Now \n Share \n Save Job \n Posted on: 10/21/2026 \n Back to Search \n Post Doctoral Fellow - Biology \n Posting Number req38152 \n Employment Type Faculty \n Faculty Type Researc"
+   }
+  ],
+  "too_old_count": 0
+ },
+ {
+  "school": "Charles R. Drew",
+  "rank": 80,
+  "source": "drew",
+  "label": "Charles R. Drew University (UKG job board)",
+  "type": "rendered",
+  "checked": "2026-10-28",
+  "found": 43,
+  "candidates": 0,
+  "too_old": 2,
+  "status": "ok",
+  "new_details": 0,
+  "detail_errors": 0,
+  "candidate_titles": [],
+  "candidate_samples": [],
+  "too_old_count": 0
+ }
+]
