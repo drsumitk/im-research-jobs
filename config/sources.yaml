@@ -1339,3 +1339,23 @@ schools:
         host: msk.wd108.myworkdayjobs.com
         tenant: msk
         site: MSKCC_Careers_Primary
+
+  - rank: 908
+    name: NIH (intramural)
+    sources:
+      - id: nih-oite
+        label: NIH Office of Intramural Training & Education job listings (NIH postdoctoral positions)
+        type: board
+        url: https://www.training.nih.gov/jobs/?position_type=1&nih_only=on&page={page}
+        pages: 8
+        page_start: 1
+        row: li.usa-card
+        link: a.usa-card__container
+        title: h2.usa-card__heading
+        location: p
+        date: none
+        # The listings show no posting date; the site's sitemap gives each listing's last-modified date,
+        # an upper bound on its posting date.
+        sitemap_dates: https://www.training.nih.gov/sitemap.xml
+        detail: main
+

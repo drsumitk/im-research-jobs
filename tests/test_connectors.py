@@ -323,3 +323,21 @@ def test_two_digit_year_dates():
     from tracker.textutil import find_date
     assert find_date("Date: 10/21/26 Work Arrangement") == "2026-10-21"
     assert find_date("ratio 1/2/3") == ""
+
+
+def test_board_takes_undated_posting_dates_from_the_sitemap():
+    from tracker.connectors import board
+
+    class R:
+        def __init__(self, t): self.text = t
+
+    class H:
+        def get(self, url):
+            if url.endswith("sitemap.xml"):
+                return R("<urlset><url><loc>https://n.example/jobs/pdf-1/</loc><lastmod>2026-10-20</lastmod></url></urlset>")
+            return R('<ul><li class="c"><a class="a" href="/jobs/pdf-1/"><h2 class="h">Postdoctoral Fellow</h2></a></li></ul>')
+
+    src = {"id": "n", "url": "https://n.example/jobs/?page={page}", "pages": 1, "page_start": 1, "row": "li.c",
+           "link": "a.a", "title": "h2.h", "date": "none", "sitemap_dates": "https://n.example/sitemap.xml"}
+    jobs = board.search(H(), src, [], None)
+    assert jobs[0].posted == "2026-10-20"

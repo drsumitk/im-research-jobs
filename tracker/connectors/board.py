@@ -19,6 +19,8 @@ Configured entirely in sources.yaml with CSS selectors, for example:
   detail: main             # CSS for the description on the opening's page, or "none" to use the row text
   detail_date_label: "Advertising Started on:"   # optional: posting date printed after this label
   detail_ldjson_date: true # optional: posting date from the page's schema.org JobPosting
+  sitemap_dates: https://site/sitemap.xml   # optional: undated openings take the sitemap's last-modified
+                           # date, an upper bound on the posting date (a posting may be older, never newer)
 
 Boards list only postdoc openings, so a title_template that starts with "Postdoctoral" keeps the
 title rules from dropping openings whose own titles are just a mentor's name.
@@ -119,7 +121,23 @@ def search(http, src, terms, title_ok):
             seen.setdefault(j.key, j)
         if not page_jobs and "{q}" not in src["url"]:
             break  # paged list ran out
+    if src.get("sitemap_dates") and seen:
+        lastmod = sitemap_lastmod(http.get(src["sitemap_dates"]).text)
+        for j in seen.values():
+            if not j.posted:
+                j.posted = lastmod.get(j.url.rstrip("/"), "")
     return list(seen.values())
+
+
+def sitemap_lastmod(xml_text):
+    """{url without trailing slash: YYYY-MM-DD} from a sitemap's <url> entries."""
+    out = {}
+    for block in re.findall(r"<url>(.*?)</url>", xml_text, re.S):
+        loc = re.search(r"<loc>\s*(.*?)\s*</loc>", block, re.S)
+        mod = re.search(r"<lastmod>\s*(.*?)\s*</lastmod>", block, re.S)
+        if loc and mod:
+            out[loc.group(1).strip().rstrip("/")] = iso_date(mod.group(1).strip())
+    return out
 
 
 def details(http, src, job):
