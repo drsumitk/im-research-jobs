@@ -123,10 +123,11 @@ US medical schools ranked by NIH funding for Internal Medicine (BRIMR 2025, `con
 | added | Minneapolis Heart Institute Foundation | Careers page (titles only; job pages are on ADP) | |
 | added | MD Anderson Cancer Center | Careers sitemap (job pages carry posting dates) | |
 | added | Memorial Sloan Kettering | Workday | |
+| added | NIH (intramural) | NIH OITE job listings, NIH postdoctoral positions only (undated; dated by the site's sitemap last-modified date, an upper bound) | |
 
-Harvard (rank 60), KU Medical Center (52), MUSC (63) and Brown (87) are in the BRIMR list. Mayo Clinic, Beth Israel Deaconess / Beth Israel Lahey Health, Houston Methodist, Baylor Scott & White, Minneapolis Heart Institute Foundation, MD Anderson and Memorial Sloan Kettering are added by choice: BRIMR ranks medical schools only, so teaching hospitals, cancer centers and research foundations are not in it, and Mayo's NIH funding is not coded by department.
+Harvard (rank 60), KU Medical Center (52), MUSC (63) and Brown (87) are in the BRIMR list. Mayo Clinic, Beth Israel Deaconess / Beth Israel Lahey Health, Houston Methodist, Baylor Scott & White, Minneapolis Heart Institute Foundation, MD Anderson, Memorial Sloan Kettering and the NIH intramural program are added by choice: BRIMR ranks medical schools only, so teaching hospitals, cancer centers and research foundations are not in it, and Mayo's NIH funding is not coded by department.
 
-Of the 115 institutions, 77 are read automatically every day and 38 can only be linked (job sites that answer automated requests with a bot check, close their search pages to automated reading in robots.txt, need clicks to show any jobs, or show only part of the list).
+Of the 116 institutions, 78 are read automatically every day and 38 can only be linked (job sites that answer automated requests with a bot check, close their search pages to automated reading in robots.txt, need clicks to show any jobs, or show only part of the list).
 
 Five job sites build their job list with JavaScript (UIC, Arizona, New Mexico, Cincinnati, Charles R. Drew). The daily scan opens those in a headless Chromium browser on the GitHub runner: it checks robots.txt first, keeps Chromium's own headless identity, does not download images, and stops at any bot check instead of trying to pass it.
 
