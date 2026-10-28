@@ -1,11 +1,11 @@
 {
  "meta": {
-  "generated_utc": "2026-10-28 01:28 UTC",
+  "generated_utc": "2026-10-28 04:42 UTC",
   "today": "2026-10-28",
   "ai_enabled": true,
-  "ai_calls": 18,
+  "ai_calls": 31,
   "log": [],
-  "total": 560
+  "total": 594
  },
  "sources": [
   {
@@ -172,7 +172,7 @@
    "candidates": 12,
    "too_old": 36,
    "status": "ok",
-   "new_details": 1,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -196,7 +196,7 @@
    "label": "UCLA (staff)",
    "type": "jibe",
    "checked": "2026-10-28",
-   "found": 25,
+   "found": 24,
    "candidates": 1,
    "too_old": 1,
    "status": "ok",
@@ -224,7 +224,7 @@
    "label": "Icahn School of Medicine at Mount Sinai",
    "type": "jibe",
    "checked": "2026-10-28",
-   "found": 703,
+   "found": 702,
    "candidates": 8,
    "too_old": 196,
    "status": "ok",
@@ -376,7 +376,7 @@
    "candidates": 27,
    "too_old": 0,
    "status": "ok",
-   "new_details": 1,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -386,7 +386,7 @@
    "label": "Weill Cornell Medicine",
    "type": "rmk",
    "checked": "2026-10-28",
-   "found": 46,
+   "found": 47,
    "candidates": 0,
    "too_old": 1,
    "status": "ok",
@@ -411,7 +411,7 @@
    "label": "University of Washington",
    "type": "workday",
    "checked": "2026-10-28",
-   "found": 161,
+   "found": 162,
    "candidates": 0,
    "too_old": 0,
    "status": "ok",
@@ -619,9 +619,9 @@
    "label": "Cleveland Clinic",
    "type": "workday",
    "checked": "2026-10-28",
-   "found": 296,
+   "found": 295,
    "candidates": 3,
-   "too_old": 9,
+   "too_old": 8,
    "status": "ok",
    "new_details": 0,
    "detail_errors": 0
@@ -683,7 +683,7 @@
    "label": "Ohio State University and Wexner Medical Center",
    "type": "workday",
    "checked": "2026-10-28",
-   "found": 343,
+   "found": 342,
    "candidates": 28,
    "too_old": 29,
    "status": "ok",
@@ -724,7 +724,7 @@
    "checked": "2026-10-28",
    "found": 252,
    "candidates": 9,
-   "too_old": 36,
+   "too_old": 38,
    "status": "ok",
    "new_details": 0,
    "detail_errors": 0
@@ -779,7 +779,7 @@
    "candidates": 2,
    "too_old": 6,
    "status": "ok",
-   "new_details": 1,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -888,7 +888,7 @@
    "candidates": 1,
    "too_old": 18,
    "status": "ok",
-   "new_details": 1,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -930,7 +930,7 @@
    "candidates": 5,
    "too_old": 2,
    "status": "ok",
-   "new_details": 2,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -966,22 +966,28 @@
    "rank": 53,
    "source": "uic",
    "label": "University of Illinois Chicago (Cornerstone job site)",
-   "type": "manual",
+   "type": "rendered",
    "checked": "2026-10-28",
-   "status": "manual",
-   "url": "https://uic.csod.com/ux/ats/careersite/1/home?c=uic",
-   "note": "The Cornerstone job site loads its list by script; there is no page the tracker can read."
+   "found": 41,
+   "candidates": 4,
+   "too_old": 4,
+   "status": "ok",
+   "new_details": 0,
+   "detail_errors": 0
   },
   {
    "school": "Arizona",
    "rank": 54,
    "source": "arizona",
    "label": "University of Arizona (Cornerstone job site)",
-   "type": "manual",
+   "type": "rendered",
    "checked": "2026-10-28",
-   "status": "manual",
-   "url": "https://arizona.csod.com/ux/ats/careersite/4/home?c=arizona",
-   "note": "The Cornerstone job site loads its list by script; there is no page the tracker can read."
+   "found": 71,
+   "candidates": 19,
+   "too_old": 10,
+   "status": "ok",
+   "new_details": 0,
+   "detail_errors": 0
   },
   {
    "school": "Georgetown",
@@ -1042,7 +1048,7 @@
    "checked": "2026-10-28",
    "found": 318,
    "candidates": 6,
-   "too_old": 58,
+   "too_old": 59,
    "status": "ok",
    "new_details": 0,
    "detail_errors": 0
@@ -1110,11 +1116,11 @@
    "label": "Mass General Brigham (MGH, Brigham and Women's)",
    "type": "workday",
    "checked": "2026-10-28",
-   "found": 1231,
+   "found": 1230,
    "candidates": 34,
    "too_old": 28,
    "status": "ok",
-   "new_details": 2,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -1148,9 +1154,9 @@
    "checked": "2026-10-28",
    "found": 294,
    "candidates": 5,
-   "too_old": 25,
+   "too_old": 26,
    "status": "ok",
-   "new_details": 0,
+   "new_details": 1,
    "detail_errors": 0
   },
   {
@@ -1191,11 +1197,14 @@
    "rank": 66,
    "source": "ucincy",
    "label": "University of Cincinnati",
-   "type": "manual",
+   "type": "rendered",
    "checked": "2026-10-28",
-   "status": "manual",
-   "url": "https://jobs.uc.edu/search/?q=post+doc",
-   "note": "The job site loads search results by script."
+   "found": 44,
+   "candidates": 10,
+   "too_old": 18,
+   "status": "ok",
+   "new_details": 3,
+   "detail_errors": 0
   },
   {
    "school": "Penn State (Hershey)",
@@ -1276,7 +1285,7 @@
    "label": "Thomas Jefferson University and Jefferson Health",
    "type": "workday",
    "checked": "2026-10-28",
-   "found": 289,
+   "found": 290,
    "candidates": 4,
    "too_old": 9,
    "status": "ok",
@@ -1299,11 +1308,14 @@
    "rank": 73,
    "source": "unm",
    "label": "University of New Mexico (Cornerstone job site)",
-   "type": "manual",
+   "type": "rendered",
    "checked": "2026-10-28",
-   "status": "manual",
-   "url": "https://unm.csod.com/ux/ats/careersite/18/home?c=unm",
-   "note": "The Cornerstone job site loads its list by script."
+   "found": 83,
+   "candidates": 1,
+   "too_old": 8,
+   "status": "ok",
+   "new_details": 0,
+   "detail_errors": 0
   },
   {
    "school": "Michigan State & Henry Ford",
@@ -1360,7 +1372,7 @@
    "candidates": 1,
    "too_old": 0,
    "status": "ok",
-   "new_details": 1,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -1407,11 +1419,14 @@
    "rank": 80,
    "source": "drew",
    "label": "Charles R. Drew University (UKG job board)",
-   "type": "manual",
+   "type": "rendered",
    "checked": "2026-10-28",
-   "status": "manual",
-   "url": "https://recruiting2.ultipro.com/CHA1037CHRS/JobBoard/7fb6ae1e-e3f6-44ac-8694-2577af27ab6b/",
-   "note": "The UKG job board loads its list by script."
+   "found": 43,
+   "candidates": 0,
+   "too_old": 2,
+   "status": "ok",
+   "new_details": 0,
+   "detail_errors": 0
   },
   {
    "school": "UAMS",
@@ -1560,7 +1575,7 @@
    "candidates": 16,
    "too_old": 8,
    "status": "ok",
-   "new_details": 1,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -1581,7 +1596,7 @@
    "label": "MU Health Care",
    "type": "phenom",
    "checked": "2026-10-28",
-   "found": 77,
+   "found": 78,
    "candidates": 0,
    "too_old": 0,
    "status": "ok",
@@ -1688,7 +1703,7 @@
    "candidates": 3,
    "too_old": 2,
    "status": "ok",
-   "new_details": 1,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -1702,7 +1717,7 @@
    "candidates": 2,
    "too_old": 1,
    "status": "ok",
-   "new_details": 1,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -1798,11 +1813,11 @@
    "label": "Mayo Clinic (US)",
    "type": "oracle",
    "checked": "2026-10-28",
-   "found": 193,
-   "candidates": 13,
+   "found": 192,
+   "candidates": 12,
    "too_old": 32,
    "status": "ok",
-   "new_details": 2,
+   "new_details": 0,
    "detail_errors": 0
   },
   {
@@ -1879,7 +1894,7 @@
    "label": "MD Anderson Cancer Center",
    "type": "sitemap",
    "checked": "2026-10-28",
-   "found": 416,
+   "found": 433,
    "candidates": 11,
    "too_old": 73,
    "status": "ok",
@@ -1894,7 +1909,7 @@
    "type": "workday",
    "checked": "2026-10-28",
    "found": 115,
-   "candidates": 3,
+   "candidates": 2,
    "too_old": 5,
    "status": "ok",
    "new_details": 0,
