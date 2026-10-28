@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   scan:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # pinned: Playwright installs its browser dependencies for this release
     timeout-minutes: 120
     permissions:
       contents: write      # to save the updated data files back to the repository
@@ -30,7 +30,9 @@ jobs:
           python-version: "3.12"
 
       - name: Install pinned dependencies
-        run: pip install -r requirements.txt pytest==9.1.1
+        run: |
+          pip install -r requirements.txt pytest==9.1.1
+          python -m playwright install --with-deps chromium   # headless browser for script-built job lists
 
       - name: Run tests
         run: python -m pytest -q

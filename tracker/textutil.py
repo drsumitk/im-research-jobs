@@ -51,6 +51,8 @@ _DATE_PATTERNS = [
     (re.compile(r"\b(\d{1,2})\s+([A-Za-z]{3,9})\.?,?\s+(\d{4})\b"), ("d", "mon", "y")),
     # 10/21/2026, 10.21.2026, 10-21-2026 (US month-first)
     (re.compile(r"\b(\d{1,2})[/.-](\d{1,2})[/.-](\d{4})\b"), ("m", "d", "y")),
+    # 10/21/26 (US month-first, two-digit year; slashes only)
+    (re.compile(r"(?<![\d/])(\d{1,2})/(\d{1,2})/(\d{2})(?![\d/])"), ("m", "d", "yy")),
 ]
 
 
@@ -63,7 +65,8 @@ def find_date(text):
                 month = int(parts["m"]) if "m" in parts else _MONTHS.get(parts["mon"][:3].lower())
                 if not month:
                     continue
-                return datetime(int(parts["y"]), month, int(parts["d"])).strftime("%Y-%m-%d")
+                year = int(parts["y"]) if "y" in parts else 2000 + int(parts["yy"])
+                return datetime(year, month, int(parts["d"])).strftime("%Y-%m-%d")
             except (ValueError, KeyError):
                 continue
     return ""

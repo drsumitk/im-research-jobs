@@ -638,18 +638,32 @@ schools:
     sources:
       - id: uic
         label: University of Illinois Chicago (Cornerstone job site)
-        type: manual
-        url: https://uic.csod.com/ux/ats/careersite/1/home?c=uic
-        reason: The Cornerstone job site loads its list by script; there is no page the tracker can read.
+        type: rendered    # Cornerstone builds its job list with JavaScript; read in headless Chromium
+        url: https://uic.csod.com/ux/ats/careersite/1/home?c=uic&sq={q}
+        wait_for: 'a[data-tag="displayJobTitle"]'
+        row: 'div.p-view-jobsearchresults div.p-panel.p-bg-white'
+        link: 'a[data-tag="displayJobTitle"]'
+        title: 'a[data-tag="displayJobTitle"]'
+        location: 'p[data-tag="displayJobLocation"]'
+        date: 'p[data-tag="displayJobPostingDate"]'
+        detail: body
+        detail_date_label: 'Posted on:'
 
   - rank: 54
     name: Arizona
     sources:
       - id: arizona
         label: University of Arizona (Cornerstone job site)
-        type: manual
-        url: https://arizona.csod.com/ux/ats/careersite/4/home?c=arizona
-        reason: The Cornerstone job site loads its list by script; there is no page the tracker can read.
+        type: rendered    # Cornerstone builds its job list with JavaScript; read in headless Chromium
+        url: https://arizona.csod.com/ux/ats/careersite/4/home?c=arizona&sq={q}
+        wait_for: 'a[data-tag="displayJobTitle"]'
+        row: 'div.p-view-jobsearchresults div.p-panel.p-bg-white'
+        link: 'a[data-tag="displayJobTitle"]'
+        title: 'a[data-tag="displayJobTitle"]'
+        location: 'p[data-tag="displayJobLocation"]'
+        date: 'p[data-tag="displayJobPostingDate"]'
+        detail: body
+        detail_date_label: 'Posted on:'
 
   - rank: 55
     name: Georgetown
@@ -787,9 +801,15 @@ schools:
     sources:
       - id: ucincy
         label: University of Cincinnati
-        type: manual
-        url: https://jobs.uc.edu/search/?q=post+doc
-        reason: The job site loads search results by script.
+        type: rendered    # search results are built with JavaScript
+        url: https://jobs.uc.edu/search/?q={q}&sortColumn=referencedate&sortDirection=desc
+        wait_for: 'li[data-testid="jobCard"]'
+        row: 'li[data-testid="jobCard"]'
+        link: a.jobCardTitle
+        title: a.jobCardTitle
+        date: none
+        detail: body
+        detail_date_label: 'Date:'
 
   - rank: 67
     name: Penn State (Hershey)
@@ -866,9 +886,16 @@ schools:
     sources:
       - id: unm
         label: University of New Mexico (Cornerstone job site)
-        type: manual
-        url: https://unm.csod.com/ux/ats/careersite/18/home?c=unm
-        reason: The Cornerstone job site loads its list by script.
+        type: rendered    # Cornerstone builds its job list with JavaScript; read in headless Chromium
+        url: https://unm.csod.com/ux/ats/careersite/18/home?c=unm&sq={q}
+        wait_for: 'a[data-tag="displayJobTitle"]'
+        row: 'div.p-view-jobsearchresults div.p-panel.p-bg-white'
+        link: 'a[data-tag="displayJobTitle"]'
+        title: 'a[data-tag="displayJobTitle"]'
+        location: 'p[data-tag="displayJobLocation"]'
+        date: 'p[data-tag="displayJobPostingDate"]'
+        detail: body
+        detail_date_label: 'Posted on:'
 
   - rank: 74
     name: Michigan State & Henry Ford
@@ -944,9 +971,14 @@ schools:
     sources:
       - id: drew
         label: Charles R. Drew University (UKG job board)
-        type: manual
-        url: https://recruiting2.ultipro.com/CHA1037CHRS/JobBoard/7fb6ae1e-e3f6-44ac-8694-2577af27ab6b/
-        reason: The UKG job board loads its list by script.
+        type: rendered    # the UKG job board builds its list with JavaScript
+        url: https://recruiting2.ultipro.com/CHA1037CHRS/JobBoard/7fb6ae1e-e3f6-44ac-8694-2577af27ab6b/?q={q}&o=postedDateDesc
+        wait_for: a.opportunity-link
+        row: div.opportunity
+        link: a.opportunity-link
+        title: a.opportunity-link
+        detail: body
+        detail_date_label: 'Posted :'
 
   - rank: 81
     name: UAMS

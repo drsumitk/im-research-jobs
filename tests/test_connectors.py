@@ -287,3 +287,39 @@ def test_sitemap_title_from_an_earlier_path_segment():
     src = {"id": "mda", "link_pattern": r"/search/jobdetails/[^/]+/([0-9a-f-]{36})$", "title_segment": -2}
     jobs = sitemap.parse_sitemap(xml, src)
     assert jobs[0].title == "postdoctoral fellow genetics" and jobs[0].job_id.startswith("5f6ee87b")
+
+
+def test_rendered_reads_board_rows_and_only_new_job_pages(monkeypatch):
+    from tracker.connectors import rendered
+    pages = {
+        "https://x.example/search?q=postdoc": (
+            '<div class="row"><a class="t" href="/job/1">Postdoctoral Fellow</a><p class="d">Posted on: 10/27/2026</p></div>'
+            '<div class="row"><a class="t" href="/job/2">Postdoctoral Associate</a><p class="d">Posted on: 10/20/2026</p></div>'
+            '<div class="row"><a class="t" href="/job/3">Payroll Clerk</a><p class="d">Posted on: 10/26/2026</p></div>'),
+        "https://x.example/job/1": "<body>Department: Medicine. Posted on: 10/27/2026. Clinical outcomes research.</body>",
+    }
+    opened = []
+
+    class FakeBrowser:
+        def __init__(self, http): pass
+        def __enter__(self): return self
+        def __exit__(self, *a): pass
+        def render(self, url, wait_for=None, settle_ms=0):
+            opened.append(url)
+            return pages[url], url
+
+    monkeypatch.setattr(rendered, "Browser", FakeBrowser)
+    src = {"id": "x", "url": "https://x.example/search?q={q}", "row": "div.row", "link": "a.t", "title": "a.t",
+           "date": "p.d", "detail": "body", "_known": {"x:job-2"}}
+    jobs = rendered.search(None, src, ["postdoc"], lambda t: "post" in t.lower())
+    by = {j.job_id: j for j in jobs}
+    assert set(by) == {"job-1", "job-2", "job-3"} and by["job-1"].posted == "2026-10-27"
+    assert "Clinical outcomes" in by["job-1"].description
+    # job 2 was read on an earlier run and job 3 fails the title rules: neither page is opened
+    assert opened == ["https://x.example/search?q=postdoc", "https://x.example/job/1"]
+
+
+def test_two_digit_year_dates():
+    from tracker.textutil import find_date
+    assert find_date("Date: 10/21/26 Work Arrangement") == "2026-10-21"
+    assert find_date("ratio 1/2/3") == ""
