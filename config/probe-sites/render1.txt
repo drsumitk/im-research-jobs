@@ -1,0 +1,13 @@
+uic | https://uic.csod.com/ux/ats/careersite/1/home?c=uic | render
+arizona | https://arizona.csod.com/ux/ats/careersite/4/home?c=arizona | render
+unm | https://unm.csod.com/ux/ats/careersite/18/home?c=unm | render
+nebraska | https://jobs.nebraska.edu/search/?q=postdoc | render
+uc | https://jobs.uc.edu/search/?q=post+doc | render
+msu | https://careers.msu.edu/jobs/search?page=1&query=postdoctoral | render
+ttuhsc | https://sjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=25898&siteid=5283#keyWordSearch=postdoctoral | render
+drew | https://recruiting2.ultipro.com/CHA1037CHRS/JobBoard/7fb6ae1e-e3f6-44ac-8694-2577af27ab6b/?q=postdoc | render
+georgetown-interfolio | https://apply.interfolio.com/11780/positions | render
+mizzou | https://erecruit.umsystem.edu/psc/tamext/COLUM/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?FOCUS=Applicant&SiteId=9 | render
+umkc | https://erecruit.umsystem.edu/psc/tamext/KCITY/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?FOCUS=Applicant&SiteId=8 | render
+augusta | https://www.augusta.edu/jobs/external | render
+dartmouth-health | https://careers.dartmouth-health.org/dartmouth-health/results | render

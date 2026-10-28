@@ -94,6 +94,21 @@ class Http:
             return r
         raise FetchError(str(last_exc))
 
+    def check(self, url):
+        """Robots.txt check and per-host pacing for a page that a browser will open (tracker.browser).
+        Returns the pause the site asks for between requests."""
+        p = urlparse(url)
+        delay = MIN_GAP_SECONDS
+        if self.respect_robots:
+            rb = self._robots_for(p.scheme, p.netloc)
+            path = p.path + (f"?{p.query}" if p.query else "")
+            if not rb.allowed(path or "/"):
+                raise RobotsBlocked(self._robots_note.get(p.netloc) or f"robots.txt disallows {p.netloc}{p.path}")
+            if rb.crawl_delay:
+                delay = min(max(rb.crawl_delay, MIN_GAP_SECONDS), MAX_GAP_SECONDS)
+        self._pace(p.netloc, delay)
+        return delay
+
     def get(self, url, **kw):
         return self.request("GET", url, **kw)
 

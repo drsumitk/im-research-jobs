@@ -114,6 +114,28 @@ def probe_site(http, label, url):
     return res
 
 
+def render_sites(rows):
+    """Open each page in headless Chromium (robots.txt checked first) and save the rendered HTML."""
+    from .browser import Browser
+    http, res = Http(), []
+    with Browser(http) as br:
+        for label, url, wait_for in rows:
+            r = {"label": label, "url": url, "rendered": True}
+            try:
+                html, final = br.render(url, wait_for=wait_for or None, settle_ms=5000)
+            except Exception as e:
+                res.append(dict(r, status="error", note=f"{type(e).__name__}: {str(e)[:250]}"))
+                continue
+            _save_html(label, html)
+            soup = BeautifulSoup(html, "html.parser")
+            links = [{"text": " ".join(a.get_text(" ", strip=True).split())[:80], "href": urljoin(final, a["href"])[:250]}
+                     for a in soup.find_all("a", href=True)]
+            res.append(dict(r, status="ok", final=final, length=len(html),
+                            title=soup.title.get_text(" ", strip=True)[:150] if soup.title else "",
+                            text_length=len(soup.get_text(" ", strip=True)), links=links[:200]))
+    return res
+
+
 def _safe(fn, *a):
     try:
         return fn(*a)
@@ -175,13 +197,19 @@ def main(argv=None):
     if args.brimr:
         (OUT / "brimr.txt").write_text(read_brimr(args.brimr), encoding="utf-8")
     if args.sites:
-        rows = []
+        rows, render_rows = [], []
         for line in Path(args.sites).read_text(encoding="utf-8").splitlines():
             if "|" in line and not line.lstrip().startswith("#"):
-                label, url = [x.strip() for x in line.split("|", 1)]
-                rows.append((label, url))
+                parts = [x.strip() for x in line.split("|")]
+                if len(parts) >= 3 and parts[2].startswith("render"):
+                    render_rows.append((parts[0], parts[1], parts[3] if len(parts) > 3 else ""))
+                else:
+                    rows.append((parts[0], parts[1]))
         with ThreadPoolExecutor(max_workers=8) as pool:
             res = list(pool.map(lambda r: _safe(probe_site, Http(), *r), rows))
+        if render_rows:
+            out = _safe(render_sites, render_rows)
+            res += out if isinstance(out, list) else [out]
         (OUT / "sites.json").write_text(json.dumps(res, indent=1), encoding="utf-8")
     if args.only is not None:
         only = {s for s in args.only.split(",") if s}

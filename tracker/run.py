@@ -99,6 +99,8 @@ def run_source(school, src, profile, rules, state, today, skipped=None):
     http = Http()
     out = {}
     try:
+        if src["type"] == "rendered":  # lets the browser skip job pages the tracker has already read
+            src = dict(src, _known={k for k, v in state.items() if v.get("evaluated") and v.get("source") == src["id"]})
         found = mod.search(http, src, src.get("search_terms") or profile["search_terms"], rules.title_ok)
         must = [m.lower() for m in src.get("location_must_include", [])]
         if must and src["type"] not in ("workday", "taleo", "mcloud"):  # those filter while searching

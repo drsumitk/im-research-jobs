@@ -3,11 +3,12 @@
     details(http, src, job) -> Job                    fills job.description for one job
 `title_ok` lets a connector skip detail-level work for titles that will be dropped anyway.
 """
-from . import workday, oracle, eightfold, rmk, jibe, mcloud, taleo, html_list, ucrecruit, sitemap, board, icims, phenom
+from . import workday, oracle, eightfold, rmk, jibe, mcloud, taleo, html_list, ucrecruit, sitemap, board, icims, phenom, rendered
 
 REGISTRY = {
     "sitemap": sitemap,
     "board": board,
+    "rendered": rendered,
     "icims": icims,
     "phenom": phenom,
     "workday": workday,

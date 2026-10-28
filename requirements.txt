@@ -2,3 +2,4 @@ requests==2.34.2
 beautifulsoup4==4.15.0
 PyYAML==6.0.3
 soupsieve==3.0.4
+playwright==1.52.0

@@ -30,7 +30,7 @@ concurrency:
 
 jobs:
   probe:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # pinned: Playwright installs its browser dependencies for this release
     timeout-minutes: 60
     permissions:
       contents: write      # to publish results on the probe branch
@@ -42,7 +42,9 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install pinned dependencies
-        run: pip install -r requirements.txt openpyxl==3.1.5
+        run: |
+          pip install -r requirements.txt openpyxl==3.1.5
+          python -m playwright install --with-deps chromium
       - name: Probe
         env:
           BRIMR_URL: ${{ inputs.brimr_url }}
