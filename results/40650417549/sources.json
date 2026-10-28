@@ -1,0 +1,45 @@
+[
+ {
+  "school": "NIH (intramural)",
+  "rank": 908,
+  "source": "nih-oite",
+  "label": "nih-oite",
+  "type": "board",
+  "checked": "2026-10-28",
+  "found": 62,
+  "candidates": 57,
+  "too_old": 0,
+  "status": "ok",
+  "new_details": 3,
+  "detail_errors": 0,
+  "candidate_titles": [
+   "Postdoctoral Fellow - Mechanistic Neuropharmacology/Neuroscience",
+   "Postdoctoral Fellow",
+   "Postdoctoral Fellow"
+  ],
+  "candidate_samples": [
+   {
+    "title": "Postdoctoral Fellow - Mechanistic Neuropharmacology/Neuroscience",
+    "url": "https://www.training.nih.gov/jobs/pdf-npn-012627/",
+    "posted": "",
+    "dept": "",
+    "text": "Home \n Job listings \n Postdoctoral Fellow - Mechanistic Neuropharmacology/Neuroscience \n Job \n Postdoctoral Fellow - Mechanistic Neuropharmacology/Neuroscience \n Organization \n National Institute on Drug Abuse, Baltimore, MD \n Scientific focus area \n Neuroscience, \n Biomedical Engineering and Biophy"
+   },
+   {
+    "title": "Postdoctoral Fellow",
+    "url": "https://www.training.nih.gov/jobs/pdf-11302026/",
+    "posted": "",
+    "dept": "",
+    "text": "Home \n Job listings \n Postdoctoral Fellow \n Job \n Postdoctoral Fellow \n Organization \n National Human Genome Research Institute, Bethesda, MD and surrounding area \n Scientific focus area \n Genetics and Genomics, \n Computational Biology\n The Kidney Genetics and Genomic Unit at the National Human Geno"
+   },
+   {
+    "title": "Postdoctoral Fellow",
+    "url": "https://www.training.nih.gov/jobs/pdf-012227/",
+    "posted": "",
+    "dept": "",
+    "text": "Home \n Job listings \n Postdoctoral Fellow \n Job \n Postdoctoral Fellow \n Organization \n Joana Vidigal, Bethesda, MD and surrounding area \n Scientific focus area \n Cancer Biology, \n Cell Biology, \n Developmental Biology, \n Genetics and Genomics, \n Immunology, \n Molecular Biology and Biochemistry, \n RN"
+   }
+  ],
+  "too_old_count": 0
+ }
+]
